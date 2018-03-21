@@ -853,8 +853,10 @@ var D20plus = function(version) {
 		window.unwatch("d20");
 		const checkLoaded = setInterval(function() {
 			if (!$("#loading-overlay").is(":visible")) {
-				clearInterval(checkLoaded);
-				d20plus.Init();
+				setTimeout(() => {
+					clearInterval(checkLoaded);
+					d20plus.Init();
+				}, 10000);
 			}
 		}, 1000);
 	};
