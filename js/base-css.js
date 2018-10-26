@@ -368,7 +368,7 @@ function baseCss () {
 		},
 		{
 			s: ".artr__view",
-			r: "position: absolute; top: 38px; bottom: 0; left: 0; right: 0; overflow-y: auto; transform: translateZ(0);"
+			r: "position: absolute; top: 38px; bottom: 0; left: 0; right: 0; overflow-y: auto; transform: translateZ(0); background-color: whitesmoke"
 		},
 		{
 			s: ".artr__view_inner",
@@ -376,9 +376,13 @@ function baseCss () {
 		},
 		{
 			s: ".artr__item",
-			r: "width: 180px; height: 180px; margin: 5px; box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.75); display: block; background: white;"
+			r: "width: 180px; margin: 5px; box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.75); display: block; background: white; opacity: 0.95;"
 			// Using flex makes scrolling extremely sluggish
 			// display: flex; flex-direction: column; cursor: pointer; float: left;
+		},
+		{
+			s: ".artr__item:hover",
+			r: "box-shadow: 0 0 8px 0 rgba(38, 167, 242, 1); opacity: 0.95;"
 		},
 		{
 			s: ".artr__item--back",
@@ -390,7 +394,7 @@ function baseCss () {
 		},
 		{
 			s: ".artr__item__bottom",
-			r: "width: 100%; height: 40px; flex-shrink: 0;  border-top: 1px solid #ccc; background: #f8f8f8; display: flex; flex-direction: column; font-size: 12px;"
+			r: "width: 100%; flex-shrink: 0;  border-top: 1px solid #ccc; background: #f8f8f8; display: flex; flex-direction: column; font-size: 12px;"
 		},
 		{
 			s: ".artr__item__bottom__row",
