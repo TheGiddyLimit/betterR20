@@ -910,6 +910,7 @@ const betteR205etoolsMain = function () {
 							}
 						});
 					}
+					$("#jbwMasterVolume").slider("value", ui.value);
 				},
 				value: 50,
 			});
@@ -1022,6 +1023,7 @@ const betteR205etoolsMain = function () {
 
 		// Better20 jukebox tab
 		d20plus.remoteLibre.init();
+		d20plus.jukeboxWidget.init();
 	};
 
 	d20plus.updateDifficulty = function () {
