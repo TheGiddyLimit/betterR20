@@ -1501,6 +1501,102 @@
 			]
 		},
 		{
+			"name": "Chromatic Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"page": 2,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"acid",
+							"lightning",
+							"poison",
+							"fire",
+							"cold"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Humanoid."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Chromatic Ancestry",
+					"entries": [
+						"You trace your ancestry to a chromatic dragon, granting you a special magical affinity. Choose one type of dragon from the Chromatic Ancestry table. This determines the damage type for your other traits as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Chromatic Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Black",
+									"Acid"
+								],
+								[
+									"Blue",
+									"Lightning"
+								],
+								[
+									"Green",
+									"Poison"
+								],
+								[
+									"Red",
+									"Fire"
+								],
+								[
+									"White",
+									"Cold"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical energy in a 30-foot line that is 5 feet wide. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d8} damage of the type associated with your Chromatic Ancestry on a failed save, and half as much damage on a successful one. This damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), and 17th level ({@dice 5d8}).",
+						"You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Chromatic Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Chromatic Warding",
+					"entries": [
+						"Starting at 3rd level, as an action, you can channel your draconic energies to protect yourself. For 10 minutes, you become immune to the damage type associated with your Chromatic Ancestry. Once you use this trait, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Custom Lineage",
 			"source": "TCE",
 			"page": 8,
@@ -1667,6 +1763,80 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Dhampir",
+			"source": "VRGR",
+			"page": 16,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": {
+				"walk": 35,
+				"climb": 35
+			},
+			"darkvision": 60,
+			"traitTags": [
+				"Unarmed Strike"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Legacy",
+					"entries": [
+						"If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.",
+						"If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Deathless Nature",
+					"entries": [
+						"You don't need to breathe."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Spider Climb",
+					"entries": [
+						"You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Vampiric Bite",
+					"entries": [
+						"Your fanged bite is a natural weapon, which counts as a simple melee weapon with which you are proficient. You add your Constitution modifier, instead of your Strength modifier, to the attack and damage rolls when you attack with this bite. It deals {@dice 1d4} piercing damage on a hit. While you are missing half or more of your hit points, you have advantage on attack rolls you make with this bite.",
+						"When you attack with this bite and hit a creature that isn't a Construct or an Undead, you can empower yourself in one of the following ways of your choice:",
+						{
+							"type": "list",
+							"items": [
+								"You regain hit points equal to the piercing damage dealt by the bite.",
+								"You gain a bonus to the next ability check or attack roll you make; the bonus equals the piercing damage dealt by the bite"
+							]
+						},
+						"You can empower yourself with this bite a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Dragonborn",
@@ -4148,7 +4318,7 @@
 			"name": "Fairy",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 2,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"creatureTypes": [
 				"fey"
 			],
@@ -4323,6 +4493,109 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Gem Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"page": 3,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"force",
+							"radiant",
+							"psychic",
+							"thunder",
+							"necrotic"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Humanoid."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Gem Ancestry",
+					"entries": [
+						"You trace your ancestry to a gem dragon, granting you a special magical affinity. Choose one type of dragon from the Gem Ancestry table. This determines the damage type for your other traits as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Gem Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Amethyst",
+									"Force"
+								],
+								[
+									"Crystal",
+									"Radiant"
+								],
+								[
+									"Emerald",
+									"Psychic"
+								],
+								[
+									"Sapphire",
+									"Thunder"
+								],
+								[
+									"Topaz",
+									"Necrotic"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical energy in a 15-foot cone. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d8} damage of the type associated with your Gem Ancestry on a failed save, and half as much damage on a successful one. This damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), and 17th level ({@dice 5d8}).",
+						"You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Gem Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Psionic Mind",
+					"entries": [
+						"You can telepathically speak to any creature you can see within 30 feet of you. You don't need to share a language with the creature, but the creature must be able to understand at least one language. Your communication doesn't give the creature the ability to respond to you telepathically."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Gem Flight",
+					"entries": [
+						"Starting at 3rd level, you can use your bonus action to temporarily summon an array of spectral gems that match your Gem Ancestry in the shape of wings that last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Genasi",
@@ -7985,6 +8258,110 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Hexblood",
+			"source": "VRGR",
+			"page": 18,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"fey"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"additionalSpells": [
+				{
+					"innate": {
+						"1": [
+							"disguise self",
+							"hex"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Fey."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Legacy",
+					"entries": [
+						"If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.",
+						"If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Eerie Token",
+					"entries": [
+						"As a bonus action, you can harmlessly remove a lock of your hair, one of your nails, or one of your teeth. This token is imbued with magic until you finish a long rest. While the token is imbued in this way, you can take these actions:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Telepathic Message.",
+									"entry": "As an action, you can send a telepathic message to the creature holding or carrying the token, as long as you are within 10 miles of it. The message can contain up to twenty-five words."
+								},
+								{
+									"type": "item",
+									"name": "Remote Viewing.",
+									"entry": "If you are within 10 miles of the token, you can enter a trance as an action. The trance lasts for 1 minute, but it ends early if you dismiss it (no action required) or are {@condition incapacitated}. During this trance, you can see and hear from the token as if you were located where it is. While you are using your senses at the token's location, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings. When the trance ends, the token is harmlessly destroyed."
+								}
+							]
+						},
+						"Once you create a token using this feature, you can't do so again until you finish a long rest, at which point your missing part regrows."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hex Magic",
+					"entries": [
+						"You can cast the {@spell disguise self} and {@spell hex} spells with this trait. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast these spells using any spell slots you have.",
+						"Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells (choose the ability when you gain this lineage).",
+						{
+							"type": "inset",
+							"name": "Becoming a Hag",
+							"entries": [
+								"Hags can undertake a ritual to irreversibly transform a hexblood they created into a new hag, either one of their own kind or that embodies the hexblood's nature. This requires that both the hag and hexblood be in the same place and consent to the lengthy ritual\u2014circumstances most hexbloods shun but might come to accept over the course of centuries. Once a hexblood undergoes this irreversible ritual, they emerge as a hag NPC no longer under the control of the hexblood's player, unless the DM rules otherwise."
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Hobgoblin",
 			"source": "DMG",
 			"page": 282,
@@ -8065,7 +8442,7 @@
 			"name": "Hobgoblin",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 2,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"size": [
 				"M"
 			],
@@ -9975,6 +10352,56 @@
 		},
 		{
 			"name": "Kobold",
+			"source": "UA2021DraconicOptions",
+			"page": 3,
+			"lineage": "VRGR",
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Humanoid."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Legacy",
+					"entries": [
+						"The kobold connection to dragons can manifest in unpredictable ways in an individual kobold. Choose one of the following legacy options when you select this race:",
+						{
+							"type": "list",
+							"items": [
+								"You have advantage on saving throws to avoid or end the {@condition frightened} condition on yourself.",
+								"You know one cantrip of your choice from the sorcerer spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for that cantrip (choose when you select this race).",
+								"You can make unarmed strikes with your tail. When you hit with it, the strike deals {@dice 1d6} + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Roar",
+					"entries": [
+						"As a bonus action, you let out a draconic roar at your enemies within 10 feet of you. Until the end of your next turn, you and your allies have advantage on attack rolls against any of those enemies who could hear the roar. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Kobold",
 			"source": "VGM",
 			"page": 119,
 			"size": [
@@ -11199,6 +11626,109 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Metallic Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"page": 2,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"resist": [
+				{
+					"choose": {
+						"from": [
+							"fire",
+							"lightning",
+							"acid",
+							"cold"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Humanoid."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Metallic Ancestry",
+					"entries": [
+						"You trace your ancestry to a metallic dragon, granting you a special magical affinity. Choose one type of dragon from the Metallic Ancestry table. This determines the damage type for your other traits as shown in the table.",
+						{
+							"type": "table",
+							"caption": "Metallic Ancestry",
+							"colLabels": [
+								"Dragon",
+								"Damage Type"
+							],
+							"colStyles": [
+								"col-6 text-center",
+								"col-6 text-center"
+							],
+							"rows": [
+								[
+									"Brass",
+									"Fire"
+								],
+								[
+									"Bronze",
+									"Lightning"
+								],
+								[
+									"Copper",
+									"Acid"
+								],
+								[
+									"Gold",
+									"Fire"
+								],
+								[
+									"Silver",
+									"Cold"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Breath Weapon",
+					"entries": [
+						"When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical energy in a 15-foot cone. Each creature in the area must make a Dexterity saving throw against a DC equal to 8 + your Constitution modifier + your proficiency bonus. A creature takes {@dice 2d8} damage of the type associated with your Metallic Ancestry on a failed save, and half as much damage on a successful one. This damage increases by {@dice 1d8} when you reach 5th level ({@dice 3d8}), 11th level ({@dice 4d8}), and 17th level ({@dice 5d8}).",
+						"You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Draconic Resistance",
+					"entries": [
+						"You have resistance to the damage type associated with your Metallic Ancestry."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Metallic Breath Weapon",
+					"entries": [
+						"At 3rd level you gain a second breath weapon. When you take the {@action Attack} action, you can replace one of your attacks with an exhalation of a magical gas in a 15-foot cone. The save DC for this breath is 8 + your Constitution modifier + your proficiency bonus. When you use this ability, choose one:",
+						{
+							"type": "list",
+							"items": [
+								"Each creature in the area must succeed on a Strength saving throw or be pushed 20 feet away from you and be knocked {@condition prone}.",
+								"Each creature in the area must succeed on a Constitution saving throw or become {@condition incapacitated} until the start of your next turn."
+							]
+						},
+						"Once you use your Metallic Breath Weapon, you can't do so again until you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Minotaur",
 			"source": "GGR",
 			"page": 18,
@@ -12149,7 +12679,7 @@
 			"name": "Owlfolk",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 3,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"size": [
 				"S",
 				"M"
@@ -12232,7 +12762,7 @@
 			"name": "Rabbitfolk",
 			"source": "UA2021FolkOfTheFeywild",
 			"page": 3,
-			"lineage": "UA2",
+			"lineage": "VRGR",
 			"size": [
 				"S",
 				"M"
@@ -12364,6 +12894,68 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Reborn",
+			"source": "VRGR",
+			"page": 20,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"traitTags": [
+				"Improved Resting"
+			],
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you gain this lineage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ancestral Legacy",
+					"entries": [
+						"If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.",
+						"If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Deathless Nature",
+					"entries": [
+						"You have escaped death, a fact represented by the following benefits:",
+						{
+							"type": "list",
+							"items": [
+								"You have advantage on saving throws against disease and being {@condition poisoned}, and you have resistance to poison damage.",
+								"You have advantage on death saving throws.",
+								"You don't need to eat, drink, or breathe.",
+								"You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in an inactive, motionless state, during which you retain consciousness."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Knowledge from a Past Life",
+					"entries": [
+						"You temporarily remember glimpses of the past, perhaps faded memories from ages ago or a previous life. When you make an ability check that uses a skill, you can roll a {@dice d6} immediately after seeing the number on the {@dice d20} and add the number on the {@dice d6} to the check. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Revenant",
@@ -13525,6 +14117,9 @@
 			],
 			"immune": [
 				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
 			],
 			"conditionImmune": [
 				"exhaustion",
@@ -16471,7 +17066,6 @@
 				"poison"
 			],
 			"conditionImmune": [
-				"exhaustion",
 				"poisoned"
 			],
 			"entries": [
@@ -16486,7 +17080,7 @@
 					"type": "entries",
 					"name": "Undead Nature",
 					"entries": [
-						"You are immune to poison damage and {@condition exhaustion}, and you can't be {@condition poisoned}. You don't require air, food, drink, or sleep."
+						"You are immune to poison damage, and you can't be {@condition poisoned}. You don't require air, food, drink, or sleep."
 					]
 				},
 				{

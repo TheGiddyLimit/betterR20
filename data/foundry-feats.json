@@ -1,0 +1,129 @@
+{
+	"feat": [
+		{
+			"name": "Dragon Wings",
+			"source": "UAFeatsForRaces",
+			"effects": [
+				{
+					"name": "Flying Speed",
+					"changes": [
+						{
+							"key": "data.attributes.movement.fly",
+							"mode": "UPGRADE",
+							"value": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mobile",
+			"source": "PHB",
+			"effects": [
+				{
+					"name": "Movement Speed Increase",
+					"changes": [
+						{
+							"key": "data.attributes.movement.walk",
+							"mode": "ADD",
+							"value": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Squat Nimbleness",
+			"source": "UAFeatsForRaces",
+			"effects": [
+				{
+					"name": "Movement Speed Increase",
+					"changes": [
+						{
+							"key": "data.attributes.movement.walk",
+							"mode": "ADD",
+							"value": 5
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Squat Nimbleness",
+			"source": "XGE",
+			"effects": [
+				{
+					"name": "Movement Speed Increase",
+					"changes": [
+						{
+							"key": "data.attributes.movement.walk",
+							"mode": "ADD",
+							"value": 5
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Resilient",
+			"source": "PHB",
+			"effects": [
+				{
+					"name": "Saving Throw Proficiency",
+					"changes": [
+						{
+							"key": "data.abilities.<$keys(import.chosenAbilityScoreIncrease)$>.proficient",
+							"mode": "UPGRADE",
+							"value": 1
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Observant",
+			"source": "PHB",
+			"effects": [
+				{
+					"changes": [
+						{
+							"key": "flags.dnd5e.observantFeat",
+							"mode": "OVERRIDE",
+							"value": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Alert",
+			"source": "PHB",
+			"effects": [
+				{
+					"changes": [
+						{
+							"key": "flags.dnd5e.initiativeAlert",
+							"mode": "OVERRIDE",
+							"value": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Elven Accuracy",
+			"source": "XGE",
+			"effects": [
+				{
+					"changes": [
+						{
+							"key": "flags.dnd5e.elvenAccuracy",
+							"mode": "OVERRIDE",
+							"value": true
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1071,6 +1071,11 @@
 			}
 		},
 		{
+			"name": "Fizban's Platinum Shield",
+			"source": "UA2021DraconicOptions",
+			"data": {},
+		},
+		{
 			"name": "Flame Blade",
 			"source": "PHB",
 			"data": {
@@ -1083,6 +1088,11 @@
 			"shapedData": {
 				"primaryDamageCondition": "attack"
 			}
+		},
+		{
+			"name": "Flame Stride",
+			"source": "UA2021DraconicOptions",
+			"data": {},
 		},
 		{
 			"name": "Flame Strike",
@@ -1470,6 +1480,19 @@
 				"primaryDamageCondition": "save",
 				"secondaryDamageCondition": "save"
 			}
+		},
+		{
+			"name": "Icingdeath's Frost",
+			"source": "UA2021DraconicOptions",
+			"data": {
+				"Save": "Consitution",
+				"Damage": "3d8",
+				"Damage Type": "psychic",
+				"Target": "All creatures in a 30-foot-cone",
+				"Save Success": "half damage and not covered in ice (movement 0)",
+				"Higher Spell Slot Die": "d8",
+				"Higher Spell Slot Dice": "1"
+			},
 		},
 		{
 			"name": "Identify",
@@ -1875,6 +1898,11 @@
 			}
 		},
 		{
+			"name": "Nathair's Mischief",
+			"source": "UA2021DraconicOptions",
+			"data": {},
+		},
+		{
 			"name": "Nondetection",
 			"source": "PHB",
 			"data": {}
@@ -2101,6 +2129,19 @@
 			"name": "Raise Dead",
 			"source": "PHB",
 			"data": {}
+		},
+		{
+			"name": "Raulothim's Psychic Lance",
+			"source": "UA2021DraconicOptions",
+			"data": {
+				"Save": "Intelligence",
+				"Damage": "10d6",
+				"Damage Type": "psychic",
+				"Target": "One creature you can see, or know the name of",
+				"Save Success": "no damage and not incapacitated",
+				"Higher Spell Slot Die": "d6",
+				"Higher Spell Slot Dice": "1"
+			},
 		},
 		{
 			"name": "Rary's Telepathic Bond",
@@ -2475,18 +2516,22 @@
 			}
 		},
 		{
+			"name": "Summon Draconic Spirit",
+			"source": "UA2021DraconicOptions",
+			"data": {
+				"Save": "Intelligence",
+				"Damage": "10d6",
+				"Damage Type": "psychic",
+				"Target": "One creature you can see, or know the name of",
+				"Save Success": "no damage and not incapacitated",
+				"Higher Spell Slot Die": "d6",
+				"Higher Spell Slot Dice": "1"
+			},
+		},
+		{
 			"name": "Sunbeam",
 			"source": "PHB",
-			"data": {
-				"Save": "Constitution",
-				"Damage": "6d8",
-				"Target": "Each creature in the line",
-				"Damage Type": "Radiant",
-				"Save Success": "Half damage and not blinded"
-			},
-			"shapedData": {
-				"primaryDamageCondition": "save"
-			}
+			"data": {}
 		},
 		{
 			"name": "Sunburst",

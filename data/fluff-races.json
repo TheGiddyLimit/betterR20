@@ -636,6 +636,13 @@
 			]
 		},
 		{
+			"name": "Chromatic Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"entries": [
+				"Dragonborn with chromatic ancestry claim the raw elemental power of the chromatic dragons. The vibrant colors of the chromatics\u2014black, blue, green, red, and white\u2014gleam in their scaled skin and in the deadly energy of their breath weapons. Theirs is the raw elemental fury of the volcano, of biting arctic winds, of raging lightning storms; theirs also is the subtle whisper of swamp and forest, corrosive and toxic."
+			]
+		},
+		{
 			"name": "Dhampir",
 			"source": "UA2021GothicLineages",
 			"entries": [
@@ -751,6 +758,122 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Dhampir",
+			"source": "VRGR",
+			"entries": [
+				"Poised between the worlds of the living and the dead, dhampirs retain their grip on life yet are endlessly tested by vicious hungers. Their ties to the undead grant dhampirs a taste of a vampire's deathless prowess in the form of increased speed, {@sense darkvision}, and a life-draining bite.",
+				"With unique insights into the nature of the undead, many dhampirs become adventurers and monster hunters. Their reasons are often deeply personal. Some seek danger, imagining monsters as personifications of their own hungers. Others pursue revenge against whatever turned them into a dhampir. And still others embrace the solitude of the hunt, striving to distance themselves from those who'd tempt their hunger.",
+				{
+					"type": "entries",
+					"name": "Dhampir Hungers",
+					"entries": [
+						"Every dhampir knows a thirst slaked only by the living. Those who overindulge their thirst risk losing control and forever viewing others as prey. Those who resist might find exceptional ways of controlling their urges or suppress them through constant, molar-grinding restraint. In any case, temptation haunts dhampirs, and circumstances conspire to give them endless reasons to indulge.",
+						"While many dhampirs thirst for blood, your character might otherwise gain sustenance from the living. Roll on or choose an option from the Dhampir Hungers table to determine what tempts your character to feed.",
+						{
+							"type": "table",
+							"caption": "Dhampir Hungers",
+							"colLabels": [
+								"d6",
+								"Hunger"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"Blood"
+								],
+								[
+									"2",
+									"Flesh or raw meat"
+								],
+								[
+									"3",
+									"Cerebral spinal fluid"
+								],
+								[
+									"4",
+									"Psychic energy"
+								],
+								[
+									"5",
+									"Dreams"
+								],
+								[
+									"6",
+									"Life energy"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dhampir Origins",
+					"entries": [
+						"Dhampirs often arise from encounters with vampires, but all manner of macabre bargains, necromantic influences, and encounters with mysterious immortals might have transformed your character. The Dhampir Origins table provides suggestions for how your character gained their lineage.",
+						{
+							"type": "table",
+							"caption": "Dhampir Origins",
+							"colLabels": [
+								"d8",
+								"Origin"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"You are the reincarnation of an ancestor who was a vampiric tyrant."
+								],
+								[
+									"2",
+									"Your pact with a predatory deity, fiend, fey, or spirit causes you to share their hunger."
+								],
+								[
+									"3",
+									"You survived being attacked by a vampire but were forever changed."
+								],
+								[
+									"4",
+									"A parasite lives inside you. You indulge its hunger."
+								],
+								[
+									"5",
+									"Tragedy interrupted your transformation into an immortal."
+								],
+								[
+									"6",
+									"You are a diminished form of an otherworldly being. Slaking your hunger hastens your renewal."
+								],
+								[
+									"7",
+									"One of your parents was a vampire."
+								],
+								[
+									"8",
+									"A radical experiment changed your body, making you reliant on others for vital fluids."
+								]
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/VRGR/Dhampir.png"
+					}
 				}
 			]
 		},
@@ -1931,6 +2054,13 @@
 						"path": "races/Firbolg.png"
 					}
 				}
+			]
+		},
+		{
+			"name": "Gem Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"entries": [
+				"Dragonborn with gem ancestry partake of the heritage of all gem dragons, who claim to be heirs of the ruby dragon, Sardior\u2014the firstborn of all creation, made by Bahamut and Tiamat in the first days of the First World. The colors and mysterious powers of the gem dragons\u2014amethyst, crystal, emerald, sapphire, and topaz\u2014gleam in their scaled skin and course through their veins. Theirs are the wonders of the mind, the force of will, the brilliant light of insight, the resounding echo of discovery, and the desiccation of despair."
 			]
 		},
 		{
@@ -3117,6 +3247,75 @@
 			]
 		},
 		{
+			"name": "Hexblood",
+			"source": "VRGR",
+			"entries": [
+				"Where wishing fails, ancient magic can offer a heart's desire\u2014at least, for a time. Hexbloods are individuals infused with eldritch magic, fey energy, or mysterious witchcraft. Some who enter into bargains with hags gain their deepest wishes but eventually find themselves transformed. These changes evidence a hag's influence: ears that split in forked points, skin in lurid shades, long hair that regrows if cut, and an irremovable living crown. Along with these marks, hexbloods manifest hag-like traits, such as {@sense darkvision} and a variety of magical methods to beguile the senses and avoid the same.",
+				"While many hexbloods gain their lineage after making a deal with a hag, others reveal their nature as they age\u2014particularly if a hag influenced them early in life or even before their birth. Many hexbloods turn to lives of adventure, seeking to discover the mysteries of their magic, to forge a connection with their fey natures, or to avoid a hag that obsesses over them.",
+				{
+					"type": "entries",
+					"name": "Heir of Hags",
+					"entries": [
+						"One way hags create more of their kind is through the creation of hexbloods. Every hexblood exhibits features suggestive of the hag whose magic inspires their powers. This includes an unusual crown, often called an eldercross or a witch's turn. This living, garland-like part of a hexblood's body extends from their temples and wraps behind the head, serving as a visible mark of the bargain between hag and hexblood, a debt owed, or a change to come."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hexblood Origins",
+					"entries": [
+						"A bargain with a hag or other eerie forces transformed your character into a magical being. Roll on or choose an option from the Hexblood Origins table to determine how your character gained their lineage.",
+						{
+							"type": "table",
+							"caption": "Hexblood Origins",
+							"colLabels": [
+								"d6",
+								"Origin"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"Seeking a child, your parent made a bargain with a hag. You are the result of that arrangement."
+								],
+								[
+									"2",
+									"Fey kidnappers swapped you and your parents' child."
+								],
+								[
+									"3",
+									"A coven of hags lost one of its members. You were created to replace the lost hag."
+								],
+								[
+									"4",
+									"You were cursed as a child. A deal with the spirits of the forest transformed you into a hexblood, now free of the curse."
+								],
+								[
+									"5",
+									"You began life as a fey creature, but an accident changed you and forced you from your home."
+								],
+								[
+									"6",
+									"A slighted druid transformed you and bound you to live only so long as a sacred tree bears fruit."
+								]
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/VRGR/Hexblood.png"
+					}
+				}
+			]
+		},
+		{
 			"name": "Hobgoblin",
 			"source": "UA2021FolkOfTheFeywild",
 			"entries": [
@@ -3624,6 +3823,14 @@
 						"path": "races/Kenku.png"
 					}
 				}
+			]
+		},
+		{
+			"name": "Kobold",
+			"source": "UA2021DraconicOptions",
+			"entries": [
+				"Some of the smallest draconic creatures to walk the planes, kobolds display their draconic ancestry in the glint of their scales and in their roars. Legends tell of the first kobolds emerging from the Underdark near the lairs of the earliest dragons. In some lands, kobolds serve chromatic or metallic dragons\u2014even worshiping them as divine beings. In other places, kobolds know too well how dangerous those dragons can be and help others defend against draconic destruction.",
+				"Whatever their relationship to dragons, kobold scales tend to be rust colored, although the occasional kobold sports scale color more akin to that of a chromatic or a metallic dragon. The roar of a kobold can express a range of emotion: anger, resolve, elation, fear, and more. Regardless of the emotion the kobold expresses, the roar resonates with draconic power."
 			]
 		},
 		{
@@ -4195,6 +4402,13 @@
 			}
 		},
 		{
+			"name": "Metallic Dragonborn",
+			"source": "UA2021DraconicOptions",
+			"entries": [
+				"Dragonborn with metallic ancestry lay claim to the unflinching tenacity of the metallic dragons\u2014brass, bronze, copper, gold, and silver\u2014whose hues glint in their scales. Theirs is the fire of hearth and forge, the cold of high mountain air, the spark of inspiration, and the scouring touch of acid that cleanses and purifies."
+			]
+		},
+		{
 			"name": "Minotaur",
 			"source": "GGR",
 			"entries": [
@@ -4550,6 +4764,121 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Reborn",
+			"source": "VRGR",
+			"entries": [
+				"Death isn't always the end. The reborn exemplify this, being individuals who have died yet, somehow, still live. Some reborn exhibit the scars of fatal ends, their ashen flesh or bloodless veins making it clear that they've been touched by death. Other reborn are marvels of magic or science, being stitched together from disparate beings or bearing mysterious minds in manufactured bodies. Whatever their origins, reborn know a new life and seek experiences and answers all their own.",
+				{
+					"type": "entries",
+					"name": "Faded Memories",
+					"entries": [
+						"Reborn suffer from some manner of discontinuity, an interruption of their lives or physical state that their minds are ill equipped to deal with. Their memories of events before this interruption are often vague or absent. Occasionally, the most unexpected experiences might cause sensations or visions of the past to come rushing back.",
+						"Rather than sleeping, reborn regularly sit and dwell on the past, hoping for some revelation of what came before. Most of the time, these are dark, silent stretches. Occasionally, though, in a moment of peace, stress, or excitement, a reborn gains a glimpse of what came before. When you desire to have such a dreamlike vision, roll on the Lost Memories table to inspire its details.",
+						{
+							"type": "table",
+							"caption": "Lost Memories",
+							"colLabels": [
+								"d6",
+								"Memory"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"You recall a physically painful moment. What mark or scar on your body does it relate to?"
+								],
+								[
+									"2",
+									"A memory brings tears to your eyes. Is it a bitter or cheerful memory? Does recalling it make you feel the same way?"
+								],
+								[
+									"3",
+									"You recall a childhood memory. What about that event or who you were still influences you?"
+								],
+								[
+									"4",
+									"A memory brings with it the voice of someone once close to you. How do they advise you?"
+								],
+								[
+									"5",
+									"You recall enjoying something that you can't stand doing now. What is it? Why don't you like it now?"
+								],
+								[
+									"6",
+									"A memory carries a vivid smell or sensation. What are you going to do to recreate that experience?"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Reborn Origins",
+					"entries": [
+						"Reborn might originate from circumstances similar to those of various undead or constructs. The Reborn Origins table provides suggestions for how your character became reborn.",
+						{
+							"type": "table",
+							"caption": "Reborn Origins",
+							"colLabels": [
+								"d8",
+								"Origins"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"You were magically resurrected, but something went wrong."
+								],
+								[
+									"2",
+									"Stitches bind your body's mismatched pieces, and your memories come from multiple different lives."
+								],
+								[
+									"3",
+									"After clawing free from your grave, you realized you have no memories except for a single name."
+								],
+								[
+									"4",
+									"You were a necromancer's undead servant for years. One day, your consciousness returned."
+								],
+								[
+									"5",
+									"You awoke in an abandoned laboratory alongside complex designs for clockwork organs."
+								],
+								[
+									"6",
+									"You were released after being petrified for generations. Your memories have faded, though, and your body isn't what it once was."
+								],
+								[
+									"7",
+									"Your body hosts a possessing spirit that shares its memories and replaces your missing appendages with phantasmal limbs."
+								],
+								[
+									"8",
+									"In public, you pass as an unremarkable individual, but you can feel the itchy straw stuffing inside you."
+								]
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/VRGR/Reborn.png"
+					}
 				}
 			]
 		},
