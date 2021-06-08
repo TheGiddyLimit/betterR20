@@ -621,6 +621,15 @@
 					"page": 61,
 					"additionalSpells": [
 						{
+							"innate": {
+								"1": {
+									"_": [
+										{
+											"choose": "level=0|class=Druid"
+										}
+									]
+								}
+							},
 							"prepared": {
 								"1": [
 									"animal friendship",
@@ -867,6 +876,16 @@
 					"page": 125,
 					"additionalSpells": [
 						{
+							"innate": {
+								"1": {
+									"_": [
+										{
+											"choose": "level=0|class=Wizard",
+											"count": 2
+										}
+									]
+								}
+							},
 							"prepared": {
 								"1": [
 									"detect magic",
@@ -1129,6 +1148,15 @@
 					"page": 26,
 					"additionalSpells": [
 						{
+							"innate": {
+								"1": {
+									"_": [
+										{
+											"choose": "level=0|class=Druid"
+										}
+									]
+								}
+							},
 							"prepared": {
 								"1": [
 									"divine favor",

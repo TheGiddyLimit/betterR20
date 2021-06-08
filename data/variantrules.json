@@ -567,7 +567,6 @@
 				{
 					"type": "entries",
 					"name": "Ability Score Increases",
-					"id": "012",
 					"entries": [
 						"Whatever D&D race you choose for your character, you get a trait called Ability Score Increase. This increase reflects an archetypal bit of excellence in the adventurers of this kind in D&D's past. For example, if you're a dwarf, your Constitution increases by 2, because dwarf heroes in D&D are often exceptionally tough. This increase doesn't apply to every dwarf, just to dwarf adventurers, and it exists to reinforce an archetype. That reinforcement is appropriate if you want to lean into the archetype, but it's unhelpful if your character doesn't conform to the archetype.",
 						"If you'd like your character to follow their own path, you may ignore your Ability Score Increase trait and assign ability score increases tailored to your character. Here's how to do it: take any ability score increase you gain in your race or subrace and apply it to an ability score of your choice. If you gain more than one increase, you can't apply those increases to the same ability score, and you can't increase a score above 20.",
@@ -577,7 +576,6 @@
 				{
 					"type": "entries",
 					"name": "Languages",
-					"id": "013",
 					"entries": [
 						"Your character's race includes languages that your character is assumed to know, usually Common and the language of your ancestors. For example, a halfling adventurer is assumed to know Common and Halfling. Here's the thing: D&D adventurers are extraordinary, and your character might have grown up speaking languages different from the ones in your Languages trait.",
 						"To customize the languages you know, you may replace each language in your Languages trait with a language from the following list: Abyssal, Celestial, Common, Deep Speech, Draconic, Dwarvish, Elvish, Giant, Gnomish, Goblin, Halfling, Infernal, Orc, Primordial, Sylvan, or Undercommon.",
@@ -587,7 +585,6 @@
 				{
 					"type": "entries",
 					"name": "Proficiencies",
-					"id": "014",
 					"entries": [
 						"Some races and subraces grant proficiencies. These proficiencies are usually cultural, and your character might not have any connection with the culture in question or might have pursued different training. You can replace each of those proficiencies with a different one of your choice, following the restrictions on the Proficiency Swaps table.",
 						{
@@ -631,13 +628,11 @@
 				{
 					"type": "entries",
 					"name": "Personality",
-					"id": "015",
 					"entries": [
 						"The description of a race might suggest various things about the behavior and personality of that people's archetypal adventurers. You may ignore those suggestions, whether they're about alignment, moods, interests, or any other personality trait. Your character's personality and behavior are entirely yours to determine.",
 						{
 							"type": "inset",
 							"name": "Custom Lineage",
-							"id": "016",
 							"entries": [
 								"Instead of choosing one of the game's races for your character at 1st level, you can use the following traits to represent your character's lineage, giving you full control over how your character's origin shaped them:",
 								{
@@ -2639,7 +2634,7 @@
 			"page": 131,
 			"ruleType": "V",
 			"entries": [
-				"As a variant rule, you can require characters to spend downtime training or studying before they gain the befits of a new level. If you choose this option, once a character has earned enough experience points to attain a new level, he or she must train for a number of days before gaining any class features associated with the new level.",
+				"As a variant rule, you can require characters to spend downtime training or studying before they gain the benefits of a new level. If you choose this option, once a character has earned enough experience points to attain a new level, he or she must train for a number of days before gaining any class features associated with the new level.",
 				"The training time required depends on the level to be gained, as shown on the Training to Gain Levels table. The training cost is for the total training time.",
 				{
 					"type": "table",
@@ -3525,6 +3520,140 @@
 			]
 		},
 		{
+			"name": "Fear and Stress",
+			"source": "VRGR",
+			"page": 195,
+			"type": "section",
+			"entries": [
+				"Terror takes a toll. The ramifications of frightful experiences might be an instant of instinct-triggering shock or a lasting, traumatic echo. The {@book Dungeon Master's Guide|DMG} presents options for {@book fear and horror|DMG|9|Fear and Horror} to help reinforce terrifying themes in play. This section presents an alternative system, exploring reactions personalized to individual characters and offering incentive for players to embrace roleplaying moments of fear. Options exploring fear provide guidance to create frightening moments for a character outside of spells or monster abilities, while rules for stress model the lingering toll such events can take. None of these options are required to create an enjoyable horror roleplaying experience, but they provide ways to measure the effects of characters facing and overcoming their fears.",
+				{
+					"type": "entries",
+					"name": "Seeds of Fear",
+					"entries": [
+						"Aside from supernatural sources of dread and monsters who strike terror in their victims, fear is subjective and often quite personal. A battle-hardened warrior and a reclusive scholar might not deal with frightful circumstances in the same way. During character creation, a player can choose up to two Seeds of Fear to represent things their character finds truly frightening. The Seeds of Fear table offers some examples. These can change over time as characters grow, overcome old fears, and discover new uncertainties. Work with players to determine when their Seeds of Fear might change.",
+						"A character never has more than three Seeds of Fear; if you gain a new seed and already have three, choose which of your old fears is replaced by the new one.",
+						{
+							"type": "table",
+							"caption": "Seeds of Fear",
+							"colLabels": [
+								"d12",
+								"Seed"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"\"I can't stand dark places.\""
+								],
+								[
+									"2",
+									"\"I'm terrified of a particular kind of animal.\""
+								],
+								[
+									"3",
+									"\"Deep water will be the death of me.\""
+								],
+								[
+									"4",
+									"\"I can't stand heights.\""
+								],
+								[
+									"5",
+									"\"I hate being stuck in tight spaces.\""
+								],
+								[
+									"6",
+									"\"Being around crowds unnerves me, for I always feel judged.\""
+								],
+								[
+									"7",
+									"\"I hate feeling isolated or being alone.\""
+								],
+								[
+									"8",
+									"\"Storms and extreme weather rattle me.\""
+								],
+								[
+									"9",
+									"\"Being followed chills my blood.\""
+								],
+								[
+									"10",
+									"\"Sudden noises or appearances fray my nerves.\""
+								],
+								[
+									"11",
+									"\"I can't be comfortable around creatures larger than I am.\""
+								],
+								[
+									"12",
+									"\"Reflections always seem like they're looking straight through me.\""
+								]
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Using Seeds of Fear",
+							"entries": [
+								"When a character encounters one of their Seeds of Fear, and interacts with the situation in a way that reinforces the seed, such as screaming or stumbling back from a horrid event, consider giving the character inspiration for their fear-focused reaction (see \"Inspiration\" in the {@book Player's Handbook|PHB}). Once a character gains inspiration in this way, they shouldn't be able to do so again until they finish a long rest.",
+								"For example, imagine that a character has the Seed of Fear \"I hate being stuck in tight spaces\" and must squeeze through a narrow crack in a cave wall to continue an adventure. If the player portrays the character's response in a way that reinforces that fear, such as refusing and finding another way around, taking time and making noise to widen the crack, or portraying some other fearful response, these would be perfect opportunities to reward the player's consideration of a Seed of Fear by granting their character inspiration."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Fear",
+					"entries": [
+						"An overwhelming foe or horrid monster doesn't need magic or some supernatural ability to strike fear into the most stalwart adventurers. During any frightful encounter, you can call on a character to make a saving throw to resist being scared. The character must succeed on a DC 15 Wisdom saving throw or become {@condition frightened} until the end of their next turn.",
+						"Any of the following circumstances might be reasons to have one or more characters make saving throws to resist being {@condition frightened}:",
+						{
+							"type": "list",
+							"items": [
+								"The character experiences one of their Seeds of Fear.",
+								"An enemy is immune to the character's attacks or spells.",
+								"An enemy demonstrates it can deal enough damage to reduce a character to 0 hit points in one blow.",
+								"A creature is alien or monstrous in ways the character never could have imagined.",
+								"An object undermines a character's understanding of reality."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Stress",
+					"entries": [
+						"Charging headlong into terrifying situations is the stock in trade for adventurers. Among the Domains of Dread, though, periods of respite between harrowing experiences can be rare. Even the hardiest adventurers find themselves worn down over time, their performance suffering as they struggle to cope with the dread and despair.",
+						"Various circumstances might cause a character stress. Stress can be tracked numerically as a Stress Score, increasing in trying situations and decreasing with care. At your discretion, a character's Stress Score might increase by 1 when one of the following situations occurs:",
+						{
+							"type": "list",
+							"items": [
+								"A tense, dramatic moment, especially one involving one of a character's Seeds of Fear",
+								"Every 24 hours the character goes without finishing a long rest",
+								"Witnessing the death of a loved one",
+								"A nightmare or darkest fear made real",
+								"Shattering the character's fundamental understanding of reality",
+								"Witnessing a person transform into a horrid or unnatural creature"
+							]
+						},
+						"When a character makes an attack roll, an ability check, or a saving throw, they must apply their current Stress Score as a penalty to the roll.",
+						{
+							"type": "entries",
+							"name": "Reducing Stress",
+							"entries": [
+								"A character who spends an entire day relaxing or in otherwise calm circumstances reduces their Stress Score by 1 when they finish their next long rest.",
+								"The {@spell calm emotions} spell effect used to suppress the {@condition charmed} and {@condition frightened} conditions also suppresses the effects of one's Stress Score for the spell's duration.",
+								"A {@spell lesser restoration} spell reduces the target's Stress Score by 1, and a {@spell greater restoration} spell reduces a character's Stress Score to 0."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Feats",
 			"source": "PHB",
 			"page": 165,
@@ -3849,6 +3978,83 @@
 										"If an effect would grant you advantage or disadvantage on your initiative roll under the standard system, you apply that to the largest initiative die you roll (or to one of those initiative dice if you roll more than one of the same type). Roll the initiative die twice, using the lowest roll if you have advantage or the highest roll if you have disadvantage."
 									]
 								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Haunted Traps",
+			"source": "VRGR",
+			"page": 196,
+			"type": "section",
+			"entries": [
+				"Like other traps, haunted traps represent threats leveled toward trespassers. They originate in an area spontaneously, often resulting from overwhelming negative emotions, tragedy, or evil. Just as some terrible fates might cause a tormented individual to rise as an undead creature, so might supernatural evil and violent emotions manifest more generally as one or more haunted traps. Such traps provide a way to theme the dangers and monsters of a haunted place to reveal a grim history or frightening tale. When creating haunted traps, consider what events brought them into being and how the trap's effects suggest those origins.",
+				{
+					"type": "entries",
+					"name": "Detecting Haunted Traps",
+					"entries": [
+						"Every haunted trap has an emanation, which might be as subtle as a drop in temperature or as overt as an object moving of its own accord. A haunted trap's emanation occurs before the trap takes effect. A character notices the emanation if their passive Wisdom ({@skill Perception}) score equals or exceeds 10 + the trap's Haunt Bonus. A character who notices the haunted trap has until the start of their next turn to react, which might include fleeing to avoid the trap or attempting to disarm it (see the following section). Class features and spells, such as Divine Sense and {@spell detect evil and good}, that discern desecration also detect haunted traps."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Disarming Haunted Traps",
+					"entries": [
+						"Characters who notice a haunted trap before it activates can attempt to disarm it. Typical methods of disarming traps, such as thieves' tools and {@spell dispel magic}, don't affect haunted traps. However, the Channel Divinity class feature and the {@spell remove curse} spell can disarm a haunted trap.",
+						"To use Channel Divinity to disarm a haunted trap, a character uses an action to present their holy symbol and speak a prayer. To use {@spell remove curse} instead, a character must cast the spell and touch an object that is part of the trap. Whichever disarming method is used, the trap itself then makes a saving throw against the character's spell save DC, adding its Haunt Bonus to the save. On a failure, the trap is disarmed for 24 hours. If the trap fails the save by 10 or more, the trap is disarmed permanently.",
+						"Depending on the haunted trap's origins, certain spells might also affect the trap. For example, a haunted trap with a fiendish origin might be permanently disarmed by the spell {@spell dispel evil and good}.",
+						"Some haunted traps might also be disarmed in nonmagical ways related to the history of a haunted area. Such methods might be as simple as wearing the clothes of a haunted house's former owner or singing a lullaby that soothes a restless spirit. Haunted traps disarmed in such ways typically remain disarmed for 24 hours."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sample Haunted Traps",
+					"entries": [
+						"Several haunted traps are presented here in alphabetical order. Customize them to create terrifying traps appropriate for your adventures.",
+						{
+							"type": "entries",
+							"name": "Danse Macabre",
+							"entries": [
+								"{@i Haunt Bonus +4}",
+								"This haunted trap affects a 20-foot-radius sphere centered on an ancient but pristine instrument. When a creature enters the area, the trap's emanation manifests as the sound of distant, mournful music. A round later, a phantom performer appears and begins playing the instrument for the next minute. While the performer plays, any creature that enters or starts its turn in the haunted trap's area must succeed on a DC 14 Wisdom saving throw or float 20 feet into the air and be affected by the spell {@spell Otto's irresistible dance}. There they are joined by illusory dancers as they dance for the remainder of the performer's song. As an action, a dancing creature can repeat the saving throw to end the effect on itself, whereupon it falls 20 feet and takes {@dice 2d6} bludgeoning damage. If a creature's saving throw to resist the trap or to stop dancing is successful, the creature is immune to the haunted trap for the next 24 hours.",
+								"While the phantom performer plays, any creature within the haunted trap's area can use an action to try to convince the performer to stop playing, doing so with a successful DC 14 Charisma ({@skill Persuasion}) check. When the performer stops playing, all creatures affected by the haunted trap are freed from its effects and float to the ground safely."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Faceless Malice",
+							"entries": [
+								"{@i Haunt Bonus +2}",
+								"This haunted trap affects a 15-foot-cube in front of an ornate mirror hanging on a wall. When a visible creature enters the area, the trap's emanation manifests as the creature's distorted reflection in the mirror. If that creature is still in the area at the start of its next turn, it must succeed on a DC 12 Wisdom saving throw or be {@condition blinded}, {@condition deafened}, and rendered unable to speak for 1 minute. Additionally, an illusion makes it appear that the creature has had its face erased. The {@spell remove curse} spell ends this effect, as does destroying the mirror. The mirror has AC 12, 10 hit points, vulnerability to bludgeoning damage, and immunity to poison and psychic damage. After a creature fails its saving throw against the trap, the trap won't activate again for 24 hours.",
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "variantrules/VRGR/110-04-006.faceless-malice.png"
+									},
+									"title": "The faceless malice haunted trap claims a victim",
+									"width": 850,
+									"height": 1253
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Icon of the Lower Aerial Kingdoms",
+							"entries": [
+								"{@i Haunt Bonus +6}",
+								"This haunted trap is tied to the 10-foot-radius sphere surrounding an ominous, 1-foot-tall statue of a menacing, four-winged, birdlike figure. Once per day, when a creature enters the area, the trap's emanation manifests as the sound of distant flapping wings and a rush of warm air. If that creature is still in the area at the start of its next turn, it must succeed on a DC 16 Wisdom saving throw or be {@condition charmed} and {@condition incapacitated} for 1 minute. These conditions last until the creature is damaged or someone else uses an action to shake the creature. If the affected creature remains {@condition charmed} for the full minute, they are then affected as per the spell {@spell magic jar}, their soul entering the statue and being replaced by the spirit of a disembodied fiend. This effect ends when {@spell dispel evil and good} or a similar spell is cast on the affected creature, or when the statue is destroyed. The statue has AC 17, 15 hit points, and immunity to poison and psychic damage.",
+								"This haunted trap manifests as the result of a fiendish influence. Casting {@spell dispel evil and good} on the statue permanently disarms the haunted trap."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Morbid Memory",
+							"entries": [
+								"{@i Haunt Bonus +0}",
+								"A morbid memory trap presents little danger, but it proves useful in revealing important and unsettling glimpses into an area's past. This haunted trap affects a single room or 30-foot-square area. When a creature enters the area, the trap's emanation manifests as faint, disembodied whispers. If that creature is still in the area at the start of its next turn, an illusory scene plays out, repeating some terrible event that happened in the area. This vision typically lasts 1 minute. When the vision ends, all creatures in the area that saw the illusion must succeed on a DC 10 Wisdom saving throw or become {@condition frightened} of the area for the next {@dice 1d4} rounds. {@condition Frightened} creatures must take the {@action Dash} action and move away from the haunted area by the safest available route on each of their turns, unless there is nowhere else to move. After the haunted trap is activated, it won't activate again for 24 hours."
 							]
 						}
 					]
@@ -8039,6 +8245,20 @@
 			"name": "Player Characters as Lycanthropes",
 			"source": "MM",
 			"page": 207,
+			"additionalSources": [
+				{
+					"source": "CoS",
+					"page": 242
+				},
+				{
+					"source": "WDMM",
+					"page": 317
+				},
+				{
+					"source": "VRGR",
+					"page": 237
+				}
+			],
 			"entries": [
 				"A character who becomes a lycanthrope retains his or her statistics except as specified by lycanthrope type. The character gains the lycanthrope's speeds in non-humanoid form, damage immunities, traits, and actions that don't involve equipment. The character is proficient with the lycanthrope's natural attacks, such as its bite or claws, which deal damage as shown in the lycanthrope's statistics. The character can't speak while in animal form.",
 				"A non-lycanthrope humanoid hit by an attack that carries the curse of lycanthropy must succeed on a Constitution saving throw (DC 8 + the lycanthrope's proficiency bonus + the lycanthrope's Constitution modifier) or be cursed. If the character embraces the curse, his or her alignment becomes the one defined for the lycanthrope. The DM is free to decide that a change in alignment places the character under DM control until the curse of lycanthropy is removed.",
@@ -8084,6 +8304,8 @@
 						{
 							"type": "entries",
 							"name": "{@creature Wereraven|CoS}",
+							"source": "CoS",
+							"page": 242,
 							"entries": [
 								"A character cursed with wereraven lycanthropy gains a Dexterity of 15 if his or her score isn't already higher. Attack and damage rolls for the wereraven's bite are based on whichever is higher of the character's Strength and Dexterity. The bite of a wereraven in raven form deals 1 piercing damage (no ability modifier applies to this damage) and carries the curse of lycanthropy."
 							]
@@ -8091,8 +8313,20 @@
 						{
 							"type": "entries",
 							"name": "{@creature Werebat|WDMM}",
+							"source": "WDMM",
+							"page": 317,
 							"entries": [
 								"A player character who becomes a werebat gains a Dexterity of 17 if their score isn't already higher. Attack and damage rolls for the werebat's bite attack are based on the character's Strength or Dexterity score, whichever is higher."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "{@creature Loup Garou|VRGR}",
+							"source": "VRGR",
+							"page": 237,
+							"entries": [
+								"A Humanoid who succumbs to a loup garou's lycanthropy becomes a {@creature werewolf} (see above). This form of lycanthropy can't be removed while the loup garou that inflicted the curse lives.",
+								"Once a loup garou is slain, a remove curse spell cast during the night of a full moon on any afflicted werewolf it created forces the target to make a DC 17 Constitution saving throw. On a success, the curse is broken, and the target returns to its normal form and gains 3 levels of exhaustion. On a failure, the curse remains, and the target automatically fails any saving throw made to break this curse for 1 month."
 							]
 						}
 					]
@@ -8103,8 +8337,23 @@
 			"name": "Player Characters as Vampires",
 			"source": "MM",
 			"page": 295,
+			"additionalSources": [
+				{
+					"source": "VRGR",
+					"page": 236
+				}
+			],
 			"entries": [
-				"The game statistics of a player character transformed into a {@creature vampire spawn} and then a {@creature vampire} don't change, except that the character's Strength, Dexterity, and Constitution scores become 18 if they aren't higher. In addition, the character gains the vampire's damage resistances, darkvision, traits, and actions. Attack and damage rolls for the vampire's attacks are based on Strength. The save DC for Charm is 8 + the vampire's proficiency bonus + the vampire's Charisma modifier. The character's alignment becomes lawful evil, and the DM might take control of the character until the vampirism is reversed with a {@spell wish} spell or the character is killed and brought back to life."
+				"The game statistics of a player character transformed into a {@creature vampire spawn} and then a {@creature vampire} don't change, except that the character's Strength, Dexterity, and Constitution scores become 18 if they aren't higher. In addition, the character gains the vampire's damage resistances, darkvision, traits, and actions. Attack and damage rolls for the vampire's attacks are based on Strength. The save DC for Charm is 8 + the vampire's proficiency bonus + the vampire's Charisma modifier. The character's alignment becomes lawful evil, and the DM might take control of the character until the vampirism is reversed with a {@spell wish} spell or the character is killed and brought back to life.",
+				{
+					"type": "entries",
+					"name": "Jiangshi",
+					"source": "VRGR",
+					"page": 236,
+					"entries": [
+						"Humanoids killed by a {@creature jiangshi|VRGR} rise as life-hungry corpses and might turn into jiangshi themselves if they feed upon the living."
+					]
+				}
 			]
 		},
 		{
@@ -11104,6 +11353,219 @@
 			]
 		},
 		{
+			"name": "Survivors",
+			"source": "VRGR",
+			"page": 198,
+			"type": "section",
+			"entries": [
+				"Terror doesn't come just for the brave and prepared\u2014often quite the opposite. Some of the most harrowing horror stories involve the least likely heroes, individuals who find their simple lives transformed into waking nightmares.",
+				"In most horror adventures, your players will employ familiar, adventure-ready characters. That doesn't need to be the case, though. Instead, for short, low-power adventures, immersive retellings of tragic events, out-of-body experiences, or other unique tales, consider providing players with temporary, stand-in characters called survivors.",
+				"This section provides guidance for using survivors, characters designed for one- to three-session adventures focused on survival rather than saving the day. Using survivors helps create horror experiences focused on the dread inherent to having limited resources and facing impending doom without forcing players to risk their favorite characters.",
+				{
+					"type": "entries",
+					"name": "Using Survivors",
+					"entries": [
+						"Survivors are premade characters that are simple and easy for players to master, while being customizable enough to fill broad roles in your adventures\u2014whether they be farmers or bored nobles, constables or babysitters. Adventures employing survivors are meant to be asides within broader campaigns or otherwise short experiences.",
+						{
+							"type": "entries",
+							"name": "Cut Scenes, Dreams, and Memories",
+							"entries": [
+								"Use survivors to provide information to players in the form of a self-contained adventure. Even if it doesn't make sense for a campaign's characters to be present for an event, survivors can provide players with perspectives they wouldn't otherwise have. For example, you might use survivors in the following ways:",
+								{
+									"type": "list",
+									"items": [
+										"Survivors serve as the first constables on the scene during a serial killer's crime. Afterward, when the players' other characters get involved in the investigations, the players know the details.",
+										"Survivors give every player a part to play in one character's ominous nightmares, such as those resulting from encounters with the mind flayers of Bluetspur (see {@book chapter 3|VRGR|3}).",
+										"Survivors provide players front row seats to important historic events. It's one thing to hear about the massacre at Castle Ravenloft following Strahd von Zarovich's transformation into a vampire, but it's another to play it."
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Mindtaker Mists",
+							"entries": [
+								"The Mists frequently kidnap characters from across the multiverse, dragging them into the Domains of Dread. They don't always claim their victims bodily, though. Rather, the Mists might steal characters' minds, placing them into survivors involved in specific terrifying scenarios. Perhaps characters suddenly find themselves mentally recast into someone defending against a zombie siege in Falkovnia, attending a ball in Dementlieu, or exploring the tombs of Har'Akir (see {@book chapter 3|VRGR|3} for details on such adventures). Whether the characters survive or meet spectacular ends doesn't matter, as death might mean a return to the character's original body, a second chance to try again, or a stranger fate."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Terrible Freedom, Delightful Doom",
+							"entries": [
+								"Make sure your players know how long you plan to use survivors and that they'll be playing their usual characters again soon. Also let them know that survivors are designed to engage with terrifying circumstances, but their triumph over such threats is not assured. Players' decisions will certainly impact the survivors' fates, but if it seems like doom is in store, encourage the players to embrace it and make sure their survivors meet unforgettable ends."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "What's Old Is New",
+							"entries": [
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "variantrules/VRGR/111-04-007.for-survivors.png"
+									},
+									"title": "For survivors, any foe might become the focus of its own horror adventure",
+									"width": 850,
+									"height": 1560
+								},
+								"Dwindling resources contribute to terrifying situations. When a group runs out of hit points, spells, food, or other vital reserves, tension and dread increase. High-level characters, though, have such resources in spades. By running an adventure using survivors, you can recapture some of the same tension adventurers experience early in their careers, encouraging players to use their wits and make desperate choices powerful characters can avoid."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Tools for Terror",
+							"entries": [
+								"Survivors allow you to control how players will engage with a horror adventure. The stat blocks in the following section are designed to be easy-to-use characters with a hint of talent but little that makes them remarkable:",
+								"{@b Apprentices} have a minor talent for magic and tend to be well-read.",
+								"{@b Disciples} faithfully adhere to the tenets of their chosen religions and receive spells from the deities they worship.",
+								"{@b Sneaks} survive by their wits and are often charlatans or petty thieves.",
+								"{@b Squires} possess a modicum of martial training and are stalwart companions.",
+								"Determine how you want to use survivors in your adventure. If it's important to the story, perhaps all the players use the same stat block, representing their shared experience\u2014a group of Sneaks might all be detectives while a band of Disciples might face a terror unleashed upon a monastery. You can also allow players to choose their own survivors, as any survivor might fill a general role like noble, villager, or sailor with a touch of talent. Make use of these ready-made characters in whatever ways suit your adventure best."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Creating a Survivor",
+					"entries": [
+						"When you plan a session using survivors, determine how you'll use the {@b Apprentice}, {@b Disciple}, {@b Sneak}, and {@b Squire} stat blocks that appear in the following section. Once you've determined what survivors to use, take a few moments to individualize them. If the survivors have particular roles in your adventure, provide that information to players along with their survivors' statistics; otherwise, let them come up with their own details. Players can give their survivors names, personalities, and lineages, but these details don't affect the survivors' stat blocks.",
+						{
+							"type": "entries",
+							"name": "Levels",
+							"entries": [
+								"Survivors don't possess classes as detailed in the {@book Player's Handbook|PHB}. Despite this, you can make a survivor marginally more powerful by increasing its level. The stat blocks present the survivors as they are at 1st level. Rather than gaining experience points, a survivor increases in level whenever it makes sense for your adventure. When a survivor gains a level, it gains the benefits on the Survivor Progression table. A survivor that advances from 1st to 2nd level and from 2nd to 3rd level gains access to the player's choice of Survivor Talents (see the section below).",
+								{
+									"type": "table",
+									"caption": "Survivor Progression",
+									"colLabels": [
+										"Level",
+										"Feature"
+									],
+									"colStyles": [
+										"col-2",
+										"col-10"
+									],
+									"rows": [
+										[
+											"1st",
+											"See the appropriate stat block"
+										],
+										[
+											"2nd",
+											"Survivor Talent"
+										],
+										[
+											"3rd",
+											"Survivor Talent"
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Hit Points",
+							"entries": [
+								"Whenever a survivor gains a level, it gains one Hit Die and its hit point maximum increases. To determine the amount of the increase, roll the Hit Die (the type that appears in the survivor's stat block), and add the survivor's Constitution modifier. It gains a minimum of 1 hit point per level.",
+								"If a survivor drops to 0 hit points, it falls {@condition unconscious} and subsequently makes death saving throws just like a normal player character."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Survivor Talents",
+					"entries": [
+						"At 2nd level and again at 3rd level, a survivor gains their choice of one of the following talents. A survivor can't gain the same talent more than once, unless a talent's description says otherwise. If a talent has a prerequisite, the character must meet it to gain the talent.",
+						{
+							"type": "entries",
+							"name": "Adrenaline Surge",
+							"entries": [
+								"At the start of your turn, you can choose one creature you can see within 30 feet of you. Until the start of your next turn, you are {@condition frightened} of that creature and your walking speed is doubled."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Desperate Scream",
+							"entries": [
+								"Whenever you make a saving throw, you can summon your desire to live into a desperate scream. You gain advantage on the saving throw, and the scream is audible up to 100 feet away. You can scream in this way twice, and you regain all expended uses when you finish a long rest.",
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "variantrules/VRGR/112-04-008.survivors.png"
+									},
+									"title": "Survivors are everyday people thrown into terrifying situations",
+									"width": 850,
+									"height": 1324
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Divine Guidance",
+							"entries": [
+								"{@i Prerequisite: Disciple survivor}",
+								"You learn one 1st-level spell of your choice from the cleric spell list. It must be a spell you don't already know. You can cast the spell once with this talent, and you regain the ability to do so when you finish a long rest.",
+								"You can select this talent more than once. Each time you do so, you must choose a different spell."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Magical Talent",
+							"entries": [
+								"{@i Prerequisite: Apprentice survivor}",
+								"You learn one 1st-level spell of your choice from the wizard spell list. It must be a spell you don't already know. You can cast the spell once with this talent, and you regain the ability to do so when you finish a long rest.",
+								"You can select this talent more than once. Each time you do so, you must choose a different spell."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Resilience",
+							"entries": [
+								"Choose one ability score. You gain proficiency in saving throws using the chosen ability."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Sacrificing Shield",
+							"entries": [
+								"{@i Prerequisite: Squire survivor}",
+								"When a creature you can see makes an attack against a target you can see within 5 feet of you, you can use your reaction to become the target of the attack instead. If you are wielding a shield, you can reduce the damage by {@dice 1d10}. Once you use this talent, you can't do so again until you finish a short or long rest."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Skillful",
+							"entries": [
+								"You gain proficiency in two skills of your choice."
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Slip Away",
+							"entries": [
+								"{@i Prerequisite: Sneak survivor}",
+								"When a creature you can see within 5 feet of you hits you with an attack roll and deals damage to you with the attack, you can use your reaction to give yourself resistance against that damage. You can then move up to half your speed without provoking opportunity attacks. Once you use this talent, you can't do so again until you finish a short or long rest."
+							]
+						}
+					]
+				},
+				{
+					"type": "list",
+					"columns": 3,
+					"items": [
+						"{@creature Apprentice|HoL}",
+						"{@creature Sneak|HoL}",
+						"{@creature Disciple|HoL}",
+						"{@creature Squire|HoL}"
+					]
+				}
+			]
+		},
+		{
 			"name": "Swapping Racial Languages",
 			"source": "UAWGE",
 			"page": 40,
@@ -13967,7 +14429,7 @@
 									"type": "entries",
 									"name": "Treasure",
 									"entries": [
-										"Each nest holds {@dice 1d4}\u22121 blood hawk eggs. Blood hawks make excellent hunting animals. Nobles are willing to pay 25 gp per intact egg."
+										"Each nest holds {@dice 1d4-1} blood hawk eggs. Blood hawks make excellent hunting animals. Nobles are willing to pay 25 gp per intact egg."
 									]
 								}
 							]

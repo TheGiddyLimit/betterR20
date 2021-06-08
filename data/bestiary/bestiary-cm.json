@@ -610,6 +610,7 @@
 		{
 			"name": "Chwinga",
 			"source": "CM",
+			"page": 212,
 			"_copy": {
 				"name": "Chwinga",
 				"source": "ToA"
@@ -1723,6 +1724,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -2620,7 +2622,7 @@
 				{
 					"name": "Shield (1st-Level Spell; 3/Day)",
 					"entries": [
-						"When the sage is hit by an attack or targeted by a magic missile spell, it calls forth an {@condition invisible} barrier of magical force that protects it. Until the start of its next turn, the sage has a +5 bonus to AC, including against the triggering attack, and it takes no damage from magic missile."
+						"When the sage is hit by an attack or targeted by a magic missile spell, it calls forth an invisible barrier of magical force that protects it. Until the start of its next turn, the sage has a +5 bonus to AC, including against the triggering attack, and it takes no damage from magic missile."
 					]
 				}
 			],
@@ -4888,6 +4890,7 @@
 				"name": "Zikzokrishka",
 				"source": "CM"
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"

@@ -461,6 +461,9 @@
 					},
 					"ability": "wis"
 				}
+			],
+			"spellcastingTags": [
+				"CD"
 			]
 		},
 		{

@@ -503,6 +503,11 @@
 				],
 				"rarity": "common",
 				"reqAttune": "by a warforged",
+				"reqAttuneTags": [
+					{
+						"race": "warforged|erlw"
+					}
+				],
 				"entries": [
 					"An armblade is a magic weapon that attaches to your arm, becoming inseparable from you as long as you're attuned to it. To attune to this item, you must hold it against your forearm for the entire attunement period.",
 					"As a bonus action, you can retract the armblade into your forearm or extend it from there. While it is extended, you can use the weapon as if you were holding it, and you can't use that hand for other purposes."
@@ -858,7 +863,6 @@
 				"reqAttune": true,
 				"curse": true,
 				"bonusWeapon": "+1",
-				"bonusAc": "+1",
 				"entries": [
 					"You gain a +1 bonus to attack and damage rolls made with this magic weapon. In addition, while you are attuned to this weapon, your hit point maximum increases by 1 for each level you have attained.",
 					{
@@ -1215,6 +1219,11 @@
 				"tier": "major",
 				"rarity": "legendary",
 				"reqAttune": "by a paladin",
+				"reqAttuneTags": [
+					{
+						"class": "paladin"
+					}
+				],
 				"bonusWeapon": "+3",
 				"bonusAc": "+3",
 				"entries": [

@@ -140,6 +140,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -489,6 +490,9 @@
 						"If the medusa sees itself reflected on a polished surface within 30 feet of it and in an area of bright light, the medusa is, due to its curse, affected by its own gaze."
 					]
 				}
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -828,6 +832,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AB",
 				"C",
@@ -943,6 +948,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"SD"
 			],
@@ -1474,6 +1480,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"C",
 				"DR",
@@ -1585,6 +1592,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],
@@ -1810,6 +1818,9 @@
 				"C",
 				"I",
 				"X"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -1972,6 +1983,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],

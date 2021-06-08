@@ -850,6 +850,10 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
 			]
 		},
 		{
@@ -868,6 +872,9 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -886,6 +893,9 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -904,6 +914,9 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -922,6 +935,9 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -940,6 +956,9 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -959,6 +978,9 @@
 				"Fey Ancestry",
 				"Keen Senses",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -1038,6 +1060,9 @@
 				"Fey Ancestry",
 				"Sneak Attack",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -1603,7 +1628,8 @@
 			"conditionImmune": [
 				"poisoned"
 			],
-			"cr": "1/2"
+			"cr": "1/2",
+			"hasToken": true
 		},
 		{
 			"name": "Four-Armed Statue",
@@ -1803,6 +1829,7 @@
 				"walk": 20,
 				"climb": 10
 			},
+			"hasToken": true,
 			"traitTags": [
 				"Water Breathing"
 			]
@@ -2119,7 +2146,8 @@
 					]
 				}
 			],
-			"hasToken": true
+			"hasToken": true,
+			"conditionInflict": []
 		},
 		{
 			"name": "Infant Hook Horror",
@@ -2392,7 +2420,10 @@
 					}
 				}
 			},
-			"hasToken": true
+			"hasToken": true,
+			"spellcastingTags": [
+				"I"
+			]
 		},
 		{
 			"name": "Juvenile Hook Horror",
@@ -2488,6 +2519,9 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sneak Attack"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -2516,6 +2550,9 @@
 				"Fey Ancestry",
 				"Sneak Attack",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -2979,7 +3016,10 @@
 					}
 				}
 			},
-			"hasToken": true
+			"hasToken": true,
+			"spellcastingTags": [
+				"I"
+			]
 		},
 		{
 			"name": "Prince Derendil",
@@ -4004,6 +4044,9 @@
 						]
 					}
 				}
+			],
+			"spellcastingTags": [
+				"I"
 			]
 		},
 		{
@@ -4126,6 +4169,10 @@
 				"Fey Ancestry",
 				"Magic Resistance",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
 			]
 		},
 		{
@@ -4509,6 +4556,10 @@
 			"traitTags": [
 				"Fey Ancestry",
 				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
 			]
 		}
 	]

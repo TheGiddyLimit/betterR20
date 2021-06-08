@@ -103,6 +103,15 @@
 						}
 					]
 				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/SADS/Adult Sapphire Dragon.png"
+					}
+				}
 			]
 		}
 	]

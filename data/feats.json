@@ -24,7 +24,7 @@
 				{
 					"ability": "con",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Sorcerer"
@@ -246,7 +246,7 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								"prestidigitation"
 							],
@@ -283,7 +283,7 @@
 				{
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Artificer"
@@ -325,7 +325,7 @@
 				{
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Artificer"
@@ -618,7 +618,7 @@
 				{
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"will": [
 								"speak with animals"
 							],
@@ -925,16 +925,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"detect magic"
-								]
-							},
-							"_": [
-								"mage hand"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -948,6 +938,16 @@
 									"clairvoyance"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"detect magic"
+								]
+							},
+							"_": [
+								"mage hand"
+							]
 						}
 					},
 					"ability": "wis"
@@ -998,16 +998,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"identify"
-								]
-							},
-							"_": [
-								"mage hand"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1021,6 +1011,16 @@
 									"clairvoyance"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"identify"
+								]
+							},
+							"_": [
+								"mage hand"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1068,16 +1068,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"speak with animals"
-								]
-							},
-							"_": [
-								"druidcraft"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1091,6 +1081,16 @@
 									"conjure animals"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"speak with animals"
+								]
+							},
+							"_": [
+								"druidcraft"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1138,16 +1138,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"cure wounds"
-								]
-							},
-							"_": [
-								"spare the dying"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1161,6 +1151,16 @@
 									"revivify"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"cure wounds"
+								]
+							},
+							"_": [
+								"spare the dying"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1208,16 +1208,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"unseen servant"
-								]
-							},
-							"_": [
-								"friends"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1231,6 +1221,16 @@
 									"Leomund's tiny hut"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"unseen servant"
+								]
+							},
+							"_": [
+								"friends"
+							]
 						}
 					},
 					"ability": "cha"
@@ -1278,16 +1278,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"identify"
-								]
-							},
-							"_": [
-								"mending"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1301,6 +1291,16 @@
 									"fabricate"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"identify"
+								]
+							},
+							"_": [
+								"mending"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1348,16 +1348,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"expeditious retreat"
-								]
-							},
-							"_": [
-								"light"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1371,6 +1361,16 @@
 									"teleportation circle"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"expeditious retreat"
+								]
+							},
+							"_": [
+								"light"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1418,16 +1418,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"comprehend languages"
-								]
-							},
-							"_": [
-								"message"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1441,6 +1431,16 @@
 									"tongues"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"comprehend languages"
+								]
+							},
+							"_": [
+								"message"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1488,16 +1488,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"compelled duel"
-								]
-							},
-							"_": [
-								"blade ward"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1511,6 +1501,16 @@
 									"protection from energy"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"compelled duel"
+								]
+							},
+							"_": [
+								"blade ward"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1558,16 +1558,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"dancing lights"
-								]
-							},
-							"_": [
-								"disguise self"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1581,6 +1571,16 @@
 									"nondetection"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"dancing lights"
+								]
+							},
+							"_": [
+								"disguise self"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1628,16 +1628,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"fog cloud"
-								]
-							},
-							"_": [
-								"shocking grasp"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1651,6 +1641,16 @@
 									"sleet storm"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"fog cloud"
+								]
+							},
+							"_": [
+								"shocking grasp"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1698,16 +1698,6 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
-							"daily": {
-								"1": [
-									"alarm"
-								]
-							},
-							"_": [
-								"resistance"
-							]
-						},
 						"5": {
 							"daily": {
 								"1": [
@@ -1721,6 +1711,16 @@
 									"magic circle"
 								]
 							}
+						},
+						"_": {
+							"daily": {
+								"1": [
+									"alarm"
+								]
+							},
+							"_": [
+								"resistance"
+							]
 						}
 					},
 					"ability": "wis"
@@ -1770,7 +1770,7 @@
 				{
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"will": [
 								"detect magic"
 							],
@@ -1806,7 +1806,7 @@
 				{
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"will": [
 								"detect magic"
 							],
@@ -2206,7 +2206,7 @@
 				{
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									"misty step"
@@ -2260,7 +2260,7 @@
 				{
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									"misty step"
@@ -2301,7 +2301,7 @@
 				{
 					"ability": "inherit",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1e": [
 									"misty step",
@@ -2344,7 +2344,7 @@
 				{
 					"ability": "inherit",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1e": [
 									"misty step",
@@ -2485,6 +2485,82 @@
 					"items": [
 						"When you roll fire damage for a spell you cast, you can reroll any roll of 1 on the fire damage dice, but you must use the new roll, even if it is another 1.",
 						"Whenever you cast a spell that deals fire damage, you can cause flames to wreathe you until the end of your next turn. The flames don't harm you or your possessions, and they shed bright light out to 30 feet and dim light for an additional 30 feet. While the flames are present, any creature within 5 feet of you that hits you with a melee attack takes {@damage 1d4} fire damage."
+					]
+				}
+			]
+		},
+		{
+			"name": "Gift of the Chromatic Dragon",
+			"source": "UA2021DraconicOptions",
+			"page": 4,
+			"entries": [
+				"You've manifested some of the power of chromatic dragons, granting you the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"As a bonus action, you can touch a simple or martial weapon and infuse it with one of the following damage types: acid, cold, fire, lightning, or poison. For the next minute, the weapon deals an extra {@dice 1d4} damage of the chosen type when it hits. After you use this ability, you can't do so again until you finish a long rest.",
+						"When you take acid, cold, fire, lightning, or poison damage, you can use your reaction to give yourself resistance to that instance of damage. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Gift of the Gem Dragon",
+			"source": "UA2021DraconicOptions",
+			"page": 5,
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested some of the power of gem dragons, granting you the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you take damage from a creature that is within 10 feet of you, you can use your reaction to emanate telekinetic energy. The creature that dealt damage to you must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + the ability modifier of the score increased by this feat) or take {@dice 2d8} force damage and be pushed 10 feet away from you. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				}
+			]
+		},
+		{
+			"name": "Gift of the Metallic Dragon",
+			"source": "UA2021DraconicOptions",
+			"page": 4,
+			"additionalSpells": [
+				{
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					},
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									"cure wounds"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"You've manifested some of the power of metallic dragons, granting you the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You learn the {@spell cure wounds} spell. You can cast this spell without expending a spell slot. Once you cast this spell in this way, you can't do so again until you finish a long rest. You can also cast this spell using spell slots you have. The spell's spellcasting ability is Intelligence, Wisdom, or Charisma when you cast it with this feat (choose when you gain this feat).",
+						"You can manifest protective wings that can shield you or others from attacks. When you or another creature you can see within 5 feet of you is hit by an attack roll, you can use your reaction to manifest spectral wings from your back for a moment. Roll a {@dice d4} and grant a bonus to the target's AC equal to the number rolled against that attack roll, potentially causing it to miss. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 					]
 				}
 			]
@@ -2992,9 +3068,10 @@
 			"page": 168,
 			"additionalSpells": [
 				{
+					"name": "Bard Spells",
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Bard",
@@ -3012,9 +3089,10 @@
 					}
 				},
 				{
+					"name": "Cleric Spells",
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Cleric",
@@ -3032,9 +3110,10 @@
 					}
 				},
 				{
+					"name": "Druid Spells",
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Druid",
@@ -3052,9 +3131,10 @@
 					}
 				},
 				{
+					"name": "Sorcerer Spells",
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Sorcerer",
@@ -3072,9 +3152,10 @@
 					}
 				},
 				{
+					"name": "Warlock Spells",
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Warlock",
@@ -3092,9 +3173,10 @@
 					}
 				},
 				{
+					"name": "Wizard Spells",
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								{
 									"choose": "level=0|class=Wizard",
@@ -3393,7 +3475,7 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								"druidcraft"
 							],
@@ -4050,9 +4132,10 @@
 			],
 			"additionalSpells": [
 				{
+					"name": "Bard Spells",
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									{
@@ -4065,9 +4148,10 @@
 					}
 				},
 				{
+					"name": "Cleric Spells",
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									{
@@ -4080,9 +4164,10 @@
 					}
 				},
 				{
+					"name": "Druid Spells",
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									{
@@ -4095,9 +4180,10 @@
 					}
 				},
 				{
+					"name": "Sorcerer Spells",
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									{
@@ -4110,9 +4196,10 @@
 					}
 				},
 				{
+					"name": "Warlock Spells",
 					"ability": "cha",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									{
@@ -4125,9 +4212,10 @@
 					}
 				},
 				{
+					"name": "Wizard Spells",
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									{
@@ -4256,7 +4344,7 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
+						"_": {
 							"ritual": [
 								"find familiar"
 							]
@@ -4290,7 +4378,7 @@
 				{
 					"ability": "inherit",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1e": [
 									"invisibility",
@@ -4333,7 +4421,7 @@
 				{
 					"ability": "inherit",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1e": [
 									"invisibility",
@@ -4496,7 +4584,7 @@
 				{
 					"type": "list",
 					"items": [
-						"You gain proficiency in one skill of your choice.",
+						"You gain proficiency in one {@table skills|phb|skill} of your choice.",
 						"Choose one skill in which you have proficiency. You gain expertise with that skill, which means your proficiency bonus is doubled for any ability check you make with it. The skill you choose must be one that isn't already benefiting from a feature, such as Expertise, that doubles your proficiency bonus."
 					]
 				}
@@ -4645,6 +4733,7 @@
 			],
 			"additionalSpells": [
 				{
+					"name": "Bard Spells",
 					"ability": "cha",
 					"innate": {
 						"1": [
@@ -4656,6 +4745,7 @@
 					}
 				},
 				{
+					"name": "Cleric Spells",
 					"ability": "wis",
 					"innate": {
 						"1": [
@@ -4667,6 +4757,7 @@
 					}
 				},
 				{
+					"name": "Druid Spells",
 					"ability": "wis",
 					"innate": {
 						"1": [
@@ -4678,6 +4769,7 @@
 					}
 				},
 				{
+					"name": "Sorcerer Spells",
 					"ability": "cha",
 					"innate": {
 						"1": [
@@ -4689,6 +4781,7 @@
 					}
 				},
 				{
+					"name": "Warlock Spells",
 					"ability": "cha",
 					"innate": {
 						"1": [
@@ -4700,6 +4793,7 @@
 					}
 				},
 				{
+					"name": "Wizard Spells",
 					"ability": "int",
 					"innate": {
 						"1": [
@@ -4866,7 +4960,7 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									"alarm"
@@ -4915,7 +5009,7 @@
 				{
 					"ability": "int",
 					"innate": {
-						"1": {
+						"_": {
 							"will": [
 								"nondetection"
 							],
@@ -5105,7 +5199,7 @@
 				{
 					"ability": "inherit",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									"detect thoughts"
@@ -5151,7 +5245,7 @@
 				{
 					"ability": "inherit",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									"detect thoughts"
@@ -5221,7 +5315,7 @@
 			"additionalSpells": [
 				{
 					"innate": {
-						"1": {
+						"_": {
 							"_": [
 								"thaumaturgy"
 							],
@@ -5279,7 +5373,7 @@
 				{
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1": [
 									"hunter's mark"
@@ -5534,7 +5628,7 @@
 				{
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1e": [
 									"longstrider",
@@ -5567,7 +5661,7 @@
 				{
 					"ability": "wis",
 					"innate": {
-						"1": {
+						"_": {
 							"daily": {
 								"1e": [
 									"longstrider",

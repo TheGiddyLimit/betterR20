@@ -700,6 +700,9 @@
 					}
 				}
 			},
+			"speed": {
+				"walk": 20
+			},
 			"hasToken": true
 		},
 		{
@@ -4052,6 +4055,10 @@
 				"DR",
 				"I",
 				"P"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
 			]
 		},
 		{
@@ -4346,9 +4353,6 @@
 			"miscTags": [
 				"MW"
 			],
-			"conditionInflict": [
-				"unconscious"
-			],
 			"hasFluffImages": true
 		},
 		{
@@ -4520,7 +4524,7 @@
 		{
 			"name": "Undead Tree",
 			"source": "BGDIA",
-			"page": 23,
+			"page": 109,
 			"_copy": {
 				"name": "Treant",
 				"source": "MM",

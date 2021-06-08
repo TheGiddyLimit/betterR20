@@ -3274,6 +3274,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"B",
 				"I",

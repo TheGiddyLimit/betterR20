@@ -4,6 +4,7 @@
 			"name": "Aberrant Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 3,
+			"summonedBySpell": "Summon Aberrant Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "M",
 			"type": "aberration",
 			"alignment": [
@@ -67,19 +68,19 @@
 				{
 					"name": "Eye Ray (Beholderkin Only)",
 					"entries": [
-						"{@atk rs} +3 + the spell's level to hit, range 30 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level psychic damage."
+						"{@atk rs} {@hit 3 + summonSpellLevel} to hit, range 30 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} psychic damage."
 					]
 				},
 				{
 					"name": "Claws (Slaadi Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3} + the spell's level slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3 + summonSpellLevel} slashing damage. If the target is a creature, it can't regain hit points until the start of the aberration's next turn."
 					]
 				},
 				{
 					"name": "Psychic Slam (Star Spawn Only)",
 					"entries": [
-						"{@atk ms} +3 + the spell's level to hit, reach 5 ft., one creature. {@h}{@damage 1d6 + 3} + the spell's level psychic damage."
+						"{@atk ms} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one creature. {@h}{@damage 1d6 + 3 + summonSpellLevel} psychic damage."
 					]
 				}
 			],
@@ -107,6 +108,7 @@
 			"name": "Bestial Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 4,
+			"summonedBySpell": "Summon Bestial Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "S",
 			"type": "beast",
 			"alignment": [
@@ -178,7 +180,7 @@
 				{
 					"name": "Maul",
 					"entries": [
-						"{@atk mw} +4 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4} + the spell's level piercing damage."
+						"{@atk mw} {@hit 4 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 4 + summonSpellLevel} piercing damage."
 					]
 				}
 			],
@@ -204,6 +206,7 @@
 			"name": "Celestial Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 4,
+			"summonedBySpell": "Summon Celestial Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "L",
 			"type": "celestial",
 			"alignment": [
@@ -253,19 +256,19 @@
 				{
 					"name": "Radiant Bow (Avenger Only)",
 					"entries": [
-						"{@atk rw} +2 + the spell's level to hit, range 150/600 ft., one target. {@h}{@damage 2d6 + 2} + the spell's level radiant damage."
+						"{@atk rw} {@hit 2 + summonSpellLevel} to hit, range 150/600 ft., one target. {@h}{@damage 2d6 + 2 + summonSpellLevel} radiant damage."
 					]
 				},
 				{
 					"name": "Radiant Mace (Defender Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3} + the spell's level radiant damage, and the celestial can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains temporary hit points equal to the damage dealt, provided it doesn't already have temporary hit points."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 3 + summonSpellLevel} radiant damage, and the celestial can choose itself or another creature it can see within 10 feet of the target. The chosen creature gains temporary hit points equal to the damage dealt, provided it doesn't already have temporary hit points."
 					]
 				},
 				{
 					"name": "Healing Touch (1/Day)",
 					"entries": [
-						"The celestial touches another creature. The target magically regains hit points equal to {@dice 2d8} + the spell's level."
+						"The celestial touches another creature. The target magically regains hit points equal to {@dice 2d8 + summonSpellLevel}."
 					]
 				}
 			],
@@ -290,6 +293,7 @@
 			"name": "Elemental Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 5,
+			"summonedBySpell": "Summon Elemental Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "M",
 			"type": "elemental",
 			"alignment": [
@@ -389,7 +393,7 @@
 				{
 					"name": "Slam",
 					"entries": [
-						"{@atk mw} +4 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 4} + the spell's level bludgeoning damage (Air, Earth, and Water only) or fire damage (Fire only)."
+						"{@atk mw} {@hit 4 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d10 + 4 + summonSpellLevel} bludgeoning damage (Air, Earth, and Water only) or fire damage (Fire only)."
 					]
 				}
 			],
@@ -417,6 +421,7 @@
 			"name": "Fey Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 5,
+			"summonedBySpell": "Summon Fey Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "S",
 			"type": "fey",
 			"alignment": [
@@ -487,7 +492,7 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level piercing damage{@damage  + 1d6} force damage."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3 + summonSpellLevel} piercing damage{@damage  + 1d6} force damage."
 					]
 				}
 			],
@@ -516,6 +521,7 @@
 			"name": "Fiendish Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 6,
+			"summonedBySpell": "Summon Fiendish Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "L",
 			"type": "fiend",
 			"alignment": [
@@ -594,7 +600,7 @@
 				{
 					"name": "Death Throes (Demon Only)",
 					"entries": [
-						"When the fiend drops to 0 hit points or the spell ends, the fiend explodes, and each creature within 10 feet of it must make a Dexterity saving throw against your spell save DC. A creature takes {@dice 2d10} + this spell's level fire damage on a failed save, or half as much damage on a successful one."
+						"When the fiend drops to 0 hit points or the spell ends, the fiend explodes, and each creature within 10 feet of it must make a Dexterity saving throw against your spell save DC. A creature takes {@damage 2d10 + summonSpellLevel} fire damage on a failed save, or half as much damage on a successful one."
 					]
 				},
 				{
@@ -614,19 +620,19 @@
 				{
 					"name": "Bite (Demon Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d12 + 3} + the spell's level necrotic damage."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d12 + 3 + summonSpellLevel} necrotic damage."
 					]
 				},
 				{
 					"name": "Claws (Yugoloth Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 3} + the spell's level slashing damage. Immediately after the attack hits or misses, the fiend can magically teleport up to 30 feet to an unoccupied space it can see."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d8 + 3 + summonSpellLevel} slashing damage. Immediately after the attack hits or misses, the fiend can magically teleport up to 30 feet to an unoccupied space it can see."
 					]
 				},
 				{
 					"name": "Hurl Flame (Devil Only)",
 					"entries": [
-						"{@atk rs} +3 + the spell's level to hit, range 150 ft., one target. {@h}{@damage 2d6 + 3} + the spell's level fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
+						"{@atk rs} {@hit 3 + summonSpellLevel} to hit, range 150 ft., one target. {@h}{@damage 2d6 + 3 + summonSpellLevel} fire damage. If the target is a flammable object that isn't being worn or carried, it also catches fire."
 					]
 				}
 			],
@@ -659,6 +665,7 @@
 			"name": "Shadow Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 7,
+			"summonedBySpell": "Summon Shadow Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "M",
 			"type": "monstrosity",
 			"alignment": [
@@ -726,7 +733,7 @@
 				{
 					"name": "Chilling Rend",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 2d8 + 3} + the spell's level cold damage."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 2d8 + 3 + summonSpellLevel} cold damage."
 					]
 				},
 				{
@@ -759,6 +766,7 @@
 			"name": "Undead Spirit",
 			"source": "UA2020SpellsAndMagicTattoos",
 			"page": 8,
+			"summonedBySpell": "Summon Undead Spirit|UA2020SpellsAndMagicTattoos",
 			"size": "M",
 			"type": "undead",
 			"alignment": [
@@ -829,19 +837,19 @@
 				{
 					"name": "Deathly Touch (Ghostly Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3} + the spell's level necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of the undead until the end of the target's next turn."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one creature. {@h}{@damage 1d8 + 3 + summonSpellLevel} necrotic damage, and the creature must succeed on a Wisdom saving throw against your spell save DC or be {@condition frightened} of the undead until the end of the target's next turn."
 					]
 				},
 				{
 					"name": "Grave Bolt (Skeletal Only)",
 					"entries": [
-						"{@atk rs} +3 + the spell's level to hit, range 150 ft., one target. {@h}{@damage 2d8 + 3} + the spell's level necrotic damage."
+						"{@atk rs} {@hit 3 + summonSpellLevel} to hit, range 150 ft., one target. {@h}{@damage 2d8 + 3 + summonSpellLevel} necrotic damage."
 					]
 				},
 				{
 					"name": "Rotting Claw (Putrid Only)",
 					"entries": [
-						"{@atk mw} +3 + the spell's level to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3} + the spell's level slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC or be {@condition paralyzed} until the end of its next turn."
+						"{@atk mw} {@hit 3 + summonSpellLevel} to hit, reach 5 ft., one target. {@h}{@damage 1d6 + 3 + summonSpellLevel} slashing damage. If the target is {@condition poisoned}, it must succeed on a Constitution saving throw against your spell save DC or be {@condition paralyzed} until the end of its next turn."
 					]
 				}
 			],

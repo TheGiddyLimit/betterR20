@@ -1,0 +1,115 @@
+{
+	"monster": [
+		{
+			"name": "Draconic Spirit",
+			"source": "UA2021DraconicOptions",
+			"page": 7,
+			"summonedBySpell": "Summon Draconic Spirit|UA2021DraconicOptions",
+			"size": "L",
+			"type": "dragon",
+			"ac": [
+				{
+					"special": "14 + the level of the spell (natural armor)"
+				}
+			],
+			"hp": {
+				"special": "50 + 10 for each spell level above 5th"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 80,
+				"swim": 30
+			},
+			"str": 19,
+			"dex": 14,
+			"con": 17,
+			"int": 10,
+			"wis": 14,
+			"cha": 14,
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				{
+					"resist": [
+						"acid",
+						"cold",
+						"fire",
+						"lightning",
+						"poison"
+					],
+					"cond": true,
+					"note": "(Chromatic and Metallic only)"
+				},
+				{
+					"resist": [
+						"force",
+						"necrotic",
+						"psychic",
+						"radiant",
+						"thunder"
+					],
+					"cond": true,
+					"note": "(Gem only)"
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Draconic",
+				"understands the languages you speak"
+			],
+			"trait": [
+				{
+					"name": "Shared Resistances",
+					"entries": [
+						"When you summon the dragon, choose one of its damage resistances. You have resistance to the chosen damage type until the spell ends."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The dragon uses its Breath Weapon, and it makes a number of Bite and Claw attacks equal to half the spell's level (rounded down)."
+					]
+				},
+				{
+					"name": "Bite and Claw",
+					"entries": [
+						"{@atk mw} your spell attack modifier to hit, reach 10 ft., one target. {@h}{@damage 1d6 + 4 + summonSpellLevel} piercing damage."
+					]
+				},
+				{
+					"name": "Breath Weapon",
+					"entries": [
+						"The dragon exhales a stream of multicolored energy in a 30-foot cone. Each creature in that area must make a Dexterity saving throw, taking {@damage 2d6} damage of your choice of a damage type this dragon has resistance to on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"AOE",
+				"MW",
+				"RCH"
+			]
+		}
+	]
+}

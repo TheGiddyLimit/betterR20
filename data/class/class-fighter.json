@@ -1820,7 +1820,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level fighter {@variantrule optional class features|tce|optional feature}}",
-				"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters but also to characters who have a special feature like the Superior Technique fighting style or the Martial Adept feat.",
+				"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters but also to characters who have a special feature like the {@optfeature Superior Technique|TCE} fighting style or the {@feat Martial Adept} feat.",
 				{
 					"type": "entries",
 					"entries": [
@@ -1874,7 +1874,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 1st-level feature (enhances Maneuvers)}",
-				"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters and to characters who have the Superior Technique fighting style or the Martial Adept feat.",
+				"If you have access to maneuvers, the following maneuvers are added to the list of options available to you. Maneuvers are available to Battle Masters and to characters who have the {@optfeature Superior Technique|TCE} fighting style or the {@feat Martial Adept} feat.",
 				{
 					"type": "entries",
 					"entries": [
@@ -2692,7 +2692,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Rune Knight feature}",
-				"You gain proficiency with {@item smith's tools|PHB}, and you learn to speak, read, and write Giant."
+				"You gain proficiency with {@item smith's tools|PHB}, and you learn to speak, read, and write {@language Giant}."
 			]
 		},
 		{
@@ -3658,7 +3658,7 @@
 			"header": 1,
 			"entries": [
 				"{@i 3rd-level Rune Knight feature}",
-				"You gain proficiency with {@item smith's tools|PHB}, and you learn to speak, read, and write Giant."
+				"You gain proficiency with {@item smith's tools|PHB}, and you learn to speak, read, and write {@language Giant}."
 			]
 		},
 		{
@@ -4061,7 +4061,7 @@
 			"header": 1,
 			"entries": [
 				"At 3rd level, your study of the supernatural gives you a limited ability to use magic. You can cast {@spell detect magic} as a ritual. You can cast {@spell protection from evil and good}, but you cannot cast it again with this feature until you finish a long rest. Wisdom is your spellcasting ability for these spells.",
-				"In addition, you gain the ability to speak one of the following languages of your choice: Abyssal, Celestial, or Infernal."
+				"In addition, you gain the ability to speak one of the following languages of your choice: {@language Abyssal}, {@language Celestial}, or {@language Infernal}."
 			]
 		},
 		{

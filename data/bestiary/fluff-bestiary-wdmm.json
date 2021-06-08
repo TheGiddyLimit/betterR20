@@ -785,6 +785,27 @@
 									"entries": [
 										"A werebat is a humanoid afflicted with a rare form of lycanthropy that enables it to transform into a giant bat or a bat-humanoid hybrid. (See the {@i Monster Manual} for more information on{@i lycanthropy}.) Most werebats are of goblin stock."
 									]
+								},
+								{
+									"type": "entries",
+									"name": "Deep Dwellers",
+									"entries": [
+										"Werebats are shunned even by goblin society because of their need to feed on blood to survive. They prefer to lair in dark places, such as attics and caves, and typically adopt nocturnal hunting habits."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Blood Drinkers",
+									"entries": [
+										"A werebat must consume at least 1 pint of fresh blood each night, or it weakens and gains one level of {@condition exhaustion} that no amount of rest alone can remove. Each pint of blood the werebat consumes removes one level of {@condition exhaustion} gained in this fashion."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Werebat Lycanthropy",
+									"entries": [
+										"A player character who becomes a werebat gains a Dexterity of 17 if their score isn't already higher. {@action Attack} and damage rolls for the werebat's bite attack are based on the character's Strength or Dexterity score, whichever is higher."
+									]
 								}
 							]
 						}

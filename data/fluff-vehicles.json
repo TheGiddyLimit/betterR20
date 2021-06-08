@@ -1,6 +1,19 @@
 {
 	"vehicleFluff": [
 		{
+			"name": "Apparatus of Kwalish",
+			"source": "DMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/DMG/Apparatus of Kwalish.jpg"
+					}
+				}
+			]
+		},
+		{
 			"name": "Astral Brig",
 			"source": "MTF",
 			"entries": [

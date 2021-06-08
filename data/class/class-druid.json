@@ -80,11 +80,6 @@
 					}
 				]
 			},
-			"languageProficiencies": [
-				{
-					"druidic": true
-				}
-			],
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
@@ -493,6 +488,7 @@
 					"srd": true,
 					"additionalSpells": [
 						{
+							"name": "Arctic",
 							"prepared": {
 								"3": [
 									"hold person",
@@ -513,6 +509,7 @@
 							}
 						},
 						{
+							"name": "Coast",
 							"prepared": {
 								"3": [
 									"mirror image",
@@ -533,6 +530,7 @@
 							}
 						},
 						{
+							"name": "Desert",
 							"prepared": {
 								"3": [
 									"blur",
@@ -553,6 +551,7 @@
 							}
 						},
 						{
+							"name": "Forest",
 							"prepared": {
 								"3": [
 									"barkskin",
@@ -573,6 +572,7 @@
 							}
 						},
 						{
+							"name": "Grassland",
 							"prepared": {
 								"3": [
 									"invisibility",
@@ -593,6 +593,7 @@
 							}
 						},
 						{
+							"name": "Mountain",
 							"prepared": {
 								"3": [
 									"spider climb",
@@ -613,6 +614,7 @@
 							}
 						},
 						{
+							"name": "Swamp",
 							"prepared": {
 								"3": [
 									"darkness",
@@ -633,6 +635,7 @@
 							}
 						},
 						{
+							"name": "Underdark",
 							"prepared": {
 								"3": [
 									"spider climb",
@@ -2352,7 +2355,7 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom ({@skill Perception}) check but can't decipher it without magic."
+				"You know {@language Druidic}, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom ({@skill Perception}) check but can't decipher it without magic."
 			]
 		},
 		{
@@ -2778,7 +2781,7 @@
 			"subclassSource": "PHB",
 			"level": 2,
 			"entries": [
-				"The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
+				"The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in {@language Druidic}. The circle's wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle's mysterious rites.",
 				{
 					"type": "refSubclassFeature",
 					"subclassFeature": "Bonus Cantrip|Druid||Land||2"
@@ -4427,7 +4430,7 @@
 			"header": 1,
 			"entries": [
 				"At 2nd level, you gain the ability to converse with beasts and many fey.",
-				"You learn to speak, read, and write Sylvan. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you any special friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
+				"You learn to speak, read, and write {@language Sylvan}. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you any special friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
 			]
 		},
 		{
@@ -4790,7 +4793,7 @@
 			"header": 1,
 			"entries": [
 				"At 2nd level, you gain the ability to converse with beasts and many fey.",
-				"You learn to speak, read, and write Sylvan. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
+				"You learn to speak, read, and write {@language Sylvan}. In addition, beasts can understand your speech, and you gain the ability to decipher their noises and motions. Most beasts lack the intelligence to convey or understand sophisticated concepts, but a friendly beast could relay what it has seen or heard in the recent past. This ability doesn't grant you friendship with beasts, though you can combine this ability with gifts to curry favor with them as you would with any nonplayer character."
 			]
 		},
 		{

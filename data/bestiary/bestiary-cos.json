@@ -1230,7 +1230,8 @@
 			"conditionInflictSpell": [
 				"invisible"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gadof Blinsky",
@@ -3101,6 +3102,10 @@
 					}
 				}
 			},
+			"alignment": [
+				"C",
+				"E"
+			],
 			"hp": {
 				"average": 33,
 				"formula": "3d10 + 3"
@@ -3170,14 +3175,13 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Sir Godfrey is a 16th-level spellcaster. His spellcasting ability is Charisma (spell save {@dc 15}, {@hit 7} to hit with spell attacks). He has the following paladin spells prepared:"
+						"Sir Godfrey is a 16th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 14}, {@hit 6} to hit with spell attacks). He has the following paladin spells prepared:"
 					],
 					"spells": {
 						"1": {
 							"slots": 4,
 							"spells": [
 								"{@spell command}",
-								"{@spell detect magic}",
 								"{@spell divine favor}",
 								"{@spell thunderous smite}"
 							]
@@ -3185,7 +3189,6 @@
 						"2": {
 							"slots": 3,
 							"spells": [
-								"{@spell aid}",
 								"{@spell branding smite}",
 								"{@spell magic weapon}"
 							]
@@ -3194,19 +3197,17 @@
 							"slots": 3,
 							"spells": [
 								"{@spell blinding smite}",
-								"{@spell dispel magic}",
-								"{@spell remove curse}"
+								"{@spell dispel magic}"
 							]
 						},
 						"4": {
 							"slots": 2,
 							"spells": [
-								"{@spell aura of purity}",
 								"{@spell staggering smite}"
 							]
 						}
 					},
-					"ability": "cha"
+					"ability": "wis"
 				}
 			],
 			"hasToken": true,
@@ -4417,6 +4418,35 @@
 			"hasToken": true
 		},
 		{
+			"name": "Walking Corpse",
+			"source": "CoS",
+			"page": 165,
+			"_copy": {
+				"name": "Commoner",
+				"source": "MM",
+				"_mod": {
+					"trait": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Violent Death",
+								"entries": [
+									"When a corpse is reduced to 0 hit points, it splits open, disgorging a {@creature swarm of poisonous snakes}. The snakes are hungry and fight until slain."
+								]
+							}
+						]
+					}
+				}
+			},
+			"speed": {
+				"walk": 20
+			},
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			]
+		},
+		{
 			"name": "Wereraven",
 			"group": "Lycanthropes",
 			"source": "CoS",
@@ -4424,6 +4454,9 @@
 			"otherSources": [
 				{
 					"source": "CM"
+				},
+				{
+					"source": "VRGR"
 				}
 			],
 			"size": "M",
@@ -4532,7 +4565,8 @@
 				"RNG",
 				"RW"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Yevgeni Krushkin",

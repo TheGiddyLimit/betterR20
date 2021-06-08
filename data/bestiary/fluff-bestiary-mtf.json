@@ -1579,7 +1579,7 @@
 									"type": "entries",
 									"name": "Derro Madness",
 									"entries": [
-										"All derro suffer from a form of madness that most often manifests as mania and paranoia, but other mental afflictions and strange tics also commonly affect them. Derro take little notice of odd behavior in their ranks, except when an individual displays the characteristics of a savant. They believe the strange behavior of savants arises because those leaders carry messages from Diirinka. You can use the Derro Madness table to generate one or more odd qualities for a derro NPC."
+										"All derro suffer from a form of madness that most often manifests as mania and paranoia, but other mental afflictions and strange tics also commonly affect them. Derro take little notice of odd behavior in their ranks, except when an individual displays the characteristics of a savant. They believe the strange behavior of savants arises because those leaders carry messages from Diirinka. You can use the {@table Derro Madness|MTF} table to generate one or more odd qualities for a derro NPC."
 									]
 								}
 							]
@@ -1641,7 +1641,7 @@
 									"type": "entries",
 									"name": "Derro Madness",
 									"entries": [
-										"All derro suffer from a form of madness that most often manifests as mania and paranoia, but other mental afflictions and strange tics also commonly affect them. Derro take little notice of odd behavior in their ranks, except when an individual displays the characteristics of a savant. They believe the strange behavior of savants arises because those leaders carry messages from Diirinka. You can use the Derro Madness table to generate one or more odd qualities for a derro NPC."
+										"All derro suffer from a form of madness that most often manifests as mania and paranoia, but other mental afflictions and strange tics also commonly affect them. Derro take little notice of odd behavior in their ranks, except when an individual displays the characteristics of a savant. They believe the strange behavior of savants arises because those leaders carry messages from Diirinka. You can use the {@table Derro Madness|MTF} table to generate one or more odd qualities for a derro NPC."
 									]
 								}
 							]

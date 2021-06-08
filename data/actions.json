@@ -504,7 +504,7 @@
 				"A creature can try to tumble through a hostile creature's space, ducking and weaving past the opponent. As an action or a bonus action, the tumbler makes a Dexterity ({@skill Acrobatics}) check contested by the hostile creature's Dexterity ({@skill Acrobatics}) check. If the tumbler wins the contest, it can move through the hostile creature's space once this turn."
 			],
 			"seeAlsoAction": [
-				"Tumble|DMG"
+				"Overrun|DMG"
 			]
 		},
 		{

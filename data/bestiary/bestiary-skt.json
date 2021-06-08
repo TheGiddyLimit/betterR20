@@ -188,7 +188,6 @@
 				"Common",
 				"Dwarvish"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Dwarven Resilience",
@@ -372,7 +371,6 @@
 				"Dwarvish",
 				"Halfling"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Roleplaying Information",
@@ -1269,7 +1267,6 @@
 			"languages": [
 				"Common"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Brave",
@@ -1369,7 +1366,6 @@
 			"languages": [
 				"Common"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Sneak Attack (1/Turn)",
@@ -1688,7 +1684,6 @@
 				"Giant",
 				"Orc"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Roleplaying Information",
@@ -1966,7 +1961,6 @@
 				"Common",
 				"Dwarvish"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Dwarven Resilience",
@@ -3793,7 +3787,6 @@
 			"languages": [
 				"Common"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Roleplaying Information",
@@ -3887,7 +3880,6 @@
 			"languages": [
 				"Common"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Roleplaying Information",
@@ -4091,7 +4083,6 @@
 				"Common",
 				"Dwarvish"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Cunning Action",
@@ -4190,7 +4181,6 @@
 				"Dwarvish",
 				"Elvish"
 			],
-			"cr": "0",
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
@@ -4461,7 +4451,6 @@
 				"Common",
 				"Halfling"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Halfling Nimbleness",
@@ -4655,7 +4644,6 @@
 				"Common",
 				"Elvish"
 			],
-			"cr": "0",
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
@@ -5181,7 +5169,6 @@
 				"Common",
 				"Elvish"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Sneak Attack (1/Turn)",
@@ -5462,7 +5449,6 @@
 			"languages": [
 				"Common"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Brave",
@@ -5560,7 +5546,6 @@
 				"Common",
 				"Orc"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Roleplaying Information",
@@ -6514,7 +6499,7 @@
 			],
 			"hasToken": true,
 			"spellcastingTags": [
-				"CW"
+				"CD"
 			]
 		},
 		{
@@ -6566,7 +6551,6 @@
 				"Common",
 				"Giant"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Giant Slayer",
@@ -7608,7 +7592,6 @@
 				"Elvish",
 				"Goblin"
 			],
-			"cr": "0",
 			"trait": [
 				{
 					"name": "Unarmored Defense",

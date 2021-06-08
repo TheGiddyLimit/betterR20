@@ -600,7 +600,8 @@
 				}
 			],
 			"immune": null,
-			"hasToken": true
+			"hasToken": true,
+			"conditionInflict": []
 		},
 		{
 			"name": "Cloud Giant Noble",

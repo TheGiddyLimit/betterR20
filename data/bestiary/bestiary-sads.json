@@ -186,6 +186,7 @@
 				"T"
 			],
 			"spellcastingTags": [
+				"I",
 				"P"
 			],
 			"miscTags": [
@@ -203,7 +204,8 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	]
 }

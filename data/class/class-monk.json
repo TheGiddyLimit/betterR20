@@ -477,6 +477,15 @@
 					"shortName": "Shadow",
 					"source": "PHB",
 					"page": 80,
+					"additionalSpells": [
+						{
+							"innate": {
+								"3": [
+									"minor illusion"
+								]
+							}
+						}
+					],
 					"subclassFeatures": [
 						"Way of Shadow|Monk||Shadow||3",
 						"Shadow Step|Monk||Shadow||6",
@@ -2519,7 +2528,7 @@
 						],
 						[
 							"5",
-							"You found a scroll written in Draconic that contained inspiring new techniques."
+							"You found a scroll written in {@language Draconic} that contained inspiring new techniques."
 						],
 						[
 							"6",

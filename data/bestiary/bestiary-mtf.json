@@ -1247,7 +1247,7 @@
 				{
 					"name": "Demiplanar Donjon",
 					"entries": [
-						"Any creature or object that the astral dreadnought swallows is transported to a demiplane that can be entered by no other means except a {@spell wish} spell or this creature's Donjon Visit ability. A creature can leave the demiplane only by using magic that enables planar travel, such as the plane shift spell. The demiplane resembles a stone cave roughly 1,000 feet in diameter with a ceiling 100 feet high. Like a stomach, it contains the remains of the dreadnought's past meals.",
+						"Any creature or object that the astral dreadnought swallows is transported to a demiplane that can be entered by no other means except a {@spell wish} spell or this creature's Donjon Visit ability. A creature can leave the demiplane only by using magic that enables planar travel, such as the {@spell plane shift} spell. The demiplane resembles a stone cave roughly 1,000 feet in diameter with a ceiling 100 feet high. Like a stomach, it contains the remains of the dreadnought's past meals.",
 						"The dreadnought can't be harmed from within the demiplane. If the dreadnought dies, the demiplane disappears, and everything inside it appears around the corpse. The demiplane is otherwise indestructible."
 					]
 				},
@@ -5981,7 +5981,7 @@
 				{
 					"name": "Summon Servant (1/Day)",
 					"entries": [
-						"The drow magically summons a retriever or a yochlol. The summoned creature appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
+						"The drow magically summons a {@creature retriever|mtf} or a {@creature yochlol}. The summoned creature appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
 					]
 				}
 			],
@@ -8548,7 +8548,7 @@
 			],
 			"cr": {
 				"cr": "23",
-				"lair": "26"
+				"lair": "24"
 			},
 			"spellcasting": [
 				{
@@ -8635,7 +8635,7 @@
 				{
 					"name": "Phantasmal Killer (Costs 2 Actions)",
 					"entries": [
-						"Fraz-Urb'luu casts phantasmal killer, no concentration required."
+						"Fraz-Urb'luu casts {@spell phantasmal killer}, no concentration required."
 					]
 				}
 			],

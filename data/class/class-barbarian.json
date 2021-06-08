@@ -1919,7 +1919,10 @@
 							"8",
 							"A bolt of light shoots from your chest. Another creature of your choice that you can see within 30 feet of you must succeed on a Constitution saving throw or take {@damage 1d6} radiant damage and be {@condition blinded} until the start of your next turn. Until your rage ends, you can use this effect again on each of your turns as a bonus action."
 						]
-					]
+					],
+					"data": {
+						"tableInclude": true
+					}
 				}
 			]
 		},

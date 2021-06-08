@@ -741,6 +741,7 @@
 					"page": 50,
 					"additionalSpells": [
 						{
+							"name": "Good",
 							"prepared": {
 								"1": [
 									"cure wounds"
@@ -748,6 +749,7 @@
 							}
 						},
 						{
+							"name": "Evil",
 							"prepared": {
 								"1": [
 									"inflict wounds"
@@ -755,6 +757,7 @@
 							}
 						},
 						{
+							"name": "Law",
 							"prepared": {
 								"1": [
 									"bless"
@@ -762,6 +765,7 @@
 							}
 						},
 						{
+							"name": "Chaos",
 							"prepared": {
 								"1": [
 									"bane"
@@ -769,6 +773,7 @@
 							}
 						},
 						{
+							"name": "Neutrality",
 							"prepared": {
 								"1": [
 									"protection from evil and good"
@@ -4531,7 +4536,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. In addition, you gain the following spells at the listed sorcerer level. These spells do not count against the number of sorcerer spells you know.",
+				"The arcane magic you command is infused with elemental air. You can speak, read, and write {@language Primordial}. In addition, you gain the following spells at the listed sorcerer level. These spells do not count against the number of sorcerer spells you know.",
 				{
 					"type": "table",
 					"caption": "Storm Sorcerer Bonus Spells",
@@ -4964,7 +4969,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"The arcane magic you command is infused with elemental air. You can speak, read, and write Primordial. Knowing this language allows you to understand and be understood by those who speak its dialects: Aquan, Auran, Ignan, and Terran."
+				"The arcane magic you command is infused with elemental air. You can speak, read, and write {@language Primordial}. Knowing this language allows you to understand and be understood by those who speak its dialects: {@language Aquan}, {@language Auran}, {@language Ignan}, and {@language Terran}."
 			]
 		},
 		{

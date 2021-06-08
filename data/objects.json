@@ -6,8 +6,8 @@
 			"page": 255,
 			"size": "L",
 			"objectType": "SW",
-			"ac": "15",
-			"hp": "50",
+			"ac": 15,
+			"hp": 50,
 			"immune": [
 				"poison",
 				"psychic"
@@ -41,8 +41,8 @@
 			"page": 255,
 			"size": "L",
 			"objectType": "SW",
-			"ac": "19",
-			"hp": "75",
+			"ac": 19,
+			"hp": 75,
 			"immune": [
 				"poison",
 				"psychic"
@@ -78,8 +78,8 @@
 			"page": 21,
 			"size": "L",
 			"objectType": "U",
-			"ac": "17",
-			"hp": "50",
+			"ac": 17,
+			"hp": 50,
 			"speed": 0,
 			"str": 14,
 			"dex": 10,
@@ -114,40 +114,18 @@
 			"hasToken": true
 		},
 		{
-			"name": "Cauldron, Suspended",
-			"source": "DMG",
-			"page": 255,
-			"size": "L",
-			"objectType": "SW",
-			"ac": "19",
-			"hp": "20",
-			"immune": [
-				"poison",
-				"psychic"
-			],
-			"entries": [
-				"A cauldron is an iron pot suspended so that it can be tipped easily, spilling its contents. Once emptied, a cauldron must be refilled-and its contents must usually be reheated-before it can be used again. It takes three actions to fill a cauldron and one action to tip it.",
-				"Cauldrons can be filled with other liquids, such as acid or {@hazard green slime}, with different effects."
-			],
-			"actionEntries": [
-				{
-					"type": "entries",
-					"name": "Boiling Oil",
-					"entries": [
-						"The cauldron pours boiling oil onto a 10-foot-square area directly below it. Any creature in the area must make a DC 15 Dexterity saving throw, taking 10 ({@damage 3d6}) fire damage on a failed save, or half as much damage on a successful one."
-					]
-				}
-			]
-		},
-		{
 			"name": "Generic Object",
 			"source": "DMG",
 			"page": 246,
 			"srd": true,
 			"size": "V",
 			"objectType": "GEN",
-			"ac": "Varies (see below)",
-			"hp": "Varies (see below)",
+			"ac": {
+				"special": "Varies (see below)"
+			},
+			"hp": {
+				"special": "Varies (see below)"
+			},
 			"immune": [
 				{
 					"special": "Varies (see below)"
@@ -256,21 +234,21 @@
 							"type": "entries",
 							"name": "Huge and Gargantuan Objects",
 							"entries": [
-								" Normal weapons are of little use against many Huge and Gargantuan objects, such as a colossal statue, towering column of stone, or massive boulder. That said, one torch can burn a Huge tapestry, and an earthquake spell can reduce a colossus to rubble. You can track a Huge or Gargantuan object's hit points if you like, or you can simply decide how long the object can withstand whatever weapon or force is acting against it. If you track hit points for the object, divide it into Large or smaller sections, and track each section's hit points separately. Destroying one of those sections could ruin the entire object. For example, a Gargantuan statue of a human might topple over when one of its Large legs is reduced to 0 hit points."
+								"Normal weapons are of little use against many Huge and Gargantuan objects, such as a colossal statue, towering column of stone, or massive boulder. That said, one torch can burn a Huge tapestry, and an earthquake spell can reduce a colossus to rubble. You can track a Huge or Gargantuan object's hit points if you like, or you can simply decide how long the object can withstand whatever weapon or force is acting against it. If you track hit points for the object, divide it into Large or smaller sections, and track each section's hit points separately. Destroying one of those sections could ruin the entire object. For example, a Gargantuan statue of a human might topple over when one of its Large legs is reduced to 0 hit points."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Objects and Damage Types",
 							"entries": [
-								" Objects are immune to poison and psychic damage. You might decide that some damage types are more effective against a particular object or substance than others. For example, bludgeoning damage works well for smashing things but not for cutting through rope or leather. Paper or cloth objects might be vulnerable to fire and lightning damage. A pick can chip away stone but can't effectively cut down a tree. As always, use your best judgment."
+								"Objects are immune to poison and psychic damage. You might decide that some damage types are more effective against a particular object or substance than others. For example, bludgeoning damage works well for smashing things but not for cutting through rope or leather. Paper or cloth objects might be vulnerable to fire and lightning damage. A pick can chip away stone but can't effectively cut down a tree. As always, use your best judgment."
 							]
 						},
 						{
 							"type": "entries",
 							"name": "Damage Threshold",
 							"entries": [
-								" Big objects such as castle walls often have extra resilience represented by a damage threshold. An object with a damage threshold has immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or greater than its damage threshold, in which case it takes damage as normal. Any damage that fails to meet or exceed the object's damage threshold is considered superficial and doesn't reduce the object's hit points."
+								"Big objects such as castle walls often have extra resilience represented by a damage threshold. An object with a damage threshold has immunity to all damage unless it takes an amount of damage from a single attack or effect equal to or greater than its damage threshold, in which case it takes damage as normal. Any damage that fails to meet or exceed the object's damage threshold is considered superficial and doesn't reduce the object's hit points."
 							]
 						}
 					]
@@ -284,8 +262,8 @@
 			"page": 31,
 			"size": "G",
 			"objectType": "U",
-			"ac": "10",
-			"hp": "35",
+			"ac": 10,
+			"hp": 35,
 			"immune": [
 				"necrotic",
 				"poison",
@@ -337,8 +315,8 @@
 			"page": 294,
 			"size": "T",
 			"objectType": "U",
-			"ac": "13",
-			"hp": "4",
+			"ac": 13,
+			"hp": 4,
 			"immune": [
 				"acid",
 				"bludgeoning",
@@ -378,8 +356,8 @@
 			"page": 255,
 			"size": "L",
 			"objectType": "SW",
-			"ac": "15",
-			"hp": "100",
+			"ac": 15,
+			"hp": 100,
 			"immune": [
 				"poison",
 				"psychic"
@@ -414,8 +392,8 @@
 			"page": 255,
 			"size": "L",
 			"objectType": "SW",
-			"ac": "15",
-			"hp": "100",
+			"ac": 15,
+			"hp": 100,
 			"immune": [
 				"poison",
 				"psychic"
@@ -451,8 +429,8 @@
 			"page": 256,
 			"size": "G",
 			"objectType": "SW",
-			"ac": "15",
-			"hp": "200",
+			"ac": 15,
+			"hp": 200,
 			"immune": [
 				"poison",
 				"psychic"
@@ -463,13 +441,40 @@
 			"hasToken": true
 		},
 		{
+			"name": "Suspended Cauldron",
+			"source": "DMG",
+			"page": 255,
+			"size": "L",
+			"objectType": "SW",
+			"ac": 19,
+			"hp": 20,
+			"immune": [
+				"poison",
+				"psychic"
+			],
+			"entries": [
+				"A cauldron is an iron pot suspended so that it can be tipped easily, spilling its contents. Once emptied, a cauldron must be refilled-and its contents must usually be reheated-before it can be used again. It takes three actions to fill a cauldron and one action to tip it.",
+				"Cauldrons can be filled with other liquids, such as acid or {@hazard green slime}, with different effects."
+			],
+			"actionEntries": [
+				{
+					"type": "entries",
+					"name": "Boiling Oil",
+					"entries": [
+						"The cauldron pours boiling oil onto a 10-foot-square area directly below it. Any creature in the area must make a DC 15 Dexterity saving throw, taking 10 ({@damage 3d6}) fire damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"hasToken": true
+		},
+		{
 			"name": "Trebuchet",
 			"source": "DMG",
 			"page": 256,
 			"size": "H",
 			"objectType": "SW",
-			"ac": "15",
-			"hp": "150",
+			"ac": 15,
+			"hp": 150,
 			"immune": [
 				"poison",
 				"psychic"

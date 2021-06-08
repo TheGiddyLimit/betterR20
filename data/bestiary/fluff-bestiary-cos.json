@@ -290,6 +290,15 @@
 						}
 					]
 				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/CoS/Ezmerelda d'Avenir.jpg"
+					}
+				}
 			]
 		},
 		{
@@ -1187,6 +1196,22 @@
 							]
 						}
 					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/CoS/Wereraven.png"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/CoS/Wereraven 2.png"
+					}
 				}
 			]
 		}

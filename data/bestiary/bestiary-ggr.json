@@ -3519,7 +3519,8 @@
 			"conditionInflict": [
 				"frightened"
 			],
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Frontline Medic",
@@ -7554,6 +7555,10 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"conditionInflict": [
+				"charmed",
+				"poisoned"
 			],
 			"hasFluff": true,
 			"hasFluffImages": true

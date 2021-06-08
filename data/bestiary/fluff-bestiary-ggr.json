@@ -1411,6 +1411,15 @@
 						}
 					]
 				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/GGR/Flying Horror.png"
+					}
+				}
 			]
 		},
 		{

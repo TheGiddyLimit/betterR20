@@ -561,7 +561,7 @@
 			"name": "Fraz-Urb'luu",
 			"source": "MTF",
 			"lairActions": [
-				"On Initiative count 20 (losing initiative ties), Fraz-Urb'luu can take a lair action to cause one of the following effects: he can't use the same effect two rounds in a row:",
+				"On Initiative count 20 (losing initiative ties), Fraz-Urb'luu can take a lair action to cause one of the following effects; he can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -617,7 +617,7 @@
 								],
 								[
 									"81\u201300",
-									"\"My perception of reality doesn't match anyone else's. It makes me {@condition prone} to violent delusions that make no sense to anyone else.\""
+									"\"My perception of reality doesn't match anyone else's. It makes me prone to violent delusions that make no sense to anyone else.\""
 								]
 							]
 						}
@@ -732,7 +732,7 @@
 			"name": "Graz'zt",
 			"source": "MTF",
 			"lairActions": [
-				"On Initiative count 20 (losing initiative ties), Graz'zt can take a lair action to cause one of the following effects: he can't use the same effect two rounds in a row:",
+				"On Initiative count 20 (losing initiative ties), Graz'zt can take a lair action to cause one of the following effects; he can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -937,7 +937,7 @@
 			"name": "Juiblex",
 			"source": "MTF",
 			"lairActions": [
-				"On Initiative count 20 (losing initiative ties), Juiblex can take a lair action to cause one of the following effects: he can't use the same effect two rounds in a row:",
+				"On Initiative count 20 (losing initiative ties), Juiblex can take a lair action to cause one of the following effects; he can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -1019,7 +1019,7 @@
 			"name": "Ki-rin",
 			"source": "VGM",
 			"lairActions": [
-				"Inside its lair, a ki-rin has the power to conjure objects up to three times per day, using each of the following versions of the power once. One version permanently creates enough objects made of soft, plant-based material - including manufactured objects such as cloth, pillows, rope, blankets, and clothing - to fill a cube 20 feet on a side. The second version enough objects made of wood, or similarly hard plant-based material, to fill a cube 10 feet on a side. The third version creates enough objects made of stone or metal to fill a cube 2 feet on a side, but any materials created in this way last for only 1 hour."
+				"Inside its lair, a ki-rin has the power to conjure objects up to three times per day, using each of the following versions of the power once. One version permanently creates enough objects made of soft, plant-based material - including manufactured objects such as cloth, pillows, rope, blankets, and clothing - to fill a cube 20 feet on a side. The second version permanently creates enough objects made of wood, or similarly hard plant-based material, to fill a cube 10 feet on a side. The third version creates enough objects made of stone or metal to fill a cube 2 feet on a side, but any materials created in this way last for only 1 hour."
 			],
 			"regionalEffects": [
 				"The ki-rin's celestial nature transforms the region around its lair. Any of the following magical effects is possible for travelers to encounter in the vicinity:",
@@ -1256,7 +1256,7 @@
 			"name": "Orcus",
 			"source": "MTF",
 			"lairActions": [
-				"On Initiative count 20 (losing initiative ties), Orcus can take a lair action to cause one of the following effects: he can't use the same effect two rounds in a row:",
+				"On Initiative count 20 (losing initiative ties), Orcus can take a lair action to cause one of the following effects; he can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -1645,7 +1645,7 @@
 			"name": "Yeenoghu",
 			"source": "MTF",
 			"lairActions": [
-				"On Initiative count 20 (losing initiative ties), Yeenoghu can take a lair action to cause one of the following effects: he can't use the same effect two rounds in a row:",
+				"On Initiative count 20 (losing initiative ties), Yeenoghu can take a lair action to cause one of the following effects; he can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [
@@ -1754,7 +1754,7 @@
 			"name": "Zuggtmoy",
 			"source": "MTF",
 			"lairActions": [
-				"On Initiative count 20 (losing initiative ties), Zuggtmoy can take a lair action to cause one of the following effects: he can't use the same effect two rounds in a row:",
+				"On Initiative count 20 (losing initiative ties), Zuggtmoy can take a lair action to cause one of the following effects; he can't use the same effect two rounds in a row:",
 				{
 					"type": "list",
 					"items": [

@@ -1225,7 +1225,7 @@
 					"type": "entries",
 					"name": "Targeted Effects",
 					"entries": [
-						"Spells and other magical effects, such as magic missile and charm person, that target a creature or an object in the sphere have no effect on that target."
+						"Spells and other magical effects, such as {@spell magic missile} and {@spell charm person}, that target a creature or an object in the sphere have no effect on that target."
 					]
 				},
 				{
@@ -14011,6 +14011,16 @@
 							"name": "Aberrant Mind",
 							"source": "TCE"
 						}
+					},
+					{
+						"class": {
+							"name": "Warlock",
+							"source": "PHB"
+						},
+						"subclass": {
+							"name": "Fathomless",
+							"source": "TCE"
+						}
 					}
 				]
 			}
@@ -17597,7 +17607,7 @@
 			},
 			"entries": [
 				"You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.",
-				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead."
+				"The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as {@spell raise dead}."
 			],
 			"classes": {
 				"fromClassList": [
@@ -27078,7 +27088,7 @@
 					"type": "entries",
 					"name": "Mask",
 					"entries": [
-						"You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of a symbol spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
+						"You change the way the target appears to spells and magical effects that detect creature types, such as a paladin's {@classFeature Divine Sense|Paladin|PHB|1} or the trigger of a {@spell symbol} spell. You choose a creature type and other spells and magical effects treat the target as if it were a creature of that type or of that alignment."
 					]
 				}
 			],
@@ -32610,7 +32620,7 @@
 			"entries": [
 				"By means of this spell, a willing creature or an object can be hidden away, safe from detection for the duration. When you cast the spell and touch the target, it becomes {@condition invisible} and can't be targeted by {@filter divination spells|spells|school=D} or perceived through scrying sensors created by divination spells.",
 				"If the target is a creature, it falls into a state of suspended animation. Time ceases to flow for it, and it doesn't grow older.",
-				"You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the tarrasque awakens.\" This spell also ends if the target takes any damage."
+				"You can set a condition for the spell to end early. The condition can be anything you choose, but it must occur or be visible within 1 mile of the target. Examples include \"after 1,000 years\" or \"when the {@creature tarrasque} awakens.\" This spell also ends if the target takes any damage."
 			],
 			"conditionInflict": [
 				"invisible"
@@ -37263,6 +37273,9 @@
 			"entries": [
 				"This spell creates a magical link between a Large or larger inanimate plant within range and another plant, at any distance, on the same plane of existence. You must have seen or touched the destination plant at least once before. For the duration, any creature can step into the target plant and exit from the destination plant by using 5 feet of movement."
 			],
+			"miscTags": [
+				"TP"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -37953,7 +37966,7 @@
 			},
 			"races": [
 				{
-					"name": "Tiefling (Variant)",
+					"name": "Tiefling (Variant; Devil's Tongue)",
 					"source": "SCAG",
 					"baseName": "Tiefling",
 					"baseSource": "PHB"

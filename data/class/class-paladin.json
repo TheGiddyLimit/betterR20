@@ -4076,7 +4076,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"A paladin who takes this oath has the tenets of conquest seared on the upper arm. A hell knight's oath appears in Infernal runes, a brutal reminder of vows to the Lords of Hell.",
+				"A paladin who takes this oath has the tenets of conquest seared on the upper arm. A hell knight's oath appears in {@language Infernal} runes, a brutal reminder of vows to the Lords of Hell.",
 				{
 					"type": "entries",
 					"entries": [
@@ -4480,7 +4480,7 @@
 			"level": 3,
 			"header": 1,
 			"entries": [
-				"A paladin who takes this oath has the tenets of conquest seared on the upper arm. A hell knight's oath appears in Infernal runes, a brutal reminder of vows to the Lords of Hell.",
+				"A paladin who takes this oath has the tenets of conquest seared on the upper arm. A hell knight's oath appears in {@language Infernal} runes, a brutal reminder of vows to the Lords of Hell.",
 				{
 					"type": "entries",
 					"entries": [

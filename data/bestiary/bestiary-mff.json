@@ -1061,6 +1061,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"senseTags": [
 				"D"
 			],

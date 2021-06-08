@@ -1176,6 +1176,12 @@
 			"name": "Brain in a Jar",
 			"source": "IDRotF",
 			"page": 278,
+			"otherSources": [
+				{
+					"source": "VRGR",
+					"page": 278
+				}
+			],
 			"size": "S",
 			"type": "undead",
 			"alignment": [
@@ -1958,6 +1964,7 @@
 				"name": "Chwinga",
 				"source": "ToA"
 			},
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -2310,6 +2317,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"AB",
 				"C",
@@ -2481,7 +2489,10 @@
 			"cr": "0",
 			"spellcasting": null,
 			"action": null,
-			"spellcastingTags": []
+			"spellcastingTags": [],
+			"miscTags": [],
+			"conditionInflict": [],
+			"conditionInflictSpell": []
 		},
 		{
 			"name": "Fox",
@@ -5901,6 +5912,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Incorporeal Movement"
 			],
@@ -8599,6 +8611,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -8681,6 +8694,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -8763,6 +8777,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"traitTags": [
 				"Keen Senses"
 			],

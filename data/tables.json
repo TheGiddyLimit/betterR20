@@ -344,6 +344,102 @@
 			]
 		},
 		{
+			"name": "Derro Madness",
+			"source": "MTF",
+			"page": 159,
+			"caption": "Derro Madness",
+			"colLabels": [
+				"d20",
+				"Oddity"
+			],
+			"colStyles": [
+				"col-2 text-center",
+				"col-10"
+			],
+			"rows": [
+				[
+					"1",
+					"Never bathes or changes clothes"
+				],
+				[
+					"2",
+					"Frets with hair or mustache"
+				],
+				[
+					"3",
+					"Speaks to someone who isn't there"
+				],
+				[
+					"4",
+					"Walks backward whenever possible"
+				],
+				[
+					"5",
+					"Never looks others in the eye"
+				],
+				[
+					"6",
+					"Gnashes teeth after each sentence"
+				],
+				[
+					"7",
+					"Spits out half of each mouthful of food and drink"
+				],
+				[
+					"8",
+					"Insults everyone when first addressing them"
+				],
+				[
+					"9",
+					"Touches whomever he or she speaks to"
+				],
+				[
+					"10",
+					"Sees the spirits of the dead leaving their bodies"
+				],
+				[
+					"11",
+					"Faints when first subjected to bright light"
+				],
+				[
+					"12",
+					"Frequently licks their palms"
+				],
+				[
+					"13",
+					"Hears voices"
+				],
+				[
+					"14",
+					"Terrified of writing"
+				],
+				[
+					"15",
+					"Tastes objects"
+				],
+				[
+					"16",
+					"Stands too close to others"
+				],
+				[
+					"17",
+					"Breathes loudly"
+				],
+				[
+					"18",
+					"Drools constantly"
+				],
+				[
+					"19",
+					"Mumbles when speaking"
+				],
+				[
+					"20",
+					"Hops from place to place"
+				]
+			]
+		},
+		{
 			"name": "Major Adaptation",
 			"source": "GGR",
 			"page": 210,

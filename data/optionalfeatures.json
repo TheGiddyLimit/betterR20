@@ -207,6 +207,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"mage armor"
+						]
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell mage armor} on yourself at will, without expending a spell slot or material components."
 			]
@@ -245,6 +254,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"levitate"
+						]
 					}
 				}
 			],
@@ -362,6 +380,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with animals"
+						]
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell speak with animals} at will, without expending a spell slot."
 			]
@@ -397,6 +424,12 @@
 			"featureType": [
 				"EI"
 			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"persuasion": true
+				}
+			],
 			"entries": [
 				"You gain proficiency in the {@skill Deception} and {@skill Persuasion} skills."
 			]
@@ -419,6 +452,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"compulsion"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell compulsion} once using a warlock spell slot. You can't do so again until you finish a long rest."
 			]
@@ -431,6 +477,19 @@
 			"featureType": [
 				"FS:P"
 			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=cleric",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
 			"entries": [
 				"You learn two cantrips of your choice from the {@filter cleric spell list|spells|level=0|class=Cleric}. They count as paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list."
 			]
@@ -442,6 +501,19 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:P"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=cleric",
+								"count": 2
+							}
+						]
+					}
+				}
 			],
 			"entries": [
 				"You learn two cantrips of your choice from the {@filter cleric spell list|spells|level=0|class=Cleric}. They count as paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list."
@@ -532,6 +604,21 @@
 			"prerequisite": [
 				{
 					"pact": "Tome"
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								{
+									"choose": "Components & Miscellaneous=ritual|level=1",
+									"count": 2
+								}
+							]
+						}
+					}
 				}
 			],
 			"entries": [
@@ -637,6 +724,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"6": [
+									"cone of cold"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 6 ki points to cast {@spell cone of cold}."
 			]
@@ -727,6 +828,12 @@
 					"patron": "The Great Old One"
 				}
 			],
+			"skillProficiencies": [
+				{
+					"deception": true,
+					"stealth": true
+				}
+			],
 			"entries": [
 				"The purple star Caiphon is the doom of inexperienced mariners. Those who use its deceptive light to guide their travels invariably come to ruin. You gain proficiency in the {@skill Deception} and {@skill Stealth} skills, and you have advantage on attack rolls against {@condition charmed} creatures."
 			]
@@ -781,6 +888,19 @@
 						"level": 15,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"hold monster"
+								]
+							}
 						}
 					}
 				}
@@ -857,6 +977,20 @@
 							"name": "Four Elements"
 						}
 					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"3": [
+									"hold person"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
 				}
 			],
 			"entries": [
@@ -1132,6 +1266,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"confusion"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell confusion} once using a warlock spell slot. You can't do so again until you finish a long rest."
 			]
@@ -1144,6 +1291,19 @@
 			"featureType": [
 				"FS:R"
 			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=druid",
+								"count": 2
+							}
+						]
+					}
+				}
+			],
 			"entries": [
 				"You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
 			]
@@ -1155,6 +1315,19 @@
 			"isClassFeatureVariant": true,
 			"featureType": [
 				"FS:R"
+			],
+			"additionalSpells": [
+				{
+					"ability": "wis",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0|class=druid",
+								"count": 2
+							}
+						]
+					}
+				}
 			],
 			"entries": [
 				"You learn two cantrips of your choice from the {@filter druid spell list|spells|level=0|class=druid}. They count as druid spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list."
@@ -1250,6 +1423,15 @@
 			"srd": true,
 			"featureType": [
 				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"detect magic"
+						]
+					}
+				}
 			],
 			"entries": [
 				"You can cast {@spell detect magic} at will, without expending a spell slot."
@@ -1531,6 +1713,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"5": [
+									"stoneskin"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 5 ki points to cast {@spell stoneskin}, targeting yourself."
 			]
@@ -1600,6 +1796,15 @@
 					"pact": "Tome"
 				}
 			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"_": [
+							"sending"
+						]
+					}
+				}
+			],
 			"entries": [
 				"A new page appears in your Book of Shadows. With your permission, a creature can use its action to write its name on that page, which can contain a number of names equal to your proficiency bonus.",
 				"You can cast the {@spell sending} spell, targeting a creature whose name is on the page, without using a spell slot and without using material components. To do so, you must write the message on the page. The target hears the message in their mind, and if the target replies, their message appears on the page, rather than in your mind. The writing disappears after 1 minute.",
@@ -1623,6 +1828,15 @@
 						}
 					},
 					"pact": "Tome"
+				}
+			],
+			"additionalSpells": [
+				{
+					"prepared": {
+						"_": [
+							"sending"
+						]
+					}
 				}
 			],
 			"entries": [
@@ -1651,6 +1865,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"false life"
+						]
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell false life} on yourself at will as a 1st-level spell, without expending a spell slot or material components."
 			]
@@ -1674,6 +1897,20 @@
 			"featureType": [
 				"ED"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"thunderwave"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 2 ki points to cast {@spell thunderwave}."
 			]
@@ -1696,6 +1933,20 @@
 							"name": "Four Elements"
 						}
 					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"fireball"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
 				}
 			],
 			"entries": [
@@ -1857,6 +2108,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can breathe underwater, and you gain a swimming speed equal to your walking speed. You can also cast {@spell water breathing} without expending a spell slot. Once you cast it using this invocation, you can't do so again until you finish a long rest."
 			]
@@ -1874,6 +2138,19 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
 						}
 					}
 				}
@@ -1998,6 +2275,20 @@
 							"name": "Four Elements"
 						}
 					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"3": [
+									"shatter"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
 				}
 			],
 			"entries": [
@@ -2673,6 +2964,15 @@
 			"featureType": [
 				"EI"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"disguise self"
+						]
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell disguise self} at will, without expending a spell slot."
 			]
@@ -2692,6 +2992,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"alter self"
+						]
 					}
 				}
 			],
@@ -2776,6 +3085,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"conjure elemental"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell conjure elemental} once using a warlock spell slot. You can't do so again until you finish a long rest."
 			]
@@ -2794,6 +3116,19 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"slow"
+								]
+							}
 						}
 					}
 				}
@@ -2822,6 +3157,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"gaseous form"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 4 ki points to cast {@spell gaseous form}, targeting yourself."
 			]
@@ -2833,6 +3182,15 @@
 			"srd": true,
 			"featureType": [
 				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"silent image"
+						]
+					}
+				}
 			],
 			"entries": [
 				"You can cast {@spell silent image} at will, without expending a spell slot or material components."
@@ -2906,6 +3264,15 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"jump"
+						]
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell jump} on yourself at will, without expending a spell slot or material components."
 			]
@@ -2932,6 +3299,18 @@
 			"featureType": [
 				"PB"
 			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								"find familiar"
+							]
+						}
+					}
+				}
+			],
 			"entries": [
 				"You learn the {@spell find familiar} spell and can cast it as a ritual. The spell doesn't count against your number of spells known.",
 				"When you cast the spell, you can choose one of the normal forms for your familiar or one of the following special forms: {@creature imp}, {@creature pseudodragon}, {@creature quasit}, or {@creature sprite}.",
@@ -2944,6 +3323,18 @@
 			"page": 1,
 			"featureType": [
 				"PB"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": {
+							"ritual": [
+								"augury"
+							]
+						}
+					}
+				}
 			],
 			"entries": [
 				"At 3rd level, a character dedicated to the {@class Warlock|phb|Seeker|Seeker (UA)|UATheFaithful} can select this option instead of one of the warlock's existing Pact Boon options.",
@@ -2987,6 +3378,19 @@
 			"srd": true,
 			"featureType": [
 				"PB"
+			],
+			"additionalSpells": [
+				{
+					"ability": "cha",
+					"innate": {
+						"_": [
+							{
+								"choose": "level=0",
+								"count": 3
+							}
+						]
+					}
+				}
 			],
 			"entries": [
 				"Your patron gives you a grimoire called a Book of Shadows. When you gain this feature, choose three {@filter cantrips|spells|level=0} from any class's spell list. The cantrips do not need to be from the same spell list. While the book is on your person, you can cast those cantrips at will. They don't count against your number of cantrips known. Any cantrip you cast with this feature is considered a warlock cantrip for you. If you lose your Book of Shadows, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and it destroys the previous book. The book turns to ash when you die."
@@ -4156,6 +4560,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"4": [
+									"fly"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 4 ki points to cast {@spell fly}, targeting yourself."
 			]
@@ -4191,6 +4609,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"5": [
+									"wall of fire"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 5 ki points to cast {@spell wall of fire}."
 			]
@@ -4201,6 +4633,20 @@
 			"page": 81,
 			"featureType": [
 				"ED"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"gust of wind"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
 			],
 			"entries": [
 				"You can spend 2 ki points to cast {@spell gust of wind}."
@@ -4224,6 +4670,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"polymorph"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell polymorph} once using a warlock spell slot. You can't do so again until you finish a long rest."
 			]
@@ -4238,6 +4697,19 @@
 			"prerequisite": [
 				{
 					"patron": "The Archfey"
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"water breathing"
+								]
+							}
+						}
+					}
 				}
 			],
 			"entries": [
@@ -4388,6 +4860,15 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"invisibility"
+						]
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell invisibility} at will, without expending a spell slot."
 			]
@@ -4406,6 +4887,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"invisibility"
+						]
 					}
 				}
 			],
@@ -4449,6 +4939,19 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"bestow curse"
+								]
+							}
 						}
 					}
 				}
@@ -4691,6 +5194,20 @@
 			"featureType": [
 				"ED"
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"2": [
+									"burning hands"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 2 ki points to cast {@spell burning hands}."
 			]
@@ -4747,6 +5264,19 @@
 			"srd": true,
 			"featureType": [
 				"EI"
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"bane"
+								]
+							}
+						}
+					}
+				}
 			],
 			"entries": [
 				"You can cast {@spell bane} once using a warlock spell slot. You can't do so again until you finish a long rest."
@@ -4913,6 +5443,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"freedom of movement"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell freedom of movement} once on yourself without expending a spell slot. You regain the ability to do so when you finish a long rest."
 			]
@@ -4930,6 +5473,19 @@
 						"level": 7,
 						"class": {
 							"name": "Warlock"
+						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"freedom of movement"
+								]
+							}
 						}
 					}
 				}
@@ -5097,6 +5653,19 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"animate dead"
+								]
+							}
+						}
+					}
+				}
+			],
 			"entries": [
 				"You can cast {@spell animate dead} without using a spell slot. Once you do so, you can't cast it in this way again until you finish a long rest."
 			]
@@ -5141,6 +5710,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"arcane eye"
+						]
 					}
 				}
 			],
@@ -5207,6 +5785,20 @@
 					}
 				}
 			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"resource": {
+								"6": [
+									"wall of stone"
+								]
+							}
+						}
+					},
+					"resourceName": "Ki"
+				}
+			],
 			"entries": [
 				"You can spend 6 ki points to cast {@spell wall of stone}."
 			]
@@ -5226,6 +5818,15 @@
 						"class": {
 							"name": "Warlock"
 						}
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": [
+							"speak with dead"
+						]
 					}
 				}
 			],

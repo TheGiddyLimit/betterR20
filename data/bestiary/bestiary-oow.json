@@ -67,6 +67,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"languageTags": [
 				"D",
 				"X"
@@ -104,6 +105,10 @@
 				"C",
 				"I",
 				"X"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
 			]
 		},
 		{
@@ -137,6 +142,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"damageTags": [
 				"B"
 			],
@@ -292,6 +298,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -514,6 +521,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"damageTags": [
 				"P",
 				"S"

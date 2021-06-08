@@ -11,6 +11,11 @@
 			"page": 119,
 			"rarity": "uncommon",
 			"reqAttune": "by an artificer",
+			"reqAttuneTags": [
+				{
+					"class": "artificer|tce"
+				}
+			],
 			"wondrous": true,
 			"bonusSpellAttack": "+1",
 			"bonusSpellSaveDc": "+1",
@@ -26,6 +31,14 @@
 			"page": 119,
 			"rarity": "uncommon",
 			"reqAttune": "by a cleric or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+1",
@@ -41,6 +54,11 @@
 			"page": 120,
 			"rarity": "uncommon",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"bonusSpellAttack": "+1",
@@ -59,6 +77,11 @@
 			"page": 122,
 			"rarity": "uncommon",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 0.01,
 			"bonusSpellAttack": "+1",
@@ -79,6 +102,14 @@
 			"type": "M",
 			"rarity": "uncommon",
 			"reqAttune": "by a druid or ranger",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "ranger"
+				}
+			],
 			"weight": 2,
 			"weaponCategory": "simple",
 			"property": [
@@ -106,6 +137,11 @@
 			"type": "INS",
 			"rarity": "uncommon",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"grantsProficiency": true,
@@ -124,6 +160,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a warlock",
+			"reqAttuneTags": [
+				{
+					"class": "warlock"
+				}
+			],
 			"weight": 2,
 			"bonusSpellAttack": "+1",
 			"bonusSpellSaveDc": "+1",
@@ -144,6 +185,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"bonusSpellAttack": "+1",
 			"entries": [
@@ -159,6 +205,11 @@
 			"page": 119,
 			"rarity": "rare",
 			"reqAttune": "by an artificer",
+			"reqAttuneTags": [
+				{
+					"class": "artificer|tce"
+				}
+			],
 			"wondrous": true,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
@@ -174,6 +225,14 @@
 			"page": 119,
 			"rarity": "rare",
 			"reqAttune": "by a cleric or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+2",
@@ -189,6 +248,11 @@
 			"page": 120,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"bonusSpellAttack": "+2",
@@ -204,6 +268,11 @@
 			"page": 122,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 0.01,
 			"bonusSpellAttack": "+2",
@@ -221,6 +290,14 @@
 			"type": "M",
 			"rarity": "rare",
 			"reqAttune": "by a druid or ranger",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "ranger"
+				}
+			],
 			"weight": 2,
 			"weaponCategory": "simple",
 			"property": [
@@ -248,6 +325,11 @@
 			"type": "INS",
 			"rarity": "rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"grantsProficiency": true,
@@ -266,6 +348,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a warlock",
+			"reqAttuneTags": [
+				{
+					"class": "warlock"
+				}
+			],
 			"weight": 2,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
@@ -286,6 +373,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"bonusSpellAttack": "+2",
 			"entries": [
@@ -301,6 +393,11 @@
 			"page": 119,
 			"rarity": "very rare",
 			"reqAttune": "by an artificer",
+			"reqAttuneTags": [
+				{
+					"class": "artificer|tce"
+				}
+			],
 			"wondrous": true,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
@@ -316,6 +413,14 @@
 			"page": 119,
 			"rarity": "very rare",
 			"reqAttune": "by a cleric or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+3",
@@ -331,6 +436,11 @@
 			"page": 120,
 			"rarity": "very rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"bonusSpellAttack": "+3",
@@ -346,6 +456,11 @@
 			"page": 122,
 			"rarity": "very rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 0.01,
 			"bonusSpellAttack": "+3",
@@ -363,6 +478,14 @@
 			"type": "M",
 			"rarity": "very rare",
 			"reqAttune": "by a druid or ranger",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "ranger"
+				}
+			],
 			"weight": 2,
 			"weaponCategory": "simple",
 			"property": [
@@ -390,6 +513,11 @@
 			"type": "INS",
 			"rarity": "very rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"grantsProficiency": true,
@@ -408,6 +536,11 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a warlock",
+			"reqAttuneTags": [
+				{
+					"class": "warlock"
+				}
+			],
 			"weight": 2,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
@@ -428,6 +561,11 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"bonusSpellAttack": "+3",
 			"entries": [
@@ -720,6 +858,11 @@
 			"page": 119,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -1316,7 +1459,7 @@
 					]
 				},
 				"To be used as a vehicle, the apparatus requires one pilot. While the apparatus's hatch is closed, the compartment is airtight and watertight. The compartment holds enough air for 10 hours of breathing, divided by the number of breathing creatures inside.",
-				"The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes {@dice 2d6} bludgeoning damage per minute from pressure.",
+				"The apparatus floats on water. It can also go underwater to a depth of 900 feet. Below that, the vehicle takes {@damage 2d6} bludgeoning damage per minute from pressure.",
 				"A creature in the compartment can use an action to move as many as two of the apparatus's levers up or down. After each use, a lever goes back to its neutral position. Each lever, from left to right, functions as shown in the Apparatus of Kwalish Levers table.",
 				{
 					"type": "table",
@@ -1327,7 +1470,9 @@
 						"Down"
 					],
 					"colStyles": [
-						"text-center"
+						"col-1 text-center",
+						"col-5-5",
+						"col-5-5"
 					],
 					"rows": [
 						[
@@ -1352,8 +1497,8 @@
 						],
 						[
 							"5",
-							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@italic Hit:} 7 ({@dice 2d6}) bludgeoning damage.",
-							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@italic Hit:} The target is {@condition grappled} (escape DC 15)."
+							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@h} 7 ({@damage 2d6}) bludgeoning damage.",
+							"Each extended claw makes the following melee weapon attack: {@hit 8} to hit, reach 5 ft., one target. {@h} The target is {@condition grappled} (escape {@dc 15})."
 						],
 						[
 							"6",
@@ -1644,6 +1789,11 @@
 			"page": 120,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -1660,6 +1810,11 @@
 			"page": 120,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -1694,6 +1849,11 @@
 			"page": 120,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -1860,6 +2020,11 @@
 			"page": 177,
 			"rarity": "rare",
 			"reqAttune": "by a member of the Azorius guild",
+			"reqAttuneTags": [
+				{
+					"background": "azorius functionary|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This keyrune is carved from white marble and lapis lazuli to resemble a noble bird of prey. It can become a {@creature giant eagle} for up to 1 hour. While the transformed eagle is within 1 mile of you, you can communicate with it telepathically. As an action, you can see through the eagle's eyes and hear what it hears until the start of your next turn, and you gain the benefit of its keen sight. During this time, you are deaf and blind with regard to your own senses.",
@@ -3163,6 +3328,14 @@
 			"page": 122,
 			"rarity": "rare",
 			"reqAttune": "by a druid or warlock",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "warlock"
+				}
+			],
 			"wondrous": true,
 			"weight": 0.01,
 			"recharge": "dawn",
@@ -3380,6 +3553,11 @@
 			"page": 284,
 			"rarity": "legendary",
 			"reqAttune": "by a creature that has proficiency in the Arcana skill",
+			"reqAttuneTags": [
+				{
+					"skillProficiency": "arcana"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"Any creature that attunes to the tablet must make a DC 20 Wisdom saving throw at the end of its next long rest. On a failed save, the creature becomes afflicted with a random form of long-term madness (see \"{@book Madness|dmg|8|Madness}\" in chapter 8 of the {@book Dungeon Master's Guide|dmg}).",
@@ -3502,7 +3680,7 @@
 			"name": "Black Sap",
 			"source": "EGW",
 			"page": 152,
-			"type": "P",
+			"type": "G",
 			"rarity": "none",
 			"value": 30000,
 			"entries": [
@@ -3537,6 +3715,13 @@
 			"type": "M",
 			"rarity": "legendary",
 			"reqAttune": "by a creature of non-lawful alignment",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"L"
+					]
+				}
+			],
 			"sentient": true,
 			"weight": 6,
 			"weaponCategory": "martial",
@@ -3596,6 +3781,11 @@
 			"page": 190,
 			"rarity": "legendary",
 			"reqAttune": "by the blackstaff heir, who must be a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"sentient": true,
 			"weight": 4,
 			"weaponCategory": "simple",
@@ -3734,7 +3924,7 @@
 			"page": 150,
 			"baseItem": "longsword|phb",
 			"type": "M",
-			"rarity": "legendary",
+			"rarity": "artifact",
 			"reqAttune": true,
 			"weight": 3,
 			"weaponCategory": "martial",
@@ -3793,10 +3983,15 @@
 			"name": "Blade of Broken Mirrors",
 			"source": "EGW",
 			"page": 275,
-			"baseItem": "dagger|PHB",
+			"baseItem": "dagger|phb",
 			"type": "M",
 			"rarity": "artifact",
 			"reqAttune": "by a humanoid",
+			"reqAttuneTags": [
+				{
+					"creatureType": "humanoid"
+				}
+			],
 			"sentient": true,
 			"weight": 1,
 			"weaponCategory": "simple",
@@ -3932,7 +4127,7 @@
 			"name": "Blight Ichor",
 			"source": "EGW",
 			"page": 152,
-			"type": "P",
+			"type": "G",
 			"rarity": "none",
 			"value": 20000,
 			"entries": [
@@ -4287,7 +4482,7 @@
 			"value": 15000,
 			"age": "renaissance",
 			"entries": [
-				"As an action, a character can light this bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take {@dice 3d6} fire damage."
+				"As an action, a character can light this bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take {@damage 3d6} fire damage."
 			]
 		},
 		{
@@ -4324,6 +4519,13 @@
 			"page": 222,
 			"rarity": "artifact",
 			"reqAttune": "by a creature of good alignment",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"G"
+					]
+				}
+			],
 			"wondrous": true,
 			"weight": 5,
 			"ability": {
@@ -4647,6 +4849,11 @@
 			"page": 177,
 			"rarity": "rare",
 			"reqAttune": "by a member of the Boros guild",
+			"reqAttuneTags": [
+				{
+					"background": "boros legionnaire|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"Carved from red sandstone with white granite elements to resemble a member of the Boros Legion, this keyrune can become a {@creature veteran} (human) for up to 8 hours. In addition to fighting on your behalf, this {@creature veteran} cheerfully offers tactical advice, which is usually sound. Anyone who talks with the transformed keyrune or examines it closely can easily recognize that it is an artificial human.",
@@ -5840,6 +6047,14 @@
 			"page": 122,
 			"rarity": "very rare",
 			"reqAttune": "by a druid or warlock",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "warlock"
+				}
+			],
 			"wondrous": true,
 			"weight": 0.01,
 			"entries": [
@@ -6132,6 +6347,11 @@
 			"type": "OTH",
 			"rarity": "uncommon",
 			"reqAttune": "by a humanoid",
+			"reqAttuneTags": [
+				{
+					"creatureType": "humanoid"
+				}
+			],
 			"entries": [
 				"The Circlet of Human Perfection transforms its attuned wearer into an attractive human of average height and weight. The circlet chooses the physical characteristics of the form, such as age, gender, skin color, hair color, and voice. Except for size, the wearer's statistics and racial traits don't change, nor do items worn or carried by the wearer. Removing the circlet ends the effect."
 			]
@@ -7049,27 +7269,27 @@
 								],
 								[
 									"26-45",
-									"{@dice 2d4} imps and {@dice 2d4} quasits appear."
+									"{@dice 2d4} {@creature imp||imps} and {@dice 2d4} {@creature quasit||quasits} appear."
 								],
 								[
 									"46-60",
-									"{@dice 1d8} succubi/incubi appear."
+									"{@dice 1d8} {@creature succubus||succubi}/{@creature incubus||incubi} appear."
 								],
 								[
 									"61-70",
-									"{@dice 1d10} barbed devils and {@dice 1d10} vrocks appear."
+									"{@dice 1d10} {@creature barbed devil||barbed devils} and {@dice 1d10} {@creature vrock||vrocks} appear."
 								],
 								[
 									"71-80",
-									"1 arcanoloth, 1 night hag, and 1 rakshasa appear."
+									"1 arcanoloth, 1 {@creature night hag}, and 1 {@creature rakshasa} appear."
 								],
 								[
 									"81-85",
-									"1 ice devil and 1 marilith appear."
+									"1 {@creature ice devil} and 1 {@creature marilith} appear."
 								],
 								[
 									"86-90",
-									"1 balor and 1 pit fiend appear. At the DM's discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."
+									"1 {@creature balor} and 1 {@creature pit fiend} appear. At the DM's discretion, a portal opens into the presence of an archdevil or demon lord instead, then closes after 5 minutes."
 								],
 								[
 									"91-00",
@@ -7229,6 +7449,11 @@
 			"page": 124,
 			"rarity": "very rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -7568,6 +7793,11 @@
 			"tier": "minor",
 			"rarity": "common",
 			"reqAttune": "by a warlock",
+			"reqAttuneTags": [
+				{
+					"class": "warlock"
+				}
+			],
 			"wondrous": true,
 			"focus": [
 				"Warlock"
@@ -7591,6 +7821,13 @@
 			"type": "M",
 			"rarity": "legendary",
 			"reqAttune": "by a creature of non-evil alignment",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"E"
+					]
+				}
+			],
 			"sentient": true,
 			"weight": 3,
 			"weaponCategory": "martial",
@@ -9176,6 +9413,14 @@
 			"type": "M",
 			"rarity": "rare",
 			"reqAttune": "by a cleric or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"weight": 2,
 			"weaponCategory": "martial",
 			"dmg1": "1d8",
@@ -9281,6 +9526,11 @@
 			"page": 177,
 			"rarity": "very rare",
 			"reqAttune": "by a member of the Dimir guild",
+			"reqAttuneTags": [
+				{
+					"background": "dimir operative|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This keyrune, carved from black stone accented with steel, resembles a stylized horror. On command, it transforms into an {@creature intellect devourer} that resembles the Dimir guild symbol, with six bladelike legs. The creature exists for up to 24 hours. During that time, it pursues only a single mission you give it\u2014usually an assignment to take over someone's body, either to impersonate that person for a brief time or to extract secrets from their mind. When the mission is complete, the creature returns to you, reports its success, and reverts to its keyrune form.",
@@ -9454,6 +9704,11 @@
 			],
 			"rarity": "rare",
 			"reqAttune": "by a warforged",
+			"reqAttuneTags": [
+				{
+					"race": "warforged|erlw"
+				}
+			],
 			"wondrous": true,
 			"sentient": true,
 			"entries": [
@@ -10012,6 +10267,11 @@
 			"page": 126,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -10056,7 +10316,7 @@
 				"V"
 			],
 			"dmg1": "1d8",
-			"dmgType": "B",
+			"dmgType": "R",
 			"dmg2": "1d10",
 			"bonusWeapon": "+2",
 			"weapon": true,
@@ -10174,6 +10434,11 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a dwarf",
+			"reqAttuneTags": [
+				{
+					"race": "dwarf"
+				}
+			],
 			"weight": 2,
 			"weaponCategory": "martial",
 			"property": [
@@ -10203,7 +10468,7 @@
 			"age": "modern",
 			"entries": [
 				"As an action, a creature can light a stick of dynamite and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must make a DC 12 Dexterity saving throw, taking {@dice 3d6} bludgeoning damage on a failed save, or half as much damage on a successful one.",
-				"A character can bind sticks of dynamite together so they explode at the same time. Each additional stick increases the damage by {@dice 1d6} (to a maximum of {@dice 10d6}) and the burst radius by 5 feet (to a maximum of 20 feet).",
+				"A character can bind sticks of dynamite together so they explode at the same time. Each additional stick increases the damage by {@damage 1d6} (to a maximum of {@damage 10d6}) and the burst radius by 5 feet (to a maximum of 20 feet).",
 				"Dynamite can be rigged with a longer fuse to explode after a set amount of time, usually 1 to 6 rounds. Roll initiative for the dynamite. After the set number of rounds goes by, the dynamite explodes on that initiative."
 			]
 		},
@@ -10467,6 +10732,11 @@
 			"page": 127,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"entries": [
@@ -10516,6 +10786,11 @@
 			"page": 127,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -10539,6 +10814,11 @@
 			"page": 127,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -10562,6 +10842,11 @@
 			"page": 127,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -10585,6 +10870,11 @@
 			"page": 127,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -11277,6 +11567,11 @@
 			"type": "WD",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 2,
@@ -11309,6 +11604,20 @@
 			"type": "M",
 			"rarity": "legendary",
 			"reqAttune": "by an evil cleric or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric",
+					"alignment": [
+						"E"
+					]
+				},
+				{
+					"class": "paladin",
+					"alignment": [
+						"E"
+					]
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "martial",
 			"property": [
@@ -11366,6 +11675,11 @@
 			"page": 127,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -11430,6 +11744,11 @@
 			"page": 127,
 			"rarity": "uncommon",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -11639,6 +11958,14 @@
 			],
 			"rarity": "uncommon",
 			"reqAttune": "by a creature with the Mark of Finding",
+			"reqAttuneTags": [
+				{
+					"race": "half-orc (mark of finding)|erlw"
+				},
+				{
+					"race": "human (mark of finding)|erlw"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"The lenses of these garish goggles are carved from Siberys dragonshards. While wearing these lenses, you gain the following benefits:",
@@ -12032,7 +12359,7 @@
 			"age": "modern",
 			"entries": [
 				"As an action, a character can throw a grenade at a point up to 60 feet away. With a grenade launcher, the character can propel the grenade up to 120 feet away.",
-				"Each creature with 20 feet of an exploding fragmentation grenade must make a DC 15 Dexterity saving throw, taking {@dice 5d6} piercing damage on a failed save, or half as much damage on a successful one."
+				"Each creature with 20 feet of an exploding fragmentation grenade must make a DC 15 Dexterity saving throw, taking {@damage 5d6} piercing damage on a failed save, or half as much damage on a successful one."
 			]
 		},
 		{
@@ -12041,6 +12368,11 @@
 			"page": 128,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -12794,6 +13126,11 @@
 			"page": 177,
 			"rarity": "very rare",
 			"reqAttune": "by a member of the Golgari guild",
+			"reqAttuneTags": [
+				{
+					"background": "golgari agent|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"Made from deep green jade with black veins, this keyrune has an insectile shape. It can transform into a {@creature giant scorpion} for up to 6 hours. The scorpion has an Intelligence of 4 and can communicate with you telepathically while it is within 60 feet of you, though its messages are largely limited to describing the passage of potential prey.",
@@ -12834,6 +13171,11 @@
 			],
 			"rarity": "legendary",
 			"reqAttune": "by a creature that has psionic ability",
+			"reqAttuneTags": [
+				{
+					"psionics": true
+				}
+			],
 			"weight": 6,
 			"weaponCategory": "martial",
 			"property": [
@@ -12948,7 +13290,7 @@
 			"name": "Grenade Launcher",
 			"source": "DMG",
 			"page": 268,
-			"type": "EXP",
+			"type": "G",
 			"rarity": "none",
 			"weight": 7,
 			"age": "modern",
@@ -12962,6 +13304,11 @@
 			"page": 271,
 			"rarity": "legendary",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"entries": [
@@ -13125,6 +13472,11 @@
 			"page": 177,
 			"rarity": "rare",
 			"reqAttune": "by a member of the Gruul guild",
+			"reqAttuneTags": [
+				{
+					"background": "gruul anarch|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This crude keyrune is cobbled together from bits of rubble, broken glass, bone, and animal hair. One end resembles a horned beast. On command, the keyrune transforms into a ceratok, a horned creature much like a {@creature rhinoceros} (and with the same statistics). It remains in its ceratok form for 1 hour.",
@@ -13140,6 +13492,14 @@
 			"page": 128,
 			"rarity": "uncommon",
 			"reqAttune": "by a cleric or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"wondrous": true,
 			"weight": 0.02,
 			"recharge": "dawn",
@@ -13198,7 +13558,7 @@
 			"age": "renaissance",
 			"entries": [
 				"Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs or in water-resistant powder horns.",
-				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@dice 3d6} for a powder horn, {@dice 7d6} for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
+				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@damage 3d6} for a powder horn). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
 			]
 		},
 		{
@@ -13212,7 +13572,7 @@
 			"age": "renaissance",
 			"entries": [
 				"Gunpowder is chiefly used to propel a bullet out of the barrel of a pistol or rifle, or it is formed into a bomb. Gunpowder is sold in small wooden kegs or in water-resistant powder horns.",
-				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@dice 3d6} for a powder horn, {@dice 7d6} for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
+				"Setting fire to a container full of gunpowder can cause it to explode, dealing fire damage to creatures within 10 feet of it ({@damage 7d6} for a keg). A successful DC 12 Dexterity saving throw halves the damage. Setting fire to an ounce of gunpowder causes it to flare for 1 round, shedding bright light in a 30-foot radius and dim light for an additional 30 feet."
 			]
 		},
 		{
@@ -13421,6 +13781,27 @@
 			]
 		},
 		{
+			"name": "Harkon's Bite",
+			"source": "VRGR",
+			"page": 137,
+			"rarity": "uncommon",
+			"reqAttune": true,
+			"wondrous": true,
+			"curse": true,
+			"bonusSavingThrow": "+1",
+			"entries": [
+				"A dire wolf tooth dangles from this simple cord necklace. While you wear it, the necklace grants you a +1 bonus to ability checks and saving throws.",
+				{
+					"type": "entries",
+					"name": "Curse",
+					"entries": [
+						"Attuning to Harkon's Bite curses you until either Harkon Lukas removes the necklace from you or you are targeted by a {@spell remove curse} spell or similar magic. As long as you remain cursed, you cannot remove the necklace.",
+						"Upon donning or removing the necklace, whether you are attuned to it or not, you are afflicted with {@variantrule Player Characters as Lycanthropes|mm|werewolf lycanthropy} as detailed in the Monster Manual. The curse lasts until the dawn after the next full moon. If you are still wearing the necklace at this time, you are afflicted with the lycanthropy again."
+					]
+				}
+			]
+		},
+		{
 			"name": "Hat of Disguise",
 			"source": "DMG",
 			"page": 173,
@@ -13459,6 +13840,11 @@
 			"tier": "minor",
 			"rarity": "common",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"focus": [
 				"Wizard"
@@ -13567,6 +13953,11 @@
 			"page": 128,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -13692,6 +14083,11 @@
 			"page": 223,
 			"rarity": "very rare",
 			"reqAttune": "by a creature that can speak Infernal",
+			"reqAttuneTags": [
+				{
+					"languageProficiency": "infernal"
+				}
+			],
 			"wondrous": true,
 			"charges": 3,
 			"entries": [
@@ -13843,6 +14239,11 @@
 			"page": 297,
 			"rarity": "legendary",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This ornate chair is designed to propel and maneuver a ship through space.",
@@ -14171,6 +14572,20 @@
 			"page": 222,
 			"rarity": "legendary",
 			"reqAttune": "by a cleric or paladin of good alignment",
+			"reqAttuneTags": [
+				{
+					"class": "cleric",
+					"alignment": [
+						"G"
+					]
+				},
+				{
+					"class": "paladin",
+					"alignment": [
+						"G"
+					]
+				}
+			],
 			"wondrous": true,
 			"recharge": "dawn",
 			"charges": 10,
@@ -14414,6 +14829,430 @@
 			]
 		},
 		{
+			"name": "Horror Trinket",
+			"source": "VRGR",
+			"page": 36,
+			"type": "G",
+			"rarity": "none",
+			"entries": [
+				"Before you finish making a character, roll once on the Horror Trinkets table for a unique object your character has with them at the start of their adventuring career. These trinkets hint toward various horrific tales and might lead to dreadful revelations or be nothing more than grim keepsakes. At the DM's discretion any of these trinkets might also be a Mist talisman (detailed in {@book chapter 3|VRGR|3|Mist Talismans}), a focal item that can lead the bearer through the Mists to a particular Domain of Dread.",
+				{
+					"type": "table",
+					"caption": "Horror Trinkets",
+					"colLabels": [
+						"d100",
+						"Trinket"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"01",
+							"A picture you drew as a child of your imaginary friend"
+						],
+						[
+							"02",
+							"A lock that opens when blood is dripped in its keyhole"
+						],
+						[
+							"03",
+							"Clothes stolen from a scarecrow"
+						],
+						[
+							"04",
+							"A spinning top carved with four faces: happy, sad, wrathful, and dead"
+						],
+						[
+							"05",
+							"The necklace of a sibling who died on the day you were born"
+						],
+						[
+							"06",
+							"A wig from someone executed by beheading"
+						],
+						[
+							"07",
+							"The unopened letter to you from your dying father"
+						],
+						[
+							"08",
+							"A pocket watch that runs backward for an hour every midnight"
+						],
+						[
+							"09",
+							"A winter coat stolen from a dying soldier"
+						],
+						[
+							"10",
+							"A bottle of invisible ink that can only be read at sunset"
+						],
+						[
+							"11",
+							"A wineskin that refills when interred with a dead person for a night"
+						],
+						[
+							"12",
+							"A set of silverware used by a king for his last meal"
+						],
+						[
+							"13",
+							"A spyglass that always shows the world suffering a terrible storm"
+						],
+						[
+							"14",
+							"A cameo with the profile's face scratched away"
+						],
+						[
+							"15",
+							"A lantern with a black candle that never runs out and that burns with green flame"
+						],
+						[
+							"16",
+							"A teacup from a child's tea set, stained with blood"
+						],
+						[
+							"17",
+							"A little black book that records your dreams, and yours alone, when you sleep"
+						],
+						[
+							"18",
+							"A necklace formed of the interlinked holy symbols of a dozen deities"
+						],
+						[
+							"19",
+							"A noose that feels heavier than it should"
+						],
+						[
+							"20",
+							"A birdcage into which small birds fly but once inside never eat or leave"
+						],
+						[
+							"21",
+							"A lepidopterist's box filled with dead moths with skull-like patterns on their wings"
+						],
+						[
+							"22",
+							"A jar of pickled ghouls' tongues"
+						],
+						[
+							"23",
+							"The wooden hand of a notorious pirate"
+						],
+						[
+							"24",
+							"A urn with the ashes of a dead relative"
+						],
+						[
+							"25",
+							"A hand mirror backed with a bronze depiction of a medusa"
+						],
+						[
+							"26",
+							"Pallid leather gloves crafted with ivory fingernails"
+						],
+						[
+							"27",
+							"Dice made from the knuckles of a notorious charlatan"
+						],
+						[
+							"28",
+							"A ring of keys for forgotten locks"
+						],
+						[
+							"29",
+							"Nails from the coffin of a murderer"
+						],
+						[
+							"30",
+							"A key to the family crypt"
+						],
+						[
+							"31",
+							"A bouquet of funerary flowers that always looks and smells fresh"
+						],
+						[
+							"32",
+							"A switch used to discipline you as a child"
+						],
+						[
+							"33",
+							"A music box that plays by itself whenever someone holding it dances"
+						],
+						[
+							"34",
+							"A walking cane with an iron ferrule that strikes sparks on stone"
+						],
+						[
+							"35",
+							"A flag from a ship lost at sea"
+						],
+						[
+							"36",
+							"A porcelain doll's head that always seems to be looking at you"
+						],
+						[
+							"37",
+							"A wolf's head wrought in silver that is also a whistle"
+						],
+						[
+							"38",
+							"A small mirror that shows a much older version of the viewer"
+						],
+						[
+							"39",
+							"A small, worn book of children's nursery rhymes"
+						],
+						[
+							"40",
+							"A mummified raven claw"
+						],
+						[
+							"41",
+							"A broken pendant of a silver dragon that's always cold to the touch"
+						],
+						[
+							"42",
+							"A small locked box that quietly hums a lovely melody at night, but you always forget it in the morning"
+						],
+						[
+							"43",
+							"An inkwell that makes one a little nauseous when staring at it"
+						],
+						[
+							"44",
+							"An old doll made from a dark, dense wood and missing a hand and a foot"
+						],
+						[
+							"45",
+							"A black executioner's hood"
+						],
+						[
+							"46",
+							"A pouch made of flesh, with a sinew drawstring"
+						],
+						[
+							"47",
+							"A tiny spool of black thread that never runs out"
+						],
+						[
+							"48",
+							"A tiny clockwork figurine of a dancer that's missing a gear and doesn't work"
+						],
+						[
+							"49",
+							"A black wooden pipe that creates puffs of smoke that look like skulls"
+						],
+						[
+							"50",
+							"A vial of perfume, the scent of which only certain creatures can detect"
+						],
+						[
+							"51",
+							"A stone that emits a single endless sigh"
+						],
+						[
+							"52",
+							"A rag doll with two red dots on its neck"
+						],
+						[
+							"53",
+							"A spring-loaded toy with a missing crank"
+						],
+						[
+							"54",
+							"A mason jar containing a harmless but agitated, animate ooze"
+						],
+						[
+							"55",
+							"A black wooden die with 1's on all the faces"
+						],
+						[
+							"56",
+							"A child's portrait with \"born\" written on the back, along with next year's date"
+						],
+						[
+							"57",
+							"A dagger-sized shark tooth"
+						],
+						[
+							"58",
+							"A finger that's taken root in a small pot"
+						],
+						[
+							"59",
+							"A toolbox containing the remains of a dangerous but broken clockwork arachnid"
+						],
+						[
+							"60",
+							"A pitcher-sized, opalescent snail shell that occasionally, inexplicably shudders or tips over"
+						],
+						[
+							"61",
+							"The logbook of an ice-breaking ship called The Haifisch"
+						],
+						[
+							"62",
+							"A small portrait of you as a child, alongside your identically dressed twin"
+						],
+						[
+							"63",
+							"A silver pocket watch with thirteen hours marked on the face"
+						],
+						[
+							"64",
+							"A woodcut of a wolf devouring its own hind leg"
+						],
+						[
+							"65",
+							"A planchette etched with raven skulls"
+						],
+						[
+							"66",
+							"A moist coral figurine of a lamprey with arms, legs, and a bipedal stance"
+						],
+						[
+							"67",
+							"A bronze fingertrap sculpted with roaring tigers"
+						],
+						[
+							"68",
+							"A pearl necklace that turns red under the full moon"
+						],
+						[
+							"69",
+							"A fossil of a fish with humanoid features"
+						],
+						[
+							"70",
+							"A plague doctor's mask"
+						],
+						[
+							"71",
+							"A paper talisman with smudged ink"
+						],
+						[
+							"72",
+							"A locket containing the smeared image of an eyeless figure"
+						],
+						[
+							"73",
+							"A canopic jar with a lid sculpted like a goat"
+						],
+						[
+							"74",
+							"A jack-o'-lantern made from a small, pale gourd"
+						],
+						[
+							"75",
+							"A single high-heeled, iron shoe"
+						],
+						[
+							"76",
+							"A candle made from a severed hand"
+						],
+						[
+							"77",
+							"A clockwork device that beats like a heart"
+						],
+						[
+							"78",
+							"A blank masquerade mask"
+						],
+						[
+							"79",
+							"A glass eye with a live worm inside"
+						],
+						[
+							"80",
+							"A sheet with two eyeholes cut in it"
+						],
+						[
+							"81",
+							"The deed to someplace called Tergeron Manor"
+						],
+						[
+							"82",
+							"An ornate, wax-sealed crimson envelope that resists all attempts to open it"
+						],
+						[
+							"83",
+							"A mourning veil trimmed in black lace"
+						],
+						[
+							"84",
+							"A straitjacket covered in charcoal runes"
+						],
+						[
+							"85",
+							"A tattered, burlap mask with a crooked smile painted on it"
+						],
+						[
+							"86",
+							"A green ribbon designed to be worn as a choker"
+						],
+						[
+							"87",
+							"Dentures with mismatched, sharpened teeth"
+						],
+						[
+							"88",
+							"A warm, fist-sized egg case"
+						],
+						[
+							"89",
+							"A copper ring with \"mine\" engraved on the inside"
+						],
+						[
+							"90",
+							"A glass ampoule containing a neon green fluid"
+						],
+						[
+							"91",
+							"An eye patch embroidered with a holy symbol"
+						],
+						[
+							"92",
+							"A severed big toe with a nail that continues to grow"
+						],
+						[
+							"93",
+							"A journal that has been heavily redacted"
+						],
+						[
+							"94",
+							"A glove with a mouth-like design stitched on the palm"
+						],
+						[
+							"95",
+							"An ornate but empty reliquary made of silver and fractured glass"
+						],
+						[
+							"96",
+							"A ceramic figure of a cat with too many eyes"
+						],
+						[
+							"97",
+							"A crumpled paper ticket bearing the words \"admit none\""
+						],
+						[
+							"98",
+							"An electrum coin with your face on one side"
+						],
+						[
+							"99",
+							"A shrunken gremishka head that twitches when anyone casts magic nearby"
+						],
+						[
+							"100",
+							"A sunburst amulet with a red stone at the center"
+						]
+					]
+				}
+			]
+		},
+		{
 			"name": "Horseshoes of a Zephyr",
 			"source": "DMG",
 			"page": 175,
@@ -14624,6 +15463,13 @@
 			"page": 222,
 			"rarity": "legendary",
 			"reqAttune": "by a creature of good alignment",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"G"
+					]
+				}
+			],
 			"wondrous": true,
 			"weight": 10,
 			"entries": [
@@ -14713,6 +15559,11 @@
 			"page": 178,
 			"rarity": "very rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"A powerful illusionist of House Dimir originally developed these bracers, which enabled her to create multiple minor illusions at once. The bracers' power, though, extends far beyond illusions.",
@@ -14761,6 +15612,13 @@
 			],
 			"rarity": "legendary",
 			"reqAttune": "by a creature of evil alignment.",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"E"
+					]
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"A {@creature narzugon|MTF} binds a nightmare to its service with infernal tack, which consists of a bridle, bit, reins, saddle, stirrups, and spurs. A {@creature nightmare} equipped with infernal tack must serve whoever wears the spurs until the wearer dies or the tack is removed.",
@@ -14978,6 +15836,11 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15009,6 +15872,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15040,6 +15908,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15071,6 +15944,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15102,6 +15980,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15134,6 +16017,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15165,6 +16053,11 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"entries": [
@@ -15869,6 +16762,23 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Ivana's Whisper",
+			"source": "VRGR",
+			"page": 83,
+			"type": "G",
+			"rarity": "unknown",
+			"poison": true,
+			"entries": [
+				"This poison bears a distinct scent and chemical message from Ivana Boritsi. A creature subjected to this poison must succeed on a DC 18 Constitution saving throw or experience the effects of a {@spell dream} spell created by Ivana the next time they sleep. This poison is nonmagical, and Ivana doesn't directly communicate with those affected during the dream. Rather, she creates the illusion of speaking with her intended target by alchemically crafting her message, predicting her target's reactions, and chemically encoding in her responses. She wears this poison as a perfume or hides it within gift bouquets, allowing it to convey her message later."
+			],
+			"poisonTypes": [
+				"inhaled"
+			],
+			"attachedSpells": [
+				"dream"
+			]
+		},
+		{
 			"name": "Izzet Guild Signet",
 			"source": "GGR",
 			"page": 178,
@@ -15892,6 +16802,11 @@
 			"page": 177,
 			"rarity": "rare",
 			"reqAttune": "by a member of the Izzet guild",
+			"reqAttuneTags": [
+				{
+					"background": "izzet engineer|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"Formed of carved and polished red and blue stone, the keyrune includes bits of cable and wire. One end resembles a humanlike head, suggesting the jagged elemental form of the {@creature galvanice weird|GGR} that it can become for a duration of 3 hours. In this form, it will serve you as a bodyguard, lift and carry things for you, act as a test subject for your experiments, or aid you in any other way that its capabilities allow.",
@@ -16266,6 +17181,11 @@
 			],
 			"rarity": "common",
 			"reqAttune": "by a creature with the Mark of Warding",
+			"reqAttuneTags": [
+				{
+					"race": "dwarf (mark of warding)|erlw"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This small stylized key plays a vital role in the work of House Kundarak. If you cast the {@spell alarm}, {@spell arcane lock}, or {@spell glyph of warding} spell, you can tie the effect to the keycharm so that whoever holds it receives the notification from the {@spell alarm} spell, bypasses the lock of the {@spell arcane lock} spell, or avoids triggering the glyph placed by the {@spell glyph of warding} spell. In addition, the holder (who needn't be attuned to the item) can take an action to end any one spell tied to it, provided the holder knows the command word you set for ending the tied spells. The keycharm can have up to three tied spells at one time."
@@ -16882,6 +17802,11 @@
 			"page": 129,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -17234,6 +18159,11 @@
 			"page": 191,
 			"rarity": "very rare",
 			"reqAttune": "by a creature with a humanoid build",
+			"reqAttuneTags": [
+				{
+					"creatureType": "humanoid"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"The Masked Lords of Waterdeep don this ensemble when meeting with one another. This raiment renders each lord indistinguishable from the others. The ensemble consists of three pieces\u2014a helm, an amulet, and a robe\u2014that function as a single magic item when worn together, but only within the city of Waterdeep and its sewers. You become attuned to the ensemble as a single item.",
@@ -17577,6 +18507,11 @@
 			"type": "INS",
 			"rarity": "rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"grantsProficiency": true,
@@ -17785,6 +18720,11 @@
 			"type": "OTH",
 			"rarity": "very rare",
 			"reqAttune": "by a humanoid",
+			"reqAttuneTags": [
+				{
+					"creatureType": "humanoid"
+				}
+			],
 			"entries": [
 				"While you wear this helm and are inside Maddgoth's castle, on its roof, or in its courtyard, you have immunity to all damage. If the helm is taken from the castle, it turns to dust and is destroyed."
 			]
@@ -18181,6 +19121,18 @@
 			]
 		},
 		{
+			"name": "Master's Amulet",
+			"source": "MM",
+			"page": 271,
+			"type": "OTH",
+			"rarity": "unknown (magic)",
+			"entries": [
+				"Every {@creature shield guardian} has an amulet magically linked to it. A shield guardian can have only one corresponding amulet, and if that amulet is destroyed, the shield guardian is {@condition incapacitated} until a replacement amulet is created. A shield guardian's amulet is subject to direct attack if it isn't being worn or carried. It has AC 10, 10 hit points, and immunity to poison and psychic damage. Crafting an amulet requires 1 week and costs 1,000 gp in components.",
+				"A shield guardian's solitary focus is to protect the amulet's wearer. The amulet's wearer can command the guardian to attack its enemies or to guard the wielder against attack. If an attack threatens to injure the wearer, the construct can magically absorb the blow into its own body, even at a distance.",
+				"A spellcaster can store a single spell within a shield guardian, which can then cast the spell on command or under specific conditions. Many a wizard has been rendered helpless by enemies, only to surprise those foes when its shield guardian unleashes potent magical power."
+			]
+		},
+		{
 			"name": "Masterpiece painting in mahogany frame with gold inlay (Legion of Dusk)",
 			"source": "PSX",
 			"page": 25,
@@ -18547,6 +19499,17 @@
 			"page": 179,
 			"rarity": "uncommon",
 			"reqAttune": "by a sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 8,
 			"focus": [
@@ -18823,6 +19786,12 @@
 			"name": "Monster Hunter's Pack",
 			"source": "CoS",
 			"page": 209,
+			"otherSources": [
+				{
+					"source": "VRGR",
+					"page": 34
+				}
+			],
 			"type": "G",
 			"rarity": "none",
 			"weight": 48.5,
@@ -18887,6 +19856,24 @@
 			"type": "M",
 			"rarity": "legendary",
 			"reqAttune": "by an elf or half-elf of neutral good alignment",
+			"reqAttuneTags": [
+				{
+					"race": "elf",
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				},
+				{
+					"race": "half-elf",
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				}
+			],
 			"sentient": true,
 			"weight": 3,
 			"weaponCategory": "martial",
@@ -19044,7 +20031,7 @@
 			"name": "Muroosa Balm",
 			"source": "EGW",
 			"page": 70,
-			"type": "P",
+			"type": "G",
 			"resist": [
 				"fire"
 			],
@@ -19072,6 +20059,14 @@
 			"page": 133,
 			"rarity": "uncommon",
 			"reqAttune": "by a druid or ranger",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "ranger"
+				}
+			],
 			"wondrous": true,
 			"weight": 2,
 			"focus": [
@@ -19228,6 +20223,17 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a cleric, druid, or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"entries": [
@@ -19345,6 +20351,51 @@
 			"attachedSpells": [
 				"mending"
 			]
+		},
+		{
+			"name": "Nepenthe",
+			"source": "VRGR",
+			"page": 86,
+			"baseItem": "longsword|PHB",
+			"type": "M",
+			"rarity": "legendary",
+			"reqAttune": "by a paladin",
+			"reqAttuneTags": [
+				{
+					"class": "paladin"
+				}
+			],
+			"sentient": true,
+			"weight": 3,
+			"weaponCategory": "martial",
+			"property": [
+				"V"
+			],
+			"dmg1": "1d8",
+			"dmgType": "S",
+			"dmg2": "1d10",
+			"bonusWeapon": "+3",
+			"sword": true,
+			"weapon": true,
+			"entries": [
+				"You gain a +3 bonus to attack and damage rolls made with this magic weapon. When you hit a fiend or an undead with it, that creature takes an extra {@damage 2d10} radiant damage.",
+				"While you hold the drawn sword, it creates an aura in a 10-foot radius around you. You and all creatures friendly to you in the aura have advantage on saving throws against spells and other magical effects. If you have 17 or more levels in the paladin class, the radius of the aura increases to 30 feet.",
+				{
+					"type": "entries",
+					"name": "Sentience",
+					"entries": [
+						"Nepenthe is a sentient, neutral evil weapon with an Intelligence of 10, a Wisdom of 8, and a Charisma of 18. It has hearing and {@sense darkvision} out to a range of 60 feet. It can read and understand Elvish. It can also speak Elvish, but only through the voice of its wielder, with whom the sword can communicate telepathically."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Personality",
+					"entries": [
+						"In its lifetime, the sword has beheaded thousands of criminals, not all of whom were guilty of the crimes for which they were convicted. The sword cannot distinguish the guilty from the innocent. With each beheading, it hungers for more justice and blood. The sword is corrupt and irredeemable."
+					]
+				}
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Nether Scroll of Azumar",
@@ -19707,7 +20758,7 @@
 			"name": "Olisuba Leaf",
 			"source": "EGW",
 			"page": 70,
-			"type": "P",
+			"type": "G",
 			"rarity": "none",
 			"value": 5000,
 			"entries": [
@@ -19886,7 +20937,7 @@
 					"type": "entries",
 					"name": "Random Properties",
 					"entries": [
-						"An Orb of Dragon kind has the following random properties:",
+						"An Orb of Dragonkind has the following random properties:",
 						{
 							"type": "list",
 							"items": [
@@ -20117,6 +21168,20 @@
 			"type": "M",
 			"rarity": "legendary",
 			"reqAttune": "by a dwarf, fighter, or paladin of good alignment",
+			"reqAttuneTags": [
+				{
+					"race": "dwarf",
+					"alignment": [
+						"G"
+					]
+				},
+				{
+					"class": "paladin",
+					"alignment": [
+						"G"
+					]
+				}
+			],
 			"sentient": true,
 			"weight": 7,
 			"weaponCategory": "martial",
@@ -20291,6 +21356,11 @@
 			"page": 178,
 			"rarity": "rare",
 			"reqAttune": "by a member of the Orzhov guild",
+			"reqAttuneTags": [
+				{
+					"background": "orzhov representative|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This keyrune is carved from white marble with veins of black. The end is shaped like a thrull's head, with a gold faceplate affixed. On command, the keyrune transforms into a {@creature winged thrull|GGR} for up to 2 hours. If you don't come from an Orzhov oligarch family, it serves you grudgingly, clownishly aping your movements and mannerisms while carrying out your orders.",
@@ -20306,6 +21376,11 @@
 			"page": 133,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -20358,6 +21433,11 @@
 			"page": 133,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -20381,6 +21461,11 @@
 			"page": 133,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -20404,6 +21489,11 @@
 			"page": 133,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -20427,6 +21517,11 @@
 			"page": 133,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -20705,6 +21800,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"While this pearl is on your person, you can use an action to speak its command word and regain one expended spell slot. If the expended slot was of 4th level or higher, the new slot is 3rd level. Once you have used the pearl, it can't be used again until the next dawn."
@@ -20962,6 +22062,11 @@
 			],
 			"rarity": "unknown (magic)",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"entries": [
 				"While this egg is on your person, you can use an action to speak its command word and regain one expended spell slot. If the expended slot was of 4th level or higher, the new slot is 3rd level. Once you have used the egg, it can't be used again until the next dawn.",
 				"Additionally, while you are attuned to the egg, you gain resistance to poison damage.",
@@ -21180,6 +22285,11 @@
 			"page": 134,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -22628,6 +23738,12 @@
 			"page": 251,
 			"rarity": "uncommon",
 			"reqAttune": "by a small humanoid",
+			"reqAttuneTags": [
+				{
+					"creatureType": "humanoid",
+					"size": "S"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"While worn, the helm allows its wearer to use an action to cast the {@spell levitate} spell, requiring no components. The helm's propeller spins and whirs loudly until the spell ends. Each time the spell ends, there is a 50 percent chance that the helm loses its magic and becomes nonmagical."
@@ -22659,6 +23775,11 @@
 			"page": 134,
 			"rarity": "rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 3,
 			"recharge": "dawn",
@@ -22694,6 +23815,11 @@
 			"page": 315,
 			"rarity": "uncommon",
 			"reqAttune": "by a creature with an intelligence score of 3 or higher",
+			"reqAttuneTags": [
+				{
+					"int": 3
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This crystal grants you telepathy for as long as you remain attuned to it. See the {@book introduction of the Monster Manual|MM|0|Telepathy} for rules on how this telepathy works.",
@@ -23037,6 +24163,11 @@
 			"type": "WD",
 			"rarity": "unknown (magic)",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"bonusSpellAttack": "+1",
 			"entries": [
 				"While holding this wand, you gain a +1 bonus to spell attack rolls. In addition, you ignore half cover when making a spell attack. Radiance is in the form of an exquisite golden hand mirror.",
@@ -23099,6 +24230,11 @@
 			"page": 178,
 			"rarity": "uncommon",
 			"reqAttune": "by a member of the Rakdos guild",
+			"reqAttuneTags": [
+				{
+					"background": "rakdos cultist|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This dark granite keyrune is marbled with scarlet veins and carved with the leering visage of a mischievous demon. When activated, it transforms into a {@creature cackler|GGR} for up to 1 hour.",
@@ -23298,6 +24434,11 @@
 			"type": "INS",
 			"rarity": "rare",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"While holding this concertina, you gain a +2 bonus to the saving throw DC of your bard spells.",
@@ -24316,6 +25457,17 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
@@ -24569,6 +25721,17 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a cleric, druid, or paladin",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "paladin"
+				}
+			],
 			"weight": 2,
 			"recharge": "dawn",
 			"charges": 5,
@@ -24770,6 +25933,11 @@
 			"tier": "minor",
 			"rarity": "common",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"wondrous": true,
 			"focus": true,
 			"entries": [
@@ -25199,6 +26367,11 @@
 			],
 			"rarity": "common",
 			"reqAttune": "by a creature with the Mark of Scribing",
+			"reqAttuneTags": [
+				{
+					"race": "gnome (mark of scribing)|erlw"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"You can use this pen to write on any surface. You decide whether the writing is visible or {@condition invisible}, but the writing is always visible to a person with the Mark of Scribing.",
@@ -25380,6 +26553,11 @@
 			"page": 178,
 			"rarity": "rare",
 			"reqAttune": "by a member of the Selesnya guild",
+			"reqAttuneTags": [
+				{
+					"background": "selesnya initiate|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"Carved from white and green marble in the shape of a wolf's head, this keyrune transforms into a {@creature dire wolf}. The wolf persists for 8 hours. Its Intelligence is 6, and it understands Elvish and Sylvan but can't speak those languages. While it is within 1 mile of you, you can communicate with each other telepathically.",
@@ -25614,6 +26792,11 @@
 			"page": 135,
 			"rarity": "rare",
 			"reqAttune": "by a sorcerer",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"focus": [
@@ -25828,6 +27011,11 @@
 			"page": 149,
 			"rarity": "rare",
 			"reqAttune": "by a humanoid",
+			"reqAttuneTags": [
+				{
+					"creatureType": "humanoid"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"The amulet is a 4-inch-wide disk composed of silver-framed wood, with a rune carved into its face. A {@spell detect magic} spell reveals a magical aura of enchantment around the amulet.",
@@ -26298,6 +27486,11 @@
 			"tier": "major",
 			"rarity": "unknown (magic)",
 			"reqAttune": "by a creature that has psionic ability",
+			"reqAttuneTags": [
+				{
+					"psionics": true
+				}
+			],
 			"weight": 6,
 			"weaponCategory": "martial",
 			"property": [
@@ -26343,6 +27536,11 @@
 			"page": 178,
 			"rarity": "uncommon",
 			"reqAttune": "by a member of the Simic guild",
+			"reqAttuneTags": [
+				{
+					"background": "simic scientist|ggr"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"This keyrune is assembled from coral, mother-of-pearl, and chrome and adorned with the spirals and curves characteristic of Simic ornamentation. The head resembles the shell of a sea creature. On command, the keyrune turns into a {@creature category 1 krasis|GGR} that has the Grabber and Stabilizing Legs adaptations. The transformation lasts for up to 5 hours.",
@@ -26677,7 +27875,7 @@
 			"name": "Soothsalts",
 			"source": "EGW",
 			"page": 152,
-			"type": "P",
+			"type": "G",
 			"rarity": "none",
 			"value": 15000,
 			"entries": [
@@ -27610,6 +28808,26 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a bard, cleric, druid, sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				},
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -27669,6 +28887,11 @@
 			"page": 270,
 			"rarity": "very rare",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -27742,6 +28965,20 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a druid, sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -27800,6 +29037,20 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a druid, sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				},
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -27835,6 +29086,17 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a bard, cleric, or druid",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				},
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -27868,6 +29130,17 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -27986,6 +29259,26 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a bard, cleric, druid, sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				},
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28030,6 +29323,17 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a cleric, druid, or warlock",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "warlock"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28055,6 +29359,17 @@
 			"page": 208,
 			"rarity": "artifact",
 			"reqAttune": "by a sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28114,6 +29429,11 @@
 			"page": 270,
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28136,6 +29456,17 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a sorcerer, warlock, or wizard",
+			"reqAttuneTags": [
+				{
+					"class": "sorcerer"
+				},
+				{
+					"class": "warlock"
+				},
+				{
+					"class": "wizard"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28235,6 +29566,17 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a cleric, druid, or warlock",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "warlock"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28262,6 +29604,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a druid",
+			"reqAttuneTags": [
+				{
+					"class": "druid"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28378,6 +29725,17 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a cleric, druid, or warlock",
+			"reqAttuneTags": [
+				{
+					"class": "cleric"
+				},
+				{
+					"class": "druid"
+				},
+				{
+					"class": "warlock"
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -28814,10 +30172,7 @@
 					"entries": [
 						"The Sunsword's special purpose is to destroy Strahd, not so much because it wants to free the land of Barovia from evil but because it wants revenge for the loss of its crystal blade. The weapon secretly fears its own destruction."
 					]
-				},
-				"{@item Sun blade}. This item appears to be a longsword hilt. While grasping the hilt, you can use a bonus action to cause a blade of pure radiance to spring into existence, or make the blade disappear. While the blade exists, this magic longsword has the finesse property. If you are proficient with {@item shortsword|phb|shortswords} or {@item longsword|phb|longswords}, you are proficient with the {@item sun blade}.",
-				"You gain a +2 bonus to attack and damage rolls made with this weapon, which deals radiant damage instead of slashing damage. When you hit an undead with it, that target takes an extra {@dice 1d8} radiant damage.",
-				"The sword's luminous blade emits bright light in a 15-foot radius and dim light for an additional 15 feet. The light is sunlight. While the blade persists, you can use an action to expand or reduce its radius of bright and dim light by 5 feet each, to a maximum of 30 feet each or a minimum of 10 feet each."
+				}
 			],
 			"hasFluffImages": true
 		},
@@ -28844,6 +30199,13 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a chaotic good creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"C"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -28868,6 +30230,13 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a chaotic evil creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"E"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -28892,6 +30261,15 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a lawful neutral creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -28916,6 +30294,15 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a chaotic neutral creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -28940,6 +30327,15 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a neutral good creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -28964,6 +30360,15 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a neutral creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -28988,6 +30393,13 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a lawful good creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"L"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -29012,6 +30424,13 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a lawful evil creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"E"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -29036,6 +30455,15 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a neutral evil creature",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"NX",
+						"NY",
+						"N"
+					]
+				}
+			],
 			"weight": 3,
 			"weaponCategory": "martial",
 			"property": [
@@ -29129,7 +30557,6 @@
 				}
 			],
 			"attachedSpells": [
-				"wish",
 				"call lightning",
 				"divine word",
 				"finger of death"
@@ -29454,6 +30881,13 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a creature of good alignment",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"G"
+					]
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+2",
@@ -29493,6 +30927,13 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a creature of evil alignment",
+			"reqAttuneTags": [
+				{
+					"alignment": [
+						"E"
+					]
+				}
+			],
 			"wondrous": true,
 			"weight": 1,
 			"bonusSpellAttack": "+2",
@@ -30620,7 +32061,7 @@
 			"name": "Theki Root",
 			"source": "EGW",
 			"page": 70,
-			"type": "P",
+			"type": "G",
 			"rarity": "none",
 			"value": 300,
 			"entries": [
@@ -31045,6 +32486,11 @@
 			"tier": "major",
 			"rarity": "legendary",
 			"reqAttune": "by a wizard",
+			"reqAttuneTags": [
+				{
+					"class": "wizard"
+				}
+			],
 			"wondrous": true,
 			"weight": 5,
 			"focus": [
@@ -33010,6 +34456,11 @@
 			"page": 181,
 			"rarity": "very rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 4,
 			"weaponCategory": "simple",
 			"property": [
@@ -33048,6 +34499,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33120,6 +34576,11 @@
 			"type": "WD",
 			"rarity": "uncommon",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33177,6 +34638,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33201,6 +34667,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33364,6 +34835,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33385,6 +34861,11 @@
 			"tier": "major",
 			"rarity": "very rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33490,6 +34971,11 @@
 			"tier": "major",
 			"rarity": "uncommon",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33535,6 +35021,11 @@
 			"tier": "major",
 			"rarity": "rare",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"weight": 1,
 			"recharge": "dawn",
 			"charges": 7,
@@ -33674,6 +35165,11 @@
 			],
 			"rarity": "common",
 			"reqAttune": "by a warforged",
+			"reqAttuneTags": [
+				{
+					"race": "warforged|erlw"
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"A wand sheath clamps onto your arm and imparts the following benefits:",
@@ -34025,6 +35521,11 @@
 			"type": "M",
 			"rarity": "legendary",
 			"reqAttune": "by a dwarf",
+			"reqAttuneTags": [
+				{
+					"race": "dwarf"
+				}
+			],
 			"sentient": true,
 			"weight": 2,
 			"weaponCategory": "martial",
@@ -34430,7 +35931,7 @@
 			"name": "Willowshade Oil",
 			"source": "EGW",
 			"page": 70,
-			"type": "P",
+			"type": "G",
 			"rarity": "none",
 			"value": 3000,
 			"entries": [
@@ -34863,6 +36364,11 @@
 			"page": 316,
 			"rarity": "legendary",
 			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
 			"wondrous": true,
 			"entries": [
 				"A mythallar looks like an enormous crystal ball held in an ornate cradle. The globe sheds bright light in a 300-foot radius and dim light for an additional 300 feet. The globe draws magic from the Weave that can be harnessed for various purposes. For example, Netherese mages used mythallars to keep their cities aloft and empower their magic items. The bigger the mythallar, the more magic it can hold. The largest mythallars are 150 feet in diameter.",
@@ -35550,6 +37056,11 @@
 			"type": "INS",
 			"rarity": "varies",
 			"reqAttune": "by a bard",
+			"reqAttuneTags": [
+				{
+					"class": "bard"
+				}
+			],
 			"wondrous": true,
 			"items": [
 				"Instrument of the Bards, Anstruth Harp",

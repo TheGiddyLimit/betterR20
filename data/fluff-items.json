@@ -2527,6 +2527,19 @@
 			]
 		},
 		{
+			"name": "Nepenthe",
+			"source": "VRGR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/VRGR/Nepenthe.jpg"
+					}
+				}
+			]
+		},
+		{
 			"name": "Nine Lives Stealer",
 			"source": "DMG",
 			"images": [
