@@ -165,7 +165,7 @@ function d20plusClass () {
 			const importStrategy = await chooseSubclassImportStrategy(options.isHomebrew || (data.source && SourceUtil.isNonstandardSource(data.source)));
 			if (importStrategy === 3) return;
 
-			const gainFeatureArray = d20plus.classes._getGainAtLevelArr(data);
+			const gainFeatureArray = d20plus.classes._getGainAtLevelArrGeneric(data);
 
 			data.subclasses.forEach(sc => {
 				if (importStrategy === 1 && SourceUtil.isNonstandardSource(sc.source)) return;
@@ -198,6 +198,23 @@ function d20plusClass () {
 			}
 			gainFeatureArray.push(false);
 		}
+		return gainFeatureArray;
+	};
+
+	d20plus.classes._getGainAtLevelArrGeneric = function (clazz) {
+		// Creates a gain at level array for generic subclasses
+		// For some reason, the expected output is an array of 20 booleans
+		const gainFeatureArray = [];
+		for (let i = 0; i < 20; i++) {
+			gainFeatureArray[i] = false;
+		}
+		clazz.forEach(ftl => {
+			ftl.forEach(ft => {
+				if (ft.level) {
+					gainFeatureArray[ft.level - 1] = true;
+				}
+			})
+		});
 		return gainFeatureArray;
 	};
 
@@ -321,6 +338,10 @@ function d20plusClass () {
 			return Promise.resolve();
 		} else if(subclass._baseClass) {
 			subclass._gainAtLevels = d20plus.classes._getGainAtLevelArr(subclass._baseClass);
+			return Promise.resolve();
+		}
+		else if (subclass.subclassFeatures) {
+			subclass._gainAtLevels = d20plus.classes._getGainAtLevelArrGeneric(subclass.subclassFeatures);
 			return Promise.resolve();
 		} else {
 			d20plus.ut.log("Preloading class...");
