@@ -1636,6 +1636,8 @@ const betteR205etoolsMain = function () {
 			const attrs = new CharacterAttributesProxy(character);
 
 			importClassGeneral(attrs, clss, maxLevel);
+			
+			const featureSourceWhitelist = ["PHB"];
 
 			for (let i = 0; i < maxLevel; i++) {
 				const level = i + 1;
@@ -1646,7 +1648,8 @@ const betteR205etoolsMain = function () {
 					const feature = lvlFeatureList[j];
 					console.log();
 					// don't add "you gain a subclass feature" or ASI's
-					if (!feature.gainSubclassFeature && feature.name !== "Ability Score Improvement") {
+					if (!feature.gainSubclassFeature && feature.name !== "Ability Score Improvement" &&
+						featureSourceWhitelist.includes(feature.source)) {
 						const renderStack = [];
 						renderer.recursiveRender({entries: feature.entries}, renderStack);
 						feature.text = d20plus.importer.getCleanText(renderStack.join(""));
