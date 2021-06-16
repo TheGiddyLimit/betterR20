@@ -1644,6 +1644,7 @@ const betteR205etoolsMain = function () {
 				const lvlFeatureList = clss.classFeatures[i];
 				for (let j = 0; j < lvlFeatureList.length; j++) {
 					const feature = lvlFeatureList[j];
+					console.log();
 					// don't add "you gain a subclass feature" or ASI's
 					if (!feature.gainSubclassFeature && feature.name !== "Ability Score Improvement") {
 						const renderStack = [];
