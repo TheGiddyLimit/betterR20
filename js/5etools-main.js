@@ -2224,16 +2224,6 @@ const betteR205etoolsMain = function () {
 					const $cbSkill = $dialog.find(`input[type="checkbox"]`);
 					console.log($cbSkill);
 
-					$cbSkill.on("change", function () {
-						const $e = $(this);
-						let selectedCount = getSelected().length;
-						if (selectedCount > count) {
-							$e.prop("checked", false);
-							selectedCount--;
-						}
-						$remain.text(`Remaining: ${count - selectedCount}`);
-					});
-
 					function getSelected() {
 						return $cbSkill
 							.map((i, e) => ({
