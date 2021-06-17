@@ -22,7 +22,7 @@ const betteR205etoolsMain = function () {
 	const HOMEBREW_CLIENT_SECRET = `c00dede21ca63a855abcd9a113415e840aca3f92`;
 
 	const REQUIRED_PROPS = {
-		"monster": [
+		monster: [
 			"ac",
 			"alignment",
 			"cha",
@@ -38,9 +38,9 @@ const betteR205etoolsMain = function () {
 			"speed",
 			"str",
 			"type",
-			"wis"
+			"wis",
 		],
-		"spell": [
+		spell: [
 			"name",
 			"level",
 			"school",
@@ -50,24 +50,12 @@ const betteR205etoolsMain = function () {
 			"duration",
 			"classes",
 			"entries",
-			"source"
-		],
-		"item": [
-			"name",
-			"rarity",
-			"source"
-		],
-		"psionic": [
-			"name",
 			"source",
-			"type"
 		],
-		"feat": [
-			"name",
-			"source",
-			"entries"
-		],
-		"object": [
+		item: ["name", "rarity", "source"],
+		psionic: ["name", "source", "type"],
+		feat: ["name", "source", "entries"],
+		object: [
 			"name",
 			"source",
 			"size",
@@ -75,9 +63,9 @@ const betteR205etoolsMain = function () {
 			"ac",
 			"hp",
 			"immune",
-			"entries"
+			"entries",
 		],
-		"class": [
+		class: [
 			"name",
 			"source",
 			"hd",
@@ -87,26 +75,12 @@ const betteR205etoolsMain = function () {
 			"startingEquipment",
 			"classFeatures",
 			"subclassTitle",
-			"subclasses"
+			"subclasses",
 		],
-		"subclass": [
-
-		],
-		"background": [
-			"name",
-			"source",
-			"skillProficiencies",
-			"entries"
-		],
-		"race": [
-			"name",
-			"source"
-		],
-		"optionalfeature": [
-			"name",
-			"source",
-			"entries"
-		]
+		subclass: [],
+		background: ["name", "source", "skillProficiencies", "entries"],
+		race: ["name", "source"],
+		optionalfeature: ["name", "source", "entries"],
 	};
 
 	let spellDataUrls = {};
@@ -120,317 +94,357 @@ const betteR205etoolsMain = function () {
 	let classDataUrls = {};
 	let brewIndex = {};
 
-// build a big dictionary of sheet properties to be used as reference throughout // TODO use these as reference throughout
-	function SheetAttribute (name, ogl, shaped) {
+	// build a big dictionary of sheet properties to be used as reference throughout // TODO use these as reference throughout
+	function SheetAttribute(name, ogl, shaped) {
 		this.name = name;
 		this.ogl = ogl;
 		this.shaped = shaped;
 	}
 
 	NPC_SHEET_ATTRIBUTES = {};
-// these (other than the name, which is for display only) are all lowercased; any comparison should be lowercased
+	// these (other than the name, which is for display only) are all lowercased; any comparison should be lowercased
 	NPC_SHEET_ATTRIBUTES["empty"] = new SheetAttribute("--Empty--", "", "");
-// TODO: implement custom entry (enable textarea)
-//NPC_SHEET_ATTRIBUTES["custom"] = new SheetAttribute("-Custom-", "-Custom-", "-Custom-");
-	NPC_SHEET_ATTRIBUTES["npc_hpbase"] = new SheetAttribute("HP", "npc_hpbase", "npc_hpbase");
+	// TODO: implement custom entry (enable textarea)
+	//NPC_SHEET_ATTRIBUTES["custom"] = new SheetAttribute("-Custom-", "-Custom-", "-Custom-");
+	NPC_SHEET_ATTRIBUTES["npc_hpbase"] = new SheetAttribute(
+		"HP",
+		"npc_hpbase",
+		"npc_hpbase"
+	);
 	NPC_SHEET_ATTRIBUTES["npc_ac"] = new SheetAttribute("AC", "npc_ac", "ac");
-	NPC_SHEET_ATTRIBUTES["passive"] = new SheetAttribute("Passive Perception", "passive", "passive");
-	NPC_SHEET_ATTRIBUTES["npc_hpformula"] = new SheetAttribute("HP Formula", "npc_hpformula", "npc_hpformula");
-	NPC_SHEET_ATTRIBUTES["npc_speed"] = new SheetAttribute("Speed", "npc_speed", "npc_speed");
-	NPC_SHEET_ATTRIBUTES["spell_save_dc"] = new SheetAttribute("Spell Save DC", "spell_save_dc", "spell_save_DC");
-	NPC_SHEET_ATTRIBUTES["npc_legendary_actions"] = new SheetAttribute("Legendary Actions", "npc_legendary_actions", "npc_legendary_actions");
-	NPC_SHEET_ATTRIBUTES["npc_challenge"] = new SheetAttribute("CR", "npc_challenge", "challenge");
+	NPC_SHEET_ATTRIBUTES["passive"] = new SheetAttribute(
+		"Passive Perception",
+		"passive",
+		"passive"
+	);
+	NPC_SHEET_ATTRIBUTES["npc_hpformula"] = new SheetAttribute(
+		"HP Formula",
+		"npc_hpformula",
+		"npc_hpformula"
+	);
+	NPC_SHEET_ATTRIBUTES["npc_speed"] = new SheetAttribute(
+		"Speed",
+		"npc_speed",
+		"npc_speed"
+	);
+	NPC_SHEET_ATTRIBUTES["spell_save_dc"] = new SheetAttribute(
+		"Spell Save DC",
+		"spell_save_dc",
+		"spell_save_DC"
+	);
+	NPC_SHEET_ATTRIBUTES["npc_legendary_actions"] = new SheetAttribute(
+		"Legendary Actions",
+		"npc_legendary_actions",
+		"npc_legendary_actions"
+	);
+	NPC_SHEET_ATTRIBUTES["npc_challenge"] = new SheetAttribute(
+		"CR",
+		"npc_challenge",
+		"challenge"
+	);
 
 	PC_SHEET_ATTRIBUTES = {};
 	PC_SHEET_ATTRIBUTES["empty"] = new SheetAttribute("--Default--", "", "");
 	PC_SHEET_ATTRIBUTES["hp"] = new SheetAttribute("Current HP", "hp", "HP");
 	PC_SHEET_ATTRIBUTES["ac"] = new SheetAttribute("AC", "ac", "ac"); // TODO check shaped
-	PC_SHEET_ATTRIBUTES["passive_wisdom"] = new SheetAttribute("Passive Perception", "passive_wisdom", "passive_wisdom"); // TODO check shaped
-	PC_SHEET_ATTRIBUTES["speed"] = new SheetAttribute("Speed", "speed", "speed"); // TODO check shaped
-	PC_SHEET_ATTRIBUTES["spell_save_dc"] = new SheetAttribute("Spell Save DC", "spell_save_dc", "spell_save_dc"); // TODO check shaped
+	PC_SHEET_ATTRIBUTES["passive_wisdom"] = new SheetAttribute(
+		"Passive Perception",
+		"passive_wisdom",
+		"passive_wisdom"
+	); // TODO check shaped
+	PC_SHEET_ATTRIBUTES["speed"] = new SheetAttribute(
+		"Speed",
+		"speed",
+		"speed"
+	); // TODO check shaped
+	PC_SHEET_ATTRIBUTES["spell_save_dc"] = new SheetAttribute(
+		"Spell Save DC",
+		"spell_save_dc",
+		"spell_save_dc"
+	); // TODO check shaped
 
 	addConfigOptions("token", {
-		"_name": "Tokens",
-		"_player": true,
-		"bar1": {
-			"name": "Bar 1 (NPC)",
-			"default": "npc_hpbase",
-			"_type": "_SHEET_ATTRIBUTE",
-			"_player": true
+		_name: "Tokens",
+		_player: true,
+		bar1: {
+			name: "Bar 1 (NPC)",
+			default: "npc_hpbase",
+			_type: "_SHEET_ATTRIBUTE",
+			_player: true,
 		},
-		"bar1_pc": {
-			"name": "Bar 1 (PC)",
-			"default": "",
-			"_type": "_SHEET_ATTRIBUTE_PC"
+		bar1_pc: {
+			name: "Bar 1 (PC)",
+			default: "",
+			_type: "_SHEET_ATTRIBUTE_PC",
 		},
-		"bar1_max": {
-			"name": "Set Bar 1 Max",
-			"default": true,
-			"_type": "boolean",
-			"_player": true
+		bar1_max: {
+			name: "Set Bar 1 Max",
+			default: true,
+			_type: "boolean",
+			_player: true,
 		},
-		"bar1_reveal": {
-			"name": "Reveal Bar 1",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		bar1_reveal: {
+			name: "Reveal Bar 1",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
-		"bar2": {
-			"name": "Bar 2 (NPC)",
-			"default": "npc_ac",
-			"_type": "_SHEET_ATTRIBUTE",
-			"_player": true
+		bar2: {
+			name: "Bar 2 (NPC)",
+			default: "npc_ac",
+			_type: "_SHEET_ATTRIBUTE",
+			_player: true,
 		},
-		"bar2_pc": {
-			"name": "Bar 2 (PC)",
-			"default": "",
-			"_type": "_SHEET_ATTRIBUTE_PC"
+		bar2_pc: {
+			name: "Bar 2 (PC)",
+			default: "",
+			_type: "_SHEET_ATTRIBUTE_PC",
 		},
-		"bar2_max": {
-			"name": "Set Bar 2 Max",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		bar2_max: {
+			name: "Set Bar 2 Max",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
-		"bar2_reveal": {
-			"name": "Reveal Bar 2",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		bar2_reveal: {
+			name: "Reveal Bar 2",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
-		"bar3": {
-			"name": "Bar 3 (NPC)",
-			"default": "passive",
-			"_type": "_SHEET_ATTRIBUTE",
-			"_player": true
+		bar3: {
+			name: "Bar 3 (NPC)",
+			default: "passive",
+			_type: "_SHEET_ATTRIBUTE",
+			_player: true,
 		},
-		"bar3_pc": {
-			"name": "Bar 3 (PC)",
-			"default": "",
-			"_type": "_SHEET_ATTRIBUTE_PC"
+		bar3_pc: {
+			name: "Bar 3 (PC)",
+			default: "",
+			_type: "_SHEET_ATTRIBUTE_PC",
 		},
-		"bar3_max": {
-			"name": "Set Bar 3 Max",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		bar3_max: {
+			name: "Set Bar 3 Max",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
-		"bar3_reveal": {
-			"name": "Reveal Bar 3",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		bar3_reveal: {
+			name: "Reveal Bar 3",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
-		"rollHP": {
-			"name": "Roll Token HP",
-			"default": false,
-			"_type": "boolean"
+		rollHP: {
+			name: "Roll Token HP",
+			default: false,
+			_type: "boolean",
 		},
-		"maximiseHp": {
-			"name": "Maximise Token HP",
-			"default": false,
-			"_type": "boolean"
+		maximiseHp: {
+			name: "Maximise Token HP",
+			default: false,
+			_type: "boolean",
 		},
-		"name": {
-			"name": "Show Nameplate",
-			"default": true,
-			"_type": "boolean",
-			"_player": true
+		name: {
+			name: "Show Nameplate",
+			default: true,
+			_type: "boolean",
+			_player: true,
 		},
-		"name_reveal": {
-			"name": "Reveal Nameplate",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		name_reveal: {
+			name: "Reveal Nameplate",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
-		"barLocation": {
-			"name": "Bar Location",
-			"default": "above",
-			"_type": "_enum",
-			"__values": [
+		barLocation: {
+			name: "Bar Location",
+			default: "above",
+			_type: "_enum",
+			__values: [
 				"Above",
 				"Top Overlapping",
 				"Bottom Overlapping",
-				"Below"
+				"Below",
 			],
-			"_player": true
+			_player: true,
 		},
-		"isCompactBars": {
-			"name": "Compact Bars",
-			"default": false,
-			"_type": "boolean",
-			"_player": true
+		isCompactBars: {
+			name: "Compact Bars",
+			default: false,
+			_type: "boolean",
+			_player: true,
 		},
 	});
 	addConfigOptions("import", {
-		"_name": "Import",
-		"allSourcesIncludeUnofficial": {
-			"name": `Include Unofficial (UA/etc) Content in "Import Monsters From All Sources" List`,
-			"default": false,
-			"_type": "boolean"
+		_name: "Import",
+		allSourcesIncludeUnofficial: {
+			name: `Include Unofficial (UA/etc) Content in "Import Monsters From All Sources" List`,
+			default: false,
+			_type: "boolean",
 		},
-		"allSourcesIncludeHomebrew": {
-			"name": `Include Homebrew in "Import Monsters From All Sources" List (Warning: Slow)`,
-			"default": false,
-			"_type": "boolean"
+		allSourcesIncludeHomebrew: {
+			name: `Include Homebrew in "Import Monsters From All Sources" List (Warning: Slow)`,
+			default: false,
+			_type: "boolean",
 		},
-		"importIntervalHandout": {
-			"name": "Rest Time between Each Handout (msec)",
-			"default": 100,
-			"_type": "integer"
+		importIntervalHandout: {
+			name: "Rest Time between Each Handout (msec)",
+			default: 100,
+			_type: "integer",
 		},
-		"importIntervalCharacter": {
-			"name": "Rest Time between Each Character (msec)",
-			"default": 2500,
-			"_type": "integer"
+		importIntervalCharacter: {
+			name: "Rest Time between Each Character (msec)",
+			default: 2500,
+			_type: "integer",
 		},
-		"importFluffAs": {
-			"name": "Import Creature Fluff As...",
-			"default": "Bio",
-			"_type": "_enum",
-			"__values": ["Bio", "GM Notes"]
+		importFluffAs: {
+			name: "Import Creature Fluff As...",
+			default: "Bio",
+			_type: "_enum",
+			__values: ["Bio", "GM Notes"],
 		},
-		"importCharAvatar": {
-			"name": "Set Character Avatar As...",
-			"default": "Portrait (where available)",
-			"_type": "_enum",
-			"__values": ["Portrait (where available)", "Token"]
+		importCharAvatar: {
+			name: "Set Character Avatar As...",
+			default: "Portrait (where available)",
+			_type: "_enum",
+			__values: ["Portrait (where available)", "Token"],
 		},
-		"whispermode": {
-			"name": "Sheet Whisper Mode on Import",
-			"default": "Toggle (Default GM)",
-			"_type": "_WHISPERMODE"
+		whispermode: {
+			name: "Sheet Whisper Mode on Import",
+			default: "Toggle (Default GM)",
+			_type: "_WHISPERMODE",
 		},
-		"advantagemode": {
-			"name": "Sheet Advantage Mode on Import",
-			"default": "Toggle (Default Advantage)",
-			"_type": "_ADVANTAGEMODE"
+		advantagemode: {
+			name: "Sheet Advantage Mode on Import",
+			default: "Toggle (Default Advantage)",
+			_type: "_ADVANTAGEMODE",
 		},
-		"damagemode": {
-			"name": "Sheet Auto Roll Damage Mode on Import",
-			"default": "Auto Roll",
-			"_type": "_DAMAGEMODE"
+		damagemode: {
+			name: "Sheet Auto Roll Damage Mode on Import",
+			default: "Auto Roll",
+			_type: "_DAMAGEMODE",
 		},
-		"hideActionDescs": {
-			"name": "Hide Action Descriptions on Import",
-			"default": false,
-			"_type": "boolean"
+		hideActionDescs: {
+			name: "Hide Action Descriptions on Import",
+			default: false,
+			_type: "boolean",
 		},
-		"skipSenses": {
-			"name": "Skip Importing Creature Senses",
-			"default": false,
-			"_type": "boolean"
+		skipSenses: {
+			name: "Skip Importing Creature Senses",
+			default: false,
+			_type: "boolean",
 		},
-		"showNpcNames": {
-			"name": "Show NPC Names in Rolls",
-			"default": true,
-			"_type": "boolean"
+		showNpcNames: {
+			name: "Show NPC Names in Rolls",
+			default: true,
+			_type: "boolean",
 		},
-		"dexTiebreaker": {
-			"name": "Add DEX Tiebreaker to Initiative",
-			"default": false,
-			"_type": "boolean"
+		dexTiebreaker: {
+			name: "Add DEX Tiebreaker to Initiative",
+			default: false,
+			_type: "boolean",
 		},
-		"tokenactions": {
-			"name": "Add TokenAction Macros on Import (Actions)",
-			"default": true,
-			"_type": "boolean"
+		tokenactions: {
+			name: "Add TokenAction Macros on Import (Actions)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsTraits": {
-			"name": "Add TokenAction Macros on Import (Traits)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsTraits: {
+			name: "Add TokenAction Macros on Import (Traits)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsSkills": {
-			"name": "Add TokenAction Macros on Import (Skills)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsSkills: {
+			name: "Add TokenAction Macros on Import (Skills)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsPerception": {
-			"name": "Add TokenAction Macros on Import (Perception)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsPerception: {
+			name: "Add TokenAction Macros on Import (Perception)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsSaves": {
-			"name": "Add TokenAction Macros on Import (Saves)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsSaves: {
+			name: "Add TokenAction Macros on Import (Saves)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsInitiative": {
-			"name": "Add TokenAction Macros on Import (Initiative)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsInitiative: {
+			name: "Add TokenAction Macros on Import (Initiative)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsChecks": {
-			"name": "Add TokenAction Macros on Import (Checks)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsChecks: {
+			name: "Add TokenAction Macros on Import (Checks)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsOther": {
-			"name": "Add TokenAction Macros on Import (Other)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsOther: {
+			name: "Add TokenAction Macros on Import (Other)",
+			default: true,
+			_type: "boolean",
 		},
-		"tokenactionsSpells": {
-			"name": "Add TokenAction Macros on Import (Spells)",
-			"default": true,
-			"_type": "boolean"
+		tokenactionsSpells: {
+			name: "Add TokenAction Macros on Import (Spells)",
+			default: true,
+			_type: "boolean",
 		},
-		"namesuffix": {
-			"name": "Append Text to Names on Import",
-			"default": "",
-			"_type": "String"
-		}
+		namesuffix: {
+			name: "Append Text to Names on Import",
+			default: "",
+			_type: "String",
+		},
 	});
 	addConfigOptions("interface", {
-		"_name": "Interface",
-		"_player": true,
-		"customTracker": {
-			"name": "Add Additional Info to Tracker",
-			"default": true,
-			"_type": "boolean"
+		_name: "Interface",
+		_player: true,
+		customTracker: {
+			name: "Add Additional Info to Tracker",
+			default: true,
+			_type: "boolean",
 		},
-		"trackerCol1": {
-			"name": "Tracker Column 1",
-			"default": "HP",
-			"_type": "_FORMULA"
+		trackerCol1: {
+			name: "Tracker Column 1",
+			default: "HP",
+			_type: "_FORMULA",
 		},
-		"trackerCol2": {
-			"name": "Tracker Column 2",
-			"default": "AC",
-			"_type": "_FORMULA"
+		trackerCol2: {
+			name: "Tracker Column 2",
+			default: "AC",
+			_type: "_FORMULA",
 		},
-		"trackerCol3": {
-			"name": "Tracker Column 3",
-			"default": "PP",
-			"_type": "_FORMULA"
+		trackerCol3: {
+			name: "Tracker Column 3",
+			default: "PP",
+			_type: "_FORMULA",
 		},
-		"trackerSheetButton": {
-			"name": "Add Sheet Button To Tracker",
-			"default": false,
-			"_type": "boolean"
+		trackerSheetButton: {
+			name: "Add Sheet Button To Tracker",
+			default: false,
+			_type: "boolean",
 		},
-		"minifyTracker": {
-			"name": "Shrink Initiative Tracker Text",
-			"default": false,
-			"_type": "boolean"
+		minifyTracker: {
+			name: "Shrink Initiative Tracker Text",
+			default: false,
+			_type: "boolean",
 		},
-		"showDifficulty": {
-			"name": "Show Difficulty in Tracker",
-			"default": true,
-			"_type": "boolean"
+		showDifficulty: {
+			name: "Show Difficulty in Tracker",
+			default: true,
+			_type: "boolean",
 		},
-		"emoji": {
-			"name": "Add Emoji Replacement to Chat",
-			"default": true,
-			"_type": "boolean",
-			"_player": true
+		emoji: {
+			name: "Add Emoji Replacement to Chat",
+			default: true,
+			_type: "boolean",
+			_player: true,
 		},
-		"showCustomArtPreview": {
-			"name": "Show Custom Art Previews",
-			"default": true,
-			"_type": "boolean"
-		}
+		showCustomArtPreview: {
+			name: "Show Custom Art Previews",
+			default: true,
+			_type: "boolean",
+		},
 	});
 
 	d20plus.sheet = "ogl";
@@ -439,39 +453,52 @@ const betteR205etoolsMain = function () {
 	d20plus.adventures = {};
 	d20plus.optionalfeatures = {};
 
-	d20plus.advantageModes = ["Toggle (Default Advantage)", "Toggle", "Toggle (Default Disadvantage)", "Always", "Query", "Never"];
-	d20plus.whisperModes = ["Toggle (Default GM)", "Toggle (Default Public)", "Always", "Query", "Never"];
+	d20plus.advantageModes = [
+		"Toggle (Default Advantage)",
+		"Toggle",
+		"Toggle (Default Disadvantage)",
+		"Always",
+		"Query",
+		"Never",
+	];
+	d20plus.whisperModes = [
+		"Toggle (Default GM)",
+		"Toggle (Default Public)",
+		"Always",
+		"Query",
+		"Never",
+	];
 	d20plus.damageModes = ["Auto Roll", "Don't Auto Roll"];
 
 	d20plus.formulas = {
 		_options: ["--Empty--", "AC", "HP", "Passive Perception", "Spell DC"],
-		"ogl": {
-			"cr": "@{npc_challenge}",
-			"ac": "@{ac}",
-			"npcac": "@{npc_ac}",
-			"hp": "@{hp}",
-			"pp": "@{passive_wisdom}",
-			"macro": "",
-			"spellDc": "@{spell_save_dc}"
+		ogl: {
+			cr: "@{npc_challenge}",
+			ac: "@{ac}",
+			npcac: "@{npc_ac}",
+			hp: "@{hp}",
+			pp: "@{passive_wisdom}",
+			macro: "",
+			spellDc: "@{spell_save_dc}",
 		},
-		"community": {
-			"cr": "@{npc_challenge}",
-			"ac": "@{AC}",
-			"npcac": "@{AC}",
-			"hp": "@{HP}",
-			"pp": "10 + @{perception}",
-			"macro": "",
-			"spellDc": "@{spell_save_dc}"
+		community: {
+			cr: "@{npc_challenge}",
+			ac: "@{AC}",
+			npcac: "@{AC}",
+			hp: "@{HP}",
+			pp: "10 + @{perception}",
+			macro: "",
+			spellDc: "@{spell_save_dc}",
 		},
-		"shaped": {
-			"cr": "@{challenge}",
-			"ac": "@{AC}",
-			"npcac": "@{AC}",
-			"hp": "@{HP}",
-			"pp": "@{repeating_skill_$11_passive}",
-			"macro": "shaped_statblock",
-			"spellDc": "@{spell_save_dc}"
-		}
+		shaped: {
+			cr: "@{challenge}",
+			ac: "@{AC}",
+			npcac: "@{AC}",
+			hp: "@{HP}",
+			pp: "@{repeating_skill_$11_passive}",
+			macro: "shaped_statblock",
+			spellDc: "@{spell_save_dc}",
+		},
 	};
 
 	if (!d20plus.ut.isUseSharedJs()) {
@@ -480,46 +507,63 @@ const betteR205etoolsMain = function () {
 	}
 
 	d20plus.json = [
-		{name: "class index", url: `${CLASS_DATA_DIR}index.json`},
-		{name: "spell index", url: `${SPELL_DATA_DIR}index.json`},
-		{name: "spell metadata", url: SPELL_META_URL},
-		{name: "bestiary index", url: `${MONSTER_DATA_DIR}index.json`},
-		{name: "bestiary fluff index", url: `${MONSTER_DATA_DIR}fluff-index.json`},
-		{name: "bestiary metadata", url: `${MONSTER_DATA_DIR}legendarygroups.json`},
-		{name: "adventures index", url: `${DATA_URL}adventures.json`},
-		{name: "base items", url: `${DATA_URL}items-base.json`},
-		{name: "item modifiers", url: `${DATA_URL}roll20-items.json`},
+		{ name: "class index", url: `${CLASS_DATA_DIR}index.json` },
+		{ name: "spell index", url: `${SPELL_DATA_DIR}index.json` },
+		{ name: "spell metadata", url: SPELL_META_URL },
+		{ name: "bestiary index", url: `${MONSTER_DATA_DIR}index.json` },
+		{
+			name: "bestiary fluff index",
+			url: `${MONSTER_DATA_DIR}fluff-index.json`,
+		},
+		{
+			name: "bestiary metadata",
+			url: `${MONSTER_DATA_DIR}legendarygroups.json`,
+		},
+		{ name: "adventures index", url: `${DATA_URL}adventures.json` },
+		{ name: "base items", url: `${DATA_URL}items-base.json` },
+		{ name: "item modifiers", url: `${DATA_URL}roll20-items.json` },
 	];
 
 	// add JSON index/metadata
 	d20plus.pAddJson = async function () {
 		d20plus.ut.log("Load JSON");
 
-		await Promise.all(d20plus.json.map(async it => {
-			const data = await DataUtil.loadJSON(it.url);
+		await Promise.all(
+			d20plus.json.map(async (it) => {
+				const data = await DataUtil.loadJSON(it.url);
 
-			if (it.name === "class index") classDataUrls = data;
-			else if (it.name === "spell index") spellDataUrls = data;
-			else if (it.name === "spell metadata") spellMetaData = data;
-			else if (it.name === "bestiary index") monsterDataUrls = data;
-			else if (it.name === "bestiary fluff index") monsterFluffDataUrls = data;
-			else if (it.name === "bestiary metadata") monsterMetadata = data;
-			else if (it.name === "adventures index") adventureMetadata = data;
-			else if (it.name === "base items") {
-				data.itemProperty.forEach(p => Renderer.item._addProperty(p));
-				data.itemType.forEach(t => Renderer.item._addType(t));
-			}
-			else if (it.name === "item modifiers") itemMetadata = data;
-			else throw new Error(`Unhandled data from JSON ${it.name} (${it.url})`);
+				if (it.name === "class index") classDataUrls = data;
+				else if (it.name === "spell index") spellDataUrls = data;
+				else if (it.name === "spell metadata") spellMetaData = data;
+				else if (it.name === "bestiary index") monsterDataUrls = data;
+				else if (it.name === "bestiary fluff index")
+					monsterFluffDataUrls = data;
+				else if (it.name === "bestiary metadata")
+					monsterMetadata = data;
+				else if (it.name === "adventures index")
+					adventureMetadata = data;
+				else if (it.name === "base items") {
+					data.itemProperty.forEach((p) =>
+						Renderer.item._addProperty(p)
+					);
+					data.itemType.forEach((t) => Renderer.item._addType(t));
+				} else if (it.name === "item modifiers") itemMetadata = data;
+				else
+					throw new Error(
+						`Unhandled data from JSON ${it.name} (${it.url})`
+					);
 
-			d20plus.ut.log(`JSON [${it.name}] Loaded`);
-		}));
+				d20plus.ut.log(`JSON [${it.name}] Loaded`);
+			})
+		);
 	};
 
 	d20plus.handleConfigChange = function (isSyncingPlayer) {
 		if (!isSyncingPlayer) d20plus.ut.log("Applying config");
 		if (window.is_gm) {
-			d20plus.setInitiativeShrink(d20plus.cfg.get("interface", "minifyTracker"));
+			d20plus.setInitiativeShrink(
+				d20plus.cfg.get("interface", "minifyTracker")
+			);
 			d20.Campaign.initiativewindow.rebuildInitiativeList();
 			d20plus.updateDifficulty();
 			if (d20plus.art.refreshList) d20plus.art.refreshList();
@@ -531,9 +575,15 @@ const betteR205etoolsMain = function () {
 		const bars = [
 			d20plus.cfg.get("token", "bar1"),
 			d20plus.cfg.get("token", "bar2"),
-			d20plus.cfg.get("token", "bar3")
+			d20plus.cfg.get("token", "bar3"),
 		];
-		return bars[0] === "npc_hpbase" ? 1 : bars[1] === "npc_hpbase" ? 2 : bars[2] === "npc_hpbase" ? 3 : null;
+		return bars[0] === "npc_hpbase"
+			? 1
+			: bars[1] === "npc_hpbase"
+			? 2
+			: bars[2] === "npc_hpbase"
+			? 3
+			: null;
 	};
 
 	// Bind Graphics Add on page
@@ -552,29 +602,74 @@ const betteR205etoolsMain = function () {
 						var barsList = ["bar1", "bar2", "bar3"];
 						$.each(barsList, (i, barName) => {
 							// PC config keys are suffixed "_pc"
-							const confVal = d20plus.cfg.get("token", `${barName}${isNPC ? "" : "_pc"}`);
+							const confVal = d20plus.cfg.get(
+								"token",
+								`${barName}${isNPC ? "" : "_pc"}`
+							);
 							if (confVal) {
-								const charAttr = character.attribs.find(a => a.get("name").toLowerCase() == confVal);
+								const charAttr = character.attribs.find(
+									(a) =>
+										a.get("name").toLowerCase() == confVal
+								);
 								if (charAttr) {
-									e.attributes[barName + "_value"] = charAttr.get("current");
-									if (d20plus.cfg.has("token", barName + "_max")) {
-										if (d20plus.cfg.get("token", barName + "_max") && !isNPC && confVal === "hp") { // player HP is current; need to set max to max
-											e.attributes[barName + "_max"] = charAttr.get("max");
+									e.attributes[barName + "_value"] =
+										charAttr.get("current");
+									if (
+										d20plus.cfg.has(
+											"token",
+											barName + "_max"
+										)
+									) {
+										if (
+											d20plus.cfg.get(
+												"token",
+												barName + "_max"
+											) &&
+											!isNPC &&
+											confVal === "hp"
+										) {
+											// player HP is current; need to set max to max
+											e.attributes[barName + "_max"] =
+												charAttr.get("max");
 										} else {
 											if (isNPC) {
 												// TODO: Setting a value to empty/null does not overwrite existing values on the token.
 												// setting a specific value does. Must figure this out.
-												e.attributes[barName + "_max"] = d20plus.cfg.get("token", barName + "_max") ? charAttr.get("current") : "";
+												e.attributes[barName + "_max"] =
+													d20plus.cfg.get(
+														"token",
+														barName + "_max"
+													)
+														? charAttr.get(
+																"current"
+														  )
+														: "";
 											} else {
 												// preserve default token for player tokens
-												if (d20plus.cfg.get("token", barName + "_max")) {
-													e.attributes[barName + "_max"] = charAttr.get("current");
+												if (
+													d20plus.cfg.get(
+														"token",
+														barName + "_max"
+													)
+												) {
+													e.attributes[
+														barName + "_max"
+													] = charAttr.get("current");
 												}
 											}
 										}
 									}
-									if (d20plus.cfg.has("token", barName + "_reveal")) {
-										e.attributes["showplayers_" + barName] = d20plus.cfg.get("token", barName + "_reveal");
+									if (
+										d20plus.cfg.has(
+											"token",
+											barName + "_reveal"
+										)
+									) {
+										e.attributes["showplayers_" + barName] =
+											d20plus.cfg.get(
+												"token",
+												barName + "_reveal"
+											);
 									}
 								}
 							}
@@ -584,43 +679,82 @@ const betteR205etoolsMain = function () {
 						if (isNPC) {
 							// Set Nametag
 							if (d20plus.cfg.has("token", "name")) {
-								e.attributes["showname"] = d20plus.cfg.get("token", "name");
+								e.attributes["showname"] = d20plus.cfg.get(
+									"token",
+									"name"
+								);
 								if (d20plus.cfg.has("token", "name_reveal")) {
-									e.attributes["showplayers_name"] = d20plus.cfg.get("token", "name_reveal");
+									e.attributes["showplayers_name"] =
+										d20plus.cfg.get("token", "name_reveal");
 								}
 							}
 
 							// Roll HP
 							// TODO: npc_hpbase appears to be hardcoded here? Refactor for NPC_SHEET_ATTRIBUTES?
-							if ((d20plus.cfg.get("token", "rollHP") || d20plus.cfg.get("token", "maximiseHp")) && d20plus.cfg.getCfgKey("token", "npc_hpbase")) {
+							if (
+								(d20plus.cfg.get("token", "rollHP") ||
+									d20plus.cfg.get("token", "maximiseHp")) &&
+								d20plus.cfg.getCfgKey("token", "npc_hpbase")
+							) {
 								var hpf = character.attribs.find(function (a) {
-									return a.get("name").toLowerCase() == NPC_SHEET_ATTRIBUTES["npc_hpformula"][d20plus.sheet];
+									return (
+										a.get("name").toLowerCase() ==
+										NPC_SHEET_ATTRIBUTES["npc_hpformula"][
+											d20plus.sheet
+										]
+									);
 								});
-								var barName = d20plus.cfg.getCfgKey("token", "npc_hpbase");
+								var barName = d20plus.cfg.getCfgKey(
+									"token",
+									"npc_hpbase"
+								);
 
 								if (hpf && hpf.get("current")) {
 									var hpformula = hpf.get("current");
-									if (d20plus.cfg.get("token", "maximiseHp")) {
-										const maxSum = hpformula.replace("d", "*");
+									if (
+										d20plus.cfg.get("token", "maximiseHp")
+									) {
+										const maxSum = hpformula.replace(
+											"d",
+											"*"
+										);
 										try {
 											const max = eval(maxSum);
 											if (!isNaN(max)) {
-												e.attributes[barName + "_value"] = max;
-												e.attributes[barName + "_max"] = max;
+												e.attributes[
+													barName + "_value"
+												] = max;
+												e.attributes[barName + "_max"] =
+													max;
 											}
 										} catch (error) {
-											d20plus.ut.log("Error Maximising HP");
+											d20plus.ut.log(
+												"Error Maximising HP"
+											);
 											console.log(error);
 										}
 									} else {
-										d20plus.ut.randomRoll(hpformula, function (result) {
-											e.attributes[barName + "_value"] = result.total;
-											e.attributes[barName + "_max"] = result.total;
-											d20plus.ut.log("Rolled HP for [" + character.get("name") + "]");
-										}, function (error) {
-											d20plus.ut.log("Error Rolling HP Dice");
-											console.log(error);
-										});
+										d20plus.ut.randomRoll(
+											hpformula,
+											function (result) {
+												e.attributes[
+													barName + "_value"
+												] = result.total;
+												e.attributes[barName + "_max"] =
+													result.total;
+												d20plus.ut.log(
+													"Rolled HP for [" +
+														character.get("name") +
+														"]"
+												);
+											},
+											function (error) {
+												d20plus.ut.log(
+													"Error Rolling HP Dice"
+												);
+												console.log(error);
+											}
+										);
 									}
 								}
 							}
@@ -634,9 +768,9 @@ const betteR205etoolsMain = function () {
 		}
 	};
 
-// bind token HP to initiative tracker window HP field
+	// bind token HP to initiative tracker window HP field
 	d20plus.bindToken = function (token) {
-		function getInitTrackerToken () {
+		function getInitTrackerToken() {
 			const $window = $("#initiativewindow");
 			if (!$window.length) return [];
 			return $window.find(`li.token`).filter((i, e) => {
@@ -647,17 +781,22 @@ const betteR205etoolsMain = function () {
 		const $initToken = getInitTrackerToken();
 		if (!$initToken.length) return;
 		const $iptHp = $initToken.find(`.hp.editable`);
-		const npcFlag = token.character ? token.character.attribs.find((a) => {
-			return a.get("name").toLowerCase() === "npc";
-		}) : null;
+		const npcFlag = token.character
+			? token.character.attribs.find((a) => {
+					return a.get("name").toLowerCase() === "npc";
+			  })
+			: null;
 		// if there's a HP column enabled
 		if ($iptHp.length) {
 			let toBind;
-			if (!token.character || npcFlag && npcFlag.get("current") == "1") {
+			if (
+				!token.character ||
+				(npcFlag && npcFlag.get("current") == "1")
+			) {
 				const hpBar = d20plus.getCfgHpBarNumber();
 				// and a HP bar chosen
 				if (hpBar) {
-					$iptHp.text(token.attributes[`bar${hpBar}_value`])
+					$iptHp.text(token.attributes[`bar${hpBar}_value`]);
 				}
 
 				toBind = (token, changes) => {
@@ -678,12 +817,17 @@ const betteR205etoolsMain = function () {
 					if (!$initToken.length) return;
 					const $iptHp = $initToken.find(`.hp.editable`);
 					if ($iptHp) {
-						$iptHp.text(token.character.autoCalcFormula(d20plus.formulas[d20plus.sheet].hp));
+						$iptHp.text(
+							token.character.autoCalcFormula(
+								d20plus.formulas[d20plus.sheet].hp
+							)
+						);
 					}
-				}
+				};
 			}
 			// clean up old handler
-			if (d20plus.tokenBindings[token.id]) token.off("change", d20plus.tokenBindings[token.id]);
+			if (d20plus.tokenBindings[token.id])
+				token.off("change", d20plus.tokenBindings[token.id]);
 			// add new handler
 			d20plus.tokenBindings[token.id] = toBind;
 			token.on("change", toBind);
@@ -691,7 +835,7 @@ const betteR205etoolsMain = function () {
 	};
 	d20plus.tokenBindings = {};
 
-// Determine difficulty of current encounter (iniativewindow)
+	// Determine difficulty of current encounter (iniativewindow)
 	d20plus.getDifficulty = function () {
 		var difficulty = "Unknown";
 		var partyXPThreshold = [0, 0, 0, 0];
@@ -708,11 +852,18 @@ const betteR205etoolsMain = function () {
 							var npc = char.attribs.find(function (a) {
 								return a.get("name").toLowerCase() === "npc";
 							});
-							if (npc && (npc.get("current") === 1 || npc.get("current") === "1")) { // just in casies
+							if (
+								npc &&
+								(npc.get("current") === 1 ||
+									npc.get("current") === "1")
+							) {
+								// just in casies
 								npcs.push(char);
 							} else {
 								var level = char.attribs.find(function (a) {
-									return a.get("name").toLowerCase() === "level";
+									return (
+										a.get("name").toLowerCase() === "level"
+									);
 								});
 								// Can't determine difficulty without level
 								if (!level || partyXPThreshold === null) {
@@ -720,7 +871,11 @@ const betteR205etoolsMain = function () {
 									return;
 								}
 								// Total party threshold
-								for (i = 0; i < partyXPThreshold.length; i++) partyXPThreshold[i] += Parser.levelToXpThreshold(level.get("current"))[i];
+								for (i = 0; i < partyXPThreshold.length; i++)
+									partyXPThreshold[i] +=
+										Parser.levelToXpThreshold(
+											level.get("current")
+										)[i];
 								players.push(players.length + 1);
 							}
 						}
@@ -741,8 +896,7 @@ const betteR205etoolsMain = function () {
 				else if (len < 7) index = 2;
 				else if (len < 11) index = 3;
 				else if (len < 15) index = 4;
-				else
-					index = 5;
+				else index = 5;
 				// Adjust for smaller parties
 				if (players.length < 3) index++;
 				// Set multiplier
@@ -752,7 +906,8 @@ const betteR205etoolsMain = function () {
 					var cr = v.attribs.find(function (a) {
 						return a.get("name").toLowerCase() === "npc_challenge";
 					});
-					if (cr && cr.get("current")) xp += parseInt(Parser.crToXpNumber(cr.get("current")));
+					if (cr && cr.get("current"))
+						xp += parseInt(Parser.crToXpNumber(cr.get("current")));
 				});
 				// Encounter's adjusted xp
 				adjustedxp = xp * multiplier;
@@ -761,7 +916,8 @@ const betteR205etoolsMain = function () {
 				// Determine difficulty
 				if (adjustedxp < partyXPThreshold[0]) difficulty = "Trivial";
 				else if (adjustedxp < partyXPThreshold[1]) difficulty = "Easy";
-				else if (adjustedxp < partyXPThreshold[2]) difficulty = "Medium";
+				else if (adjustedxp < partyXPThreshold[2])
+					difficulty = "Medium";
 				else if (adjustedxp < partyXPThreshold[3]) difficulty = "Hard";
 				else difficulty = "Deadly";
 			}
@@ -776,41 +932,63 @@ const betteR205etoolsMain = function () {
 	};
 
 	d20plus.addCustomHTML = function () {
-		function populateDropdown (dropdownId, inputFieldId, baseUrl, srcUrlObject, defaultSel, brewProps) {
-			const defaultUrl = defaultSel ? d20plus.formSrcUrl(baseUrl, srcUrlObject[defaultSel]) : "";
+		function populateDropdown(
+			dropdownId,
+			inputFieldId,
+			baseUrl,
+			srcUrlObject,
+			defaultSel,
+			brewProps
+		) {
+			const defaultUrl = defaultSel
+				? d20plus.formSrcUrl(baseUrl, srcUrlObject[defaultSel])
+				: "";
 			$(inputFieldId).val(defaultUrl);
 			const dropdown = $(dropdownId);
 			$.each(Object.keys(srcUrlObject), function (i, src) {
-				dropdown.append($('<option>', {
-					value: d20plus.formSrcUrl(baseUrl, srcUrlObject[src]),
-					text: brewProps.includes("class") ? src.uppercaseFirst() : Parser.sourceJsonToFullCompactPrefix(src)
-				}));
+				dropdown.append(
+					$("<option>", {
+						value: d20plus.formSrcUrl(baseUrl, srcUrlObject[src]),
+						text: brewProps.includes("class")
+							? src.uppercaseFirst()
+							: Parser.sourceJsonToFullCompactPrefix(src),
+					})
+				);
 			});
-			dropdown.append($('<option>', {
-				value: "",
-				text: "Custom"
-			}));
+			dropdown.append(
+				$("<option>", {
+					value: "",
+					text: "Custom",
+				})
+			);
 
 			const dataList = [];
 			const seenPaths = new Set();
-			brewProps.forEach(prop => {
-				Object.entries(brewIndex[prop] || {})
-					.forEach(([path, dir]) => {
-						if (seenPaths.has(path)) return;
-						seenPaths.add(path);
-						dataList.push({
-							download_url: DataUtil.brew.getFileUrl(path),
-							path,
-							name: path.split("/").slice(1).join("/")
-						});
+			brewProps.forEach((prop) => {
+				Object.entries(brewIndex[prop] || {}).forEach(([path, dir]) => {
+					if (seenPaths.has(path)) return;
+					seenPaths.add(path);
+					dataList.push({
+						download_url: DataUtil.brew.getFileUrl(path),
+						path,
+						name: path.split("/").slice(1).join("/"),
 					});
+				});
 			});
-			dataList.sort((a, b) => SortUtil.ascSortLower(a.name, b.name)).forEach(it => {
-				dropdown.append($('<option>', {
-					value: `${it.download_url}${d20plus.ut.getAntiCacheSuffix()}`,
-					text: `Homebrew: ${it.name.trim().replace(/\.json$/i, "")}`
-				}));
-			});
+			dataList
+				.sort((a, b) => SortUtil.ascSortLower(a.name, b.name))
+				.forEach((it) => {
+					dropdown.append(
+						$("<option>", {
+							value: `${
+								it.download_url
+							}${d20plus.ut.getAntiCacheSuffix()}`,
+							text: `Homebrew: ${it.name
+								.trim()
+								.replace(/\.json$/i, "")}`,
+						})
+					);
+				});
 
 			dropdown.val(defaultUrl);
 			dropdown.change(function () {
@@ -818,44 +996,63 @@ const betteR205etoolsMain = function () {
 			});
 		}
 
-		function populateBasicDropdown (dropdownId, inputFieldId, defaultSel, brewProps, addForPlayers) {
-			function doPopulate (dropdownId, inputFieldId) {
+		function populateBasicDropdown(
+			dropdownId,
+			inputFieldId,
+			defaultSel,
+			brewProps,
+			addForPlayers
+		) {
+			function doPopulate(dropdownId, inputFieldId) {
 				const $sel = $(dropdownId);
 				const existingItems = !!$sel.find(`option`).length;
 				if (defaultSel) {
 					$(inputFieldId).val(defaultSel);
-					$sel.append($('<option>', {
-						value: defaultSel,
-						text: "Official Sources"
-					}));
+					$sel.append(
+						$("<option>", {
+							value: defaultSel,
+							text: "Official Sources",
+						})
+					);
 				}
 				if (!existingItems) {
-					$sel.append($('<option>', {
-						value: "",
-						text: "Custom"
-					}));
+					$sel.append(
+						$("<option>", {
+							value: "",
+							text: "Custom",
+						})
+					);
 				}
 
 				const dataList = [];
 				const seenPaths = new Set();
-				brewProps.forEach(prop => {
-					Object.entries(brewIndex[prop] || {})
-						.forEach(([path, dir]) => {
+				brewProps.forEach((prop) => {
+					Object.entries(brewIndex[prop] || {}).forEach(
+						([path, dir]) => {
 							if (seenPaths.has(path)) return;
 							seenPaths.add(path);
 							dataList.push({
 								download_url: DataUtil.brew.getFileUrl(path),
 								path,
-								name: path.split("/").slice(1).join("/")
+								name: path.split("/").slice(1).join("/"),
 							});
-						});
+						}
+					);
 				});
-				dataList.sort((a, b) => SortUtil.ascSortLower(a.name, b.name)).forEach(it => {
-					$sel.append($('<option>', {
-						value: `${it.download_url}${d20plus.ut.getAntiCacheSuffix()}`,
-						text: `Homebrew: ${it.name.trim().replace(/\.json$/i, "")}`
-					}));
-				});
+				dataList
+					.sort((a, b) => SortUtil.ascSortLower(a.name, b.name))
+					.forEach((it) => {
+						$sel.append(
+							$("<option>", {
+								value: `${
+									it.download_url
+								}${d20plus.ut.getAntiCacheSuffix()}`,
+								text: `Homebrew: ${it.name
+									.trim()
+									.replace(/\.json$/i, "")}`,
+							})
+						);
+					});
 
 				$sel.val(defaultSel);
 				$sel.change(function () {
@@ -864,7 +1061,8 @@ const betteR205etoolsMain = function () {
 			}
 
 			doPopulate(dropdownId, inputFieldId);
-			if (addForPlayers) doPopulate(`${dropdownId}-player`, `${inputFieldId}-player`);
+			if (addForPlayers)
+				doPopulate(`${dropdownId}-player`, `${inputFieldId}-player`);
 		}
 
 		const $body = $("body");
@@ -886,46 +1084,90 @@ const betteR205etoolsMain = function () {
 			$wrpSettings.append(d20plus.settingsHtmlPtOptfeatures);
 			const $ptAdventures = $(d20plus.settingsHtmlPtAdventures);
 			$wrpSettings.append($ptAdventures);
-			$ptAdventures.find(`.Vetools-module-tool-open`).click(() => d20plus.tool.get('MODULES').openFn());
+			$ptAdventures
+				.find(`.Vetools-module-tool-open`)
+				.click(() => d20plus.tool.get("MODULES").openFn());
 			$wrpSettings.append(d20plus.settingsHtmlPtImportFooter);
 
-			$("#mysettings > .content a#button-monsters-load").on(window.mousedowntype, d20plus.monsters.button);
-			$("#mysettings > .content a#button-monsters-load-all").on(window.mousedowntype, d20plus.monsters.buttonAll);
-			$("#mysettings > .content a#import-objects-load").on(window.mousedowntype, d20plus.objects.button);
-			$("#mysettings > .content a#button-adventures-load").on(window.mousedowntype, d20plus.adventures.button);
+			$("#mysettings > .content a#button-monsters-load").on(
+				window.mousedowntype,
+				d20plus.monsters.button
+			);
+			$("#mysettings > .content a#button-monsters-load-all").on(
+				window.mousedowntype,
+				d20plus.monsters.buttonAll
+			);
+			$("#mysettings > .content a#import-objects-load").on(
+				window.mousedowntype,
+				d20plus.objects.button
+			);
+			$("#mysettings > .content a#button-adventures-load").on(
+				window.mousedowntype,
+				d20plus.adventures.button
+			);
 
-			$("#mysettings > .content a#bind-drop-locations").on(window.mousedowntype, d20plus.bindDropLocations);
-			$("#initiativewindow .characterlist").before(d20plus.initiativeHeaders);
+			$("#mysettings > .content a#bind-drop-locations").on(
+				window.mousedowntype,
+				d20plus.bindDropLocations
+			);
+			$("#initiativewindow .characterlist").before(
+				d20plus.initiativeHeaders
+			);
 
 			d20plus.setTurnOrderTemplate();
 			d20.Campaign.initiativewindow.rebuildInitiativeList();
 			d20plus.hpAllowEdit();
-			d20.Campaign.initiativewindow.model.on("change:turnorder", function () {
-				d20plus.updateDifficulty();
-			});
+			d20.Campaign.initiativewindow.model.on(
+				"change:turnorder",
+				function () {
+					d20plus.updateDifficulty();
+				}
+			);
 			d20plus.updateDifficulty();
 
-			populateDropdown("#button-monsters-select", "#import-monster-url", MONSTER_DATA_DIR, monsterDataUrls, "MM", ["monster"]);
-			populateBasicDropdown("#button-objects-select", "#import-objects-url", OBJECT_DATA_URL, ["object"]);
+			populateDropdown(
+				"#button-monsters-select",
+				"#import-monster-url",
+				MONSTER_DATA_DIR,
+				monsterDataUrls,
+				"MM",
+				["monster"]
+			);
+			populateBasicDropdown(
+				"#button-objects-select",
+				"#import-objects-url",
+				OBJECT_DATA_URL,
+				["object"]
+			);
 
 			populateAdventuresDropdown();
 
-			function populateAdventuresDropdown () {
-				const defaultAdvUrl = d20plus.formSrcUrl(ADVENTURE_DATA_DIR, "adventure-lmop.json");
+			function populateAdventuresDropdown() {
+				const defaultAdvUrl = d20plus.formSrcUrl(
+					ADVENTURE_DATA_DIR,
+					"adventure-lmop.json"
+				);
 				const $iptUrl = $("#import-adventures-url");
 				$iptUrl.val(defaultAdvUrl);
 				$iptUrl.data("id", "lmop");
 				const $sel = $("#button-adventures-select");
-				adventureMetadata.adventure.forEach(a => {
-					$sel.append($('<option>', {
-						value: d20plus.formSrcUrl(ADVENTURE_DATA_DIR, `adventure-${a.id.toLowerCase()}.json|${a.id}`),
-						text: a.name
-					}));
+				adventureMetadata.adventure.forEach((a) => {
+					$sel.append(
+						$("<option>", {
+							value: d20plus.formSrcUrl(
+								ADVENTURE_DATA_DIR,
+								`adventure-${a.id.toLowerCase()}.json|${a.id}`
+							),
+							text: a.name,
+						})
+					);
 				});
-				$sel.append($('<option>', {
-					value: "",
-					text: "Custom"
-				}));
+				$sel.append(
+					$("<option>", {
+						value: "",
+						text: "Custom",
+					})
+				);
 				$sel.val(defaultAdvUrl);
 				$sel.change(() => {
 					const [url, id] = $sel.val().split("|");
@@ -935,18 +1177,42 @@ const betteR205etoolsMain = function () {
 			}
 
 			// import
-			$("a#button-spells-load").on(window.mousedowntype, () => d20plus.spells.button());
-			$("a#button-spells-load-all").on(window.mousedowntype, () => d20plus.spells.buttonAll());
-			$("a#import-psionics-load").on(window.mousedowntype, () => d20plus.psionics.button());
-			$("a#import-items-load").on(window.mousedowntype, () => d20plus.items.button());
-			$("a#import-races-load").on(window.mousedowntype, () => d20plus.races.button());
-			$("a#import-feats-load").on(window.mousedowntype, () => d20plus.feats.button());
-			$("a#button-classes-load").on(window.mousedowntype, () => d20plus.classes.button());
-			$("a#button-classes-load-all").on(window.mousedowntype, () => d20plus.classes.buttonAll());
-			$("a#import-subclasses-load").on(window.mousedowntype, () => d20plus.subclasses.button());
-			$("a#import-backgrounds-load").on(window.mousedowntype, () => d20plus.backgrounds.button());
-			$("a#import-optionalfeatures-load").on(window.mousedowntype, () => d20plus.optionalfeatures.button());
-			$("select#import-mode-select").on("change", () => d20plus.importer.importModeSwitch());
+			$("a#button-spells-load").on(window.mousedowntype, () =>
+				d20plus.spells.button()
+			);
+			$("a#button-spells-load-all").on(window.mousedowntype, () =>
+				d20plus.spells.buttonAll()
+			);
+			$("a#import-psionics-load").on(window.mousedowntype, () =>
+				d20plus.psionics.button()
+			);
+			$("a#import-items-load").on(window.mousedowntype, () =>
+				d20plus.items.button()
+			);
+			$("a#import-races-load").on(window.mousedowntype, () =>
+				d20plus.races.button()
+			);
+			$("a#import-feats-load").on(window.mousedowntype, () =>
+				d20plus.feats.button()
+			);
+			$("a#button-classes-load").on(window.mousedowntype, () =>
+				d20plus.classes.button()
+			);
+			$("a#button-classes-load-all").on(window.mousedowntype, () =>
+				d20plus.classes.buttonAll()
+			);
+			$("a#import-subclasses-load").on(window.mousedowntype, () =>
+				d20plus.subclasses.button()
+			);
+			$("a#import-backgrounds-load").on(window.mousedowntype, () =>
+				d20plus.backgrounds.button()
+			);
+			$("a#import-optionalfeatures-load").on(window.mousedowntype, () =>
+				d20plus.optionalfeatures.button()
+			);
+			$("select#import-mode-select").on("change", () =>
+				d20plus.importer.importModeSwitch()
+			);
 		} else {
 			// player-only HTML if required
 		}
@@ -980,66 +1246,179 @@ const betteR205etoolsMain = function () {
 				<hr></hr>
 			</div>`);
 
-		$wrpPlayerImport.find("#b20-temp-import-open-button").on("click", () => {
-			$winPlayer.dialog("open");
-		});
+		$wrpPlayerImport
+			.find("#b20-temp-import-open-button")
+			.on("click", () => {
+				$winPlayer.dialog("open");
+			});
 
 		$(`#journal`).prepend($wrpPlayerImport);
 
 		// SHARED WINDOWS/BUTTONS
 		// import
-		$("a#button-spells-load-player").on(window.mousedowntype, () => d20plus.spells.button(true));
-		$("a#button-spells-load-all-player").on(window.mousedowntype, () => d20plus.spells.buttonAll(true));
-		$("a#import-psionics-load-player").on(window.mousedowntype, () => d20plus.psionics.button(true));
-		$("a#import-items-load-player").on(window.mousedowntype, () => d20plus.items.button(true));
-		$("a#import-races-load-player").on(window.mousedowntype, () => d20plus.races.button(true));
-		$("a#import-feats-load-player").on(window.mousedowntype, () => d20plus.feats.button(true));
-		$("a#button-classes-load-player").on(window.mousedowntype, () => d20plus.classes.button(true));
-		$("a#button-classes-load-all-player").on(window.mousedowntype, () => d20plus.classes.buttonAll(true));
-		$("a#import-subclasses-load-player").on(window.mousedowntype, () => d20plus.subclasses.button(true));
-		$("a#import-backgrounds-load-player").on(window.mousedowntype, () => d20plus.backgrounds.button(true));
-		$("a#import-optionalfeatures-load-player").on(window.mousedowntype, () => d20plus.optionalfeatures.button(true));
-		$("select#import-mode-select-player").on("change", () => d20plus.importer.importModeSwitch());
+		$("a#button-spells-load-player").on(window.mousedowntype, () =>
+			d20plus.spells.button(true)
+		);
+		$("a#button-spells-load-all-player").on(window.mousedowntype, () =>
+			d20plus.spells.buttonAll(true)
+		);
+		$("a#import-psionics-load-player").on(window.mousedowntype, () =>
+			d20plus.psionics.button(true)
+		);
+		$("a#import-items-load-player").on(window.mousedowntype, () =>
+			d20plus.items.button(true)
+		);
+		$("a#import-races-load-player").on(window.mousedowntype, () =>
+			d20plus.races.button(true)
+		);
+		$("a#import-feats-load-player").on(window.mousedowntype, () =>
+			d20plus.feats.button(true)
+		);
+		$("a#button-classes-load-player").on(window.mousedowntype, () =>
+			d20plus.classes.button(true)
+		);
+		$("a#button-classes-load-all-player").on(window.mousedowntype, () =>
+			d20plus.classes.buttonAll(true)
+		);
+		$("a#import-subclasses-load-player").on(window.mousedowntype, () =>
+			d20plus.subclasses.button(true)
+		);
+		$("a#import-backgrounds-load-player").on(window.mousedowntype, () =>
+			d20plus.backgrounds.button(true)
+		);
+		$("a#import-optionalfeatures-load-player").on(
+			window.mousedowntype,
+			() => d20plus.optionalfeatures.button(true)
+		);
+		$("select#import-mode-select-player").on("change", () =>
+			d20plus.importer.importModeSwitch()
+		);
 
 		$body.append(d20plus.importDialogHtml);
 		$body.append(d20plus.importListHTML);
 		$body.append(d20plus.importListPropsHTML);
 		$("#d20plus-import").dialog({
 			autoOpen: false,
-			resizable: false
+			resizable: false,
 		});
 		$("#d20plus-importlist").dialog({
 			autoOpen: false,
 			resizable: true,
 			width: 1000,
-			height: 700
+			height: 700,
 		});
 		$("#d20plus-import-props").dialog({
 			autoOpen: false,
 			resizable: true,
 			width: 300,
-			height: 600
+			height: 600,
 		});
 
-		populateDropdown("#button-spell-select", "#import-spell-url", SPELL_DATA_DIR, spellDataUrls, "PHB", ["spell"]);
-		populateDropdown("#button-spell-select-player", "#import-spell-url-player", SPELL_DATA_DIR, spellDataUrls, "PHB", ["spell"]);
-		populateDropdown("#button-classes-select", "#import-classes-url", CLASS_DATA_DIR, classDataUrls, "", ["class"]);
-		populateDropdown("#button-classes-select-player", "#import-classes-url-player", CLASS_DATA_DIR, classDataUrls, "", ["class"]);
+		populateDropdown(
+			"#button-spell-select",
+			"#import-spell-url",
+			SPELL_DATA_DIR,
+			spellDataUrls,
+			"PHB",
+			["spell"]
+		);
+		populateDropdown(
+			"#button-spell-select-player",
+			"#import-spell-url-player",
+			SPELL_DATA_DIR,
+			spellDataUrls,
+			"PHB",
+			["spell"]
+		);
+		populateDropdown(
+			"#button-classes-select",
+			"#import-classes-url",
+			CLASS_DATA_DIR,
+			classDataUrls,
+			"",
+			["class"]
+		);
+		populateDropdown(
+			"#button-classes-select-player",
+			"#import-classes-url-player",
+			CLASS_DATA_DIR,
+			classDataUrls,
+			"",
+			["class"]
+		);
 
 		// add class subclasses to the subclasses dropdown(s)
-		populateDropdown("#button-subclasses-select", "#import-subclasses-url", CLASS_DATA_DIR, classDataUrls, "", ["class"]);
-		populateDropdown("#button-subclasses-select-player", "#import-subclasses-url-player", CLASS_DATA_DIR, classDataUrls, "", ["class"]);
+		populateDropdown(
+			"#button-subclasses-select",
+			"#import-subclasses-url",
+			CLASS_DATA_DIR,
+			classDataUrls,
+			"",
+			["class"]
+		);
+		populateDropdown(
+			"#button-subclasses-select-player",
+			"#import-subclasses-url-player",
+			CLASS_DATA_DIR,
+			classDataUrls,
+			"",
+			["class"]
+		);
 
-		populateBasicDropdown("#button-items-select", "#import-items-url", ITEM_DATA_URL, ["item"], true);
-		populateBasicDropdown("#button-psionics-select", "#import-psionics-url", PSIONIC_DATA_URL, ["psionic"], true);
-		populateBasicDropdown("#button-feats-select", "#import-feats-url", FEAT_DATA_URL, ["feat"], true);
-		populateBasicDropdown("#button-races-select", "#import-races-url", RACE_DATA_URL, ["race"], true);
-		populateBasicDropdown("#button-subclasses-select", "#import-subclasses-url", "", ["subclass"], true);
-		populateBasicDropdown("#button-backgrounds-select", "#import-backgrounds-url", BACKGROUND_DATA_URL, ["background"], true);
-		populateBasicDropdown("#button-optionalfeatures-select", "#import-optionalfeatures-url", OPT_FEATURE_DATA_URL, ["optionalfeature"], true);
+		populateBasicDropdown(
+			"#button-items-select",
+			"#import-items-url",
+			ITEM_DATA_URL,
+			["item"],
+			true
+		);
+		populateBasicDropdown(
+			"#button-psionics-select",
+			"#import-psionics-url",
+			PSIONIC_DATA_URL,
+			["psionic"],
+			true
+		);
+		populateBasicDropdown(
+			"#button-feats-select",
+			"#import-feats-url",
+			FEAT_DATA_URL,
+			["feat"],
+			true
+		);
+		populateBasicDropdown(
+			"#button-races-select",
+			"#import-races-url",
+			RACE_DATA_URL,
+			["race"],
+			true
+		);
+		populateBasicDropdown(
+			"#button-subclasses-select",
+			"#import-subclasses-url",
+			"",
+			["subclass"],
+			true
+		);
+		populateBasicDropdown(
+			"#button-backgrounds-select",
+			"#import-backgrounds-url",
+			BACKGROUND_DATA_URL,
+			["background"],
+			true
+		);
+		populateBasicDropdown(
+			"#button-optionalfeatures-select",
+			"#import-optionalfeatures-url",
+			OPT_FEATURE_DATA_URL,
+			["optionalfeature"],
+			true
+		);
 
 		// bind tokens button
-		const altBindButton = $(`<button id="bind-drop-locations-alt" class="btn bind-drop-locations" title="Bind drop locations and handouts">Bind Drag-n-Drop</button>`);
+		const altBindButton = $(
+			`<button id="bind-drop-locations-alt" class="btn bind-drop-locations" title="Bind drop locations and handouts">Bind Drag-n-Drop</button>`
+		);
 		altBindButton.on("click", function () {
 			d20plus.bindDropLocations();
 		});
@@ -1053,7 +1432,10 @@ const betteR205etoolsMain = function () {
 			const $wrprControls = $(`#search-wrp-controls`);
 			$wrprControls.append(altBindButton);
 		}
-		$("#journal #bind-drop-locations").on(window.mousedowntype, d20plus.bindDropLocations);
+		$("#journal #bind-drop-locations").on(
+			window.mousedowntype,
+			d20plus.bindDropLocations
+		);
 	};
 
 	d20plus.updateDifficulty = function () {
@@ -1077,16 +1459,18 @@ const betteR205etoolsMain = function () {
 		}
 	};
 
-// bind tokens to the initiative tracker
+	// bind tokens to the initiative tracker
 	d20plus.bindTokens = function () {
 		// Gets a list of all the tokens on the current page:
-		const curTokens = d20.Campaign.pages.get(d20.Campaign.activePage()).thegraphics.toArray();
-		curTokens.forEach(t => {
+		const curTokens = d20.Campaign.pages
+			.get(d20.Campaign.activePage())
+			.thegraphics.toArray();
+		curTokens.forEach((t) => {
 			d20plus.bindToken(t);
 		});
 	};
 
-// bind drop locations on sheet to accept custom handouts
+	// bind drop locations on sheet to accept custom handouts
 	d20plus.bindDropLocations = function () {
 		if (window.is_gm) {
 			// Bind Spells and Items, add compendium-item to each of them
@@ -1106,8 +1490,15 @@ const betteR205etoolsMain = function () {
 			}
 		}
 
-		function addClasses (folderName) {
-			$(`#journalfolderroot > ol.dd-list > li.dd-folder > div.dd-content:contains(${folderName})`).parent().find("ol li[data-itemid]").addClass("compendium-item").addClass("ui-draggable").addClass("Vetools-draggable");
+		function addClasses(folderName) {
+			$(
+				`#journalfolderroot > ol.dd-list > li.dd-folder > div.dd-content:contains(${folderName})`
+			)
+				.parent()
+				.find("ol li[data-itemid]")
+				.addClass("compendium-item")
+				.addClass("ui-draggable")
+				.addClass("Vetools-draggable");
 		}
 
 		addClasses("Spells");
@@ -1126,54 +1517,74 @@ const betteR205etoolsMain = function () {
 		});
 
 		class CharacterAttributesProxy {
-			constructor (character) {
+			constructor(character) {
 				this.character = character;
 				this._changedAttrs = [];
 			}
 
-			findByName (attrName) {
-				return this.character.model.attribs.toJSON()
-					.find(a => a.name === attrName) || {};
+			findByName(attrName) {
+				return (
+					this.character.model.attribs
+						.toJSON()
+						.find((a) => a.name === attrName) || {}
+				);
 			}
 
-			findOrGenerateRepeatingRowId (namePattern, current) {
+			findOrGenerateRepeatingRowId(namePattern, current) {
 				const [namePrefix, nameSuffix] = namePattern.split(/\$\d?/);
-				const attr = this.character.model.attribs.toJSON()
-					.find(a => a.name.startsWith(namePrefix) && a.name.endsWith(nameSuffix) && a.current == current);
-				return attr ?
-					attr.name.replace(RegExp(`^${namePrefix}(.*)${nameSuffix}$`), "$1") :
-					d20plus.ut.generateRowId();
+				const attr = this.character.model.attribs
+					.toJSON()
+					.find(
+						(a) =>
+							a.name.startsWith(namePrefix) &&
+							a.name.endsWith(nameSuffix) &&
+							a.current == current
+					);
+				return attr
+					? attr.name.replace(
+							RegExp(`^${namePrefix}(.*)${nameSuffix}$`),
+							"$1"
+					  )
+					: d20plus.ut.generateRowId();
 			}
 
-			add (name, current, max) {
-				this.character.model.attribs.create({
-					name: name,
-					current: current,
-					...(max == undefined ? {} : {max: max})
-				}).save();
+			add(name, current, max) {
+				this.character.model.attribs
+					.create({
+						name: name,
+						current: current,
+						...(max == undefined ? {} : { max: max }),
+					})
+					.save();
 				this._changedAttrs.push(name);
 			}
 
-			addOrUpdate (name, current, max) {
+			addOrUpdate(name, current, max) {
 				const id = this.findByName(name).id;
 				if (id) {
-					this.character.model.attribs.get(id).set({
-						current: current,
-						...(max == undefined ? {} : {max: max})
-					}).save();
+					this.character.model.attribs
+						.get(id)
+						.set({
+							current: current,
+							...(max == undefined ? {} : { max: max }),
+						})
+						.save();
 					this._changedAttrs.push(name);
 				} else {
 					this.add(name, current, max);
 				}
 			}
 
-			notifySheetWorkers () {
-				d20.journal.notifyWorkersOfAttrChanges(this.character.model.id, this._changedAttrs);
+			notifySheetWorkers() {
+				d20.journal.notifyWorkersOfAttrChanges(
+					this.character.model.id,
+					this._changedAttrs
+				);
 				this._changedAttrs = [];
 			}
 		}
 
-		function importFeat (character, data) {
+		function importFeat(character, data) {
 			const featName = data.name;
 			const featText = data.Vetoolscontent;
 			const attrs = new CharacterAttributesProxy(character);
@@ -1189,35 +1600,48 @@ const betteR205etoolsMain = function () {
 				attrs.add(`repeating_feat_${rowId}_content`, featText);
 				attrs.add(`repeating_feat_${rowId}_content_toggle`, "1");
 			} else {
-				console.warn(`Feat import is not supported for ${d20plus.sheet} character sheet`);
+				console.warn(
+					`Feat import is not supported for ${d20plus.sheet} character sheet`
+				);
 			}
 
 			attrs.notifySheetWorkers();
 		}
 
-		async function importBackground (character, data) {
+		async function importBackground(character, data) {
 			const bg = data.Vetoolscontent;
 
 			const renderer = new Renderer();
 			renderer.setBaseUrl(BASE_SITE_URL);
 			const renderStack = [];
 			let feature = {};
-			bg.entries.forEach(e => {
+			bg.entries.forEach((e) => {
 				if (e.name && e.name.includes("Feature:")) {
 					feature = JSON.parse(JSON.stringify(e));
 					feature.name = feature.name.replace("Feature:", "").trim();
 				}
 			});
-			if (feature) renderer.recursiveRender({entries: feature.entries}, renderStack);
-			feature.text = renderStack.length ? d20plus.importer.getCleanText(renderStack.join("")) : "";
+			if (feature)
+				renderer.recursiveRender(
+					{ entries: feature.entries },
+					renderStack
+				);
+			feature.text = renderStack.length
+				? d20plus.importer.getCleanText(renderStack.join(""))
+				: "";
 
-			async function chooseSkills (from, count) {
+			async function chooseSkills(from, count) {
 				return new Promise((resolve, reject) => {
 					const $dialog = $(`
 						<div title="Choose Skills">
 							<div name="remain" style="font-weight: bold">Remaining: ${count}</div>
 							<div>
-								${from.map(it => `<label class="split"><span>${it.toTitleCase()}</span> <input data-skill="${it}" type="checkbox"></label>`).join("")}
+								${from
+									.map(
+										(it) =>
+											`<label class="split"><span>${it.toTitleCase()}</span> <input data-skill="${it}" type="checkbox"></label>`
+									)
+									.join("")}
 							</div>
 						</div>
 					`).appendTo($("body"));
@@ -1234,9 +1658,15 @@ const betteR205etoolsMain = function () {
 						$remain.text(`Remaining: ${count - selectedCount}`);
 					});
 
-					function getSelected () {
-						return $cbSkill.map((i, e) => ({skill: $(e).data("skill"), selected: $(e).prop("checked")})).get()
-							.filter(it => it.selected).map(it => it.skill);
+					function getSelected() {
+						return $cbSkill
+							.map((i, e) => ({
+								skill: $(e).data("skill"),
+								selected: $(e).prop("checked"),
+							}))
+							.get()
+							.filter((it) => it.selected)
+							.map((it) => it.skill);
 					}
 
 					$dialog.dialog({
@@ -1248,7 +1678,7 @@ const betteR205etoolsMain = function () {
 									$(this).dialog("close");
 									$dialog.remove();
 									reject(`User cancelled the prompt`);
-								}
+								},
 							},
 							{
 								text: "OK",
@@ -1259,21 +1689,32 @@ const betteR205etoolsMain = function () {
 										$dialog.remove();
 										resolve(selected);
 									} else {
-										alert(`Please select ${count} skill${count === 1 ? "" : "s"}`);
+										alert(
+											`Please select ${count} skill${
+												count === 1 ? "" : "s"
+											}`
+										);
 									}
-								}
-							}
-						]
-					})
+								},
+							},
+						],
+					});
 				});
 			}
 
-			async function chooseSkillsGroup (options) {
+			async function chooseSkillsGroup(options) {
 				return new Promise((resolve, reject) => {
 					const $dialog = $(`
 						<div title="Choose Skills">
 							<div>
-								${options.map((it, i) => `<label class="split"><input name="skill-group" data-ix="${i}" type="radio" ${i === 0 ? `checked` : ""}> <span>${it}</span></label>`).join("")}
+								${options
+									.map(
+										(it, i) =>
+											`<label class="split"><input name="skill-group" data-ix="${i}" type="radio" ${
+												i === 0 ? `checked` : ""
+											}> <span>${it}</span></label>`
+									)
+									.join("")}
 							</div>
 						</div>
 					`).appendTo($("body"));
@@ -1288,42 +1729,51 @@ const betteR205etoolsMain = function () {
 									$(this).dialog("close");
 									$dialog.remove();
 									reject(`User cancelled the prompt`);
-								}
+								},
 							},
 							{
 								text: "OK",
 								click: function () {
-									const selected = $rdOpt.filter((i, e) => $(e).prop("checked"))
-										.map((i, e) => $(e).data("ix")).get()[0];
+									const selected = $rdOpt
+										.filter((i, e) => $(e).prop("checked"))
+										.map((i, e) => $(e).data("ix"))
+										.get()[0];
 									$(this).dialog("close");
 									$dialog.remove();
 									resolve(selected);
-								}
-							}
-						]
-					})
+								},
+							},
+						],
+					});
 				});
 			}
 
 			const skills = [];
 
-			async function handleSkillsItem (item) {
-				Object.keys(item).forEach(k => {
+			async function handleSkillsItem(item) {
+				Object.keys(item).forEach((k) => {
 					if (k !== "choose") skills.push(k);
 				});
 
 				if (item.choose) {
 					const choose = item.choose;
-					const sansExisting = choose.from.filter(it => !skills.includes(it));
+					const sansExisting = choose.from.filter(
+						(it) => !skills.includes(it)
+					);
 					const count = choose.count || 1;
-					const chosenSkills = await chooseSkills(sansExisting, count);
-					chosenSkills.forEach(it => skills.push(it));
+					const chosenSkills = await chooseSkills(
+						sansExisting,
+						count
+					);
+					chosenSkills.forEach((it) => skills.push(it));
 				}
 			}
 
 			if (bg.skillProficiencies && bg.skillProficiencies.length) {
 				if (bg.skillProficiencies.length > 1) {
-					const options = bg.skillProficiencies.map(item => Renderer.background.getSkillSummary([item], true, []))
+					const options = bg.skillProficiencies.map((item) =>
+						Renderer.background.getSkillSummary([item], true, [])
+					);
 					const chosenIndex = await chooseSkillsGroup(options);
 					await handleSkillsItem(bg.skillProficiencies[chosenIndex]);
 				} else {
@@ -1342,42 +1792,70 @@ const betteR205etoolsMain = function () {
 				attrs.add(`repeating_traits_${fRowId}_source_type`, bg.name);
 				attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
 				if (feature.text) {
-					attrs.add(`repeating_traits_${fRowId}_description`, feature.text);
+					attrs.add(
+						`repeating_traits_${fRowId}_description`,
+						feature.text
+					);
 				}
 
-				skills.map(s => s.toLowerCase().replace(/ /g, "_")).forEach(s => {
-					attrs.addOrUpdate(`${s}_prof`, `(@{pb}*@{${s}_type})`);
-				});
+				skills
+					.map((s) => s.toLowerCase().replace(/ /g, "_"))
+					.forEach((s) => {
+						attrs.addOrUpdate(`${s}_prof`, `(@{pb}*@{${s}_type})`);
+					});
 			} else if (d20plus.sheet === "shaped") {
 				attrs.addOrUpdate("background", bg.name);
-				attrs.add(`repeating_trait_${fRowId}_name`, `${feature.name} (${bg.name})`);
+				attrs.add(
+					`repeating_trait_${fRowId}_name`,
+					`${feature.name} (${bg.name})`
+				);
 				if (feature.text) {
-					attrs.add(`repeating_trait_${fRowId}_content`, feature.text);
+					attrs.add(
+						`repeating_trait_${fRowId}_content`,
+						feature.text
+					);
 					attrs.add(`repeating_trait_${fRowId}_content_toggle`, "1");
 				}
 
-				skills.map(s => s.toUpperCase().replace(/ /g, "")).forEach(s => {
-					const rowId = attrs.findOrGenerateRepeatingRowId("repeating_skill_$0_storage_name", s);
-					attrs.addOrUpdate(`repeating_skill_${rowId}_proficiency`, "proficient");
-				});
+				skills
+					.map((s) => s.toUpperCase().replace(/ /g, ""))
+					.forEach((s) => {
+						const rowId = attrs.findOrGenerateRepeatingRowId(
+							"repeating_skill_$0_storage_name",
+							s
+						);
+						attrs.addOrUpdate(
+							`repeating_skill_${rowId}_proficiency`,
+							"proficient"
+						);
+					});
 			} else {
-				console.warn(`Background import is not supported for ${d20plus.sheet} character sheet`);
+				console.warn(
+					`Background import is not supported for ${d20plus.sheet} character sheet`
+				);
 			}
 
 			attrs.notifySheetWorkers();
 		}
 
-		function importRace (character, data) {
+		function importRace(character, data) {
 			const renderer = new Renderer();
 			renderer.setBaseUrl(BASE_SITE_URL);
 
 			const race = data.Vetoolscontent;
 
-			race.entries.filter(it => typeof it !== "string").forEach(e => {
-				const renderStack = [];
-				renderer.recursiveRender({entries: e.entries}, renderStack);
-				e.text = d20plus.importer.getCleanText(renderStack.join(""));
-			});
+			race.entries
+				.filter((it) => typeof it !== "string")
+				.forEach((e) => {
+					const renderStack = [];
+					renderer.recursiveRender(
+						{ entries: e.entries },
+						renderStack
+					);
+					e.text = d20plus.importer.getCleanText(
+						renderStack.join("")
+					);
+				});
 
 			const attrs = new CharacterAttributesProxy(character);
 
@@ -1386,33 +1864,69 @@ const betteR205etoolsMain = function () {
 				attrs.addOrUpdate(`race_display`, race.name);
 				attrs.addOrUpdate(`speed`, Parser.getSpeedString(race));
 
-				race.entries.filter(it => it.text).forEach(e => {
-					const fRowId = d20plus.ut.generateRowId();
-					attrs.add(`repeating_traits_${fRowId}_name`, e.name);
-					attrs.add(`repeating_traits_${fRowId}_source`, "Race");
-					attrs.add(`repeating_traits_${fRowId}_source_type`, race.name);
-					attrs.add(`repeating_traits_${fRowId}_description`, e.text);
-					attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
-				});
+				race.entries
+					.filter((it) => it.text)
+					.forEach((e) => {
+						const fRowId = d20plus.ut.generateRowId();
+						attrs.add(`repeating_traits_${fRowId}_name`, e.name);
+						attrs.add(`repeating_traits_${fRowId}_source`, "Race");
+						attrs.add(
+							`repeating_traits_${fRowId}_source_type`,
+							race.name
+						);
+						attrs.add(
+							`repeating_traits_${fRowId}_description`,
+							e.text
+						);
+						attrs.add(
+							`repeating_traits_${fRowId}_options-flag`,
+							"0"
+						);
+					});
 
-				if (race.languageProficiencies && race.languageProficiencies.length) {
+				if (
+					race.languageProficiencies &&
+					race.languageProficiencies.length
+				) {
 					// FIXME this discards information
 					const profs = race.languageProficiencies[0];
-					const asText = Object.keys(profs).filter(it => it !== "choose").map(it => it === "anyStandard" ? "any" : it).map(it => it.toTitleCase()).join(", ");
+					const asText = Object.keys(profs)
+						.filter((it) => it !== "choose")
+						.map((it) => (it === "anyStandard" ? "any" : it))
+						.map((it) => it.toTitleCase())
+						.join(", ");
 
 					const lRowId = d20plus.ut.generateRowId();
 					attrs.add(`repeating_proficiencies_${lRowId}_name`, asText);
-					attrs.add(`repeating_proficiencies_${lRowId}_options-flag`, "0");
+					attrs.add(
+						`repeating_proficiencies_${lRowId}_options-flag`,
+						"0"
+					);
 				}
 			} else if (d20plus.sheet === "shaped") {
 				attrs.addOrUpdate("race", race.name);
-				attrs.addOrUpdate("size", (race.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/").toUpperCase());
+				attrs.addOrUpdate(
+					"size",
+					(race.size || [SZ_VARIES])
+						.map((sz) => Parser.sizeAbvToFull(sz))
+						.join("/")
+						.toUpperCase()
+				);
 				attrs.addOrUpdate("speed_string", Parser.getSpeedString(race));
 
 				if (race.speed instanceof Object) {
-					for (const locomotion of ["walk", "burrow", "climb", "fly", "swim"]) {
+					for (const locomotion of [
+						"walk",
+						"burrow",
+						"climb",
+						"fly",
+						"swim",
+					]) {
 						if (race.speed[locomotion]) {
-							const attrName = locomotion === "walk" ? "speed" : `speed_${locomotion}`;
+							const attrName =
+								locomotion === "walk"
+									? "speed"
+									: `speed_${locomotion}`;
 							if (locomotion !== "walk") {
 								attrs.addOrUpdate("other_speeds", "1");
 							}
@@ -1425,64 +1939,116 @@ const betteR205etoolsMain = function () {
 				}
 
 				// really there seems to be only darkvision for PCs
-				for (const vision of ["darkvision", "blindsight", "tremorsense", "truesight"]) {
+				for (const vision of [
+					"darkvision",
+					"blindsight",
+					"tremorsense",
+					"truesight",
+				]) {
 					if (race[vision]) {
 						attrs.addOrUpdate(vision, race[vision]);
 					}
 				}
 
-				race.entries.filter(it => it.text).forEach(e => {
-					const fRowId = d20plus.ut.generateRowId();
-					attrs.add(`repeating_racialtrait_${fRowId}_name`, e.name);
-					attrs.add(`repeating_racialtrait_${fRowId}_content`, e.text);
-					attrs.add(`repeating_racialtrait_${fRowId}_content_toggle`, "1");
-				});
+				race.entries
+					.filter((it) => it.text)
+					.forEach((e) => {
+						const fRowId = d20plus.ut.generateRowId();
+						attrs.add(
+							`repeating_racialtrait_${fRowId}_name`,
+							e.name
+						);
+						attrs.add(
+							`repeating_racialtrait_${fRowId}_content`,
+							e.text
+						);
+						attrs.add(
+							`repeating_racialtrait_${fRowId}_content_toggle`,
+							"1"
+						);
+					});
 
 				const fRowId = d20plus.ut.generateRowId();
 				attrs.add(`repeating_modifier_${fRowId}_name`, race.name);
-				attrs.add(`repeating_modifier_${fRowId}_ability_score_toggle`, "1");
-				(race.ability || []).forEach(raceAbility => {
-					Object.keys(raceAbility).filter(it => it !== "choose").forEach(abilityAbv => {
-						const value = raceAbility[abilityAbv];
-						const ability = Parser.attAbvToFull(abilityAbv).toLowerCase();
-						attrs.add(`repeating_modifier_${fRowId}_${ability}_score_modifier`, value);
-					});
+				attrs.add(
+					`repeating_modifier_${fRowId}_ability_score_toggle`,
+					"1"
+				);
+				(race.ability || []).forEach((raceAbility) => {
+					Object.keys(raceAbility)
+						.filter((it) => it !== "choose")
+						.forEach((abilityAbv) => {
+							const value = raceAbility[abilityAbv];
+							const ability =
+								Parser.attAbvToFull(abilityAbv).toLowerCase();
+							attrs.add(
+								`repeating_modifier_${fRowId}_${ability}_score_modifier`,
+								value
+							);
+						});
 				});
 			} else {
-				console.warn(`Race import is not supported for ${d20plus.sheet} character sheet`);
+				console.warn(
+					`Race import is not supported for ${d20plus.sheet} character sheet`
+				);
 			}
 
 			attrs.notifySheetWorkers();
 		}
 
-		function importOptionalFeature (character, data) {
+		function importOptionalFeature(character, data) {
 			const optionalFeature = data.Vetoolscontent;
 			const renderer = new Renderer();
 			renderer.setBaseUrl(BASE_SITE_URL);
-			const rendered = renderer.render({entries: optionalFeature.entries});
+			const rendered = renderer.render({
+				entries: optionalFeature.entries,
+			});
 			const optionalFeatureText = d20plus.importer.getCleanText(rendered);
 
 			const attrs = new CharacterAttributesProxy(character);
 			const fRowId = d20plus.ut.generateRowId();
 
 			if (d20plus.sheet == "ogl") {
-				attrs.add(`repeating_traits_${fRowId}_name`, optionalFeature.name);
-				attrs.add(`repeating_traits_${fRowId}_source`, Parser.optFeatureTypeToFull(optionalFeature.featureType));
-				attrs.add(`repeating_traits_${fRowId}_source_type`, optionalFeature.name);
-				attrs.add(`repeating_traits_${fRowId}_description`, optionalFeatureText);
+				attrs.add(
+					`repeating_traits_${fRowId}_name`,
+					optionalFeature.name
+				);
+				attrs.add(
+					`repeating_traits_${fRowId}_source`,
+					Parser.optFeatureTypeToFull(optionalFeature.featureType)
+				);
+				attrs.add(
+					`repeating_traits_${fRowId}_source_type`,
+					optionalFeature.name
+				);
+				attrs.add(
+					`repeating_traits_${fRowId}_description`,
+					optionalFeatureText
+				);
 				attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
 			} else if (d20plus.sheet == "shaped") {
-				attrs.add(`repeating_classfeature_${fRowId}_name`, optionalFeature.name);
-				attrs.add(`repeating_classfeature_${fRowId}_content`, optionalFeatureText);
-				attrs.add(`repeating_classfeature_${fRowId}_content_toggle`, "1");
+				attrs.add(
+					`repeating_classfeature_${fRowId}_name`,
+					optionalFeature.name
+				);
+				attrs.add(
+					`repeating_classfeature_${fRowId}_content`,
+					optionalFeatureText
+				);
+				attrs.add(
+					`repeating_classfeature_${fRowId}_content_toggle`,
+					"1"
+				);
 			} else {
-				console.warn(`Optional feature (invocation, maneuver, or metamagic) import is not supported for ${d20plus.sheet} character sheet`);
+				console.warn(
+					`Optional feature (invocation, maneuver, or metamagic) import is not supported for ${d20plus.sheet} character sheet`
+				);
 			}
 
 			attrs.notifySheetWorkers();
 		}
 
-		function importClass (character, data) {
+		async function importClass(character, data) {
 			let levels = d20plus.ut.getNumberRange("What levels?", 1, 20);
 			if (!levels) return;
 
@@ -1491,7 +2057,7 @@ const betteR205etoolsMain = function () {
 			const clss = data.Vetoolscontent;
 			const renderer = Renderer.get().setBaseUrl(BASE_SITE_URL);
 			const shapedSheetPreFilledFeaturesByClass = {
-				"Artificer": [
+				Artificer: [
 					"Magic Item Analysis",
 					"Tool Expertise",
 					"Wondrous Invention",
@@ -1500,7 +2066,7 @@ const betteR205etoolsMain = function () {
 					"Mechanical Servant",
 					"Soul of Artifice",
 				],
-				"Barbarian": [
+				Barbarian: [
 					"Rage",
 					"Unarmored Defense",
 					"Reckless Attack",
@@ -1514,7 +2080,7 @@ const betteR205etoolsMain = function () {
 					"Indomitable Might",
 					"Primal Champion",
 				],
-				"Bard": [
+				Bard: [
 					"Bardic Inspiration",
 					"Jack of All Trades",
 					"Song of Rest",
@@ -1523,26 +2089,26 @@ const betteR205etoolsMain = function () {
 					"Magical Secrets",
 					"Superior Inspiration",
 				],
-				"Cleric": [
+				Cleric: [
 					"Channel Divinity",
 					"Turn Undead",
 					"Divine Intervention",
 				],
-				"Druid": [
+				Druid: [
 					"Druidic",
 					"Wild Shape",
 					"Timeless Body",
 					"Beast Spells",
 					"Archdruid",
 				],
-				"Fighter": [
+				Fighter: [
 					"Fighting Style",
 					"Second Wind",
 					"Action Surge",
 					"Extra Attack",
 					"Indomitable",
 				],
-				"Monk": [
+				Monk: [
 					"Unarmored Defense",
 					"Martial Arts",
 					"Ki",
@@ -1564,7 +2130,7 @@ const betteR205etoolsMain = function () {
 					"Empty Body",
 					"Perfect Soul",
 				],
-				"Paladin": [
+				Paladin: [
 					"Divine Sense",
 					"Lay on Hands",
 					"Fighting Style",
@@ -1577,7 +2143,7 @@ const betteR205etoolsMain = function () {
 					"Improved Divine Smite",
 					"Cleansing Touch",
 				],
-				"Ranger": [
+				Ranger: [
 					"Favored Enemy",
 					"Natural Explorer",
 					"Fighting Style",
@@ -1588,7 +2154,8 @@ const betteR205etoolsMain = function () {
 					"Feral Senses",
 					"Foe Slayer",
 				],
-				"Ranger (Revised)": [ // "Ranger UA (2016)"
+				"Ranger (Revised)": [
+					// "Ranger UA (2016)"
 					"Favored Enemy",
 					"Natural Explorer",
 					"Fighting Style",
@@ -1600,7 +2167,7 @@ const betteR205etoolsMain = function () {
 					"Feral Senses",
 					"Foe Slayer",
 				],
-				"Rogue": [
+				Rogue: [
 					"Expertise",
 					"Sneak Attack",
 					"Thieves' Cant",
@@ -1613,31 +2180,110 @@ const betteR205etoolsMain = function () {
 					"Elusive",
 					"Stroke of Luck",
 				],
-				"Sorcerer": [
+				Sorcerer: [
 					"Sorcery Points",
 					"Flexible Casting",
 					"Metamagic",
 					"Sorcerous Restoration",
 				],
-				"Warlock": [
+				Warlock: [
 					"Eldritch Invocations",
 					"Pact Boon",
 					"Mystic Arcanum",
 					"Eldritch Master",
 				],
-				"Wizard": [
+				Wizard: [
 					"Arcane Recovery",
 					"Spell Mastery",
 					"Signature Spells",
 				],
 			};
-			const shapedSheetPreFilledFeatures = shapedSheetPreFilledFeaturesByClass[clss.name] || [];
+			const shapedSheetPreFilledFeatures =
+				shapedSheetPreFilledFeaturesByClass[clss.name] || [];
 
 			const attrs = new CharacterAttributesProxy(character);
 
+			async function chooseSource(from, count) {
+				return new Promise((resolve, reject) => {
+					const $dialog = $(`
+						<div title="Choose Feature Sources">
+							
+							<div>
+								${from
+									.map(
+										(it) =>
+											`<label class="split"><span>${it}</span> <input data-skill="${it}" type="checkbox"></label>`
+									)
+									.join("")}
+							</div>
+							<p> <br></p>
+							<div style="font-weight: bold">WARNING: TCE and UA may import features that are duplicates or mutually exclusive with PHB.</div>
+						</div>
+					`).appendTo($("body"));
+					const $remain = $dialog.find(`[name="remain"]`);
+					const $cbSkill = $dialog.find(`input[type="checkbox"]`);
+					console.log($cbSkill);
+
+					$cbSkill.on("change", function () {
+						const $e = $(this);
+						let selectedCount = getSelected().length;
+						if (selectedCount > count) {
+							$e.prop("checked", false);
+							selectedCount--;
+						}
+						$remain.text(`Remaining: ${count - selectedCount}`);
+					});
+
+					function getSelected() {
+						return $cbSkill
+							.map((i, e) => ({
+								skill: $(e).data("skill"),
+								selected: $(e).prop("checked"),
+							}))
+							.get()
+							.filter((it) => it.selected)
+							.map((it) => it.skill);
+					}
+
+					$dialog.dialog({
+						dialogClass: "no-close",
+						buttons: [
+							{
+								text: "Cancel",
+								click: function () {
+									$(this).dialog("close");
+									$dialog.remove();
+									reject(`User cancelled the prompt`);
+								},
+							},
+							{
+								text: "OK",
+								click: function () {
+									const selected = getSelected();
+									if (selected.length > 0) {
+										$(this).dialog("close");
+										$dialog.remove();
+										resolve(selected);
+									} else {
+										alert(`Please select a Source`);
+									}
+								},
+							},
+						],
+					});
+				});
+			}
+
 			importClassGeneral(attrs, clss, maxLevel);
-			
-			const featureSourceWhitelist = ["PHB"];
+
+			let featureSourceWhitelist = await chooseSource(
+				["PHB", "TCE", "UA"],
+				4
+			);
+
+			featureSourceWhitelist = featureSourceWhitelist.map((element) => {
+				return element === "UA" ? "UAClassFeatureVariants" : element;
+			});
 
 			for (let i = 0; i < maxLevel; i++) {
 				const level = i + 1;
@@ -1646,28 +2292,42 @@ const betteR205etoolsMain = function () {
 				const lvlFeatureList = clss.classFeatures[i];
 				for (let j = 0; j < lvlFeatureList.length; j++) {
 					const feature = lvlFeatureList[j];
-					console.log();
+
 					// don't add "you gain a subclass feature" or ASI's
-					if (!feature.gainSubclassFeature && feature.name !== "Ability Score Improvement" &&
-						featureSourceWhitelist.includes(feature.source)) {
+					if (
+						!feature.gainSubclassFeature &&
+						feature.name !== "Ability Score Improvement" &&
+						featureSourceWhitelist.includes(feature.source)
+					) {
 						const renderStack = [];
-						renderer.recursiveRender({entries: feature.entries}, renderStack);
-						feature.text = d20plus.importer.getCleanText(renderStack.join(""));
+						renderer.recursiveRender(
+							{ entries: feature.entries },
+							renderStack
+						);
+						feature.text = d20plus.importer.getCleanText(
+							renderStack.join("")
+						);
+						console.log(feature);
 						importClassFeature(attrs, clss, level, feature);
 					}
 				}
 			}
 
-			function importClassGeneral (attrs, clss, maxLevel) {
+			function importClassGeneral(attrs, clss, maxLevel) {
 				if (d20plus.sheet === "ogl") {
 					setTimeout(() => {
-						attrs.addOrUpdate("pb", d20plus.getProfBonusFromLevel(Number(maxLevel)));
+						attrs.addOrUpdate(
+							"pb",
+							d20plus.getProfBonusFromLevel(Number(maxLevel))
+						);
 						attrs.addOrUpdate("class", clss.name);
 						attrs.addOrUpdate("level", maxLevel);
 						attrs.addOrUpdate("base_level", String(maxLevel));
 					}, 500);
 				} else if (d20plus.sheet === "shaped") {
-					const isSupportedClass = clss.source === "PHB" || ["Artificer", "Ranger (Revised)"].includes(clss.name);
+					const isSupportedClass =
+						clss.source === "PHB" ||
+						["Artificer", "Ranger (Revised)"].includes(clss.name);
 					let className = "CUSTOM";
 					if (isSupportedClass) {
 						className = clss.name.toUpperCase();
@@ -1675,18 +2335,42 @@ const betteR205etoolsMain = function () {
 							className = "RANGERUA";
 					}
 
-					const fRowId = attrs.findOrGenerateRepeatingRowId("repeating_class_$0_name", className);
-					attrs.addOrUpdate(`repeating_class_${fRowId}_name`, className);
-					attrs.addOrUpdate(`repeating_class_${fRowId}_level`, maxLevel);
+					const fRowId = attrs.findOrGenerateRepeatingRowId(
+						"repeating_class_$0_name",
+						className
+					);
+					attrs.addOrUpdate(
+						`repeating_class_${fRowId}_name`,
+						className
+					);
+					attrs.addOrUpdate(
+						`repeating_class_${fRowId}_level`,
+						maxLevel
+					);
 					if (!isSupportedClass) {
-						attrs.addOrUpdate(`repeating_class_${fRowId}_hd`, `d${clss.hd.faces}`);
-						attrs.addOrUpdate(`repeating_class_${fRowId}_custom_class_toggle`, "1");
-						attrs.addOrUpdate(`repeating_class_${fRowId}_custom_name`, clss.name);
+						attrs.addOrUpdate(
+							`repeating_class_${fRowId}_hd`,
+							`d${clss.hd.faces}`
+						);
+						attrs.addOrUpdate(
+							`repeating_class_${fRowId}_custom_class_toggle`,
+							"1"
+						);
+						attrs.addOrUpdate(
+							`repeating_class_${fRowId}_custom_name`,
+							clss.name
+						);
 					}
 
 					if (!isSupportedClass && clss.name === "Mystic") {
-						const classResourcesForLevel = clss.classTableGroups[0].rows[maxLevel - 1];
-						const [talentsKnown, disciplinesKnown, psiPoints, psiLimit] = classResourcesForLevel;
+						const classResourcesForLevel =
+							clss.classTableGroups[0].rows[maxLevel - 1];
+						const [
+							talentsKnown,
+							disciplinesKnown,
+							psiPoints,
+							psiLimit,
+						] = classResourcesForLevel;
 
 						attrs.addOrUpdate("spell_points_name", "PSI");
 						attrs.addOrUpdate("show_spells", "1");
@@ -1706,35 +2390,54 @@ const betteR205etoolsMain = function () {
 
 					attrs.notifySheetWorkers();
 				} else {
-					console.warn(`Class import is not supported for ${d20plus.sheet} character sheet`);
+					console.warn(
+						`Class import is not supported for ${d20plus.sheet} character sheet`
+					);
 				}
 			}
 
-			function importClassFeature (attrs, clss, level, feature) {
+			function importClassFeature(attrs, clss, level, feature) {
 				if (d20plus.sheet == "ogl") {
 					const fRowId = d20plus.ut.generateRowId();
 					attrs.add(`repeating_traits_${fRowId}_name`, feature.name);
 					attrs.add(`repeating_traits_${fRowId}_source`, "Class");
-					attrs.add(`repeating_traits_${fRowId}_source_type`, `${clss.name} ${level}`);
-					attrs.add(`repeating_traits_${fRowId}_description`, feature.text);
+					attrs.add(
+						`repeating_traits_${fRowId}_source_type`,
+						`${clss.name} ${level}`
+					);
+					attrs.add(
+						`repeating_traits_${fRowId}_description`,
+						feature.text
+					);
 					attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
 				} else if (d20plus.sheet == "shaped") {
 					if (shapedSheetPreFilledFeatures.includes(feature.name))
 						return;
 
 					const fRowId = d20plus.ut.generateRowId();
-					attrs.add(`repeating_classfeature_${fRowId}_name`, `${feature.name} (${clss.name} ${level})`);
-					attrs.add(`repeating_classfeature_${fRowId}_content`, feature.text);
-					attrs.add(`repeating_classfeature_${fRowId}_content_toggle`, "1");
+					attrs.add(
+						`repeating_classfeature_${fRowId}_name`,
+						`${feature.name} (${clss.name} ${level})`
+					);
+					attrs.add(
+						`repeating_classfeature_${fRowId}_content`,
+						feature.text
+					);
+					attrs.add(
+						`repeating_classfeature_${fRowId}_content_toggle`,
+						"1"
+					);
 				}
 
 				attrs.notifySheetWorkers();
 			}
 		}
 
-		function importSubclass (character, data) {
+		function importSubclass(character, data) {
 			if (d20plus.sheet != "ogl" && d20plus.sheet != "shaped") {
-				console.warn(`Subclass import is not supported for ${d20plus.sheet} character sheet`);
+				console.warn(
+					`Subclass import is not supported for ${d20plus.sheet} character sheet`
+				);
 				return;
 			}
 
@@ -1766,7 +2469,9 @@ const betteR205etoolsMain = function () {
 			}
 
 			if (!desiredIxs.size) {
-				alert("No subclass features were found within the range specified.");
+				alert(
+					"No subclass features were found within the range specified."
+				);
 				return;
 			}
 
@@ -1778,15 +2483,23 @@ const betteR205etoolsMain = function () {
 
 				const lvlFeatureList = sc.subclassFeatures[i];
 				for (let j = 0; j < lvlFeatureList.length; j++) {
-					const featureCpy = JSON.parse(JSON.stringify(lvlFeatureList[j]));
+					const featureCpy = JSON.parse(
+						JSON.stringify(lvlFeatureList[j])
+					);
 					let feature = lvlFeatureList[j];
 
 					try {
-						while (!feature.name || (feature[0] && !feature[0].name)) {
+						while (
+							!feature.name ||
+							(feature[0] && !feature[0].name)
+						) {
 							if (feature.entries && feature.entries.name) {
 								feature = feature.entries;
 								continue;
-							} else if (feature.entries[0] && feature.entries[0].name) {
+							} else if (
+								feature.entries[0] &&
+								feature.entries[0].name
+							) {
 								feature = feature.entries[0];
 								continue;
 							} else {
@@ -1808,49 +2521,77 @@ const betteR205etoolsMain = function () {
 					// for the first batch of subclass features, try to split them up
 					if (firstFeatures && feature.name && feature.entries) {
 						const subFeatures = [];
-						const baseFeatures = feature.entries.filter(f => {
+						const baseFeatures = feature.entries.filter((f) => {
 							if (f.name && f.type === "entries") {
 								subFeatures.push(f);
 								return false;
 							} else return true;
 						});
-						importSubclassFeature(attrs, sc, gainLevels[i],
-								{name: feature.name, type: feature.type, entries: baseFeatures});
-						subFeatures.forEach(sf => {
+						importSubclassFeature(attrs, sc, gainLevels[i], {
+							name: feature.name,
+							type: feature.type,
+							entries: baseFeatures,
+						});
+						subFeatures.forEach((sf) => {
 							importSubclassFeature(attrs, sc, gainLevels[i], sf);
-						})
+						});
 					} else {
-						importSubclassFeature(attrs, sc, gainLevels[i], feature);
+						importSubclassFeature(
+							attrs,
+							sc,
+							gainLevels[i],
+							feature
+						);
 					}
 
 					firstFeatures = false;
 				}
 			}
 
-			function importSubclassFeature (attrs, sc, level, feature) {
+			function importSubclassFeature(attrs, sc, level, feature) {
 				const renderStack = [];
-				renderer.recursiveRender({entries: feature.entries}, renderStack);
-				feature.text = d20plus.importer.getCleanText(renderStack.join(""));
+				renderer.recursiveRender(
+					{ entries: feature.entries },
+					renderStack
+				);
+				feature.text = d20plus.importer.getCleanText(
+					renderStack.join("")
+				);
 
 				const fRowId = d20plus.ut.generateRowId();
 
 				if (d20plus.sheet == "ogl") {
 					attrs.add(`repeating_traits_${fRowId}_name`, feature.name);
 					attrs.add(`repeating_traits_${fRowId}_source`, "Class");
-					attrs.add(`repeating_traits_${fRowId}_source_type`, `${sc.className} (${sc.name} ${level})`);
-					attrs.add(`repeating_traits_${fRowId}_description`, feature.text);
+					attrs.add(
+						`repeating_traits_${fRowId}_source_type`,
+						`${sc.className} (${sc.name} ${level})`
+					);
+					attrs.add(
+						`repeating_traits_${fRowId}_description`,
+						feature.text
+					);
 					attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
 				} else if (d20plus.sheet == "shaped") {
-					attrs.add(`repeating_classfeature_${fRowId}_name`, `${feature.name} (${sc.name} ${level})`);
-					attrs.add(`repeating_classfeature_${fRowId}_content`, feature.text);
-					attrs.add(`repeating_classfeature_${fRowId}_content_toggle`, "1");
+					attrs.add(
+						`repeating_classfeature_${fRowId}_name`,
+						`${feature.name} (${sc.name} ${level})`
+					);
+					attrs.add(
+						`repeating_classfeature_${fRowId}_content`,
+						feature.text
+					);
+					attrs.add(
+						`repeating_classfeature_${fRowId}_content_toggle`,
+						"1"
+					);
 				}
 
 				attrs.notifySheetWorkers();
 			}
 		}
 
-		function importPsionicAbility (character, data) {
+		function importPsionicAbility(character, data) {
 			const renderer = new Renderer();
 			renderer.setBaseUrl(BASE_SITE_URL);
 
@@ -1861,25 +2602,38 @@ const betteR205etoolsMain = function () {
 				return;
 			}
 
-			function getCostStr (cost) {
-				return cost.min === cost.max ? cost.min : `${cost.min}-${cost.max}`;
+			function getCostStr(cost) {
+				return cost.min === cost.max
+					? cost.min
+					: `${cost.min}-${cost.max}`;
 			}
 
-			function getCleanText (entries) {
+			function getCleanText(entries) {
 				if (typeof entries == "string") {
-					return d20plus.importer.getCleanText(renderer.render(entries));
+					return d20plus.importer.getCleanText(
+						renderer.render(entries)
+					);
 				} else {
 					const renderStack = [];
-					renderer.recursiveRender({entries: entries}, renderStack, {depth: 2});
+					renderer.recursiveRender(
+						{ entries: entries },
+						renderStack,
+						{ depth: 2 }
+					);
 					return d20plus.importer.getCleanText(renderStack.join(""));
 				}
 			}
 
 			if (d20plus.sheet == "ogl") {
-				const makeSpellTrait = function (level, rowId, propName, content) {
+				const makeSpellTrait = function (
+					level,
+					rowId,
+					propName,
+					content
+				) {
 					const attrName = `repeating_spell-${level}_${rowId}_${propName}`;
 					attrs.add(attrName, content);
-				}
+				};
 
 				// disable all components
 				const noComponents = function (level, rowId, hasM) {
@@ -1889,7 +2643,7 @@ const betteR205etoolsMain = function () {
 						makeSpellTrait(level, rowId, "spellcomp_m", 0);
 					}
 					makeSpellTrait(level, rowId, "options-flag", 0);
-				}
+				};
 
 				if (data.type === "D") {
 					const rowId = d20plus.ut.generateRowId();
@@ -1897,32 +2651,94 @@ const betteR205etoolsMain = function () {
 					// make focus
 					const focusLevel = "cantrip";
 					makeSpellTrait(focusLevel, rowId, "spelllevel", "cantrip");
-					makeSpellTrait(focusLevel, rowId, "spellname", `${data.name} Focus`);
-					makeSpellTrait(focusLevel, rowId, "spelldescription", getCleanText(data.focus));
-					makeSpellTrait(focusLevel, rowId, "spellcastingtime", "1 bonus action");
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"spellname",
+						`${data.name} Focus`
+					);
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"spelldescription",
+						getCleanText(data.focus)
+					);
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"spellcastingtime",
+						"1 bonus action"
+					);
 					noComponents(focusLevel, rowId);
 
-					data.modes.forEach(m => {
+					data.modes.forEach((m) => {
 						if (m.submodes) {
-							m.submodes.forEach(sm => {
+							m.submodes.forEach((sm) => {
 								const rowId = d20plus.ut.generateRowId();
 								const smLevel = sm.cost.min;
-								makeSpellTrait(smLevel, rowId, "spelllevel", smLevel);
-								makeSpellTrait(smLevel, rowId, "spellname", `${m.name} (${sm.name})`);
-								makeSpellTrait(smLevel, rowId, "spelldescription", getCleanText(sm.entries));
-								makeSpellTrait(smLevel, rowId, "spellcomp_materials", `${getCostStr(sm.cost)} psi points`);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"spelllevel",
+									smLevel
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"spellname",
+									`${m.name} (${sm.name})`
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"spelldescription",
+									getCleanText(sm.entries)
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"spellcomp_materials",
+									`${getCostStr(sm.cost)} psi points`
+								);
 								noComponents(smLevel, rowId, true);
 							});
 						} else {
 							const rowId = d20plus.ut.generateRowId();
 							const mLevel = m.cost.min;
 							makeSpellTrait(mLevel, rowId, "spelllevel", mLevel);
-							makeSpellTrait(mLevel, rowId, "spellname", `${m.name}`);
-							makeSpellTrait(mLevel, rowId, "spelldescription", `Psionic Discipline mode\n\n${getCleanText(m.entries)}`);
-							makeSpellTrait(mLevel, rowId, "spellcomp_materials", `${getCostStr(m.cost)} psi points`);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"spellname",
+								`${m.name}`
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"spelldescription",
+								`Psionic Discipline mode\n\n${getCleanText(
+									m.entries
+								)}`
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"spellcomp_materials",
+								`${getCostStr(m.cost)} psi points`
+							);
 							if (m.concentration) {
-								makeSpellTrait(mLevel, rowId, "spellduration", `${m.concentration.duration} ${m.concentration.unit}`);
-								makeSpellTrait(mLevel, rowId, "spellconcentration", "Yes");
+								makeSpellTrait(
+									mLevel,
+									rowId,
+									"spellduration",
+									`${m.concentration.duration} ${m.concentration.unit}`
+								);
+								makeSpellTrait(
+									mLevel,
+									rowId,
+									"spellconcentration",
+									"Yes"
+								);
 							}
 							noComponents(mLevel, rowId, true);
 						}
@@ -1932,18 +2748,34 @@ const betteR205etoolsMain = function () {
 					const level = "cantrip";
 					makeSpellTrait(level, rowId, "spelllevel", "cantrip");
 					makeSpellTrait(level, rowId, "spellname", data.name);
-					makeSpellTrait(level, rowId, "spelldescription", `Psionic Talent\n\n${getCleanText(Renderer.psionic.getBodyText(data, renderer))}`);
+					makeSpellTrait(
+						level,
+						rowId,
+						"spelldescription",
+						`Psionic Talent\n\n${getCleanText(
+							Renderer.psionic.getBodyText(data, renderer)
+						)}`
+					);
 					noComponents(level, rowId, false);
 				}
 			} else if (d20plus.sheet == "shaped") {
-				const makeSpellTrait = function (level, rowId, propName, content) {
+				const makeSpellTrait = function (
+					level,
+					rowId,
+					propName,
+					content
+				) {
 					const attrName = `repeating_spell${level}_${rowId}_${propName}`;
 					attrs.add(attrName, content);
-				}
+				};
 
 				const shapedSpellLevel = function (level) {
-					return level ? `${Parser.getOrdinalForm(String(level))}_LEVEL`.toUpperCase() : "CANTRIP";
-				}
+					return level
+						? `${Parser.getOrdinalForm(
+								String(level)
+						  )}_LEVEL`.toUpperCase()
+						: "CANTRIP";
+				};
 
 				const shapedConcentration = function (conc) {
 					const CONC_ABV_TO_FULL = {
@@ -1951,30 +2783,44 @@ const betteR205etoolsMain = function () {
 						min: "minute",
 						hr: "hour",
 					};
-					return `CONCENTRATION_UP_TO_${conc.duration}_${CONC_ABV_TO_FULL[conc.unit]}${conc.duration > 1 ? "S" : ""}`.toUpperCase();
-				}
+					return `CONCENTRATION_UP_TO_${conc.duration}_${
+						CONC_ABV_TO_FULL[conc.unit]
+					}${conc.duration > 1 ? "S" : ""}`.toUpperCase();
+				};
 
 				const inferCastingTime = function (content) {
 					if (content.search(/\b(as an action)\b/i) >= 0) {
 						return "1_ACTION";
-					} else if (content.search(/\b(as a bonus action)\b/i) >= 0) {
+					} else if (
+						content.search(/\b(as a bonus action)\b/i) >= 0
+					) {
 						return "1_BONUS_ACTION";
 					} else if (content.search(/\b(as a reaction)\b/i) >= 0) {
 						return "1_REACTION";
 					}
 					return "1_ACTION";
-				}
+				};
 
 				const inferDuration = function (content) {
 					let duration, unit, match;
-					if ((match = content.match(/\b(?:for the next|for 1) (round|minute|hour)\b/i))) {
+					if (
+						(match = content.match(
+							/\b(?:for the next|for 1) (round|minute|hour)\b/i
+						))
+					) {
 						[duration, unit] = [1, match[1]];
-					} else if ((match = content.match(/\b(?:for|for the next) (\d+) (minutes|hours|days)\b/i))) {
+					} else if (
+						(match = content.match(
+							/\b(?:for|for the next) (\d+) (minutes|hours|days)\b/i
+						))
+					) {
 						[duration, unit] = [match[1], match[2]];
 					}
 
-					return (duration && unit) ? `${duration}_${unit}`.toUpperCase() : `INSTANTANEOUS`;
-				}
+					return duration && unit
+						? `${duration}_${unit}`.toUpperCase()
+						: `INSTANTANEOUS`;
+				};
 
 				if (data.type === "D") {
 					const typeStr = `**Psionic Discipline:** ${data.name}\n**Psionic Order:** ${data.order}\n`;
@@ -1982,91 +2828,249 @@ const betteR205etoolsMain = function () {
 
 					// make focus
 					const focusLevel = 0;
-					makeSpellTrait(focusLevel, rowId, "spell_level", shapedSpellLevel(focusLevel));
-					makeSpellTrait(focusLevel, rowId, "name", `${data.name} Focus`);
-					makeSpellTrait(focusLevel, rowId, "content", `${typeStr}\n${getCleanText(data.focus)}`);
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"spell_level",
+						shapedSpellLevel(focusLevel)
+					);
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"name",
+						`${data.name} Focus`
+					);
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"content",
+						`${typeStr}\n${getCleanText(data.focus)}`
+					);
 					makeSpellTrait(focusLevel, rowId, "content_toggle", "1");
-					makeSpellTrait(focusLevel, rowId, "casting_time", "1_BONUS_ACTION");
-					makeSpellTrait(focusLevel, rowId, "components", "COMPONENTS_M");
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"casting_time",
+						"1_BONUS_ACTION"
+					);
+					makeSpellTrait(
+						focusLevel,
+						rowId,
+						"components",
+						"COMPONENTS_M"
+					);
 					makeSpellTrait(focusLevel, rowId, "duration", "SPECIAL");
 
-					data.modes.forEach(m => {
-						const modeContent = `${typeStr}\n${getCleanText(m.entries)}`;
+					data.modes.forEach((m) => {
+						const modeContent = `${typeStr}\n${getCleanText(
+							m.entries
+						)}`;
 
 						if (m.submodes) {
-							m.submodes.forEach(sm => {
+							m.submodes.forEach((sm) => {
 								const rowId = d20plus.ut.generateRowId();
 								const smLevel = sm.cost.min;
 								const costStr = getCostStr(sm.cost);
-								const content = `${modeContent}\n${getCleanText(sm.entries)}`;
-								makeSpellTrait(smLevel, rowId, "spell_level", shapedSpellLevel(smLevel));
-								makeSpellTrait(smLevel, rowId, "name", `${m.name} (${sm.name})` + (sm.cost.min < sm.cost.max ? ` (${costStr} psi)` : ""));
-								makeSpellTrait(smLevel, rowId, "content", content);
-								makeSpellTrait(smLevel, rowId, "content_toggle", "1");
-								makeSpellTrait(smLevel, rowId, "casting_time", inferCastingTime(content));
-								makeSpellTrait(smLevel, rowId, "materials", `${costStr} psi points`);
-								makeSpellTrait(smLevel, rowId, "components", "COMPONENTS_M");
-								makeSpellTrait(smLevel, rowId, "duration", inferDuration(content));
+								const content = `${modeContent}\n${getCleanText(
+									sm.entries
+								)}`;
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"spell_level",
+									shapedSpellLevel(smLevel)
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"name",
+									`${m.name} (${sm.name})` +
+										(sm.cost.min < sm.cost.max
+											? ` (${costStr} psi)`
+											: "")
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"content",
+									content
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"content_toggle",
+									"1"
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"casting_time",
+									inferCastingTime(content)
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"materials",
+									`${costStr} psi points`
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"components",
+									"COMPONENTS_M"
+								);
+								makeSpellTrait(
+									smLevel,
+									rowId,
+									"duration",
+									inferDuration(content)
+								);
 							});
 						} else {
 							const rowId = d20plus.ut.generateRowId();
 							const mLevel = m.cost.min;
 							const costStr = getCostStr(m.cost);
-							makeSpellTrait(mLevel, rowId, "spell_level", shapedSpellLevel(mLevel));
-							makeSpellTrait(mLevel, rowId, "name", m.name + (m.cost.min < m.cost.max ? ` (${costStr} psi)` : ""));
-							makeSpellTrait(mLevel, rowId, "content", modeContent);
-							makeSpellTrait(mLevel, rowId, "content_toggle", "1");
-							makeSpellTrait(mLevel, rowId, "casting_time", inferCastingTime(modeContent));
-							makeSpellTrait(mLevel, rowId, "materials", `${costStr} psi points`);
-							makeSpellTrait(mLevel, rowId, "components", "COMPONENTS_M");
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"spell_level",
+								shapedSpellLevel(mLevel)
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"name",
+								m.name +
+									(m.cost.min < m.cost.max
+										? ` (${costStr} psi)`
+										: "")
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"content",
+								modeContent
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"content_toggle",
+								"1"
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"casting_time",
+								inferCastingTime(modeContent)
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"materials",
+								`${costStr} psi points`
+							);
+							makeSpellTrait(
+								mLevel,
+								rowId,
+								"components",
+								"COMPONENTS_M"
+							);
 							if (m.concentration) {
-								makeSpellTrait(mLevel, rowId, "duration", shapedConcentration(m.concentration));
-								makeSpellTrait(mLevel, rowId, "concentration", "Yes");
+								makeSpellTrait(
+									mLevel,
+									rowId,
+									"duration",
+									shapedConcentration(m.concentration)
+								);
+								makeSpellTrait(
+									mLevel,
+									rowId,
+									"concentration",
+									"Yes"
+								);
 							} else {
-								makeSpellTrait(mLevel, rowId, "duration", inferDuration(modeContent));
+								makeSpellTrait(
+									mLevel,
+									rowId,
+									"duration",
+									inferDuration(modeContent)
+								);
 							}
 						}
 					});
 				} else {
 					const typeStr = `**Psionic Talent**\n`;
-					const talentContent = `${typeStr}\n${getCleanText(Renderer.psionic.getBodyText(data, renderer))}`;
+					const talentContent = `${typeStr}\n${getCleanText(
+						Renderer.psionic.getBodyText(data, renderer)
+					)}`;
 					const rowId = d20plus.ut.generateRowId();
 					const level = 0;
-					makeSpellTrait(level, rowId, "spell_level", shapedSpellLevel(level));
+					makeSpellTrait(
+						level,
+						rowId,
+						"spell_level",
+						shapedSpellLevel(level)
+					);
 					makeSpellTrait(level, rowId, "name", data.name);
 					makeSpellTrait(level, rowId, "content", talentContent);
 					makeSpellTrait(level, rowId, "content_toggle", "1");
-					makeSpellTrait(level, rowId, "casting_time", inferCastingTime(talentContent));
+					makeSpellTrait(
+						level,
+						rowId,
+						"casting_time",
+						inferCastingTime(talentContent)
+					);
 					makeSpellTrait(level, rowId, "components", "COMPONENTS_M");
-					makeSpellTrait(level, rowId, "duration", inferDuration(talentContent));
+					makeSpellTrait(
+						level,
+						rowId,
+						"duration",
+						inferDuration(talentContent)
+					);
 				}
 			} else {
-				console.warn(`Psionic ability import is not supported for ${d20plus.sheet} character sheet`);
+				console.warn(
+					`Psionic ability import is not supported for ${d20plus.sheet} character sheet`
+				);
 			}
 
 			attrs.notifySheetWorkers();
 		}
 
-		function importItem (character, data, event) {
+		function importItem(character, data, event) {
 			if (d20plus.sheet == "ogl") {
 				if (data.data._versatile) {
 					setTimeout(() => {
 						const rowId = d20plus.ut.generateRowId();
 
-						function makeItemTrait (key, val) {
-							const toSave = character.model.attribs.create({
-								name: `repeating_attack_${rowId}_${key}`,
-								current: val
-							}).save();
+						function makeItemTrait(key, val) {
+							const toSave = character.model.attribs
+								.create({
+									name: `repeating_attack_${rowId}_${key}`,
+									current: val,
+								})
+								.save();
 							toSave.save();
 						}
 
-						const attr = (data.data["Item Type"] || "").includes("Melee") ? "strength" : "dexterity";
+						const attr = (data.data["Item Type"] || "").includes(
+							"Melee"
+						)
+							? "strength"
+							: "dexterity";
 						const attrTag = `@{${attr}_mod}`;
 
-						const proficiencyBonus = character.model.attribs.toJSON().find(it => it.name.includes("pb"));
-						const attrToFind = character.model.attribs.toJSON().find(it => it.name === attr);
-						const attrBonus = attrToFind ? Parser.getAbilityModNumber(Number(attrToFind.current)) : 0;
+						const proficiencyBonus = character.model.attribs
+							.toJSON()
+							.find((it) => it.name.includes("pb"));
+						const attrToFind = character.model.attribs
+							.toJSON()
+							.find((it) => it.name === attr);
+						const attrBonus = attrToFind
+							? Parser.getAbilityModNumber(
+									Number(attrToFind.current)
+							  )
+							: 0;
 
 						// This links the item to the attack, and vice-versa.
 						// Unfortunately, it doesn't work,
@@ -2100,48 +3104,95 @@ const betteR205etoolsMain = function () {
 						makeItemTrait("dmgtype", data.data["Damage Type"]);
 						makeItemTrait("atkattr_base", attrTag);
 						makeItemTrait("dmgattr", attrTag);
-						makeItemTrait("rollbase_dmg", `@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${data.data._versatile}+${attrBonus}]]}} {{dmg1type=${data.data["Damage Type"]} }} @{dmg2flag} {{dmg2=[[0]]}} {{dmg2type=}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=[[0]]}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}`);
-						makeItemTrait("rollbase_crit", `@{wtype}&{template:dmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${data.data._versatile}+${attrBonus}]]}} {{dmg1type=${data.data["Damage Type"]} }} @{dmg2flag} {{dmg2=[[0]]}} {{dmg2type=}} {{crit1=[[${data.data._versatile}]]}} {{crit2=[[0]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg}  {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=[[0]]}} {{globaldamagecrit=[[0]]}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}`);
+						makeItemTrait(
+							"rollbase_dmg",
+							`@{wtype}&{template:dmg} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${data.data._versatile}+${attrBonus}]]}} {{dmg1type=${data.data["Damage Type"]} }} @{dmg2flag} {{dmg2=[[0]]}} {{dmg2type=}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=[[0]]}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}`
+						);
+						makeItemTrait(
+							"rollbase_crit",
+							`@{wtype}&{template:dmg} {{crit=1}} {{rname=@{atkname}}} @{atkflag} {{range=@{atkrange}}} @{dmgflag} {{dmg1=[[${data.data._versatile}+${attrBonus}]]}} {{dmg1type=${data.data["Damage Type"]} }} @{dmg2flag} {{dmg2=[[0]]}} {{dmg2type=}} {{crit1=[[${data.data._versatile}]]}} {{crit2=[[0]]}} @{saveflag} {{desc=@{atk_desc}}} @{hldmg}  {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globaldamage=[[0]]}} {{globaldamagecrit=[[0]]}} {{globaldamagetype=@{global_damage_mod_type}}} @{charname_output}`
+						);
 						if (proficiencyBonus) {
-							makeItemTrait("atkbonus", `+${Number(proficiencyBonus.current) + attrBonus}`);
+							makeItemTrait(
+								"atkbonus",
+								`+${
+									Number(proficiencyBonus.current) + attrBonus
+								}`
+							);
 						}
-						makeItemTrait("atkdmgtype", `${data.data._versatile}${attrBonus > 0 ? `+${attrBonus}` : attrBonus < 0 ? attrBonus : ""} ${data.data["Damage Type"]}`);
-						makeItemTrait("rollbase", "@{wtype}&{template:atk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[@{d20}cs>@{atkcritrange} + 2[PROF]]]}} @{rtype}cs>@{atkcritrange} + 2[PROF]]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globalattack=@{global_attack_mod}}} ammo=@{ammo} @{charname_output}");
+						makeItemTrait(
+							"atkdmgtype",
+							`${data.data._versatile}${
+								attrBonus > 0
+									? `+${attrBonus}`
+									: attrBonus < 0
+									? attrBonus
+									: ""
+							} ${data.data["Damage Type"]}`
+						);
+						makeItemTrait(
+							"rollbase",
+							"@{wtype}&{template:atk} {{mod=@{atkbonus}}} {{rname=[@{atkname}](~repeating_attack_attack_dmg)}} {{rnamec=[@{atkname}](~repeating_attack_attack_crit)}} {{r1=[[@{d20}cs>@{atkcritrange} + 2[PROF]]]}} @{rtype}cs>@{atkcritrange} + 2[PROF]]]}} {{range=@{atkrange}}} {{desc=@{atk_desc}}} {{spelllevel=@{spelllevel}}} {{innate=@{spell_innate}}} {{globalattack=@{global_attack_mod}}} ammo=@{ammo} @{charname_output}"
+						);
 					}, 350); // defer this, so we can hopefully pull item ID
 				}
 
 				// for packs, etc
 				if (data._subItems) {
 					const queue = [];
-					data._subItems.forEach(si => {
-						function makeProp (rowId, propName, content) {
-							character.model.attribs.create({
-								"name": `repeating_inventory_${rowId}_${propName}`,
-								"current": content
-							}).save();
+					data._subItems.forEach((si) => {
+						function makeProp(rowId, propName, content) {
+							character.model.attribs
+								.create({
+									name: `repeating_inventory_${rowId}_${propName}`,
+									current: content,
+								})
+								.save();
 						}
 
 						if (si.count) {
 							const rowId = d20plus.ut.generateRowId();
-							const siD = typeof si.subItem === "string" ? JSON.parse(si.subItem) : si.subItem;
+							const siD =
+								typeof si.subItem === "string"
+									? JSON.parse(si.subItem)
+									: si.subItem;
 
 							makeProp(rowId, "itemname", siD.name);
 							const w = (siD.data || {}).Weight;
 							if (w) makeProp(rowId, "itemweight", w);
-							makeProp(rowId, "itemcontent", Object.entries(siD.data).map(([k, v]) => `${k}: ${v}`).join(", "));
+							makeProp(
+								rowId,
+								"itemcontent",
+								Object.entries(siD.data)
+									.map(([k, v]) => `${k}: ${v}`)
+									.join(", ")
+							);
 							makeProp(rowId, "itemcount", String(si.count));
-
 						} else {
 							queue.push(si.subItem);
 						}
 					});
 
-					const interval = d20plus.cfg.get("import", "importIntervalHandout") || d20plus.cfg.getDefault("import", "importIntervalHandout");
-					queue.map(it => typeof it === "string" ? JSON.parse(it) : it).forEach((item, ix) => {
-						setTimeout(() => {
-							d20plus.importer.doFakeDrop(event, character, item, null);
-						}, (ix + 1) * interval);
-					});
+					const interval =
+						d20plus.cfg.get("import", "importIntervalHandout") ||
+						d20plus.cfg.getDefault(
+							"import",
+							"importIntervalHandout"
+						);
+					queue
+						.map((it) =>
+							typeof it === "string" ? JSON.parse(it) : it
+						)
+						.forEach((item, ix) => {
+							setTimeout(() => {
+								d20plus.importer.doFakeDrop(
+									event,
+									character,
+									item,
+									null
+								);
+							}, (ix + 1) * interval);
+						});
 
 					return;
 				}
@@ -2151,7 +3202,7 @@ const betteR205etoolsMain = function () {
 			d20plus.importer.doFakeDrop(event, character, data, null);
 		}
 
-		function importData (character, data, event) {
+		function importData(character, data, event) {
 			// TODO remove feature import workarounds below when roll20 and sheets supports their drag-n-drop properly
 			if (data.data.Category === "Feats") {
 				importFeat(character, data);
@@ -2177,13 +3228,16 @@ const betteR205etoolsMain = function () {
 		d20.Campaign.characters.models.each(function (v, i) {
 			// region BEGIN ROLL20 CODE
 			v.view.compendiumDragOver = function (e, t) {
-				if (this.popoutWindow) return
-				this.$currentDropTarget = this.childWindow.d20.compendiumDragOver(e, t)
+				if (this.popoutWindow) return;
+				this.$currentDropTarget =
+					this.childWindow.d20.compendiumDragOver(e, t);
 
 				// Cache the last drop target, since it has a habit of disappearing every other loop.
 				// This probably breaks other things, but, who cares!
-				if (this.$currentDropTarget) this._b20_$prevDropTarget = this.$currentDropTarget;
-				if (!this.$currentDropTarget) this.$currentDropTarget = this._b20_$prevDropTarget;
+				if (this.$currentDropTarget)
+					this._b20_$prevDropTarget = this.$currentDropTarget;
+				if (!this.$currentDropTarget)
+					this.$currentDropTarget = this._b20_$prevDropTarget;
 			};
 			// endregion END ROLL20 CODE
 
@@ -2195,15 +3249,17 @@ const betteR205etoolsMain = function () {
 					accept: ".compendium-item",
 					tolerance: "pointer",
 					over() {
-						e.dragOver = !0
+						e.dragOver = !0;
 					},
 					out() {
-						e.dragOver = !1,
-							e.childWindow.d20.deactivateDrop()
+						(e.dragOver = !1), e.childWindow.d20.deactivateDrop();
 					},
 					drop(t, i) {
-						const characterid = $(".characterdialog").has(t.target).attr("data-characterid");
-						const character = d20.Campaign.characters.get(characterid).view;
+						const characterid = $(".characterdialog")
+							.has(t.target)
+							.attr("data-characterid");
+						const character =
+							d20.Campaign.characters.get(characterid).view;
 						const $hlpr = $(i.helper[0]);
 
 						if ($hlpr.hasClass("handout")) {
@@ -2211,11 +3267,14 @@ const betteR205etoolsMain = function () {
 							t.originalEvent.dropHandled = !0;
 							if (e.activeDrop) {
 								e.dragOver = !1;
-                            	e.childWindow.d20.deactivateDrop();
+								e.childWindow.d20.deactivateDrop();
 							}
 
 							if ($hlpr.hasClass(`player-imported`)) {
-								const data = d20plus.importer.retrievePlayerImport($hlpr.attr("data-playerimportid"));
+								const data =
+									d20plus.importer.retrievePlayerImport(
+										$hlpr.attr("data-playerimportid")
+									);
 								importData(character, data, t);
 							} else {
 								var id = $hlpr.attr("data-itemid");
@@ -2223,16 +3282,34 @@ const betteR205etoolsMain = function () {
 								console.log(character);
 								var data = "";
 								if (window.is_gm) {
-									handout._getLatestBlob("gmnotes", function (gmnotes) {
-										data = gmnotes;
-										handout.updateBlobs({gmnotes: gmnotes});
-										importData(character, JSON.parse(data), t);
-									});
+									handout._getLatestBlob(
+										"gmnotes",
+										function (gmnotes) {
+											data = gmnotes;
+											handout.updateBlobs({
+												gmnotes: gmnotes,
+											});
+											importData(
+												character,
+												JSON.parse(data),
+												t
+											);
+										}
+									);
 								} else {
-									handout._getLatestBlob("notes", function (notes) {
-										data = $(notes).filter("del").html();
-										importData(character, JSON.parse(data), t);
-									});
+									handout._getLatestBlob(
+										"notes",
+										function (notes) {
+											data = $(notes)
+												.filter("del")
+												.html();
+											importData(
+												character,
+												JSON.parse(data),
+												t
+											);
+										}
+									);
 								}
 							}
 							return;
@@ -2240,47 +3317,109 @@ const betteR205etoolsMain = function () {
 
 						console.log("Compendium item dropped onto target!");
 						// region BEGIN ROLL20 CODE
-						t.originalEvent.dropHandled = !0,
-						e.activeDrop && (e.dragOver = !1,
-							e.childWindow.d20.deactivateDrop(),
-						e.$currentDropTarget && window.wantsToReceiveDrop(this, t, ()=>{
-								const t = $(i.helper[0]).attr("data-pagename")
-									, n = $(i.helper[0]).attr("data-subhead");
-								$.ajax({
-									url: "/compendium/compendium/getPages",
-									data: {
-										bookName: COMPENDIUM_BOOK_NAME,
-										pages: [t],
-										sharedCompendium: campaign_id
-									},
-									cache: !1,
-									dataType: "JSON"
-								}).done(i=>{
-										const o = JSON.parse(i[0])
-											, r = _.clone(o.data);
-										r.Name = o.name,
-											r.data = o.data,
-											r.data = JSON.stringify(r.data),
-											r.uniqueName = t,
-											r.Content = o.content,
-											r.dropSubhead = n,
-											e.$currentDropTarget.find("*[accept]").each(function() {
-												const t = $(this)
-													, i = t.attr("accept");
-												r[i] && ("input" === t[0].tagName.toLowerCase() && "checkbox" === t.attr("type") || "input" === t[0].tagName.toLowerCase() && "radio" === t.attr("type") ? t.val() === r[i] ? t.prop("checked", !0) : t.prop("checked", !1) : "select" === t[0].tagName.toLowerCase() ? t.find("option").each(function() {
-													const e = $(this);
-													e.val() !== r[i] && e.text() !== r[i] || e.prop("selected", !0)
-												}) : $(this).val(r[i]),
-													e.saveSheetValues(this, "compendium"))
-											})
-									}
-								)
-							}
-						))
+						(t.originalEvent.dropHandled = !0),
+							e.activeDrop &&
+								((e.dragOver = !1),
+								e.childWindow.d20.deactivateDrop(),
+								e.$currentDropTarget &&
+									window.wantsToReceiveDrop(this, t, () => {
+										const t = $(i.helper[0]).attr(
+												"data-pagename"
+											),
+											n = $(i.helper[0]).attr(
+												"data-subhead"
+											);
+										$.ajax({
+											url: "/compendium/compendium/getPages",
+											data: {
+												bookName: COMPENDIUM_BOOK_NAME,
+												pages: [t],
+												sharedCompendium: campaign_id,
+											},
+											cache: !1,
+											dataType: "JSON",
+										}).done((i) => {
+											const o = JSON.parse(i[0]),
+												r = _.clone(o.data);
+											(r.Name = o.name),
+												(r.data = o.data),
+												(r.data = JSON.stringify(
+													r.data
+												)),
+												(r.uniqueName = t),
+												(r.Content = o.content),
+												(r.dropSubhead = n),
+												e.$currentDropTarget
+													.find("*[accept]")
+													.each(function () {
+														const t = $(this),
+															i =
+																t.attr(
+																	"accept"
+																);
+														r[i] &&
+															(("input" ===
+																t[0].tagName.toLowerCase() &&
+																"checkbox" ===
+																	t.attr(
+																		"type"
+																	)) ||
+															("input" ===
+																t[0].tagName.toLowerCase() &&
+																"radio" ===
+																	t.attr(
+																		"type"
+																	))
+																? t.val() ===
+																  r[i]
+																	? t.prop(
+																			"checked",
+																			!0
+																	  )
+																	: t.prop(
+																			"checked",
+																			!1
+																	  )
+																: "select" ===
+																  t[0].tagName.toLowerCase()
+																? t
+																		.find(
+																			"option"
+																		)
+																		.each(
+																			function () {
+																				const e =
+																					$(
+																						this
+																					);
+																				(e.val() !==
+																					r[
+																						i
+																					] &&
+																					e.text() !==
+																						r[
+																							i
+																						]) ||
+																					e.prop(
+																						"selected",
+																						!0
+																					);
+																			}
+																		)
+																: $(this).val(
+																		r[i]
+																  ),
+															e.saveSheetValues(
+																this,
+																"compendium"
+															));
+													});
+										});
+									}));
 						// endregion END ROLL20 CODE
-					}
-				})
-			}
+					},
+				});
+			};
 		});
 	};
 
@@ -2310,21 +3449,30 @@ const betteR205etoolsMain = function () {
 
 	// Create editable HP variable and autocalculate + or -
 	d20plus.hpAllowEdit = function () {
-		$("#initiativewindow").on(window.mousedowntype, ".hp.editable", function () {
-			if ($(this).find("input").length > 0) return void $(this).find("input").focus();
-			var val = $.trim($(this).text());
-			const $span = $(this);
-			$span.html(`<input type='text' value='${val}'/>`);
-			const $ipt = $(this).find("input");
-			$ipt[0].focus();
-		});
+		$("#initiativewindow").on(
+			window.mousedowntype,
+			".hp.editable",
+			function () {
+				if ($(this).find("input").length > 0)
+					return void $(this).find("input").focus();
+				var val = $.trim($(this).text());
+				const $span = $(this);
+				$span.html(`<input type='text' value='${val}'/>`);
+				const $ipt = $(this).find("input");
+				$ipt[0].focus();
+			}
+		);
 		$("#initiativewindow").on("keydown", ".hp.editable", function (event) {
 			if (event.which == 13) {
 				const $span = $(this);
 				const $ipt = $span.find("input");
 				if (!$ipt.length) return;
 
-				var el, token, id, char, hp,
+				var el,
+					token,
+					id,
+					char,
+					hp,
 					val = $.trim($ipt.val());
 
 				// roll20 token modification supports plus/minus for a single integer; mimic this
@@ -2339,22 +3487,27 @@ const betteR205etoolsMain = function () {
 
 					el = $(this).parents("li.token");
 					id = el.data("tokenid");
-					token = d20.Campaign.pages.get(d20.Campaign.activePage()).thegraphics.get(id);
+					token = d20.Campaign.pages
+						.get(d20.Campaign.activePage())
+						.thegraphics.get(id);
 					char = token.character;
 
-					npc = char.attribs ? char.attribs.find(function (a) {
-						return a.get("name").toLowerCase() === "npc";
-					}) : null;
+					npc = char.attribs
+						? char.attribs.find(function (a) {
+								return a.get("name").toLowerCase() === "npc";
+						  })
+						: null;
 					let total;
 					// char.attribs doesn't exist for generico tokens, in this case stick stuff in an appropriate bar
-					if (!char.attribs || npc && npc.get("current") == "1") {
+					if (!char.attribs || (npc && npc.get("current") == "1")) {
 						const hpBar = d20plus.getCfgHpBarNumber();
 						if (hpBar) {
 							total;
 							if (base !== null) {
 								total = base;
 							} else if (op) {
-								const curr = token.attributes[`bar${hpBar}_value`];
+								const curr =
+									token.attributes[`bar${hpBar}_value`];
 								if (op === "ADD") total = curr + mod;
 								else total = curr - mod;
 							} else {
@@ -2371,12 +3524,13 @@ const betteR205etoolsMain = function () {
 							if (base !== null) {
 								total = base;
 							} else if (op) {
-								if (op === "ADD") total = hp.attributes.current + mod;
+								if (op === "ADD")
+									total = hp.attributes.current + mod;
 								else total = hp.attributes.current - mod;
 							} else {
 								total = mod;
 							}
-							hp.syncedSave({current: total});
+							hp.syncedSave({ current: total });
 						} else {
 							total;
 							if (base !== null) {
@@ -2387,7 +3541,7 @@ const betteR205etoolsMain = function () {
 							} else {
 								total = mod;
 							}
-							char.attribs.create({name: "hp", current: total});
+							char.attribs.create({ name: "hp", current: total });
 						}
 					}
 					// convert the field back to text
@@ -2398,35 +3552,51 @@ const betteR205etoolsMain = function () {
 		});
 	};
 
-// Change character sheet formulas
+	// Change character sheet formulas
 	d20plus.setSheet = function () {
 		d20plus.ut.log("Switched Character Sheet Template");
 		d20plus.sheet = "ogl";
-		if (window.is_gm && (!d20.journal.customSheets || !d20.journal.customSheets)) {
+		if (
+			window.is_gm &&
+			(!d20.journal.customSheets || !d20.journal.customSheets)
+		) {
 			const $body = $(`body`);
 			$body.addClass("ve-nosheet__body");
-			const $btnClose = $(`<button class="btn btn-danger ve-nosheet__btn-close">X</button>`)
-				.click(() => {
-					$overlay.remove();
-					$body.removeClass("ve-nosheet__body");
-				});
-			const $overlay = $(`<div class="flex-col flex-vh-center ve-nosheet__overlay"/>`);
+			const $btnClose = $(
+				`<button class="btn btn-danger ve-nosheet__btn-close">X</button>`
+			).click(() => {
+				$overlay.remove();
+				$body.removeClass("ve-nosheet__body");
+			});
+			const $overlay = $(
+				`<div class="flex-col flex-vh-center ve-nosheet__overlay"/>`
+			);
 			$btnClose.appendTo($overlay);
-			$overlay.append(`<div class="flex-col flex-vh-center">
+			$overlay
+				.append(
+					`<div class="flex-col flex-vh-center">
 				<div class="ve-nosheet__title mb-2">NO CHARACTER SHEET</div>
 				<div><i>Your game does not have a character sheet template selected.<br>
 				Please either disable betteR20, or visit the settings page for your game to choose one. We recommend the OGL sheet, which is listed as &quot;D&D 5E by Roll20.&quot;</i></div>
-			</div>`).appendTo($body);
+			</div>`
+				)
+				.appendTo($body);
 
-			d20.textchat.incoming(false, ({
+			d20.textchat.incoming(false, {
 				who: "system",
 				type: "system",
-				content: `<span style="color: red;">5etoolsR20: no character sheet selected! Exiting...</span>`
-			}));
+				content: `<span style="color: red;">5etoolsR20: no character sheet selected! Exiting...</span>`,
+			});
 			throw new Error("No character sheet selected!");
 		}
-		if (d20.journal.customSheets.layouthtml.indexOf("shaped_d20") > 0) d20plus.sheet = "shaped";
-		if (d20.journal.customSheets.layouthtml.indexOf("DnD5e_Character_Sheet") > 0) d20plus.sheet = "community";
+		if (d20.journal.customSheets.layouthtml.indexOf("shaped_d20") > 0)
+			d20plus.sheet = "shaped";
+		if (
+			d20.journal.customSheets.layouthtml.indexOf(
+				"DnD5e_Character_Sheet"
+			) > 0
+		)
+			d20plus.sheet = "community";
 		d20plus.ut.log("Switched Character Sheet Template to " + d20plus.sheet);
 	};
 
@@ -2434,8 +3604,11 @@ const betteR205etoolsMain = function () {
 	d20plus.initErrorHandler = null;
 	d20plus.setTurnOrderTemplate = function () {
 		if (!d20plus.turnOrderCachedFunction) {
-			d20plus.turnOrderCachedFunction = d20.Campaign.initiativewindow.rebuildInitiativeList;
-			d20plus.turnOrderCachedTemplate = $("#tmpl_initiativecharacter").clone();
+			d20plus.turnOrderCachedFunction =
+				d20.Campaign.initiativewindow.rebuildInitiativeList;
+			d20plus.turnOrderCachedTemplate = $(
+				"#tmpl_initiativecharacter"
+			).clone();
 		}
 
 		d20.Campaign.initiativewindow.rebuildInitiativeList = function () {
@@ -2446,7 +3619,7 @@ const betteR205etoolsMain = function () {
 			const cols = [
 				d20plus.cfg.get("interface", "trackerCol1"),
 				d20plus.cfg.get("interface", "trackerCol2"),
-				d20plus.cfg.get("interface", "trackerCol3")
+				d20plus.cfg.get("interface", "trackerCol3"),
 			];
 
 			const headerStack = [];
@@ -2459,7 +3632,7 @@ const betteR205etoolsMain = function () {
 							<$!crAttr.get("current")$>
 						<$ } $>
 					<$ } $>
-				</span>`
+				</span>`,
 			];
 			cols.forEach((c, i) => {
 				switch (c) {
@@ -2496,7 +3669,9 @@ const betteR205etoolsMain = function () {
 					}
 					case "Passive Perception": {
 						replaceStack.push(`
-							<$ var passive = (typeof char !== "undefined" && char && typeof char.autoCalcFormula !== "undefined") ? (char.autoCalcFormula('@{passive}') || char.autoCalcFormula('${d20plus.formulas[d20plus.sheet].pp}')) : "\u2014"; $>
+							<$ var passive = (typeof char !== "undefined" && char && typeof char.autoCalcFormula !== "undefined") ? (char.autoCalcFormula('@{passive}') || char.autoCalcFormula('${
+								d20plus.formulas[d20plus.sheet].pp
+							}')) : "\u2014"; $>
 							<span class='pp tracker-col' alt='Passive Perception' title='Passive Perception'><$!passive$></span>
 						`);
 						headerStack.push(`<span class='tracker-col'>PP</span>`);
@@ -2504,7 +3679,9 @@ const betteR205etoolsMain = function () {
 					}
 					case "Spell DC": {
 						replaceStack.push(`
-							<$ var dc = (typeof char !== "undefined" && char && typeof char.autoCalcFormula !== "undefined") ? (char.autoCalcFormula('${d20plus.formulas[d20plus.sheet].spellDc}')) : "\u2014"; $>
+							<$ var dc = (typeof char !== "undefined" && char && typeof char.autoCalcFormula !== "undefined") ? (char.autoCalcFormula('${
+								d20plus.formulas[d20plus.sheet].spellDc
+							}')) : "\u2014"; $>
 							<span class='dc tracker-col' alt='Spell DC' title='Spell DC'><$!dc$></span>
 						`);
 						headerStack.push(`<span class='tracker-col'>DC</span>`);
@@ -2517,7 +3694,10 @@ const betteR205etoolsMain = function () {
 				}
 			});
 
-			console.log("use custom tracker val was ", d20plus.cfg.get("interface", "customTracker"))
+			console.log(
+				"use custom tracker val was ",
+				d20plus.cfg.get("interface", "customTracker")
+			);
 			if (d20plus.cfg.get("interface", "customTracker")) {
 				$(`.init-header`).show();
 				if (d20plus.cfg.get("interface", "trackerSheetButton")) {
@@ -2528,8 +3708,11 @@ const betteR205etoolsMain = function () {
 				$(`.init-init-header`).show();
 				const $header = $(".tracker-header-extra-columns");
 				// prepend/reverse used since tracker gets populated in right-to-left order
-				headerStack.forEach(h => $header.prepend(h))
-				html = html.replace(`<!--5ETOOLS_REPLACE_TARGET-->`, replaceStack.reverse().join(" \n"));
+				headerStack.forEach((h) => $header.prepend(h));
+				html = html.replace(
+					`<!--5ETOOLS_REPLACE_TARGET-->`,
+					replaceStack.reverse().join(" \n")
+				);
 			} else {
 				$(`.init-header`).hide();
 				$(`.init-sheet-header`).hide();
@@ -2539,7 +3722,7 @@ const betteR205etoolsMain = function () {
 			$("#tmpl_initiativecharacter").replaceWith(html);
 
 			// Hack to catch errors, part 1
-			const startTime = (new Date).getTime();
+			const startTime = new Date().getTime();
 
 			var results = d20plus.turnOrderCachedFunction.apply(this, []);
 			setTimeout(function () {
@@ -2566,10 +3749,14 @@ const betteR205etoolsMain = function () {
 			}
 			d20plus.initErrorHandler = function (event) {
 				// if we see an error within 250 msec of trying to override the initiative window...
-				if (((new Date).getTime() - startTime) < 250) {
-					d20plus.ut.log("ERROR: failed to populate custom initiative tracker, restoring default...");
+				if (new Date().getTime() - startTime < 250) {
+					d20plus.ut.log(
+						"ERROR: failed to populate custom initiative tracker, restoring default..."
+					);
 					// restore the default functionality
-					$("#tmpl_initiativecharacter").replaceWith(d20plus.turnOrderCachedTemplate);
+					$("#tmpl_initiativecharacter").replaceWith(
+						d20plus.turnOrderCachedTemplate
+					);
 					return d20plus.turnOrderCachedFunction();
 				}
 			};
@@ -2577,7 +3764,8 @@ const betteR205etoolsMain = function () {
 			return results;
 		};
 
-		const getTargetWidth = () => d20plus.cfg.get("interface", "minifyTracker") ? 250 : 350;
+		const getTargetWidth = () =>
+			d20plus.cfg.get("interface", "minifyTracker") ? 250 : 350;
 		// wider tracker
 		const cachedDialog = d20.Campaign.initiativewindow.$el.dialog;
 		d20.Campaign.initiativewindow.$el.dialog = (...args) => {
@@ -2589,7 +3777,12 @@ const betteR205etoolsMain = function () {
 		};
 
 		// if the tracker is already open, widen it
-		if (d20.Campaign.initiativewindow.model.attributes.initiativepage) d20.Campaign.initiativewindow.$el.dialog("option", "width", getTargetWidth());
+		if (d20.Campaign.initiativewindow.model.attributes.initiativepage)
+			d20.Campaign.initiativewindow.$el.dialog(
+				"option",
+				"width",
+				getTargetWidth()
+			);
 	};
 
 	d20plus.psionics._groupOptions = ["Alphabetical", "Order", "Source"];
@@ -2597,20 +3790,28 @@ const betteR205etoolsMain = function () {
 	d20plus.psionics._listItemBuilder = (it) => `
 		<span class="name col-6">${it.name}</span>
 		<span class="order col-4">ORD[${it.order || "None"}]</span>
-		<span title="${Parser.sourceJsonToFull(it.source)}" class="source col-2">SRC[${Parser.sourceJsonToAbv(it.source)}]</span>`;
+		<span title="${Parser.sourceJsonToFull(
+			it.source
+		)}" class="source col-2">SRC[${Parser.sourceJsonToAbv(
+		it.source
+	)}]</span>`;
 	d20plus.psionics._listIndexConverter = (p) => {
 		return {
 			name: p.name.toLowerCase(),
 			order: (p.order || "none").toLowerCase(),
-			source: Parser.sourceJsonToAbv(p.source).toLowerCase()
+			source: Parser.sourceJsonToAbv(p.source).toLowerCase(),
 		};
 	};
-// Import Psionics button was clicked
+	// Import Psionics button was clicked
 	d20plus.psionics.button = function (forcePlayer) {
 		const playerMode = forcePlayer || !window.is_gm;
-		const url = playerMode ? $("#import-psionics-url-player").val() : $("#import-psionics-url").val();
+		const url = playerMode
+			? $("#import-psionics-url-player").val()
+			: $("#import-psionics-url").val();
 		if (url && url.trim()) {
-			const handoutBuilder = playerMode ? d20plus.psionics.playerImportBuilder : d20plus.psionics.handoutBuilder;
+			const handoutBuilder = playerMode
+				? d20plus.psionics.playerImportBuilder
+				: d20plus.psionics.handoutBuilder;
 
 			DataUtil.loadJSON(url).then((data) => {
 				d20plus.importer.addBrewMeta(data._meta);
@@ -2623,14 +3824,22 @@ const betteR205etoolsMain = function () {
 						forcePlayer,
 						listItemBuilder: d20plus.psionics._listItemBuilder,
 						listIndex: d20plus.psionics._listCols,
-						listIndexConverter: d20plus.psionics._listIndexConverter
+						listIndexConverter:
+							d20plus.psionics._listIndexConverter,
 					}
 				);
 			});
 		}
 	};
 
-	d20plus.psionics.handoutBuilder = function (data, overwrite, inJournals, folderName, saveIdsTo, options) {
+	d20plus.psionics.handoutBuilder = function (
+		data,
+		overwrite,
+		inJournals,
+		folderName,
+		saveIdsTo,
+		options
+	) {
 		// make dir
 		const folder = d20plus.journal.makeDirTree(`Psionics`, folderName);
 		const path = ["Psionics", ...folderName, data.name];
@@ -2639,24 +3848,47 @@ const betteR205etoolsMain = function () {
 		if (!d20plus.importer._checkHandleDuplicate(path, overwrite)) return;
 
 		const name = data.name;
-		d20.Campaign.handouts.create({
-			name: name,
-			tags: d20plus.importer.getTagString([
-				Parser.psiTypeToFull(data.type),
-				data.order || "orderless",
-				Parser.sourceJsonToFull(data.source)
-				], "psionic")
-		}, {
-			success: function (handout) {
-				if (saveIdsTo) saveIdsTo[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_PSIONICS](data)] = {name: data.name, source: data.source, type: "handout", roll20Id: handout.id};
+		d20.Campaign.handouts.create(
+			{
+				name: name,
+				tags: d20plus.importer.getTagString(
+					[
+						Parser.psiTypeToFull(data.type),
+						data.order || "orderless",
+						Parser.sourceJsonToFull(data.source),
+					],
+					"psionic"
+				),
+			},
+			{
+				success: function (handout) {
+					if (saveIdsTo)
+						saveIdsTo[
+							UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_PSIONICS](
+								data
+							)
+						] = {
+							name: data.name,
+							source: data.source,
+							type: "handout",
+							roll20Id: handout.id,
+						};
 
-				const [noteContents, gmNotes] = d20plus.psionics._getHandoutData(data);
+					const [noteContents, gmNotes] =
+						d20plus.psionics._getHandoutData(data);
 
-				handout.updateBlobs({notes: noteContents, gmnotes: gmNotes});
-				handout.save({notes: (new Date).getTime(), inplayerjournals: inJournals});
-				d20.journal.addItemToFolderStructure(handout.id, folder.id);
+					handout.updateBlobs({
+						notes: noteContents,
+						gmnotes: gmNotes,
+					});
+					handout.save({
+						notes: new Date().getTime(),
+						inplayerjournals: inJournals,
+					});
+					d20.journal.addItemToFolderStructure(handout.id, folder.id);
+				},
 			}
-		});
+		);
 	};
 
 	d20plus.psionics.playerImportBuilder = function (data) {
@@ -2668,26 +3900,33 @@ const betteR205etoolsMain = function () {
 	};
 
 	d20plus.psionics._getHandoutData = function (data) {
-		function renderTalent () {
+		function renderTalent() {
 			const renderStack = [];
-			renderer.recursiveRender(({entries: data.entries, type: "entries"}), renderStack);
+			renderer.recursiveRender(
+				{ entries: data.entries, type: "entries" },
+				renderStack
+			);
 			return renderStack.join(" ");
 		}
 
 		const renderer = new Renderer();
 		renderer.setBaseUrl(BASE_SITE_URL);
 		const r20json = {
-			"name": data.name,
-			"Vetoolscontent": data,
-			"data": {
-				"Category": "Psionics"
-			}
+			name: data.name,
+			Vetoolscontent: data,
+			data: {
+				Category: "Psionics",
+			},
 		};
 		const gmNotes = JSON.stringify(r20json);
 
 		const baseNoteContents = `
 			<h3>${data.name}</h3>
-			<p><em>${data.type === "D" ? `${data.order} ${Parser.psiTypeToFull(data.type)}` : `${Parser.psiTypeToFull(data.type)}`}</em></p>
+			<p><em>${
+				data.type === "D"
+					? `${data.order} ${Parser.psiTypeToFull(data.type)}`
+					: `${Parser.psiTypeToFull(data.type)}`
+			}</em></p>
 			${Renderer.psionic.getBodyText(data, renderer)}
 			`;
 
@@ -2696,12 +3935,16 @@ const betteR205etoolsMain = function () {
 		return [noteContents, gmNotes];
 	};
 
-// Import Races button was clicked
+	// Import Races button was clicked
 	d20plus.races.button = function (forcePlayer) {
 		const playerMode = forcePlayer || !window.is_gm;
-		const url = playerMode ? $("#import-races-url-player").val() : $("#import-races-url").val();
+		const url = playerMode
+			? $("#import-races-url-player").val()
+			: $("#import-races-url").val();
 		if (url && url.trim()) {
-			const handoutBuilder = playerMode ? d20plus.races.playerImportBuilder : d20plus.races.handoutBuilder;
+			const handoutBuilder = playerMode
+				? d20plus.races.playerImportBuilder
+				: d20plus.races.handoutBuilder;
 
 			DataUtil.loadJSON(url).then((data) => {
 				d20plus.importer.addBrewMeta(data._meta);
@@ -2710,14 +3953,21 @@ const betteR205etoolsMain = function () {
 					Renderer.race.mergeSubraces(data.race),
 					handoutBuilder,
 					{
-						forcePlayer
+						forcePlayer,
 					}
 				);
 			});
 		}
 	};
 
-	d20plus.races.handoutBuilder = function (data, overwrite, inJournals, folderName, saveIdsTo, options) {
+	d20plus.races.handoutBuilder = function (
+		data,
+		overwrite,
+		inJournals,
+		folderName,
+		saveIdsTo,
+		options
+	) {
 		// make dir
 		const folder = d20plus.journal.makeDirTree(`Races`, folderName);
 		const path = ["Races", ...folderName, data.name];
@@ -2726,23 +3976,46 @@ const betteR205etoolsMain = function () {
 		if (!d20plus.importer._checkHandleDuplicate(path, overwrite)) return;
 
 		const name = data.name;
-		d20.Campaign.handouts.create({
-			name: name,
-			tags: d20plus.importer.getTagString([
-				(data.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/"),
-				Parser.sourceJsonToFull(data.source)
-			], "race")
-		}, {
-			success: function (handout) {
-				if (saveIdsTo) saveIdsTo[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES](data)] = {name: data.name, source: data.source, type: "handout", roll20Id: handout.id};
+		d20.Campaign.handouts.create(
+			{
+				name: name,
+				tags: d20plus.importer.getTagString(
+					[
+						(data.size || [SZ_VARIES])
+							.map((sz) => Parser.sizeAbvToFull(sz))
+							.join("/"),
+						Parser.sourceJsonToFull(data.source),
+					],
+					"race"
+				),
+			},
+			{
+				success: function (handout) {
+					if (saveIdsTo)
+						saveIdsTo[
+							UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_RACES](data)
+						] = {
+							name: data.name,
+							source: data.source,
+							type: "handout",
+							roll20Id: handout.id,
+						};
 
-				const [noteContents, gmNotes] = d20plus.races._getHandoutData(data);
+					const [noteContents, gmNotes] =
+						d20plus.races._getHandoutData(data);
 
-				handout.updateBlobs({notes: noteContents, gmnotes: gmNotes});
-				handout.save({notes: (new Date).getTime(), inplayerjournals: inJournals});
-				d20.journal.addItemToFolderStructure(handout.id, folder.id);
+					handout.updateBlobs({
+						notes: noteContents,
+						gmnotes: gmNotes,
+					});
+					handout.save({
+						notes: new Date().getTime(),
+						inplayerjournals: inJournals,
+					});
+					d20.journal.addItemToFolderStructure(handout.id, folder.id);
+				},
 			}
-		});
+		);
 	};
 
 	d20plus.races.playerImportBuilder = function (data) {
@@ -2763,19 +4036,23 @@ const betteR205etoolsMain = function () {
 		<h3>${data.name}</h3>
 		<p>
 			<strong>Ability Scores:</strong> ${ability.asText}<br>
-			<strong>Size:</strong> ${(data.size || [SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/")}<br>
+			<strong>Size:</strong> ${(data.size || [SZ_VARIES])
+				.map((sz) => Parser.sizeAbvToFull(sz))
+				.join("/")}<br>
 			<strong>Speed:</strong> ${Parser.getSpeedString(data)}<br>
 		</p>
 	`);
-		renderer.recursiveRender({entries: data.entries}, renderStack, {depth: 1});
+		renderer.recursiveRender({ entries: data.entries }, renderStack, {
+			depth: 1,
+		});
 		const rendered = renderStack.join("");
 
 		const r20json = {
-			"name": data.name,
-			"Vetoolscontent": data,
-			"data": {
-				"Category": "Races"
-			}
+			name: data.name,
+			Vetoolscontent: data,
+			data: {
+				Category: "Races",
+			},
 		};
 		const gmNotes = JSON.stringify(r20json);
 		const noteContents = `${rendered}\n\n<del class="hidden">${gmNotes}</del>`;
@@ -2783,12 +4060,15 @@ const betteR205etoolsMain = function () {
 		return [noteContents, gmNotes];
 	};
 
-
 	d20plus.optionalfeatures.button = function (forcePlayer) {
 		const playerMode = forcePlayer || !window.is_gm;
-		const url = playerMode ? $("#import-optionalfeatures-url-player").val() : $("#import-optionalfeatures-url").val();
+		const url = playerMode
+			? $("#import-optionalfeatures-url-player").val()
+			: $("#import-optionalfeatures-url").val();
 		if (url && url.trim()) {
-			const handoutBuilder = playerMode ? d20plus.optionalfeatures.playerImportBuilder : d20plus.optionalfeatures.handoutBuilder;
+			const handoutBuilder = playerMode
+				? d20plus.optionalfeatures.playerImportBuilder
+				: d20plus.optionalfeatures.handoutBuilder;
 
 			DataUtil.loadJSON(url).then((data) => {
 				d20plus.importer.addBrewMeta(data._meta);
@@ -2797,42 +4077,74 @@ const betteR205etoolsMain = function () {
 					data.optionalfeature,
 					handoutBuilder,
 					{
-						forcePlayer
+						forcePlayer,
 					}
 				);
 			});
 		}
 	};
 
-	d20plus.optionalfeatures.handoutBuilder = function (data, overwrite, inJournals, folderName, saveIdsTo, options) {
+	d20plus.optionalfeatures.handoutBuilder = function (
+		data,
+		overwrite,
+		inJournals,
+		folderName,
+		saveIdsTo,
+		options
+	) {
 		// make dir
-		const folder = d20plus.journal.makeDirTree(`Optional Features`, folderName);
+		const folder = d20plus.journal.makeDirTree(
+			`Optional Features`,
+			folderName
+		);
 		const path = ["Optional Features", ...folderName, data.name];
 
 		// handle duplicates/overwrites
 		if (!d20plus.importer._checkHandleDuplicate(path, overwrite)) return;
 
 		const name = data.name;
-		d20.Campaign.handouts.create({
-			name: name,
-			tags: d20plus.importer.getTagString([
-				Parser.sourceJsonToFull(data.source)
-			], "optionalfeature")
-		}, {
-			success: function (handout) {
-				if (saveIdsTo) saveIdsTo[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OPT_FEATURES](data)] = {name: data.name, source: data.source, type: "handout", roll20Id: handout.id};
+		d20.Campaign.handouts.create(
+			{
+				name: name,
+				tags: d20plus.importer.getTagString(
+					[Parser.sourceJsonToFull(data.source)],
+					"optionalfeature"
+				),
+			},
+			{
+				success: function (handout) {
+					if (saveIdsTo)
+						saveIdsTo[
+							UrlUtil.URL_TO_HASH_BUILDER[
+								UrlUtil.PG_OPT_FEATURES
+							](data)
+						] = {
+							name: data.name,
+							source: data.source,
+							type: "handout",
+							roll20Id: handout.id,
+						};
 
-				const [noteContents, gmNotes] = d20plus.optionalfeatures._getHandoutData(data);
+					const [noteContents, gmNotes] =
+						d20plus.optionalfeatures._getHandoutData(data);
 
-				handout.updateBlobs({notes: noteContents, gmnotes: gmNotes});
-				handout.save({notes: (new Date).getTime(), inplayerjournals: inJournals});
-				d20.journal.addItemToFolderStructure(handout.id, folder.id);
+					handout.updateBlobs({
+						notes: noteContents,
+						gmnotes: gmNotes,
+					});
+					handout.save({
+						notes: new Date().getTime(),
+						inplayerjournals: inJournals,
+					});
+					d20.journal.addItemToFolderStructure(handout.id, folder.id);
+				},
 			}
-		});
+		);
 	};
 
 	d20plus.optionalfeatures.playerImportBuilder = function (data) {
-		const [notecontents, gmnotes] = d20plus.optionalfeatures._getHandoutData(data);
+		const [notecontents, gmnotes] =
+			d20plus.optionalfeatures._getHandoutData(data);
 
 		const importId = d20plus.ut.generateRowId();
 		d20plus.importer.storePlayerImport(importId, JSON.parse(gmnotes));
@@ -2845,20 +4157,24 @@ const betteR205etoolsMain = function () {
 
 		const renderStack = [];
 
-		renderer.recursiveRender({entries: data.entries}, renderStack, {depth: 1});
+		renderer.recursiveRender({ entries: data.entries }, renderStack, {
+			depth: 1,
+		});
 
 		const rendered = renderStack.join("");
 		const prereqs = Renderer.utils.getPrerequisiteText(data.prerequisites);
 
 		const r20json = {
-			"name": data.name,
-			"Vetoolscontent": data,
-			"data": {
-				"Category": "Optional Features"
-			}
+			name: data.name,
+			Vetoolscontent: data,
+			data: {
+				Category: "Optional Features",
+			},
 		};
 		const gmNotes = JSON.stringify(r20json);
-		const noteContents = `${prereqs ? `<p><i>Prerequisite: ${prereqs}.</i></p>` : ""}${rendered}\n\n<del class="hidden">${gmNotes}</del>`;
+		const noteContents = `${
+			prereqs ? `<p><i>Prerequisite: ${prereqs}.</i></p>` : ""
+		}${rendered}\n\n<del class="hidden">${gmNotes}</del>`;
 
 		return [noteContents, gmNotes];
 	};
@@ -2872,210 +4188,254 @@ const betteR205etoolsMain = function () {
 	// Fetch adventure data from file
 	d20plus.adventures.load = function (url) {
 		$("a.ui-tabs-anchor[href='#journal']").trigger("click");
-		DataUtil.loadJSON(url)
-			.then(data => {
+		DataUtil.loadJSON(url).then((data) => {
+			function isPart(e) {
+				return (
+					typeof e === "string" ||
+					(typeof e === "object" && e.type !== "entries")
+				);
+			}
 
-				function isPart (e) {
-					return typeof e === "string" || typeof e === "object" && (e.type !== "entries");
+			// open progress window
+			$("#d20plus-import").dialog("open");
+			$("#import-remaining").text("Initialising...");
+
+			// FIXME(homebrew) this always selects the first item in a list of homebrew adventures
+			// FIXME(5etools) this selects the source based on the select dropdown, which can be wrong
+			// get metadata
+			const adMeta = data.adventure
+				? data.adventure[0]
+				: adventureMetadata.adventure.find(
+						(a) =>
+							a.id.toLowerCase() ===
+							$("#import-adventures-url").data("id").toLowerCase()
+				  );
+
+			const addQueue = [];
+			const sections = JSON.parse(
+				JSON.stringify(
+					data.adventureData ? data.adventureData[0].data : data.data
+				)
+			);
+			const adDir = `${Parser.sourceJsonToFull(adMeta.id)}`;
+			sections.forEach((s, i) => {
+				if (i >= adMeta.contents.length) return;
+
+				const chapterDir = [adDir, adMeta.contents[i].name];
+
+				const introEntries = [];
+				if (s.entries && s.entries.length && isPart(s.entries[0])) {
+					while (isPart(s.entries[0])) {
+						introEntries.push(s.entries[0]);
+						s.entries.shift();
+					}
 				}
-
-				// open progress window
-				$("#d20plus-import").dialog("open");
-				$("#import-remaining").text("Initialising...");
-
-				// FIXME(homebrew) this always selects the first item in a list of homebrew adventures
-				// FIXME(5etools) this selects the source based on the select dropdown, which can be wrong
-				// get metadata
-				const adMeta = data.adventure
-					? data.adventure[0] :
-					adventureMetadata.adventure.find(a => a.id.toLowerCase() === $("#import-adventures-url").data("id").toLowerCase());
-
-				const addQueue = [];
-				const sections = JSON.parse(JSON.stringify(data.adventureData ? data.adventureData[0].data : data.data));
-				const adDir = `${Parser.sourceJsonToFull(adMeta.id)}`;
-				sections.forEach((s, i) => {
-					if (i >= adMeta.contents.length) return;
-
-					const chapterDir = [adDir, adMeta.contents[i].name];
-
-					const introEntries = [];
-					if (s.entries && s.entries.length && isPart(s.entries[0])) {
-						while (isPart(s.entries[0])) {
-							introEntries.push(s.entries[0]);
-							s.entries.shift();
-						}
-					}
-					addQueue.push({
-						dir: chapterDir,
-						type: "entries",
-						name: s.name,
-						entries: introEntries,
-					});
-
-					// compact entries into layers
-					front = null;
-					let tempStack = [];
-					let textIndex = 1;
-					while ((front = s.entries.shift())) {
-						if (isPart(front)) {
-							tempStack.push(front);
-						} else {
-							if (tempStack.length) {
-								addQueue.push({
-									dir: chapterDir,
-									type: "entries",
-									name: `Text ${textIndex++}`,
-									entries: tempStack
-								});
-								tempStack = [];
-							}
-							front.dir = chapterDir;
-							addQueue.push(front);
-						}
-					}
+				addQueue.push({
+					dir: chapterDir,
+					type: "entries",
+					name: s.name,
+					entries: introEntries,
 				});
 
-				const renderer = new Renderer();
-				renderer.setBaseUrl(BASE_SITE_URL);
+				// compact entries into layers
+				front = null;
+				let tempStack = [];
+				let textIndex = 1;
+				while ((front = s.entries.shift())) {
+					if (isPart(front)) {
+						tempStack.push(front);
+					} else {
+						if (tempStack.length) {
+							addQueue.push({
+								dir: chapterDir,
+								type: "entries",
+								name: `Text ${textIndex++}`,
+								entries: tempStack,
+							});
+							tempStack = [];
+						}
+						front.dir = chapterDir;
+						addQueue.push(front);
+					}
+				}
+			});
 
-				const $stsName = $("#import-name");
-				const $stsRemain = $("#import-remaining");
-				const interval = d20plus.cfg.get("import", "importIntervalHandout") || d20plus.cfg.getDefault("import", "importIntervalHandout");
+			const renderer = new Renderer();
+			renderer.setBaseUrl(BASE_SITE_URL);
 
-				////////////////////////////////////////////////////////////////////////////////////////////////////////
-				Renderer.get().setBaseUrl(BASE_SITE_URL);
-				// pre-import tags
-				const tags = {};
-				renderer.doExportTags(tags);
-				addQueue.forEach(entry => {
-					renderer.recursiveRender(entry, []);
+			const $stsName = $("#import-name");
+			const $stsRemain = $("#import-remaining");
+			const interval =
+				d20plus.cfg.get("import", "importIntervalHandout") ||
+				d20plus.cfg.getDefault("import", "importIntervalHandout");
+
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+			Renderer.get().setBaseUrl(BASE_SITE_URL);
+			// pre-import tags
+			const tags = {};
+			renderer.doExportTags(tags);
+			addQueue.forEach((entry) => {
+				renderer.recursiveRender(entry, []);
+			});
+
+			// storage for returned handout/character IDs
+			const RETURNED_IDS = {};
+
+			// monsters
+			const preMonsters = Object.keys(tags)
+				.filter((k) => tags[k].page === "bestiary.html")
+				.map((k) => tags[k]);
+			if (confirm("Import creatures from this adventure?"))
+				doPreImport(preMonsters, showMonsterImport);
+			else doItemImport();
+
+			function showMonsterImport(toImport) {
+				d20plus.ut.log(
+					`Displaying monster import list for [${adMeta.name}]`
+				);
+				d20plus.importer.showImportList(
+					"monster",
+					toImport.filter((it) => it),
+					d20plus.monsters.handoutBuilder,
+					{
+						groupOptions: d20plus.monsters._groupOptions,
+						saveIdsTo: RETURNED_IDS,
+						callback: doItemImport,
+						listItemBuilder: d20plus.monsters._listItemBuilder,
+						listIndex: d20plus.monsters._listCols,
+						listIndexConverter:
+							d20plus.monsters._listIndexConverter,
+					}
+				);
+			}
+
+			// items
+			function doItemImport() {
+				const preItems = Object.keys(tags)
+					.filter((k) => tags[k].page === "items.html")
+					.map((k) => tags[k]);
+				if (confirm("Import items from this adventure?"))
+					doPreImport(preItems, showItemImport);
+				else doMainImport();
+			}
+
+			function showItemImport(toImport) {
+				d20plus.ut.log(
+					`Displaying item import list for [${adMeta.name}]`
+				);
+				d20plus.importer.showImportList(
+					"item",
+					toImport.filter((it) => it),
+					d20plus.items.handoutBuilder,
+					{
+						groupOptions: d20plus.items._groupOptions,
+						saveIdsTo: RETURNED_IDS,
+						callback: doMainImport,
+						listItemBuilder: d20plus.items._listItemBuilder,
+						listIndex: d20plus.items._listCols,
+						listIndexConverter: d20plus.items._listIndexConverter,
+					}
+				);
+			}
+
+			function doPreImport(asTags, callback) {
+				const tmp = [];
+				let cachedCount = asTags.length;
+				// FIXME crappy inefficient conversion to promise-based version; requires cleanup
+				asTags.forEach(async (it) => {
+					try {
+						await Renderer.hover.pCacheAndGet(
+							it.page,
+							it.source,
+							it.hash
+						);
+						tmp.push(
+							Renderer.hover.getFromCache(
+								it.page,
+								it.source,
+								it.hash
+							)
+						);
+						cachedCount--;
+						if (cachedCount <= 0) callback(tmp);
+					} catch (x) {
+						console.log(x);
+						cachedCount--;
+						if (cachedCount <= 0) callback(tmp);
+					}
+				});
+			}
+			////////////////////////////////////////////////////////////////////////////////////////////////////////
+			function doMainImport() {
+				// pass in any created handouts/characters to use for links in the renderer
+				renderer.setRoll20Ids(RETURNED_IDS);
+
+				let cancelWorker = false;
+				const $btnCancel = $(`#importcancel`);
+				$btnCancel.off("click");
+				$btnCancel.on("click", () => {
+					cancelWorker = true;
 				});
 
-				// storage for returned handout/character IDs
-				const RETURNED_IDS = {};
+				let remaining = addQueue.length;
 
-				// monsters
-				const preMonsters = Object.keys(tags)
-					.filter(k => tags[k].page === "bestiary.html")
-					.map(k => tags[k]);
-				if (confirm("Import creatures from this adventure?")) doPreImport(preMonsters, showMonsterImport);
-				else doItemImport();
+				d20plus.ut.log(
+					`Running import of [${adMeta.name}] with ${interval} ms delay between each handout create`
+				);
+				let lastId = null;
+				let lastName = null;
 
-				function showMonsterImport (toImport) {
-					d20plus.ut.log(`Displaying monster import list for [${adMeta.name}]`);
-					d20plus.importer.showImportList(
-						"monster",
-						toImport.filter(it => it),
-						d20plus.monsters.handoutBuilder,
-						{
-							groupOptions: d20plus.monsters._groupOptions,
-							saveIdsTo: RETURNED_IDS,
-							callback: doItemImport,
-							listItemBuilder: d20plus.monsters._listItemBuilder,
-							listIndex: d20plus.monsters._listCols,
-							listIndexConverter: d20plus.monsters._listIndexConverter
-						}
+				const worker = setInterval(() => {
+					if (!addQueue.length || cancelWorker) {
+						clearInterval(worker);
+						$stsName.text("DONE!");
+						$stsRemain.text("0");
+						d20plus.ut.log(`Finished import of [${adMeta.name}]`);
+						renderer.resetRoll20Ids();
+						return;
+					}
+
+					// pull items out the queue in LIFO order, for journal ordering (last created will be at the top)
+					const entry = addQueue.pop();
+					entry.name = entry.name || "(Unknown)";
+					entry.name = d20plus.importer.getCleanText(
+						renderer.render(entry.name)
 					);
-				}
+					$stsName.text(entry.name);
+					$stsRemain.text(remaining--);
+					const folder = d20plus.journal.makeDirTree(entry.dir);
 
-				// items
-				function doItemImport () {
-					const preItems = Object.keys(tags)
-						.filter(k => tags[k].page === "items.html")
-						.map(k => tags[k]);
-					if (confirm("Import items from this adventure?")) doPreImport(preItems, showItemImport);
-					else doMainImport();
-				}
-
-				function showItemImport (toImport) {
-					d20plus.ut.log(`Displaying item import list for [${adMeta.name}]`);
-					d20plus.importer.showImportList(
-						"item",
-						toImport.filter(it => it),
-						d20plus.items.handoutBuilder,
+					d20.Campaign.handouts.create(
 						{
-							groupOptions: d20plus.items._groupOptions,
-							saveIdsTo: RETURNED_IDS,
-							callback: doMainImport,
-							listItemBuilder: d20plus.items._listItemBuilder,
-							listIndex: d20plus.items._listCols,
-							listIndexConverter: d20plus.items._listIndexConverter
-						}
-					);
-				}
-
-				function doPreImport (asTags, callback) {
-					const tmp = [];
-					let cachedCount = asTags.length;
-					// FIXME crappy inefficient conversion to promise-based version; requires cleanup
-					asTags.forEach(async it => {
-						try {
-							await Renderer.hover.pCacheAndGet(it.page, it.source, it.hash);
-							tmp.push(Renderer.hover.getFromCache(it.page, it.source, it.hash));
-							cachedCount--;
-							if (cachedCount <= 0) callback(tmp);
-						} catch (x) {
-							console.log(x);
-							cachedCount--;
-							if (cachedCount <= 0) callback(tmp);
-						}
-					});
-				}
-				////////////////////////////////////////////////////////////////////////////////////////////////////////
-				function doMainImport () {
-					// pass in any created handouts/characters to use for links in the renderer
-					renderer.setRoll20Ids(RETURNED_IDS);
-
-					let cancelWorker = false;
-					const $btnCancel = $(`#importcancel`);
-					$btnCancel.off("click");
-					$btnCancel.on("click", () => {
-						cancelWorker = true;
-					});
-
-					let remaining = addQueue.length;
-
-					d20plus.ut.log(`Running import of [${adMeta.name}] with ${interval} ms delay between each handout create`);
-					let lastId = null;
-					let lastName = null;
-
-					const worker = setInterval(() => {
-						if (!addQueue.length || cancelWorker) {
-							clearInterval(worker);
-							$stsName.text("DONE!");
-							$stsRemain.text("0");
-							d20plus.ut.log(`Finished import of [${adMeta.name}]`);
-							renderer.resetRoll20Ids();
-							return;
-						}
-
-						// pull items out the queue in LIFO order, for journal ordering (last created will be at the top)
-						const entry = addQueue.pop();
-						entry.name = entry.name || "(Unknown)";
-						entry.name = d20plus.importer.getCleanText(renderer.render(entry.name));
-						$stsName.text(entry.name);
-						$stsRemain.text(remaining--);
-						const folder = d20plus.journal.makeDirTree(entry.dir);
-
-						d20.Campaign.handouts.create({
-							name: entry.name
-						}, {
+							name: entry.name,
+						},
+						{
 							success: function (handout) {
 								const renderStack = [];
 								renderer.recursiveRender(entry, renderStack);
-								if (lastId && lastName) renderStack.push(`<br><p>Next handout: <a href="http://journal.roll20.net/handout/${lastId}">${lastName}</a></p>`);
+								if (lastId && lastName)
+									renderStack.push(
+										`<br><p>Next handout: <a href="http://journal.roll20.net/handout/${lastId}">${lastName}</a></p>`
+									);
 								const rendered = renderStack.join("");
 
 								lastId = handout.id;
 								lastName = entry.name;
-								handout.updateBlobs({notes: rendered});
-								handout.save({notes: (new Date).getTime(), inplayerjournals: ""});
-								d20.journal.addItemToFolderStructure(handout.id, folder.id);
-							}
-						});
-					}, interval);
-				}
-			});
+								handout.updateBlobs({ notes: rendered });
+								handout.save({
+									notes: new Date().getTime(),
+									inplayerjournals: "",
+								});
+								d20.journal.addItemToFolderStructure(
+									handout.id,
+									folder.id
+								);
+							},
+						}
+					);
+				}, interval);
+			}
+		});
 	};
 
 	d20plus.miniInitStyle = `
@@ -3444,7 +4804,6 @@ To import from third-party sources, either individually select one available in 
 </div>
 `;
 
-
 	d20plus.settingsHtmlPtOptfeatures = `
 <div class="importer-section" data-import-group="optionalfeature">
 <h4>Optional Feature (Invocations, etc.) Importing</h4>
@@ -3494,80 +4853,80 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 	d20plus.css.cssRules = d20plus.css.cssRules.concat([
 		{
 			s: ".no-shrink",
-			r: "flex-shrink: 0;"
+			r: "flex-shrink: 0;",
 		},
 		{
 			s: "#initiativewindow ul li span.initiative,#initiativewindow ul li span.tracker-col,#initiativewindow ul li span.initmacro",
-			r: "font-size: 25px;font-weight: bold;text-align: right;float: right;padding: 2px 5px;width: 10%;min-height: 20px;display: block;"
+			r: "font-size: 25px;font-weight: bold;text-align: right;float: right;padding: 2px 5px;width: 10%;min-height: 20px;display: block;",
 		},
 		{
 			s: "#initiativewindow ul li span.editable input",
-			r: "width: 100%; box-sizing: border-box;height: 100%;"
+			r: "width: 100%; box-sizing: border-box;height: 100%;",
 		},
 		{
 			s: "#initiativewindow div.header",
-			r: "height: 30px;"
+			r: "height: 30px;",
 		},
 		{
 			s: "#initiativewindow div.header span",
-			r: "cursor: default;font-size: 15px;font-weight: bold;text-align: right;float: right;width: 10%;min-height: 20px;padding: 5px;"
+			r: "cursor: default;font-size: 15px;font-weight: bold;text-align: right;float: right;width: 10%;min-height: 20px;padding: 5px;",
 		},
 		{
 			s: ".ui-dialog-buttonpane span.difficulty",
-			r: "display: inline-block;padding: 5px 4px 6px;margin: .5em .4em .5em 0;font-size: 18px;"
+			r: "display: inline-block;padding: 5px 4px 6px;margin: .5em .4em .5em 0;font-size: 18px;",
 		},
 		{
 			s: ".ui-dialog-buttonpane.buttonpane-absolute-position",
-			r: "position: absolute;bottom: 0;box-sizing: border-box;width: 100%;"
+			r: "position: absolute;bottom: 0;box-sizing: border-box;width: 100%;",
 		},
 		{
 			s: ".ui-dialog.dialog-collapsed .ui-dialog-buttonpane",
-			r: "position: initial;"
+			r: "position: initial;",
 		},
 		{
 			s: ".token .cr,.header .cr",
-			r: "display: none!important;"
+			r: "display: none!important;",
 		},
 		{
 			s: "li.handout.compendium-item .namecontainer",
-			r: "box-shadow: inset 0px 0px 25px 2px rgb(195, 239, 184);"
+			r: "box-shadow: inset 0px 0px 25px 2px rgb(195, 239, 184);",
 		},
 		{
 			s: ".bind-drop-locations:active",
-			r: "box-shadow: inset 0px 0px 25px 2px rgb(195, 239, 184);"
+			r: "box-shadow: inset 0px 0px 25px 2px rgb(195, 239, 184);",
 		},
 		{
 			s: "del.userscript-hidden",
-			r: "display: none;"
+			r: "display: none;",
 		},
 		{
 			s: ".importer-section",
-			r: "display: none;"
+			r: "display: none;",
 		},
 		{
 			s: ".userscript-rd__h",
-			r: "font-weight: bold;"
+			r: "font-weight: bold;",
 		},
 		{
 			s: ".userscript-rd__h--0",
-			r: "font-weight: bold; font-size: 1.5em;"
+			r: "font-weight: bold; font-size: 1.5em;",
 		},
 		{
 			s: ".userscript-rd__h--2",
-			r: "font-weight: bold; font-size: 1.3em;"
+			r: "font-weight: bold; font-size: 1.3em;",
 		},
 		{
 			s: ".userscript-rd__h--3, .userscript-rd__h--4",
-			r: "font-style: italic"
+			r: "font-style: italic",
 		},
 		{
 			s: ".userscript-rd__b-inset--readaloud",
-			r: "background: #cbd6c688 !important"
+			r: "background: #cbd6c688 !important",
 		},
 		// "No character sheet" message
 		{
 			s: ".ve-nosheet__body",
-			r: "overflow: hidden !important;"
+			r: "overflow: hidden !important;",
 		},
 		{
 			s: ".ve-nosheet__overlay",
@@ -3582,18 +4941,18 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 				width: 100vw;
 				height: 100vh;
 				color: white;
-				font-family: monospace;`
+				font-family: monospace;`,
 		},
 		{
 			s: ".ve-nosheet__title",
-			r: "font-size: 72px;"
+			r: "font-size: 72px;",
 		},
 		{
 			s: ".ve-nosheet__btn-close",
 			r: `position: absolute;
 				top: 8px;
 				right: 8px;
-				font-size: 16px;`
+				font-size: 16px;`,
 		},
 	]);
 
@@ -3626,7 +4985,9 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 				const $win = $("#d20plus-shapeshiftbuild");
 				$win.dialog("open");
 
-				const toLoad = Object.keys(monsterDataUrls).map(src => d20plus.monsters.formMonsterUrl(monsterDataUrls[src]));
+				const toLoad = Object.keys(monsterDataUrls).map((src) =>
+					d20plus.monsters.formMonsterUrl(monsterDataUrls[src])
+				);
 
 				const $fltr = $win.find(`.filter`);
 				$fltr.off("keydown").off("keyup");
@@ -3635,27 +4996,37 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 				const $lst = $win.find(`.list`);
 				let tokenList;
 
-				const dataStack = (await Promise.all(toLoad.map(async url => await DataUtil.loadJSON(url)))).flat();
+				const dataStack = (
+					await Promise.all(
+						toLoad.map(async (url) => await DataUtil.loadJSON(url))
+					)
+				).flat();
 
 				$lst.empty();
 				let toShow = [];
 
 				const seen = {};
-				await Promise.all(dataStack.map(async d => {
-					const toAdd = d.monster.filter(m => {
-						const out = !(seen[m.source] && seen[m.source].has(m.name));
-						if (!seen[m.source]) seen[m.source] = new Set();
-						seen[m.source].add(m.name);
-						return out;
-					});
+				await Promise.all(
+					dataStack.map(async (d) => {
+						const toAdd = d.monster.filter((m) => {
+							const out = !(
+								seen[m.source] && seen[m.source].has(m.name)
+							);
+							if (!seen[m.source]) seen[m.source] = new Set();
+							seen[m.source].add(m.name);
+							return out;
+						});
 
-					toShow = toShow.concat(toAdd);
-				}));
+						toShow = toShow.concat(toAdd);
+					})
+				);
 
-				toShow = toShow.sort((a, b) => SortUtil.ascSort(a.name, b.name));
+				toShow = toShow.sort((a, b) =>
+					SortUtil.ascSort(a.name, b.name)
+				);
 
 				let tmp = "";
-				toShow.forEach((m, i)  => {
+				toShow.forEach((m, i) => {
 					m.__pType = Parser.monTypeToFullObj(m.type).asText;
 
 					tmp += `
@@ -3663,8 +5034,16 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 									<input type="checkbox">
 									<span class="name col-4">${m.name}</span>
 									<span class="type col-4">TYP[${m.__pType.uppercaseFirst()}]</span>
-									<span class="cr col-2">${m.cr === undefined ? "CR[Unknown]" : `CR[${(m.cr.cr || m.cr)}]`}</span>
-									<span title="${Parser.sourceJsonToFull(m.source)}" class="source">SRC[${Parser.sourceJsonToAbv(m.source)}]</span>
+									<span class="cr col-2">${
+										m.cr === undefined
+											? "CR[Unknown]"
+											: `CR[${m.cr.cr || m.cr}]`
+									}</span>
+									<span title="${Parser.sourceJsonToFull(
+										m.source
+									)}" class="source">SRC[${Parser.sourceJsonToAbv(
+						m.source
+					)}]</span>
 								</label>
 							`;
 				});
@@ -3672,13 +5051,18 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 				tmp = null;
 
 				tokenList = new List("shapeshiftbuild-list", {
-					valueNames: ["name", "type", "cr", "source"]
+					valueNames: ["name", "type", "cr", "source"],
 				});
 
-				d20plus.importer.addListFilter($fltr, toShow, tokenList, d20plus.monsters._listIndexConverter);
+				d20plus.importer.addListFilter(
+					$fltr,
+					toShow,
+					tokenList,
+					d20plus.monsters._listIndexConverter
+				);
 
 				$win.find(`button`).on("click", () => {
-					function getSizeInTiles (size) {
+					function getSizeInTiles(size) {
 						switch (size) {
 							case SZ_TINY:
 								return 0.5;
@@ -3698,31 +5082,47 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 
 					console.log("Assembling creature list");
 					if (tokenList) {
-						$("a.ui-tabs-anchor[href='#deckstables']").trigger("click");
+						$("a.ui-tabs-anchor[href='#deckstables']").trigger(
+							"click"
+						);
 
 						const sel = tokenList.items
-							.filter(it => $(it.elm).find(`input`).prop("checked"))
-							.map(it => toShow[$(it.elm).attr("data-listid")]);
+							.filter((it) =>
+								$(it.elm).find(`input`).prop("checked")
+							)
+							.map((it) => toShow[$(it.elm).attr("data-listid")]);
 
 						const id = d20.Campaign.rollabletables.create().id;
 						const table = d20.Campaign.rollabletables.get(id);
-						table.set("name", $(`#shapeshift-name`).val().trim() || "Shapeshifter");
+						table.set(
+							"name",
+							$(`#shapeshift-name`).val().trim() || "Shapeshifter"
+						);
 						table.save();
-						sel.forEach(m => {
+						sel.forEach((m) => {
 							const item = table.tableitems.create();
 							item.set("name", m.name);
 							// encode size info into the URL, which will get baked into the token
-							const avatar = m.tokenUrl || `${IMG_URL}${Parser.sourceJsonToAbv(m.source)}/${m.name.replace(/"/g, "")}.png?roll20_token_size=${getSizeInTiles(m.size)}`;
+							const avatar =
+								m.tokenUrl ||
+								`${IMG_URL}${Parser.sourceJsonToAbv(
+									m.source
+								)}/${m.name.replace(
+									/"/g,
+									""
+								)}.png?roll20_token_size=${getSizeInTiles(
+									m.size
+								)}`;
 							item.set("avatar", avatar);
 							item.set("token_size", getSizeInTiles(m.size));
 							item.save();
 						});
 						table.save();
 						d20.rollabletables.refreshTablesList();
-						alert("Created table!")
+						alert("Created table!");
 					}
 				});
-			}
+			},
 		},
 		{
 			name: "Pauper's Character Vault",
@@ -3753,9 +5153,17 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 
 				const $selChar = $win.find(`select[name="sel_char"]`).empty();
 
-				$selChar.append(d20.Campaign.characters.toJSON().sort((a, b) => SortUtil.ascSort(a.name, b.name)).map(c => {
-					return `<option value="${c.id}">${c.name || `(Unnamed; ID ${c.id})`}</option>`
-				}).join(""));
+				$selChar.append(
+					d20.Campaign.characters
+						.toJSON()
+						.sort((a, b) => SortUtil.ascSort(a.name, b.name))
+						.map((c) => {
+							return `<option value="${c.id}">${
+								c.name || `(Unnamed; ID ${c.id})`
+							}</option>`;
+						})
+						.join("")
+				);
 
 				const $btnDl = $win.find(`.download`);
 				$btnDl.off("click");
@@ -3766,10 +5174,14 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 					char.attribs = rawChar.attribs.toJSON();
 					const out = {
 						char,
-						blobs: {}
+						blobs: {},
 					};
 					blobCount = 3;
-					const onBlobsReady = () => d20plus.ut.saveAsJson(char.name.replace(/[^0-9A-Za-z -_()[\]{}]/, "_"), out);
+					const onBlobsReady = () =>
+						d20plus.ut.saveAsJson(
+							char.name.replace(/[^0-9A-Za-z -_()[\]{}]/, "_"),
+							out
+						);
 
 					const handleBlob = (asKey, data) => {
 						out.blobs[asKey] = data;
@@ -3777,16 +5189,33 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 						if (blobCount === 0) onBlobsReady();
 					};
 
-					rawChar._getLatestBlob("bio", (data) => handleBlob("bio", data));
-					rawChar._getLatestBlob("gmnotes", (data) => handleBlob("gmnotes", data));
-					rawChar._getLatestBlob("defaulttoken", (data) => handleBlob("defaulttoken", data));
+					rawChar._getLatestBlob("bio", (data) =>
+						handleBlob("bio", data)
+					);
+					rawChar._getLatestBlob("gmnotes", (data) =>
+						handleBlob("gmnotes", data)
+					);
+					rawChar._getLatestBlob("defaulttoken", (data) =>
+						handleBlob("defaulttoken", data)
+					);
 				});
 
-				const $selPlayer = $win.find(`select[name="sel_player"]`).empty().append(`<option value="">Assign to...</option>`);
+				const $selPlayer = $win
+					.find(`select[name="sel_player"]`)
+					.empty()
+					.append(`<option value="">Assign to...</option>`);
 				$selPlayer[0].selectedIndex = 0;
-				d20.Campaign.players.toJSON()
-					.sort((a, b) => SortUtil.ascSortLower(a.displayname, b.displayname))
-					.forEach(pl => $(`<option/>`).text(pl.displayname).val(pl.id).appendTo($selPlayer));
+				d20.Campaign.players
+					.toJSON()
+					.sort((a, b) =>
+						SortUtil.ascSortLower(a.displayname, b.displayname)
+					)
+					.forEach((pl) =>
+						$(`<option/>`)
+							.text(pl.displayname)
+							.val(pl.id)
+							.appendTo($selPlayer)
+					);
 
 				const $btnUl = $win.find(`.upload`);
 				$btnUl.off("click");
@@ -3804,54 +5233,72 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 							const json = JSON.parse(text);
 
 							if (!json.char) {
-								window.alert("Failed to import character! See the log for details.");
-								console.error(`No "char" attribute found in parsed JSON!`);
+								window.alert(
+									"Failed to import character! See the log for details."
+								);
+								console.error(
+									`No "char" attribute found in parsed JSON!`
+								);
 								return;
 							}
 							const char = json.char;
 
-							const assignTo = d20plus.ut.get$SelValue($selPlayer);
+							const assignTo =
+								d20plus.ut.get$SelValue($selPlayer);
 							if (assignTo) {
 								char.inplayerjournals = assignTo;
-								char.controlledby = assignTo
+								char.controlledby = assignTo;
 							}
 
 							const newId = d20plus.ut.generateRowId();
 							d20.Campaign.characters.create(
 								{
 									...char,
-									id: newId
+									id: newId,
 								},
 								{
 									success: function (character) {
 										try {
 											character.attribs.reset();
 											if (!char.attribs) {
-												window.alert(`Warning: Uploaded character had no "attribs" attribute. The character sheet will contain no data.`);
+												window.alert(
+													`Warning: Uploaded character had no "attribs" attribute. The character sheet will contain no data.`
+												);
 												return;
 											}
-											const toSave = char.attribs.map(a => character.attribs.push(a));
-											toSave.forEach(s => s.syncedSave());
+											const toSave = char.attribs.map(
+												(a) => character.attribs.push(a)
+											);
+											toSave.forEach((s) =>
+												s.syncedSave()
+											);
 
 											const blobs = json.blobs;
 											if (blobs) {
 												character.updateBlobs({
 													bio: blobs.bio || "",
-													gmnotes: blobs.gmnotes || "",
-													defaulttoken: blobs.defaulttoken || ""
+													gmnotes:
+														blobs.gmnotes || "",
+													defaulttoken:
+														blobs.defaulttoken ||
+														"",
 												});
 											}
-											alert("Done!")
+											alert("Done!");
 										} catch (e) {
-											window.alert("Failed to import character! See the log for details.");
+											window.alert(
+												"Failed to import character! See the log for details."
+											);
 											console.error(e);
 										}
-									}
+									},
 								}
 							);
 						} catch (e) {
 							console.error(e);
-							window.alert("Failed to load file! See the log for details.")
+							window.alert(
+								"Failed to load file! See the log for details."
+							);
 						}
 					};
 					input.onchange = function () {
@@ -3860,7 +5307,7 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 
 					$iptFile.click();
 				});
-			}
+			},
 		},
 		{
 			name: "Wild Shape Builder",
@@ -3894,23 +5341,39 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 
 				const $selChar = $(`#wildform-character`);
 				$selChar.empty();
-				$selChar.append(`<option value="" disabled>Select Character</option>`);
-				const allChars = d20.Campaign.characters.toJSON().map(it => {
-					const out = {id: it.id, name: it.name || ""};
-					const npc = d20.Campaign.characters.get(it.id).attribs.toJSON().find(it => it.name === "npc");
+				$selChar.append(
+					`<option value="" disabled>Select Character</option>`
+				);
+				const allChars = d20.Campaign.characters.toJSON().map((it) => {
+					const out = { id: it.id, name: it.name || "" };
+					const npc = d20.Campaign.characters
+						.get(it.id)
+						.attribs.toJSON()
+						.find((it) => it.name === "npc");
 					out.npc = !!(npc && npc.current && Number(npc.current));
 					return out;
 				});
 				let hasNpc = false;
-				allChars.sort((a, b) => a.npc - b.npc || SortUtil.ascSort(a.name.toLowerCase(), b.name.toLowerCase()))
-					.forEach(it => {
+				allChars
+					.sort(
+						(a, b) =>
+							a.npc - b.npc ||
+							SortUtil.ascSort(
+								a.name.toLowerCase(),
+								b.name.toLowerCase()
+							)
+					)
+					.forEach((it) => {
 						if (it.npc && !hasNpc) {
-							$selChar.append(`<option value="" disabled>--NPCs--</option>`);
+							$selChar.append(
+								`<option value="" disabled>--NPCs--</option>`
+							);
 							hasNpc = true;
 						}
-						$selChar.append(`<option value="${it.id}">${it.name}</option>`)
+						$selChar.append(
+							`<option value="${it.id}">${it.name}</option>`
+						);
 					});
-
 
 				const $fltr = $win.find(`.filter`);
 				$fltr.off("keydown").off("keyup");
@@ -3920,29 +5383,41 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 
 				let tokenList;
 
-				const toLoad = Object.keys(monsterDataUrls).map(src => d20plus.monsters.formMonsterUrl(monsterDataUrls[src]));
+				const toLoad = Object.keys(monsterDataUrls).map((src) =>
+					d20plus.monsters.formMonsterUrl(monsterDataUrls[src])
+				);
 
-				const dataStack = (await Promise.all(toLoad.map(async url => DataUtil.loadJSON(url)))).flat();
+				const dataStack = (
+					await Promise.all(
+						toLoad.map(async (url) => DataUtil.loadJSON(url))
+					)
+				).flat();
 
 				$lst.empty();
 				let toShow = [];
 
 				const seen = {};
-				await Promise.all(dataStack.map(async d => {
-					const toAdd = d.monster.filter(m => {
-						const out = !(seen[m.source] && seen[m.source].has(m.name));
-						if (!seen[m.source]) seen[m.source] = new Set();
-						seen[m.source].add(m.name);
-						return out;
-					});
+				await Promise.all(
+					dataStack.map(async (d) => {
+						const toAdd = d.monster.filter((m) => {
+							const out = !(
+								seen[m.source] && seen[m.source].has(m.name)
+							);
+							if (!seen[m.source]) seen[m.source] = new Set();
+							seen[m.source].add(m.name);
+							return out;
+						});
 
-					toShow = toShow.concat(toAdd);
-				}));
+						toShow = toShow.concat(toAdd);
+					})
+				);
 
-				toShow = toShow.sort((a, b) => SortUtil.ascSort(a.name, b.name));
+				toShow = toShow.sort((a, b) =>
+					SortUtil.ascSort(a.name, b.name)
+				);
 
 				let tmp = "";
-				toShow.forEach((m, i)  => {
+				toShow.forEach((m, i) => {
 					m.__pType = Parser.monTypeToFullObj(m.type).asText;
 
 					tmp += `
@@ -3950,8 +5425,16 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 								<input type="checkbox">
 								<span class="name col-4">${m.name}</span>
 								<span class="type col-4">TYP[${m.__pType.uppercaseFirst()}]</span>
-								<span class="cr col-2">${m.cr === undefined ? "CR[Unknown]" : `CR[${(m.cr.cr || m.cr)}]`}</span>
-								<span title="${Parser.sourceJsonToFull(m.source)}" class="source">SRC[${Parser.sourceJsonToAbv(m.source)}]</span>
+								<span class="cr col-2">${
+									m.cr === undefined
+										? "CR[Unknown]"
+										: `CR[${m.cr.cr || m.cr}]`
+								}</span>
+								<span title="${Parser.sourceJsonToFull(
+									m.source
+								)}" class="source">SRC[${Parser.sourceJsonToAbv(
+						m.source
+					)}]</span>
 								</label>
 								`;
 				});
@@ -3959,119 +5442,190 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 				tmp = null;
 
 				tokenList = new List("wildformbuild-list", {
-					valueNames: ["name", "type", "cr", "source"]
+					valueNames: ["name", "type", "cr", "source"],
 				});
 
-				d20plus.importer.addListFilter($fltr, toShow, tokenList, d20plus.monsters._listIndexConverter);
+				d20plus.importer.addListFilter(
+					$fltr,
+					toShow,
+					tokenList,
+					d20plus.monsters._listIndexConverter
+				);
 
 				$win.find(`button`).on("click", () => {
 					const allSel = tokenList.items
-						.filter(it => $(it.elm).find(`input`).prop("checked"))
-						.map(it => toShow[$(it.elm).attr("data-listid")]);
+						.filter((it) => $(it.elm).find(`input`).prop("checked"))
+						.map((it) => toShow[$(it.elm).attr("data-listid")]);
 
 					const character = $selChar.val();
 					if (!character) return alert("No character selected!");
 
 					const d20Character = d20.Campaign.characters.get(character);
-					if (!d20Character) return alert("Failed to get character data!");
+					if (!d20Character)
+						return alert("Failed to get character data!");
 
-					const getAttrib = (name) => d20Character.attribs.toJSON().find(x => x.name === name);
+					const getAttrib = (name) =>
+						d20Character.attribs
+							.toJSON()
+							.find((x) => x.name === name);
 
-					allSel.filter(it => it).forEach(sel => {
-						sel = $.extend(true, {}, sel);
+					allSel
+						.filter((it) => it)
+						.forEach((sel) => {
+							sel = $.extend(true, {}, sel);
 
-						sel.wis = (d20Character.attribs.toJSON().find(x => x.name === "wisdom")|| {}).current || 10;
-						sel.int = (d20Character.attribs.toJSON().find(x => x.name === "intelligence")|| {}).current || 10;
-						sel.cha = (d20Character.attribs.toJSON().find(x => x.name === "charisma")|| {}).current || 10;
+							sel.wis =
+								(
+									d20Character.attribs
+										.toJSON()
+										.find((x) => x.name === "wisdom") || {}
+								).current || 10;
+							sel.int =
+								(
+									d20Character.attribs
+										.toJSON()
+										.find(
+											(x) => x.name === "intelligence"
+										) || {}
+								).current || 10;
+							sel.cha =
+								(
+									d20Character.attribs
+										.toJSON()
+										.find((x) => x.name === "charisma") ||
+									{}
+								).current || 10;
 
-						const attribsSkills = {
-							acrobatics_bonus: "acrobatics",
-							animal_handling_bonus: "animal_handling",
-							arcana_bonus: "arcana",
-							athletics_bonus: "athletics",
-							deception_bonus: "deception",
-							history_bonus: "history",
-							insight_bonus: "insight",
-							intimidation_bonus: "intimidation",
-							investigation_bonus: "investigation",
-							medicine_bonus: "medicine",
-							nature_bonus: "nature",
-							perception_bonus: "perception",
-							performance_bonus: "performance",
-							persuasion_bonus: "persuasion",
-							religion_bonus: "religion",
-							slight_of_hand_bonus: "slight_of_hand",
-							stealth_bonus: "stealth",
-						};
-						const attribsSaves = {
-							npc_int_save: "int",
-							npc_wis_save: "wis",
-							npc_cha_save: "cha"
-						};
-						sel.skill = sel.skill || {};
-						sel.save = sel.save || {};
+							const attribsSkills = {
+								acrobatics_bonus: "acrobatics",
+								animal_handling_bonus: "animal_handling",
+								arcana_bonus: "arcana",
+								athletics_bonus: "athletics",
+								deception_bonus: "deception",
+								history_bonus: "history",
+								insight_bonus: "insight",
+								intimidation_bonus: "intimidation",
+								investigation_bonus: "investigation",
+								medicine_bonus: "medicine",
+								nature_bonus: "nature",
+								perception_bonus: "perception",
+								performance_bonus: "performance",
+								persuasion_bonus: "persuasion",
+								religion_bonus: "religion",
+								slight_of_hand_bonus: "slight_of_hand",
+								stealth_bonus: "stealth",
+							};
+							const attribsSaves = {
+								npc_int_save: "int",
+								npc_wis_save: "wis",
+								npc_cha_save: "cha",
+							};
+							sel.skill = sel.skill || {};
+							sel.save = sel.save || {};
 
-						for (const a in attribsSkills) {
-							const characterValue = getAttrib(a);
-							if (characterValue) {
-								sel.skill[attribsSkills[a]] = Math.max(sel.skill[attribsSkills[a]] || 0, characterValue.current);
-							}
-						}
-
-						for (const a in attribsSaves) {
-							const characterValue = getAttrib(a);
-							if (characterValue) {
-								sel.save[attribsSkills[a]] = Math.max(sel.save[attribsSkills[a]] || 0, characterValue.current);
-							}
-						}
-
-						(() => {
-							const attr = d20plus.sheet === "ogl" ? "passive_wisdom" : d20plus.sheet === "shaped" ? "perception" : "";
-							if (!attr) return;
-							const charAttr = getAttrib(attr);
-							if (!charAttr) return;
-							const passivePer = Number(charAttr.current || 0) + (d20plus.sheet === "shaped" ? 10 : 0);
-							sel.passive = Math.max(passivePer, sel.passive);
-						})();
-
-						const doBuild = (result) => {
-							const options = {
-								charFunction: (character) => {
-									character._getLatestBlob("defaulttoken", y => {
-										if (y) {
-											const token = JSON.parse(y);
-											token.name = `${sel.name} (${d20Character.attributes.name})`;
-											token.showplayers_aura1 = true;
-											token.showplayers_aura2 = true;
-											token.showplayers_bar1 = true;
-											token.showplayers_bar2 = true;
-											token.showplayers_bar3 = true;
-											token.showplayers_name = true;
-											token.bar3_max = result.total;
-											token.bar3_value = result.total;
-											character.updateBlobs({defaulttoken: JSON.stringify(token)});
-											character.save({defaulttoken: (new Date()).getTime()});
-										}
-									});
-
-									$("a.ui-tabs-anchor[href='#journal']").trigger("click");
-								},
-								charOptions: {
-									inplayerjournals: d20Character.attributes.inplayerjournals,
-									controlledby: d20Character.attributes.controlledby
+							for (const a in attribsSkills) {
+								const characterValue = getAttrib(a);
+								if (characterValue) {
+									sel.skill[attribsSkills[a]] = Math.max(
+										sel.skill[attribsSkills[a]] || 0,
+										characterValue.current
+									);
 								}
+							}
+
+							for (const a in attribsSaves) {
+								const characterValue = getAttrib(a);
+								if (characterValue) {
+									sel.save[attribsSkills[a]] = Math.max(
+										sel.save[attribsSkills[a]] || 0,
+										characterValue.current
+									);
+								}
+							}
+
+							(() => {
+								const attr =
+									d20plus.sheet === "ogl"
+										? "passive_wisdom"
+										: d20plus.sheet === "shaped"
+										? "perception"
+										: "";
+								if (!attr) return;
+								const charAttr = getAttrib(attr);
+								if (!charAttr) return;
+								const passivePer =
+									Number(charAttr.current || 0) +
+									(d20plus.sheet === "shaped" ? 10 : 0);
+								sel.passive = Math.max(passivePer, sel.passive);
+							})();
+
+							const doBuild = (result) => {
+								const options = {
+									charFunction: (character) => {
+										character._getLatestBlob(
+											"defaulttoken",
+											(y) => {
+												if (y) {
+													const token = JSON.parse(y);
+													token.name = `${sel.name} (${d20Character.attributes.name})`;
+													token.showplayers_aura1 = true;
+													token.showplayers_aura2 = true;
+													token.showplayers_bar1 = true;
+													token.showplayers_bar2 = true;
+													token.showplayers_bar3 = true;
+													token.showplayers_name = true;
+													token.bar3_max =
+														result.total;
+													token.bar3_value =
+														result.total;
+													character.updateBlobs({
+														defaulttoken:
+															JSON.stringify(
+																token
+															),
+													});
+													character.save({
+														defaulttoken:
+															new Date().getTime(),
+													});
+												}
+											}
+										);
+
+										$(
+											"a.ui-tabs-anchor[href='#journal']"
+										).trigger("click");
+									},
+									charOptions: {
+										inplayerjournals:
+											d20Character.attributes
+												.inplayerjournals,
+										controlledby:
+											d20Character.attributes
+												.controlledby,
+									},
+								};
+
+								d20plus.monsters.handoutBuilder(
+									sel,
+									true,
+									false,
+									`Wild Forms - ${d20Character.attributes.name}`,
+									{},
+									options
+								);
 							};
 
-							d20plus.monsters.handoutBuilder(sel, true, false, `Wild Forms - ${d20Character.attributes.name}`, {}, options);
-						};
-
-						if (sel.hp.formula) d20plus.ut.randomRoll(sel.hp.formula, result => doBuild(result));
-						else doBuild({total: 0});
-					});
+							if (sel.hp.formula)
+								d20plus.ut.randomRoll(
+									sel.hp.formula,
+									(result) => doBuild(result)
+								);
+							else doBuild({ total: 0 });
+						});
 				});
-
-			}
-		}
+			},
+		},
 	]);
 
 	d20plus.initiativeHeaders = `<div class="header init-header">
@@ -4112,27 +5666,44 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 ]]>
 </script>`;
 
-	d20plus.actionMacroPerception = "%{Selected|npc_perception} @{selected|wtype} &{template:default} {{name=Senses}}  @{selected|wtype} @{Selected|npc_senses} ";
+	d20plus.actionMacroPerception =
+		"%{Selected|npc_perception} @{selected|wtype} &{template:default} {{name=Senses}}  @{selected|wtype} @{Selected|npc_senses} ";
 	d20plus.actionMacroInit = "%{selected|npc_init}";
-	d20plus.actionMacroDrImmunities = "@{selected|wtype} &{template:default} {{name=DR/Immunities}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}} ";
-	d20plus.actionMacroStats = "@{selected|wtype} &{template:default} {{name=Stats}} {{Armor Class= @{selected|npc_AC}}} {{Hit Dice= @{selected|npc_hpformula}}} {{Speed= @{selected|npc_speed}}} {{Senses= @{selected|npc_senses}}} {{Languages= @{selected|npc_languages}}} {{Challenge= @{selected|npc_challenge}(@{selected|npc_xp}xp)}}";
-	d20plus.actionMacroSaves = "@{selected|wtype} &{template:simple}{{always=1}}?{Saving Throw?|STR,{{rname=Strength Save&#125;&#125;{{mod=@{npc_str_save}&#125;&#125; {{r1=[[1d20+@{npc_str_save}]]&#125;&#125;{{r2=[[1d20+@{npc_str_save}]]&#125;&#125;|DEX,{{rname=Dexterity Save&#125;&#125;{{mod=@{npc_dex_save}&#125;&#125; {{r1=[[1d20+@{npc_dex_save}]]&#125;&#125;{{r2=[[1d20+@{npc_dex_save}]]&#125;&#125;|CON,{{rname=Constitution Save&#125;&#125;{{mod=@{npc_con_save}&#125;&#125; {{r1=[[1d20+@{npc_con_save}]]&#125;&#125;{{r2=[[1d20+@{npc_con_save}]]&#125;&#125;|INT,{{rname=Intelligence Save&#125;&#125;{{mod=@{npc_int_save}&#125;&#125; {{r1=[[1d20+@{npc_int_save}]]&#125;&#125;{{r2=[[1d20+@{npc_int_save}]]&#125;&#125;|WIS,{{rname=Wisdom Save&#125;&#125;{{mod=@{npc_wis_save}&#125;&#125; {{r1=[[1d20+@{npc_wis_save}]]&#125;&#125;{{r2=[[1d20+@{npc_wis_save}]]&#125;&#125;|CHA,{{rname=Charisma Save&#125;&#125;{{mod=@{npc_cha_save}&#125;&#125; {{r1=[[1d20+@{npc_cha_save}]]&#125;&#125;{{r2=[[1d20+@{npc_cha_save}]]&#125;&#125;}{{charname=@{character_name}}} ";
-	d20plus.actionMacroSkillCheck = "@{selected|wtype} &{template:simple}{{always=1}}?{Ability?|Acrobatics,{{rname=Acrobatics&#125;&#125;{{mod=@{npc_acrobatics}&#125;&#125; {{r1=[[1d20+@{npc_acrobatics}]]&#125;&#125;{{r2=[[1d20+@{npc_acrobatics}]]&#125;&#125;|Animal Handling,{{rname=Animal Handling&#125;&#125;{{mod=@{npc_animal_handling}&#125;&#125; {{r1=[[1d20+@{npc_animal_handling}]]&#125;&#125;{{r2=[[1d20+@{npc_animal_handling}]]&#125;&#125;|Arcana,{{rname=Arcana&#125;&#125;{{mod=@{npc_arcana}&#125;&#125; {{r1=[[1d20+@{npc_arcana}]]&#125;&#125;{{r2=[[1d20+@{npc_arcana}]]&#125;&#125;|Athletics,{{rname=Athletics&#125;&#125;{{mod=@{npc_athletics}&#125;&#125; {{r1=[[1d20+@{npc_athletics}]]&#125;&#125;{{r2=[[1d20+@{npc_athletics}]]&#125;&#125;|Deception,{{rname=Deception&#125;&#125;{{mod=@{npc_deception}&#125;&#125; {{r1=[[1d20+@{npc_deception}]]&#125;&#125;{{r2=[[1d20+@{npc_deception}]]&#125;&#125;|History,{{rname=History&#125;&#125;{{mod=@{npc_history}&#125;&#125; {{r1=[[1d20+@{npc_history}]]&#125;&#125;{{r2=[[1d20+@{npc_history}]]&#125;&#125;|Insight,{{rname=Insight&#125;&#125;{{mod=@{npc_insight}&#125;&#125; {{r1=[[1d20+@{npc_insight}]]&#125;&#125;{{r2=[[1d20+@{npc_insight}]]&#125;&#125;|Intimidation,{{rname=Intimidation&#125;&#125;{{mod=@{npc_intimidation}&#125;&#125; {{r1=[[1d20+@{npc_intimidation}]]&#125;&#125;{{r2=[[1d20+@{npc_intimidation}]]&#125;&#125;|Investigation,{{rname=Investigation&#125;&#125;{{mod=@{npc_investigation}&#125;&#125; {{r1=[[1d20+@{npc_investigation}]]&#125;&#125;{{r2=[[1d20+@{npc_investigation}]]&#125;&#125;|Medicine,{{rname=Medicine&#125;&#125;{{mod=@{npc_medicine}&#125;&#125; {{r1=[[1d20+@{npc_medicine}]]&#125;&#125;{{r2=[[1d20+@{npc_medicine}]]&#125;&#125;|Nature,{{rname=Nature&#125;&#125;{{mod=@{npc_nature}&#125;&#125; {{r1=[[1d20+@{npc_nature}]]&#125;&#125;{{r2=[[1d20+@{npc_nature}]]&#125;&#125;|Perception,{{rname=Perception&#125;&#125;{{mod=@{npc_perception}&#125;&#125; {{r1=[[1d20+@{npc_perception}]]&#125;&#125;{{r2=[[1d20+@{npc_perception}]]&#125;&#125;|Performance,{{rname=Performance&#125;&#125;{{mod=@{npc_performance}&#125;&#125; {{r1=[[1d20+@{npc_performance}]]&#125;&#125;{{r2=[[1d20+@{npc_performance}]]&#125;&#125;|Persuasion,{{rname=Persuasion&#125;&#125;{{mod=@{npc_persuasion}&#125;&#125; {{r1=[[1d20+@{npc_persuasion}]]&#125;&#125;{{r2=[[1d20+@{npc_persuasion}]]&#125;&#125;|Religion,{{rname=Religion&#125;&#125;{{mod=@{npc_religion}&#125;&#125; {{r1=[[1d20+@{npc_religion}]]&#125;&#125;{{r2=[[1d20+@{npc_religion}]]&#125;&#125;|Sleight of Hand,{{rname=Sleight of Hand&#125;&#125;{{mod=@{npc_sleight_of_hand}&#125;&#125; {{r1=[[1d20+@{npc_sleight_of_hand}]]&#125;&#125;{{r2=[[1d20+@{npc_sleight_of_hand}]]&#125;&#125;|Stealth,{{rname=Stealth&#125;&#125;{{mod=@{npc_stealth}&#125;&#125; {{r1=[[1d20+@{npc_stealth}]]&#125;&#125;{{r2=[[1d20+@{npc_stealth}]]&#125;&#125;|Survival,{{rname=Survival&#125;&#125;{{mod=@{npc_survival}&#125;&#125; {{r1=[[1d20+@{npc_survival}]]&#125;&#125;{{r2=[[1d20+@{npc_survival}]]&#125;&#125;}{{charname=@{character_name}}} ";
-	d20plus.actionMacroAbilityCheck = "@{selected|wtype} &{template:simple}{{always=1}}?{Ability?|STR,{{rname=Strength&#125;&#125;{{mod=@{strength_mod}&#125;&#125; {{r1=[[1d20+@{strength_mod}]]&#125;&#125;{{r2=[[1d20+@{strength_mod}]]&#125;&#125;|DEX,{{rname=Dexterity&#125;&#125;{{mod=@{dexterity_mod}&#125;&#125; {{r1=[[1d20+@{dexterity_mod}]]&#125;&#125;{{r2=[[1d20+@{dexterity_mod}]]&#125;&#125;|CON,{{rname=Constitution&#125;&#125;{{mod=@{constitution_mod}&#125;&#125; {{r1=[[1d20+@{constitution_mod}]]&#125;&#125;{{r2=[[1d20+@{constitution_mod}]]&#125;&#125;|INT,{{rname=Intelligence&#125;&#125;{{mod=@{intelligence_mod}&#125;&#125; {{r1=[[1d20+@{intelligence_mod}]]&#125;&#125;{{r2=[[1d20+@{intelligence_mod}]]&#125;&#125;|WIS,{{rname=Wisdom&#125;&#125;{{mod=@{wisdom_mod}&#125;&#125; {{r1=[[1d20+@{wisdom_mod}]]&#125;&#125;{{r2=[[1d20+@{wisdom_mod}]]&#125;&#125;|CHA,{{rname=Charisma&#125;&#125;{{mod=@{charisma_mod}&#125;&#125; {{r1=[[1d20+@{charisma_mod}]]&#125;&#125;{{r2=[[1d20+@{charisma_mod}]]&#125;&#125;}{{charname=@{character_name}}} ";
+	d20plus.actionMacroDrImmunities =
+		"@{selected|wtype} &{template:default} {{name=DR/Immunities}} {{Damage Resistance= @{selected|npc_resistances}}} {{Damage Vulnerability= @{selected|npc_vulnerabilities}}} {{Damage Immunity= @{selected|npc_immunities}}} {{Condition Immunity= @{selected|npc_condition_immunities}}} ";
+	d20plus.actionMacroStats =
+		"@{selected|wtype} &{template:default} {{name=Stats}} {{Armor Class= @{selected|npc_AC}}} {{Hit Dice= @{selected|npc_hpformula}}} {{Speed= @{selected|npc_speed}}} {{Senses= @{selected|npc_senses}}} {{Languages= @{selected|npc_languages}}} {{Challenge= @{selected|npc_challenge}(@{selected|npc_xp}xp)}}";
+	d20plus.actionMacroSaves =
+		"@{selected|wtype} &{template:simple}{{always=1}}?{Saving Throw?|STR,{{rname=Strength Save&#125;&#125;{{mod=@{npc_str_save}&#125;&#125; {{r1=[[1d20+@{npc_str_save}]]&#125;&#125;{{r2=[[1d20+@{npc_str_save}]]&#125;&#125;|DEX,{{rname=Dexterity Save&#125;&#125;{{mod=@{npc_dex_save}&#125;&#125; {{r1=[[1d20+@{npc_dex_save}]]&#125;&#125;{{r2=[[1d20+@{npc_dex_save}]]&#125;&#125;|CON,{{rname=Constitution Save&#125;&#125;{{mod=@{npc_con_save}&#125;&#125; {{r1=[[1d20+@{npc_con_save}]]&#125;&#125;{{r2=[[1d20+@{npc_con_save}]]&#125;&#125;|INT,{{rname=Intelligence Save&#125;&#125;{{mod=@{npc_int_save}&#125;&#125; {{r1=[[1d20+@{npc_int_save}]]&#125;&#125;{{r2=[[1d20+@{npc_int_save}]]&#125;&#125;|WIS,{{rname=Wisdom Save&#125;&#125;{{mod=@{npc_wis_save}&#125;&#125; {{r1=[[1d20+@{npc_wis_save}]]&#125;&#125;{{r2=[[1d20+@{npc_wis_save}]]&#125;&#125;|CHA,{{rname=Charisma Save&#125;&#125;{{mod=@{npc_cha_save}&#125;&#125; {{r1=[[1d20+@{npc_cha_save}]]&#125;&#125;{{r2=[[1d20+@{npc_cha_save}]]&#125;&#125;}{{charname=@{character_name}}} ";
+	d20plus.actionMacroSkillCheck =
+		"@{selected|wtype} &{template:simple}{{always=1}}?{Ability?|Acrobatics,{{rname=Acrobatics&#125;&#125;{{mod=@{npc_acrobatics}&#125;&#125; {{r1=[[1d20+@{npc_acrobatics}]]&#125;&#125;{{r2=[[1d20+@{npc_acrobatics}]]&#125;&#125;|Animal Handling,{{rname=Animal Handling&#125;&#125;{{mod=@{npc_animal_handling}&#125;&#125; {{r1=[[1d20+@{npc_animal_handling}]]&#125;&#125;{{r2=[[1d20+@{npc_animal_handling}]]&#125;&#125;|Arcana,{{rname=Arcana&#125;&#125;{{mod=@{npc_arcana}&#125;&#125; {{r1=[[1d20+@{npc_arcana}]]&#125;&#125;{{r2=[[1d20+@{npc_arcana}]]&#125;&#125;|Athletics,{{rname=Athletics&#125;&#125;{{mod=@{npc_athletics}&#125;&#125; {{r1=[[1d20+@{npc_athletics}]]&#125;&#125;{{r2=[[1d20+@{npc_athletics}]]&#125;&#125;|Deception,{{rname=Deception&#125;&#125;{{mod=@{npc_deception}&#125;&#125; {{r1=[[1d20+@{npc_deception}]]&#125;&#125;{{r2=[[1d20+@{npc_deception}]]&#125;&#125;|History,{{rname=History&#125;&#125;{{mod=@{npc_history}&#125;&#125; {{r1=[[1d20+@{npc_history}]]&#125;&#125;{{r2=[[1d20+@{npc_history}]]&#125;&#125;|Insight,{{rname=Insight&#125;&#125;{{mod=@{npc_insight}&#125;&#125; {{r1=[[1d20+@{npc_insight}]]&#125;&#125;{{r2=[[1d20+@{npc_insight}]]&#125;&#125;|Intimidation,{{rname=Intimidation&#125;&#125;{{mod=@{npc_intimidation}&#125;&#125; {{r1=[[1d20+@{npc_intimidation}]]&#125;&#125;{{r2=[[1d20+@{npc_intimidation}]]&#125;&#125;|Investigation,{{rname=Investigation&#125;&#125;{{mod=@{npc_investigation}&#125;&#125; {{r1=[[1d20+@{npc_investigation}]]&#125;&#125;{{r2=[[1d20+@{npc_investigation}]]&#125;&#125;|Medicine,{{rname=Medicine&#125;&#125;{{mod=@{npc_medicine}&#125;&#125; {{r1=[[1d20+@{npc_medicine}]]&#125;&#125;{{r2=[[1d20+@{npc_medicine}]]&#125;&#125;|Nature,{{rname=Nature&#125;&#125;{{mod=@{npc_nature}&#125;&#125; {{r1=[[1d20+@{npc_nature}]]&#125;&#125;{{r2=[[1d20+@{npc_nature}]]&#125;&#125;|Perception,{{rname=Perception&#125;&#125;{{mod=@{npc_perception}&#125;&#125; {{r1=[[1d20+@{npc_perception}]]&#125;&#125;{{r2=[[1d20+@{npc_perception}]]&#125;&#125;|Performance,{{rname=Performance&#125;&#125;{{mod=@{npc_performance}&#125;&#125; {{r1=[[1d20+@{npc_performance}]]&#125;&#125;{{r2=[[1d20+@{npc_performance}]]&#125;&#125;|Persuasion,{{rname=Persuasion&#125;&#125;{{mod=@{npc_persuasion}&#125;&#125; {{r1=[[1d20+@{npc_persuasion}]]&#125;&#125;{{r2=[[1d20+@{npc_persuasion}]]&#125;&#125;|Religion,{{rname=Religion&#125;&#125;{{mod=@{npc_religion}&#125;&#125; {{r1=[[1d20+@{npc_religion}]]&#125;&#125;{{r2=[[1d20+@{npc_religion}]]&#125;&#125;|Sleight of Hand,{{rname=Sleight of Hand&#125;&#125;{{mod=@{npc_sleight_of_hand}&#125;&#125; {{r1=[[1d20+@{npc_sleight_of_hand}]]&#125;&#125;{{r2=[[1d20+@{npc_sleight_of_hand}]]&#125;&#125;|Stealth,{{rname=Stealth&#125;&#125;{{mod=@{npc_stealth}&#125;&#125; {{r1=[[1d20+@{npc_stealth}]]&#125;&#125;{{r2=[[1d20+@{npc_stealth}]]&#125;&#125;|Survival,{{rname=Survival&#125;&#125;{{mod=@{npc_survival}&#125;&#125; {{r1=[[1d20+@{npc_survival}]]&#125;&#125;{{r2=[[1d20+@{npc_survival}]]&#125;&#125;}{{charname=@{character_name}}} ";
+	d20plus.actionMacroAbilityCheck =
+		"@{selected|wtype} &{template:simple}{{always=1}}?{Ability?|STR,{{rname=Strength&#125;&#125;{{mod=@{strength_mod}&#125;&#125; {{r1=[[1d20+@{strength_mod}]]&#125;&#125;{{r2=[[1d20+@{strength_mod}]]&#125;&#125;|DEX,{{rname=Dexterity&#125;&#125;{{mod=@{dexterity_mod}&#125;&#125; {{r1=[[1d20+@{dexterity_mod}]]&#125;&#125;{{r2=[[1d20+@{dexterity_mod}]]&#125;&#125;|CON,{{rname=Constitution&#125;&#125;{{mod=@{constitution_mod}&#125;&#125; {{r1=[[1d20+@{constitution_mod}]]&#125;&#125;{{r2=[[1d20+@{constitution_mod}]]&#125;&#125;|INT,{{rname=Intelligence&#125;&#125;{{mod=@{intelligence_mod}&#125;&#125; {{r1=[[1d20+@{intelligence_mod}]]&#125;&#125;{{r2=[[1d20+@{intelligence_mod}]]&#125;&#125;|WIS,{{rname=Wisdom&#125;&#125;{{mod=@{wisdom_mod}&#125;&#125; {{r1=[[1d20+@{wisdom_mod}]]&#125;&#125;{{r2=[[1d20+@{wisdom_mod}]]&#125;&#125;|CHA,{{rname=Charisma&#125;&#125;{{mod=@{charisma_mod}&#125;&#125; {{r1=[[1d20+@{charisma_mod}]]&#125;&#125;{{r2=[[1d20+@{charisma_mod}]]&#125;&#125;}{{charname=@{character_name}}} ";
 
 	d20plus.actionMacroTrait = function (index) {
-		return "@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npctrait_$" + index + "_name}}} {{description=@{selected|repeating_npctrait_$" + index + "_desc} }}";
+		return (
+			"@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npctrait_$" +
+			index +
+			"_name}}} {{description=@{selected|repeating_npctrait_$" +
+			index +
+			"_desc} }}"
+		);
 	};
 
 	d20plus.actionMacroAction = function (index) {
 		return "%{selected|repeating_npcaction_$" + index + "_npc_action}";
 	};
 
-	d20plus.actionMacroReaction = "@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npcreaction_$0_name}}} {{description=@{selected|repeating_npcreaction_$0_desc} }} ";
+	d20plus.actionMacroReaction =
+		"@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npcreaction_$0_name}}} {{description=@{selected|repeating_npcreaction_$0_desc} }} ";
 
 	d20plus.actionMacroLegendary = function (tokenactiontext) {
-		return "@{selected|wtype} @{selected|wtype}&{template:npcaction} {{name=@{selected|npc_name}}} {{rname=Legendary Actions}} {{description=The @{selected|npc_name} can take @{selected|npc_legendary_actions} legendary actions, choosing from the options below. Only one legendary option can be used at a time and only at the end of another creature's turn. The @{selected|npc_name} regains spent legendary actions at the start of its turn.\n\r" + tokenactiontext + "}} ";
-	}
+		return (
+			"@{selected|wtype} @{selected|wtype}&{template:npcaction} {{name=@{selected|npc_name}}} {{rname=Legendary Actions}} {{description=The @{selected|npc_name} can take @{selected|npc_legendary_actions} legendary actions, choosing from the options below. Only one legendary option can be used at a time and only at the end of another creature's turn. The @{selected|npc_name} regains spent legendary actions at the start of its turn.\n\r" +
+			tokenactiontext +
+			"}} "
+		);
+	};
 };
 
 SCRIPT_EXTENSIONS.push(betteR205etoolsMain);
