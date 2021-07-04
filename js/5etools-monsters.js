@@ -340,6 +340,7 @@ function d20plusMonsters () {
 							character.attribs.create({name: "npc_ac", current: ac != null ? ac[0] : ""});
 							character.attribs.create({name: "npc_actype", current: actype != null ? actype[1] || "" : ""});
 							character.attribs.create({name: "hp", current: hp, max: hp});
+							character.attribs.create({name: "npc_hpbase", current: hp, max: hp});
 							character.attribs.create({name: "npc_hpformula", current: hpformula != null ? hpformula || "" : ""});
 
 							const hpModId = d20plus.ut.generateRowId();
