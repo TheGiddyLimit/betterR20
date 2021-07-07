@@ -1212,63 +1212,7 @@ const betteR205etoolsMain = function () {
 			feature.text = renderStack.length ? d20plus.importer.getCleanText(renderStack.join("")) : "";
 
 			// Add skills
-			async function chooseSkills (from, count) {
-				return new Promise((resolve, reject) => {
-					const $dialog = $(`
-						<div title="Choose Skills">
-							<div name="remain" style="font-weight: bold">Remaining: ${count}</div>
-							<div>
-								${from.map(it => `<label class="split"><span>${it.toTitleCase()}</span> <input data-skill="${it}" type="checkbox"></label>`).join("")}
-							</div>
-						</div>
-					`).appendTo($("body"));
-					const $remain = $dialog.find(`[name="remain"]`);
-					const $cbSkill = $dialog.find(`input[type="checkbox"]`);
-
-					$cbSkill.on("change", function () {
-						const $e = $(this);
-						let selectedCount = getSelected().length;
-						if (selectedCount > count) {
-							$e.prop("checked", false);
-							selectedCount--;
-						}
-						$remain.text(`Remaining: ${count - selectedCount}`);
-					});
-
-					function getSelected () {
-						return $cbSkill.map((i, e) => ({skill: $(e).data("skill"), selected: $(e).prop("checked")})).get()
-							.filter(it => it.selected).map(it => it.skill);
-					}
-
-					$dialog.dialog({
-						dialogClass: "no-close",
-						buttons: [
-							{
-								text: "Cancel",
-								click: function () {
-									$(this).dialog("close");
-									$dialog.remove();
-									reject(`User cancelled the prompt`);
-								}
-							},
-							{
-								text: "OK",
-								click: function () {
-									const selected = getSelected();
-									if (selected.length === count) {
-										$(this).dialog("close");
-										$dialog.remove();
-										resolve(selected);
-									} else {
-										alert(`Please select ${count} skill${count === 1 ? "" : "s"}`);
-									}
-								}
-							}
-						]
-					})
-				});
-			}
-
+			
 			async function chooseSkillsGroup (options) {
 				return new Promise((resolve, reject) => {
 					const $dialog = $(`
@@ -1317,7 +1261,9 @@ const betteR205etoolsMain = function () {
 					const choose = item.choose;
 					const sansExisting = choose.from.filter(it => !skills.includes(it));
 					const count = choose.count || 1;
-					const chosenSkills = await chooseSkills(sansExisting, count);
+					const chosenSkills = await d20plus.ui.chooseCheckboxList(
+						sansExisting, "Choose Skills", `Please select ${count} skill${count === 1 ? "" : "s"}`,	{count,	displayFormatter: (it => it.toTitleCase())}
+						);
 					chosenSkills.forEach(it => skills.push(it));
 				}
 			}
@@ -1335,63 +1281,6 @@ const betteR205etoolsMain = function () {
 			// Add Proficiencies (mainly language and tool, but extendable)
 			// Skills are still done Giddy's way so I don't need to mess with his code (and I couldn't easily convert his code to my method)
 			// Note: Doing this mostly stealing from Giddy's code
-			async function chooseProfs (from, count, profType) {
-				// Shamelessly stolen from Giddy
-				return new Promise((resolve, reject) => {
-					const $dialog = $(`
-						<div title="Choose ${profType}">
-							<div name="remain" style="font-weight: bold">Remaining: ${count}</div>
-							<div>
-								${from.map(it => `<label class="split"><span>${it.toTitleCase()}</span> <input data-prof="${it}" type="checkbox"></label>`).join("")}
-							</div>
-						</div>
-					`).appendTo($("body"));
-					const $remain = $dialog.find(`[name="remain"]`);
-					const $cbSkill = $dialog.find(`input[type="checkbox"]`);
-
-					$cbSkill.on("change", function () {
-						const $e = $(this);
-						let selectedCount = getSelected().length;
-						if (selectedCount > count) {
-							$e.prop("checked", false);
-							selectedCount--;
-						}
-						$remain.text(`Remaining: ${count - selectedCount}`);
-					});
-
-					function getSelected () {
-						return $cbSkill.map((i, e) => ({skill: $(e).data("prof"), selected: $(e).prop("checked")})).get()
-							.filter(it => it.selected).map(it => it.skill);
-					}
-
-					$dialog.dialog({
-						dialogClass: "no-close",
-						buttons: [
-							{
-								text: "Cancel",
-								click: function () {
-									$(this).dialog("close");
-									$dialog.remove();
-									reject(`User cancelled the prompt`);
-								}
-							},
-							{
-								text: "OK",
-								click: function () {
-									const selected = getSelected();
-									if (selected.length === count) {
-										$(this).dialog("close");
-										$dialog.remove();
-										resolve(selected);
-									} else {
-										alert(`Please select ${count} language${count === 1 ? "" : "s"}`);
-									}
-								}
-							}
-						]
-					})
-				});
-			}
 
 			async function chooseProfsGroup (options, profType) {
 				// For when there are two separate ways to choose languages
@@ -1444,7 +1333,9 @@ const betteR205etoolsMain = function () {
 						// If choice is needed, call popup function
 						let numChoice = 1;
 						if (value.count) numChoice = value.count;
-						const choice = await chooseProfs(value.from, numChoice, profType);
+						const choice = await d20plus.ui.chooseCheckboxList(
+							value.from, `Choose ${profType}`, `Please select ${numChoice} language${numChoice === 1 ? "" : "s"}`,	{count: numChoice,	displayFormatter: (it => it.toTitleCase())}
+							);
 						choice.forEach(c => ret.push(c));
 					}
 					else if (key === "anyStandard") {
@@ -1749,7 +1640,7 @@ const betteR205etoolsMain = function () {
 			attrs.notifySheetWorkers();
 		}
 
-		function importClass (character, data) {
+		async function importClass (character, data) {
 			let levels = d20plus.ut.getNumberRange("What levels?", 1, 20);
 			if (!levels) return;
 
@@ -1904,6 +1795,16 @@ const betteR205etoolsMain = function () {
 
 			importClassGeneral(attrs, clss, maxLevel);
 
+			let featureSourceWhitelist = await d20plus.ui.chooseCheckboxList(
+				[SRC_PHB, SRC_TCE, SRC_UACFV],
+				"Choose Source to Import Class Features",
+				"Please select a source",
+				{
+					note: "WARNING: TCE and UA may import features that are duplicates or mutually exclusive with PHB.",
+					displayFormatter: (it => Parser.sourceJsonToFull(it))
+				}
+			);
+
 			for (let i = 0; i < maxLevel; i++) {
 				const level = i + 1;
 				if (!levels.has(level)) continue;
@@ -1912,7 +1813,7 @@ const betteR205etoolsMain = function () {
 				for (let j = 0; j < lvlFeatureList.length; j++) {
 					const feature = lvlFeatureList[j];
 					// don't add "you gain a subclass feature" or ASI's
-					if (!feature.gainSubclassFeature && feature.name !== "Ability Score Improvement") {
+					if (!feature.gainSubclassFeature && feature.name !== "Ability Score Improvement" &&	featureSourceWhitelist.includes(feature.source)) {
 						const renderStack = [];
 						renderer.recursiveRender({entries: feature.entries}, renderStack);
 						feature.text = d20plus.importer.getCleanText(renderStack.join(""));

@@ -127,6 +127,78 @@ function baseUi () {
 			})
 		}
 	};
+
+	/**
+	 * Prompt the user to choose from a list of checkboxes. By default, one checkbox can be selected, but a "count"
+	 * option can be provided to allow the user to choose multiple options.
+	 *
+	 * @param dataArray options to choose from
+	 * @param dataTitle title for the window
+	 * @param message message when user does not choose correct number of choices
+	 * @param displayFormatter function to format dataArray for display
+	 * @param count exact number of  options the user must choose
+	 * @param note add a note at the bottom of the window
+	 * @return {Promise}
+	 */
+	d20plus.ui.chooseCheckboxList = async function (dataArray, dataTitle, message, {displayFormatter = null, count = null, note = null} = {}) {
+		return new Promise((resolve, reject) => {
+			const $dialog = $(`
+				<div title="${dataTitle}">
+					${count != null ? `<div name="remain" class="bold">Remaining: ${count}</div>` : ""}
+					<div>
+						${dataArray.map(it => `<label class="split"><span>${displayFormatter ? displayFormatter(it) : it}</span> <input data-choice="${it}" type="checkbox"></label>`).join("")}
+					</div>
+					${note ? `<br><div class="bold">${note}</div>` : ""}
+				</div>
+			`).appendTo($("body"));
+			const $remain = $dialog.find(`[name="remain"]`);
+			const $cbChoices = $dialog.find(`input[type="checkbox"]`);
+
+			if (count != null) {
+				$cbChoices.on("change", function () {
+					const $e = $(this);
+					let selectedCount = getSelected().length;
+					if (selectedCount > count) {
+						$e.prop("checked", false);
+						selectedCount--;
+					}
+					$remain.text(`Remaining: ${count - selectedCount}`);
+				});
+			}
+
+			function getSelected () {
+				return $cbChoices.map((i, e) => ({choice: $(e).data("choice"), selected: $(e).prop("checked")})).get()
+					.filter(it => it.selected).map(it => it.choice);
+			}
+
+			$dialog.dialog({
+				dialogClass: "no-close",
+				buttons: [
+					{
+						text: "Cancel",
+						click: function () {
+							$(this).dialog("close");
+							$dialog.remove();
+							reject(`User cancelled the prompt`);
+						}
+					},
+					{
+						text: "OK",
+						click: function () {
+							const selected = getSelected();
+							if (selected.length === count || count == null) {
+								$(this).dialog("close");
+								$dialog.remove();
+								resolve(selected);
+							} else {
+								alert(message);
+							}
+						}
+					}
+				]
+			})
+		});
+	};
 }
 
 SCRIPT_EXTENSIONS.push(baseUi);
