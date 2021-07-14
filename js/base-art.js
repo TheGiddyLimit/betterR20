@@ -114,10 +114,17 @@ function d20plusArt () {
 
 				const $btnDel = $(`<span class="delete btn btn-danger"><span class="pictos">#</span></span>`).on("click", () => {
 					$liArt.remove();
-					refreshCustomArtList();
+					deleteCustomArt(name);
 				});
 				$liArt.append($btnDel);
 				return $liArt;
+			}
+
+			function deleteCustomArt (name) {			
+				artList.remove('name', name)
+				d20plus.art.custom.splice(d20plus.art.custom.findIndex(i => i.name === name), 1);
+				makeDraggables();
+				d20plus.art.saveToHandout();
 			}
 
 			function refreshCustomArtList () {
