@@ -670,6 +670,12 @@ function d20plusMonsters () {
 									}, spAbilsDelayMs);
 								}
 
+								//this is just for 12 monsters in the whole bestiary that actually have this property and break the importer.
+								//I do not think that it is very important but i can be wrong.
+								for (let spc of data.spellcasting){
+									delete spc.displayAs;
+								}
+
 								// add the spellcasting text
 								const newRowId = d20plus.ut.generateRowId();
 								const spellTrait = Renderer.monster.getSpellcastingRenderedTraits(renderer, data).map(it => it.rendered).filter(it => it).join("");
