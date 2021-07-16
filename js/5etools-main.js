@@ -2940,11 +2940,16 @@ const betteR205etoolsMain = function () {
 		if (url && url.trim()) {
 			const handoutBuilder = playerMode ? d20plus.races.playerImportBuilder : d20plus.races.handoutBuilder;
 
-			DataUtil.loadJSON(url).then((data) => {
+			DataUtil.loadJSON(url).then(async (data) => {
+				const toImport = MiscUtil.copy(data.race);
+				if (data.subrace){
+					const allraces = await DataUtil.loadJSON(RACE_DATA_URL);
+					toImport.push(...Renderer.race.adoptSubraces(allraces.race, data.subrace, false))
+				}
 				d20plus.importer.addBrewMeta(data._meta);
 				d20plus.importer.showImportList(
 					"race",
-					Renderer.race.mergeSubraces(data.race),
+					Renderer.race.mergeSubraces(toImport),
 					handoutBuilder,
 					{
 						forcePlayer
