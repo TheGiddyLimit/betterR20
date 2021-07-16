@@ -1006,7 +1006,7 @@ function baseTool() {
 			autoOpen: false,
 			resizable: true,
 			width: 800,
-			height: 650,
+			height: 660,
 		});
 		$(`#button-view-tools`).on(mousedowntype, () => {
 			$tools.dialog("open");

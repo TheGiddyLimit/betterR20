@@ -1488,8 +1488,10 @@ const betteR205etoolsMain = function () {
 			}
 
 			// Import items
-			async function parseItems(itemlist) {
+			async function importItemsAndGetGold(itemlist) {
 				const allitemList = await Renderer.item.pBuildList();
+				let containedGold = 0;
+
 				const x = Object.values(itemlist).map(function (item) {
 					// Returns a standardized object from a very unstandardized object
 					// Get the important variables
@@ -1503,6 +1505,8 @@ const betteR205etoolsMain = function () {
 					else if ('special' in item) {
 						iname = item.special;
 					}
+					
+					if (item.containsValue) containedGold += item.containsValue/100;
 
 					// Make the input object
 					const pareseditem = {"name": iname.split("|")[0].toTitleCase()};
@@ -1521,6 +1525,8 @@ const betteR205etoolsMain = function () {
 				};
 
 				importItem(character, allItems, null);
+
+				return containedGold;
 			}
 
 			async function  chooseItemsFromBackground (itemChoices) {
@@ -1561,18 +1567,20 @@ const betteR205etoolsMain = function () {
 					})
 				});
 			}
-
+			
+		    let startingGold = 0;
+			
 			if (bg.startingEquipment) {
 				for (const equip of bg.startingEquipment) {
 					// Loop because there can be any number of objects and in any order
 					if (equip._) {
 						// The _ property means not a will be imported
-						parseItems(equip._);
+						startingGold += await importItemsAndGetGold(equip._);
 					}
 					else {
 						// Otherwise there is a choice of what to import
 						const itemchoicefrombackgorund = await chooseItemsFromBackground(equip);
-                		parseItems(equip[itemchoicefrombackgorund]);
+                		startingGold += await importItemsAndGetGold(equip[itemchoicefrombackgorund]);
 					}
 				}
 			}
@@ -1583,6 +1591,7 @@ const betteR205etoolsMain = function () {
 
 			if (d20plus.sheet === "ogl") {
 				attrs.addOrUpdate("background", bg.name);
+				attrs.addOrUpdate("gp", startingGold);
 
 				attrs.add(`repeating_traits_${fRowId}_name`, feature.name);
 				attrs.add(`repeating_traits_${fRowId}_source`, "Background");
@@ -2365,7 +2374,7 @@ const betteR205etoolsMain = function () {
 							makeProp(rowId, "itemname", siD.name);
 							const w = (siD.data || {}).Weight;
 							if (w) makeProp(rowId, "itemweight", w);
-							makeProp(rowId, "itemcontent", Object.entries(siD.data).map(([k, v]) => `${k}: ${v}`).join(", "));
+							makeProp(rowId, "itemcontent", siD.content || Object.entries(siD.data).map(([k, v]) => `${k}: ${v}`).join(", "));
 							makeProp(rowId, "itemcount", String(si.count));
 
 						} else {
