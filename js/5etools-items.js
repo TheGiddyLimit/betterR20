@@ -209,7 +209,8 @@ function d20plusItems () {
 				var b = propertieslist[i];
 				if (b === "V") {
 					a = a + " (" + cleanDmg2 + ")";
-					roll20Data.data._versatile = cleanDmg2;
+					roll20Data.data["Alternate Damage"] = cleanDmg2;
+					roll20Data.data["Alternate Damage Type"] = Parser.dmgTypeToFull(data.dmgType);
 				}
 				if (b === "T" || b === "A") a = a + " (" + data.range + "ft.)";
 				if (b === "RLD") a = a + " (" + data.reload + " shots)";
@@ -257,7 +258,8 @@ function d20plusItems () {
 		}
 
 		// load modifiers (e.g. "+1 Armor"); this is a comma-separated string
-		const itemMeta = (itemMetadata.item || []).find(it => it.name === data.name && it.source === data.source);
+		const r20metaname = data.name.includes("+") ? data.name.slice(3) + " " + data.name.slice(0,2) : data.name;
+		const itemMeta = (itemMetadata.item || []).find(it => it.name === r20metaname && it.source === data.source);
 		if (itemMeta) roll20Data.data.Modifiers = itemMeta.Modifiers;
 
 		if (data._r20SubItemData) {
