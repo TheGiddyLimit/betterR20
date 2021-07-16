@@ -336,6 +336,11 @@ const betteR205etoolsMain = function () {
 			"default": true,
 			"_type": "boolean"
 		},
+		"tokenactionsExpanded": {
+			"name": "Expand TokenAction Macros on Import (Legendary / Mythic)",
+			"default": false,
+			"_type": "boolean"
+		},
 		"tokenactionsTraits": {
 			"name": "Add TokenAction Macros on Import (Traits)",
 			"default": true,
@@ -4361,14 +4366,18 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 		return "@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npctrait_$" + index + "_name}}} {{description=@{selected|repeating_npctrait_$" + index + "_desc} }}";
 	};
 
-	d20plus.actionMacroAction = function (index) {
-		return "%{selected|repeating_npcaction_$" + index + "_npc_action}";
+	d20plus.actionMacroAction = function (baseAction, index) {
+		return "%{selected|" + baseAction + "_$" + index + "_npc_action}";
 	};
 
 	d20plus.actionMacroReaction = "@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npcreaction_$0_name}}} {{description=@{selected|repeating_npcreaction_$0_desc} }} ";
 
 	d20plus.actionMacroLegendary = function (tokenactiontext) {
 		return "@{selected|wtype} @{selected|wtype}&{template:npcaction} {{name=@{selected|npc_name}}} {{rname=Legendary Actions}} {{description=The @{selected|npc_name} can take @{selected|npc_legendary_actions} legendary actions, choosing from the options below. Only one legendary option can be used at a time and only at the end of another creature's turn. The @{selected|npc_name} regains spent legendary actions at the start of its turn.\n\r" + tokenactiontext + "}} ";
+	}
+
+	d20plus.actionMacroMythic = function (tokenactiontext) {
+		return "@{selected|wtype} @{selected|wtype}&{template:npcaction} {{name=@{selected|npc_name}}} {{rname=Mythic Actions}} {{description=The @{selected|npc_name} can take @{selected|npc_legendary_actions} mythic actions, choosing from the options below. Only one mythic option can be used at a time and only at the end of another creature's turn. The @{selected|npc_name} regains spent mythic actions at the start of its turn.\n\r" + tokenactiontext + "}} ";
 	}
 };
 

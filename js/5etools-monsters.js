@@ -1221,141 +1221,46 @@ function d20plusMonsters () {
 								}
 
 								let tokenactiontext = "";
-								$.each(data.legendary, function (i, v) {
-									var newRowId = d20plus.ut.generateRowId();
+								$.each(data.legendary, function (i, action) {
+									const name = d20plus.importer.getCleanText(renderer.render(action.name));
+									const text = d20plus.importer.getCleanText(renderer.render({entries: action.entries}, 1)).replace(/^\s*Hit:\s*/, "");
 
-									if (d20plus.cfg.getOrDefault("import", "tokenactions") && d20plus.sheet !== "shaped") {
-										tokenactiontext += "[" + v.name + "](~selected|repeating_npcaction-l_$" + i + "_npc_action)\n\r";
+									d20plus.importer.addLegendaryAction(character, name, text, i);
+
+									if (d20plus.cfg.getOrDefault("import", "tokenactions") && !d20plus.cfg.getOrDefault("import", "tokenactionsExpanded") && d20plus.sheet !== "shaped") {
+										tokenactiontext += "[" + name + "](~selected|repeating_npcaction-l_$" + i + "_npc_action)\n\r";
 									}
-
-									var rollbase = d20plus.importer.rollbase();
-
-									// FIXME v.attack has been removed from the data; create a parser equivalent
-									if (v.attack != null) {
-										if (!(v.attack instanceof Array)) {
-											var tmp = v.attack;
-											v.attack = [];
-											v.attack.push(tmp);
-										}
-										$.each(v.attack, function (z, x) {
-											if (!x) return;
-											var attack = x.split("|");
-											var name = "";
-											if (v.attack.length > 1)
-												name = (attack[0] == v.name) ? v.name : v.name + " - " + attack[0] + "";
-											else
-												name = v.name;
-											var onhit = "";
-											var damagetype = "";
-											if (attack.length == 2) {
-												damage = "" + attack[1];
-												tohit = "";
-											} else {
-												damage = "" + attack[2];
-												tohit = attack[1] || 0;
-											}
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_name",
-												current: d20plus.importer.getCleanText(renderer.render(name))
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_flag",
-												current: "on"
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_npc_options-flag",
-												current: 0
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_display_flag",
-												current: "{{attack=1}}"
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_options",
-												current: "{{attack=1}}"
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_tohit",
-												current: tohit
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_damage",
-												current: damage
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_name_display",
-												current: name
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_rollbase",
-												current: rollbase
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_type",
-												current: ""
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_tohitrange",
-												current: ""
-											});
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_damage_flag",
-												current: "{{damage=1}} {{dmg1flag=1}} {{dmg2flag=1}}"
-											});
-											if (damage !== "") {
-												damage1 = damage.replace(/\s/g, "").split(/d|(?=\+|-)/g);
-												if (damage1[1])
-													damage1[1] = damage1[1].replace(/[^0-9-+]/g, "");
-												damage2 = isNaN(eval(damage1[1])) === false ? eval(damage1[1]) : 0;
-												if (damage1.length < 2) {
-													onhit = onhit + damage1[0] + " (" + damage + ")" + damagetype + " damage";
-												} else if (damage1.length < 3) {
-													onhit = onhit + Math.floor(damage1[0] * ((damage2 / 2) + 0.5)) + " (" + damage + ")" + damagetype + " damage";
-												} else {
-													onhit = onhit + (Math.floor(damage1[0] * ((damage2 / 2) + 0.5)) + parseInt(damage1[2], 10)) + " (" + damage + ")" + damagetype + " damage";
-												}
-											}
-											character.attribs.create({
-												name: "repeating_npcaction-l_" + newRowId + "_attack_onhit",
-												current: onhit
-											});
-										});
-									} else {
-										character.attribs.create({
-											name: "repeating_npcaction-l_" + newRowId + "_name",
-											current: v.name
-										});
-										character.attribs.create({
-											name: "repeating_npcaction-l_" + newRowId + "_npc_options-flag",
-											current: 0
-										});
-										character.attribs.create({
-											name: "repeating_npcaction-l_" + newRowId + "_rollbase",
-											current: rollbase
-										});
-										character.attribs.create({
-											name: "repeating_npcaction-l_" + newRowId + "_name_display",
-											current: v.name
-										});
-									}
-
-									var text = d20plus.importer.getCleanText(renderer.render({entries: v.entries}, 1));
-									var descriptionFlag = Math.max(Math.ceil(text.length / 57), 1);
-									character.attribs.create({
-										name: "repeating_npcaction-l_" + newRowId + "_description",
-										current: text
-									});
-									character.attribs.create({
-										name: "repeating_npcaction-l_" + newRowId + "_description_flag",
-										current: descriptionFlag
-									});
 								});
 
-								if (d20plus.cfg.getOrDefault("import", "tokenactions") && d20plus.sheet !== "shaped") {
+								if (d20plus.cfg.getOrDefault("import", "tokenactions") && !d20plus.cfg.getOrDefault("import", "tokenactionsExpanded") && d20plus.sheet !== "shaped") {
 									character.abilities.create({
 										name: "Legendary Actions",
 										istokenaction: true,
 										action: d20plus.actionMacroLegendary(tokenactiontext)
+									});
+								}
+							}
+							if (data.mythic) {
+								character.attribs.create({name: "npc_mythic_actions", current: "1"});
+								character.attribs.create({name: "npc_mythic_actions_desc", current: data.mythicHeader[0]});
+
+								let tokenactiontext = "";
+								$.each(data.mythic, function (i, action) {
+									const name = d20plus.importer.getCleanText(renderer.render(action.name));
+									const text = d20plus.importer.getCleanText(renderer.render({entries: action.entries}, 1)).replace(/^\s*Hit:\s*/, "");
+
+									d20plus.importer.addMythicAction(character, name, text, i);
+
+									if (d20plus.cfg.getOrDefault("import", "tokenactions") && !d20plus.cfg.getOrDefault("import", "tokenactionsExpanded") && d20plus.sheet !== "shaped") {
+										tokenactiontext += "[" + name + "](~selected|repeating_npcaction-m_$" + i + "_npc_action)\n\r";
+									}
+								});
+
+								if (d20plus.cfg.getOrDefault("import", "tokenactions") && !d20plus.cfg.getOrDefault("import", "tokenactionsExpanded") && d20plus.sheet !== "shaped") {
+									character.abilities.create({
+										name: "Mythic Actions",
+										istokenaction: true,
+										action: d20plus.actionMacroMythic(tokenactiontext)
 									});
 								}
 							}

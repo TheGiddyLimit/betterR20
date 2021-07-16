@@ -249,12 +249,12 @@ function d20plusImporter () {
 		character.save({defaulttoken: (new Date()).getTime()});
 	};
 
-	d20plus.importer.addAction = function (character, name, actionText, index) {
-		if (d20plus.cfg.getOrDefault("import", "tokenactions")) {
+	d20plus.importer.baseAddAction = function (character, baseAction, name, actionText, prefix, index, expand) {
+		if (d20plus.cfg.getOrDefault("import", "tokenactions") && expand) {
 			character.abilities.create({
-				name: index + ": " + name,
+				name: prefix + index + ": " + name,
 				istokenaction: true,
-				action: d20plus.actionMacroAction(index)
+				action: d20plus.actionMacroAction(baseAction, index)
 			}).save();
 		}
 
@@ -318,57 +318,71 @@ function d20plusImporter () {
 			}
 			const toHitRange = "+" + toHit + ", " + rangeType + " " + attackRange + ", " + attackTarget + ".";
 			const damageFlags = `{{damage=1}} {{dmg1flag=1}}${damage2 ? ` {{dmg2flag=1}}` : ""}`;
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_name", current: name}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_flag", current: "on"}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_npc_options-flag", current: "0"}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_display_flag", current: "{{attack=1}}"}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_options", current: "{{attack=1}}"}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_tohit", current: toHit}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_damage", current: damage}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_name", current: name}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_flag", current: "on"}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_npc_options-flag", current: "0"}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_display_flag", current: "{{attack=1}}"}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_options", current: "{{attack=1}}"}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_tohit", current: toHit}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_damage", current: damage}).save();
 			// TODO this might not be necessary on Shaped sheets?
 			const critDamage = (damage || "").trim().replace(/[-+]\s*\d+$/, "").trim(); // replace any trailing modifiers e.g. "+5"
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_crit", current: critDamage}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_damagetype", current: damageType}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_crit", current: critDamage}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_damagetype", current: damageType}).save();
 			if (damage2) {
-				character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_damage2", current: damage2}).save();
-				character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_crit2", current: damage2}).save();
-				character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_damagetype2", current: damageType2}).save();
+				character.attribs.create({name: baseAction + "_" + newRowId + "_attack_damage2", current: damage2}).save();
+				character.attribs.create({name: baseAction + "_" + newRowId + "_attack_crit2", current: damage2}).save();
+				character.attribs.create({name: baseAction + "_" + newRowId + "_attack_damagetype2", current: damageType2}).save();
 			}
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_name_display", current: name}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_rollbase", current: rollBase}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_type", current: attackType}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_type_display", current: attackType + attackType2}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_tohitrange", current: toHitRange}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_range", current: attackRange}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_target", current: attackTarget}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_damage_flag", current: damageFlags}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_onhit", current: onHit}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_name_display", current: name}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_rollbase", current: rollBase}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_type", current: attackType}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_type_display", current: attackType + attackType2}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_tohitrange", current: toHitRange}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_range", current: attackRange}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_target", current: attackTarget}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_damage_flag", current: damageFlags}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_onhit", current: onHit}).save();
 
 			const descriptionFlag = Math.max(Math.ceil(actionText.length / 57), 1);
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_description", current: actionDesc}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_description_flag", current: descriptionFlag}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_description", current: actionDesc}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_description_flag", current: descriptionFlag}).save();
 
 			// hidden = a single space
 			const descVisFlag = d20plus.cfg.getOrDefault("import", "hideActionDescs") ? " " : "@{description}";
-			character.attribs.create({name: `repeating_npcaction_${newRowId}_show_desc`, current: descVisFlag}).save();
+			character.attribs.create({name: `${baseAction}_${newRowId}_show_desc`, current: descVisFlag}).save();
 		}
 
 		function handleOtherAction () {
 			const rollBase = d20plus.importer.rollbase(false); // macro
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_name", current: name}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_npc_options-flag", current: "0"}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_description", current: actionDesc}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_tohitrange", current: "+0"}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_onhit", current: ""}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_damage_flag", current: ""}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_crit", current: ""}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_attack_crit2", current: ""}).save();
-			character.attribs.create({name: "repeating_npcaction_" + newRowId + "_rollbase", current: rollBase}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_name", current: name}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_npc_options-flag", current: "0"}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_description", current: actionDesc}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_tohitrange", current: "+0"}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_onhit", current: ""}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_damage_flag", current: ""}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_crit", current: ""}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_attack_crit2", current: ""}).save();
+			character.attribs.create({name: baseAction + "_" + newRowId + "_rollbase", current: rollBase}).save();
 		}
 
 		// attack parsing
 		if (actionText.includes(" Attack:")) handleAttack();
 		else handleOtherAction();
+	};
+
+	d20plus.importer.addAction = function (character, name, actionText, index) {
+		d20plus.importer.baseAddAction(character, "repeating_npcaction", name, actionText, "", index, true);
+	};
+
+	d20plus.importer.addLegendaryAction = function (character, name, actionText, index) {
+		const expand = d20plus.cfg.getOrDefault("import", "tokenactionsExpanded");
+		d20plus.importer.baseAddAction(character, "repeating_npcaction-l", name, actionText, "Legendary", index, expand);
+	};
+
+	d20plus.importer.addMythicAction = function (character, name, actionText, index) {
+		const expand = d20plus.cfg.getOrDefault("import", "tokenactionsExpanded");
+		d20plus.importer.baseAddAction(character, "repeating_npcaction-m", name, actionText, "Mythic", index, expand);
 	};
 
 	d20plus.importer.findAttrId = function (character, attrName) {
