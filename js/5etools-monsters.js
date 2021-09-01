@@ -1174,6 +1174,17 @@ function d20plusMonsters () {
 									}
 								});
 							}
+							if (data.bonus) {
+								character.attribs.create({name: "bonusaction_flag", current: 1});
+								character.attribs.create({name: "npcbonusactionsflag", current: 1});
+
+								$.each(data.bonus, function (i, bonus) {
+									const name = d20plus.importer.getCleanText(renderer.render(bonus.name));
+									const text = d20plus.importer.getCleanText(renderer.render({entries: bonus.entries}, 1)).replace(/^\s*Hit:\s*/, "");
+
+									d20plus.importer.addBonusAction(character, name, text, i);
+								});
+							}
 							if (data.reaction) {
 								character.attribs.create({name: "reaction_flag", current: 1});
 								character.attribs.create({name: "npcreactionsflag", current: 1});
@@ -1194,12 +1205,11 @@ function d20plusMonsters () {
 										current: d20plus.importer.getCleanText(renderer.render(v.name))
 									});
 
-									// roll20 only supports a single reaction, so only use the first
-									if (d20plus.cfg.getOrDefault("import", "tokenactions") && i === 0 && d20plus.sheet !== "shaped") {
+									if (d20plus.cfg.getOrDefault("import", "tokenactions") && d20plus.sheet !== "shaped") {
 										character.abilities.create({
 											name: "Reaction: " + v.name,
 											istokenaction: true,
-											action: d20plus.actionMacroReaction
+											action: d20plus.actionMacroReaction(i)
 										});
 									}
 

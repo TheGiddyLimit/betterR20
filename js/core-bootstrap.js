@@ -24,7 +24,6 @@ const betteR20Core = function () {
 
 			d20plus.engine.enhanceMarkdown();
 			d20plus.engine.addProFeatures();
-			d20plus.engine.enhanceMeasureTool();
 			d20plus.engine.enhanceMouseDown();
 			d20plus.engine.enhanceMouseMove();
 			d20plus.engine.enhanceStatusEffects();

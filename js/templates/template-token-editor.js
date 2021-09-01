@@ -982,6 +982,15 @@ function initTemplateTokenEditor () {
                             </div>
                         </div>
                         <hr>
+                        <div class="row-fluid clearfix">
+                            <div class="span8">
+                                <label class="light_title">Light Color</label>
+                            </div>
+                            <div class="span4 dyn_fog_switch">
+                                <input class="dyn_fog_light_color colorpicker" type="text" value="transparent" style="display: none;">
+                            </div>
+                        </div>
+                        <hr>
                     </div>
                     <div class='total_light'>
                         <div class='row-fluid clearfix'>

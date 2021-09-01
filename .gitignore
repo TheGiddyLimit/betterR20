@@ -1,4 +1,7 @@
 dist/*
+!dist/betteR20-5etools.user.js
+!dist/betteR20-core.user.js
+
 scratch/*
 
 # Windows image file caches

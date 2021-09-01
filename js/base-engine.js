@@ -38,37 +38,6 @@ function d20plusEngine () {
 			$(`#drawingtools`).after($fxMode);
 		}
 
-		// bind new hotkeys
-		Mousetrap.bind("q q", function () { // default ruler on q-q
-			setMode("measure");
-			$(`#measure_mode`).val("1").trigger("change");
-			return false;
-		});
-
-		Mousetrap.bind("q r", function () { // radius
-			setMode("measure");
-			$(`#measure_mode`).val("2").trigger("change");
-			return false;
-		});
-
-		Mousetrap.bind("q c", function () { // cone
-			setMode("measure");
-			$(`#measure_mode`).val("3").trigger("change");
-			return false;
-		});
-
-		Mousetrap.bind("q e", function () { // box
-			setMode("measure");
-			$(`#measure_mode`).val("4").trigger("change");
-			return false;
-		});
-
-		Mousetrap.bind("q w", function () { // line
-			setMode("measure");
-			$(`#measure_mode`).val("5").trigger("change");
-			return false;
-		});
-
 		if (window.is_gm) {
 			// add lighting layer tool
 			if (!$(`#editinglayer .choosewalls`).length) {
@@ -84,89 +53,6 @@ function d20plusEngine () {
 				e.view._template = $.jqotec("#tmpl_pagesettings");
 			});
 		}
-	};
-
-	d20plus.engine.enhanceMeasureTool = () => {
-		d20plus.ut.log("Enhance Measure tool");
-
-		// add extra toolbar
-		const $wrpBar = $(`#secondary-toolbar`);
-		const toAdd = `
-				<ul class="mode measure" style="display: none;">
-					<li>
-						<select id="measure_mode" style="width: 100px;">
-							<option value="1" selected>Ruler</option>
-							<option value="2">Radius</option>
-							<option value="3">Cone</option>
-							<option value="4">Box</option>
-							<option value="5">Line</option>
-						</select>
-					</li>
-					<li class="measure_mode_sub measure_mode_sub_2" style="display: none;">
-						<select id="measure_mode_sel_2" style="width: 100px;">
-							<option value="1" selected>Burst</option>
-							<option value="2">Blast</option>
-						</select>
-					</li>
-					<li class="measure_mode_sub measure_mode_sub_3" style="display: none;">
-						<input type="number" min="0" id="measure_mode_ipt_3" style="width: 45px;" value="1">
-						<label style="display: inline-flex;" title="The PHB cone rules are the textbook definition of one radian.">rad.</label>
-						<select id="measure_mode_sel_3" style="width: 120px;">
-							<option value="1" selected>Edge: Flat</option>
-							<option value="2">Edge: Rounded</option>
-						</select>
-					</li>
-					<li class="measure_mode_sub measure_mode_sub_4" style="display: none;">
-						<select id="measure_mode_sel_4" style="width: 100px;">
-							<option value="1" selected>Burst</option>
-							<option value="2">Blast</option>
-						</select>
-					</li>
-					<li class="measure_mode_sub measure_mode_sub_5" style="display: none;">
-						<select id="measure_mode_sel_5" style="width: 120px;">
-							<option value="1" selected>Total Width: </option>
-							<option value="2">Width To Edge: </option>
-						</select>
-						<input type="number" min="0" id="measure_mode_ipt_5" style="width: 40px;" value="5">
-						<label style="display: inline-flex;">units</label>
-					</li>
-				</ul>`;
-		$wrpBar.append(toAdd);
-
-		$(`#measure`).click(() => {
-			d20plus.setMode("measure");
-		});
-		const $selMeasure = $(`#measure_mode`);
-		$selMeasure.on("change", () => {
-			$(`.measure_mode_sub`).hide();
-			$(`.measure_mode_sub_${$selMeasure.val()}`).show();
-		});
-
-		// 	const event = {
-		// 		type: "Ve_measure_clear_sticky",
-		// 		player: window.currentPlayer.id,
-		// 		time: (new Date).getTime()
-		// 	};
-		// 	d20.textchat.sendShout(event)
-
-		d20.textchat.shoutref.on("value", function(e) {
-			if (!d20.textchat.chatstartingup) {
-				var t = e.val();
-				if (t) {
-					const msg = JSON.parse(t);
-					if (window.DEBUG) console.log("SHOUT: ", msg);
-
-					switch (msg.type) {
-						// case "Ve_measure_clear_sticky": {
-						// 	delete d20plus._stickyMeasure[msg.player];
-						// 	d20.engine.redrawScreenNextTick();
-						// }
-					}
-				}
-			}
-		});
-
-		d20plus.mod.drawMeasurements();
 	};
 
 	d20plus.engine._removeStatusEffectEntries = () => {
@@ -1128,7 +1014,6 @@ function d20plusEngine () {
 			d20.Campaign.activePage().debounced_recordZIndexes()
 	};
 
-	d20plus.engine._tempTopRenderLines = {}, // format: {x: ..., y: ..., to_x: ..., to_y: ..., ticks: ..., offset: ...}
 	// previously "enhanceSnap"
 	d20plus.engine.enhanceMouseDown = () => {
 		const R = d20plus.overwrites.canvasHandlerDown

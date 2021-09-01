@@ -58,7 +58,6 @@ const betteR205etools = function () {
 			d20.Campaign.activePage().collection.on("add", d20plus.bindGraphics);
 			d20plus.engine.addSelectedTokenCommands();
 			d20plus.engine.enhanceStatusEffects();
-			d20plus.engine.enhanceMeasureTool();
 			d20plus.engine.enhanceMouseDown();
 			d20plus.engine.enhanceMouseMove();
 			d20plus.engine.addLineCutterTool();

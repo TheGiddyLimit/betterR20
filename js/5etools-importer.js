@@ -375,6 +375,10 @@ function d20plusImporter () {
 		d20plus.importer._baseAddAction(character, "repeating_npcaction", name, actionText, "", index, true);
 	};
 
+	d20plus.importer.addBonusAction = function (character, name, actionText, index) {
+		d20plus.importer._baseAddAction(character, "repeating_npcbonusaction", name, actionText, "Bonus", index, true);
+	};
+
 	d20plus.importer.addLegendaryAction = function (character, name, actionText, index) {
 		const expand = d20plus.cfg.getOrDefault("import", "tokenactionsExpanded");
 		d20plus.importer._baseAddAction(character, "repeating_npcaction-l", name, actionText, "Legendary", index, expand);
@@ -389,6 +393,15 @@ function d20plusImporter () {
 		const found = character.attribs.toJSON().find(a => a.name === attrName);
 		return found ? found.id : undefined;
 	};
+
+	d20plus.importer.findOrGenerateRepeatingRowId = function (character, namePattern, current) {
+		const [namePrefix, nameSuffix] = namePattern.split(/\$\d?/);
+		const attr = character.attribs.toJSON()
+			.find(a => a.name.startsWith(namePrefix) && a.name.endsWith(nameSuffix) && a.current == current);
+		return attr ?
+			attr.name.replace(RegExp(`^${namePrefix}(.*)${nameSuffix}$`), "$1") :
+			d20plus.ut.generateRowId();
+	}
 
 	d20plus.importer.addOrUpdateAttr = function (character, attrName, value) {
 		const id = d20plus.importer.findAttrId(character, attrName);

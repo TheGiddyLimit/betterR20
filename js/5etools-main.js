@@ -2258,6 +2258,33 @@ const betteR205etoolsMain = function () {
 			d20plus.importer.doFakeDrop(event, character, data, null);
 		}
 
+		async function importSpells(character, data, event) {
+
+			const importCriticalData = function (){
+				//give it time to update the sheet
+				setTimeout(() => {
+					const rowID = d20plus.importer.findOrGenerateRepeatingRowId(character.model, "repeating_attack_$0_atkname", data.name)
+									
+					//crit damage
+					if (data.data.Crit && rowID) {
+						d20plus.importer.addOrUpdateAttr(character.model, `repeating_attack_${rowID}_dmgcustcrit`, data.data.Crit)
+						const critID = d20plus.importer.findAttrId(character.model, `repeating_attack_${rowID}_rollbase_crit`);
+						const newCrit = character.model.attribs.get(critID).get("current").replace(/\{\{crit1\=\[\[\d\d?d\d\d?\]\]\}\}/g, '{{crit1=[[@{dmgcustcrit}]]}}');
+						d20plus.importer.addOrUpdateAttr(character.model, `repeating_attack_${rowID}_rollbase_crit`, newCrit)
+					}
+
+					//crit range
+					if (data.data["Crit Range"] && rowID) d20plus.importer.addOrUpdateAttr(character.model, `repeating_attack_${rowID}_atkcritrange`, data.data["Crit Range"])
+				},1000)
+			}
+			
+			//this is working fine for spells.
+			d20plus.importer.doFakeDrop(event, character, data, null);
+
+			//adding critical info that is missing.
+			if (data.data.Crit || data.data["Crit Range"]) importCriticalData()
+		}
+
 		function importData (character, data, event) {
 			// TODO remove feature import workarounds below when roll20 and sheets supports their drag-n-drop properly
 			if (data.data.Category === "Feats") {
@@ -2276,6 +2303,8 @@ const betteR205etoolsMain = function () {
 				importPsionicAbility(character, data);
 			} else if (data.data.Category === "Items") {
 				importItem(character, data, event);
+			} else if (data.data.Category === "Spells") {
+				importSpells(character, data, event);
 			} else {
 				d20plus.importer.doFakeDrop(event, character, data, null);
 			}
@@ -2810,11 +2839,18 @@ const betteR205etoolsMain = function () {
 		if (url && url.trim()) {
 			const handoutBuilder = playerMode ? d20plus.races.playerImportBuilder : d20plus.races.handoutBuilder;
 
-			DataUtil.loadJSON(url).then((data) => {
+			DataUtil.loadJSON(url).then(async (data) => {
+				const toImport = MiscUtil.copy(data.race);
+				if (data.subrace){
+					const allraces = await DataUtil.loadJSON(RACE_DATA_URL);
+					//this does not handle homebrew parent races in "subrace" block
+					//i found none in the existing homebrew at the time of doing this, so propably won't be such an issue
+					toImport.push(...d20plus.races.adoptSubraces(allraces.race, data.subrace, false))
+				}
 				d20plus.importer.addBrewMeta(data._meta);
 				d20plus.importer.showImportList(
 					"race",
-					Renderer.race.mergeSubraces(data.race),
+					Renderer.race.mergeSubraces(toImport),
 					handoutBuilder,
 					{
 						forcePlayer
@@ -2890,6 +2926,41 @@ const betteR205etoolsMain = function () {
 		return [noteContents, gmNotes];
 	};
 
+	//copied from ../lib/render.js for small changes
+	d20plus.races.adoptSubraces = function (allRaces, subraces, keepOriginalSubraces = true) {
+		const nxtData = [];
+
+		subraces.forEach(sr => {
+			if (!sr.race || !sr.race.name || !sr.race.source) throw new Error(`Subrace was missing parent race!`);
+
+			const _baseRace = allRaces.find(r => r.name === sr.race.name && r.source === sr.race.source);
+			if (!_baseRace) {
+				console.warn(`${sr.race.name} parent race not found! Contact homebrew maintainer as it is probably a wrong entry`);
+				return;
+			}	
+
+			// Attempt to graft multiple subraces from the same data set onto the same base race copy
+			let baseRace = nxtData.find(r => r.name === sr.race.name && r.source === sr.race.source);
+			if (!baseRace) {
+				// copy and remove base-race-specific data
+				baseRace = MiscUtil.copy(_baseRace);
+				if (baseRace._rawName) {
+					baseRace.name = baseRace._rawName;
+					delete baseRace._rawName;
+				}
+				delete baseRace._isBaseRace;
+				delete baseRace._baseRaceEntries;
+
+				baseRace.subraces = baseRace.subraces && keepOriginalSubraces ? baseRace.subraces : [];
+				nxtData.push(baseRace);
+			}
+
+			baseRace.subraces.push(sr);
+		});
+
+		return nxtData;
+	}
+
 
 	d20plus.optionalfeatures.button = function (forcePlayer) {
 		const playerMode = forcePlayer || !window.is_gm;
@@ -2955,7 +3026,7 @@ const betteR205etoolsMain = function () {
 		renderer.recursiveRender({entries: data.entries}, renderStack, {depth: 1});
 
 		const rendered = renderStack.join("");
-		const prereqs = Renderer.utils.getPrerequisiteText(data.prerequisites);
+		const prereqs = Renderer.utils.getPrerequisiteHtml(data.prerequisites);
 
 		const r20json = {
 			"name": data.name,
@@ -4235,7 +4306,9 @@ To restore this functionality, press the "Bind Drag-n-Drop" button.<br>
 		return "%{selected|" + baseAction + "_$" + index + "_npc_action}";
 	};
 
-	d20plus.actionMacroReaction = "@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npcreaction_$0_name}}} {{description=@{selected|repeating_npcreaction_$0_desc} }} ";
+	d20plus.actionMacroReaction = function (index) {
+		return "@{selected|wtype} &{template:npcaction} {{name=@{selected|npc_name}}} {{rname=@{selected|repeating_npcreaction_$" + index + "_name}}} {{description=@{selected|repeating_npcreaction_$" + index + "_desc} }} ";
+	};
 
 	d20plus.actionMacroLegendary = function (tokenactiontext) {
 		return "@{selected|wtype} @{selected|wtype}&{template:npcaction} {{name=@{selected|npc_name}}} {{rname=Legendary Actions}} {{description=The @{selected|npc_name} can take @{selected|npc_legendary_actions} legendary actions, choosing from the options below. Only one legendary option can be used at a time and only at the end of another creature's turn. The @{selected|npc_name} regains spent legendary actions at the start of its turn.\n\r" + tokenactiontext + "}} ";

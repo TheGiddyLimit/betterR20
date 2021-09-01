@@ -60,7 +60,7 @@ function d20plusFeats () {
     d20plus.feats._getHandoutData = function (data) {
         const renderer = new Renderer();
         renderer.setBaseUrl(BASE_SITE_URL);
-        const prerequisite = Renderer.utils.getPrerequisiteText(data.prerequisite);
+        const prerequisite = Renderer.utils.getPrerequisiteHtml(data.prerequisite);
         Renderer.feat.mergeAbilityIncrease(data);
 
         const renderStack = [];

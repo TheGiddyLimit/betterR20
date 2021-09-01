@@ -217,22 +217,13 @@ function initCanvasHandlerOverwrite () {
 							// BEGIN PathSplitter CODE
 							let mainSegments = PathMath.toSegments(mainPath);
 							// BEGIN MOD
-							// fake a tiny diagonal line
 							const SLICE_LEN = 10;
 							const slicePoint1 = [lastPoint.x + (SLICE_LEN / 2), lastPoint.y + (SLICE_LEN / 2), 1];
 							const slicePoint2 = [lastPoint.x - (SLICE_LEN / 2), lastPoint.y - (SLICE_LEN / 2), 1];
-							const nuId = d20plus.ut.generateRowId();
-							d20plus.engine._tempTopRenderLines[nuId] = {
-								ticks: 2,
-								x: slicePoint1[0],
-								y: slicePoint1[1],
-								to_x: slicePoint2[0],
-								to_y: slicePoint2[1],
-								offset: [...d20.engine.currentCanvasOffset]
-							};
 							setTimeout(() => {
 								d20.engine.redrawScreenNextTick();
 							}, 1);
+
 							let splitSegments = [
 								[slicePoint1, slicePoint2]
 							];
