@@ -238,4 +238,6 @@ Object.entries(SCRIPTS).forEach(([k, v]) => {
 	fs.writeFileSync(filename, fullScript);
 });
 
+fs.writeFileSync(`${BUILD_DIR}/betteR20-version`, `${SCRIPT_VERSION}`);
+
 console.log(`v${SCRIPT_VERSION}: Build completed at ${(new Date()).toJSON().slice(11, 19)}`);
