@@ -1443,7 +1443,7 @@ const betteR205etoolsMain = function () {
 								<label class="flex">
 									<span>Which item would you like to import?</span>
 									 <select title="Note: this does not include homebrew. For homebrew subclasses, use the dedicated subclass importer." style="width: 250px;">
-								   ${Object.entries(itemChoices).map(([key,value]) => `<option value="${key}">${(value[0].item || value[0].special).split("|")[0].toTitleCase()}</option>`)}
+								   ${Object.entries(itemChoices).map(([key,value]) => `<option value="${key}">${(value[0].item || value[0].special || value[0]).split("|")[0].toTitleCase()}</option>`)}
 									 </select>
 								</label>
 							</div>
@@ -1481,7 +1481,7 @@ const betteR205etoolsMain = function () {
 				for (const equip of bg.startingEquipment) {
 					// Loop because there can be any number of objects and in any order
 					if (equip._) {
-						// The _ property means not a will be imported
+						// The _ property means will always be imported
 						startingGold += await importItemsAndGetGold(equip._);
 					}
 					else {

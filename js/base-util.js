@@ -497,7 +497,9 @@ function baseUtil () {
 	};
 
 	d20plus.ut.isUseSharedJs = () => {
-		return BASE_SITE_URL.includes("://5e.tools") || BASE_SITE_URL.includes("://5etools.com");
+		return BASE_SITE_URL.includes("://5e.tools")
+			|| BASE_SITE_URL.includes("://5etools.com")
+			|| /:\/\/5etools-mirror-\d+\./.test(BASE_SITE_URL);
 	};
 
 	d20plus.ut.fixSidebarLayout = () => {

@@ -746,8 +746,8 @@ function initTemplateTokenEditor () {
                                         <label class='dyn_fog_dropdown'>
                                             <select class='dyn_fog_dark_vision_effect form-control'>
                                                 <option value=''>None</option>
+                                                <option value='Nocturnal'>Nocturnal</option>
                                                 <option value='Dimming'>Dimming</option>
-                                                <option value='Sharpen'>Sharpen</option>
                                             </select>
                                         </label>
                                     </div>

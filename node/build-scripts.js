@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const SCRIPT_VERSION = "1.25.0";
+const SCRIPT_VERSION = "1.25.1";
 
 const matchString = `
 // @match        https://app.roll20.net/editor
@@ -9,6 +9,14 @@ const matchString = `
 // @match        https://app.roll20.net/editor/
 // @match        https://app.roll20.net/editor/#*
 // @match        https://app.roll20.net/editor/?*
+`;
+
+// We have to block certain analytics scripts from running. Whenever they and betteR20 are
+// running, the analytics scripts manage to somehow crash the entire website.
+const analyticsBlocking = `
+// @grant        GM_webRequest
+// @webRequest   [{"selector": { "include": "*://www.google-analytics.com/analytics.js" },  "action": "cancel"}]
+// @webRequest   [{"selector": { "include": "*://cdn.userleap.com/shim.js?*" },  "action": "cancel"}]
 `;
 
 const HEADER_CORE = `// ==UserScript==
@@ -23,6 +31,7 @@ const HEADER_CORE = `// ==UserScript==
 ${matchString}
 // @grant        unsafeWindow
 // @run-at       document-start
+${analyticsBlocking}
 // ==/UserScript==
 `;
 
@@ -38,6 +47,7 @@ const HEADER_5ETOOLS = `// ==UserScript==
 ${matchString}
 // @grant        unsafeWindow
 // @run-at       document-start
+${analyticsBlocking}
 // ==/UserScript==
 `;
 

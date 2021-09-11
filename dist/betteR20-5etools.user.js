@@ -2,7 +2,7 @@
 // @name         betteR20-5etools
 // @namespace    https://5e.tools/
 // @license      MIT (https://opensource.org/licenses/MIT)
-// @version      1.25.0
+// @version      1.25.1
 // @updateURL    https://get.5e.tools/script/betteR20-5etools.user.js
 // @downloadURL  https://get.5e.tools/script/betteR20-5etools.user.js
 // @description  Enhance your Roll20 experience
@@ -17,13 +17,21 @@
 
 // @grant        unsafeWindow
 // @run-at       document-start
+
+// @grant        GM_webRequest
+// @webRequest   [{"selector": { "include": "*://www.google-analytics.com/analytics.js" },  "action": "cancel"}]
+// @webRequest   [{"selector": { "include": "*://cdn.userleap.com/shim.js?*" },  "action": "cancel"}]
+
 // ==/UserScript==
 
 
 ART_HANDOUT = "betteR20-art";
 CONFIG_HANDOUT = "betteR20-config";
 
-BASE_SITE_URL = "https://5e.tools/"; // TODO automate to use mirror if main site is unavailable
+// TODO automate to use mirror if main site is unavailable
+// BASE_SITE_URL = "https://5e.tools/";
+BASE_SITE_URL = "https://5etools-mirror-1.github.io/";
+
 SITE_JS_URL = BASE_SITE_URL + "js/";
 DATA_URL = BASE_SITE_URL + "data/";
 
@@ -1265,7 +1273,9 @@ function baseUtil () {
 	};
 
 	d20plus.ut.isUseSharedJs = () => {
-		return BASE_SITE_URL.includes("://5e.tools") || BASE_SITE_URL.includes("://5etools.com");
+		return BASE_SITE_URL.includes("://5e.tools")
+			|| BASE_SITE_URL.includes("://5etools.com")
+			|| /:\/\/5etools-mirror-\d+\./.test(BASE_SITE_URL);
 	};
 
 	d20plus.ut.fixSidebarLayout = () => {
@@ -14148,8 +14158,8 @@ function initTemplateTokenEditor () {
                                         <label class='dyn_fog_dropdown'>
                                             <select class='dyn_fog_dark_vision_effect form-control'>
                                                 <option value=''>None</option>
+                                                <option value='Nocturnal'>Nocturnal</option>
                                                 <option value='Dimming'>Dimming</option>
-                                                <option value='Sharpen'>Sharpen</option>
                                             </select>
                                         </label>
                                     </div>
@@ -18707,7 +18717,7 @@ const betteR205etoolsMain = function () {
 								<label class="flex">
 									<span>Which item would you like to import?</span>
 									 <select title="Note: this does not include homebrew. For homebrew subclasses, use the dedicated subclass importer." style="width: 250px;">
-								   ${Object.entries(itemChoices).map(([key,value]) => `<option value="${key}">${(value[0].item || value[0].special).split("|")[0].toTitleCase()}</option>`)}
+								   ${Object.entries(itemChoices).map(([key,value]) => `<option value="${key}">${(value[0].item || value[0].special || value[0]).split("|")[0].toTitleCase()}</option>`)}
 									 </select>
 								</label>
 							</div>
@@ -18745,7 +18755,7 @@ const betteR205etoolsMain = function () {
 				for (const equip of bg.startingEquipment) {
 					// Loop because there can be any number of objects and in any order
 					if (equip._) {
-						// The _ property means not a will be imported
+						// The _ property means will always be imported
 						startingGold += await importItemsAndGetGold(equip._);
 					}
 					else {
