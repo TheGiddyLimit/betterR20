@@ -266,7 +266,7 @@ const betteR205etoolsMain = function () {
 		"_name": "Import",
 		"baseSiteUrl": {
 			"name": "5e Tools Website (reload to apply changes)",
-			"default": "https://5etools-mirror-1.github.io",
+			"default": "https://5etools-mirror-1.github.io/",
 			"_type": "String",
 			"_player": true
 		},
