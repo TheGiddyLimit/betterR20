@@ -86,20 +86,22 @@ function d20plusBackgrounds () {
 		const ptraitargs = {
 			countMin: 1,
 			countMax: 2,
-			random:true,
-			totallyRandom:true,
+			random: true,
+			totallyRandom: true,
+			skip: true
 		}
 		const args = {
 			countMin: 1,
 			countMax: 1,
-			random:true,
+			random: true,
+			skip: true
 		}
 
-		// Call the menu
+		// Call the menus, allowing for null sets
 		const pt = await d20plus.ui.chooseCheckboxList(ptrait, "Personality Trait", ptraitargs);
-		const id = await d20plus.ui.chooseRadioList(ideal, "Ideal", args);
-		const bd = await d20plus.ui.chooseRadioList(bond, "Bond", args);
-		const fl = await d20plus.ui.chooseRadioList(flaw, "Flaw", args);
+		const id = !ideal ? null : await d20plus.ui.chooseRadioList(ideal, "Ideal", args);
+		const bd = !bond ? null : await d20plus.ui.chooseRadioList(bond, "Bond", args);
+		const fl = !flaw ? null : await d20plus.ui.chooseRadioList(flaw, "Flaw", args);
 
 		// Return
 		return {
@@ -115,16 +117,49 @@ function d20plusBackgrounds () {
 
 		const renderer = new Renderer();
 		renderer.setBaseUrl(BASE_SITE_URL);
-		const renderStack = [];
-		let feature = {};
+		const featureSet = [
+			"Cultural Chameleon",
+			"Dust Digger",
+			"Favored Event",
+			"Specialty",
+			"Contacts",
+			"How Do I Fit In?",
+			"Favorite Schemes",
+			"Faceless Persona",
+			"Why Are You Here?",
+			"Fey Mark",
+			"Feywild Visitor",
+			"Fishing Tale",
+			"Harrowing Event",
+			"Role",
+			"Path to Mystery",
+			"Hardship Endured",
+			"Variant Noble (Knight)",
+			"A Flair for the Dramatic",
+			"Life at Sea",
+			"Claim to Fame",
+			"Carnival Companion"
+		];
+		let features = [];
 		bg.entries.forEach(e => {
+			let feature = {};
 			if (e.name && e.name.includes("Feature:")) {
 				feature = JSON.parse(JSON.stringify(e));
 				feature.name = feature.name.replace("Feature:", "").trim();
-			}
+			} else if (e.name && (
+					e.name.includes("Guild Spells") || // covers all GGR backgrounds
+					e.name.includes("Origins")         // Criminal, Folk Hero, Hermit, Outlander, etc
+					)) {
+				feature = JSON.parse(JSON.stringify(e));
+			} else if (e.name && featureSet.includes(e.name)) {
+				feature = JSON.parse(JSON.stringify(e));
+			} else return;
+
+			const renderStack = [];
+			renderer.recursiveRender({entries: feature.entries}, renderStack);
+			feature.text = renderStack.length ? d20plus.importer.getCleanText(renderStack.join("")) : "";
+			features.push(feature);
 		});
-		if (feature) renderer.recursiveRender({entries: feature.entries}, renderStack);
-		feature.text = renderStack.length ? d20plus.importer.getCleanText(renderStack.join("")) : "";
 
 		// Add skills
 
@@ -424,11 +459,28 @@ function d20plusBackgrounds () {
 		let ideal = null;
 		let bond = null;
 		let flaw = null;
+		const matchCharacteristics = [
+			"Suggested Characteristics", // Most backgrounds
+			"Horror Characteristics"     // 'Haunted One' and 'Investigator'
+		];
 		// Get the JSON for all the tables
 		if (bg.entries) {
 			for (const ent of bg.entries) {
-				if (ent.name && ent.name === "Suggested Characteristics") {
+				if (ent.name && matchCharacteristics.includes(ent.name)) {
 					traits = ent;
+				} else if (ent.entries) {
+					for (const entItem of ent.entries) {
+						// look for embedded characteristics
+						if (entItem.name && entItem.name === "Suggested Characteristics") {
+							traits = entItem;
+						// look for embedded trinkets, and move to features
+						} else if (entItem.name && entItem.name.includes("Trinket")) {
+							const renderStack = [];
+							renderer.recursiveRender({entries: entItem.entries}, renderStack);
+							entItem.text = renderStack.length ? d20plus.importer.getCleanText(renderStack.join("")) : "";
+							features.push(entItem);
+						}
+					}
 				}
 			}
 		}
@@ -436,22 +488,67 @@ function d20plusBackgrounds () {
 		// Fill the rows
 		if (traits !== null && traits.entries?.length) {
 			for (let i = 0; i < traits.entries.length; i++) {
-				ent = traits.entries[i];
+				const ent = traits.entries[i];
 				// This seems to be the best way to parse the information with some room for errors
 				// It seems like the schema is based on on the website, which is why colLabels is where the identifier is
 				if (ent.colLabels && ent.colLabels.length === 2 && ent.rows) {
+
+					/**
+					 * Clean up the formatting and reference syntaxes to get clean text.
+					 *
+					 * @param entry entry to clean up
+					 * @return cleaned text
+					 */
+					const _cleanText = function (entry) {
+						let cleanedText = "";
+						let closeIndex = 0;
+						while (true) {
+							const firstIndex = entry.indexOf("{@", closeIndex);
+							if (firstIndex === -1) {
+								// grab whatever is left in the entry
+								cleanedText += entry.substring(closeIndex);
+								break;
+							}
+							cleanedText += entry.substring(closeIndex, firstIndex);
+							const spaceIndex = entry.indexOf(" ", firstIndex);
+							if (spaceIndex === -1) {
+								// parse error, just grab the rest and bail
+								cleanedText += entry.substring(firstIndex);
+								break;
+							}
+							closeIndex = entry.indexOf("}", spaceIndex);
+							if (closeIndex === -1) {
+								// parse error, just grab the rest and bail
+								cleanedText += entry.substring(firstIndex);
+								break;
+							}
+							// look for any reference syntax between the space and the closure
+							const pipeIndex = entry.substring(spaceIndex + 1, closeIndex).indexOf("|");
+							if (pipeIndex === -1) {
+								// no reference, copy one past space up to closure
+								cleanedText += entry.substring(spaceIndex + 1, closeIndex);
+							} else {
+								// got a reference, copy one past space for number of characters up to pipe
+								// note that pipeIndex is zero-based
+								cleanedText += entry.substr(spaceIndex + 1, pipeIndex);
+							}
+							closeIndex++;
+						}
+						return cleanedText;
+					};
+
 					switch (ent.colLabels[1]) {
 						case "Personality Trait":
-							ptrait = ent.rows.map(r => r[1]);
+							ptrait = ent.rows.map(r => _cleanText(r[1]));
 							break;
 						case "Ideal":
-							ideal = ent.rows.map(r => r[1]);
+							ideal = ent.rows.map(r => _cleanText(r[1]));
 							break;
 						case "Bond":
-							bond = ent.rows.map(r => r[1]);
+							bond = ent.rows.map(r => _cleanText(r[1]));
 							break;
 						case "Flaw":
-							flaw = ent.rows.map(r => r[1]);
+							flaw = ent.rows.map(r => _cleanText(r[1]));
 							break;
 					}
 				}
@@ -464,18 +561,20 @@ function d20plusBackgrounds () {
 
 		// Update Sheet
 		const attrs = new d20plus.importer.CharacterAttributesProxy(character);
-		const fRowId = d20plus.ut.generateRowId();
 
 		if (d20plus.sheet === "ogl") {
 			attrs.addOrUpdate("background", bg.name);
 			attrs.addOrUpdate("gp", startingGold);
 
-			attrs.add(`repeating_traits_${fRowId}_name`, feature.name);
-			attrs.add(`repeating_traits_${fRowId}_source`, "Background");
-			attrs.add(`repeating_traits_${fRowId}_source_type`, bg.name);
-			attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
-			if (feature.text) {
-				attrs.add(`repeating_traits_${fRowId}_description`, feature.text);
+			for (const feature of features) {
+				const fRowId = d20plus.ut.generateRowId();
+				attrs.add(`repeating_traits_${fRowId}_name`, feature.name);
+				attrs.add(`repeating_traits_${fRowId}_source`, "Background");
+				attrs.add(`repeating_traits_${fRowId}_source_type`, bg.name);
+				attrs.add(`repeating_traits_${fRowId}_options-flag`, "0");
+				if (feature.text) {
+					attrs.add(`repeating_traits_${fRowId}_description`, feature.text);
+				}
 			}
 
 			skills.map(s => s.toLowerCase().replace(/ /g, "_")).forEach(s => {
@@ -512,10 +611,13 @@ function d20plusBackgrounds () {
 			if (flaws?.length === 1) attrs.addOrUpdate(`flaws`, flaws[0]);
 		} else if (d20plus.sheet === "shaped") {
 			attrs.addOrUpdate("background", bg.name);
-			attrs.add(`repeating_trait_${fRowId}_name`, `${feature.name} (${bg.name})`);
-			if (feature.text) {
-				attrs.add(`repeating_trait_${fRowId}_content`, feature.text);
-				attrs.add(`repeating_trait_${fRowId}_content_toggle`, "1");
+			for (const feature of features) {
+				const fRowId = d20plus.ut.generateRowId();
+				attrs.add(`repeating_trait_${fRowId}_name`, `${feature.name} (${bg.name})`);
+				if (feature.text) {
+					attrs.add(`repeating_trait_${fRowId}_content`, feature.text);
+					attrs.add(`repeating_trait_${fRowId}_content_toggle`, "1");
+				}
 			}
 
 			skills.map(s => s.toUpperCase().replace(/ /g, "")).forEach(s => {
