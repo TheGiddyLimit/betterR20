@@ -187,10 +187,6 @@ function d20plusMonsters () {
 			.filter(src => !(SourceUtil.isNonstandardSource(src) && filterUnofficial))
 			.map(src => d20plus.monsters.formMonsterUrl(monsterDataUrls[src]));
 
-		if (d20plus.cfg.getOrDefault("import", "allSourcesIncludeHomebrew")) {
-			monsterBrewDataUrls.forEach(it => toLoad.push(it.url));
-		}
-
 		if (toLoad.length) {
 			const dataStack = (await Promise.all(toLoad.map(async url => DataUtil.loadJSON(url)))).flat();
 
