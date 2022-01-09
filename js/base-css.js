@@ -198,6 +198,14 @@ function baseCss () {
 			r: "color: white;",
 		},
 		{
+			s: ".userscript-hacker-chat-error",
+			r: "margin-left: -45px; margin-right: -5px; margin-bottom: -7px; margin-top: -15px; display: inline-block; font-weight: bold; font-family: 'Lucida Console', Monaco, monospace; color: #FF69B4; background: black; padding: 3px; min-width: calc(100% + 60px);",
+		},
+		{
+			s: ".userscript-hacker-chat-error a",
+			r: "color: white;",
+		},
+		{
 			s: ".withoutavatars .userscript-hacker-chat",
 			r: "margin-left: -15px; min-width: calc(100% + 30px);",
 		},

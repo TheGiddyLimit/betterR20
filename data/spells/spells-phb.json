@@ -4648,6 +4648,9 @@
 			"damageInflict": [
 				"radiant"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -5964,7 +5967,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold a Medium creature, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
+					"text": "a diamond worth at least 1,000 gp and at least 1 cubic inch of flesh of the creature that is to be cloned, which the spell consumes, and a vessel worth at least 2,000 gp that has a sealable lid and is large enough to hold the creature being cloned, such as a huge urn, coffin, mud-filled cyst in the ground, or crystal container filled with salt water",
 					"cost": 100000,
 					"consume": true
 				}
@@ -5975,7 +5978,7 @@
 				}
 			],
 			"entries": [
-				"This spell grows an inert duplicate of a living, Medium creature as a safeguard against death. This clone forms inside a sealed vessel and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.",
+				"This spell grows an inert duplicate of a living creature as a safeguard against death. This clone forms inside the vessel used in the spell's casting and grows to full size and maturity after 120 days; you can also choose to have the clone be a younger version of the same creature. It remains inert and endures indefinitely, as long as its vessel remains undisturbed.",
 				"At any time after the clone matures, if the original creature dies, its soul transfers to the clone, provided that the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The original creature's physical remains, if they still exist, become inert and can't thereafter be restored to life, since the creature's soul is elsewhere."
 			],
 			"miscTags": [
@@ -7462,6 +7465,9 @@
 			],
 			"savingThrow": [
 				"wisdom"
+			],
+			"miscTags": [
+				"RO"
 			],
 			"areaTags": [
 				"S"
@@ -10002,6 +10008,9 @@
 				"You create up to four torch-sized lights within range, making them appear as torches, lanterns, or glowing orbs that hover in the air for the duration. You can also combine the four lights into one glowing vaguely humanoid form of Medium size. Whichever form you choose, each light sheds dim light in a 10-foot radius.",
 				"As a bonus action on your turn, you can move the lights up to 60 feet to a new spot within range. A light must be within 20 feet of another light created by this spell, and a light winks out if it exceeds the spell's range."
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -10371,6 +10380,9 @@
 				"A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.",
 				"If you chose a point on an object you are holding or one that isn't being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.",
 				"If any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled."
+			],
+			"miscTags": [
+				"LGT"
 			],
 			"areaTags": [
 				"S"
@@ -14575,6 +14587,9 @@
 			"savingThrow": [
 				"dexterity"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"areaTags": [
 				"C"
 			],
@@ -15726,6 +15741,9 @@
 				"cold",
 				"fire"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -16162,6 +16180,9 @@
 			"spellAttack": [
 				"M"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"areaTags": [
 				"ST"
 			],
@@ -16468,6 +16489,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"miscTags": [
+				"LGT"
 			],
 			"areaTags": [
 				"S"
@@ -21357,6 +21381,9 @@
 			"savingThrow": [
 				"constitution"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"areaTags": [
 				"S"
 			],
@@ -23492,6 +23519,9 @@
 			"savingThrow": [
 				"dexterity"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"classes": {
 				"fromClassList": [
 					{
@@ -24682,7 +24712,7 @@
 				}
 			],
 			"entries": [
-				"Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.",
+				"Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoid's body.",
 				"You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a {@spell protection from evil and good} or {@spell magic circle} spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
 				"Once you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.",
 				"Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.",
@@ -26997,6 +27027,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"miscTags": [
+				"LGT"
 			],
 			"areaTags": [
 				"Y"
@@ -29821,6 +29854,7 @@
 				"R"
 			],
 			"miscTags": [
+				"LGT",
 				"SCL"
 			],
 			"areaTags": [
@@ -31503,7 +31537,8 @@
 				"humanoid"
 			],
 			"miscTags": [
-				"HL"
+				"HL",
+				"RO"
 			],
 			"classes": {
 				"fromClassList": [
@@ -36391,6 +36426,9 @@
 			"savingThrow": [
 				"constitution"
 			],
+			"miscTags": [
+				"LGTS"
+			],
 			"areaTags": [
 				"L"
 			],
@@ -36653,6 +36691,9 @@
 			],
 			"abilityCheck": [
 				"intelligence"
+			],
+			"miscTags": [
+				"LGT"
 			],
 			"areaTags": [
 				"S"
@@ -37071,6 +37112,7 @@
 				}
 			],
 			"miscTags": [
+				"RO",
 				"SGT",
 				"TP"
 			],

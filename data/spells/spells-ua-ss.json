@@ -208,8 +208,8 @@
 						"Damage Type"
 					],
 					"colStyles": [
-						"col-1 text-center",
-						"col-11"
+						"col-2 text-center",
+						"col-10"
 					],
 					"rows": [
 						[
@@ -309,6 +309,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"miscTags": [
+				"RO"
 			],
 			"areaTags": [
 				"ST"

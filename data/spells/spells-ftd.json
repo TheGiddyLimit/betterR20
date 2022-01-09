@@ -311,6 +311,7 @@
 				}
 			],
 			"miscTags": [
+				"RO",
 				"SGT"
 			],
 			"classes": {
@@ -515,11 +516,6 @@
 						"When you cast this spell using a spell slot of 6th level or higher, use the higher level wherever the spell's level appears in the stat block."
 					]
 				}
-			],
-			"conditionInflict": [
-				"charmed",
-				"frightened",
-				"poisoned"
 			],
 			"savingThrow": [
 				"dexterity"

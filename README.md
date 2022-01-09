@@ -9,13 +9,13 @@
 For help, advice, and updates; or to suggest improvements and changes, please [join our Discord](https://discord.gg/nGvRCDs)!
 
 ## How to Import 5etools Data (Monsters, Spells, Items, ...)
-1. Install the Roll20 Enhancement Suite browser extension ([Chrome](https://chrome.google.com/webstore/detail/vtt-enhancement-suite/fadcomaehamhdhekodcpiglabcjkepff)/[Firefox](https://addons.mozilla.org/en-US/firefox/addon/roll20-enhancement-suite/)/)
+1. Install the VTT Enhancement Suite browser extension ([Chrome](https://justas-d.github.io/roll20-enhancement-suite/chrome.html)/[Firefox](https://addons.mozilla.org/en-US/firefox/addon/roll20-enhancement-suite/)/)
 
    - (This adds many other features, view a sample of them [here](https://ssstormy.github.io/roll20-enhancement-suite/features.html).)
 
 2. Install the Tampermonkey browser extension ([Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)/[Firefox](https://addons.mozilla.org/en-GB/firefox/addon/tampermonkey/)).
 
-3. Click [here](https://get.5e.tools/script/betteR20-5etools.user.js) and install the script.
+3. Click [here](https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-5etools.user.js?raw=true) and install the script.
 
 4. Open the Roll20 game where you want the stuff imported.
 
@@ -40,4 +40,4 @@ There are a variety of other features added by the script. Some highlights inclu
 
 
 ## But I Don't Play 5e!
-A version of the script including all the non-5e related features is available [here](https://get.5e.tools/) (along with the full version). **Do not use both scripts at the same time, they are mutually incompatible.**
+A version of the script including all the non-5e related features is available [here](https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-core.user.js?raw=true). **Do not use both scripts at the same time, they are mutually incompatible.**

@@ -6,7 +6,7 @@ function baseUi () {
 		const $body = $("body");
 
 		const $wrpSettings = $(`<div id="betteR20-settings"/>`);
-		$("#mysettings > .content").children("hr").first().before($wrpSettings);
+		$("#settings-accordion").children(".panel.panel-default").first().before($wrpSettings);
 
 		$wrpSettings.append(d20plus.settingsHtmlHeader);
 		$body.append(d20plus.configEditorHTML);
@@ -63,8 +63,9 @@ function baseUi () {
 	d20plus.ui.addHtmlFooter = () => {
 		const $wrpSettings = $(`#betteR20-settings`);
 		$wrpSettings.append(d20plus.settingsHtmlPtFooter);
+		$wrpSettings.css("margin","5px");
 
-		$("#mysettings > .content a#button-edit-config").on(window.mousedowntype, d20plus.cfg.openConfigEditor);
+		$("#button-edit-config").on(window.mousedowntype, d20plus.cfg.openConfigEditor);
 		d20plus.tool.addTools();
 	};
 

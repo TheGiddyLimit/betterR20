@@ -487,6 +487,9 @@
 				"wisdom",
 				"dexterity"
 			],
+			"miscTags": [
+				"RO"
+			],
 			"areaTags": [
 				"S"
 			],

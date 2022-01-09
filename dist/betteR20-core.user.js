@@ -2,8 +2,8 @@
 // @name         betteR20-core
 // @namespace    https://5e.tools/
 // @license      MIT (https://opensource.org/licenses/MIT)
-// @version      1.28.1
-// @updateURL    https://github.com/TheGiddyLimit/betterR20/raw/development/dist/betteR20-core.user.js
+// @version      1.28.2
+// @updateURL    https://github.com/TheGiddyLimit/betterR20/raw/development/dist/betteR20-core.meta.js
 // @downloadURL  https://github.com/TheGiddyLimit/betterR20/raw/development/dist/betteR20-core.user.js
 // @description  Enhance your Roll20 experience
 // @author       TheGiddyLimit
@@ -95,7 +95,13 @@ EventTarget.prototype.addEventListener = function (type, listener, options, ...o
 
 
 function baseUtil () {
+	const vttesUrl = "https://justas-d.github.io/roll20-enhancement-suite/";
+	let shownHardDickWarning = false;
+
 	d20plus.ut = {};
+
+	// d20plus.ut.WIKI_URL = "https://wiki.5e.tools"; // I'll be back ...
+	d20plus.ut.WIKI_URL = "https://web.archive.org/web/20210826155610/https://wiki.5e.tools";
 
 	d20plus.ut.log = (...args) => {
 		// eslint-disable-next-line no-console
@@ -138,7 +144,7 @@ function baseUtil () {
             value: Array.prototype.map
         });
     };
-	
+
 	d20plus.ut.checkVersion = () => {
 		d20plus.ut.log("Checking current version");
 
@@ -157,6 +163,8 @@ function baseUtil () {
 			return segmentsA.length - segmentsB.length;
 		}
 
+		const isStreamer = !!d20plus.cfg.get("interface", "streamerChatTag");
+		const scriptName = isStreamer ? "Script" : "betteR20";
 		$.ajax({
 			url: `https://raw.githubusercontent.com/TheGiddyLimit/betterR20/development/dist/betteR20-version`,
 			success: (data) => {
@@ -166,10 +174,13 @@ function baseUtil () {
 					const cmp = cmpVersions(curr, avail);
 					if (cmp < 0) {
 						setTimeout(() => {
-							const rawToolsInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-5etools.user.js?raw=true";
-							const rawCoreInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-core.user.js?raw=true";
-							d20plus.ut.sendHackerChat(`<br>A newer version of betteR20 is available.<br>Get ${avail} <a href="${rawToolsInstallUrl}">5etools</a> OR <a href="${rawCoreInstallUrl}">core</a>.<br><br>`);
-							d20plus.ut.sendHackerChat(`For help and support, see our <a href="https://wiki.5e.tools/index.php/BetteR20_FAQ">wiki</a> or join our <a href="https://discord.gg/nGvRCDs">Discord</a>.`);
+							if (!isStreamer) {
+								const rawToolsInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-5etools.user.js?raw=true";
+								const rawCoreInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-core.user.js?raw=true";
+								d20plus.ut.sendHackerChat(`<br>A newer version of ${scriptName} is available.<br>Get ${avail} <a href="${rawToolsInstallUrl}">5etools</a> OR <a href="${rawCoreInstallUrl}">core</a>.<br><br>`);
+							} else {
+								d20plus.ut.sendHackerChat(`<br>A newer version of ${scriptName} is available.<br><br>`);
+							}
 						}, 1000);
 					}
 				}
@@ -180,42 +191,57 @@ function baseUtil () {
 		})
 	};
 
+	d20plus.ut.showHardDickMessage = (scriptName) => {
+		if (shownHardDickWarning) return;
+		shownHardDickWarning = true;
+
+		d20plus.ut.sendHackerChat(`
+			${scriptName} needs VTT Enhancement Suite! Please install it from <a href="${vttesUrl}">here</a>.
+			<br>
+		`, true);
+	};
+
 	d20plus.ut.chatTag = (message) => {
 		const isStreamer = !!d20plus.cfg.get("interface", "streamerChatTag");
-		d20plus.ut.sendHackerChat(`
-				${isStreamer ? "Script" : message} initialised.
-				${window.enhancementSuiteEnabled ? `<br><br>Roll20 Enhancement Suite detected.` : ""}
-				${isStreamer ? "" : `
+		const scriptName = isStreamer ? "Script" : message;
+		if (window.enhancementSuiteEnabled) {
+			d20plus.ut.sendHackerChat(`
+				VTT Enhancement Suite detected.
+				<br><br>
+				${scriptName} initialised.
 				<br>
-				<br>
-				Need help? Visit our <a href="https://wiki.5e.tools/index.php/Feature:_BetteR20">Wiki</a> or Join our <a href="https://discord.gg/nGvRCDs">Discord</a>.
-				<br>
-				<br>
-				<span title="You'd think this would be obvious.">
-				Please DO NOT post about this script or any related content in official channels, including the Roll20 forums.
-				<br>
-				<br>
-				Before reporting a bug on the Roll20 forums, please disable the script and check if the problem persists.
-				`}
-				</span>
 			`);
+		} else d20plus.ut.showHardDickMessage(scriptName);
+		d20plus.ut.sendHackerChat(`
+			${isStreamer ? "" : `
+			<br>
+			Need help? Visit our <a href="${d20plus.ut.WIKI_URL}/index.php/BetteR20_FAQ">wiki</a> or join our <a href="https://discord.gg/nGvRCDs">Discord</a>.
+			<br>
+			<br>
+			<span title="You'd think this would be obvious.">
+			Please DO NOT post about this script or any related content in official channels, including the Roll20 forums.
+			<br>
+			<br>
+			Before reporting a bug on the Roll20 forums, please disable the script and check if the problem persists.
+			</span>
+			`}
+		`);
 	};
 
 	d20plus.ut.showLoadingMessage = (message) => {
 		const isStreamer = !!d20plus.cfg.get("interface", "streamerChatTag");
+		const scriptName = isStreamer ? "Script" : message;
 		d20plus.ut.sendHackerChat(`
-			${isStreamer ? "Script" : message} initialising, please wait...<br><br>
+			${scriptName} initialising, please wait...<br><br>
 		`);
-		d20plus.ut.sendHackerChat(`
-			VTT Enhancement Suite version 1.15.35 or above is required.<br><br>
-		`);
+		if (!window.enhancementSuiteEnabled) d20plus.ut.showHardDickMessage(scriptName);
 	};
 
-	d20plus.ut.sendHackerChat = (message) => {
+	d20plus.ut.sendHackerChat = (message, error = false) => {
 		d20.textchat.incoming(false, ({
 			who: "system",
 			type: "system",
-			content: `<span class="hacker-chat">
+			content: `<span class="${error ? "hacker-chat-error" : "hacker-chat"}">
 				${message}
 			</span>`,
 		}));
@@ -1471,6 +1497,73 @@ function baseConfig () {
 	d20plus.cfg = {current: {}};
 
 	d20plus.cfg.pLoadConfigFailed = false;
+
+	addConfigOptions("token", {
+		"_name": "Tokens",
+		"massRollWhisperName": {
+			"name": "Whisper Token Name to Mass-Rolls",
+			"default": false,
+			"_type": "boolean",
+		},
+	},
+	);
+	addConfigOptions("canvas", {
+		"_name": "Canvas",
+		"_player": true,
+		"gridSnap": {
+			"name": "Grid Snap",
+			"default": "1",
+			"_type": "_enum",
+			"__values": ["0.25", "0.5", "1"],
+			"_player": true,
+		},
+		"scaleNamesStatuses": {
+			"name": "Scaled Names and Status Icons",
+			"default": true,
+			"_type": "boolean",
+			"_player": true,
+		},
+	},
+	);
+	addConfigOptions("import", {
+		"_name": "Import",
+		"importIntervalMap": {
+			"name": "Rest Time between Each Map (msec)",
+			"default": 2500,
+			"_type": "integer",
+		},
+	});
+	addConfigOptions("interface", {
+		"_name": "Interface",
+		"toolbarOpacity": {
+			"name": "Horizontal Toolbar Opacity",
+			"default": 100,
+			"_type": "_slider",
+			"__sliderMin": 1,
+			"__sliderMax": 100,
+			"__sliderStep": 1,
+		},
+		"quickLayerButtons": {
+			"name": "Add Quick Layer Buttons",
+			"default": true,
+			"_type": "boolean",
+		},
+		"quickInitButtons": {
+			"name": "Add Quick Initiative Sort Button",
+			"default": true,
+			"_type": "boolean",
+		},
+		"streamerChatTag": {
+			"name": "Streamer-Friendly Chat Tags",
+			"default": false,
+			"_type": "boolean",
+		},
+		"hideDefaultJournalSearch": {
+			"name": "Hide Default Journal Search Bar",
+			"default": false,
+			"_type": "boolean",
+		},
+	});
 
 	d20plus.cfg.pLoadConfig = async () => {
 		d20plus.ut.log("Reading Config");
@@ -5499,7 +5592,7 @@ function baseToolAnimator () {
 		pSelectAnimation (defaultSelUid) {
 			return this._pSelectUid(
 				this.getAnimations.bind(this),
-				`No animations available! Use the Token Animator tool to define some first. See <a href="https://wiki.5e.tools/index.php/Feature:_Animator" target="_blank">the Wiki for help.</a>`,
+				`No animations available! Use the Token Animator tool to define some first. See <a href="${d20plus.ut.WIKI_URL}/index.php/Feature:_Animator" target="_blank">the Wiki for help.</a>`,
 				"Select Animation",
 				defaultSelUid,
 			);
@@ -5508,7 +5601,7 @@ function baseToolAnimator () {
 		pSelectScene (defaultSelUid) {
 			return this._pSelectUid(
 				this.getScenes.bind(this),
-				`No scenes available! Use Edit Scenes in the Token Animator tool to define some first. See <a href="https://wiki.5e.tools/index.php/Feature:_Animator" target="_blank">the Wiki for help.</a>`,
+				`No scenes available! Use Edit Scenes in the Token Animator tool to define some first. See <a href="${d20plus.ut.WIKI_URL}/index.php/Feature:_Animator" target="_blank">the Wiki for help.</a>`,
 				"Select Scene",
 				defaultSelUid,
 			);
@@ -6863,8 +6956,8 @@ function baseToolAnimator () {
 			});
 
 			$btnHelp.click(() => {
-				d20plus.ut.chatLog(`<a href="https://wiki.5e.tools/index.php/Feature:_Animator" target="_blank">View the Wiki page for help!</a>`);
-				window.open("https://wiki.5e.tools/index.php/Feature:_Animator");
+				d20plus.ut.chatLog(`<a href="${d20plus.ut.WIKI_URL}/index.php/Feature:_Animator" target="_blank">View the Wiki page for help!</a>`);
+				window.open(`${d20plus.ut.WIKI_URL}/index.php/Feature:_Animator`);
 			});
 
 			let lastSelCommand = null;
@@ -11335,6 +11428,14 @@ function baseCss () {
 			r: "color: white;",
 		},
 		{
+			s: ".userscript-hacker-chat-error",
+			r: "margin-left: -45px; margin-right: -5px; margin-bottom: -7px; margin-top: -15px; display: inline-block; font-weight: bold; font-family: 'Lucida Console', Monaco, monospace; color: #FF69B4; background: black; padding: 3px; min-width: calc(100% + 60px);",
+		},
+		{
+			s: ".userscript-hacker-chat-error a",
+			r: "color: white;",
+		},
+		{
 			s: ".withoutavatars .userscript-hacker-chat",
 			r: "margin-left: -15px; min-width: calc(100% + 30px);",
 		},
@@ -12142,7 +12243,7 @@ function baseUi () {
 		const $body = $("body");
 
 		const $wrpSettings = $(`<div id="betteR20-settings"/>`);
-		$("#mysettings > .content").children("hr").first().before($wrpSettings);
+		$("#settings-accordion").children(".panel.panel-default").first().before($wrpSettings);
 
 		$wrpSettings.append(d20plus.settingsHtmlHeader);
 		$body.append(d20plus.configEditorHTML);
@@ -12199,8 +12300,9 @@ function baseUi () {
 	d20plus.ui.addHtmlFooter = () => {
 		const $wrpSettings = $(`#betteR20-settings`);
 		$wrpSettings.append(d20plus.settingsHtmlPtFooter);
+		$wrpSettings.css("margin","5px");
 
-		$("#mysettings > .content a#button-edit-config").on(window.mousedowntype, d20plus.cfg.openConfigEditor);
+		$("#button-edit-config").on(window.mousedowntype, d20plus.cfg.openConfigEditor);
 		d20plus.tool.addTools();
 	};
 
@@ -16962,73 +17064,6 @@ const betteR20Base = function () {
 		CONSOLE_LOG(...args);
 	};
 	/* eslint-enable */
-
-	addConfigOptions("token", {
-		"_name": "Tokens",
-		"massRollWhisperName": {
-			"name": "Whisper Token Name to Mass-Rolls",
-			"default": false,
-			"_type": "boolean",
-		},
-	},
-	);
-	addConfigOptions("canvas", {
-		"_name": "Canvas",
-		"_player": true,
-		"gridSnap": {
-			"name": "Grid Snap",
-			"default": "1",
-			"_type": "_enum",
-			"__values": ["0.25", "0.5", "1"],
-			"_player": true,
-		},
-		"scaleNamesStatuses": {
-			"name": "Scaled Names and Status Icons",
-			"default": true,
-			"_type": "boolean",
-			"_player": true,
-		},
-	},
-	);
-	addConfigOptions("import", {
-		"_name": "Import",
-		"importIntervalMap": {
-			"name": "Rest Time between Each Map (msec)",
-			"default": 2500,
-			"_type": "integer",
-		},
-	});
-	addConfigOptions("interface", {
-		"_name": "Interface",
-		"toolbarOpacity": {
-			"name": "Horizontal Toolbar Opacity",
-			"default": 100,
-			"_type": "_slider",
-			"__sliderMin": 1,
-			"__sliderMax": 100,
-			"__sliderStep": 1,
-		},
-		"quickLayerButtons": {
-			"name": "Add Quick Layer Buttons",
-			"default": true,
-			"_type": "boolean",
-		},
-		"quickInitButtons": {
-			"name": "Add Quick Initiative Sort Button",
-			"default": true,
-			"_type": "boolean",
-		},
-		"streamerChatTag": {
-			"name": "Streamer-Friendly Chat Tags",
-			"default": false,
-			"_type": "boolean",
-		},
-		"hideDefaultJournalSearch": {
-			"name": "Hide Default Journal Search Bar",
-			"default": false,
-			"_type": "boolean",
-		},
-	});
 };
 
 const D20plus = function (version) {
@@ -17727,11 +17762,11 @@ Parser.sourceJsonToColor = function (source) {
 };
 
 Parser.stringToSlug = function (str) {
-	return str.trim().toLowerCase().replace(/[^\w ]+/g, "").replace(/ +/g, "-");
+	return str.trim().toLowerCase().toAscii().replace(/[^\w ]+/g, "").replace(/ +/g, "-");
 };
 
 Parser.stringToCasedSlug = function (str) {
-	return str.replace(/[^\w ]+/g, "").replace(/ +/g, "-");
+	return str.toAscii().replace(/[^\w ]+/g, "").replace(/ +/g, "-");
 };
 
 Parser.ITEM_SPELLCASTING_FOCUS_CLASSES = ["Artificer", "Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"];
@@ -18443,6 +18478,9 @@ Parser.SP_MISC_TAG_TO_FULL = {
 	MAC: "Modifies AC",
 	TP: "Teleportation",
 	FMV: "Forced Movement",
+	RO: "Rollable Effects",
+	LGTS: "Creates Sunlight",
+	LGT: "Creates Light",
 };
 Parser.spMiscTagToFull = function (type) {
 	return Parser._parse_aToB(Parser.SP_MISC_TAG_TO_FULL, type);
@@ -18520,7 +18558,7 @@ Parser.monCrToFull = function (cr, {xp = null, isMythic = false} = {}) {
 };
 
 Parser.getFullImmRes = function (toParse) {
-	if (!toParse.length) return "";
+	if (!toParse?.length) return "";
 
 	let maxDepth = 0;
 
@@ -18567,6 +18605,7 @@ Parser.getFullImmRes = function (toParse) {
 };
 
 Parser.getFullCondImm = function (condImm, isPlainText) {
+	if (!condImm?.length) return "";
 	function render (condition) {
 		return isPlainText ? condition : Renderer.get().render(`{@condition ${condition}}`);
 	}
@@ -18780,6 +18819,7 @@ Parser.alignmentAbvToFull = function (alignment) {
 };
 
 Parser.alignmentListToFull = function (alignList) {
+	if (!alignList) return "";
 	if (alignList.some(it => typeof it !== "string")) {
 		if (alignList.some(it => typeof it === "string")) throw new Error(`Mixed alignment types: ${JSON.stringify(alignList)}`);
 		// filter out any nonexistent alignments, as we don't care about "alignment does not exist" if there are other alignments
@@ -19532,6 +19572,7 @@ SRC_SCC_TMM = "SCC-TMM";
 SRC_SCC_ARiR = "SCC-ARiR";
 SRC_SCREEN = "Screen";
 SRC_SCREEN_WILDERNESS_KIT = "ScreenWildernessKit";
+SRC_SCREEN_DUNGEON_KIT = "ScreenDungeonKit";
 SRC_HEROES_FEAST = "HF";
 SRC_CM = "CM";
 SRC_NRH = "NRH";
@@ -19729,6 +19770,7 @@ Parser.SOURCE_JSON_TO_FULL[SRC_SCC_TMM] = `The Magister's Masquerade`;
 Parser.SOURCE_JSON_TO_FULL[SRC_SCC_ARiR] = `A Reckoning in Ruins`;
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN] = "Dungeon Master's Screen";
 Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN_WILDERNESS_KIT] = "Dungeon Master's Screen: Wilderness Kit";
+Parser.SOURCE_JSON_TO_FULL[SRC_SCREEN_DUNGEON_KIT] = "Dungeon Master's Screen: Dungeon Kit";
 Parser.SOURCE_JSON_TO_FULL[SRC_HEROES_FEAST] = "Heroes' Feast";
 Parser.SOURCE_JSON_TO_FULL[SRC_CM] = "Candlekeep Mysteries";
 Parser.SOURCE_JSON_TO_FULL[SRC_NRH] = NRH_NAME;
@@ -19905,7 +19947,8 @@ Parser.SOURCE_JSON_TO_ABV[SRC_SCC_HfMT] = "SCC-HfMT";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCC_TMM] = "SCC-TMM";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCC_ARiR] = "SCC-ARiR";
 Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN] = "Screen";
-Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN_WILDERNESS_KIT] = "Wild";
+Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN_WILDERNESS_KIT] = "ScWild";
+Parser.SOURCE_JSON_TO_ABV[SRC_SCREEN_DUNGEON_KIT] = "ScDun";
 Parser.SOURCE_JSON_TO_ABV[SRC_HEROES_FEAST] = "HF";
 Parser.SOURCE_JSON_TO_ABV[SRC_CM] = "CM";
 Parser.SOURCE_JSON_TO_ABV[SRC_NRH] = "NRH";
@@ -20082,6 +20125,7 @@ Parser.SOURCE_JSON_TO_DATE[SRC_SCC_TMM] = "2021-12-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCC_ARiR] = "2021-12-07";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN] = "2015-01-20";
 Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN_WILDERNESS_KIT] = "2020-11-17";
+Parser.SOURCE_JSON_TO_DATE[SRC_SCREEN_DUNGEON_KIT] = "2020-09-21";
 Parser.SOURCE_JSON_TO_DATE[SRC_HEROES_FEAST] = "2020-10-27";
 Parser.SOURCE_JSON_TO_DATE[SRC_CM] = "2021-03-16";
 Parser.SOURCE_JSON_TO_DATE[SRC_NRH] = "2021-09-01";
@@ -20291,6 +20335,7 @@ Parser.SOURCES_VANILLA = new Set([
 	SRC_FTD,
 	SRC_SCREEN,
 	SRC_SCREEN_WILDERNESS_KIT,
+	SRC_SCREEN_DUNGEON_KIT,
 ]);
 
 // Any opinionated set of sources that are """hilarious, dude"""
@@ -20644,7 +20689,7 @@ if (IS_NODE) require("./parser.js");
 
 // in deployment, `IS_DEPLOYED = "<version number>";` should be set below.
 IS_DEPLOYED = undefined;
-VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"1.145.1"/* 5ETOOLS_VERSION__CLOSE */;
+VERSION_NUMBER = /* 5ETOOLS_VERSION__OPEN */"1.147.13"/* 5ETOOLS_VERSION__CLOSE */;
 DEPLOYED_STATIC_ROOT = ""; // "https://static.5etools.com/"; // FIXME re-enable this when we have a CDN again
 // for the roll20 script to set
 IS_VTT = false;
@@ -20687,6 +20732,8 @@ VeCt = {
 	STR_GENERIC: "Generic",
 
 	SYM_UI_SKIP: Symbol("uiSkip"),
+
+	SYM_WALKER_BREAK: Symbol("walkerBreak"),
 
 	LOC_ORIGIN_CANCER: "https://5e.tools",
 
@@ -21018,10 +21065,10 @@ SourceUtil = {
 	},
 
 	isNonstandardSource (source) {
-		return source != null && !BrewUtil.hasSourceJson(source) && SourceUtil._isNonstandardSourceWiz(source);
+		return source != null && !BrewUtil.hasSourceJson(source) && SourceUtil.isNonstandardSourceWotc(source);
 	},
 
-	_isNonstandardSourceWiz (source) {
+	isNonstandardSourceWotc (source) {
 		return source.startsWith(SRC_UA_PREFIX) || source.startsWith(SRC_PS_PREFIX) || source.startsWith(SRC_AL_PREFIX) || Parser.SOURCES_NON_STANDARD_WOTC.has(source);
 	},
 
@@ -21612,7 +21659,8 @@ MiscUtil = {
 	COLOR_BLOODIED: "#f7a100",
 	COLOR_DEFEATED: "#cc0000",
 
-	copy (obj) {
+	copy (obj, safe = false) {
+		if (safe && obj === undefined) return undefined; // Generally use "unsafe," as this helps identify bugs.
 		return JSON.parse(JSON.stringify(obj));
 	},
 
@@ -21984,7 +22032,7 @@ MiscUtil = {
 		return new Promise(resolve => setTimeout(() => resolve(resolveAs), msecs));
 	},
 
-	GENERIC_WALKER_ENTRIES_KEY_BLACKLIST: new Set(["caption", "type", "colLabels", "name", "colStyles", "style", "shortName", "subclassShortName"]),
+	GENERIC_WALKER_ENTRIES_KEY_BLACKLIST: new Set(["caption", "type", "colLabels", "name", "colStyles", "style", "shortName", "subclassShortName", "id", "path"]),
 
 	/**
 	 * @param [opts]
@@ -21996,72 +22044,63 @@ MiscUtil = {
 	 * @param [opts.isAllowDeleteStrings] (Unimplemented) // TODO
 	 * @param [opts.isDepthFirst] If array/object recursion should occur before array/object primitive handling.
 	 * @param [opts.isNoModification] If the walker should not attempt to modify the data.
+	 * @param [opts.isBreakOnReturn] If the walker should fast-exist on any handler returning a value.
 	 */
 	getWalker (opts) {
 		opts = opts || {};
+
+		if (opts.isBreakOnReturn && !opts.isNoModification) throw new Error(`"isBreakOnReturn" may only be used in "isNoModification" mode!`);
+
 		const keyBlacklist = opts.keyBlacklist || new Set();
 
-		const fn = (obj, primitiveHandlers, lastKey, stack) => {
-			if (obj == null) {
-				if (primitiveHandlers.null) return MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.null, obj, lastKey, stack});
-				return obj;
+		const getMappedPrimitive = (obj, primitiveHandlers, lastKey, stack, prop, propPre, propPost) => {
+			if (primitiveHandlers[propPre]) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers[propPre], obj, lastKey, stack});
+			if (primitiveHandlers[prop]) {
+				const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers[prop], obj, lastKey, stack});
+				if (out === VeCt.SYM_WALKER_BREAK) return out;
+				if (!opts.isNoModification) obj = out;
 			}
+			if (primitiveHandlers[propPost]) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers[propPost], obj, lastKey, stack});
+			return obj;
+		};
 
-			const doObjectRecurse = () => {
-				Object.keys(obj).forEach(k => {
-					const v = obj[k];
-					if (!keyBlacklist.has(k)) {
-						const out = fn(v, primitiveHandlers, k, stack);
-						if (!opts.isNoModification) obj[k] = out;
-					}
-				});
-			};
+		const doObjectRecurse = (obj, primitiveHandlers, stack) => {
+			const didBreak = Object.keys(obj).some(k => {
+				const v = obj[k];
+				if (keyBlacklist.has(k)) return;
+
+				const out = fn(v, primitiveHandlers, k, stack);
+				if (out === VeCt.SYM_WALKER_BREAK) return true;
+				if (!opts.isNoModification) obj[k] = out;
+			});
+			if (didBreak) return VeCt.SYM_WALKER_BREAK;
+		};
+
+		const fn = (obj, primitiveHandlers, lastKey, stack) => {
+			if (obj === null) return getMappedPrimitive(obj, primitiveHandlers, lastKey, stack, "null", "preNull", "postNull");
 
 			const to = typeof obj;
 			switch (to) {
-				case undefined:
-					if (primitiveHandlers.preUndefined) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preUndefined, obj, lastKey, stack});
-					if (primitiveHandlers.undefined) {
-						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.undefined, obj, lastKey, stack});
-						if (!opts.isNoModification) obj = out;
-					}
-					if (primitiveHandlers.postUndefined) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postUndefined, obj, lastKey, stack});
-					return obj;
-				case "boolean":
-					if (primitiveHandlers.preBoolean) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preBoolean, obj, lastKey, stack});
-					if (primitiveHandlers.boolean) {
-						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.boolean, obj, lastKey, stack});
-						if (!opts.isNoModification) obj = out;
-					}
-					if (primitiveHandlers.postBoolean) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postBoolean, obj, lastKey, stack});
-					return obj;
-				case "number":
-					if (primitiveHandlers.preNumber) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preNumber, obj, lastKey, stack});
-					if (primitiveHandlers.number) {
-						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.number, obj, lastKey, stack});
-						if (!opts.isNoModification) obj = out;
-					}
-					if (primitiveHandlers.postNumber) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postNumber, obj, lastKey, stack});
-					return obj;
-				case "string":
-					if (primitiveHandlers.preString) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preString, obj, lastKey, stack});
-					if (primitiveHandlers.string) {
-						const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.string, obj, lastKey, stack});
-						if (!opts.isNoModification) obj = out;
-					}
-					if (primitiveHandlers.postString) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postString, obj, lastKey, stack});
-					return obj;
+				case "undefined": return getMappedPrimitive(obj, primitiveHandlers, lastKey, stack, "undefined", "preUndefined", "postUndefined");
+				case "boolean": return getMappedPrimitive(obj, primitiveHandlers, lastKey, stack, "boolean", "preBoolean", "postBoolean");
+				case "number": return getMappedPrimitive(obj, primitiveHandlers, lastKey, stack, "number", "preNumber", "postNumber");
+				case "string": return getMappedPrimitive(obj, primitiveHandlers, lastKey, stack, "string", "preString", "postString");
 				case "object": {
 					if (obj instanceof Array) {
 						if (primitiveHandlers.preArray) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preArray, obj, lastKey, stack});
 						if (opts.isDepthFirst) {
 							if (stack) stack.push(obj);
-							const out = obj.map(it => fn(it, primitiveHandlers, lastKey, stack));
+							const out = new Array(obj.length);
+							for (let i = 0, len = out.length; i < len; ++i) {
+								out[i] = fn(obj[i], primitiveHandlers, lastKey, stack);
+								if (out[i] === VeCt.SYM_WALKER_BREAK) return out[i];
+							}
 							if (!opts.isNoModification) obj = out;
 							if (stack) stack.pop();
 
 							if (primitiveHandlers.array) {
 								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.array, obj, lastKey, stack});
+								if (out === VeCt.SYM_WALKER_BREAK) return out;
 								if (!opts.isNoModification) obj = out;
 							}
 							if (obj == null) {
@@ -22070,10 +22109,15 @@ MiscUtil = {
 						} else {
 							if (primitiveHandlers.array) {
 								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.array, obj, lastKey, stack});
+								if (out === VeCt.SYM_WALKER_BREAK) return out;
 								if (!opts.isNoModification) obj = out;
 							}
 							if (obj != null) {
-								const out = obj.map(it => fn(it, primitiveHandlers, lastKey, stack));
+								const out = new Array(obj.length);
+								for (let i = 0, len = out.length; i < len; ++i) {
+									out[i] = fn(obj[i], primitiveHandlers, lastKey, stack);
+									if (out[i] === VeCt.SYM_WALKER_BREAK) return out[i];
+								}
 								if (!opts.isNoModification) obj = out;
 							} else {
 								if (!opts.isAllowDeleteArrays) throw new Error(`Array handler(s) returned null!`);
@@ -22085,11 +22129,13 @@ MiscUtil = {
 						if (primitiveHandlers.preObject) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.preObject, obj, lastKey, stack});
 						if (opts.isDepthFirst) {
 							if (stack) stack.push(obj);
-							doObjectRecurse();
+							const flag = doObjectRecurse(obj, primitiveHandlers, stack);
+							if (flag === VeCt.SYM_WALKER_BREAK) return flag;
 							if (stack) stack.pop();
 
 							if (primitiveHandlers.object) {
 								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.object, obj, lastKey, stack});
+								if (out === VeCt.SYM_WALKER_BREAK) return out;
 								if (!opts.isNoModification) obj = out;
 							}
 							if (obj == null) {
@@ -22098,12 +22144,14 @@ MiscUtil = {
 						} else {
 							if (primitiveHandlers.object) {
 								const out = MiscUtil._getWalker_applyHandlers({opts, handlers: primitiveHandlers.object, obj, lastKey, stack});
+								if (out === VeCt.SYM_WALKER_BREAK) return out;
 								if (!opts.isNoModification) obj = out;
 							}
 							if (obj == null) {
 								if (!opts.isAllowDeleteObjects) throw new Error(`Object handler(s) returned null!`);
 							} else {
-								doObjectRecurse();
+								const flag = doObjectRecurse(obj, primitiveHandlers, stack);
+								if (flag === VeCt.SYM_WALKER_BREAK) return flag;
 							}
 						}
 						if (primitiveHandlers.postObject) MiscUtil._getWalker_runHandlers({handlers: primitiveHandlers.postObject, obj, lastKey, stack});
@@ -22119,10 +22167,12 @@ MiscUtil = {
 
 	_getWalker_applyHandlers ({opts, handlers, obj, lastKey, stack}) {
 		handlers = handlers instanceof Array ? handlers : [handlers];
-		handlers.forEach(h => {
+		const didBreak = handlers.some(h => {
 			const out = h(obj, lastKey, stack);
+			if (opts.isBreakOnReturn && out) return true;
 			if (!opts.isNoModification) obj = out;
 		});
+		if (didBreak) return VeCt.SYM_WALKER_BREAK;
 		return obj;
 	},
 
@@ -22132,6 +22182,7 @@ MiscUtil = {
 	},
 
 	/**
+	 * TODO refresh to match sync version
 	 * @param [opts]
 	 * @param [opts.keyBlacklist]
 	 * @param [opts.isAllowDeleteObjects] If returning `undefined` from an object handler should be treated as a delete.
@@ -22411,7 +22462,7 @@ ContextUtil = {
 				return $row;
 			});
 
-			this._$ele = $$`<div class="flex-col ui-ctx__wrp py-2">${$elesAction}</div>`
+			this._$ele = $$`<div class="ve-flex-col ui-ctx__wrp py-2">${$elesAction}</div>`
 				.hideVe()
 				.appendTo(document.body);
 		};
@@ -22720,6 +22771,7 @@ UrlUtil.PG_CHANGELOG = "changelog.html";
 UrlUtil.PG_CHAR_CREATION_OPTIONS = "charcreationoptions.html";
 UrlUtil.PG_RECIPES = "recipes.html";
 UrlUtil.PG_CLASS_SUBCLASS_FEATURES = "classfeatures.html";
+UrlUtil.PG_MAPS = "maps.html";
 
 UrlUtil.URL_TO_HASH_BUILDER = {};
 UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_BESTIARY] = (it) => UrlUtil.encodeForHash([it.name, it.source]);
@@ -22805,6 +22857,7 @@ UrlUtil.PG_TO_NAME[UrlUtil.PG_CHANGELOG] = "Changelog";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CHAR_CREATION_OPTIONS] = "Other Character Creation Options";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_RECIPES] = "Recipes";
 UrlUtil.PG_TO_NAME[UrlUtil.PG_CLASS_SUBCLASS_FEATURES] = "Class & Subclass Features";
+UrlUtil.PG_TO_NAME[UrlUtil.PG_MAPS] = "Maps";
 
 UrlUtil.CAT_TO_PAGE = {};
 UrlUtil.CAT_TO_PAGE[Parser.CAT_ID_CREATURE] = UrlUtil.PG_BESTIARY;
@@ -24353,9 +24406,7 @@ DataUtil = {
 	},
 
 	race: {
-		_MERGE_REQUIRES_PRESERVE: {
-			subraces: true,
-		},
+		_MERGE_REQUIRES_PRESERVE: {},
 		_mergeCache: {},
 		async pMergeCopy (raceList, race, options) {
 			return DataUtil.generic._pMergeCopy(DataUtil.race, UrlUtil.PG_RACES, raceList, race, options);
@@ -24366,7 +24417,7 @@ DataUtil = {
 		async loadJSON ({isAddBaseRaces = false} = {}) {
 			if (!DataUtil.race._pIsLoadings[isAddBaseRaces]) {
 				DataUtil.race._pIsLoadings[isAddBaseRaces] = (async () => {
-					const rawRaceData = await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/races.json`);
+					const rawRaceData = DataUtil.race._getPostProcessedSiteJson(await DataUtil.loadJSON(`${Renderer.get().baseUrl}data/races.json`));
 					const raceData = Renderer.race.mergeSubraces(rawRaceData.race, {isAddBaseRaces});
 					raceData.forEach(it => it.__prop = "race");
 					DataUtil.race._loadCache[isAddBaseRaces] = {race: raceData};
@@ -24374,6 +24425,20 @@ DataUtil = {
 			}
 			await DataUtil.race._pIsLoadings[isAddBaseRaces];
 			return DataUtil.race._loadCache[isAddBaseRaces];
+		},
+
+		_getPostProcessedSiteJson (rawRaceData) {
+			rawRaceData = MiscUtil.copy(rawRaceData);
+			(rawRaceData.subrace || []).forEach(sr => {
+				const r = rawRaceData.race.find(it => it.name === sr.raceName && it.source === sr.raceSource);
+				if (!r) return JqueryUtil.doToast({content: `Failed to find race "${sr.raceName}" (${sr.raceSource})`, type: "danger"});
+				const cpySr = MiscUtil.copy(sr);
+				delete cpySr.raceName;
+				delete cpySr.raceSource;
+				(r.subraces = r.subraces || []).push(sr);
+			});
+			delete rawRaceData.subrace;
+			return rawRaceData;
 		},
 
 		async loadBrew ({isAddBaseRaces = true} = {}) {
@@ -24702,6 +24767,8 @@ DataUtil = {
 				laterPrinting.push(src);
 			});
 			data.deity.forEach(g => g._isEnhanced = true);
+
+			return data;
 		},
 
 		loadJSON: async function () {
@@ -24988,7 +25055,6 @@ RollerUtil = {
 
 	getColRollType (colLabel) {
 		if (typeof colLabel !== "string") return false;
-		if (/^{@dice [^}]+}$/.test(colLabel.trim())) return true;
 		colLabel = Renderer.stripTags(colLabel);
 
 		if (Renderer.dice.lang.getTree3(colLabel)) return RollerUtil.ROLL_COL_STANDARD;
@@ -24997,7 +25063,7 @@ RollerUtil = {
 		colLabel = colLabel.replace(RollerUtil._REGEX_ROLLABLE_COL_LABEL, "$1");
 		if (Renderer.dice.lang.getTree3(colLabel)) return RollerUtil.ROLL_COL_VARIABLE;
 
-		return 0;
+		return RollerUtil.ROLL_COL_NONE;
 	},
 
 	getFullRollCol (lbl) {
@@ -25282,11 +25348,13 @@ BrewUtil = {
 
 				await this._pAddLocalBrewData(homebrew);
 
-				BrewUtil._mutMakeBrewCompatible(homebrew);
+				const isMigration = BrewUtil._mutMakeBrewCompatible(homebrew);
 
 				BrewUtil.homebrew = homebrew;
 
 				BrewUtil._resetSourceCache();
+
+				if (isMigration) BrewUtil._persistHomebrewDebounced();
 
 				return BrewUtil.homebrew;
 			} catch (e) {
@@ -25296,25 +25364,20 @@ BrewUtil = {
 	},
 
 	_mutMakeBrewCompatible (homebrew) {
-		let hasOldSubclasses = false;
+		let isMigration = false;
 
-		if (homebrew.class) {
-			homebrew.class.forEach(cls => {
-				if (cls.subclasses) {
-					hasOldSubclasses = true;
-					cls.subclasses.forEach(sc => {
-						sc.className = sc.className || cls.name;
-						sc.classSource = sc.classSource || cls.source;
-						(homebrew.subclass = homebrew.subclass || []).push(sc);
-					});
-					delete cls.subclasses;
-				}
+		// region Race
+		if (homebrew.subrace) {
+			homebrew.subrace.forEach(sr => {
+				if (!sr.race) return;
+				isMigration = true;
+				sr.raceName = sr.race.name;
+				sr.raceSource = sr.race.source || sr.source || SRC_PHB;
 			});
 		}
+		// endregion
 
-		if (hasOldSubclasses) {
-			JqueryUtil.doToast({type: "warning", content: `Converted legacy homebrew subclasses\u2014you should re-load your class homebrews, as this backwards compatibility will be removed in future!`});
-		}
+		return isMigration;
 	},
 
 	async pPurgeBrew (error) {
@@ -25354,7 +25417,7 @@ BrewUtil = {
 
 		const page = BrewUtil._PAGE || UrlUtil.getCurrentPage();
 
-		const $brewList = $(`<div class="manbrew__current_brew flex-col h-100 mt-1"></div>`);
+		const $brewList = $(`<div class="manbrew__current_brew ve-flex-col h-100 mt-1"></div>`);
 
 		await BrewUtil._pRenderBrewScreen_pRefreshBrewList($brewList);
 
@@ -25413,17 +25476,17 @@ BrewUtil = {
 
 		const $btnDelAll = opts.isModal ? null : BrewUtil._$getBtnDeleteAll();
 
-		const $wrpBtns = $$`<div class="flex-vh-center no-shrink mobile__flex-col">
-			<div class="flex-v-center mobile__mb-2">
-				<div class="flex-v-center btn-group mr-2">
+		const $wrpBtns = $$`<div class="ve-flex-vh-center no-shrink mobile__ve-flex-col">
+			<div class="ve-flex-v-center mobile__mb-2">
+				<div class="ve-flex-v-center btn-group mr-2">
 					${$btnGet}
 					${$btnCustomUrl}
 				</div>
 				${$btnLoadFromFile}
 				${$btnLoadFromUrl}
 			</div>
-			<div class="flex-v-center">
-				<a href="https://github.com/TheGiddyLimit/homebrew" class="flex-v-center" target="_blank" rel="noopener noreferrer"><button class="btn btn-default btn-sm">Browse Source Repository</button></a>
+			<div class="ve-flex-v-center">
+				<a href="https://github.com/TheGiddyLimit/homebrew" class="ve-flex-v-center" target="_blank" rel="noopener noreferrer"><button class="btn btn-default btn-sm">Browse Source Repository</button></a>
 				${$btnDelAll}
 			</div>
 		</div>`;
@@ -25459,7 +25522,7 @@ BrewUtil = {
 
 		const $btnAll = $(`<button class="btn btn-default btn-xs" disabled title="(Excluding samples)">Add All</button>`);
 
-		const $wrpRows = $$`<div class="list"><div class="lst__row flex-col"><div class="lst__wrp-cells lst--border lst__row-inner flex w-100"><span style="font-style: italic;">Loading...</span></div></div></div>`;
+		const $wrpRows = $$`<div class="list"><div class="lst__row ve-flex-col"><div class="lst__wrp-cells lst--border lst__row-inner ve-flex w-100"><span style="font-style: italic;">Loading...</span></div></div></div>`;
 
 		const $iptSearch = $(`<input type="search" class="search manbrew__search form-control w-100" placeholder="Find homebrew...">`)
 			.keydown(evt => {
@@ -25487,9 +25550,9 @@ BrewUtil = {
 		<div class="mt-1"><i>A list of homebrew available in the public repository. Click a name to load the homebrew, or view the source directly.<br>
 		Contributions are welcome; see the <a href="https://github.com/TheGiddyLimit/homebrew/blob/master/README.md" target="_blank" rel="noopener noreferrer">README</a>, or stop by our <a href="https://discord.gg/5etools" target="_blank" rel="noopener noreferrer">Discord</a>.</i></div>
 		<hr class="hr-1">
-		<div class="flex-h-right mb-1">${$btnToggleDisplayNonPageBrews}${$btnAll}</div>
+		<div class="ve-flex-h-right mb-1">${$btnToggleDisplayNonPageBrews}${$btnAll}</div>
 		${$iptSearch}
-		<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom flex no-shrink">
+		<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom ve-flex no-shrink">
 			<button class="col-4 sort btn btn-default btn-xs" data-sort="name">Name</button>
 			<button class="col-3 sort btn btn-default btn-xs" data-sort="author">Author</button>
 			<button class="col-1-2 sort btn btn-default btn-xs" data-sort="category">Category</button>
@@ -25576,7 +25639,7 @@ BrewUtil = {
 				.click(() => BrewUtil.addBrewRemote($btnAdd, it.download_url || "", true));
 
 			const $row = $$`<div class="lst__row lst__row-inner not-clickable lst--border lst__row--focusable" tabindex="1">
-				<div class="lst__wrp-cells flex w-100">
+				<div class="lst__wrp-cells ve-flex w-100">
 					${$btnAdd}
 					<span class="col-3">${it._brewAuthor}</span>
 					<span class="col-1-2 text-center">${it._brewCat}</span>
@@ -25708,7 +25771,7 @@ BrewUtil = {
 
 	async _pRenderBrewScreen_pRefreshBrewList ($brewList) {
 		function showSourceManager (source, showAll) {
-			const $wrpBtnDel = $(`<div class="flex-v-center"></div>`);
+			const $wrpBtnDel = $(`<div class="ve-flex-v-center"></div>`);
 
 			const {$modalInner, doClose} = UiUtil.getShowModal({
 				isHeight100: true,
@@ -25721,12 +25784,12 @@ BrewUtil = {
 			});
 
 			const $cbAll = $(`<input type="checkbox">`);
-			const $wrpRows = $$`<div class="list flex-col w-100"></div>`;
+			const $wrpRows = $$`<div class="list ve-flex-col w-100"></div>`;
 			const $iptSearch = $(`<input type="search" class="search manbrew__search form-control w-100 mt-1" placeholder="Search entries...">`);
 			const $wrpBtnsSort = $$`<div class="filtertools manbrew__filtertools btn-group">
 				<button class="col-6 sort btn btn-default btn-xs" data-sort="name">Name</button>
 				<button class="col-5 sort btn btn-default btn-xs" data-sort="category">Category</button>
-				<label class="wrp-cb-all pr-0 flex-vh-center mb-0 h-100">${$cbAll}</label>
+				<label class="wrp-cb-all pr-0 ve-flex-vh-center mb-0 h-100">${$cbAll}</label>
 			</div>`;
 			$$($modalInner)`
 				${$iptSearch}
@@ -25792,12 +25855,12 @@ BrewUtil = {
 							const dispCat = BrewUtil._pRenderBrewScreen_getDisplayCat(cat, true);
 
 							const eleLi = document.createElement("div");
-							eleLi.className = "lst__row flex-col px-0";
+							eleLi.className = "lst__row ve-flex-col px-0";
 
-							eleLi.innerHTML = `<label class="lst--border lst__row-inner no-select mb-0 flex-v-center">
+							eleLi.innerHTML = `<label class="lst--border lst__row-inner no-select mb-0 ve-flex-v-center">
 								<div class="col-6 bold">${it.name}</div>
-								<div class="col-5 flex-vh-center">${dispCat}${it.extraInfo}</div>
-								<div class="pr-0 col-1 flex-vh-center"><input type="checkbox" class="no-events"></div>
+								<div class="col-5 ve-flex-vh-center">${dispCat}${it.extraInfo}</div>
+								<div class="pr-0 col-1 ve-flex-vh-center"><input type="checkbox" class="no-events"></div>
 							</label>`;
 
 							const listItem = new ListItem(
@@ -25855,8 +25918,8 @@ BrewUtil = {
 		if (!BrewUtil.homebrew) return;
 
 		const $iptSearch = $(`<input type="search" class="search manbrew__search form-control" placeholder="Search active homebrew...">`);
-		const $wrpList = $(`<div class="list-display-only brew-list brew-list--target manbrew__list flex-col w-100 mb-3"></div>`);
-		const $wrpListGroup = $(`<div class="list-display-only brew-list brew-list--groups no-shrink flex-col w-100" style="height: initial;"></div>`);
+		const $wrpList = $(`<div class="list-display-only brew-list brew-list--target manbrew__list ve-flex-col w-100 mb-3"></div>`);
+		const $wrpListGroup = $(`<div class="list-display-only brew-list brew-list--groups no-shrink ve-flex-col w-100" style="height: initial;"></div>`);
 
 		const list = new List({
 			$iptSearch,
@@ -25867,15 +25930,15 @@ BrewUtil = {
 		});
 
 		const $lst = $$`
-			<div class="flex-col h-100">
+			<div class="ve-flex-col h-100">
 				${$iptSearch}
-				<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom flex no-shrink">
+				<div class="filtertools manbrew__filtertools btn-group input-group input-group--bottom ve-flex no-shrink">
 					<button class="col-5 sort btn btn-default btn-xs ve-grow" data-sort="source">Source</button>
 					<button class="col-5 sort btn btn-default btn-xs" data-sort="authors">Authors</button>
 					<button class="col-1 btn btn-default btn-xs" disabled>Origin</button>
 					<button class="col-1 ve-grow btn btn-default btn-xs" disabled>&nbsp;</button>
 				</div>
-				<div class="flex w-100 h-100 overflow-y-auto relative">${$wrpList}</div>
+				<div class="ve-flex w-100 h-100 overflow-y-auto relative">${$wrpList}</div>
 			</div>
 		`.appendTo($brewList);
 		$wrpListGroup.appendTo($brewList);
@@ -25914,7 +25977,7 @@ BrewUtil = {
 			const $btnDeleteAll = $(`<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>`)
 				.on("click", () => BrewUtil._pRenderBrewScreen_pDeleteSource($brewList, src.json, true, src._all));
 
-			$$`<div class="${isFooterGroup ? `flex-v-center flex-h-right` : `flex-vh-center ve-grow`} btn-group">
+			$$`<div class="${isFooterGroup ? `ve-flex-v-center ve-flex-h-right` : `ve-flex-vh-center ve-grow`} btn-group">
 				${$btnViewManage}
 				${btnConvertedBy}
 				${$btnDeleteAll}
@@ -25929,7 +25992,7 @@ BrewUtil = {
 			const validAuthors = (!src.authors ? [] : !(src.authors instanceof Array) ? [] : src.authors).join(", ");
 			const isGroup = src._unknown || src._all;
 
-			const $row = $(`<div class="manbrew__row flex-v-center lst__row lst--border lst__row-inner no-shrink">
+			const $row = $(`<div class="manbrew__row ve-flex-v-center lst__row lst--border lst__row-inner no-shrink">
 				<span class="col-5 source manbrew__source">${isGroup ? "<i>" : ""}${src.full}${isGroup ? "</i>" : ""}</span>
 				<span class="col-5 authors">${validAuthors}</span>
 				<${src.url ? "a" : "span"} class="col-1 text-center" ${src.url ? `href="${src.url}" target="_blank" rel="noopener noreferrer"` : ""}>${src.url ? "View Source" : ""}</${src.url ? "a" : "span"}>
@@ -25950,7 +26013,7 @@ BrewUtil = {
 		});
 
 		const createGroupRow = (fullText, modeProp) => {
-			const $row = $(`<div class="manbrew__row flex-h-right flex-v-center">
+			const $row = $(`<div class="manbrew__row ve-flex-h-right ve-flex-v-center">
 				<div class="source manbrew__source text-right"><i class="mr-3">${fullText}</i></div>
 			</div>`);
 			createButtons({[modeProp]: true}, $row, true);
@@ -26431,6 +26494,7 @@ BrewUtil = {
 					break;
 				case UrlUtil.PG_MANAGE_BREW:
 				case UrlUtil.PG_DEMO_RENDER:
+				case UrlUtil.PG_MAPS:
 				case VeCt.PG_NONE:
 					// No-op
 					break;
@@ -27088,7 +27152,7 @@ Array.prototype.mergeMap || Object.defineProperty(Array.prototype, "mergeMap", {
 	enumerable: false,
 	writable: true,
 	value: function (fnMap) {
-		return this.map((...args) => fnMap(...args)).reduce((a, b) => Object.assign(a, b), {});
+		return this.map((...args) => fnMap(...args)).filter(it => it != null).reduce((a, b) => Object.assign(a, b), {});
 	},
 });
 
@@ -27298,7 +27362,7 @@ function BookModeView (opts) {
 	this._renderContent = async ($wrpContent, $dispName, $wrpControlsToPass) => {
 		this._$wrpRenderedContent = this._$wrpRenderedContent
 			? this._$wrpRenderedContent.empty().append($wrpContent)
-			: $$`<div class="bkmv__scroller h-100 overflow-y-auto ${isFlex ? "flex" : ""}">${this.isHideContentOnNoneShown ? null : $wrpContent}</div>`;
+			: $$`<div class="bkmv__scroller h-100 overflow-y-auto ${isFlex ? "ve-flex" : ""}">${this.isHideContentOnNoneShown ? null : $wrpContent}</div>`;
 		this._$wrpRenderedContent.appendTo(this._$wrpBook);
 
 		const numShown = await this.popTblGetNumShown({$wrpContent, $dispName, $wrpControls: $wrpControlsToPass});
@@ -27314,16 +27378,16 @@ function BookModeView (opts) {
 				const $btnClose = $(`<button class="btn btn-default">Close</button>`)
 					.click(() => this.close());
 
-				this._$wrpNoneShown = $$`<div class="w-100 flex-col flex-h-center no-shrink bkmv__footer mb-3">
-					<div class="mb-2 flex-vh-center min-h-0">${this.$eleNoneVisible}</div>
-					${this.isHideButtonCloseNone ? null : $$`<div class="flex-vh-center">${$btnClose}</div>`}
+				this._$wrpNoneShown = $$`<div class="w-100 ve-flex-col ve-flex-h-center no-shrink bkmv__footer mb-3">
+					<div class="mb-2 ve-flex-vh-center min-h-0">${this.$eleNoneVisible}</div>
+					${this.isHideButtonCloseNone ? null : $$`<div class="ve-flex-vh-center">${$btnClose}</div>`}
 				</div>`;
 			}
 			this._$wrpNoneShown.appendTo(this.isHideContentOnNoneShown ? this._$wrpRenderedContent : this._$wrpBook);
 		}
 	};
 
-	// NOTE: Avoid using `flex` css, as it doesn't play nice with printing
+	// NOTE: Avoid using `ve-flex` css, as it doesn't play nice with printing
 	this.pOpen = async () => {
 		if (this.active) return;
 		this.active = true;
@@ -27342,7 +27406,7 @@ function BookModeView (opts) {
 
 		// region controls
 		// Optionally usable "controls" section at the top of the pane
-		const $wrpControls = $(`<div class="w-100 flex-col bkmv__wrp-controls"></div>`)
+		const $wrpControls = $(`<div class="w-100 ve-flex-col bkmv__wrp-controls"></div>`)
 			.appendTo(this._$wrpBook);
 
 		let $wrpControlsToPass = $wrpControls;
@@ -27371,8 +27435,8 @@ function BookModeView (opts) {
 			if (lastColumns != null) $selColumns.val(lastColumns);
 			$selColumns.change();
 
-			$wrpControlsToPass = $$`<div class="w-100 flex">
-				<div class="flex-vh-center"><div class="mr-2 no-wrap help-subtle" title="Applied when printing the page.">Print columns:</div>${$selColumns}</div>
+			$wrpControlsToPass = $$`<div class="w-100 ve-flex">
+				<div class="ve-flex-vh-center"><div class="mr-2 no-wrap help-subtle" title="Applied when printing the page.">Print columns:</div>${$selColumns}</div>
 			</div>`.appendTo($wrpControls);
 		}
 		// endregion
@@ -28212,13 +28276,13 @@ class UiUtil {
 		const overlayBlind = opts.isFullscreenModal
 			? e_({
 				tag: "div",
-				clazz: `ui-modal__overlay-blind w-100 h-100 flex-col`,
+				clazz: `ui-modal__overlay-blind w-100 h-100 ve-flex-col`,
 			}).appendTo(wrpOverlay)
 			: null;
 
 		const wrpScroller = e_({
 			tag: "div",
-			clazz: `ui-modal__scroller flex-col`,
+			clazz: `ui-modal__scroller ve-flex-col`,
 		});
 
 		const modalWindowClasses = [
@@ -28242,13 +28306,13 @@ class UiUtil {
 		const modalFooter = opts.hasFooter
 			? e_({
 				tag: "div",
-				clazz: `"no-shrink w-100 flex-col ui-modal__footer ${opts.isFullscreenModal ? `ui-modal__footer--fullscreen mt-1` : ""}`,
+				clazz: `"no-shrink w-100 ve-flex-col ui-modal__footer ${opts.isFullscreenModal ? `ui-modal__footer--fullscreen mt-1` : ""}`,
 			})
 			: null;
 
 		const modal = e_({
 			tag: "div",
-			clazz: `ui-modal__inner flex-col ${modalWindowClasses.join(" ")}`,
+			clazz: `ui-modal__inner ve-flex-col ${modalWindowClasses.join(" ")}`,
 			children: [
 				!opts.isEmpty && opts.title
 					? e_({
@@ -28364,7 +28428,7 @@ class UiUtil {
 	static $getAddModalRowHeader ($modalInner, headerText, opts) {
 		opts = opts || {};
 		const $row = UiUtil.$getAddModalRow($modalInner, "h5").addClass("bold");
-		if (opts.$eleRhs) $$`<div class="split flex-v-center w-100 pr-1"><span>${headerText}</span>${opts.$eleRhs}</div>`.appendTo($row);
+		if (opts.$eleRhs) $$`<div class="split ve-flex-v-center w-100 pr-1"><span>${headerText}</span>${opts.$eleRhs}</div>`.appendTo($row);
 		else $row.text(headerText);
 		if (opts.helpText) $row.title(opts.helpText);
 		return $row;
@@ -28658,7 +28722,7 @@ class ListUiUtil {
 		if (item.ele.children.length === 1) {
 			elePreviewWrp = e_({
 				ag: "div",
-				clazz: "ve-hidden flex",
+				clazz: "ve-hidden ve-flex",
 				children: [
 					e_({tag: "div", clazz: "col-0-5"}),
 					e_({tag: "div", clazz: "col-11-5 ui-list__wrp-preview py-2 pr-2"}),
@@ -28837,11 +28901,11 @@ class TabUiUtilBase {
 
 		obj.__renderTabs_addToParent = function ({$dispTabTitle, $parent, tabMetasOut}) {
 			const hasBorder = tabMetasOut.some(it => it.hasBorder);
-			$$`<div class="flex-col w-100 h-100">
+			$$`<div class="ve-flex-col w-100 h-100">
 				${$dispTabTitle}
-				<div class="flex-col w-100 h-100 min-h-0">
-					<div class="flex ${hasBorder ? `ui-tab__wrp-tab-heads--border` : ""}">${tabMetasOut.map(it => it.$btnTab)}</div>
-					<div class="flex w-100 h-100 min-h-0">${tabMetasOut.map(it => it.$wrpTab).filter(Boolean)}</div>
+				<div class="ve-flex-col w-100 h-100 min-h-0">
+					<div class="ve-flex ${hasBorder ? `ui-tab__wrp-tab-heads--border` : ""}">${tabMetasOut.map(it => it.$btnTab)}</div>
+					<div class="ve-flex w-100 h-100 min-h-0">${tabMetasOut.map(it => it.$wrpTab).filter(Boolean)}</div>
 				</div>
 			</div>`.appendTo($parent);
 		};
@@ -28933,7 +28997,7 @@ class TabUiUtil extends TabUiUtilBase {
 		};
 
 		obj.__$getWrpTab = function ({tabMeta}) {
-			return $(`<div class="ui-tab__wrp-tab-body flex-col ve-hidden ${tabMeta.hasBorder ? "ui-tab__wrp-tab-body--border" : ""} ${tabMeta.hasBackground ? "ui-tab__wrp-tab-body--background" : ""}"></div>`);
+			return $(`<div class="ui-tab__wrp-tab-body ve-flex-col ve-hidden ${tabMeta.hasBorder ? "ui-tab__wrp-tab-body--border" : ""} ${tabMeta.hasBackground ? "ui-tab__wrp-tab-body--background" : ""}"></div>`);
 		};
 
 		obj.__renderTypedTabMeta = function ({tabMeta, ixTab}) {
@@ -28950,7 +29014,7 @@ class TabUiUtil extends TabUiUtilBase {
 				return $btn;
 			});
 
-			const $btnTab = $$`<div class="btn-group flex-v-right flex-h-right ml-2 w-100">${$btns}</div>`;
+			const $btnTab = $$`<div class="btn-group ve-flex-v-right ve-flex-h-right ml-2 w-100">${$btns}</div>`;
 
 			return {
 				...tabMeta,
@@ -28976,20 +29040,20 @@ class TabUiUtilSide extends TabUiUtilBase {
 		super.decorate(obj);
 
 		obj.__$getBtnTab = function ({isSingleTab, tabMeta, _propProxy, propActive, ixTab}) {
-			return isSingleTab ? null : $(`<button class="btn btn-default btn-sm ui-tab-side__btn-tab mb-2 br-0 btr-0 bbr-0 text-left flex-v-center" title="${tabMeta.name.qq()}"><div class="${tabMeta.icon} ui-tab-side__icon-tab mr-2 mobile-ish__mr-0 text-center"></div><div class="mobile-ish__hidden">${tabMeta.name.qq()}</div></button>`)
+			return isSingleTab ? null : $(`<button class="btn btn-default btn-sm ui-tab-side__btn-tab mb-2 br-0 btr-0 bbr-0 text-left ve-flex-v-center" title="${tabMeta.name.qq()}"><div class="${tabMeta.icon} ui-tab-side__icon-tab mr-2 mobile-ish__mr-0 text-center"></div><div class="mobile-ish__hidden">${tabMeta.name.qq()}</div></button>`)
 				.click(() => this[_propProxy][propActive] = ixTab);
 		};
 
 		obj.__$getWrpTab = function () {
-			return $(`<div class="flex-col w-100 h-100 ui-tab-side__wrp-tab px-3 py-2 overflow-y-auto"></div>`);
+			return $(`<div class="ve-flex-col w-100 h-100 ui-tab-side__wrp-tab px-3 py-2 overflow-y-auto"></div>`);
 		};
 
 		obj.__renderTabs_addToParent = function ({$dispTabTitle, $parent, tabMetasOut}) {
-			$$`<div class="flex-col w-100 h-100">
+			$$`<div class="ve-flex-col w-100 h-100">
 				${$dispTabTitle}
-				<div class="flex w-100 h-100 min-h-0">
-					<div class="flex-col h-100 pt-2">${tabMetasOut.map(it => it.$btnTab)}</div>
-					<div class="flex-col w-100 h-100 min-w-0">${tabMetasOut.map(it => it.$wrpTab).filter(Boolean)}</div>
+				<div class="ve-flex w-100 h-100 min-h-0">
+					<div class="ve-flex-col h-100 pt-2">${tabMetasOut.map(it => it.$btnTab)}</div>
+					<div class="ve-flex-col w-100 h-100 min-w-0">${tabMetasOut.map(it => it.$wrpTab).filter(Boolean)}</div>
 				</div>
 			</div>`.appendTo($parent);
 		};
@@ -29011,7 +29075,7 @@ class TabUiUtilSide extends TabUiUtilBase {
 				return $btn;
 			});
 
-			const $btnTab = $$`<div class="btn-group flex-v-center flex-h-right mb-2">${$btns}</div>`;
+			const $btnTab = $$`<div class="btn-group ve-flex-v-center ve-flex-h-right mb-2">${$btns}</div>`;
 
 			return {
 				...tabMeta,
@@ -29734,7 +29798,7 @@ class SearchWidget {
 
 	static _showLoadingModal () {
 		const {$modalInner, doClose} = UiUtil.getShowModal({isPermanent: true});
-		$(`<div class="flex-vh-center w-100 h-100"><span class="dnd-font italic ve-muted">Loading...</span></div>`).appendTo($modalInner);
+		$(`<div class="ve-flex-vh-center w-100 h-100"><span class="dnd-font italic ve-muted">Loading...</span></div>`).appendTo($modalInner);
 		return doClose;
 	}
 	// endregion
@@ -29812,7 +29876,7 @@ class InputUiUtil {
 			if (opts.$elePre) opts.$elePre.appendTo($modalInner);
 			$iptNumber.appendTo($modalInner);
 			if (opts.$elePost) opts.$elePost.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 			$iptNumber.focus();
 			$iptNumber.select();
 		});
@@ -29842,7 +29906,7 @@ class InputUiUtil {
 		}
 
 		return new Promise(resolve => {
-			const $btnTrueRemember = opts.textYesRemember ? $(`<button class="btn btn-primary flex-v-center mr-2"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYesRemember}</span></button>`)
+			const $btnTrueRemember = opts.textYesRemember ? $(`<button class="btn btn-primary ve-flex-v-center mr-2"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYesRemember}</span></button>`)
 				.click(() => {
 					doClose(true, true);
 					if (opts.fnRemember) {
@@ -29854,10 +29918,10 @@ class InputUiUtil {
 					}
 				}) : null;
 
-			const $btnTrue = $(`<button class="btn btn-primary flex-v-center mr-3"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYes || "OK"}</span></button>`)
+			const $btnTrue = $(`<button class="btn btn-primary ve-flex-v-center mr-3"><span class="glyphicon glyphicon-ok mr-2"></span><span>${opts.textYes || "OK"}</span></button>`)
 				.click(() => doClose(true, true));
 
-			const $btnFalse = opts.isAlert ? null : $(`<button class="btn btn-default btn-sm flex-v-center"><span class="glyphicon glyphicon-remove mr-2"></span><span>${opts.textNo || "Cancel"}</span></button>`)
+			const $btnFalse = opts.isAlert ? null : $(`<button class="btn btn-default btn-sm ve-flex-v-center"><span class="glyphicon glyphicon-remove mr-2"></span><span>${opts.textNo || "Cancel"}</span></button>`)
 				.click(() => doClose(true, false));
 
 			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default btn-sm ml-3"><span class="glyphicon glyphicon-forward"></span><span>${opts.textSkip || "Skip"}</span></button>`)
@@ -29875,8 +29939,8 @@ class InputUiUtil {
 				},
 			});
 
-			if (opts.htmlDescription && opts.htmlDescription.trim()) $$`<div class="flex w-100 mb-1">${opts.htmlDescription}</div>`.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right py-1 px-1">${$btnTrueRemember}${$btnTrue}${$btnFalse}${$btnSkip}</div>`.appendTo($modalInner);
+			if (opts.htmlDescription && opts.htmlDescription.trim()) $$`<div class="ve-flex w-100 mb-1">${opts.htmlDescription}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right py-1 px-1">${$btnTrueRemember}${$btnTrue}${$btnFalse}${$btnSkip}</div>`.appendTo($modalInner);
 			$btnTrue.focus();
 			$btnTrue.select();
 		});
@@ -29933,7 +29997,7 @@ class InputUiUtil {
 			});
 			$selEnum.appendTo($modalInner);
 			if (opts.$elePost) opts.$elePost.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 			$selEnum.focus();
 		});
 	}
@@ -30014,7 +30078,7 @@ class InputUiUtil {
 			});
 			if (opts.htmlDescription) $modalInner.append(opts.htmlDescription);
 			$wrpList.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right no-shrink pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right no-shrink pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 			$wrpList.focus();
 		});
 	}
@@ -30045,8 +30109,8 @@ class InputUiUtil {
 				},
 			});
 
-			$$`<div class="flex flex-wrap flex-h-center mb-2">${opts.values.map((v, i) => {
-				const $btn = $$`<div class="m-2 btn ${v.buttonClass || "btn-default"} ui__btn-xxl-square flex-col flex-h-center">
+			$$`<div class="ve-flex ve-flex-wrap ve-flex-h-center mb-2">${opts.values.map((v, i) => {
+				const $btn = $$`<div class="m-2 btn ${v.buttonClass || "btn-default"} ui__btn-xxl-square ve-flex-col ve-flex-h-center">
 					${v.iconClass ? `<div class="ui-icn__wrp-icon ${v.iconClass} mb-1"></div>` : ""}
 					${v.iconContent ? v.iconContent : ""}
 					<div class="whitespace-normal w-100">${v.name}</div>
@@ -30074,7 +30138,7 @@ class InputUiUtil {
 			const $btnSkip = !opts.isSkippable ? null : $(`<button class="btn btn-default ml-3">Skip</button>`)
 				.click(() => doClose(VeCt.SYM_UI_SKIP));
 
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 		});
 	}
 
@@ -30154,7 +30218,7 @@ class InputUiUtil {
 			});
 			$iptStr.appendTo($modalInner);
 			if (opts.$elePost) opts.$elePost.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 			$iptStr.focus();
 			$iptStr.select();
 
@@ -30202,7 +30266,7 @@ class InputUiUtil {
 				},
 			});
 			$iptStr.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 			$iptStr.focus();
 			$iptStr.select();
 		});
@@ -30237,7 +30301,7 @@ class InputUiUtil {
 				},
 			});
 			$iptRgb.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 			$iptRgb.focus();
 			$iptRgb.select();
 		});
@@ -30330,13 +30394,13 @@ class InputUiUtil {
 					);
 				}
 
-				const $wrpInner = $$`<div class="flex-vh-center relative">${$btns}${$pad}</div>`
+				const $wrpInner = $$`<div class="ve-flex-vh-center relative">${$btns}${$pad}</div>`
 					.css({
 						width: CONTROLS_RADIUS * 2,
 						height: CONTROLS_RADIUS * 2,
 					});
 
-				return $$`<div class="flex-vh-center">${$wrpInner}</div>`
+				return $$`<div class="ve-flex-vh-center">${$wrpInner}</div>`
 					.css({
 						width: (CONTROLS_RADIUS * 2) + BTN_STEP_SIZE + BORDER_PAD,
 						height: (CONTROLS_RADIUS * 2) + BTN_STEP_SIZE + BORDER_PAD,
@@ -30360,10 +30424,10 @@ class InputUiUtil {
 					return resolve(curAngle); // TODO returning the step number is more useful if step is specified?
 				},
 			});
-			$$`<div class="flex-vh-center mb-3">
+			$$`<div class="ve-flex-vh-center mb-3">
 				${$padOuter || $pad}
 			</div>`.appendTo($modalInner);
-			$$`<div class="flex-v-center flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-right pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 		});
 	}
 
@@ -30409,7 +30473,7 @@ class InputUiUtil {
 				comp._addHookBase("bonus", hook);
 				hook();
 
-				$$`<div class="flex-vh-center">${$iptNum}<div class="mr-1">d</div>${$selFaces}${$iptBonus}</div>`.appendTo($parent);
+				$$`<div class="ve-flex-vh-center">${$iptNum}<div class="mr-1">d</div>${$selFaces}${$iptBonus}</div>`.appendTo($parent);
 			};
 
 			comp.getAsString = function () {
@@ -30434,7 +30498,7 @@ class InputUiUtil {
 
 			comp.render($modalInner);
 
-			$$`<div class="flex-v-center flex-h-center pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
+			$$`<div class="ve-flex-v-center ve-flex-h-center pb-1 px-1">${$btnOk}${$btnCancel}${$btnSkip}</div>`.appendTo($modalInner);
 		});
 	}
 }
@@ -30474,7 +30538,7 @@ class DragReorderUiUtil {
 			});
 
 			dragMeta.on = true;
-			dragMeta.$wrap = $(`<div class="flex-col ui-drag__wrp-drag-block"></div>`).appendTo(opts.$parent);
+			dragMeta.$wrap = $(`<div class="ve-flex-col ui-drag__wrp-drag-block"></div>`).appendTo(opts.$parent);
 			dragMeta.$dummies = [];
 
 			const ids = opts.componentsParent[opts.componentsProp].map(it => it.id);
@@ -30534,7 +30598,7 @@ class DragReorderUiUtil {
 			});
 
 			dragMeta.on = true;
-			dragMeta.$wrap = $(`<div class="flex-col ui-drag__wrp-drag-block"></div>`).appendTo(opts.$parent);
+			dragMeta.$wrap = $(`<div class="ve-flex-col ui-drag__wrp-drag-block"></div>`).appendTo(opts.$parent);
 			dragMeta.$dummies = [];
 
 			const $children = opts.$getChildren ? opts.$getChildren() : opts.$children;
@@ -30675,36 +30739,36 @@ class SourceUiUtil {
 				[$iptName, $iptAbv, $iptJson].forEach($ipt => $ipt.removeClass("form-control--error"));
 			});
 
-		const $stageInitial = $$`<div class="h-100 w-100 flex-vh-center"><div class="flex-col">
+		const $stageInitial = $$`<div class="h-100 w-100 ve-flex-vh-center"><div class="ve-flex-col">
 			<h3 class="text-center">${isEditMode ? "Edit Homebrew Source" : "Add a Homebrew Source"}</h3>
-			<div class="ui-source__row mb-2"><div class="col-12 flex-v-center">
+			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
 				<span class="mr-2 ui-source__name help" title="The name or title for the homebrew you wish to create. This could be the name of a book or PDF; for example, 'Monster Manual'">Title</span>
 				${$iptName}
 			</div></div>
-			<div class="ui-source__row mb-2"><div class="col-12 flex-v-center">
+			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
 				<span class="mr-2 ui-source__name help" title="An abbreviated form of the title. This will be shown in lists on the site, and in the top-right corner of statblocks or data entries; for example, 'MM'">Abbreviation</span>
 				${$iptAbv}
 			</div></div>
-			<div class="ui-source__row mb-2"><div class="col-12 flex-v-center">
+			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
 				<span class="mr-2 ui-source__name help" title="This will be used to identify your homebrew universally, so should be unique to you and you alone">JSON Identifier</span>
 				${$iptJson}
 			</div></div>
-			<div class="ui-source__row mb-2"><div class="col-12 flex-v-center">
+			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
 				<span class="mr-2 ui-source__name help" title="A link to the original homebrew, e.g. a GM Binder page">Source URL</span>
 				${$iptUrl}
 			</div></div>
-			<div class="ui-source__row mb-2"><div class="col-12 flex-v-center">
+			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
 				<span class="mr-2 ui-source__name help" title="A comma-separated list of authors, e.g. 'John Doe, Joe Bloggs'">Author(s)</span>
 				${$iptAuthors}
 			</div></div>
-			<div class="ui-source__row mb-2"><div class="col-12 flex-v-center">
+			<div class="ui-source__row mb-2"><div class="col-12 ve-flex-v-center">
 				<span class="mr-2 ui-source__name help" title="A comma-separated list of people who converted the homebrew to 5etools' format, e.g. 'John Doe, Joe Bloggs'">Converted By</span>
 				${$iptConverters}
 			</div></div>
 			<div class="text-center mb-2">${$btnOk}${$btnCancel}</div>
 
-			${!isEditMode && BrewUtil.homebrewMeta.sources && BrewUtil.homebrewMeta.sources.length ? $$`<div class="flex-vh-center mb-3 mt-3"><span class="ui-source__divider"></span>or<span class="ui-source__divider"></span></div>
-			<div class="flex-vh-center">${$btnUseExisting}</div>` : ""}
+			${!isEditMode && BrewUtil.homebrewMeta.sources && BrewUtil.homebrewMeta.sources.length ? $$`<div class="ve-flex-vh-center mb-3 mt-3"><span class="ui-source__divider"></span>or<span class="ui-source__divider"></span></div>
+			<div class="ve-flex-vh-center">${$btnUseExisting}</div>` : ""}
 		</div></div>`.appendTo(options.$parent);
 
 		const $selExisting = $$`<select class="form-control input-sm">
@@ -30734,10 +30798,10 @@ class SourceUiUtil {
 				$stageInitial.showVe();
 			});
 
-		const $stageExisting = $$`<div class="h-100 w-100 flex-vh-center ve-hidden"><div>
+		const $stageExisting = $$`<div class="h-100 w-100 ve-flex-vh-center ve-hidden"><div>
 			<h3 class="text-center">Select a Homebrew Source</h3>
-			<div class="mb-2"><div class="col-12 flex-vh-center">${$selExisting}</div></div>
-			<div class="col-12 flex-vh-center">${$btnBackExisting}${$btnConfirmExisting}</div>
+			<div class="mb-2"><div class="col-12 ve-flex-vh-center">${$selExisting}</div></div>
+			<div class="col-12 ve-flex-vh-center">${$btnBackExisting}${$btnConfirmExisting}</div>
 		</div></div>`.appendTo(options.$parent);
 	}
 }
@@ -31601,10 +31665,10 @@ class ComponentUiUtil {
 	static _$getDecor (component, prop, $ipt, decorType, side, opts) {
 		switch (decorType) {
 			case "search": {
-				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} no-events flex-vh-center"><span class="glyphicon glyphicon-search"></span></div>`);
+				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} no-events ve-flex-vh-center"><span class="glyphicon glyphicon-search"></span></div>`);
 			}
 			case "clear": {
-				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} flex-vh-center clickable" title="Clear"><span class="glyphicon glyphicon-remove"></span></div>`)
+				return $(`<div class="ui-ideco__wrp ui-ideco__wrp--${side} ve-flex-vh-center clickable" title="Clear"><span class="glyphicon glyphicon-remove"></span></div>`)
 					.click(() => $ipt.val("").change().keydown().keyup());
 			}
 			case "ticker": {
@@ -31631,7 +31695,7 @@ class ComponentUiUtil {
 				const $btnDown = $(`<button class="btn btn-default ui-ideco__btn-ticker bold no-select">\u2012</button>`)
 					.click(() => handleClick(-1));
 
-				return $$`<div class="ui-ideco__wrp ui-ideco__wrp--${side} flex-vh-center flex-col">
+				return $$`<div class="ui-ideco__wrp ui-ideco__wrp--${side} ve-flex-vh-center ve-flex-col">
 					${$btnUp}
 					${$btnDown}
 				</div>`;
@@ -31762,19 +31826,31 @@ class ComponentUiUtil {
 	 * @param [opts] Options Object.
 	 * @param [opts.$ele] Element to use.
 	 * @param [opts.asMeta] If a meta-object should be returned containing the hook and the input.
+	 * @param [opts.displayNullAsIndeterminate]
 	 * @return {JQuery}
 	 */
 	static $getCbBool (component, prop, opts) {
 		opts = opts || {};
 
-		const $cb = (opts.$ele || $(`<input type="checkbox">`))
-			.keydown(evt => {
-				if (evt.key === "Escape") $cb.blur();
-			})
-			.change(() => component._state[prop] = $cb.prop("checked"));
-		const hook = () => $cb.prop("checked", !!component._state[prop]);
+		const cb = e_({
+			tag: "input",
+			type: "checkbox",
+			keydown: evt => {
+				if (evt.key === "Escape") cb.blur();
+			},
+			change: () => {
+				component._state[prop] = cb.checked;
+			},
+		});
+
+		const hook = () => {
+			cb.checked = !!component._state[prop];
+			if (opts.displayNullAsIndeterminate) cb.indeterminate = component._state[prop] == null;
+		};
 		component._addHookBase(prop, hook);
 		hook();
+
+		const $cb = $(cb);
 
 		return opts.asMeta ? ({$cb, unhook: () => component._removeHookBase(prop, hook)}) : $cb;
 	}
@@ -31854,7 +31930,7 @@ class ComponentUiUtil {
 
 		const $wrpChoices = $(`<div class="absolute ui-sel2__wrp-options overflow-y-scroll"></div>`);
 
-		const $wrp = $$`<div class="flex relative ui-sel2__wrp w-100">
+		const $wrp = $$`<div class="ve-flex relative ui-sel2__wrp w-100">
 			${$iptDisplay}
 			${$iptSearch}
 			${$wrpChoices}
@@ -31865,7 +31941,7 @@ class ComponentUiUtil {
 		const metaOptions = procValues.map((v, i) => {
 			const display = v == null ? (opts.displayNullAs || "\u2014") : opts.fnDisplay ? opts.fnDisplay(v) : v;
 
-			const $ele = $(`<div class="flex-v-center py-1 px-1 clickable ui-sel2__disp-option ${v == null ? `italic` : ""}" tabindex="${i}">${display}</div>`)
+			const $ele = $(`<div class="ve-flex-v-center py-1 px-1 clickable ui-sel2__disp-option ${v == null ? `italic` : ""}" tabindex="${i}">${display}</div>`)
 				.click(() => {
 					if (opts.isDisabled) return;
 
@@ -32125,12 +32201,12 @@ class ComponentUiUtil {
 
 				const $btnRemove = $(`<button class="btn btn-danger ui-pick__btn-remove text-center">×</button>`)
 					.click(() => this._state[k] = false);
-				$$`<div class="flex mx-1 mb-1 ui-pick__disp-pill"><div class="px-1 ui-pick__disp-text flex-v-center">${opts.fnDisplay ? opts.fnDisplay(k) : k}</div>${$btnRemove}</div>`.appendTo($parent);
+				$$`<div class="ve-flex mx-1 mb-1 ui-pick__disp-pill"><div class="px-1 ui-pick__disp-text ve-flex-v-center">${opts.fnDisplay ? opts.fnDisplay(k) : k}</div>${$btnRemove}</div>`.appendTo($parent);
 			});
 		};
 
-		const $wrpPills = $(`<div class="flex flex-wrap w-100"></div>`);
-		const $wrp = $$`<div class="flex-v-center">${$btnAdd}${$wrpPills}</div>`;
+		const $wrpPills = $(`<div class="ve-flex ve-flex-wrap w-100"></div>`);
+		const $wrp = $$`<div class="ve-flex-v-center">${$btnAdd}${$wrpPills}</div>`;
 		pickComp._addHookAll("state", () => {
 			component._state[prop] = Object.keys(pickComp._state).filter(k => pickComp._state[k]);
 			pickComp.render($wrpPills);
@@ -32157,7 +32233,7 @@ class ComponentUiUtil {
 	static $getCbsEnum (component, prop, opts) {
 		opts = opts || {};
 
-		const $wrp = $(`<div class="flex-col w-100"></div>`);
+		const $wrp = $(`<div class="ve-flex-col w-100"></div>`);
 		const metas = opts.values.map(it => {
 			const $cb = $(`<input type="checkbox">`)
 				.keydown(evt => {
@@ -32177,7 +32253,7 @@ class ComponentUiUtil {
 					if (!didUpdate) component._state[prop] = [...component._state[prop]];
 				});
 
-			$$`<label class="split-v-center my-1 stripe-odd ${opts.isIndent ? "ml-4" : ""}"><div class="no-wrap flex-v-center">${opts.fnDisplay ? opts.fnDisplay(it) : it}</div>${$cb}</label>`.appendTo($wrp);
+			$$`<label class="split-v-center my-1 stripe-odd ${opts.isIndent ? "ml-4" : ""}"><div class="no-wrap ve-flex-v-center">${opts.fnDisplay ? opts.fnDisplay(it) : it}</div>${$cb}</label>`.appendTo($wrp);
 
 			return {$cb, value: it};
 		});
@@ -32235,13 +32311,13 @@ class ComponentUiUtil {
 
 			if (group.name) {
 				const $wrpName = $$`<div class="split-v-center py-1">
-					<div class="flex-v-center"><span class="mr-2">‒</span><span>${group.name}</span></div>
+					<div class="ve-flex-v-center"><span class="mr-2">‒</span><span>${group.name}</span></div>
 					${opts.valueGroupSplitControlsLookup?.[group.name]}
 				</div>`;
 				$eles.push($wrpName);
 			}
 
-			if (group.text) $eles.push($(`<div class="flex-v-center py-1"><div class="ml-1 mr-3"></div><i>${group.text}</i></div>`));
+			if (group.text) $eles.push($(`<div class="ve-flex-v-center py-1"><div class="ml-1 mr-3"></div><i>${group.text}</i></div>`));
 
 			group.values.forEach(v => {
 				const ixValueFrozen = ixValue;
@@ -32315,9 +32391,9 @@ class ComponentUiUtil {
 					},
 				});
 
-				const $ele = $$`<label class="flex-v-center py-1 stripe-even">
-					<div class="col-1 flex-vh-center">${$cb}</div>
-					<div class="col-11 flex-v-center">${displayValue}</div>
+				const $ele = $$`<label class="ve-flex-v-center py-1 stripe-even">
+					<div class="col-1 ve-flex-vh-center">${$cb}</div>
+					<div class="col-11 ve-flex-v-center">${displayValue}</div>
 				</label>`;
 				$eles.push($ele);
 
@@ -32357,7 +32433,7 @@ class ComponentUiUtil {
 		// Always return this as a "meta" object
 		const unhook = () => rowMetas.forEach(it => it.unhook());
 		return {
-			$ele: $$`<div class="flex-col w-100 overflow-y-auto">${$eles}</div>`,
+			$ele: $$`<div class="ve-flex-col w-100 overflow-y-auto">${$eles}</div>`,
 			$iptSearch,
 			rowMetas, // Return this to allow for creating custom UI
 			propIsAcceptable,
@@ -32540,7 +32616,7 @@ ComponentUiUtil.RangeSlider = class {
 
 		const wrpTrack = e_({
 			tag: "div",
-			clazz: `flex-v-center w-100 h-100 ui-slidr__wrp-track clickable`,
+			clazz: `ve-flex-v-center w-100 h-100 ui-slidr__wrp-track clickable`,
 			mousedown: evt => {
 				const thumb = this._getClosestThumb(evt);
 				this._handleMouseDown(evt, thumb);
@@ -32552,7 +32628,7 @@ ComponentUiUtil.RangeSlider = class {
 
 		const wrpTop = e_({
 			tag: "div",
-			clazz: "flex-v-center w-100 ui-slidr__wrp-top",
+			clazz: "ve-flex-v-center w-100 ui-slidr__wrp-top",
 			children: [
 				dispValueLeft,
 				wrpTrack,
@@ -32564,7 +32640,7 @@ ComponentUiUtil.RangeSlider = class {
 		// region Bottom part
 		const wrpPips = e_({
 			tag: "div",
-			clazz: `w-100 flex relative clickable h-100 ui-slidr__wrp-pips`,
+			clazz: `w-100 ve-flex relative clickable h-100 ui-slidr__wrp-pips`,
 			mousedown: evt => {
 				const thumb = this._getClosestThumb(evt);
 				this._handleMouseDown(evt, thumb);
@@ -32573,7 +32649,7 @@ ComponentUiUtil.RangeSlider = class {
 
 		const wrpBottom = e_({
 			tag: "div",
-			clazz: "w-100 flex-vh-center ui-slidr__wrp-bottom",
+			clazz: "w-100 ve-flex-vh-center ui-slidr__wrp-bottom",
 			children: [
 				this._isSingle ? this._getSpcSingleValue() : this._getDispValue({side: "left"}), // Pad the start
 				wrpPips,
@@ -32664,7 +32740,7 @@ ComponentUiUtil.RangeSlider = class {
 
 		const wrp = e_({
 			tag: "div",
-			clazz: "flex-col w-100 ui-slidr__wrp",
+			clazz: "ve-flex-col w-100 ui-slidr__wrp",
 			children: [
 				wrpTop,
 				wrpBottom,
@@ -32682,7 +32758,7 @@ ComponentUiUtil.RangeSlider = class {
 	_getDispValue ({isVisible, side}) {
 		return e_({
 			tag: "div",
-			clazz: `overflow-hidden ui-slidr__disp-value no-shrink no-grow flex-vh-center bold no-select ${isVisible ? `ui-slidr__disp-value--visible` : ""} ui-slidr__disp-value--${side}`,
+			clazz: `overflow-hidden ui-slidr__disp-value no-shrink no-grow ve-flex-vh-center bold no-select ${isVisible ? `ui-slidr__disp-value--visible` : ""} ui-slidr__disp-value--${side}`,
 		});
 	}
 
@@ -32713,14 +32789,14 @@ ComponentUiUtil.RangeSlider = class {
 
 		const dispLabel = e_({
 			tag: "div",
-			clazz: "absolute ui-slidr__pip-label flex-vh-center ve-small no-wrap",
+			clazz: "absolute ui-slidr__pip-label ve-flex-vh-center ve-small no-wrap",
 			html: isMajor ? this._fnDisplay ? `${this._fnDisplay(value)}`.qq() : value : "",
 			title: isMajor && this._fnDisplayTooltip ? `${this._fnDisplayTooltip(value)}`.qq() : null,
 		});
 
 		return e_({
 			tag: "div",
-			clazz: "flex-col flex-vh-center absolute no-select",
+			clazz: "ve-flex-col ve-flex-vh-center absolute no-select",
 			children: [
 				pip,
 				dispLabel,

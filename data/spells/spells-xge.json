@@ -765,8 +765,8 @@
 						"Damage Type"
 					],
 					"colStyles": [
-						"col-1 text-center",
-						"col-11"
+						"col-2 text-center",
+						"col-10"
 					],
 					"rows": [
 						[
@@ -867,6 +867,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"miscTags": [
+				"RO"
 			],
 			"areaTags": [
 				"ST"
@@ -1336,6 +1339,9 @@
 			"spellAttack": [
 				"R"
 			],
+			"miscTags": [
+				"LGT"
+			],
 			"areaTags": [
 				"ST"
 			],
@@ -1468,6 +1474,9 @@
 			],
 			"savingThrow": [
 				"constitution"
+			],
+			"miscTags": [
+				"LGTS"
 			],
 			"areaTags": [
 				"Y"
@@ -2802,6 +2811,7 @@
 				"constitution"
 			],
 			"miscTags": [
+				"LGT",
 				"SGT"
 			],
 			"areaTags": [
@@ -3016,6 +3026,7 @@
 				"dexterity"
 			],
 			"miscTags": [
+				"LGT",
 				"SGT"
 			],
 			"areaTags": [
@@ -3248,6 +3259,9 @@
 			],
 			"savingThrow": [
 				"dexterity"
+			],
+			"miscTags": [
+				"LGT"
 			],
 			"areaTags": [
 				"L"
@@ -5810,6 +5824,7 @@
 				}
 			],
 			"miscTags": [
+				"RO",
 				"SGT",
 				"SMN"
 			],

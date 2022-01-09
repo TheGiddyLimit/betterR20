@@ -2610,7 +2610,7 @@
 										"type": "entries",
 										"name": "Deathly",
 										"entries": [
-											"The priest's visage becomes bone white, and its challenge rating increases by 1. It can cast animate dead and create undead once per day each, using Intelligence as the spellcasting ability, and it gains the following action:",
+											"The priest's visage becomes bone white, and its challenge rating increases by 1. It can cast {@spell animate dead} and {@spell create undead} once per day each, using Intelligence as the spellcasting ability, and it gains the following action:",
 											{
 												"type": "entries",
 												"name": "Circle of Death (Spell; {@recharge 5|m})",

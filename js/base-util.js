@@ -1,5 +1,11 @@
 function baseUtil () {
+	const vttesUrl = "https://justas-d.github.io/roll20-enhancement-suite/";
+	let shownHardDickWarning = false;
+
 	d20plus.ut = {};
+
+	// d20plus.ut.WIKI_URL = "https://wiki.5e.tools"; // I'll be back ...
+	d20plus.ut.WIKI_URL = "https://web.archive.org/web/20210826155610/https://wiki.5e.tools";
 
 	d20plus.ut.log = (...args) => {
 		// eslint-disable-next-line no-console
@@ -42,7 +48,7 @@ function baseUtil () {
             value: Array.prototype.map
         });
     };
-	
+
 	d20plus.ut.checkVersion = () => {
 		d20plus.ut.log("Checking current version");
 
@@ -61,6 +67,8 @@ function baseUtil () {
 			return segmentsA.length - segmentsB.length;
 		}
 
+		const isStreamer = !!d20plus.cfg.get("interface", "streamerChatTag");
+		const scriptName = isStreamer ? "Script" : "betteR20";
 		$.ajax({
 			url: `https://raw.githubusercontent.com/TheGiddyLimit/betterR20/development/dist/betteR20-version`,
 			success: (data) => {
@@ -70,10 +78,13 @@ function baseUtil () {
 					const cmp = cmpVersions(curr, avail);
 					if (cmp < 0) {
 						setTimeout(() => {
-							const rawToolsInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-5etools.user.js?raw=true";
-							const rawCoreInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-core.user.js?raw=true";
-							d20plus.ut.sendHackerChat(`<br>A newer version of betteR20 is available.<br>Get ${avail} <a href="${rawToolsInstallUrl}">5etools</a> OR <a href="${rawCoreInstallUrl}">core</a>.<br><br>`);
-							d20plus.ut.sendHackerChat(`For help and support, see our <a href="https://wiki.5e.tools/index.php/BetteR20_FAQ">wiki</a> or join our <a href="https://discord.gg/nGvRCDs">Discord</a>.`);
+							if (!isStreamer) {
+								const rawToolsInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-5etools.user.js?raw=true";
+								const rawCoreInstallUrl = "https://github.com/TheGiddyLimit/betterR20/blob/development/dist/betteR20-core.user.js?raw=true";
+								d20plus.ut.sendHackerChat(`<br>A newer version of ${scriptName} is available.<br>Get ${avail} <a href="${rawToolsInstallUrl}">5etools</a> OR <a href="${rawCoreInstallUrl}">core</a>.<br><br>`);
+							} else {
+								d20plus.ut.sendHackerChat(`<br>A newer version of ${scriptName} is available.<br><br>`);
+							}
 						}, 1000);
 					}
 				}
@@ -84,42 +95,57 @@ function baseUtil () {
 		})
 	};
 
+	d20plus.ut.showHardDickMessage = (scriptName) => {
+		if (shownHardDickWarning) return;
+		shownHardDickWarning = true;
+
+		d20plus.ut.sendHackerChat(`
+			${scriptName} needs VTT Enhancement Suite! Please install it from <a href="${vttesUrl}">here</a>.
+			<br>
+		`, true);
+	};
+
 	d20plus.ut.chatTag = (message) => {
 		const isStreamer = !!d20plus.cfg.get("interface", "streamerChatTag");
-		d20plus.ut.sendHackerChat(`
-				${isStreamer ? "Script" : message} initialised.
-				${window.enhancementSuiteEnabled ? `<br><br>Roll20 Enhancement Suite detected.` : ""}
-				${isStreamer ? "" : `
+		const scriptName = isStreamer ? "Script" : message;
+		if (window.enhancementSuiteEnabled) {
+			d20plus.ut.sendHackerChat(`
+				VTT Enhancement Suite detected.
+				<br><br>
+				${scriptName} initialised.
 				<br>
-				<br>
-				Need help? Visit our <a href="https://wiki.5e.tools/index.php/Feature:_BetteR20">Wiki</a> or Join our <a href="https://discord.gg/nGvRCDs">Discord</a>.
-				<br>
-				<br>
-				<span title="You'd think this would be obvious.">
-				Please DO NOT post about this script or any related content in official channels, including the Roll20 forums.
-				<br>
-				<br>
-				Before reporting a bug on the Roll20 forums, please disable the script and check if the problem persists.
-				`}
-				</span>
 			`);
+		} else d20plus.ut.showHardDickMessage(scriptName);
+		d20plus.ut.sendHackerChat(`
+			${isStreamer ? "" : `
+			<br>
+			Need help? Visit our <a href="${d20plus.ut.WIKI_URL}/index.php/BetteR20_FAQ">wiki</a> or join our <a href="https://discord.gg/nGvRCDs">Discord</a>.
+			<br>
+			<br>
+			<span title="You'd think this would be obvious.">
+			Please DO NOT post about this script or any related content in official channels, including the Roll20 forums.
+			<br>
+			<br>
+			Before reporting a bug on the Roll20 forums, please disable the script and check if the problem persists.
+			</span>
+			`}
+		`);
 	};
 
 	d20plus.ut.showLoadingMessage = (message) => {
 		const isStreamer = !!d20plus.cfg.get("interface", "streamerChatTag");
+		const scriptName = isStreamer ? "Script" : message;
 		d20plus.ut.sendHackerChat(`
-			${isStreamer ? "Script" : message} initialising, please wait...<br><br>
+			${scriptName} initialising, please wait...<br><br>
 		`);
-		d20plus.ut.sendHackerChat(`
-			VTT Enhancement Suite version 1.15.35 or above is required.<br><br>
-		`);
+		if (!window.enhancementSuiteEnabled) d20plus.ut.showHardDickMessage(scriptName);
 	};
 
-	d20plus.ut.sendHackerChat = (message) => {
+	d20plus.ut.sendHackerChat = (message, error = false) => {
 		d20.textchat.incoming(false, ({
 			who: "system",
 			type: "system",
-			content: `<span class="hacker-chat">
+			content: `<span class="${error ? "hacker-chat-error" : "hacker-chat"}">
 				${message}
 			</span>`,
 		}));

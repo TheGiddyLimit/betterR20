@@ -353,6 +353,9 @@
 				"dexterity",
 				"wisdom"
 			],
+			"miscTags": [
+				"RO"
+			],
 			"classes": {
 				"fromClassList": [
 					{

@@ -2204,6 +2204,10 @@
 					]
 				}
 			],
+			"legendaryGroup": {
+				"name": "Murgaxor",
+				"source": "SCC"
+			},
 			"actionTags": [
 				"Multiattack"
 			],

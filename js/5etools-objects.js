@@ -25,6 +25,7 @@ function d20plusObjects () {
 		if (!d20plus.importer._checkHandleDuplicate(path, overwrite)) return;
 
 		const name = data.name;
+		const source = data.source;
 		d20.Campaign.characters.create(
 			{
 				name: name,
@@ -38,7 +39,7 @@ function d20plusObjects () {
 					if (saveIdsTo) saveIdsTo[UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_OBJECTS](data)] = {name: data.name, source: data.source, type: "character", roll20Id: character.id};
 
 					try {
-						const avatar = data.tokenUrl || `${IMG_URL}objects/${name}.png`;
+						const avatar = data.tokenUrl || `${IMG_URL}objects/tokens/${source}/${name}.png`;
 						character.size = data.size;
 						character.name = name;
 						character.senses = data.senses ? data.senses instanceof Array ? data.senses.join(", ") : data.senses : null;
@@ -53,7 +54,7 @@ function d20plusObjects () {
 								d20plus.importer.getSetAvatarImage(character, avatar);
 							},
 						});
-						const ac = data.ac.match(/^\d+/);
+						
 						const size = Parser.sizeAbvToFull(data.size);
 						character.attribs.create({name: "npc", current: 1});
 						character.attribs.create({name: "npc_toggle", current: 1});
@@ -78,7 +79,7 @@ function d20plusObjects () {
 						character.attribs.create({name: "npc_size", current: size});
 						character.attribs.create({name: "type", current: data.type});
 						character.attribs.create({name: "npc_type", current: `${size} ${data.type}`});
-						character.attribs.create({name: "npc_ac", current: ac != null ? ac[0] : ""});
+						character.attribs.create({name: "npc_ac", current: data.ac});
 						character.attribs.create({name: "npc_actype", current: ""});
 						character.attribs.create({name: "npc_hpbase", current: data.hp});
 						character.attribs.create({name: "npc_hpformula", current: data.hp ? `${data.hp}d1` : ""});
