@@ -117,42 +117,12 @@ function d20plusBackgrounds () {
 
 		const renderer = new Renderer();
 		renderer.setBaseUrl(BASE_SITE_URL);
-		const featureSet = [
-			"Cultural Chameleon",
-			"Dust Digger",
-			"Favored Event",
-			"Specialty",
-			"Contacts",
-			"How Do I Fit In?",
-			"Favorite Schemes",
-			"Faceless Persona",
-			"Why Are You Here?",
-			"Fey Mark",
-			"Feywild Visitor",
-			"Fishing Tale",
-			"Harrowing Event",
-			"Role",
-			"Path to Mystery",
-			"Hardship Endured",
-			"Variant Noble (Knight)",
-			"A Flair for the Dramatic",
-			"Life at Sea",
-			"Claim to Fame",
-			"Carnival Companion"
-		];
 		let features = [];
 		bg.entries.forEach(e => {
 			let feature = {};
-			if (e.name && e.name.includes("Feature:")) {
-				feature = JSON.parse(JSON.stringify(e));
-				feature.name = feature.name.replace("Feature:", "").trim();
-			} else if (e.name && (
-					e.name.includes("Guild Spells") || // covers all GGR backgrounds
-					e.name.includes("Origins")         // Criminal, Folk Hero, Hermit, Outlander, etc
-					)) {
-				feature = JSON.parse(JSON.stringify(e));
-			} else if (e.name && featureSet.includes(e.name)) {
-				feature = JSON.parse(JSON.stringify(e));
+			if (e.name && e.data && e.data.isFeature) {
+				feature = MiscUtil.copy(e);
+				feature.name = feature.name.replace("/^.*Feature:/", "").trim();
 			} else return;
 
 			const renderStack = [];
@@ -459,19 +429,15 @@ function d20plusBackgrounds () {
 		let ideal = null;
 		let bond = null;
 		let flaw = null;
-		const matchCharacteristics = [
-			"Suggested Characteristics", // Most backgrounds
-			"Horror Characteristics"     // 'Haunted One' and 'Investigator'
-		];
 		// Get the JSON for all the tables
 		if (bg.entries) {
 			for (const ent of bg.entries) {
-				if (ent.name && matchCharacteristics.includes(ent.name)) {
+				if (ent.name && ent.name.includes("Characteristics")) {
 					traits = ent;
 				} else if (ent.entries) {
 					for (const entItem of ent.entries) {
 						// look for embedded characteristics
-						if (entItem.name && entItem.name === "Suggested Characteristics") {
+						if (entItem.name && entItem.name.includes("Characteristics")) {
 							traits = entItem;
 						// look for embedded trinkets, and move to features
 						} else if (entItem.name && entItem.name.includes("Trinket")) {
@@ -492,63 +458,18 @@ function d20plusBackgrounds () {
 				// This seems to be the best way to parse the information with some room for errors
 				// It seems like the schema is based on on the website, which is why colLabels is where the identifier is
 				if (ent.colLabels && ent.colLabels.length === 2 && ent.rows) {
-
-					/**
-					 * Clean up the formatting and reference syntaxes to get clean text.
-					 *
-					 * @param entry entry to clean up
-					 * @return cleaned text
-					 */
-					const _cleanText = function (entry) {
-						let cleanedText = "";
-						let closeIndex = 0;
-						while (true) {
-							const firstIndex = entry.indexOf("{@", closeIndex);
-							if (firstIndex === -1) {
-								// grab whatever is left in the entry
-								cleanedText += entry.substring(closeIndex);
-								break;
-							}
-							cleanedText += entry.substring(closeIndex, firstIndex);
-							const spaceIndex = entry.indexOf(" ", firstIndex);
-							if (spaceIndex === -1) {
-								// parse error, just grab the rest and bail
-								cleanedText += entry.substring(firstIndex);
-								break;
-							}
-							closeIndex = entry.indexOf("}", spaceIndex);
-							if (closeIndex === -1) {
-								// parse error, just grab the rest and bail
-								cleanedText += entry.substring(firstIndex);
-								break;
-							}
-							// look for any reference syntax between the space and the closure
-							const pipeIndex = entry.substring(spaceIndex + 1, closeIndex).indexOf("|");
-							if (pipeIndex === -1) {
-								// no reference, copy one past space up to closure
-								cleanedText += entry.substring(spaceIndex + 1, closeIndex);
-							} else {
-								// got a reference, copy one past space for number of characters up to pipe
-								// note that pipeIndex is zero-based
-								cleanedText += entry.substr(spaceIndex + 1, pipeIndex);
-							}
-							closeIndex++;
-						}
-						return cleanedText;
-					};
-
 					switch (ent.colLabels[1]) {
 						case "Personality Trait":
-							ptrait = ent.rows.map(r => _cleanText(r[1]));
+							ptrait = ent.rows.map(r => Renderer.stripTags(r[1]));
 							break;
 						case "Ideal":
-							ideal = ent.rows.map(r => _cleanText(r[1]));
+							ideal = ent.rows.map(r => Renderer.stripTags(r[1]));
 							break;
 						case "Bond":
-							bond = ent.rows.map(r => _cleanText(r[1]));
+							bond = ent.rows.map(r => Renderer.stripTags(r[1]));
 							break;
 						case "Flaw":
-							flaw = ent.rows.map(r => _cleanText(r[1]));
+							flaw = ent.rows.map(r => Renderer.stripTags(r[1]));
 							break;
 					}
 				}
