@@ -122,7 +122,7 @@ function d20plusBackgrounds () {
 			let feature = {};
 			if (e.name && e.data && e.data.isFeature) {
 				feature = MiscUtil.copy(e);
-				feature.name = feature.name.replace("/^.*Feature:/", "").trim();
+				feature.name = feature.name.replace(/^.*Feature:/, "").trim();
 			} else return;
 
 			const renderStack = [];
