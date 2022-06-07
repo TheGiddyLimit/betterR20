@@ -152,9 +152,10 @@ function baseUi () {
 	 * @param random show button for random choices
 	 * @param randomMax Enforce max random choices
 	 * @param totallyRandom select randomly number of items between countMin and countMax. Requires count to be null. This has higher priority than randomMax
+	 * @param skip show skip button to allow no choices
 	 * @return {Promise}
 	 */
-	d20plus.ui.chooseCheckboxList = async function (dataArray, dataTitle, {displayFormatter = null, count = null, countMin = null, countMax = null, additionalHTML = null, note = null, messageCountIncomplete = null , random = null, randomMax = null, totallyRandom = null} = {}) {
+	d20plus.ui.chooseCheckboxList = async function (dataArray, dataTitle, {displayFormatter = null, count = null, countMin = null, countMax = null, additionalHTML = null, note = null, messageCountIncomplete = null , random = null, randomMax = null, totallyRandom = null, skip = null} = {}) {
 		return new Promise((resolve, reject) => {
 			// Ensure count, countMin, and countMax don't mess up
 			// Note if(var) is false if the number is 0. countMin is the only count allowed to be 0
@@ -205,6 +206,14 @@ function baseUi () {
 			$dialog.dialog({
 				dialogClass: "no-close",
 				buttons: [
+					(skip ? {
+						text: "Skip",
+						click: function () {
+							$(this).dialog("close");
+							$dialog.remove();
+							resolve(null);
+						},
+					} : null),
 					{
 						text: "Cancel",
 						click: function () {
@@ -282,9 +291,10 @@ function baseUi () {
 	 * @param additionalHTML additional html code, such as a button
 	 * @param note add a note at the bottom of the window
 	 * @param messageCountIncomplete message when user does not choose correct number of choices
+	 * @param skip show skip button to allow no choices
 	 * @return {Promise}
 	 */
-	 d20plus.ui.chooseRadioList = async function (dataArray, dataTitle, {displayFormatter = null, random = null, additionalHTML = null, note = null, messageCountIncomplete = null} = {}) {
+	 d20plus.ui.chooseRadioList = async function (dataArray, dataTitle, {displayFormatter = null, random = null, additionalHTML = null, note = null, messageCountIncomplete = null, skip = null} = {}) {
 		return new Promise((resolve, reject) => {
 
 
@@ -311,6 +321,14 @@ function baseUi () {
 			$dialog.dialog({
 				dialogClass: "no-close",
 				buttons: [
+					(skip ? {
+						text: "Skip",
+						click: function () {
+							$(this).dialog("close");
+							$dialog.remove();
+							resolve(null);
+						},
+					} : null),
 					{
 						text: "Cancel",
 						click: function () {
