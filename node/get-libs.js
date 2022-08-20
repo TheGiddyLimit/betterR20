@@ -14,6 +14,7 @@ const _LIBS = new Set([
 	"scalecreature.js",
 	"utils.js",
 	"utils-ui.js",
+	"utils-brew.js",
 ]);
 
 async function main () {
