@@ -130,6 +130,7 @@
 				"RW",
 				"THW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -300,7 +301,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD",
@@ -499,7 +501,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD",
@@ -683,7 +686,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B",
@@ -1102,7 +1106,8 @@
 				"RNG",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Bjornhild Solvigsdottir",
@@ -1442,7 +1447,8 @@
 			"traitTags": [
 				"Immutable Form",
 				"Magic Resistance",
-				"Siege Monster"
+				"Siege Monster",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -1524,7 +1530,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Chimeric Cat",
@@ -1594,6 +1601,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1662,6 +1670,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1708,6 +1717,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1728,7 +1738,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Chimeric Weasel",
@@ -1795,7 +1806,8 @@
 			"miscTags": [
 				"AOE",
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Chwinga",
@@ -1901,6 +1913,9 @@
 						"{@atk rs} {@hit 3} to hit, range 60 ft., one target. {@h}25 ({@damage 4d10 + 3}) cold damage."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -2011,7 +2026,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -2358,7 +2374,8 @@
 			"spellcastingTags": [],
 			"miscTags": [],
 			"conditionInflict": [],
-			"conditionInflictSpell": []
+			"conditionInflictSpell": [],
+			"hasToken": true
 		},
 		{
 			"name": "Fox",
@@ -2700,6 +2717,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -2814,7 +2834,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -3057,7 +3078,8 @@
 				"Rampage",
 				"Regeneration",
 				"Shapechanger",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -3075,6 +3097,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -3276,10 +3299,10 @@
 					"headerEntries": [
 						"The squidling's innate spellcasting ability is Intelligence (spell save {@dc 7}). It can innately cast {@spell levitate} at will, requiring no components."
 					],
-					"ability": "int",
 					"will": [
 						"{@spell levitate}"
 					],
+					"ability": "int",
 					"hidden": [
 						"will"
 					]
@@ -4162,6 +4185,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -4242,7 +4266,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"languageTags": [
 				"CS",
@@ -4633,7 +4658,8 @@
 				}
 			],
 			"traitTags": [
-				"Undead Fortitude"
+				"Undead Fortitude",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5241,6 +5267,7 @@
 				"paralyzed",
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -5414,7 +5441,8 @@
 			"traitTags": [
 				"Pack Tactics",
 				"Regeneration",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5428,6 +5456,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -5527,7 +5556,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5646,7 +5676,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5742,7 +5773,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -5992,6 +6024,7 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6488,6 +6521,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6815,6 +6849,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6945,10 +6980,10 @@
 					"will": [
 						"{@spell misty step}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -7106,7 +7141,8 @@
 			],
 			"traitTags": [
 				"Damage Absorption",
-				"Immutable Form"
+				"Immutable Form",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -7691,6 +7727,7 @@
 				"MW",
 				"RCH"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -7802,6 +7839,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -7889,7 +7929,8 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Vellynne Harpell",

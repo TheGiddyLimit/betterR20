@@ -180,7 +180,16 @@
 						}
 					}
 				}
-			}
+			},
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/ERLW/Clawfoot.png"
+					}
+				}
+			]
 		},
 		{
 			"name": "Dinosaurs",
@@ -1605,7 +1614,7 @@
 												],
 												[
 													"2",
-													"Burst of Speed (Recharge 6). The animal can take the {@action Dash} action as a bonus action."
+													"Burst of Speed {@recharge}. The animal can take the {@action Dash} action as a bonus action."
 												],
 												[
 													"3",
@@ -1625,7 +1634,7 @@
 												],
 												[
 													"7",
-													"Quickness (Recharge 6). The animal can take the {@action Dodge} action as a bonus action."
+													"Quickness {@recharge}. The animal can take the {@action Dodge} action as a bonus action."
 												],
 												[
 													"8",

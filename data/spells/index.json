@@ -1,4 +1,5 @@
 {
+	"AAG": "spells-aag.json",
 	"AI": "spells-ai.json",
 	"AitFR-AVT": "spells-aitfr-avt.json",
 	"EGW": "spells-egw.json",
@@ -12,6 +13,7 @@
 	"UA2020PsionicOptionsRevisited": "spells-ua-2020por.json",
 	"UA2020SpellsAndMagicTattoos": "spells-ua-2020smt.json",
 	"UA2021DraconicOptions": "spells-ua-2021do.json",
+	"UA2022WondersOfTheMultiverse": "spells-ua-2022wotm.json",
 	"UAArtificerRevisited": "spells-ua-ar.json",
 	"UAFighterRogueWizard": "spells-ua-frw.json",
 	"UAModernMagic": "spells-ua-mm.json",

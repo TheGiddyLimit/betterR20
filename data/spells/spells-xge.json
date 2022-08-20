@@ -2575,9 +2575,6 @@
 			"damageInflict": [
 				"force"
 			],
-			"savingThrow": [
-				"constitution"
-			],
 			"miscTags": [
 				"THP"
 			],

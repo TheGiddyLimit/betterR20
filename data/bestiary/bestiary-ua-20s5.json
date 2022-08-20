@@ -76,7 +76,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

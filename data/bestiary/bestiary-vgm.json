@@ -3625,6 +3625,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3647,6 +3648,7 @@
 			"spellcastingTags": [
 				"CW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3676,6 +3678,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3705,6 +3708,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3734,6 +3738,7 @@
 					]
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3755,6 +3760,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3776,6 +3782,7 @@
 					}
 				}
 			},
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -5429,10 +5436,10 @@
 					"will": [
 						"{@spell dancing lights}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -7067,10 +7074,10 @@
 					"will": [
 						"{@spell mage armor}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				},
 				{
 					"name": "Spellcasting",
@@ -14017,7 +14024,7 @@
 					]
 				},
 				{
-					"name": "Ilneval's Command (Recharges 4\u20136)",
+					"name": "Ilneval's Command {@recharge 4}",
 					"entries": [
 						"Up to three allied orcs within 120 feet of this orc that can hear it can use their reactions to each make one weapon attack."
 					]

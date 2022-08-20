@@ -164,7 +164,8 @@
 				"F",
 				"P",
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Flight Alabaster Angel",
@@ -191,7 +192,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Flight Goldnight Angel",
@@ -217,7 +219,8 @@
 					}
 				}
 			},
-			"cr": "11"
+			"cr": "11",
+			"hasToken": true
 		},
 		{
 			"name": "Flight of Moonsilver Angel",
@@ -247,7 +250,8 @@
 				"B",
 				"N",
 				"R"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Geist",
@@ -399,7 +403,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Keeper of the Feather",
@@ -469,7 +474,8 @@
 			],
 			"spellcastingTags": [
 				"CD"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skaab",
@@ -802,6 +808,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true

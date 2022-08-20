@@ -487,6 +487,7 @@
 					}
 				}
 			],
+			"familiar": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -1189,6 +1190,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -1403,6 +1405,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{

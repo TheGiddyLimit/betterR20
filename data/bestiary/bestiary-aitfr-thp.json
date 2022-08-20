@@ -145,6 +145,7 @@
 			"conditionInflict": [
 				"frightened"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -291,6 +292,7 @@
 				"invisible",
 				"paralyzed"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -441,6 +443,7 @@
 			"conditionInflictSpell": [
 				"incapacitated"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		}
 	]

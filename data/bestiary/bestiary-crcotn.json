@@ -299,7 +299,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Enslave (Recharge 4-6)",
+					"name": "Enslave {@recharge 4}",
 					"entries": [
 						"The aboleth targets one creature it can see within 30 feet of itself. The target must succeed on a {@dc 14} Wisdom saving throw or be magically {@condition charmed} by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The {@condition charmed} target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.",
 						"The {@condition charmed} target can repeat the saving throw whenever it takes damage, ending the effect on itself on a success. No more than once every 24 hours, the target can repeat the saving throw when it is at least 1 mile away from the aboleth."
@@ -516,6 +516,9 @@
 				"O",
 				"P",
 				"R"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -1018,8 +1021,8 @@
 				"exhaustion"
 			],
 			"hasToken": true,
-			"hasFluffImages": true,
-			"hasFluff": true
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Alyxian the Tormented",
@@ -1288,7 +1291,7 @@
 			"isNamedCreature": true,
 			"source": "CRCotN",
 			"_copy": {
-				"name": "Occult Initiate",
+				"name": "Occult Silvertongue",
 				"source": "CRCotN",
 				"_trait": {
 					"name": "Goliath",
@@ -1297,7 +1300,7 @@
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "the initiate",
+						"replace": "the silvertongue",
 						"with": "Aradrine",
 						"flags": "i"
 					}
@@ -1468,6 +1471,9 @@
 			"damageTags": [
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RNG",
@@ -1607,6 +1613,9 @@
 			],
 			"damageTags": [
 				"P"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -1758,6 +1767,9 @@
 			"damageTags": [
 				"P",
 				"Y"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -2000,6 +2012,7 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -2243,6 +2256,9 @@
 				"B",
 				"R"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -2373,6 +2389,9 @@
 			"damageTags": [
 				"B",
 				"R"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW"
@@ -2517,6 +2536,9 @@
 				"R",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -2550,7 +2572,8 @@
 				"Abyssal",
 				"Common",
 				"Orc"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Foghomer",
@@ -2576,7 +2599,12 @@
 			"alignment": [
 				"N",
 				"G"
-			]
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Galeokaerda",
@@ -2709,6 +2737,9 @@
 			"damageTagsSpell": [
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -2830,6 +2861,9 @@
 			],
 			"damageTags": [
 				"N",
+				"O"
+			],
+			"spellcastingTags": [
 				"O"
 			],
 			"miscTags": [
@@ -2963,6 +2997,9 @@
 			],
 			"damageTags": [
 				"N",
+				"O"
+			],
+			"spellcastingTags": [
 				"O"
 			],
 			"miscTags": [
@@ -3139,6 +3176,9 @@
 				"P",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -3312,6 +3352,9 @@
 				"B",
 				"P",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -3738,6 +3781,9 @@
 			],
 			"damageTagsSpell": [
 				"F"
+			],
+			"spellcastingTags": [
+				"I"
 			],
 			"hasToken": true
 		},
@@ -4427,7 +4473,7 @@
 				{
 					"ac": 19,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -4529,6 +4575,9 @@
 				"O",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -4554,7 +4603,7 @@
 				{
 					"ac": 18,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -4671,6 +4720,9 @@
 			"damageTagsSpell": [
 				"O"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -4701,7 +4753,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -4817,6 +4869,7 @@
 					]
 				}
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -4932,6 +4985,9 @@
 			"damageTagsSpell": [
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -5022,6 +5078,9 @@
 				"O",
 				"P",
 				"Y"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -5152,6 +5211,9 @@
 				"Y"
 			],
 			"damageTagsSpell": [
+				"O"
+			],
+			"spellcastingTags": [
 				"O"
 			],
 			"conditionInflict": [
@@ -5338,6 +5400,10 @@
 			"damageTagsSpell": [
 				"F"
 			],
+			"spellcastingTags": [
+				"I",
+				"O"
+			],
 			"hasToken": true
 		},
 		{
@@ -5506,6 +5572,9 @@
 			"damageTags": [
 				"L"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -5581,7 +5650,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Telekinetic Toss (Recharge 5-6)",
+					"name": "Telekinetic Toss {@recharge 5}",
 					"entries": [
 						"The excavator targets one Medium or smaller creature or an object weighing 300 pounds or less that isn't being worn or carried. The target, which must be within 30 feet of the excavator and visible to it, is magically pushed up to 20 feet horizontally in a direction of the excavator's choice. If the target is a creature, it can make a {@dc 13} Strength saving throw to resist the effect and is not pushed on a successful save."
 					]
@@ -5709,6 +5778,9 @@
 				"B",
 				"P",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -5928,6 +6000,9 @@
 				"I",
 				"N"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW"
 			],
@@ -5974,6 +6049,11 @@
 				"paralyzed",
 				"poisoned"
 			],
+			"traitTags": [
+				"Death Burst",
+				"Unusual Nature"
+			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -6433,6 +6513,9 @@
 				"I",
 				"P",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW",

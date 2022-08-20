@@ -862,7 +862,7 @@
 			"subclassFeatures": [
 				"School of Illusion|Wizard||Illusion||2",
 				"Malleable Illusions|Wizard||Illusion||6",
-				"Illusory Step|Wizard||Illusion||10",
+				"Illusory Self|Wizard||Illusion||10",
 				"Illusory Reality|Wizard||Illusion||14"
 			]
 		},
@@ -1166,6 +1166,20 @@
 					"page": true
 				}
 			}
+		},
+		{
+			"name": "Runecrafter (UA)",
+			"shortName": "Runecrafter (UA)",
+			"source": "UA2022GiantOptions",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 3,
+			"subclassFeatures": [
+				"Runecrafter|Wizard||Runecrafter (UA)|UA2022GiantOptions|2",
+				"Sigils of Warding|Wizard||Runecrafter (UA)|UA2022GiantOptions|6",
+				"Rune Maven|Wizard||Runecrafter (UA)|UA2022GiantOptions|10",
+				"Engraved Enmity|Wizard||Runecrafter (UA)|UA2022GiantOptions|14"
+			]
 		}
 	],
 	"classFeature": [
@@ -2327,7 +2341,7 @@
 			]
 		},
 		{
-			"name": "Illusory Step",
+			"name": "Illusory Self",
 			"source": "PHB",
 			"page": 118,
 			"className": "Wizard",
@@ -3029,6 +3043,160 @@
 				"Your connection to your Awakened Spellbook has become so profound that your soul has become entwined with it. While you are holding the book and its spectral mind is manifest, you can take an action to cause the two of you to teleport, swapping places. You can teleport in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.",
 				"Moreover, if you die but at least one spell remains in your Awakened Spellbook, you can return to life 1 minute later within 5 feet of the book. You revive with 1 hit point. Then roll {@dice 3d6}. The book loses spells of your choice that have a combined spell level equal to that roll or higher. For example, if the roll's total is 9, spells vanish from the book that have a combined level of at least 9, which could mean one 9th-level spell, three 3rd-level spells, or some other combination.",
 				"Thereafter, you are incapable of casting the lost spells, even if you find them on a scroll or in another spellbook. The only way to restore your ability to cast one of the lost spells is through the {@spell wish} spell, which can restore one spell to the book per casting."
+			]
+		},
+		{
+			"name": "Runecrafter",
+			"source": "UA2022GiantOptions",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Runecrafter (UA)",
+			"subclassSource": "UA2022GiantOptions",
+			"level": 2,
+			"entries": [
+				"Runecrafter wizards enhance their spellcasting through the ancient power of runes. Though the tradition originated with the giant rune casters of old, runecraft magic has expanded to encompass countless languages and practitioners across different worlds.",
+				"For many runecrafters, the runes they wield are as every bit unique and personal as their spellbook. Some strive to honor the practice's origins among the giants, engraving their runes on decorative stones that adorn their spellcasting implements, while others messily scribble their runes on scraps of paper.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Runes of Understanding|Wizard||Runecrafter (UA)|UA2022GiantOptions|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Runic Empowerment|Wizard||Runecrafter (UA)|UA2022GiantOptions|2"
+				}
+			]
+		},
+		{
+			"name": "Runes of Understanding",
+			"source": "UA2022GiantOptions",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Runecrafter (UA)",
+			"subclassSource": "UA2022GiantOptions",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-Level Runecrafter Feature}",
+				"Your study of runecraft has unlocked the ability to decode runes and languages, regardless of their origin; you always have comprehend languages prepared, you can cast it without expending a spell slot, and the spell doesn't count against the number of spells you have prepared."
+			]
+		},
+		{
+			"name": "Runic Empowerment",
+			"source": "UA2022GiantOptions",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Runecrafter (UA)",
+			"subclassSource": "UA2022GiantOptions",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"{@i 2nd-Level Runecrafter Feature}",
+				"When you choose this subclass, you learn how to amplify your magic through the application of various runes. Your knowledge of these runes is stored in your spellbook, though you determine the runes' cosmetic appearance. For example, your runes could be engraved into the cover of your spellbook, glowing whenever you cast a spell, or you could work the shape and meaning of the runes directly into a spell's somatic and verbal components. When you cast a spell using a spell slot, you can invoke one of the following runes:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Life Rune",
+							"entries": [
+								"When you invoke this rune, choose one creature you can see within 30 feet of you (you can choose yourself). The chosen creature gains temporary hit points equal to 5 times the level of the spell slot expended."
+							]
+						},
+						{
+							"type": "item",
+							"name": "War Rune",
+							"entries": [
+								"When you invoke this rune, choose one creature you can see within 30 feet of you. Until the end of your next turn, attack rolls that target the chosen creature gain a bonus equal to half the level of the spell slot expended (rounded up, minimum of +1)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wind Rune",
+							"entries": [
+								"When you invoke this rune, your speed increases by a number of feet equal to 5 times the level of the spell slot expended, and your movement doesn't provoke opportunity attacks. These benefits last until the start of your next turn."
+							]
+						}
+					]
+				},
+				"You can invoke no more than one rune per spell. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "Sigils of Warding",
+			"source": "UA2022GiantOptions",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Runecrafter (UA)",
+			"subclassSource": "UA2022GiantOptions",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-Level Runecrafter Feature}",
+				"You can call on a rune of protection to guard yourself against threats. When you fail a Strength, Dexterity, or Constitution saving throw, you can use your reaction to expend one use of your Runic Empowerment and succeed on the saving throw instead."
+			]
+		},
+		{
+			"name": "Rune Maven",
+			"source": "UA2022GiantOptions",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Runecrafter (UA)",
+			"subclassSource": "UA2022GiantOptions",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-Level Runecrafter Feature}",
+				"Your understanding of runecraft has grown immensely. Whenever you use your Arcane Recovery feature, you also regain a number of your expended uses of Runic Empowerment. The number of uses you regain can be no more than half your Intelligence modifier, rounded up (minimum of 1)."
+			]
+		},
+		{
+			"name": "Engraved Enmity",
+			"source": "UA2022GiantOptions",
+			"page": 3,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Runecrafter (UA)",
+			"subclassSource": "UA2022GiantOptions",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-Level Runecrafter Feature}",
+				"You have mastered the art of wielding your runes directly against your foes. As a bonus action, you can target one creature you can see within 60 feet of yourself. The creature must succeed on a Wisdom saving throw against your spell save DC or be magically marked by an enmity rune.",
+				"The enmity rune appears as a faintly glowing mote of energy that hovers over the marked creature, which suffers the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Runecraft's Bane",
+							"entries": [
+								"The creature has disadvantage on saving throws made against spells you cast."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Unveiled Enemy",
+							"entries": [
+								"The radiance of the glowing rune makes the creature visible if it's {@condition invisible}, and the creature can't become {@condition invisible} while the rune persists."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Woeful Curse",
+							"entries": [
+								"When you mark the creature, and as a bonus action on subsequent turns for the duration, you can invoke the enmity rune to curse the creature until the start of your next turn. The next time one of your allies hits the cursed creature with an attack roll, the target also takes {@damage 1d8} force damage, and the curse ends."
+							]
+						}
+					]
+				},
+				"The enmity rune lasts for 1 minute or until you lose your concentration (as if you were concentrating on a spell). Once you have marked a creature in this way, you can't do so again until you finish a long rest, unless you expend a spell slot of 3rd level or higher to use this feature again."
 			]
 		},
 		{

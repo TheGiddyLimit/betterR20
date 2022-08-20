@@ -101,6 +101,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -1581,7 +1582,8 @@
 			},
 			"damageTags": [
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sunbird",

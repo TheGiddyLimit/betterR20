@@ -101,6 +101,22 @@
 			]
 		},
 		{
+			"name": "Captain N'ghathrod",
+			"source": "WDMM",
+			"entries": [
+				"Before it turned to a life of space piracy, N'ghathrod lived in a mind flayer colony on the ringed planet of Glyth, which is farther from the sun than Toril."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/WDMM/Captain N'ghathrod.jpg"
+					}
+				}
+			]
+		},
+		{
 			"name": "Carrion Ogre",
 			"source": "WDMM",
 			"entries": [

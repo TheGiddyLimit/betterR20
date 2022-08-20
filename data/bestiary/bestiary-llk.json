@@ -2,7 +2,8 @@
 	"_meta": {
 		"dependencies": {
 			"monster": [
-				"MM"
+				"MM",
+				"VGM"
 			]
 		}
 	},
@@ -250,7 +251,111 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Ctenmiir the Vampire",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 4,
+			"_copy": {
+				"name": "Vampire",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the vampire",
+						"with": "Ctenmiir",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Coffin Imprisonment",
+							"entries": [
+								"Ctenmiir is imprisoned within a magical iron coffin mounted atop animated golem legs. Ctenmiir's coffin has a speed of 30 feet and a climbing speed of 10 feet, and protects the vampire from sunlight even as it prevents him from escaping his servitude."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"speed": {
+				"walk": 30,
+				"climb": 10
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "East Wind",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the adept",
+						"with": "East Wind",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"East Wind is armed with a longsword that is a {@item polymorph blade|LLK}."
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Polymorph Blade",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) piercing damage. If East Wind rolls a 20 on the attack roll, the target must succeed on a {@dc 15} Wisdom saving throw or suffer the effects of a {@spell polymorph} spell."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
+		},
+		{
+			"name": "Elder Monastery of the Distressed Body Monk",
+			"source": "LLK",
+			"page": 12,
+			"_copy": {
+				"name": "Cult Fanatic",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "fanatic",
+						"with": "monk"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Dagger",
+						"items": {
+							"name": "Force Pike",
+							"entries": [
+								"{@atk mw,rw} {@hit 4} to hit, reach 5 ft. or range 40/100 ft., one creature. {@h}7 ({@damage 1d10 + 2}) force damage. The attack has disadvantage against any target with polished metal armor or shield, and has its ranged halved when firing through smoke or fog."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Garret Levistusson",
@@ -391,12 +496,69 @@
 				"charmed",
 				"incapacitated",
 				"prone"
-			]
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Gearbox",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 5,
+			"_copy": {
+				"name": "Monodrone",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the monodrone",
+						"with": "Gearbox",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Unique Programming",
+							"entries": [
+								"Gearbox's unique programming allows the modron to function as an {@item Orb of Direction|XGE} and an {@item Orb of Time|XGE}, to cast the {@spell light} cantrip at will, and to grant other characters advantage on Dexterity checks made with thieves' tools and on ability checks made to identify or operate mechanical or laboratory equipment."
+							]
+						}
+					}
+				}
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Gearbox can cast the {@spell light} cantrip at will."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}"
+							]
+						}
+					},
+					"hidden": [
+						"spells"
+					]
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Gloine Nathair-Nathair",
 			"isNpc": true,
-			"source": "IMR",
+			"source": "LLK",
 			"page": 23,
 			"_copy": {
 				"name": "Medusa",
@@ -432,7 +594,9 @@
 			"conditionInflict": [
 				"petrified",
 				"restrained"
-			]
+			],
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Mary Greymalkin",
@@ -580,7 +744,73 @@
 			"conditionInflictSpell": [
 				"charmed",
 				"incapacitated"
-			]
+			],
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Monastery of the Distressed Body Grand Master",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "Bone Devil",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "devil",
+						"with": "Grand Master"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"name": "Vorpal Claws",
+								"entries": [
+									"Shards of a {@item vorpal sword} once broken against the devil replace its claws. A successful {@dc 12} Intelligence ({@skill Arcana}) or Wisdom ({@skill Perception}) check identifies them as such. When the devil rolls a 20 on an attack roll with a claw, the target is decapitated. (At your option, the attack can instead deal an extra {@damage 6d8} slashing damage.) A target is immune to this effect if it is immune to slashing damage, has legendary actions, doesn't have or need a head, or if you decide that the target is too large for its head to be cut off by the devil's claws. If removed, the shards lose their magical powers."
+								]
+							},
+							{
+								"name": "Teleportation Bracelets",
+								"entries": [
+									"Local teleportation-field bracelets encircle the devil's arms and tail. These devices allow the Grand Master to make its claw and sting attacks remotely, though still on the devil's turn and using its actions."
+								]
+							}
+						]
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Monastery of the Distressed Body Monk",
+			"source": "LLK",
+			"page": 12,
+			"_copy": {
+				"name": "Cultist",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "cultist",
+						"with": "monk"
+					},
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Scimitar",
+						"items": {
+							"name": "Hooked Polearm",
+							"entries": [
+								"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage. If the target is a Medium or smaller creature, it is {@condition grappled} (escape {@dc 10}). Until this grapple ends, the monk cannot use its polearm on another target."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Ooze-Folk",
@@ -673,7 +903,46 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
+		},
+		{
+			"name": "West Wind",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "LLK",
+			"page": 14,
+			"_copy": {
+				"name": "Martial Arts Adept",
+				"source": "VGM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the adept",
+						"with": "West Wind",
+						"flags": "i"
+					},
+					"trait": {
+						"mode": "prependArr",
+						"items": {
+							"name": "Special Equipment",
+							"entries": [
+								"West Wind is armed with a longsword that is a {@item blade of the medusa|LLK}."
+							]
+						}
+					},
+					"action": {
+						"mode": "appendArr",
+						"items": {
+							"name": "Blade of the Medusa",
+							"entries": [
+								"{@atk mw,rw} {@hit 5} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) piercing damage. If West Wind rolls a 20 on the attack roll, the target must succeed on a {@dc 15} Constitution saving throw or suffer the effects of a {@spell flesh to stone} spell."
+							]
+						}
+					}
+				}
+			},
+			"hasToken": true
 		}
 	]
 }

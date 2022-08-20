@@ -22,6 +22,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -132,6 +135,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -491,6 +497,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "SjA"
 				}
 			],
 			"size": [
@@ -811,7 +823,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -885,6 +897,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -1103,6 +1118,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -1295,7 +1313,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -1596,7 +1614,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -1688,6 +1706,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -1919,7 +1940,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2215,7 +2236,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2289,6 +2310,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -2529,7 +2553,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -2810,7 +2834,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -3098,7 +3122,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -3400,7 +3424,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -3691,7 +3715,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -3813,6 +3837,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -3949,6 +3976,9 @@
 				},
 				{
 					"source": "WDH"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -4234,7 +4264,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -4504,7 +4534,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -4586,6 +4616,9 @@
 			"otherSources": [
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -4812,7 +4845,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -5124,7 +5157,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5424,7 +5457,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -5731,7 +5764,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -6009,7 +6042,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -6290,7 +6323,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -6584,7 +6617,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -6863,7 +6896,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -7373,6 +7406,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -7954,6 +7990,12 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -8022,6 +8064,10 @@
 					"name": "Spellcasting",
 					"headerEntries": [
 						"The archmage is an 18th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). The archmage can cast {@spell disguise self} and {@spell invisibility} at will and has the following wizard spells prepared:"
+					],
+					"will": [
+						"{@spell disguise self}",
+						"{@spell invisibility}"
 					],
 					"spells": {
 						"0": {
@@ -8099,17 +8145,13 @@
 							]
 						}
 					},
-					"will": [
-						"{@spell disguise self}",
-						"{@spell invisibility}"
-					],
-					"hidden": [
-						"will"
-					],
 					"footerEntries": [
 						"*The archmage casts these spells on itself before combat."
 					],
-					"ability": "int"
+					"ability": "int",
+					"hidden": [
+						"will"
+					]
 				}
 			],
 			"trait": [
@@ -8246,6 +8288,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -9172,6 +9217,15 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -9325,6 +9379,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -9474,6 +9531,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -10354,6 +10414,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -10500,6 +10563,12 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -11344,7 +11413,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -11416,6 +11485,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -11877,7 +11949,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -12055,6 +12127,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -12792,7 +12865,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -13013,7 +13086,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -13477,6 +13550,12 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -14207,6 +14286,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -14807,6 +14889,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -15271,6 +15354,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -15426,6 +15512,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -15768,6 +15857,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -16095,7 +16190,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -16445,6 +16540,12 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -16702,6 +16803,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -16914,6 +17021,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -17225,7 +17335,7 @@
 							"{@spell tongues}"
 						],
 						"1e": [
-							"{@spell conjure elemental} (earth elemental only)",
+							"{@spell conjure elemental} ({@creature earth elemental} only)",
 							"{@spell gaseous form}",
 							"{@spell invisibility}",
 							"{@spell phantasmal killer}",
@@ -17516,6 +17626,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -18494,6 +18607,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -18686,6 +18802,9 @@
 			"damageTagsLegendary": [
 				"N"
 			],
+			"miscTags": [
+				"HPR"
+			],
 			"conditionInflict": [
 				"blinded",
 				"frightened"
@@ -18737,6 +18856,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -18915,6 +19037,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -19015,6 +19140,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -19125,6 +19253,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -19394,6 +19525,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -19604,6 +19738,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -21115,6 +21252,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -21277,6 +21417,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -21762,10 +21905,10 @@
 					"will": [
 						"{@spell sleep}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -22099,6 +22242,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -22162,7 +22308,7 @@
 							"{@spell tongues}"
 						],
 						"1e": [
-							"{@spell conjure elemental} (fire elemental only)",
+							"{@spell conjure elemental} ({@creature fire elemental} only)",
 							"{@spell gaseous form}",
 							"{@spell invisibility}",
 							"{@spell major image}",
@@ -23092,6 +23238,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -24488,6 +24637,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -24628,6 +24780,9 @@
 				},
 				{
 					"source": "ToA"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -24788,6 +24943,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -25150,6 +25308,9 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -25512,6 +25673,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -26014,6 +26178,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -26568,6 +26735,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -26764,6 +26937,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -26945,6 +27121,9 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -27542,6 +27721,9 @@
 				},
 				{
 					"source": "SLW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -28261,6 +28443,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -28884,6 +29069,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -28974,6 +29162,9 @@
 			"otherSources": [
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -29082,6 +29273,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -29879,6 +30073,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -29982,6 +30179,9 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -30098,6 +30298,12 @@
 			"otherSources": [
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -31795,7 +32001,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -31858,6 +32064,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -32645,7 +32854,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -32714,6 +32923,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -33612,6 +33824,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -33872,6 +34087,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -34153,6 +34374,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -34746,6 +34970,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -34993,6 +35220,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -36082,6 +36312,9 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -36481,6 +36714,12 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -36942,10 +37181,10 @@
 					"will": [
 						"{@spell fog cloud}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -37374,6 +37613,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -37957,6 +38197,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -38102,6 +38345,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -38364,6 +38610,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -40178,6 +40427,9 @@
 			"otherSources": [
 				{
 					"source": "ToA"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -40551,6 +40803,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -40922,6 +41177,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -41115,6 +41376,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "SjA"
 				}
 			],
 			"size": [
@@ -41173,10 +41437,10 @@
 					"will": [
 						"{@spell heat metal}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -41612,6 +41876,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -41743,6 +42010,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -41815,7 +42085,7 @@
 							"{@spell water walk}"
 						],
 						"1e": [
-							"{@spell conjure elemental} (water elemental only)",
+							"{@spell conjure elemental} ({@creature water elemental} only)",
 							"{@spell control water}",
 							"{@spell gaseous form}",
 							"{@spell invisibility}",
@@ -42431,6 +42701,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -43049,6 +43322,12 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -43834,6 +44113,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -45182,6 +45464,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -45418,6 +45703,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflictSpell": [
@@ -45678,6 +45964,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -45797,6 +46086,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -46150,6 +46442,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -46422,6 +46717,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "SjA"
 				}
 			],
 			"size": [
@@ -46537,6 +46835,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -46653,6 +46954,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -47449,6 +47753,9 @@
 				},
 				{
 					"source": "IMR"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -47923,6 +48230,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -48161,6 +48471,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -48858,6 +49171,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -49598,6 +49914,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -49994,6 +50313,12 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -50249,6 +50574,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -51372,7 +51700,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -51571,6 +51899,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -51680,6 +52011,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -51804,6 +52138,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -52072,6 +52409,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -52285,6 +52625,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -52674,6 +53017,9 @@
 				},
 				{
 					"source": "CoS"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -52917,6 +53263,9 @@
 				},
 				{
 					"source": "GoS"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -53246,6 +53595,9 @@
 				},
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -53801,6 +54153,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -53944,6 +54299,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -54303,6 +54661,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "SjA"
 				}
 			],
 			"size": [
@@ -54460,6 +54821,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -54629,6 +54993,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -55149,7 +55516,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -55249,6 +55616,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -55510,10 +55880,10 @@
 					"will": [
 						"{@spell dancing lights}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -55605,6 +55975,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -55840,6 +56213,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "SjA"
 				}
 			],
 			"size": [
@@ -56048,6 +56424,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -56162,6 +56541,9 @@
 			"damageTags": [
 				"N",
 				"O"
+			],
+			"miscTags": [
+				"HPR"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -56445,6 +56827,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -56795,6 +57180,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -56972,10 +57360,10 @@
 					"will": [
 						"{@spell blur}"
 					],
+					"ability": "cha",
 					"hidden": [
 						"will"
-					],
-					"ability": "cha"
+					]
 				}
 			],
 			"trait": [
@@ -57379,6 +57767,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -57523,6 +57914,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -57863,6 +58257,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -58236,6 +58631,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -58361,6 +58759,9 @@
 				},
 				{
 					"source": "MOT"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -58480,6 +58881,9 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -59086,6 +59490,9 @@
 				},
 				{
 					"source": "TCE"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -59286,6 +59693,14 @@
 			"name": "Thri-kreen",
 			"source": "MM",
 			"page": 288,
+			"otherSources": [
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -59485,7 +59900,6 @@
 					},
 					"spellcasting": [
 						{
-							"type": "spellcasting",
 							"name": "Innate Spellcasting (Psionics)",
 							"headerEntries": [
 								"The thri-kreen's innate spellcasting ability is Wisdom. The thri-kreen can innately cast the following spells, requiring no components:"
@@ -59563,6 +59977,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -59822,6 +60242,12 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -60591,24 +61017,9 @@
 						}
 					],
 					"_version": {
-						"name": "Toll (Loathsome Limbs)",
+						"name": "Troll (Loathsome Limbs)",
 						"addHeadersAs": "trait"
 					}
-				},
-				{
-					"type": "inset",
-					"name": "Four-Armed Troll",
-					"source": "HotDQ",
-					"entries": [
-						"Sometimes when a troll loses a limb, it regenerates two limbs to replace the one it lost. This can result in trolls with multiple arms. A four-armed troll uses the {@creature troll} stat block, except that it is a challenge rating 6 monster (2,300 XP) and has the following action instead of the troll's normal Multiattack action:",
-						{
-							"type": "entries",
-							"name": "Multiattack",
-							"entries": [
-								"The troll attacks five times, once with its bite and four times with its claws. If two or more claws hit the same target, the troll rends the target, dealing an extra {@dice 2d6} slashing damage."
-							]
-						}
-					]
 				}
 			],
 			"environment": [
@@ -60648,21 +61059,102 @@
 			"hasFluffImages": true,
 			"_versions": [
 				{
-					"name": "Four-Armed Troll",
-					"source": "HotDQ",
+					"name": "Troll (Loathsome Limb; Severed Arm)",
+					"source": "MM",
 					"_mod": {
-						"action": {
-							"mode": "replaceArr",
-							"replace": "Multiattack",
-							"items": {
-								"name": "Multiattack",
-								"entries": [
-									"The troll attacks five times, once with its bite and four times with its claws. If two or more claws hit the same target, the troll rends the target, dealing an extra {@dice 2d6} slashing damage."
-								]
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": "Keen Smell"
 							}
-						}
+						]
 					},
-					"cr": "6",
+					"size": "T",
+					"ac": [
+						{
+							"ac": 13,
+							"from": [
+								"natural armor"
+							]
+						}
+					],
+					"hp": {
+						"special": "10"
+					},
+					"speed": {
+						"walk": 5
+					},
+					"skill": null,
+					"senses": null,
+					"languages": null,
+					"action": [
+						{
+							"name": "Claw",
+							"entries": [
+								"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) slashing damage. This attack is made with disadvantage unless the troll can see the arm and its target."
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Troll (Loathsome Limb; Severed Head)",
+					"source": "MM",
+					"size": "T",
+					"ac": [
+						{
+							"ac": 13,
+							"from": [
+								"natural armor"
+							]
+						}
+					],
+					"hp": {
+						"special": "10"
+					},
+					"speed": {
+						"walk": 0
+					},
+					"action": [
+						{
+							"name": "Bite",
+							"entries": [
+								"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+							]
+						}
+					],
+					"variant": null
+				},
+				{
+					"name": "Troll (Loathsome Limb; Severed Leg)",
+					"source": "MM",
+					"_mod": {
+						"trait": [
+							{
+								"mode": "removeArr",
+								"names": "Keen Smell"
+							}
+						]
+					},
+					"size": "T",
+					"ac": [
+						{
+							"ac": 13,
+							"from": [
+								"natural armor"
+							]
+						}
+					],
+					"hp": {
+						"special": "10"
+					},
+					"speed": {
+						"walk": 5
+					},
+					"skill": null,
+					"senses": null,
+					"languages": null,
+					"action": null,
 					"variant": null
 				}
 			]
@@ -60897,6 +61389,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -61129,6 +61624,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -61677,6 +62175,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -61855,6 +62354,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -62126,6 +62626,7 @@
 				"CW"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -62351,6 +62852,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -62425,6 +62927,15 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "SjA"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -63389,6 +63900,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -63545,6 +64059,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -64254,6 +64771,9 @@
 				},
 				{
 					"source": "EGW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -64752,7 +65272,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -64969,6 +65489,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RNG",
 				"RW"
@@ -65021,6 +65542,12 @@
 				},
 				{
 					"source": "CRCotN"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -65704,6 +66231,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -65823,6 +66353,7 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -65859,6 +66390,9 @@
 				},
 				{
 					"source": "CM"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [
@@ -66101,6 +66635,9 @@
 				},
 				{
 					"source": "IDRotF"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -66616,7 +67153,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -66835,7 +67372,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -67073,7 +67610,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -67327,7 +67864,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -67560,7 +68097,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -67802,7 +68339,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -68035,7 +68572,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -68109,6 +68646,12 @@
 				},
 				{
 					"source": "WDMM"
+				},
+				{
+					"source": "JttRC"
+				},
+				{
+					"source": "LoX"
 				}
 			],
 			"size": [
@@ -68265,7 +68808,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -68492,7 +69035,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -68817,7 +69360,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										}
 									]
@@ -69043,7 +69586,7 @@
 											"type": "item",
 											"name": "Special Senses",
 											"entries": [
-												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense}."
+												"Most dragons have {@sense blindsight} and {@sense darkvision}. You might upgrade {@sense blindsight} to {@sense truesight}, or you could give a dragon with a burrowing speed {@sense tremorsense|MM}."
 											]
 										},
 										{
@@ -70103,6 +70646,9 @@
 				},
 				{
 					"source": "WBtW"
+				},
+				{
+					"source": "JttRC"
 				}
 			],
 			"size": [

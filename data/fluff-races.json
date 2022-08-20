@@ -407,11 +407,85 @@
 		},
 		{
 			"name": "Astral Elf",
+			"source": "AAG",
+			"entries": [
+				"Long ago, groups of elves ventured from the Feywild to the Astral Plane to be closer to their gods. Life in the Silver Void has imbued their souls with a spark of divine light. That light manifests as a starry gleam in an astral elf's eyes.",
+				"Because nothing ages on the Astral Plane, astral elves who inhabit that plane can be very old, and their longevity gives them an unusual perspective on the passage of time. Some are prone to melancholy, while others might display an absence of feeling. Many look for creative ways to occupy themselves. Whether they choose to live in quiet contemplation or strike out to explore the reaches of the multiverse, astral elves tend to see things through the lens of time as having little or no meaning to them. Astral elves who don't dwell on the Astral Plane can live to be more than 750 years old."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/AAG/Astral Elf.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Astral Elf",
 			"source": "UA2021TravelersOfTheMultiverse",
 			"entries": [
 				"Long ago, groups of elves ventured from the Feywild to the Astral Plane to be closer to their gods. Life in the Silver Void has imbued their souls with a spark of divine light. That light manifests as a starry gleam in an astral elf's eyes.",
 				"Because nothing ages in the Astral Plane, astral elves from that plane are thousands of years old, and their longevity gives them an unusual perspective on time. Some are prone to melancholy, while others display an absence of feeling. Many look for creative ways to occupy themselves. Whether they choose to live in quiet contemplation or strike out to explore the reaches of the multiverse, they tend to see things through the lens of time as having little or no meaning to them.",
 				"Astral elves who don't dwell on the Astral Plane can live to be over 750 years old."
+			]
+		},
+		{
+			"name": "Autognome",
+			"source": "AAG",
+			"entries": [
+				"Autognomes are mechanical beings built by rock gnomes. Sometimes, because of a malfunction or a unique circumstance, an autognome becomes separated from its creator and strikes out on its own.",
+				"An autognome bears a resemblance to its creator, and most autognomes are programmed to speak and understand Gnomish. The internal components used in an autognome's manufacture can vary wildly; one autognome might have an actual beating heart in its chest cavity, while another might be powered by stardust or intricate clockwork gears.",
+				"Roll on the Autognome History table or choose an entry that you like to identify what event set you on the path to adventure. If nothing on the table appeals to you, work with your DM to create an origin story for your character.",
+				"Like gnomes, autognomes can live for centuries, typically up to 500 years.",
+				{
+					"type": "table",
+					"caption": "Autognome History",
+					"colLabels": [
+						"d6",
+						"Story"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1",
+							"Your creator gave you autonomy and urged you to follow your dreams."
+						],
+						[
+							"2",
+							"Your creator died, leaving you to fend for yourself."
+						],
+						[
+							"3",
+							"A glitch caused you to forget your original programming. You don't remember who made you or where you came from."
+						],
+						[
+							"4",
+							"You didn't like how you were being treated by your creator, so you ran away from home."
+						],
+						[
+							"5",
+							"You were built to complete a special mission."
+						],
+						[
+							"6",
+							"You felt trapped in the role for which you were built and abandoned your creator, determined to find a greater purpose."
+						]
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/AAG/Autognome.webp"
+					}
+				}
 			]
 		},
 		{
@@ -477,7 +551,7 @@
 				{
 					"type": "entries",
 					"entries": [
-						"Aven have humanlike bodies, arms, and legs, along with birdlike wings and heads. Two distinct varieties of aven are found in Naktamun. One has the head of a hawk or similar bird of prey, with short wings allowing fast flight. The other variety has the head of an ibis atop a long neck, with wide, angular wings better suited to soaring. All aven have lean bodies with feathers ex-tending from their heads down to their shoulders.",
+						"Aven have humanlike bodies, arms, and legs, along with birdlike wings and heads. Two distinct varieties of aven are found in Naktamun. One has the head of a hawk or similar bird of prey, with short wings allowing fast flight. The other variety has the head of an ibis atop a long neck, with wide, angular wings better suited to soaring. All aven have lean bodies with feathers extending from their heads down to their shoulders.",
 						"Aven delight in flying above their foes, using their superior mobility to confound and outpace their opponents. They love soaring through the sky as well, though the Hekma limits their altitude. Like all people of Naktamun, they are grateful for the Hekma's protective magic, of course. But they keenly anticipate the hour when the God-Pharaoh will return and dissolve the veil, letting them fly without limit in the afterlife.",
 						{
 							"type": "entries",
@@ -1602,7 +1676,7 @@
 			"name": "Eladrin",
 			"source": "MPMM",
 			"entries": [
-				"Eladrin are elves of the Feywild, a realm of perilous beauty and boundless magic. Using that magic, eladrin can step from one place to another ing the blink of an eye, and each eladrin resonates with emotions captured in the Feywild in the form of seasons\u2014affinities that affect the eladrin's mood and appearance. An eladrin's season can change, though some remain in one season forever. Choose your season or roll on the Eladrin Seasons table. Your Trance trait lets you change your season.",
+				"Eladrin are elves of the Feywild, a realm of perilous beauty and boundless magic. Using that magic, eladrin can step from one place to another in the blink of an eye, and each eladrin resonates with emotions captured in the Feywild in the form of seasons\u2014affinities that affect the eladrin's mood and appearance. An eladrin's season can change, though some remain in one season forever. Choose your season or roll on the Eladrin Seasons table. Your Trance trait lets you change your season.",
 				"Like other elves, eladrin can live to be over 750 years old.",
 				{
 					"type": "table",
@@ -2850,6 +2924,25 @@
 		},
 		{
 			"name": "Giff",
+			"source": "AAG",
+			"entries": [
+				"Giff are tall, broad-shouldered folk with hippo-like features. Some have smooth skin, while others have short bristles on their faces and the tops of their heads. As beings of impressive size and unforgettable appearance, giff are noticed wherever they go.",
+				"Most giff believe they originated on one world, but their home world is now the stuff of legend, because no living giff has seen it or knows where it is. The divine beings who created giff have likewise been forgotten. Their titanic petrified bodies drift on the Astral Sea, isolated and unrecognizable in their current forms.",
+				"Although they don't realize it, giff are drawn to the Astral Plane because, on a deep psychic level, they remain connected to their creator gods, who have just enough divine spark left in them to imbue giff with sparks of their own, which giff have learned to channel through their weapons. Most giff have no idea where this so-called astral spark comes from, but they feel its presence most strongly when they are in Wildspace or the Astral Sea.",
+				"Giff are split into two camps concerning how their name is pronounced. Half of them say it with a hard g, half with a soft g. Disagreements over the correct pronunciation often blossom into hard feelings, loud arguments, and head-butting contests, but they rarely escalate beyond that."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/AAG/Giff.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Giff",
 			"source": "UA2021TravelersOfTheMultiverse",
 			"entries": [
 				"Giff are tall, broad-shouldered folk with hippo-like features. Some have smooth skin, while others have short bristles on their faces and the tops of their heads. As beings of impressive size and unforgettable appearance, giff are noticed wherever they go.",
@@ -2962,6 +3055,52 @@
 						"type": "internal",
 						"path": "races/MPMM/Githzerai.png"
 					}
+				}
+			]
+		},
+		{
+			"name": "Glitchling",
+			"source": "UA2022WondersOfTheMultiverse",
+			"entries": [
+				"Created by forces of planar law, glitchlings are winged, human-like creatures made from a merger of magic and machine. These explorers seek to learn all they can about the multiverse and its creatures. Some glitchlings then carry what they learn back to lawful planes, like Mechanus, to inform the orderly working of the multiverse. Others become enamored with travel and the peoples they encounter, and they seek to make a life of their own among the planes.",
+				"Glitchlings begin their existences with rudimentary personalities. As they absorb information and experiences, their personalities grow, but many retain quirks associated with their lawful origins. You can roll or choose a quirk from the Orderly Quirk table or create your own.",
+				{
+					"type": "table",
+					"caption": "Orderly Quirk",
+					"colLabels": [
+						"d6",
+						"Quirk"
+					],
+					"colStyles": [
+						"col-1 text-center",
+						"col-11"
+					],
+					"rows": [
+						[
+							"1",
+							"I collect things, whether a specific kind of object or things made of a particular material."
+						],
+						[
+							"2",
+							"We think of ourselves as being a part of the collective, lawful forces of the multiverse and don't refer to ourselves as a singular being."
+						],
+						[
+							"3",
+							"I seek out new experiences so I can better understand the freedom of my existence."
+						],
+						[
+							"4",
+							"I preface things I say with a short description, such as: \"observation,\" \"interjection,\" or \"query.\""
+						],
+						[
+							"5",
+							"I plan elaborate responses to every contingency, ready to execute at an instant's notice."
+						],
+						[
+							"6",
+							"I investigate people's intentions behind their actions, trying to solve the equation that guides them."
+						]
+					]
 				}
 			]
 		},
@@ -3503,6 +3642,25 @@
 					"href": {
 						"type": "internal",
 						"path": "races/VGM/Goliath.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Hadozee",
+			"source": "AAG",
+			"entries": [
+				"The first hadozees were timid mammals no bigger than housecats. Hunted by larger natural predators, the hadozees took to the trees and evolved wing-like flaps that enabled them to glide from branch to branch.",
+				"Several hundred years ago, a wizard visited Yazir, the hadozee home world, with a small fleet of spelljamming ships. Under the wizard's direction, apprentices laid magic traps and captured dozens of hadozees. The wizard fed the captives an experimental elixir that enlarged them and turned them into sapient, bipedal beings. The elixir had the side effect of intensifying the hadozees' panic response, making them more resilient when harmed. The wizard's plan was to create an army of enhanced hadozee warriors for sale to the highest bidder. But instead, the wizard's apprentices grew fond of the hadozees and helped them escape. The apprentices and the hadozees were forced to kill the wizard, after which they fled, taking with them all remaining vials of the wizard's experimental elixir.",
+				"With the help of their liberators, the hadozees returned to their home world and used the elixir to create more of their kind. In time, all hadozee newborns came to possess the traits of the enhanced hadozees. Then, centuries ago, hadozees took to the stars, leaving Yazir's fearsome predators behind.",
+				"In addition to being natural climbers, hadozees have feet that are as dexterous as their hands, even to the extent of having opposable thumbs. Membranes of skin hang loosely from their arms and legs. When stretched taut, these membranes enable hadozees to glide. Hadozees wrap these wings around themselves to keep warm."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/AAG/Hadozee.webp"
 					}
 				}
 			]
@@ -5706,6 +5864,24 @@
 		},
 		{
 			"name": "Plasmoid",
+			"source": "AAG",
+			"entries": [
+				"Plasmoids are amorphous beings with no typical shape. In the presence of other folk, they often adopt a similar shape, but there's little chance of mistaking a plasmoid for anything else. They consume food by osmosis, the way an amoeba does, and excrete waste through tiny pores. They breathe by absorbing oxygen through another set of pores, and their limbs are strong and flexible enough to grasp and manipulate weapons and tools. Although most plasmoids are translucent gray, they can alter their color and translucence by absorbing dyes through their pores.",
+				"Plasmoids don't have internal organs of the usual sort. Their bodies are composed of cells, fibers, plasma-like ooze, and clusters of nerves. These nerves enable a plasmoid to detect light, heat, texture, sound, pain, and vibrations. Plasmoids can stiffen the outer layers of their bodies to maintain a humanlike shape, so they can wear clothing and accessories. They speak by forcing air out of tubular cavities that constrict to produce sound.",
+				"When plasmoids sleep, they lose their rigidity and spread out and are thus sometimes mistaken for a rock or some other feature of the environment."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/AAG/Plasmoid.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Plasmoid",
 			"source": "UA2021TravelersOfTheMultiverse",
 			"entries": [
 				"Plasmoids are amorphous beings with no typical shape. In the presence of other folk, they often adopt a similar form, but there's little chance of mistaking a plasmoid for anything else. They consume food by osmosis, the way an amoeba does, and excrete waste through tiny pores. They breathe by absorbing oxygen through another set of pores, and their limbs are strong and flexible enough to grasp and manipulate weapons and tools. Although most plasmoids are translucent gray, they can alter their color and translucence by absorbing dyes through their pores.",
@@ -6680,6 +6856,24 @@
 					"href": {
 						"type": "internal",
 						"path": "races/VGM/Tabaxi.png"
+					}
+				}
+			]
+		},
+		{
+			"name": "Thri-kreen",
+			"source": "AAG",
+			"entries": [
+				"Thri-kreen have insectile features and two pairs of arms. Their bodies are encased in protective chitin. They can alter the coloration of this carapace to blend in with their natural surroundings.",
+				"Although thri-kreen don't sleep, they do require periods of inactivity to revitalize themselves. During these periods, they are fully aware of what's happening around them.",
+				"Thri-kreen speak by clacking their mandibles and waving their antennae, indicating to other thri-kreen what they are thinking and feeling. Other creatures find this method of communication difficult to interpret and impossible to duplicate. To interact with other folk, thri-kreen rely on a form of telepathy."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "races/AAG/Thri-kreen.webp"
 					}
 				}
 			]

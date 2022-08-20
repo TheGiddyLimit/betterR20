@@ -3468,7 +3468,8 @@
 				"AB",
 				"C",
 				"DR"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Pirate Bosun",
@@ -5099,7 +5100,8 @@
 			"languageTags": [
 				"C",
 				"DR"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Shell Shark",
@@ -5918,7 +5920,8 @@
 			"damageTags": [
 				"I",
 				"P"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

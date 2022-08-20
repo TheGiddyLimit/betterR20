@@ -527,6 +527,50 @@
 			]
 		},
 		{
+			"name": "Agent Of Order",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 6,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"scion of the outer planes|ua2022wondersofthemultiverse|scion of the outer planes (lawful outer plane)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You can channel cosmic forces of order that lock the multiverse into patterns. Your actions are your own to choose, but these forces grant you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Stasis Strike",
+							"entries": [
+								"Once per turn when you damage a creature you can see within 60 feet of yourself, you can deal an extra {@damage 1d8} force damage to the target, and it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + the modifier of the ability score increased by this feat) or be {@condition restrained} by spectral bindings until the start of your next turn. These bindings manifest as chains, gears, encasing stone, or some other symbol of stasis. You can use this benefit a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Alchemist",
 			"source": "UAFeats",
 			"page": 4,
@@ -547,7 +591,7 @@
 					"items": [
 						"You gain proficiency with {@item alchemist's supplies|phb}. If you are already proficient with them, you add double your proficiency bonus to checks you make with them.",
 						"As an action, you can identify one potion within 5 feet of you, as if you had tasted it. You must see the liquid for this benefit to work.",
-						"Over the course of any short rest, you can temporarily improve the potency of one potion of healing of any rarity. To use this benefit, you must have {@item alchemist's supplies|phb} with you, and the potion must be within reach. If the potion is drunk no more than 1 hour after the short rest ends, the creature drinking the potion can forgo the potion's die roll and regains the maximum number of hit points that the potion can restore."
+						"Over the course of any short rest, you can temporarily improve the potency of one {@item potion of healing} of any rarity. To use this benefit, you must have {@item alchemist's supplies|phb} with you, and the potion must be within reach. If the potion is drunk no more than 1 hour after the short rest ends, the creature drinking the potion can forgo the potion's die roll and regains the maximum number of hit points that the potion can restore."
 					]
 				}
 			]
@@ -631,7 +675,7 @@
 					"type": "list",
 					"items": [
 						"You gain proficiency in the {@skill Arcana} skill. If you are already proficient in the skill, you add double your proficiency bonus to checks you make with it.",
-						"You learn the {@spell prestidigitation} and {@spell detect magic} spells. You can cast detect magic once without expending a spell slot, and you regain the ability to do so when you finish a long rest."
+						"You learn the {@spell prestidigitation} and {@spell detect magic} spells. You can cast {@spell detect magic} once without expending a spell slot, and you regain the ability to do so when you finish a long rest."
 					]
 				}
 			]
@@ -747,6 +791,50 @@
 						"When you are {@condition prone}, standing up uses only 5 feet of your movement.",
 						"Climbing doesn't cost you extra movement.",
 						"You can make a running long jump or a running high jump after moving only 5 feet on foot, rather than 10 feet."
+					]
+				}
+			]
+		},
+		{
+			"name": "Baleful Scion",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 6,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"scion of the outer planes|ua2022wondersofthemultiverse|scion of the outer planes (evil outer plane)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You can channel cosmic forces of evil that cause pain but invigorate your being. You can choose your own actions despite this malign connection. You gain the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Life-Draining Grasp",
+							"entries": [
+								"Once per turn, when you hit a creature with a melee weapon attack, you can also deal necrotic damage to it. The damage equals {@dice 1d6} + your proficiency bonus, and you regain a number of hit points equal to this necrotic damage dealt. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -893,6 +981,58 @@
 			]
 		},
 		{
+			"name": "Cartomancer",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 6,
+			"prerequisite": [
+				{
+					"level": {
+						"level": 4
+					},
+					"other": "Sorcerer, Warlock, or Wizard Class"
+				}
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"_": [
+							"prestidigitation#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You have learned to channel your magic through a deck of playing cards, granting you these benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Card Focus",
+							"entries": [
+								"You can use a deck of cards as your spellcasting focus. When you use the deck as a focus to cast a spell that deals damage, roll a {@dice d4}. You gain a bonus to one damage roll of the spell equal to the number rolled. This bonus applies to one creature of your choice that you can see damaged by the spell; you can use this benefit a number of times equal to your proficiency bonus, and you regain all expended uses of it when you finish a long rest."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Card Tricks",
+							"entries": [
+								"You learn the {@spell prestidigitation} cantrip and can use it to create illusions that duplicate the effects of stage magic. When you use prestidigitation in this way, you can conceal the verbal and somatic components of the spell as mundane conversation and card-handling."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Hidden Ace",
+							"entries": [
+								"When you finish a long rest, you can choose one spell you know and imbue it into a card; the chosen spell must have a casting time of 1 action, and its level must be less than or equal to your proficiency bonus. While the card is imbued with the spell, you can use your bonus action to flourish the card and cast the spell within. The card then immediately loses its magic."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Charger",
 			"source": "PHB",
 			"page": 165,
@@ -963,6 +1103,81 @@
 						"With one hour of work or when you finish a long rest, you can cook a number of treats equal to your proficiency bonus. These special treats last 8 hours after being made. A creature can use a bonus action to eat one of those treats to gain temporary hit points equal to your proficiency bonus."
 					]
 				}
+			]
+		},
+		{
+			"name": "Cohort Of Chaos",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 6,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"scion of the outer planes|ua2022wondersofthemultiverse|scion of the outer planes (chaotic outer plane)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You can channel the cosmic forces of chaos that drive the multiverse toward both freedom and disarray. Your actions are still yours to choose, but you gain these benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Chaotic Flare",
+							"entries": [
+								"When you roll a 1 or a 20 on an attack roll or a saving throw, the magic of chaos flows through you. Roll on the Chaotic Flares table to determine what happens. A flare lasts until the end of your next turn, and a new flare can't occur until after the first flare ends.",
+								{
+									"type": "table",
+									"caption": "Chaotic Flares",
+									"colLabels": [
+										"d4",
+										"Flare"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											"1",
+											"{@b Disruption Field.} Waves of energy ripple in a 10-foot sphere centered on you. Every creature other than you that starts its turn in that area, or that moves into that area for the first time on a turn, takes {@dice 1d8} force damage."
+										],
+										[
+											"2",
+											"{@b Battle Fury.} A creature of your choice that you can see is filled with reckless fury. The creature has advantage on attack rolls and disadvantage on ability checks."
+										],
+										[
+											"3",
+											"{@b Unbound.} When you move, you can use some or all of your walking speed to teleport once, along with any equipment you're wearing or carrying, up to the distance used to an unoccupied space that you can see."
+										],
+										[
+											"4",
+											"{@b Wailing Winds.} Howling winds swirl around you in a 60-foot radius. You and any creature in that radius has disadvantage on Wisdom saving throws."
+										]
+									]
+								}
+							]
+						}
+					]
+				},
+				"You can also forcibly release a chaotic flare as a bonus action, rolling on the table as normal to determine the effects. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 			]
 		},
 		{
@@ -1177,7 +1392,7 @@
 							"type": "item",
 							"name": "Divine Omens",
 							"entries": [
-								"You can cast the augury and commune spell without a spell slot, and you must finish {@dice 1d4} long rests before you can cast it in this way again. You can also cast the spell using spell slots you have of the appropriate level. The spell's spellcasting ability is the one chosen when you gained the Divinely Favored feat."
+								"You can cast the {@spell augury} and {@spell commune} spell without a spell slot, and you must finish {@dice 1d4} long rests before you can cast it in this way again. You can also cast the spell using spell slots you have of the appropriate level. The spell's spellcasting ability is the one chosen when you gained the Divinely Favored feat."
 							]
 						}
 					]
@@ -2691,6 +2906,50 @@
 			]
 		},
 		{
+			"name": "Elemental Touched",
+			"source": "UA2022GiantOptions",
+			"page": 4,
+			"entries": [
+				"You've been exposed to the primordial magic of the Elemental Planes, granting you a measure of control over the natural world around you. You learn the either the druidcraft or {@spell thaumaturgy} cantrip, using Intelligence, Wisdom, or Charisma as the spellcasting ability (choose when you gain this feat).",
+				"Whenever you finish a long rest, you can choose which element you are attuned to: Air, Earth, Fire, or Water. Depending on your choice, you can use a bonus action to cause one of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Air",
+							"entries": [
+								"You gain a fly speed equal to your walking speed until the end of your turn. If you are airborne at the end of your turn after using this movement and aren't held aloft by other means, you fall."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Earth",
+							"entries": [
+								"You cause the ground within 30 feet of you to become {@quickref difficult terrain||3} for 1 minute or until you create this effect again. During that time, you can move across ground that is {@quickref difficult terrain||3} without spending extra movement."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Fire",
+							"entries": [
+								"You surround yourself in a cloud of ash and smoke. Until the end of your turn, your movement doesn't provoke opportunity attacks."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Water",
+							"entries": [
+								"You can create a forceful surge of water directed at a creature within 15 feet of you that you can see. The creature must succeed on a Strength saving throw (which it can choose to fail) against a DC equal to 8 + your spellcasting ability modifier + your proficiency bonus or be pushed up to 10 feet away from you. The water vanishes immediately after the creature succeeds or fails."
+							]
+						}
+					]
+				},
+				"You can create this effect a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
 			"name": "Elven Accuracy",
 			"source": "UAFeatsForRaces",
 			"page": 2,
@@ -2756,6 +3015,93 @@
 					"type": "list",
 					"items": [
 						"Whenever you have advantage on an attack roll using Dexterity, Intelligence, Wisdom, or Charisma, you can reroll one of the dice once."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ember of the Fire Giant",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"prerequisite": [
+				{
+					"level": 8
+				}
+			],
+			"resist": [
+				"fire"
+			],
+			"entries": [
+				"You've manifested the fiery combat emblematic of fire giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Born of Flame",
+							"entries": [
+								"You have resistance to fire damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Searing Ignition",
+							"entries": [
+								"When you take the {@action Attack} action on your turn, you can replace one of your attacks with a magical burst of flame. Each creature of your choice within 15 feet of you that can see you must make a Dexterity saving throw (DC equals 8 + your proficiency bonus + your Constitution modifier). On a failed save, a creature takes fire damage equal to {@dice 2d6} + your proficiency bonus and is {@condition blinded} until the start of your next turn; on a successful save, the creature takes half as much damage with no additional effects. You can use your Searing Ignition a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ember Of The Fire Giant",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 7,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|ua2022wondersofthemultiverse|strike of the giants (fire giant)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"resist": [
+				"fire"
+			],
+			"entries": [
+				"You've manifested the fiery combat emblematic of fire giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Born of Flame",
+							"entries": [
+								"You have resistance to fire damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Searing Ignition",
+							"entries": [
+								"When you take the {@action Attack} action on your turn, you can replace a single attack with a magical burst of flame. Each creature of your choice within 15 feet of you that can see you must make a Dexterity saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, a creature takes fire damage equal to {@dice 1d8} + your proficiency bonus, and it is {@condition blinded} until the start of your next turn. On a successful save, the creature takes half as much damage and isn't {@condition blinded}. You can use your Searing Ignition a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -3216,6 +3562,93 @@
 			]
 		},
 		{
+			"name": "Fury of the Frost Giant",
+			"source": "UA2022GiantOptions",
+			"page": 4,
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"resist": [
+				"cold"
+			],
+			"entries": [
+				"You've manifested the icy might emblematic of frost giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Born of Ice",
+							"entries": [
+								"You have resistance to cold damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Frigid Vengeance",
+							"entries": [
+								"When a creature hits you with an attack roll, you can use your reaction to retaliate with a burst of magical ire. The creature must succeed on a Wisdom saving throw (DC equals 8 + your proficiency bonus + your Constitution modifier) or be {@condition frightened} of you until the start of its next turn. You can use your reaction in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Fury Of The Frost Giant",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 7,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|ua2022wondersofthemultiverse|strike of the giants (frost giant)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"resist": [
+				"cold"
+			],
+			"entries": [
+				"You've manifested the icy might emblematic of frost giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Born of Ice",
+							"entries": [
+								"You have resistance to cold damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Frigid Retaliation",
+							"entries": [
+								"Immediately after a creature you can see within 30 feet of you hits you with an attack roll and deals damage, you can use your reaction to retaliate with a conjured blast of ice. The creature must make a Constitution saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, it takes {@damage 1d8} + your proficiency bonus cold damage, and its speed is halved until the end of its next turn. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Gift of the Chromatic Dragon",
 			"source": "FTD",
 			"page": 17,
@@ -3499,6 +3932,80 @@
 						"During the first round of any combat against your chosen foes, your attack rolls against any of them have advantage.",
 						"When any of your chosen foes makes an opportunity attack against you, it makes the attack roll with disadvantage.",
 						"Whenever you make an Intelligence ({@skill Arcana}, {@skill History}, {@skill Nature}, or {@skill Religion}) check to recall information about your chosen foes, you add double your proficiency bonus to the check, even if you're not normally proficient."
+					]
+				}
+			]
+		},
+		{
+			"name": "Guile of the Cloud Giant",
+			"source": "UA2022GiantOptions",
+			"page": 4,
+			"prerequisite": [
+				{
+					"level": 8
+				}
+			],
+			"entries": [
+				"You've manifested the airy speech and magic emblematic of cloud giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Misty Form",
+							"entries": [
+								"You can cast the {@spell blur} spell without using a spell slot or material components. When you cast the spell in this way, the spell doesn't require you to maintain concentration on it. Once you cast the spell in this way, you can't do so again until you finish a long rest. You can also cast this spell in the normal way using spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feature (choose when you gain this feat)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Silver Tongue",
+							"entries": [
+								"You gain proficiency in either the {@skill Deception} or {@skill Persuasion} skill. Your proficiency bonus is doubled for any ability check you make using this skill."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Guile Of The Cloud Giant",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 7,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|ua2022wondersofthemultiverse|strike of the giants (cloud giant)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"dex",
+							"con",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested the airy speech and magic emblematic of cloud giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cloudy Escape",
+							"entries": [
+								"When a creature you can see hits you with an attack roll, you can use your reaction to give yourself resistance to that attack's damage. You then teleport to an unoccupied space that you can see within 30 feet of yourself. You can use this reaction a number of times equal to half your proficiency bonus (rounded up), and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -4112,6 +4619,87 @@
 						"You always know which way is north.",
 						"You always know the number of hours left before the next sunrise or sunset.",
 						"You can accurately recall anything you have seen or heard within the past month."
+					]
+				}
+			]
+		},
+		{
+			"name": "Keenness of the Stone Giant",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"entries": [
+				"You've manifested the protection and spellcasting emblematic of stone giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Dreamer's Magic",
+							"entries": [
+								"You learn the {@spell detect thoughts} spell and one {@filter 1st-level spell|spells|level=1|school=A;D} of your choice. The 1st-level spell must be from the abjuration or the divination school of magic. You can cast each of these spells without expending a spell slot. Once you cast either of these spells in this way, you can't cast that spell in this way again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feature (choose when you gain this feat)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Mountain Sight",
+							"entries": [
+								"You gain {@sense darkvision} out to a range of 60 feet. If you already have {@sense darkvision} from another source, its range increases by 30 feet."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Keenness Of The Stone Giant",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 7,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|ua2022wondersofthemultiverse|strike of the giants (stone giant)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested the physical talents emblematic of stone giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Stone Throw",
+							"entries": [
+								"As a bonus action, you can touch a rock that can fit in the palm of your hand and imbue it with magic. While the rock is imbued with magic and you are wielding it, the rock is a magic ranged weapon with which you're proficient, and it has the thrown property with a normal range of 60 feet and a long range of 180 feet. On a hit, the rock deals {@damage 1d10} bludgeoning damage, and if the target is a creature, it must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat) or be knocked {@condition prone}. The magic remains in the rock until you hit with it or finish a long rest. You can imbue a number of rocks equal to your proficiency bonus with this bonus action, and you regain all expended uses when you finish a long rest."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cavernous Sight",
+							"entries": [
+								"You gain {@sense darkvision} out to a range of 60 feet. If you already have {@sense darkvision} from another source, its range increases by 60 feet."
+							]
+						}
 					]
 				}
 			]
@@ -5107,6 +5695,100 @@
 			]
 		},
 		{
+			"name": "Outlands Envoy",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 7,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"scion of the outer planes|ua2022wondersofthemultiverse"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"misty step",
+									"tongues"
+								]
+							}
+						}
+					},
+					"ability": "inherit"
+				}
+			],
+			"entries": [
+				"You have spent significant time in Sigil or elsewhere in the Outlands, the crossroads of the multiverse. Being steeped in converging planar energies grants you these benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Crossroads Emissary",
+							"entries": [
+								"You learn the {@spell misty step} and {@spell tongues} spells. You can cast each spell once using this feat without a spell slot, and you must finish a long rest before you can cast that spell in this way again. When you cast tongues using this feat, you require no material components. You can also cast these spells using spell slots you have of the appropriate level. The spell's spellcasting ability is the one chosen when you gained the Scion of the Outer Planes feat."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Outsized Might",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"entries": [
+				"You have absorbed primeval magic that allows you, despite your relatively small stature, to embody the might of titanic creatures. This grants you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Little but Mighty",
+							"entries": [
+								"You gain proficiency in either the {@skill Athletics} or {@skill Acrobatics} skill."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Powerful Build",
+							"entries": [
+								"You count as one size larger when determining your carrying capacity and the amount you can push, drag, or lift."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Stalwart",
+							"entries": [
+								"You have advantage on saving throws against being moved or knocked {@condition prone}."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Perceptive",
 			"source": "UAFeatsForSkills",
 			"page": 3,
@@ -5204,6 +5886,49 @@
 					"items": [
 						"Once per turn, when you hit a creature with an attack that deals piercing damage, you can reroll one of the attack's damage dice, and you must use the new roll.",
 						"When you score a critical hit that deals piercing damage to a creature, you can roll one additional damage die when determining the extra piercing damage the target takes."
+					]
+				}
+			]
+		},
+		{
+			"name": "Planar Wanderer",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 7,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"scion of the outer planes|ua2022wondersofthemultiverse"
+					]
+				}
+			],
+			"entries": [
+				"You can draw on the forces of the multiverse to survive cosmic extremes and to traverse its infinite realms. You gain these benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Planar Adaptation",
+							"entries": [
+								"When you finish a long rest, you gain resistance to either acid, cold, or fire damage (your choice) until you finish your next long rest."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Portal Cracker",
+							"entries": [
+								"Your experience with portals allows you to operate them without the proper portal key. As an action, you can concentrate on a portal you're aware of that is within 5 feet of you and make a DC 20 Wisdom ({@skill Survival}) check. On a failure, you take {@damage 3d8} force damage and you can't use this feature on that portal again until you finish a long rest. On a success, you can force the portal open or closed for 1 hour. For that duration, a portal closed in this way doesn't respond to its portal key unless a creature employing the key succeeds on a DC 20 Intelligence ({@skill Arcana}) check as an action."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Portal Sense",
+							"entries": [
+								"You know the direction to the last planar portal you used while you and the portal are on the same plane. Moreover, as an action, you can detect the location of any portals within 30 feet of you that aren't behind total cover. Once you detect a portal with this action, you can't use the action again until you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -5573,6 +6298,50 @@
 			]
 		},
 		{
+			"name": "Righteous Heritor",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 8,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"scion of the outer planes|ua2022wondersofthemultiverse|scion of the outer planes (good outer plane)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You can channel the cosmic forces of good that foster serenity and fellowship. You are still free to choose your own actions, but gain these benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Soothe Pain",
+							"entries": [
+								"When you or a creature you can see within 30 feet of you takes damage, you can use your reaction to dull its suffering and reduce the damage it takes by {@dice 1d10} + your proficiency bonus. You can use this benefit a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Ritual Caster",
 			"source": "PHB",
 			"page": 169,
@@ -5689,7 +6458,246 @@
 			"entries": [
 				"You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.",
 				"When you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: {@filter bard|spells|level=1|class=bard|components & miscellaneous=ritual}, {@filter cleric|spells|level=1|class=cleric|components & miscellaneous=ritual}, {@filter druid|spells|level=1|class=druid|components & miscellaneous=ritual}, {@filter sorcerer|spells|level=1|class=sorcerer|components & miscellaneous=ritual}, {@filter warlock|spells|level=1|class=warlock|components & miscellaneous=ritual}, or {@filter wizard|spells|level=1|class=wizard|components & miscellaneous=ritual}. You must choose your spells from that class's spell list, and the spells you choose must have the ritual tag. The class you choose also determines your spellcasting ability for these spells: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.",
-				"If you come across a spell in written form, such as a magical spell scroll or a wizard's spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell's level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it."
+				"If you come across a spell in written form, such as a magical {@item spell scroll} or a wizard's spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell's level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it."
+			]
+		},
+		{
+			"name": "Rune Carver Adept",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"rune carver apprentice|ua2022giantoptions"
+					]
+				}
+			],
+			"entries": [
+				"Your skill with the art of runecraft has increased.",
+				"Whenever you finish a long rest, you can now mark a number of objects equal to your proficiency bonus with a rune from the Rune Carver Apprentice feat. An object can have only one rune at a time, and you must inscribe a different rune on each object."
+			]
+		},
+		{
+			"name": "Rune Carver Adept",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 8,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"rune carver apprentice|ua2022wondersofthemultiverse"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex",
+							"con",
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					},
+					"hidden": true
+				}
+			],
+			"entries": [
+				"Your ability to draw out power from runes has grown.",
+				"Increase the ability score of the spellcasting ability chosen when you gained the Rune Carver Apprentice feat by 1, to a maximum of 20.",
+				"Whenever you cast a spell from the Rune Spells table, or a spell of a school of magic associated with the spell you marked on an object from your Rune Carver Apprentice feat, you can invoke runic power, granting you one of these benefits of your choice:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Battle Runes",
+							"entries": [
+								"Choose one creature you can see within 30 feet of yourself. Until the end of that creature's next turn, it has advantage on the next attack roll it makes."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Healing Runes",
+							"entries": [
+								"Choose one creature you can see within 30 feet of yourself. That creature gains temporary hit points equal to your level."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Runic Winds",
+							"entries": [
+								"Choose one creature you can see within 30 feet of yourself. Until the end of that creature's turn, its movement doesn't provoke opportunity attacks, and its walking speed increases by 10 feet."
+							]
+						}
+					]
+				},
+				"You can invoke runic power a number of times equal to your proficiency bonus, but no more than once per spell you cast. You regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "Rune Carver Apprentice",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"entries": [
+				"You've begun studying the art of runecraft, which allows you to temporarily mark your items and imbue them with magic.",
+				"Whenever you finish a long rest, you can mark one nonmagical weapon, armor, piece of clothing, or other object you can touch with a rune of your choice. You temporarily learn one 1st-level spell based on the rune you choose, as specified in the Rune Spells table, and you know the spell until you finish a long rest, when the rune fades.",
+				{
+					"type": "table",
+					"caption": "Rune Spells",
+					"colLabels": [
+						"Rune",
+						"Spell"
+					],
+					"colStyles": [
+						"col-2",
+						"col-10"
+					],
+					"rows": [
+						[
+							"Blood",
+							"{@spell False life}"
+						],
+						[
+							"Cloud",
+							"{@spell Fog cloud}"
+						],
+						[
+							"Death",
+							"{@spell Ray of sickness}"
+						],
+						[
+							"Dragon",
+							"{@spell Chromatic orb}"
+						],
+						[
+							"Enemy",
+							"{@spell Bane}"
+						],
+						[
+							"Fire",
+							"{@spell Burning hands}"
+						],
+						[
+							"Friend",
+							"{@spell Bless}"
+						],
+						[
+							"Frost",
+							"{@spell Armor of Agathys}"
+						],
+						[
+							"Hill",
+							"{@spell Goodberry}"
+						],
+						[
+							"Journey",
+							"{@spell Longstrider}"
+						],
+						[
+							"King",
+							"{@spell Command}"
+						],
+						[
+							"Light",
+							"{@spell Guiding bolt}"
+						],
+						[
+							"Life",
+							"{@spell Cure wounds}"
+						],
+						[
+							"Mountain",
+							"{@spell Jump}"
+						],
+						[
+							"Shield",
+							"{@spell Shield}"
+						],
+						[
+							"Stone",
+							"{@spell Sanctuary}"
+						],
+						[
+							"Storm",
+							"{@spell Thunderwave}"
+						],
+						[
+							"War",
+							"{@spell Heroism}"
+						],
+						[
+							"Wind",
+							"{@spell Feather fall}"
+						]
+					]
+				},
+				"While you are wearing or carrying the rune-marked object, you can cast the chosen spell associated with the rune once without using a spell slot or material components, and you can also cast the spell using any spell slots you have.",
+				"Your spellcasting ability for this feat is Intelligence, Wisdom, or Charisma (choose when you gain this feat)"
+			]
+		},
+		{
+			"name": "Rune Carver Apprentice",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 8,
+			"entries": [
+				"You've begun studying the art of runecraft.",
+				"You learn the comprehend languages spell. You can cast this spell without expending a spell slot, and you must finish a long rest before you can cast it in this way again. You can also cast this spell using any spell slots you have.",
+				"You know two runes of your choice from the Rune Spells table. Whenever you finish a long rest, you can mark one nonmagical weapon, armor, piece of clothing, or other object you touch with a rune you know. You temporarily learn one 1st-level spell based on the rune you inscribed, as specified in the Rune Spells table, and you know the spell until you finish a long rest, when the rune fades.",
+				{
+					"type": "table",
+					"caption": "Rune Spells",
+					"colLabels": [
+						"Rune",
+						"Spell"
+					],
+					"colStyles": [
+						"col-4",
+						"col-8"
+					],
+					"rows": [
+						[
+							"Death",
+							"{@spell Ray of sickness}"
+						],
+						[
+							"Dragon",
+							"{@spell Chromatic orb}"
+						],
+						[
+							"Enemy",
+							"{@spell Disguise self}"
+						],
+						[
+							"Friend",
+							"{@spell Speak with animals}"
+						],
+						[
+							"Journey",
+							"{@spell Longstrider}"
+						],
+						[
+							"King",
+							"{@spell Command}"
+						],
+						[
+							"Mountain",
+							"{@spell Entangle}"
+						],
+						[
+							"Sacred",
+							"{@spell Sanctuary}"
+						]
+					]
+				},
+				"While you are wearing or carrying the rune-marked object, you can cast the spell associated with the chosen rune once without using a spell slot or material components, and you can also cast the spell using any spell slots you have.",
+				"Your spellcasting ability for this feat is Intelligence, Wisdom, or Charisma (choose when you select this feat)",
+				"Each time you gain a level, you can replace one of the runes you know with a different one from the Rune Spells table."
 			]
 		},
 		{
@@ -5698,6 +6706,260 @@
 			"page": 169,
 			"entries": [
 				"Once per turn when you roll damage for a melee weapon attack, you can reroll the weapon's damage dice and use either total."
+			]
+		},
+		{
+			"name": "Scion Of Elemental Air",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 8,
+			"additionalSpells": [
+				{
+					"known": {
+						"_": [
+							"minor illusion#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You've been exposed to the primordial magic of the Elemental Plane of Air, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Elemental Magic",
+							"entries": [
+								"You learn the {@spell minor illusion} cantrip, using Intelligence, Wisdom, or Charisma as the spellcasting ability (choose when you select this feat)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wind's Glide",
+							"entries": [
+								"You can use a bonus action to gain a flying speed equal to your walking speed until the end of your turn. If you are airborne at the end of your turn after using this movement and aren't held aloft by other means, you fall. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Scion Of Elemental Earth",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 8,
+			"additionalSpells": [
+				{
+					"known": {
+						"_": [
+							"druidcraft#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You've been exposed to the primordial magic of the Elemental Plane of Earth, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Elemental Magic",
+							"entries": [
+								"You learn the {@spell druidcraft} cantrip, using Intelligence, Wisdom, or Charisma as the spellcasting ability (choose when you select this feat)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Earthen Shield",
+							"entries": [
+								"You can use a bonus action to conjure a bulwark of earth that provides half cover to you or a creature of your choice within 30 feet of yourself. The bulwark remains until the start of your next turn. You can create this bulwark a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Scion Of Elemental Fire",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 9,
+			"additionalSpells": [
+				{
+					"known": {
+						"_": [
+							"dancing lights#c",
+							"produce flame#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You've been exposed to the primordial magic of the Elemental Plane of Fire, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Elemental Magic",
+							"entries": [
+								"You learn the {@spell dancing lights} cantrip, using Intelligence, Wisdom, or Charisma as the spellcasting ability (choose when you select this feat)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Fervent Blaze",
+							"entries": [
+								"You learn the {@spell produce flame} cantrip, using the same spellcasting ability chosen for this feat's Elemental Magic benefit. You can cast produce flame as normal, and you can also cast it as a bonus action a number of times equal to your proficiency bonus, regaining all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Scion Of Elemental Water",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 9,
+			"additionalSpells": [
+				{
+					"known": {
+						"_": [
+							"thaumaturgy#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You've been exposed to the primordial magic of the Elemental Plane of Water, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Elemental Magic",
+							"entries": [
+								"You learn the thaumaturgy cantrip, using Intelligence, Wisdom, or Charisma as the spellcasting ability (choose when you select this feat)."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Wave Surge",
+							"entries": [
+								"You can use a bonus action to create a forceful surge of water directed at a creature within 15 feet of you that you can see. The target must make a Strength saving throw; the DC for this save is equal to 8 + your proficiency bonus + the spellcasting ability modifier chosen for this feat, and a creature can choose to fail this saving throw. On a failure, the target is pushed up to 10 feet away from you or pulled up to 10 feet toward you (your choice). The water vanishes immediately after the creature succeeds or fails. You can create this effect a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Scion Of The Outer Planes",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 9,
+			"additionalSpells": [
+				{
+					"name": "Astral Plane",
+					"known": {
+						"_": [
+							"message#c"
+						]
+					}
+				},
+				{
+					"name": "Chaotic Outer Plane",
+					"known": {
+						"_": [
+							"minor illusion#c"
+						]
+					}
+				},
+				{
+					"name": "Evil Outer Plane",
+					"known": {
+						"_": [
+							"chill touch#c"
+						]
+					}
+				},
+				{
+					"name": "Good Outer Plane",
+					"known": {
+						"_": [
+							"sacred flame#c"
+						]
+					}
+				},
+				{
+					"name": "Lawful Outer Plane",
+					"known": {
+						"_": [
+							"guidance#c"
+						]
+					}
+				},
+				{
+					"name": "The Outlands",
+					"known": {
+						"_": [
+							"mage hand#c"
+						]
+					}
+				}
+			],
+			"entries": [
+				"You are influenced by and adept at navigating planar pathways and the strange realities of the Outer Planes.",
+				"Whether planar essence infuses you or you have extraplanar ancestry, your connection to a plane infuses you with the energies found there. Choose a type of plane listed in the Planar Infusion table below. Your choice gives you resistance to a damage type and the ability to cast a cantrip, as specified in the table. You can cast this cantrip without material components, and your spellcasting ability for it is Intelligence, Wisdom, or Charisma (choose when you select this feat).",
+				{
+					"type": "table",
+					"caption": "Planar Infusion",
+					"colLabels": [
+						"Plane",
+						"Damage Resistance",
+						"Cantrip"
+					],
+					"colStyles": [
+						"col-4",
+						"col-4",
+						"col-4"
+					],
+					"rows": [
+						[
+							"Astral Plane",
+							"Psychic",
+							"{@spell Message}"
+						],
+						[
+							"Chaotic Outer Plane",
+							"Necrotic",
+							"{@spell Minor illusion}"
+						],
+						[
+							"Evil Outer Plane",
+							"Necrotic",
+							"{@spell Chill touch}"
+						],
+						[
+							"Good Outer Plane",
+							"Radiant",
+							"{@spell Sacred flame}"
+						],
+						[
+							"Lawful Outer Plane",
+							"Radiant",
+							"{@spell Guidance}"
+						],
+						[
+							"The Outlands",
+							"Psychic",
+							"{@spell Mage hand}"
+						]
+					]
+				}
 			]
 		},
 		{
@@ -6037,6 +7299,11 @@
 					}
 				}
 			],
+			"expertise": [
+				{
+					"anyProficientSkill": 1
+				}
+			],
 			"entries": [
 				"You have honed your proficiency with particular skills, granting you the following benefits:",
 				{
@@ -6142,6 +7409,80 @@
 					"items": [
 						"Once per turn when you hit a creature with an attack that deals slashing damage, you can reduce the speed of the target by 10 feet until the start of your next turn.",
 						"When you score a critical hit that deals slashing damage to a creature, you grievously wound it. Until the start of your next turn, the target has disadvantage on all attack rolls."
+					]
+				}
+			]
+		},
+		{
+			"name": "Soul of the Storm Giant",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"prerequisite": [
+				{
+					"level": 8
+				}
+			],
+			"entries": [
+				"You've manifested divination abilities and tempest magic emblematic of storm giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Maelstrom Aura",
+							"entries": [
+								"As a bonus action, you surround yourself in an aura of magical wind and lightning that extends 10 feet from you in every direction but not through total cover. The aura lasts for 1 minute or until you are {@condition incapacitated}. While the aura is active, attack rolls against you have disadvantage, and whenever a creature starts its turn within the sphere, you can force the creature's speed to be halved until the start of its next turn. Once you use this bonus action, you can't do so again until you finish a long rest."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Storm's Oracle",
+							"entries": [
+								"You can cast the {@spell divination} spell as a ritual, without needing material components. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feature (choose when you gain this feat). Once you cast the spell in this way, you can't do so again until you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Soul Of The Storm Giant",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 9,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|ua2022wondersofthemultiverse|strike of the giants (storm giant)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"int",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested divination abilities and tempest magic emblematic of storm giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Maelstrom Aura",
+							"entries": [
+								"As a bonus action, you surround yourself in an aura of magical wind and lightning that extends 10 feet from you in every direction but not through total cover. The aura lasts until the start of your next turn or until you are {@condition incapacitated}. While the aura is active, attack rolls against you have disadvantage, and whenever a creature starts its turn within the aura, you can force the creature to make a Strength saving throw (DC equals 8 + your proficiency bonus + the ability modifier of the score increased by this feat). On a failed save, the creature's speed is halved until the start of its next turn. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -6495,6 +7836,64 @@
 						"If you are hidden, you can move up to 10 feet in the open without revealing yourself if you end the move in a position where you're not clearly visible."
 					]
 				}
+			]
+		},
+		{
+			"name": "Strike Of The Giants",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 9,
+			"entries": [
+				"You have absorbed primeval magic that gives you an echo of the might of giants. Choose one of the kinds of giants listed below. As a bonus action, you can call on the power of your giant magic to imbue your attacks with additional power. The next time you hit a target with a melee or thrown weapon attack within the next minute, the attack has an additional effect depending on the origin of your giant magic:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Hill Giant",
+							"entries": [
+								"The target takes an extra {@damage 1d6} damage of the weapon's type. If the target is a creature, it must succeed on a Strength saving throw or be knocked {@condition prone}."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Stone Giant",
+							"entries": [
+								"The target takes an extra {@damage 1d6} force damage. If the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you in a straight line."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Frost Giant",
+							"entries": [
+								"The target takes an extra {@damage 1d6} cold damage. If the target is a creature, it must succeed on a Constitution saving throw, or its speed is reduced to 0 until the start of your next turn."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Fire Giant",
+							"entries": [
+								"The target takes an extra {@damage 1d8} fire damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Cloud Giant",
+							"entries": [
+								"The target takes an extra {@damage 1d4} thunder damage. If the target is a creature, it must succeed on a Wisdom saving throw, or you become {@condition invisible} to it until the start of your next turn."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Storm Giant",
+							"entries": [
+								"The target takes an extra {@damage 1d6} lightning damage. If the target is a creature, it must succeed on a Constitution saving throw, or it has disadvantage on attack rolls until the start of your next turn."
+							]
+						}
+					]
+				},
+				"The saving throw DC for these effects equals 8 + your proficiency bonus + your Strength or Constitution modifier.",
+				"You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 			]
 		},
 		{
@@ -7462,6 +8861,80 @@
 			]
 		},
 		{
+			"name": "Vigor of the Hill Giant",
+			"source": "UA2022GiantOptions",
+			"page": 5,
+			"prerequisite": [
+				{
+					"level": 4
+				}
+			],
+			"entries": [
+				"You've manifested the resilience emblematic of hill giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Bulwark",
+							"entries": [
+								"When you are subjected to an effect that would move you at least 5 feet or knock you {@condition prone}, you can use your reaction to steady yourself. You are then neither moved nor knocked {@condition prone}."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Hearty Health",
+							"entries": [
+								"When you are subjected to a spell that restores your hit points, you can regain additional hit points equal to your Constitution modifier. You can regain these additional hit points a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Vigor Of The Hill Giant",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 10,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|ua2022wondersofthemultiverse|strike of the giants (hill giant)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"con": 1
+				}
+			],
+			"entries": [
+				"You've manifested the resilience emblematic of hill giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Bulwark",
+							"entries": [
+								"When you are subjected to an effect that would move you at least 5 feet or knock you {@condition prone}, you can use your reaction to steady yourself. You are then neither moved nor knocked {@condition prone}."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Iron Stomach",
+							"entries": [
+								"Whenever you eat food as part of a short rest and spend one or more Hit Dice to regain hit points, you regain additional hit points equal to your Constitution modifier + your proficiency bonus."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "War Caster",
 			"source": "PHB",
 			"page": 170,
@@ -7639,7 +9112,7 @@
 							"type": "entries",
 							"name": "Lifter",
 							"entries": [
-								"This device can be used as a block and tackle, allowing its user to hoist five times the weight the user can normally lift."
+								"This device can be used as a {@item block and tackle|PHB}, allowing its user to hoist five times the weight the user can normally lift."
 							]
 						},
 						{

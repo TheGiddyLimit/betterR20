@@ -11400,7 +11400,7 @@
 						{
 							"type": "entries",
 							"entries": [
-								"An otyugh is a grotesque, bulbous creature borne along on three sturdy legs, its eyes and nose set along a vine. Like stalk that snakes from the top of its bloated body. Two rubbery tentacles end in spiky, leaf-like appendages that the otyugh uses to shovel food into its gaping maw.",
+								"An otyugh is a grotesque, bulbous creature borne along on three sturdy legs, its eyes and nose set along a vine-like stalk that snakes from the top of its bloated body. Two rubbery tentacles end in spiky, leaf-like appendages that the otyugh uses to shovel food into its gaping maw.",
 								"An otyugh buries itself under mounds of offal and carrion, leaving only its sensory stalk exposed. When an edible creature happens by, the otyugh's tentacles erupt from the filth and grab hold of it.",
 								"Otyughs make the most of any opportunity to ambush and devour prey. They use a limited form of telepathy to urge sentient creatures toward their lairs, sometimes by pretending to be something else.",
 								{
@@ -14302,7 +14302,7 @@
 									"name": "Fiendish Offspring",
 									"type": "entries",
 									"entries": [
-										"Succubi and incubi can reproduce with one another to spawn more of their kind. Less commonly, a succubus or incubus reproduces with a humanoid. From this unholy union, a cambion child is conceived. Invariably, the fiendish offspring is as wicked as its fiendish parent."
+										"Succubi and incubi can reproduce with one another to spawn more of their kind. Less commonly, a succubus or incubus reproduces with a humanoid. From this unholy union, a {@creature cambion} child is conceived. Invariably, the fiendish offspring is as wicked as its fiendish parent."
 									]
 								}
 							]

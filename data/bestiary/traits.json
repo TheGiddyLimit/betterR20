@@ -1,6 +1,29 @@
 {
 	"trait": [
 		{
+			"name": "Aarakocra",
+			"source": "DMG",
+			"page": 282,
+			"ref": "{@race Aarakocra|DMG}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"aarakocra"
+						]
+					},
+					"speed": {
+						"walk": 30,
+						"fly": 50
+					}
+				}
+			}
+		},
+		{
 			"name": "Awakened",
 			"source": "PHB",
 			"page": 216,
@@ -204,6 +227,35 @@
 							"force": true
 						}
 					]
+				}
+			}
+		},
+		{
+			"name": "Dragonborn (Red)",
+			"source": "PHB",
+			"page": 32,
+			"ref": "{@race Dragonborn||Dragonborn (Red)}",
+			"apply": {
+				"_root": {
+					"size": [
+						"M"
+					],
+					"type": {
+						"type": "humanoid",
+						"tags": [
+							"dragonborn"
+						]
+					}
+				},
+				"_mod": {
+					"resist": {
+						"mode": "appendIfNotExistsArr",
+						"items": "fire"
+					},
+					"languages": {
+						"mode": "appendIfNotExistsArr",
+						"items": "Draconic"
+					}
 				}
 			}
 		},

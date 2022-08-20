@@ -27,7 +27,8 @@
 				"paralyzed",
 				"petrified",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dagdra Deepforge",
@@ -115,7 +116,8 @@
 			"spellcastingTags": [
 				"CC",
 				"I"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Enormous Tentacle",
@@ -184,7 +186,8 @@
 				"C",
 				"O",
 				"X"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Grunka",
@@ -224,7 +227,8 @@
 				"MW",
 				"RNG",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Jelayne",
@@ -244,13 +248,15 @@
 					}
 				}
 			},
+			"int": 14,
 			"cha": 14,
 			"languages": [
 				"Common"
 			],
 			"languageTags": [
 				"C"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Mechachimera",
@@ -264,7 +270,8 @@
 			"immune": [
 				"poison",
 				"psychic"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Onyx",
@@ -344,7 +351,8 @@
 			"languageTags": [
 				"C",
 				"OTH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Replica Monodrone",
@@ -379,7 +387,8 @@
 			"languageTags": [
 				"C",
 				"OTH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Replica Pentadrone",
@@ -411,7 +420,8 @@
 			"languageTags": [
 				"C",
 				"OTH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Replica Quadrone",
@@ -446,7 +456,8 @@
 			"languageTags": [
 				"C",
 				"OTH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Replica Tridrone",
@@ -478,7 +489,8 @@
 			"languageTags": [
 				"C",
 				"OTH"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Stomping Foot",
@@ -509,7 +521,8 @@
 			],
 			"damageTags": [
 				"B"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Two Dry Cloaks",

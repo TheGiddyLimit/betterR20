@@ -58,6 +58,34 @@
 			]
 		},
 		{
+			"name": "Astral Drifter",
+			"source": "AAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"For longer than you can remember, you have traversed the Astral Sea. There, you experienced firsthand the wonders of the Silver Void: you stopped aging and no longer felt hunger or thirst. Driven by wanderlust, you drifted from one part of the Astral Sea to another, like a mote of dust on the wind. You have lost count of the decades that have passed since you arrived here.",
+								"In your travels, you have camped on the petrified hulks of dead gods and narrowly escaped the psychic winds that sweep across the Astral Sea while also avoiding prolonged contact with the plane's most dangerous denizens."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/AAG/Astral Drifter.webp"
+					},
+					"title": "Plasmoid Astral Drifter"
+				}
+			]
+		},
+		{
 			"name": "Athlete",
 			"source": "MOT",
 			"entries": [
@@ -948,6 +976,21 @@
 			]
 		},
 		{
+			"name": "Gate Warden",
+			"source": "UA2022WondersOfTheMultiverse",
+			"entries": [
+				"You spent a significant amount of time somewhere influenced by a portal to another plane of existence or by intense planar forces. You're accustomed to experiences that would leave others reeling in terror or enraptured by otherworldly beauty, and you're as comfortable dealing with fiends and celestials as you are with vendors in town."
+			]
+		},
+		{
+			"name": "Giant Foundling",
+			"source": "UA2022WondersOfTheMultiverse",
+			"entries": [
+				"Though you aren't a Giant, you grew up among giants. Maybe you were an orphan taken in by a sympathetic family of stone giants who raised you as one of their own. Or perhaps you lived in a lost prehistoric pocket of the world, surrounded by giants and fearsome behemoths or hulking dinosaurs.",
+				"Something about your environment\u2014perhaps the food or water that sustained you through childhood, elemental magic inherent in the site of your home, or some verdant blessing of growth placed on you\u2014ensured that you grew to a remarkable size. With the aid of this magic, you have learned how to embody the titanic might of giants. You are used to moving through a world much bigger than you, and that is reflected in your skills, attitude, and perspective on life."
+			]
+		},
+		{
 			"name": "Golgari Agent",
 			"source": "GGR",
 			"entries": [
@@ -1629,6 +1672,13 @@
 			]
 		},
 		{
+			"name": "Planar Philosopher",
+			"source": "UA2022WondersOfTheMultiverse",
+			"entries": [
+				"You subscribe to a distinct philosophy that seeks to understand the nature of the planes or some hidden truth of the multiverse. You draw strength from your conviction and, perhaps, a network of like-minded believers. In your travels, you seek to deepen the depths of your understanding and spread your philosophy."
+			]
+		},
+		{
 			"name": "Prismari Student",
 			"source": "SCC",
 			"entries": [
@@ -1714,6 +1764,14 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Rune Carver",
+			"source": "UA2022WondersOfTheMultiverse",
+			"entries": [
+				"You've dedicated your life to studying the practice of runecraft. Whether you were personally taught by a master rune carver or learned by poring over engravings in ancient ruins, you understand how to tap into the supernatural power held within runes.",
+				"The art of runecraft was initially created by the giants of yore, but over time, the practice has been adopted by individuals of all races and backgrounds. As such, though Giant runes are the most common, many rune carvers incorporate symbols from their native languages into the craft."
 			]
 		},
 		{
@@ -2223,6 +2281,34 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Wildspacer",
+			"source": "AAG",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"You were raised in the void of Wildspace\u2014home to asteroid miners, moon farmers, and other hardy folk. Perhaps you grew up in a far-flung settlement such as the Rock of Bral (described in {@book chapter 3|AAG|3}), or you spent your early years on the crew of a spelljamming ship, performing helpful chores such as swabbing the deck, loading and offloading cargo, and scraping barnacles off the hull.",
+								"Whatever your history, life in Wildspace has toughened you so well that you are as brave as a {@creature Space Hamster|BAM|miniature giant space hamster} when it comes to facing the terrors and other challenges of the airless night."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/AAG/Wildspacer.webp"
+					},
+					"title": "Githyanki Wildspacer"
 				}
 			]
 		},

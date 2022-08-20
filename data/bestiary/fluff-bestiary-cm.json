@@ -428,10 +428,6 @@
 		{
 			"name": "Naiad",
 			"source": "CM",
-			"_copy": {
-				"name": "Naiad",
-				"source": "MOT"
-			},
 			"images": [
 				{
 					"type": "image",
@@ -450,7 +446,7 @@
 					"type": "entries",
 					"entries": [
 						"Nintra Siotta, a chaotic evil archfey who was exiled from the Gloaming Court by the Queen of Air and Darkness long ago, is known in Faerûn by three titles: Princess of the Shadow Glass, Lady of Dread Omens, and Seeker of the Three Crowns. She appears as a 9-foot-tall humanoid made of smoky gray glass, wrapped in a cloak-like darkness that appears to devour the light.",
-						"Nintra's eyes burn with green fire, and she speaks in a high, musical voice. Deception comes naturally to her, but imprisonment in{@i The Scrivener's Tale}has made her impatient and prone to telepathic outbursts that betray her cruel nature."
+						"Nintra's eyes burn with green fire, and she speaks in a high, musical voice. Deception comes naturally to her, but imprisonment in {@i The Scrivener's Tale}has made her impatient and prone to telepathic outbursts that betray her cruel nature."
 					]
 				}
 			],

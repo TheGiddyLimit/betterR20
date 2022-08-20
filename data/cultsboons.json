@@ -47,7 +47,7 @@
 			"type": "Elder Evil",
 			"entries": [
 				{
-					"name": "Gaze of Corruption (Recharge 6)",
+					"name": "Gaze of Corruption {@recharge}",
 					"type": "entries",
 					"entries": [
 						"The cultist targets one creature it can see within 30 feet of it. The target must succeed on a {@dc 15} Constitution saving throw or take 16 ({@damage 3d10}) necrotic damage and be {@condition poisoned} for 1 minute. The {@condition poisoned} target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."

@@ -256,7 +256,8 @@
 			"languageTags": [
 				"AB",
 				"CS"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Animated Stove",
@@ -376,6 +377,9 @@
 					"headerEntries": [
 						"Arcturia is an 18th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 20}, {@hit 12} to hit with spell attacks). Arcturia can cast {@spell alter self} at will and has the following wizard spells prepared:"
 					],
+					"will": [
+						"{@spell alter self}"
+					],
 					"spells": {
 						"0": {
 							"spells": [
@@ -453,13 +457,10 @@
 							]
 						}
 					},
-					"will": [
-						"{@spell alter self}"
-					],
+					"ability": "int",
 					"hidden": [
 						"will"
-					],
-					"ability": "int"
+					]
 				}
 			],
 			"damageTagsLegendary": [],
@@ -886,7 +887,9 @@
 				"average": 111,
 				"formula": "13d8 + 13"
 			},
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Carrion Ogre",
@@ -2033,6 +2036,16 @@
 					"headerEntries": [
 						"Halaster is a 20th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 22}, {@hit 14} to hit with spell attacks). He can cast {@spell disguise self} and {@spell invisibility} at will. He can cast {@spell fly} and {@spell lightning bolt} once each without expending a spell slot, but can't do so again until he finishes a short or long rest. Halaster has the following wizard spells prepared:"
 					],
+					"will": [
+						"{@spell disguise self}",
+						"{@spell invisibility}"
+					],
+					"daily": {
+						"1": [
+							"{@spell fly}",
+							"{@spell lightning bolt}"
+						]
+					},
 					"spells": {
 						"0": {
 							"spells": [
@@ -2116,21 +2129,11 @@
 							]
 						}
 					},
-					"will": [
-						"{@spell disguise self}",
-						"{@spell invisibility}"
-					],
-					"daily": {
-						"1": [
-							"{@spell fly}",
-							"{@spell lightning bolt}"
-						]
-					},
+					"ability": "int",
 					"hidden": [
 						"will",
 						"daily"
-					],
-					"ability": "int"
+					]
 				}
 			],
 			"trait": [
@@ -2664,7 +2667,8 @@
 				"D",
 				"GI",
 				"U"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Keresta Delvingstone",
@@ -5688,6 +5692,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RW"
 			],

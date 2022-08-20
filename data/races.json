@@ -408,6 +408,7 @@
 				}
 			],
 			"hasFluff": true,
+			"hasFluffImages": true,
 			"_versions": [
 				{
 					"name": "Aasimar; Necrotic Shroud",
@@ -463,8 +464,7 @@
 						}
 					}
 				}
-			],
-			"hasFluffImages": true
+			]
 		},
 		{
 			"name": "Aasimar",
@@ -684,6 +684,132 @@
 		},
 		{
 			"name": "Astral Elf",
+			"source": "AAG",
+			"page": 10,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"humanoid"
+			],
+			"creatureTypeTags": [
+				"elf"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"age": {
+				"max": 750
+			},
+			"darkvision": 60,
+			"traitTags": [
+				"Improved Resting"
+			],
+			"skillProficiencies": [
+				{
+					"perception": true
+				}
+			],
+			"additionalSpells": [
+				{
+					"known": {
+						"1": [
+							"dancing lights#c"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				},
+				{
+					"known": {
+						"1": [
+							"light#c"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				},
+				{
+					"known": {
+						"1": [
+							"sacred flame#c"
+						]
+					},
+					"ability": {
+						"choose": [
+							"int",
+							"wis",
+							"cha"
+						]
+					}
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Humanoid. You are also considered an elf for any prerequisite or effect that requires you to be an elf."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Astral Fire",
+					"entries": [
+						"You know one of the following cantrips of your choice: {@spell dancing lights}, {@spell light}, or {@spell sacred flame}. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose when you select this race)."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of yourself as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Fey Ancestry",
+					"entries": [
+						"You have advantage on saving throws you make to avoid or end the {@condition charmed} condition on yourself."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Keen Senses",
+					"entries": [
+						"You have proficiency in the {@skill Perception} skill."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Starlight Step",
+					"entries": [
+						"As a bonus action, you can magically teleport up to 30 feet to an unoccupied space you can see. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Astral Trance",
+					"entries": [
+						"You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in a trancelike meditation, during which you remain conscious.",
+						"Whenever you finish this trance, you gain proficiency in one skill of your choice and with one weapon or tool of your choice, selected from the {@book Player's Handbook|PHB}. You mystically acquire these proficiencies by drawing them from shared elven memory and the experiences of entities on the Astral Plane, and you retain them until you finish your next long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Astral Elf",
 			"source": "UA2021TravelersOfTheMultiverse",
 			"page": 1,
 			"lineage": "VRGR",
@@ -796,6 +922,88 @@
 				}
 			],
 			"hasFluff": true
+		},
+		{
+			"name": "Autognome",
+			"source": "AAG",
+			"page": 11,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"construct"
+			],
+			"size": [
+				"S"
+			],
+			"speed": 30,
+			"traitTags": [
+				"Improved Resting",
+				"Natural Armor"
+			],
+			"toolProficiencies": [
+				{
+					"any": 2
+				}
+			],
+			"resist": [
+				"poison"
+			],
+			"conditionImmune": [
+				"disease"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Construct."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Armored Casing",
+					"entries": [
+						"You are encased in thin metal or some other durable material. While you aren't wearing armor, your base Armor Class is 13 + your Dexterity modifier."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Built for Success",
+					"entries": [
+						"You can add a {@dice d4} to one attack roll, ability check, or saving throw you make, and you can do so after seeing the {@dice d20} roll but before the effects of the roll are resolved. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Healing Machine",
+					"entries": [
+						"If the {@spell mending} spell is cast on you, you can spend a Hit Die, roll it, and regain a number of hit points equal to the roll plus your Constitution modifier (minimum of 1 hit point).",
+						"In addition, your creator designed you to benefit from several spells that preserve life but that normally don't affect Constructs: {@spell cure wounds}, {@spell healing word}, {@spell mass cure wounds}, {@spell mass healing word}, and {@spell spare the dying}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Mechanical Nature",
+					"entries": [
+						"You have resistance to poison damage and immunity to disease, and you have advantage on saving throws against being {@condition paralyzed} or {@condition poisoned}. You don't need to eat, drink, or breathe."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sentry's Rest",
+					"entries": [
+						"When you take a long rest, you spend at least 6 hours in an inactive, motionless state, instead of sleeping. In this state, you appear inert, but you remain conscious."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Specialized Design",
+					"entries": [
+						"You gain two tool proficiencies of your choice, selected from the {@book Player's Handbook|PHB}."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Autognome",
@@ -4582,9 +4790,6 @@
 				"max": 120
 			},
 			"darkvision": 60,
-			"resist": [
-				"lightning"
-			],
 			"entries": [
 				{
 					"type": "entries",
@@ -4598,6 +4803,53 @@
 					"name": "Darkvision",
 					"entries": [
 						"You can see in dim light within 60 feet of you as if it were bright light and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Giff",
+			"source": "AAG",
+			"page": 12,
+			"lineage": "VRGR",
+			"size": [
+				"M"
+			],
+			"speed": {
+				"walk": 30,
+				"swim": true
+			},
+			"traitTags": [
+				"Powerful Build"
+			],
+			"weaponProficiencies": [
+				{
+					"firearms": true
+				}
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Astral Spark",
+					"entries": [
+						"Your psychic connection to the Astral Plane enables you to mystically access a spark of divine power, which you can channel through your weapons. When you hit a target with a simple or martial weapon, you can cause the target to take extra force damage equal to your proficiency bonus.",
+						"You can use this trait a number of times equal to your proficiency bonus, but you can use it no more than once per turn. You regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Firearms Mastery",
+					"entries": [
+						"You have a mystical connection to firearms that traces back to the gods of the giff, who delighted in such weapons. You have proficiency with all firearms and ignore the loading property of any firearm. In addition, attacking at long range with a firearm doesn't impose disadvantage on your attack roll."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hippo Build",
+					"entries": [
+						"You have advantage on Strength-based ability checks and Strength saving throws. In addition, you count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."
 					]
 				}
 			],
@@ -4802,7 +5054,7 @@
 					"name": "Githyanki Psionics",
 					"entries": [
 						"You know the {@spell mage hand} cantrip, and the hand is {@condition invisible} when you cast the cantrip with this trait.",
-						"Starting at 3rd level, you can cast the {@spell jump} spell with this trait. Starting at 5th level, you can also cast {@spell misty step} with it. Once you cast {@spell jump} or misty step with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level.",
+						"Starting at 3rd level, you can cast the {@spell jump} spell with this trait. Starting at 5th level, you can also cast {@spell misty step} with it. Once you cast {@spell jump} or {@spell misty step} with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level.",
 						"Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race). None of these spells require spell components when you cast them with this trait."
 					]
 				},
@@ -4888,6 +5140,67 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Glitchling",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 1,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"construct"
+			],
+			"size": [
+				"M"
+			],
+			"speed": 30,
+			"traitTags": [
+				"Natural Armor"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Construct."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Armored Plating",
+					"entries": [
+						"Your metal skin is reinforced with armor plates. While you aren't wearing armor, your base Armor Class is 14 + your Dexterity modifier."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Balance Chaos",
+					"entries": [
+						"When you make an attack roll or a saving throw and roll a 9 or lower on the {@dice d20}, you can balance chaos and treat the roll as a 10. You can balance chaos in this way a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Living Construct",
+					"entries": [
+						"You were created to benefit from several spells that preserve life but that normally don't affect Constructs: {@spell cure wounds}, {@spell healing word}, {@spell mass cure wounds}, {@spell mass healing word}, and {@spell spare the dying}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Ordered Mind",
+					"entries": [
+						"You have advantage on Wisdom ({@skill Insight}) checks and on saving throws made to avoid or end the {@condition charmed} condition on yourself."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Vestigial Wings",
+					"entries": [
+						"You have vestigial wings that allow limited flight. When you move, you can engage your wings to gain a flying speed equal to your walking speed until the end of the current turn. If you are still aloft at the end of the turn with nothing else supporting you, you fall. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest"
+					]
+				}
+			],
+			"hasFluff": true
 		},
 		{
 			"name": "Gnoll",
@@ -5906,6 +6219,60 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Hadozee",
+			"source": "AAG",
+			"page": 13,
+			"lineage": "VRGR",
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": {
+				"walk": 30,
+				"climb": true
+			},
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you select this race."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Dexterous Feet",
+					"entries": [
+						"As a bonus action, you can use your feet to manipulate an object, open or close a door or container, or pick up or set down a Tiny object."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Glide",
+					"entries": [
+						"If you are not {@condition incapacitated} or wearing heavy armor, you can extend your skin membranes and glide. When you do so, you can perform the following aerial maneuvers:",
+						{
+							"type": "list",
+							"items": [
+								"You can move up to 5 feet horizontally for every 1 foot you descend in the air, at no movement cost to you.",
+								"When you would take damage from a fall, you can use your reaction to reduce the fall's damage to 0."
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hadozee Resilience",
+					"entries": [
+						"The magic that runs in your veins heightens your natural defenses. When you take damage, you can use your reaction to roll a {@dice d6}. Add your proficiency bonus to the number rolled, and reduce the damage you take by an amount equal to that total (minimum of 0 damage).",
+						"You can use this trait a number of times equal to your proficiency bonus. You regain all expended uses when you finish a long rest."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Hadozee",
@@ -8093,6 +8460,7 @@
 				}
 			],
 			"hasFluff": true,
+			"hasFluffImages": true,
 			"_versions": [
 				{
 					"name": "Kobold; Craftiness",
@@ -8149,8 +8517,7 @@
 					},
 					"skillProficiencies": null
 				}
-			],
-			"hasFluffImages": true
+			]
 		},
 		{
 			"name": "Kobold",
@@ -10524,6 +10891,79 @@
 		},
 		{
 			"name": "Plasmoid",
+			"source": "AAG",
+			"page": 14,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"ooze"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"resist": [
+				"acid",
+				"poison"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are an Ooze."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you select this race."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Amorphous",
+					"entries": [
+						"You can squeeze through a space as narrow as 1 inch wide, provided you are wearing and carrying nothing. You have advantage on ability checks you make to initiate or escape a grapple."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of yourself as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hold Breath",
+					"entries": [
+						"You can hold your breath for 1 hour."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Natural Resilience",
+					"entries": [
+						"You have resistance to acid and poison damage, and you have advantage on saving throws against being {@condition poisoned}."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Shape Self",
+					"entries": [
+						"As an action, you can reshape your body to give yourself a head, one or two arms, one or two legs, and makeshift hands and feet, or you can revert to a limbless blob. While you have a humanlike shape, you can wear clothing and armor made for a Humanoid of your size.",
+						"As a bonus action, you can extrude a pseudopod that is up to 6 inches wide and 10 feet long or reabsorb it into your body. As part of the same bonus action, you can use this pseudopod to manipulate an object, open or close a door or container, or pick up or set down a Tiny object. The pseudopod contains no sensory organs and can't attack, activate magic items, or lift more than 10 pounds."
+					]
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Plasmoid",
 			"source": "UA2021TravelersOfTheMultiverse",
 			"page": 3,
 			"lineage": "VRGR",
@@ -10739,9 +11179,6 @@
 			],
 			"resist": [
 				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
 			],
 			"entries": [
 				{
@@ -11173,6 +11610,9 @@
 				"max": 750
 			},
 			"darkvision": 60,
+			"traitTags": [
+				"Improved Resting"
+			],
 			"skillProficiencies": [
 				{
 					"perception": true
@@ -11398,6 +11838,7 @@
 				}
 			],
 			"hasFluff": true,
+			"hasFluffImages": true,
 			"_versions": [
 				{
 					"name": "Shifter; Beasthide",
@@ -11471,8 +11912,7 @@
 						}
 					}
 				}
-			],
-			"hasFluffImages": true
+			]
 		},
 		{
 			"name": "Shifter",
@@ -12171,6 +12611,79 @@
 						"You can speak, read, and write Common and one other language of your choice."
 					],
 					"type": "entries"
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Thri-kreen",
+			"source": "AAG",
+			"page": 15,
+			"lineage": "VRGR",
+			"creatureTypes": [
+				"monstrosity"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"speed": 30,
+			"darkvision": 60,
+			"traitTags": [
+				"Improved Resting",
+				"Natural Armor"
+			],
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Creature Type",
+					"entries": [
+						"You are a Monstrosity."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Size",
+					"entries": [
+						"You are Medium or Small. You choose the size when you select this race."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Chameleon Carapace",
+					"entries": [
+						"While you aren't wearing armor, your carapace gives you a base Armor Class of 13 + your Dexterity modifier.",
+						"As an action, you can change the color of your carapace to match the color and texture of your surroundings, giving you advantage on Dexterity ({@skill Stealth}) checks made to {@action hide} in those surroundings."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Darkvision",
+					"entries": [
+						"You can see in dim light within 60 feet of yourself as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Secondary Arms",
+					"entries": [
+						"You have two slightly smaller secondary arms below your primary pair of arms. The secondary arms can manipulate an object, open or close a door or container, pick up or set down a Tiny object, or wield a weapon that has the light property."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Sleepless",
+					"entries": [
+						"You do not require sleep and can remain conscious during a long rest, though you must still refrain from strenuous activity to gain the benefit of the rest."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Thri-kreen Telepathy",
+					"entries": [
+						"Without the assistance of magic, you can't speak the non-thri-kreen languages you know. Instead you use telepathy to convey your thoughts. You have the magical ability to transmit your thoughts mentally to willing creatures you can see within 120 feet of yourself. A contacted creature doesn't need to share a language with you to understand your thoughts, but it must be able to understand at least one language. Your telepathic link to a creature is broken if you and the creature move more than 120 feet apart, if either of you is {@condition incapacitated}, or if either of you mentally breaks the contact (no action required)."
+					]
 				}
 			],
 			"hasFluff": true,
@@ -16285,7 +16798,7 @@
 			]
 		},
 		{
-			"name": "Vadahar",
+			"name": "Vahadar",
 			"source": "PSK",
 			"raceName": "Elf (Kaladesh)",
 			"raceSource": "PSK",
@@ -18357,7 +18870,6 @@
 			"raceName": "Half-Elf",
 			"raceSource": "PHB",
 			"page": 116,
-			"speed": 35,
 			"skillProficiencies": [
 				{
 					"any": 2
@@ -18430,7 +18942,6 @@
 							}
 						}
 					},
-					"speed": 30,
 					"skillProficiencies": null
 				},
 				{
@@ -18449,6 +18960,7 @@
 							}
 						}
 					},
+					"speed": 35,
 					"skillProficiencies": null,
 					"weaponProficiencies": null
 				},
@@ -18468,7 +18980,6 @@
 							}
 						}
 					},
-					"speed": 30,
 					"skillProficiencies": null,
 					"weaponProficiencies": null
 				},
@@ -18488,7 +18999,6 @@
 							}
 						}
 					},
-					"speed": 30,
 					"weaponProficiencies": null
 				}
 			]

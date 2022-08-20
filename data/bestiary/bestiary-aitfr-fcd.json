@@ -92,6 +92,7 @@
 				"RNG",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -338,6 +339,7 @@
 				"invisible",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		}
 	]

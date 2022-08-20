@@ -1343,6 +1343,7 @@
 				"R"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -3608,6 +3609,9 @@
 				"O",
 				"T"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -5624,7 +5628,8 @@
 				"Y"
 			],
 			"spellcastingTags": [
-				"I"
+				"I",
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -8219,6 +8224,9 @@
 				"N",
 				"O",
 				"T"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"MW",

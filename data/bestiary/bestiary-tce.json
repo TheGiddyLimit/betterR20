@@ -18,6 +18,7 @@
 			"source": "TCE",
 			"page": 109,
 			"summonedBySpell": "Summon Aberration|TCE",
+			"summonedBySpellLevel": 4,
 			"size": [
 				"M"
 			],
@@ -116,7 +117,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Adult Red Dracolich",
@@ -134,7 +136,8 @@
 				"Legendary Resistances",
 				"Magic Resistance"
 			],
-			"damageTagsLegendary": []
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Beast of the Land",
@@ -370,6 +373,7 @@
 			"source": "TCE",
 			"page": 109,
 			"summonedBySpell": "Summon Beast|TCE",
+			"summonedBySpellLevel": 2,
 			"size": [
 				"S"
 			],
@@ -463,13 +467,15 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Celestial Spirit",
 			"source": "TCE",
 			"page": 110,
 			"summonedBySpell": "Summon Celestial|TCE",
+			"summonedBySpellLevel": 5,
 			"size": [
 				"L"
 			],
@@ -559,6 +565,7 @@
 			"source": "TCE",
 			"page": 111,
 			"summonedBySpell": "Summon Construct|TCE",
+			"summonedBySpellLevel": 4,
 			"size": [
 				"M"
 			],
@@ -650,7 +657,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Dancing Item",
@@ -748,6 +756,7 @@
 			"source": "TCE",
 			"page": 111,
 			"summonedBySpell": "Summon Elemental|TCE",
+			"summonedBySpellLevel": 4,
 			"size": [
 				"M"
 			],
@@ -875,13 +884,15 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fey Spirit",
 			"source": "TCE",
 			"page": 112,
 			"summonedBySpell": "Summon Fey|TCE",
+			"summonedBySpellLevel": 3,
 			"size": [
 				"S"
 			],
@@ -979,13 +990,15 @@
 			],
 			"conditionInflict": [
 				"charmed"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Fiendish Spirit",
 			"source": "TCE",
 			"page": 112,
 			"summonedBySpell": "Summon Fiend|TCE",
+			"summonedBySpellLevel": 6,
 			"size": [
 				"L"
 			],
@@ -1105,7 +1118,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Homunculus Servant",
@@ -1373,7 +1387,8 @@
 				"petrified",
 				"poisoned",
 				"restrained",
-				"stunned"
+				"stunned",
+				"unconscious"
 			],
 			"languages": [
 				"understands the languages of creatures attuned to it but can't speak"
@@ -1426,7 +1441,8 @@
 			],
 			"traitTags": [
 				"Magic Resistance",
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -1489,6 +1505,7 @@
 			"source": "TCE",
 			"page": 114,
 			"summonedBySpell": "Summon Shadowspawn|TCE",
+			"summonedBySpellLevel": 3,
 			"size": [
 				"M"
 			],
@@ -1695,6 +1712,7 @@
 			"source": "TCE",
 			"page": 114,
 			"summonedBySpell": "Summon Undead|TCE",
+			"summonedBySpellLevel": 3,
 			"size": [
 				"M"
 			],
@@ -1805,7 +1823,8 @@
 				"frightened",
 				"paralyzed",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Wildfire Spirit",

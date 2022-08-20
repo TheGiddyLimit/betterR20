@@ -140,12 +140,19 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Dragonfang",
 			"source": "RoT",
 			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 182
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -242,7 +249,7 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 7 ({@dice 2d6}) damage of the type to which the dragonfang has resistance."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 7 ({@dice 2d6}) damage of the type to which the dragonfang has resistance."
 					]
 				},
 				{
@@ -276,6 +283,12 @@
 			"name": "Dragonsoul",
 			"source": "RoT",
 			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 183
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -372,7 +385,7 @@
 				{
 					"name": "Shortsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 10 ({@dice 3d6}) damage of the type to which the dragonsoul has resistance."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage plus 10 ({@dice 3d6}) damage of the type to which the dragonsoul has resistance."
 					]
 				},
 				{
@@ -622,6 +635,12 @@
 			"name": "Ice Toad",
 			"source": "RoT",
 			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 185
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -830,6 +849,12 @@
 			"isNpc": true,
 			"source": "RoT",
 			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 186
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -948,6 +973,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RNG",
 				"RW"
@@ -960,6 +986,12 @@
 			"isNpc": true,
 			"source": "RoT",
 			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 187
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -990,12 +1022,12 @@
 			"wis": 13,
 			"cha": 18,
 			"save": {
-				"con": "+6",
-				"wis": "+5"
+				"con": "+5",
+				"wis": "+4"
 			},
 			"skill": {
-				"arcana": "+7",
-				"perception": "+5"
+				"arcana": "+6",
+				"perception": "+4"
 			},
 			"senses": [
 				"darkvision 60 ft."
@@ -1119,6 +1151,12 @@
 			"isNamedCreature": true,
 			"source": "RoT",
 			"page": 92,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 189
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -1234,13 +1272,13 @@
 				{
 					"name": "Burning Touch",
 					"entries": [
-						"{@atk ms} {@hit 5} to hit, reach 5 ft., one target. {@h}18 ({@damage 4d8}) fire damage."
+						"{@atk ms} {@hit 9} to hit, reach 5 ft., one target. {@h}18 ({@damage 4d8}) fire damage."
 					]
 				},
 				{
 					"name": "Flaming Orb",
 					"entries": [
-						"{@atk rs} {@hit 5} to hit, range 90 ft., one target. {@h}40 ({@damage 9d8}) fire damage."
+						"{@atk rs} {@hit 9} to hit, range 90 ft., one target. {@h}40 ({@damage 9d8}) fire damage."
 					]
 				},
 				{
@@ -1352,6 +1390,10 @@
 			"otherSources": [
 				{
 					"source": "BGDIA"
+				},
+				{
+					"source": "ToD",
+					"page": 180
 				}
 			],
 			"size": [

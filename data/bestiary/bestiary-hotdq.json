@@ -17,6 +17,12 @@
 			"name": "Ambush Drake",
 			"source": "HotDQ",
 			"page": 88,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 180
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -106,6 +112,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 88,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 180
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -264,6 +276,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 181
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -427,6 +445,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 89,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 181
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -541,6 +565,10 @@
 				{
 					"source": "RoT",
 					"page": 89
+				},
+				{
+					"source": "ToD",
+					"page": 182
 				}
 			],
 			"size": [
@@ -650,6 +678,10 @@
 				{
 					"source": "RoT",
 					"page": 89
+				},
+				{
+					"source": "ToD",
+					"page": 183
 				}
 			],
 			"size": [
@@ -774,6 +806,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 184
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -946,10 +984,41 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Four-Armed Troll",
+			"source": "HotDQ",
+			"page": 65,
+			"_copy": {
+				"name": "Troll",
+				"source": "MM",
+				"_mod": {
+					"action": {
+						"mode": "replaceArr",
+						"replace": "Multiattack",
+						"items": {
+							"name": "Multiattack",
+							"entries": [
+								"The troll attacks five times, once with its bite and four times with its claws. If two or more claws hit the same target, the troll rends the target, dealing an extra {@dice 2d6} slashing damage."
+							]
+						}
+					}
+				}
+			},
+			"cr": "6",
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Frulam Mondath",
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 90,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 184
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -1100,6 +1169,10 @@
 				{
 					"source": "RoT",
 					"page": 90
+				},
+				{
+					"source": "ToD",
+					"page": 185
 				}
 			],
 			"reprintedAs": [
@@ -1195,6 +1268,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 185
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -1339,6 +1418,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 186
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -1553,6 +1638,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 91,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 187
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -1741,7 +1832,8 @@
 			},
 			"ac": [
 				11
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Rath Modar",
@@ -1752,6 +1844,10 @@
 				{
 					"source": "RoT",
 					"page": 91
+				},
+				{
+					"source": "ToD",
+					"page": 188
 				}
 			],
 			"size": [
@@ -1933,6 +2029,10 @@
 			"otherSources": [
 				{
 					"source": "RoT"
+				},
+				{
+					"source": "ToD",
+					"page": 180
 				}
 			],
 			"size": [
@@ -2133,6 +2233,12 @@
 			"isNpc": true,
 			"source": "HotDQ",
 			"page": 93,
+			"otherSources": [
+				{
+					"source": "ToD",
+					"page": 189
+				}
+			],
 			"size": [
 				"M"
 			],

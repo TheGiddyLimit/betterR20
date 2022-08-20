@@ -1981,6 +1981,49 @@
 				"Blessed Strikes|Cleric||Twilight|TCE|8|TCE",
 				"Twilight Shroud|Cleric||Twilight|TCE|17"
 			]
+		},
+		{
+			"name": "Fate Domain (UA)",
+			"shortName": "Fate (UA)",
+			"source": "UA2022WondersOfTheMultiverse",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"page": 2,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							"dissonant whispers",
+							"heroism"
+						],
+						"3": [
+							"see invisibility",
+							"warding bond"
+						],
+						"5": [
+							"beacon of hope",
+							"clairvoyance"
+						],
+						"7": [
+							"death ward",
+							"divination"
+						],
+						"9": [
+							"commune",
+							"geas"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Fate Domain (UA)|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|1",
+				"Channel Divinity: Strands of Fate|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|2",
+				"Insightful Striking|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|6",
+				"Potent Spellcasting|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|8",
+				"Blessed Strikes|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|8|UAClassFeatureVariants",
+				"Blessed Strikes|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|8|TCE",
+				"Visions of the Future|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|17"
+			]
 		}
 	],
 	"classFeature": [
@@ -6027,6 +6070,243 @@
 						"As an action, the creature can touch their bonded partner to expend and roll any number of Hit Dice. Their bonded partner regains a number of hit points equal to the total rolled."
 					]
 				}
+			]
+		},
+		{
+			"name": "Fate Domain (UA)",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 1,
+			"entries": [
+				"Gods of fate perceive the future and how the choices mortals make drive them toward their destinies. Some deities consider the future preordained, while others understand the multiverse as a place of infinite possibility. Clerics who draw power from the forces of fate sometimes receive visions directly from their deity and receive fleeting omens of the future. They share impossible knowledge with their allies and prophesize their enemies' doom.",
+				{
+					"type": "table",
+					"caption": "Fate Domain Deities",
+					"colLabels": [
+						"Example Deity",
+						"Pantheon"
+					],
+					"colStyles": [
+						"col-6",
+						"col-6"
+					],
+					"rows": [
+						[
+							"Savras",
+							"Forgotten Realms"
+						],
+						[
+							"Istus",
+							"Greyhawk"
+						],
+						[
+							"Gilean",
+							"Dragonlance"
+						],
+						[
+							"Labelas Enorath",
+							"Elven"
+						]
+					]
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Domain Spells|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Omens and Portents|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Ties That Bind|Cleric||Fate (UA)|UA2022WondersOfTheMultiverse|1"
+				}
+			]
+		},
+		{
+			"name": "Domain Spells",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1st-level Fate Domain Feature}",
+				"You gain domain spells at the cleric levels listed on the Fate Domain Spells table. See the Divine Domain class feature for how domain spells work.",
+				{
+					"type": "table",
+					"caption": "Fate Domain Spells",
+					"colLabels": [
+						"Cleric Level",
+						"Domain Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell dissonant whispers}, {@spell heroism}"
+						],
+						[
+							"3rd",
+							"{@spell see invisibility}, {@spell warding bond}"
+						],
+						[
+							"5th",
+							"{@spell beacon of hope}, {@spell clairvoyance}"
+						],
+						[
+							"7th",
+							"{@spell death ward}, {@spell divination}"
+						],
+						[
+							"9th",
+							"{@spell commune}, {@spell geas}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Omens and Portents",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1st-level Fate Domain Feature}",
+				"You can perceive signs of the future in everyday objects and events, such as flights of birds or ripples made in water by a thrown stone. You can cast the {@spell augury} spell without expending a spell slot and, when you cast the spell in this way, the spell has no verbal, somatic, or material components. Once you cast the spell in this way, you cannot do so again until you finish a long rest.",
+				"In addition, until you finish a long rest, when you cast a divination spell that includes a chance the DM gives you no answer or a random reading\u2014such as augury, commune, or divination\u2014reduce that chance by 25 percent."
+			]
+		},
+		{
+			"name": "Ties That Bind",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"{@i 1st-level Fate Domain Feature}",
+				"You can temporarily tie your fate to others. As an action, you can touch one object or creature and magically tie a strand of fate from yourself to it for 1 hour or until you use this feature again. An unwilling creature must succeed on a Wisdom saving throw against your spell save DC to resist this effect. While the target is bound to you and on the same plane of existence as you, you can sense the direction to the target's location, and you know the direction of its movement if it is in motion.",
+				"In addition, once per turn when you cast a spell using a spell slot to deal damage or restore hit points to the target, roll a {@dice d6}, and the target receives extra damage or healing, respectively, equal to the number rolled.",
+				"You can use this feature's action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "Channel Divinity: Strands of Fate",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"{@i 2nd-level Fate Domain Feature}",
+				"You can use your Channel Divinity to see and manipulate the strands of fate that weave around other individuals. As a bonus action, you can enter this state for up to 1 minute or until you lose your concentration (as if you were concentrating on a spell). For the duration, whenever another creature you can see makes an attack roll or an ability check, you can use a reaction to give the roll advantage or disadvantage (your choice)."
+			]
+		},
+		{
+			"name": "Insightful Striking",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-level Fate Domain Feature}",
+				"As a bonus action, you can choose one creature you can see within 30 feet of yourself. Your magic grants you a brief vision of the target's defenses. Until the end of your next turn, you gain one of the following effects of your choice:",
+				{
+					"type": "list",
+					"items": [
+						"The next time you make an attack roll against the target, roll a {@dice d6} and add the number rolled to the total.",
+						"The next time the target must make a saving throw against a spell you cast, the target must roll a {@dice d6} and subtract the number rolled from the saving throw."
+					]
+				},
+				"You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+			]
+		},
+		{
+			"name": "Blessed Strikes",
+			"source": "TCE",
+			"page": 30,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 8,
+			"isClassFeatureVariant": true,
+			"header": 2,
+			"entries": [
+				"{@i 8th-level cleric {@variantrule optional class features|tce|optional feature}, which replaces the Potent Spellcasting feature}",
+				"You are blessed with divine might in battle. When a creature takes damage from one of your cantrips or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+			]
+		},
+		{
+			"name": "Blessed Strikes",
+			"source": "UAClassFeatureVariants",
+			"page": 4,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 8,
+			"isClassFeatureVariant": true,
+			"header": 2,
+			"entries": [
+				"{@i 8th-level cleric Divine Domain feature (replaces Potent Spellcasting)}",
+				"In battle, you are blessed with divine might. When a creature takes damage from one of your spells or weapon attacks, you can also deal {@damage 1d8} radiant damage to that creature. Once you deal this damage, you can't use this feature again until the start of your next turn."
+			]
+		},
+		{
+			"name": "Potent Spellcasting",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 8,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 8,
+			"header": 2,
+			"entries": [
+				"{@i 8th-level Fate Domain Feature}",
+				"You add your Wisdom modifier to the damage you deal with any cleric cantrip."
+			]
+		},
+		{
+			"name": "Visions of the Future",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 2,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Fate (UA)",
+			"subclassSource": "UA2022WondersOfTheMultiverse",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"{@i 17th-level Fate Domain Feature}",
+				"Your knowledge of the future allows you to guide an individual to achieve their greatest possible success. You can cast the {@spell foresight} spell once without expending a spell slot; when you cast the spell in this way, the spell's duration is 1 minute for that casting. Once you cast the spell in this way, you can't do so again until you finish a long rest."
 			]
 		},
 		{

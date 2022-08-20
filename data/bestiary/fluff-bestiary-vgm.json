@@ -3138,7 +3138,7 @@
 											"type": "entries"
 										},
 										{
-											"name": "Mind Blast (Recharge 5\u20136)",
+											"name": "Mind Blast {@recharge 5}",
 											"entries": [
 												"The lich magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 18 Intelligence saving throw or take 27 ({@damage 5d8 + 5}) psychic damage and be {@condition stunned} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 											],

@@ -1878,7 +1878,8 @@
 			"damageTags": [
 				"B",
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Lady Fiona Wachter",
@@ -3808,6 +3809,7 @@
 				"CW"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -4133,6 +4135,10 @@
 					"headerEntries": [
 						"The mad mage is an 18th-level spellcaster. His spellcasting ability is Intelligence (spell save {@dc 17}, {@hit 9} to hit with spell attacks). He can cast {@spell disguise self} and {@spell invisibility} at will and has the following wizard spells prepared:"
 					],
+					"will": [
+						"{@spell disguise self}",
+						"{@spell invisibility}"
+					],
 					"spells": {
 						"0": {
 							"spells": [
@@ -4209,14 +4215,10 @@
 							]
 						}
 					},
-					"will": [
-						"{@spell disguise self}",
-						"{@spell invisibility}"
-					],
+					"ability": "int",
 					"hidden": [
 						"will"
-					],
-					"ability": "int"
+					]
 				}
 			],
 			"damageTagsSpell": [
@@ -4338,7 +4340,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The blight makes four attacks: two with its branches and two with its grasping roots. If it has a target {@condition grappled}, the blight can also make a bite attack against that target as a bonus action."
+						"The blight makes one Branch attack and one Grasping Root attack."
 					]
 				},
 				{
@@ -4831,7 +4833,8 @@
 			"hp": {
 				"average": 7,
 				"formula": "2d6"
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Zuleika Toranescu",

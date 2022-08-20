@@ -1,0 +1,38 @@
+{
+	"monsterFluff": [
+		{
+			"name": "Astral Blight",
+			"source": "LoX",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/LoX/Astral Blight.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Flapjack",
+			"source": "LoX",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"One crew member stayed aboard the Moondancer while it was in port: a flumph named Flapjack, who serves as the ship's spelljammer."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/LoX/Flapjack the Flumph.webp"
+					}
+				}
+			]
+		}
+	]
+}

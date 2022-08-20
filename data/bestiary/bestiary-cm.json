@@ -326,6 +326,9 @@
 				"P",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -358,7 +361,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -415,7 +418,7 @@
 				{
 					"name": "Special Equipment",
 					"entries": [
-						"Bak Mei carries a staff of striking with 10 charges."
+						"Bak Mei carries a {@item staff of striking} with 10 charges."
 					]
 				},
 				{
@@ -600,6 +603,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -783,6 +789,9 @@
 				"C",
 				"O"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RCH"
@@ -846,6 +855,9 @@
 						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4}) bludgeoning damage."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"languageTags": [
 				"C"
@@ -1688,6 +1700,11 @@
 				"T",
 				"Y"
 			],
+			"spellcastingTags": [
+				"CW",
+				"I",
+				"S"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1704,7 +1721,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -1802,7 +1819,7 @@
 				{
 					"ac": 15,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -1859,7 +1876,7 @@
 				{
 					"name": "Force Strike",
 					"entries": [
-						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) force damage, and if the target is a creature, it must succeed on a {@dc 15} Constitution saving throw or be {@condition stunned} until the of Jade Tigress's next turn."
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) force damage, and if the target is a creature, it must succeed on a {@dc 15} Constitution saving throw or be {@condition stunned} until the end of Jade Tigress's next turn."
 					]
 				},
 				{
@@ -2125,6 +2142,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -2328,6 +2348,9 @@
 			"damageTagsSpell": [
 				"F"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -2465,6 +2488,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -2597,6 +2621,9 @@
 				"F",
 				"L",
 				"Y"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"miscTags": [
 				"AOE"
@@ -2813,6 +2840,9 @@
 			"damageTags": [
 				"C",
 				"N",
+				"O"
+			],
+			"spellcastingTags": [
 				"O"
 			],
 			"miscTags": [
@@ -3108,6 +3138,9 @@
 				"N",
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW"
@@ -3230,6 +3263,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -3486,6 +3520,9 @@
 			],
 			"damageTagsSpell": [
 				"L"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3838,7 +3875,8 @@
 				}
 			],
 			"traitTags": [
-				"Damage Absorption"
+				"Damage Absorption",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -3884,7 +3922,7 @@
 				{
 					"ac": 17,
 					"from": [
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -4565,6 +4603,9 @@
 					}
 				}
 			},
+			"traitTags": [
+				"Fey Ancestry"
+			],
 			"hasToken": true
 		},
 		{

@@ -3145,6 +3145,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -4512,6 +4513,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -4729,6 +4731,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -4750,12 +4753,6 @@
 			"name": "Derro",
 			"source": "MTF",
 			"page": 158,
-			"otherSources": [
-				{
-					"source": "OotA",
-					"page": 224
-				}
-			],
 			"reprintedAs": [
 				"Derro|MPMM"
 			],
@@ -4871,12 +4868,6 @@
 			"name": "Derro Savant",
 			"source": "MTF",
 			"page": 159,
-			"otherSources": [
-				{
-					"source": "OotA",
-					"page": 225
-				}
-			],
 			"reprintedAs": [
 				"Derro Savant|MPMM"
 			],
@@ -5432,6 +5423,13 @@
 					"headerEntries": [
 						"The drow is a 16th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 16}, {@hit 8} to hit with spell attacks). It regains its expended spell slots when it finishes a short or long rest. It knows the following warlock spells:"
 					],
+					"daily": {
+						"1": [
+							"{@spell eyebite}",
+							"{@spell etherealness}",
+							"{@spell dominate monster}"
+						]
+					},
 					"spells": {
 						"0": {
 							"spells": [
@@ -5460,13 +5458,6 @@
 								"{@spell witch bolt}"
 							]
 						}
-					},
-					"daily": {
-						"1": [
-							"{@spell eyebite}",
-							"{@spell etherealness}",
-							"{@spell dominate monster}"
-						]
 					},
 					"ability": "cha"
 				}
@@ -6252,6 +6243,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflictSpell": [
@@ -9707,6 +9699,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -14182,6 +14175,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -14347,6 +14341,7 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -14868,6 +14863,7 @@
 				"N"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],
@@ -15792,6 +15788,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -20826,6 +20823,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -21263,6 +21261,9 @@
 			"damageTags": [
 				"N",
 				"R"
+			],
+			"miscTags": [
+				"HPR"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -22245,6 +22246,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW",
 				"RCH"
 			],

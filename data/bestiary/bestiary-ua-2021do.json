@@ -5,6 +5,7 @@
 			"source": "UA2021DraconicOptions",
 			"page": 7,
 			"summonedBySpell": "Summon Draconic Spirit|UA2021DraconicOptions",
+			"summonedBySpellLevel": 5,
 			"size": [
 				"L"
 			],
@@ -113,7 +114,8 @@
 				"AOE",
 				"MW",
 				"RCH"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

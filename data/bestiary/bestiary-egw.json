@@ -596,10 +596,10 @@
 					"headerEntries": [
 						"The blood hunter can innately cast {@spell hex}. Its innate spellcasting ability is Intelligence."
 					],
-					"ability": "int",
 					"will": [
 						"{@spell hex}"
 					],
+					"ability": "int",
 					"hidden": [
 						"will"
 					]
@@ -1123,7 +1123,7 @@
 					]
 				},
 				{
-					"name": "Alluring Thrum (Recharges 5-6)",
+					"name": "Alluring Thrum {@recharge 5}",
 					"entries": [
 						"The emissary emits a dreadful yet alluring hum. Each creature within 20 feet of the emissary that can hear it and that isn't an aberration must succeed on a {@dc 14} Constitution saving throw or be {@condition charmed} for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -2402,7 +2402,8 @@
 				"P",
 				"S"
 			],
-			"damageTagsLegendary": []
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Kobold Underling",
@@ -2975,7 +2976,8 @@
 				"Legendary Resistances",
 				"Magic Resistance"
 			],
-			"damageTagsLegendary": []
+			"damageTagsLegendary": [],
+			"hasToken": true
 		},
 		{
 			"name": "Parson Pellinost",

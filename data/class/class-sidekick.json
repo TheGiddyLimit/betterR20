@@ -569,6 +569,7 @@
 				"Inspiring Help|Expert Sidekick|TCE|11",
 				"Ability Score Improvement|Expert Sidekick|TCE|12",
 				"Reliable Talent|Expert Sidekick|TCE|14",
+				"Expertise|Expert Sidekick|TCE|15",
 				"Ability Score Improvement|Expert Sidekick|TCE|16",
 				"Sharp Mind|Expert Sidekick|TCE|18",
 				"Ability Score Improvement|Expert Sidekick|TCE|19",
@@ -590,6 +591,7 @@
 			"source": "TCE",
 			"page": 144,
 			"isSidekick": true,
+			"casterProgression": "artificer",
 			"cantripProgression": [
 				2,
 				2,
@@ -1142,6 +1144,18 @@
 			"entries": [
 				"{@i 14th-level Expert feature}",
 				"The sidekick has refined its skills to an exceptional degree. Whenever the sidekick makes an ability check that includes its whole proficiency bonus, it can treat a {@dice d20} roll of 9 or lower as a 10."
+			]
+		},
+		{
+			"name": "Expertise",
+			"source": "TCE",
+			"page": 142,
+			"className": "Expert Sidekick",
+			"classSource": "TCE",
+			"level": 15,
+			"entries": [
+				"{@i 15th-level Expert feature}",
+				"Choose two of the sidekick's skill proficiencies. The sidekick's proficiency bonus is doubled for any ability check it makes that uses any of the chosen proficiencies."
 			]
 		},
 		{

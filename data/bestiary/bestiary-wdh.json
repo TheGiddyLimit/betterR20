@@ -1847,6 +1847,8 @@
 				"N",
 				"G"
 			],
+			"int": 7,
+			"cha": 13,
 			"hasToken": true
 		},
 		{
@@ -6320,7 +6322,7 @@
 				{
 					"name": "Arcane Ward",
 					"entries": [
-						"Remallia has a magical ward that has 30 hit points. Whenever she takes damage, the ward takes the damage instead. If the ward is reduced to 0 hit points, Remallia takes any remaining damage. When Remallia casts an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell. This applies to any of the following spells she casts: {@spell alarm}. mage armor, shield, arcane lock, counterspell, {@spell dispel magic}, banishment, stoneskin, globe of invulnerability and symbol"
+						"Remallia has a magical ward that has 30 hit points. Whenever she takes damage, the ward takes the damage instead. If the ward is reduced to 0 hit points, Remallia takes any remaining damage. When Remallia casts an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell. This applies to any of the following spells she casts: {@spell alarm}, {@spell mage armor}, {@spell shield}, {@spell arcane lock}, {@spell counterspell}, {@spell dispel magic}, {@spell banishment}, {@spell stoneskin}, {@spell globe of invulnerability} and {@spell symbol}."
 					]
 				}
 			],

@@ -98,6 +98,73 @@
 			]
 		},
 		{
+			"name": "Bombard",
+			"source": "AAG",
+			"entries": [
+				"Bombards are built by giff. The major feature of each ship is an enormous cannon that fires massive cannon balls capable of blowing other ships to smithereens. (The cannon is included in the cost of the ship.) A bombard can carry up to fourteen giant cannon balls, each of which weighs 10 tons. These cannon balls make up most of the weight of the ship's cargo. A winch mounted on the aft deck is used to load the cannon balls on board.",
+				"A bombard can float and sail on water, but it can't land safely on the ground (its keel would cause it to roll on its side)."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Bombard.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Bombard Map.webp"
+					},
+					"title": "Bombard Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Bombard Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Damselfly Ship",
+			"source": "AAG",
+			"entries": [
+				"This swift but cramped ship is made mostly of metal. It can't float on water, but its legs enable it to land safely on the ground. A sliding hatch just behind the wings allows access to the ship's mangonel turret. The ship's cargo hold can easily be turned into crew cabins or another weapon deck.",
+				"Damselfly ships are often used as courier vessels and armored transports. Explorers and pirates like them because they're fast and sturdy. Military leaders use them as command ships for the same reasons.",
+				"Damselfly ship owners are a proud lot, fond of painting their ships in colorful patterns as well as customizing their vessels with special equipment. Large, private gatherings of damselfly ship owners are not uncommon; they use these get-togethers to show off their ships and to race one another through asteroid belts and other obstacle courses, either for rewards or bragging rights."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Damselfly Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Damselfly Ship Map.webp"
+					},
+					"title": "Damselfly Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Damselfly Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
 			"name": "Demon Grinder",
 			"source": "BGDIA",
 			"entries": [
@@ -146,6 +213,40 @@
 						"type": "internal",
 						"path": "vehicles/BGDIA/Devil's Ride.jpg"
 					}
+				}
+			]
+		},
+		{
+			"name": "Flying Fish Ship",
+			"source": "AAG",
+			"entries": [
+				"Aside from {@book space galleons|AAG|2|Space Galleon}, flying fish ships are the most common vessels in Wildspace, favorites among merchants and adventurers alike.",
+				"A flying fish ship can float and sail on water, but it isn't built to land on the ground (the ventral fins would snap under the weight of the ship during landing, and the keel would cause the ship to roll to one side).",
+				"Typical weapons on a flying fish ship include a forward-mounted mangonel and an aft-mounted ballista."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Flying Fish Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Flying Fish Ship Map.webp"
+					},
+					"title": "Flying Fish Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Flying Fish Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
 				}
 			]
 		},
@@ -291,6 +392,38 @@
 			]
 		},
 		{
+			"name": "Hammerhead Ship",
+			"source": "AAG",
+			"entries": [
+				"Hammerhead ships are popular craft, especially among pirates and merchants carrying heavy cargo. They can float on water and sail across it, but they aren't built to land on the ground (their keels would cause them to tip to one side). Standard weapons on a hammerhead ship include fore and aft mangonels, a ballista, and a reinforced bow for ramming."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Hammerhead Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Hammerhead Ship Map.webp"
+					},
+					"title": "Hammerhead Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Hammerhead Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
 			"name": "Keelboat",
 			"source": "GoS",
 			"entries": [
@@ -388,6 +521,75 @@
 						"type": "internal",
 						"path": "vehicles/GoS/smaller-ships.png"
 					}
+				}
+			]
+		},
+		{
+			"name": "Lamprey Ship",
+			"source": "AAG",
+			"entries": [
+				"Lamprey ships are antiquated, being among the oldest spelljamming ships still in use. {@creature Psurlon|BAM|Psurlons} (see {@book Boo's Astral Menagerie|BAM}) are particularly fond of them.",
+				"Using the metal grappling jaws built into its bow, a lamprey ship can attach itself to another ship, which is a critical feature during boarding actions. Other standard weapons include four ballistae on the main deck.",
+				"A lamprey can float on water, though it can't land safely on the ground. Lamprey ships that land on the ground have the distressing habit of rolling over, as more than a few crews have discovered to their dismay."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Lamprey Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Lamprey Ship Map.webp"
+					},
+					"title": "Lamprey Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Lamprey Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Living Ship",
+			"source": "AAG",
+			"entries": [
+				"Druids, rangers, and clerics devoted to gods of nature are often found aboard living ships, as are Wildspace explorers who don't want to have to worry about their ship's air envelope becoming fouled during a long voyage.",
+				"This ship's main distinctive feature is the fully grown {@creature treant} on the aft deck. The treant has a speed of 0 because its roots are woven into the deck; it and the ship are inseparable. If the ship is reduced to 0 hit points, the treant dies of shock. The ship can function if its treant dies, but the treant can never be replaced with another.",
+				"When the treant finishes a long rest, it repairs the ship's hull, enabling the ship to regain {@dice 4d12} hit points, and refreshes the ship's air envelope (turning deadly air into foul air, or foul air into fresh air).",
+				"A living ship can float on water and sail across it, but it can't land safely on the ground (its keel would cause it to roll on its side). Its standard weaponry is an aft-mounted ballista."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Living Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Living Ship Map.webp"
+					},
+					"title": "Living Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Living Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
 				}
 			]
 		},
@@ -508,6 +710,73 @@
 						"type": "internal",
 						"path": "vehicles/AI/mechanical-beholder.png"
 					}
+				}
+			]
+		},
+		{
+			"name": "Nautiloid",
+			"source": "AAG",
+			"entries": [
+				"Built and used by {@creature Mind Flayer||mind flayers}, nautiloids are designed exclusively for space travel. They can't float on water, nor can they land safely on the ground.",
+				"As an action, a creature attuned to a nautiloid's {@item spelljamming helm|AAG} and in physical contact with the ship can transport the nautiloid and all creatures and objects aboard it to a different plane of existence, at or near a destination envisioned by the spelljammer (or to a random location on the plane if no destination is envisioned). This property is a feature of the ship, not the {@item spelljamming helm|AAG}. Each time this property is used, roll a {@dice d6}. On a 5\u20136, the property recharges after 1 minute; otherwise, it can't be used again for 24 hours."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Nautiloid.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Nautiloid Map.webp"
+					},
+					"title": "Nautiloid Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Nautiloid Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Nightspider",
+			"source": "AAG",
+			"entries": [
+				"Neogi terrorize Wildspace in ships of their own construction, which others call nightspiders. These vessels often wait in ambush for other ships. Once a target ship is identified, the neogi try to steal its {@item spelljamming helm|AAG} and capture its crew.",
+				"A nightspider's crew usually consists of nineteen neogi and up to a half-dozen {@creature Umber Hulk||umber hulks}, which the neogi use as shock troops.",
+				"Nightspiders are designed for space travel alone and can't float on water or land safely on the ground (the weight of the ship would snap its spindly legs, destroying its weblike rigging in the process). Standard weaponry on a nightspider includes four ballistae (two forward-facing and two aft-facing) and a forward-facing mangonel."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Nightspider.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Nightspider Map.webp"
+					},
+					"title": "Nightspider Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Nightspider Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
 				}
 			]
 		},
@@ -784,6 +1053,169 @@
 			]
 		},
 		{
+			"name": "Scorpion Ship",
+			"source": "AAG",
+			"entries": [
+				"Scorpion ships are archaic metal warships that have never lost their popularity, largely because of their versatility. Articulated legs enable a scorpion ship to land safely on the ground and move across a solid surface at a walking speed of 30 feet. The ship can't float on water, however. A ballista is mounted on the top deck, and a mangonel is perched on the end of the tail. The ship's two claws are relatively inefficient in combat, but a claw that grabs a creature can quickly take it out of action."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Scorpion Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Scorpion Ship Map.webp"
+					},
+					"title": "Scorpion Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Scorpion Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Shrike Ship",
+			"source": "AAG",
+			"entries": [
+				"This swift vessel is a relatively recent design, quickly gaining popularity with merchants and pirates. A shrike ship's legs enable it to land safely on the ground. The ship can float but isn't built for traveling on water and sinks quickly in rough seas.",
+				"Standard weaponry on a shrike ship includes three ballistae\u2014one on the forecastle, one in the middle of the top deck, and one on the sterncastle. In a desperate situation, the ship's reinforced bow can be used as a piercing ram."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Shrike Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Shrike Ship Map.webp"
+					},
+					"title": "Shrike Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Shrike Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Space Galleon",
+			"source": "AAG",
+			"entries": [
+				"The space galleon is a mainstay among the host of vessels that ply Wildspace and the Astral Sea. Space galleons can easily pass for ordinary seafaring galleons. Because they can land on water and move across it like their namesakes, they can sail into ports on terrestrial worlds without attracting undue attention. Like an ordinary galleon, a space galleon isn't built to land on the ground (its keel would cause it to roll on its side). The ship's standard weaponry includes two forward-mounted ballistae and an aft-mounted mangonel."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Space Galleon.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Space Galleon Map.webp"
+					},
+					"title": "Space Galleon Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Space Galleon Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Squid Ship",
+			"source": "AAG",
+			"entries": [
+				"Among the oldest types of spelljamming vessels, squid ships are popular with privateers and are often used as patrol ships. Standard weapons on a squid ship include a forward-mounted mangonel, two aft-mounted ballistae, and a reinforced bow for ramming. The tentacles that extend from the bow account for nearly half the ship's keel length.",
+				"Squid ships can float and sail on water, and they can land on the ground."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Squid Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Squid Ship Map.webp"
+					},
+					"title": "Squid Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Squid Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Star Moth",
+			"source": "AAG",
+			"entries": [
+				"Star moths are ships constructed and flown by astral elves, who don't like it when these ships end up in the hands of others.",
+				"A star moth's hull is fashioned from a grown and sculpted organic substance, and its enormous, decorative wings are made of shimmering crystal. The vessel is built for space travel, but its design does enable it to float on water or land safely on the ground. Standard weaponry includes two ballistae nestled in the star moth's eye holes and a mangonel mounted above the bridge."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Star Moth.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Star Moth Map.webp"
+					},
+					"title": "Star Moth Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Star Moth Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
 			"name": "Tormentor",
 			"source": "BGDIA",
 			"entries": [
@@ -806,6 +1238,73 @@
 						"type": "internal",
 						"path": "vehicles/BGDIA/Tormentor.jpg"
 					}
+				}
+			]
+		},
+		{
+			"name": "Turtle Ship",
+			"source": "AAG",
+			"entries": [
+				"A turtle ship is encased in a protective metal shell, as befits its name, and bristles with weapons. In addition to its roomy quarters, it can carry a decent-sized payload, making it popular among traders and others who need a lot of cargo space. The ship can land on the ground, and it floats on water. Sliding panels can be closed to make the hull airtight, enabling the ship to travel underwater safely, even to great depths. If the ship takes damage while on or under the water, interior hatches can be sealed to prevent the ship from flooding completely.",
+				"Standard weaponry on a turtle ship includes three forward-mounted ballistae and a rear-facing mangonel. These weapons can't be used while the ship is underwater."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Turtle Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Turtle Ship Map.webp"
+					},
+					"title": "Turtle Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Turtle Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
+				}
+			]
+		},
+		{
+			"name": "Tyrant Ship",
+			"source": "AAG",
+			"entries": [
+				"{@creature Beholder||Beholders} carve tyrant ships out of stone using their disintegration rays and use these ships to wander the Astral Plane, looking for worlds to conquer and rival beholders to destroy. No two tyrant ships look alike, but they all have one or more features reminiscent of their creators, such as a bulbous shape and eyestalks.",
+				"A spherical chamber on the ship's command deck functions as a {@item spelljamming helm|AAG} that only beholders can attune to. Any beholder that occupies this chamber can attune to it. Reducing a tyrant ship to 0 hit points not only destroys it but also destroys the ship's {@item spelljamming helm|AAG} and eyestalk cannons.",
+				"A tyrant ship can't float on water, but it can safely land on the ground."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Tyrant Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Tyrant Ship Map.webp"
+					},
+					"title": "Tyrant Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Tyrant Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
 				}
 			]
 		},
@@ -1047,6 +1546,39 @@
 						"type": "internal",
 						"path": "vehicles/GoS/warship.png"
 					}
+				}
+			]
+		},
+		{
+			"name": "Wasp Ship",
+			"source": "AAG",
+			"entries": [
+				"Wasp ships are lightweight wooden vessels capable of landing safely on the ground, but not on water. They appeal to adventurers because they're affordable and don't require a large crew. Pirates like them because they're swift. Aristocrats are fond of using them as flying yachts because the ship's cargo hold can be easily converted into posh living quarters.",
+				"The ship's raised back provides high ground for a weapon emplacement, which is typically equipped with a ballista."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Wasp Ship.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Wasp Ship Map.webp"
+					},
+					"title": "Wasp Ship Deck Plans"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "vehicles/AAG/Wasp Ship Map Player Version.webp"
+					},
+					"title": "Unlabeled Version"
 				}
 			]
 		}

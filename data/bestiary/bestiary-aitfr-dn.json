@@ -106,6 +106,7 @@
 				"grappled",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -200,6 +201,7 @@
 				"MW",
 				"RW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -398,6 +400,7 @@
 			"conditionInflictLegendary": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -480,6 +483,7 @@
 				"AOE",
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		}
 	]

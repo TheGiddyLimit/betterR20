@@ -50,7 +50,8 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Slurmy",
@@ -123,7 +124,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

@@ -251,6 +251,9 @@
 			"conditionInflictSpell": [
 				"prone"
 			],
+			"languageTags": [
+				"XX"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1097,6 +1100,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -5136,10 +5140,10 @@
 							"{@spell imprisonment}"
 						]
 					},
+					"ability": "wis",
 					"hidden": [
 						"daily"
-					],
-					"ability": "wis"
+					]
 				},
 				{
 					"name": "Spellcasting",
@@ -6503,6 +6507,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"conditionInflictSpell": [
@@ -7386,6 +7391,7 @@
 				"I"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,

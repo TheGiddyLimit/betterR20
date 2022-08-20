@@ -252,7 +252,7 @@
 			"source": "MPMM",
 			"entries": [
 				"Annis hags lair in mountains or hills. These hunchbacked and hump-shouldered hags are the largest and most physically imposing of their kind, standing eight feet tall. They can easily tear a fully grown person apart, but they love hunting the young, preferring their flesh above all others.",
-				"Annis hags leave tokens of their cruelty at the edges of forests and other areas they claim to provoke fear and distrust in nearby villages and settlements. To an annis hag, nothing is sweeter than making a once-vibrant community {@condition paralyzed} with terror, so folk never venture out at night, strangers are met with suspicion and anger, and parents warn their children: \"Be good, or the annis will get you.\"",
+				"Annis hags leave tokens of their cruelty at the edges of forests and other areas they claim to provoke fear and distrust in nearby villages and settlements. To an annis hag, nothing is sweeter than making a once-vibrant community paralyzed with terror, so folk never venture out at night, strangers are met with suspicion and anger, and parents warn their children: \"Be good, or the annis will get you.\"",
 				"When an annis feels especially cruel, the hag adopts the appearance of a kindly elder, approaches a child in a remote place, and gives them an iron token (described below), through which the child can magically confide in the hag. Over time, \"Granny\" or \"Grampy\" convinces the child that it's okay to do bad deeds\u2014starting with breaking things or wandering without permission, then graduating to pushing someone down the stairs or setting a house on fire. Eventually, the child's terrified family and community face painful decisions of what to do about the seemingly remorseless child.",
 				"Much as annis hags befriend children in order to corrupt them, they may adopt a group of ogres, trolls, or other creatures ({@creature ogre||ogres} and {@creature troll||trolls}), ruling them through brute strength, insults, and superstition.",
 				{
@@ -1779,7 +1779,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "bestiary/MPMM/Deep Rothé.webp"
+						"path": "bestiary/MPMM/Deep Rothe.webp"
 					}
 				}
 			]
@@ -5087,6 +5087,15 @@
 				"To other creatures, quicklings seem blindingly fast, vanishing into an indistinct blur as they move. Their cruel laughter is a burst of rapid staccato sounds, their speech a shrill squeal. Only when quicklings deliberately slow down, which they prefer not to do, can other beings properly see, hear, and comprehend them. Never truly at rest, \"stationary\" quicklings constantly pace and shift in place, as though they can't wait to be off again.",
 				"Quicklings have a capricious nature that goes well with their energy level: they think as fast as they run, and they are always up to something. They spend most of their time perpetrating acts of mischief on slower creatures. One rarely passes up an opportunity to tie a person's bootlaces together, move the stool a creature is about to sit on, or unbuckle a saddle while no one's looking.",
 				"Tricks of that sort are hardly the limit of quicklings' artful malice, however. They don't commit outright murder, but they can ruin lives in plenty of other ways: stealing an important letter, swiping coins collected for the poor, planting a stolen item in someone's bag. Quicklings enjoy causing suffering that transcends mere mischief, especially when the blame for their actions falls on others and creates discord."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/MPMM/Quickling.webp"
+					}
+				}
 			]
 		},
 		{
@@ -5490,7 +5499,7 @@
 			"source": "MPMM",
 			"entries": [
 				"Skull lords have claimed vast regions of the Shadowfell as their dominion. From these blighted lands, they wage war against their rivals, commanding hordes of the undying in a bid to establish dominance. Yet skull lords always prove to be their own worst enemies; each is a combined being born from three hateful individuals, and they constantly plot against themselves.",
-				"Infighting and treachery brought skull lords into existence. The first of them appeared in the aftermath of Veena's bid to conquer the world of Greyhawk, after the vampire Kas betrayed Vecna and took his eye and hand. In the confusion resulting from this turn of events, Veena's warlords turned against each other, and his plans were dashed. In a rage, Vecna gathered up his generals and captains and bound them in groups of three, fusing them into abominations cursed to fight among themselves for all time. Since the first skull lords were exiled into the shadows, others have arisen, typically created from other leaders who betrayed their masters."
+				"Infighting and treachery brought skull lords into existence. The first of them appeared in the aftermath of Vecna's bid to conquer the world of Greyhawk, after the vampire Kas betrayed Vecna and took his eye and hand. In the confusion resulting from this turn of events, Vecna's warlords turned against each other, and his plans were dashed. In a rage, Vecna gathered up his generals and captains and bound them in groups of three, fusing them into abominations cursed to fight among themselves for all time. Since the first skull lords were exiled into the shadows, others have arisen, typically created from other leaders who betrayed their masters."
 			],
 			"images": [
 				{

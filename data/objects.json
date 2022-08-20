@@ -441,6 +441,27 @@
 			"hasToken": true
 		},
 		{
+			"name": "Spirit Blister",
+			"source": "JttRC",
+			"size": "M",
+			"objectType": "SW",
+			"ac": 17,
+			"hp": 30,
+			"immune": [
+				"acid",
+				"necrotic",
+				"psychic"
+			],
+			"vulnerable": [
+				"fire",
+				"radiant"
+			],
+			"entries": [
+				"If destroyed, the blister bursts with a chorus of distant sighs. A moment later, {@adventure a spectral figure appears|JrrTC|10|Memory of Peace}."
+			],
+			"hasToken": true
+		},
+		{
 			"name": "Suspended Cauldron",
 			"source": "DMG",
 			"page": 255,

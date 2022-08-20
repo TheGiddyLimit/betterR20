@@ -104,7 +104,8 @@
 			],
 			"conditionInflictSpell": [
 				"prone"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Disciple",
@@ -199,7 +200,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sneak",
@@ -269,7 +271,8 @@
 				"MW",
 				"RW",
 				"THW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Squire",
@@ -336,7 +339,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

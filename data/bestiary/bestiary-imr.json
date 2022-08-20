@@ -238,7 +238,8 @@
 			],
 			"damageTags": [
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Barbatos",
@@ -386,7 +387,8 @@
 			],
 			"conditionInflictSpell": [
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Brain in Iron",
@@ -421,7 +423,8 @@
 			],
 			"speed": {
 				"walk": 20
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Dwarven Worker",
@@ -459,7 +462,8 @@
 			"damageTags": [
 				"B",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Enhanced Medusa",
@@ -507,7 +511,8 @@
 			"conditionInflict": [
 				"petrified",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Grandfather Oak",
@@ -534,7 +539,8 @@
 						}
 					}
 				}
-			}
+			},
+			"hasToken": true
 		},
 		{
 			"name": "Lynx Creatlach",
@@ -686,6 +692,7 @@
 			"miscTags": [
 				"MW"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1057,7 +1064,8 @@
 			"languageTags": [
 				"C",
 				"P"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Sir Ursas",
@@ -1195,6 +1203,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1215,7 +1224,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skeletal Owlbear",
@@ -1235,7 +1245,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skeletal Polar Bear",
@@ -1255,7 +1266,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Skeletal Two-Headed Owlbear",
@@ -1275,7 +1287,8 @@
 			"conditionImmune": [
 				"exhaustion",
 				"poisoned"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Stolos",
@@ -1316,7 +1329,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Tarnhem",
@@ -1349,7 +1363,8 @@
 				"F",
 				"L",
 				"S"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Thessalar",
@@ -1564,7 +1579,8 @@
 			"miscTags": [
 				"MW",
 				"RW"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Thessalheart Construct",
@@ -1833,6 +1849,7 @@
 				"prone",
 				"restrained"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -1864,7 +1881,8 @@
 			],
 			"spellcastingTags": [
 				"I"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Two-Headed Crocodile",
@@ -1954,7 +1972,8 @@
 			"conditionInflict": [
 				"grappled",
 				"restrained"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Two-Headed Owlbear",

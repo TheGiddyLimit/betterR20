@@ -2973,6 +2973,9 @@
 			"damageTags": [
 				"P"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"MW",
 				"RW",
@@ -3549,7 +3552,7 @@
 		},
 		{
 			"name": "Sergeant",
-			"source": "WDH",
+			"source": "ERLW",
 			"page": 197,
 			"_copy": {
 				"name": "Guard",

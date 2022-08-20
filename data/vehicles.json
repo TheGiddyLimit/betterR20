@@ -371,6 +371,182 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Bombard",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"140 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 12,
+			"capCargo": 150,
+			"cost": 5000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 300,
+				"dt": 20
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Giant Cannon",
+					"crew": 4,
+					"ac": 19,
+					"hp": 250,
+					"costs": [
+						{
+							"note": "cannon"
+						},
+						{
+							"cost": 100000,
+							"note": "giant cannon ball"
+						}
+					],
+					"entries": [
+						"It takes 3 actions to load the enormous cannon and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Cannon Ball",
+							"entries": [
+								"{@atk rw} +6 to hit, range 600/2,400 ft., one target. {@h}88 ({@dice 16d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Damselfly Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 9,
+			"capCargo": 5,
+			"cost": 2000000,
+			"pace": {
+				"fly": 8
+			},
+			"speed": {
+				"fly": 70
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 200,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 4,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 1 action to aim it using the turret rotator (area 2 on the accompanying deck plan), and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Demon Grinder",
 			"source": "BGDIA",
 			"page": 219,
@@ -534,6 +710,94 @@
 					"name": "Juke",
 					"entries": [
 						"If the Devil's Ride is able to move, the driver can use its reaction to grant the Devil's Ride advantage on a Dexterity saving throw."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Flying Fish Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"120 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 10,
+			"capCargo": 13,
+			"cost": 2000000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
 					]
 				}
 			],
@@ -814,6 +1078,119 @@
 			]
 		},
 		{
+			"name": "Hammerhead Ship",
+			"source": "AAG",
+			"otherSources": [
+				{
+					"source": "SjA"
+				}
+			],
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"130 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 15,
+			"capCargo": 30,
+			"cost": 4000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"ac": 15,
+					"hp": 50,
+					"crew": 3,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} {@hit 6} to hit, range 120/480 ft., one target. {@h}16 ({@damage 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonels",
+					"count": 2,
+					"ac": 15,
+					"hp": 100,
+					"crew": 5,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load a mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} {@hit 5} to hit, range 200/800 ft. (can't hit targets within 60 ft. of it), one target. {@h}27 ({@damage 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Blunt Ram",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"The ship's spelljammer can make the following attack when the ship runs into another object or into a Gargantuan creature (see \"Crashing\" in chapter 2 of Astral Adventurer's Guide)."
+					],
+					"action": [
+						{
+							"name": "Blunt Ram",
+							"entries": [
+								"{@atk mw} {@hit 8} to hit, range 0 ft. one object or Gargantuan creature. {@h}88 ({@damage 16d10}) bludgeoning damage. The hammerhead ship takes half as much damage and comes to a dead stop. {@m}The attack deals no damage, the target moves into the nearest unoccupied space that isn't in the hammerhead ship's path, and the hammerhead ship can continue moving if it has any movement left."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Keelboat",
 			"source": "GoS",
 			"page": 188,
@@ -1041,6 +1418,152 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Lamprey Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"115 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 15,
+			"capCargo": 6,
+			"cost": 2000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Grappling Jaws",
+					"crew": 1,
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"It takes 1 action to make a Grappling Jaws attack."
+					],
+					"action": [
+						{
+							"name": "Grappling Jaws",
+							"entries": [
+								"{@atk mw} +6 to hit, reach 10 ft., one ship or Gargantuan creature. {@h}22 ({@dice 4d10}) piercing damage, and the speed of the lamprey ship and the target become 0 until the grapple ends. As an action, a creature can use the grappling jaws' controls to release the target. Otherwise, the effect ends when the target or the lamprey ship drops to 0 hit points."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Living Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 5,
+			"capCrewNote": "(plus the {@creature treant})",
+			"capCargo": 10,
+			"cost": 2500000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Longship",
@@ -1373,6 +1896,207 @@
 					]
 				}
 			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nautiloid",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"180 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 20,
+			"capCargo": 17,
+			"cost": 5000000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Tentacles",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"As an action, the ship's spelljammer can make one of the following attacks with the ship's tentacles."
+					],
+					"action": [
+						{
+							"name": "Grappling Tentacles",
+							"entries": [
+								"{@atk mw} +8 to hit, reach 30 ft., one Huge or Gargantuan target. {@h}22 ({@dice 4d10}) bludgeoning damage, and the nautiloid's speed becomes 0 until its spelljammer uses an action to release the target. If the target is a creature, it is {@condition grappled} (escape DC 16). If the target is another ship, the target's speed becomes 0 until the nautiloid releases it, or until the target or the nautiloid drops to 0 hit points."
+							]
+						},
+						{
+							"name": "Teleport",
+							"entries": [
+								"{@atk ms} +8 to hit, reach 30 ft., one creature. {@h}The target must succeed on a DC 15 Constitution saving throw or be teleported to an unoccupied space aboard the nautiloid that the nautiloid's spelljammer can see."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Nightspider",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"175 ft.",
+				"50 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 25,
+			"capCargo": 50,
+			"cost": 5000000,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 300,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 4,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
 		},
@@ -1855,13 +2579,408 @@
 				{
 					"name": "Grappling Claw (Requires 1 Crew and Grants Half Cover)",
 					"entries": [
-						"{@atk mw} {@hit 10} to hit, reach 15 ft., one target. {@h}The target is {@condition grappled} (escape DC 12). If the target is a creature, it is {@condition restrained} until the grapple ends.The grappling claw can grapple only one target at a time, and the claw's operator can use a bonus action to make the claw release whatever it's holding."
+						"{@atk mw} {@hit 10} to hit, reach 15 ft., one target. {@h}The target is {@condition grappled} (escape DC 12). If the target is a creature, it is {@condition restrained} until the grapple ends. The grappling claw can grapple only one target at a time, and the claw's operator can use a bonus action to make the claw release whatever it's holding."
 					]
 				},
 				{
 					"name": "2 Harpoon Flingers (Each Station Requires 1 Crew and Grants Half Cover)",
 					"entries": [
 						"{@atk rw} {@hit 6} to hit, range 120 ft., one target. {@h}10 ({@damage 2d8 + 1}) piercing damage."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Scorpion Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"75 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"land"
+			],
+			"capCrew": 12,
+			"capCargo": 12,
+			"cost": 2500000,
+			"pace": {
+				"walk": "3½",
+				"fly": "3½"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": 30
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Claws",
+					"crew": 1,
+					"count": 2,
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"It takes 1 action to make a Claw attack."
+					],
+					"action": [
+						{
+							"name": "Claw",
+							"entries": [
+								"{@atk mw} +3 to hit, reach 20 ft., one target. {@h}11 ({@dice 2d10}) bludgeoning damage. If the target is a Huge or smaller creature, it is also {@condition grappled} (escape DC 13). Until this grapple ends, the creature takes 11 ({@dice 2d10}) bludgeoning damage at the start of each of its turns."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shrike Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"100 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 11,
+			"capCargo": 20,
+			"cost": 2000000,
+			"pace": {
+				"fly": 8
+			},
+			"speed": {
+				"fly": 70
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Piercing Ram",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"The ship's spelljammer can make the following attack when the ship runs into another object or into a Gargantuan creature (see \"{@book Crashing|AAG|2|Crashing}\" earlier in the chapter)."
+					],
+					"action": [
+						{
+							"name": "Piercing Ram",
+							"entries": [
+								"{@atk mw} +8 to hit, range 0 ft., one object or Gargantuan creature. {@h}88 ({@dice 16d10}) piercing damage. The shrike ship takes half as much damage and comes to a dead stop. Miss: The attack deals no damage, the target moves into the nearest unoccupied space that isn't in the shrike ship's path, and the shrike ship can continue moving if it has any movement left."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Space Galleon",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"130 ft.",
+				"30 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 20,
+			"capCargo": 20,
+			"cost": 3000000,
+			"pace": {
+				"fly": 4
+			},
+			"speed": {
+				"fly": 35
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Squid Ship",
+			"source": "AAG",
+			"otherSources": [
+				{
+					"source": "SjA"
+				}
+			],
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"250 ft.",
+				"25 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 13,
+			"capCargo": 20,
+			"cost": 2500000,
+			"pace": {
+				"fly": "3½"
+			},
+			"speed": {
+				"fly": 30
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 300,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"crew": 3,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} {@hit 6} to hit, range 120/480 ft., one target. {@h}16 ({@damage 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonels",
+					"ac": 15,
+					"hp": 100,
+					"crew": 5,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load a mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} {@hit 5} to hit, range 200/800 ft. (can't hit targets within 60 ft. of it), one target. {@h}27 ({@damage 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Piercing Ram",
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"The ship's spelljammer can make the following attack when the ship runs into another object or into a Gargantuan creature (see \"Crashing\" in chapter 2 of Astral Adventurer's Guide)."
+					],
+					"action": [
+						{
+							"name": "Piercing Ram",
+							"entries": [
+								"{@atk mw} {@hit 8} to hit, range 0 ft. one object or Gargantuan creature. {@h}88 ({@damage 16d10}) piercing damage. The squid ship takes half as much damage and comes to a dead stop. {@m}The attack deals no damage, the target moves into the nearest unoccupied space that isn't in the squid ship's path, and the squid ship can continue moving if it has any movement left."
+							]
+						}
 					]
 				}
 			],
@@ -1946,6 +3065,95 @@
 				}
 			],
 			"hasToken": true
+		},
+		{
+			"name": "Star Moth",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"200 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 13,
+			"capCargo": 30,
+			"cost": 4000000,
+			"pace": {
+				"fly": "5½"
+			},
+			"speed": {
+				"fly": 50
+			},
+			"hull": {
+				"ac": 13,
+				"acFrom": [
+					"ceramic"
+				],
+				"hp": 400,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 2,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Tormentor",
@@ -2033,6 +3241,152 @@
 					"name": "Juke",
 					"entries": [
 						"If the Tormentor is able to move, the driver can use its reaction to grant the Tormentor advantage on a Dexterity saving throw."
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Turtle Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"95 ft.",
+				"70 ft."
+			],
+			"terrain": [
+				"space",
+				"sea"
+			],
+			"capCrew": 16,
+			"capCargo": 30,
+			"cost": 4000000,
+			"pace": {
+				"fly": 3,
+				"swim": 3
+			},
+			"speed": {
+				"fly": 25,
+				"swim": 25
+			},
+			"hull": {
+				"ac": 19,
+				"acFrom": [
+					"metal"
+				],
+				"hp": 300,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballistae",
+					"crew": 3,
+					"count": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load a ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				},
+				{
+					"name": "Mangonel",
+					"crew": 5,
+					"ac": 15,
+					"hp": 100,
+					"costs": [
+						{
+							"cost": 10000,
+							"note": "mangonel"
+						},
+						{
+							"note": "stone"
+						}
+					],
+					"entries": [
+						"It takes 2 actions to load the mangonel, 2 actions to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Mangonel Stone",
+							"entries": [
+								"{@atk rw} +5 to hit, range 200/800 ft. (can't hit targets within 60 feet of it), one target. {@h}27 ({@dice 5d10}) bludgeoning damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Tyrant Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"100 ft.",
+				"100 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 10,
+			"capCrewNote": "({@creature Beholder||beholders})",
+			"capCargo": 20,
+			"pace": {
+				"fly": "4½"
+			},
+			"speed": {
+				"fly": 40
+			},
+			"hull": {
+				"ac": 17,
+				"acFrom": [
+					"(stone)"
+				],
+				"hp": 300,
+				"dt": 20
+			},
+			"weapon": [
+				{
+					"name": "Eyestalk Cannons",
+					"crew": 1,
+					"count": 3,
+					"costs": [
+						{
+							"note": "included in ship cost"
+						}
+					],
+					"entries": [
+						"This weapon looks like an eye mounted on an eyestalk. A beholder stationed in one of the tyrant ship's meditation pods can see through the eye by concentrating on it (as if concentrating on a spell) and use an action to make the following attack."
+					],
+					"action": [
+						{
+							"name": "Destructive Ray",
+							"entries": [
+								"{@atk rs} +8 to hit, range 120/480 ft., one target. {@h}35 ({@dice 10d6}) force damage."
+							]
+						}
 					]
 				}
 			],
@@ -2311,6 +3665,67 @@
 					]
 				}
 			]
+		},
+		{
+			"name": "Wasp Ship",
+			"source": "AAG",
+			"vehicleType": "SPELLJAMMER",
+			"dimensions": [
+				"80 ft.",
+				"20 ft."
+			],
+			"terrain": [
+				"space"
+			],
+			"capCrew": 5,
+			"capCargo": 10,
+			"cost": 2000000,
+			"pace": {
+				"fly": "5½"
+			},
+			"speed": {
+				"fly": 50
+			},
+			"hull": {
+				"ac": 15,
+				"acFrom": [
+					"wood"
+				],
+				"hp": 250,
+				"dt": 15
+			},
+			"weapon": [
+				{
+					"name": "Ballista",
+					"crew": 3,
+					"ac": 15,
+					"hp": 50,
+					"costs": [
+						{
+							"cost": 5000,
+							"note": "ballista"
+						},
+						{
+							"cost": 500,
+							"note": "bolt"
+						}
+					],
+					"entries": [
+						"It takes 1 action to load the ballista, 1 action to aim it, and 1 action to fire it."
+					],
+					"action": [
+						{
+							"name": "Bolt",
+							"entries": [
+								"{@atk rw} +6 to hit, range 120/480 ft., one target. {@h}16 ({@dice 3d10}) piercing damage."
+							]
+						}
+					]
+				}
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		}
 	],
 	"vehicleUpgrade": [

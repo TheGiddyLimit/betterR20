@@ -1792,6 +1792,7 @@
 				"average": 7,
 				"formula": "3d4"
 			},
+			"cr": "1/8",
 			"damageTags": [
 				"P"
 			],

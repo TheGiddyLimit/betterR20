@@ -1451,6 +1451,19 @@
 			]
 		},
 		{
+			"name": "Fish Suit",
+			"source": "AAG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/AAG/Fish Suit.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Flame Tongue",
 			"source": "DMG",
 			"images": [
@@ -1780,6 +1793,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/DMG/Hammer of Thunderbolts.jpg"
+					}
+				}
+			]
+		},
+		{
+			"name": "Hammock of Worlds",
+			"source": "JttRC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/JttRC/Hammock of Worlds.webp"
 					}
 				}
 			]
@@ -2332,6 +2358,19 @@
 				"name": "Lash of Shadows",
 				"source": "EGW"
 			}
+		},
+		{
+			"name": "Lesser Hammock of Worlds",
+			"source": "JttRC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/JttRC/Hammock of Worlds.webp"
+					}
+				}
+			]
 		},
 		{
 			"name": "Living Loot Satchel",
@@ -3938,6 +3977,27 @@
 						"type": "internal",
 						"path": "items/DMG/Spellguard Shield.jpg"
 					}
+				}
+			]
+		},
+		{
+			"name": "Spelljamming Helm",
+			"source": "AAG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/AAG/Spelljamming Helm.webp"
+					}
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/AAG/Spelljamming Helms.webp"
+					},
+					"title": "Three Examples of a Spelljamming Helm"
 				}
 			]
 		},

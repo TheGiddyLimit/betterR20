@@ -86,7 +86,6 @@
 				}
 			],
 			"wondrous": true,
-			"weight": 0.01,
 			"bonusSpellAttack": "+1",
 			"bonusSpellSaveDc": "+1",
 			"focus": [
@@ -296,7 +295,6 @@
 				}
 			],
 			"wondrous": true,
-			"weight": 0.01,
 			"bonusSpellAttack": "+2",
 			"bonusSpellSaveDc": "+2",
 			"entries": [
@@ -503,7 +501,6 @@
 				}
 			],
 			"wondrous": true,
-			"weight": 0.01,
 			"bonusSpellAttack": "+3",
 			"bonusSpellSaveDc": "+3",
 			"entries": [
@@ -3429,6 +3426,52 @@
 			]
 		},
 		{
+			"name": "Basic Fishing Equipment",
+			"source": "AAG",
+			"page": 0,
+			"type": "G",
+			"rarity": "none",
+			"value": 10,
+			"entries": [
+				"Basic Fishing Equipment includes a pole, a line, a hook, and either a lure or some bait.",
+				"Fishing is a popular pastime in Wildspace and the Astral Sea, though this activity isn't possible aboard a ship that is moving faster than its flying speed. At the end of each hour spent fishing, a character can make a DC 15 Wisdom ({@skill Survival}) check. A failed check indicates no fish is caught during that hour. On a successful check, roll a {@dice d10} and consult the Fishing table to determine the catch.",
+				{
+					"type": "table",
+					"caption": "",
+					"colLabels": [
+						"d10",
+						"Catch"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1\u20132",
+							"Tiny, inedible fish (a creature that consumes it is poisoned for 1 hour)"
+						],
+						[
+							"3\u20135",
+							"Tiny, edible fish (feeds one person)"
+						],
+						[
+							"6\u20138",
+							"Small, edible fish (feeds up to four people)"
+						],
+						[
+							"9",
+							"Hostile {@creature space eel|BAM} (see {@book Boo's Astral Menagerie|BAM}; feeds up to twelve people)"
+						],
+						[
+							"10",
+							"Hostile {@creature gray scavver|BAM} (see {@book Boo's Astral Menagerie|BAM}; feeds up to twenty people), some other creature of the DM's choosing, or an Tiny object of the DM's choosing"
+						]
+					]
+				}
+			]
+		},
+		{
 			"name": "Basic Poison (vial)",
 			"source": "PHB",
 			"page": 153,
@@ -3629,7 +3672,6 @@
 				}
 			],
 			"wondrous": true,
-			"weight": 0.01,
 			"recharge": "dawn",
 			"charges": 3,
 			"focus": [
@@ -3841,6 +3883,20 @@
 			"value": 200
 		},
 		{
+			"name": "Biza's Breath",
+			"source": "JttRC",
+			"page": 0,
+			"type": "G",
+			"rarity": "none",
+			"poison": true,
+			"entries": [
+				"A creature subjected to this poison must succeed on a DC 16 Constitution saving throw or become {@condition poisoned} for 1 minute. The {@condition poisoned} creature must use its action to make a melee attack against a randomly determined creature within its reach. If there is no other creature within its reach, the {@condition poisoned} creature does nothing on its turn. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+			],
+			"poisonTypes": [
+				"inhaled"
+			]
+		},
+		{
 			"name": "Black Chromatic Rose",
 			"source": "WBtW",
 			"page": 208,
@@ -3963,6 +4019,16 @@
 			]
 		},
 		{
+			"name": "Black Ghost Orchid Seed",
+			"source": "JttRC",
+			"page": 0,
+			"type": "G",
+			"rarity": "none",
+			"entries": [
+				"Every few years, a ghost orchid colony grows a black pod as thick as a human fist that holds three soft, black seeds. A creature that consumes one of these black seeds is affected by the spell {@spell feign death}. If the creature is unaware of the pod's effects or does not wish to be affected, it can resist the effect by succeeding on a DC 16 Constitution saving throw. Otherwise, it is considered to be a willing recipient of the spell."
+			]
+		},
+		{
 			"name": "Black Opal",
 			"source": "DMG",
 			"page": 134,
@@ -4051,7 +4117,7 @@
 					"name": "Devour Soul",
 					"type": "entries",
 					"entries": [
-						"Whenever you use it to reduce a creature to 0 hit points, the sword slays the creature devours its soul, unless it is a construct or an undead. A creature whose soul has been devoured by Blackrazor can be restored to life only by a {@spell wish} spell.",
+						"Whenever you use it to reduce a creature to 0 hit points, the sword slays the creature and devours its soul, unless it is a construct or an undead. A creature whose soul has been devoured by Blackrazor can be restored to life only by a {@spell wish} spell.",
 						"When it devours a soul, Blackrazor grants you temporary hit points equal to the slain creature's hit point maximum. These hit points fade after 24 hours. As long as these temporary hit points last and you keep Blackrazor in hand, you have advantage on attack rolls, saving throws, and ability checks.",
 						"If you hit an undead with this weapon, you take {@damage 1d10} necrotic damage and the target regains {@dice 1d10} hit points. If this necrotic damage reduces you to 0 hit points, Blackrazor devours your soul."
 					]
@@ -4864,6 +4930,27 @@
 			"age": "renaissance",
 			"entries": [
 				"As an action, a character can light this bomb and throw it at a point up to 60 feet away. Each creature within 5 feet of that point must succeed on a DC 12 Dexterity saving throw or take {@damage 3d6} fire damage."
+			]
+		},
+		{
+			"name": "Bombard",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 5000000,
+			"crew": 12,
+			"vehAc": 15,
+			"vehHp": 300,
+			"vehDmgThresh": 20,
+			"vehSpeed": 4,
+			"capCargo": 150,
+			"entries": [
+				"Bombards are built by giff. The major feature of each ship is an enormous cannon that fires massive cannon balls capable of blowing other ships to smithereens. (The cannon is included in the cost of the ship.) A bombard can carry up to fourteen giant cannon balls, each of which weighs 10 tons. These cannon balls make up most of the weight of the ship's cargo. A winch mounted on the aft deck is used to load the cannon balls on board.",
+				"A bombard can float and sail on water, but it can't land safely on the ground (its keel would cause it to roll on its side)."
+			],
+			"seeAlsoVehicle": [
+				"Bombard|AAG"
 			]
 		},
 		{
@@ -6494,7 +6581,6 @@
 				}
 			],
 			"wondrous": true,
-			"weight": 0.01,
 			"entries": [
 				"This Tiny pot bears relief scenes of heroes on its cast iron sides. You can use the cauldron as a spellcasting focus for your spells, and it functions as a suitable component for the {@spell scrying} spell. When you finish a long rest, you can use the cauldron to create a {@item potion of greater healing}. The potion lasts for 24 hours, then loses its magic if not consumed.",
 				"As an action, you can cause the cauldron to grow large enough for a Medium creature to crouch within. You can revert the cauldron to its normal size as an action, harmlessly shunting anything that can't fit inside to the nearest unoccupied space.",
@@ -8278,6 +8364,28 @@
 				"Magic Item Table G"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Damselfly Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2000000,
+			"crew": 9,
+			"vehAc": 19,
+			"vehHp": 200,
+			"vehDmgThresh": 15,
+			"vehSpeed": 8,
+			"capCargo": 5,
+			"entries": [
+				"This swift but cramped ship is made mostly of metal. It can't float on water, but its legs enable it to land safely on the ground. A sliding hatch just behind the wings allows access to the ship's mangonel turret. The ship's cargo hold can easily be turned into crew cabins or another weapon deck.",
+				"Damselfly ships are often used as courier vessels and armored transports. Explorers and pirates like them because they're fast and sturdy. Military leaders use them as command ships for the same reasons.",
+				"Damselfly ship owners are a proud lot, fond of painting their ships in colorful patterns as well as customizing their vessels with special equipment. Large, private gatherings of damselfly ship owners are not uncommon; they use these get-togethers to show off their ships and to race one another through asteroid belts and other obstacle courses, either for rewards or bragging rights."
+			],
+			"seeAlsoVehicle": [
+				"Damselfly Ship|AAG"
+			]
 		},
 		{
 			"name": "Dancing Monkey Fruit",
@@ -12284,6 +12392,46 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Faerie Dust",
+			"source": "SKT",
+			"page": 35,
+			"type": "OTH",
+			"rarity": "unknown (magic)",
+			"entries": [
+				"A pinch of this dust can substitute for the material components of any enchantment spell of 3rd level or lower. If a pinch of faerie dust is sprinkled on a creature, roll percentile dice and consult the Faerie Dust table to determine the effect.",
+				{
+					"type": "table",
+					"caption": "Faerie Dust",
+					"colLabels": [
+						"d100",
+						"Magical Effect"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"01-70",
+							"The creature sprinkled with dust gains a flying speed of 60 feet for 10 minutes."
+						],
+						[
+							"71-80 ",
+							"The creature sprinkled with dust must succeed on a DC 11 Constitution saving throw or fall {@condition unconscious} for 1 minute. The creature awakens if it takes damage or if it is shaken or slapped as an action."
+						],
+						[
+							"81-90",
+							"The creature sprinkled with dust must succeed on a DC 11 Wisdom saving throw or be affected by a {@spell confusion} spell."
+						],
+						[
+							"91-00",
+							"The creature sprinkled with dust becomes {@condition invisible} for 1 hour. Any equipment it is wearing or carrying is {@condition invisible} as long as it is on the creature's person. The effect on the creature ends if it attacks, deals any damage, or casts a spell."
+						]
+					]
+				}
+			]
+		},
+		{
 			"name": "Failed Experiment Wand",
 			"source": "AI",
 			"page": 162,
@@ -13220,6 +13368,17 @@
 			]
 		},
 		{
+			"name": "Fish Suit",
+			"source": "AAG",
+			"page": 22,
+			"rarity": "very rare",
+			"wondrous": true,
+			"entries": [
+				"This bulky suit, which fully encases your head and body, takes 1 minute to don or doff. While worn, it enables you to breathe in an airless environment and renders you immune to the harmful effects of any gas that surrounds you. The suit also grants you a swimming speed equal to your walking speed while underwater, or a flying speed equal to your walking speed in an environment with no gravity."
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Fishing Tackle",
 			"source": "PHB",
 			"page": 151,
@@ -13391,6 +13550,28 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Flying Fish Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2000000,
+			"crew": 10,
+			"vehAc": 15,
+			"vehHp": 250,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4.5,
+			"capCargo": 13,
+			"entries": [
+				"Aside from space galleons, flying fish ships are the most common vessels in Wildspace, favorites among merchants and adventurers alike.",
+				"A flying fish ship can float and sail on water, but it isn't built to land on the ground (the ventral fins would snap under the weight of the ship during landing, and the keel would cause the ship to roll to one side).",
+				"Typical weapons on a flying fish ship include a forward-mounted mangonel and an aftmounted ballista."
+			],
+			"seeAlsoVehicle": [
+				"Flying Fish Ship|AAG"
+			]
 		},
 		{
 			"name": "Folding Boat",
@@ -14820,7 +15001,6 @@
 				}
 			],
 			"wondrous": true,
-			"weight": 0.02,
 			"recharge": "dawn",
 			"charges": 3,
 			"entries": [
@@ -14990,6 +15170,43 @@
 			],
 			"lootTables": [
 				"Magic Item Table I"
+			],
+			"hasFluffImages": true
+		},
+		{
+			"name": "Hammerhead Ship",
+			"source": "AAG",
+			"page": 0,
+			"otherSources": [
+				{
+					"source": "SjA"
+				}
+			],
+			"type": "SPC",
+			"rarity": "none",
+			"value": 4000000,
+			"crew": 15,
+			"vehAc": 15,
+			"vehHp": 400,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4,
+			"capCargo": 30,
+			"entries": [
+				"Hammerhead ships are popular craft, especially among pirates and merchants carrying heavy cargo. They can float on water and sail across it, but they aren't built to land on the ground (their keels would cause them to tip to one side). Standard weapons on a hammerhead ship include fore and aft mangonels, a ballista, and a reinforced bow for ramming."
+			],
+			"seeAlsoVehicle": [
+				"Hammerhead Ship|AAG"
+			]
+		},
+		{
+			"name": "Hammock of Worlds",
+			"source": "JttRC",
+			"page": 214,
+			"rarity": "legendary",
+			"wondrous": true,
+			"entries": [
+				"The Hammock of Worlds is a colorful hammock woven with traditional Ataguan designs. It can be used only by a member of the order known as the Green Doctors.",
+				"You can use an action to unfold and place the Hammock of Worlds on a solid surface, whereupon it creates a two-way portal to the Ghost Orchid Tepui in the Feywild or to the Drought Elder in the Far Realm (the user's choice). You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once Hammock of Worlds has opened a portal, it can't do so again for {@dice 1d8} hours."
 			],
 			"hasFluffImages": true
 		},
@@ -18284,7 +18501,7 @@
 							"items": [
 								"You can speak Terran fluently.",
 								"You have resistance to acid damage.",
-								"You have {@sense tremorsense} out to a range of 60 feet.",
+								"You have {@sense tremorsense|MM} out to a range of 60 feet.",
 								"You can sense the presence of precious metals and stones within 60 feet of you, but not their exact location.",
 								"You can cast {@spell dominate monster} (save DC 17) on an {@creature earth elemental}. Once you have done so, Ironfang can't be used this way again until the next dawn."
 							]
@@ -18844,6 +19061,16 @@
 			]
 		},
 		{
+			"name": "Keg of Alchemist's Fire",
+			"source": "AAG",
+			"page": 0,
+			"type": "G",
+			"rarity": "none",
+			"entries": [
+				"A keg of alchemist's fire lobbed at a creature or an object deals 21 ({@damage 6d6}) fire damage on a hit. Further, the target is set ablaze and takes the damage again every round (in the case of a creature, at the start of each of its turns) until the fire is put out. A creature within reach of the blaze can take an action to smother the flames using a blanket or carpet, reducing the fire damage by {@dice 2d6}. Three such actions are needed to fully put out the fire."
+			]
+		},
+		{
 			"name": "Keoghtom's Ointment",
 			"source": "DMG",
 			"page": 179,
@@ -19222,6 +19449,28 @@
 			"value": 50,
 			"entries": [
 				"A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+			]
+		},
+		{
+			"name": "Lamprey Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2000000,
+			"crew": 15,
+			"vehAc": 15,
+			"vehHp": 250,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4,
+			"capCargo": 6,
+			"entries": [
+				"Lamprey ships are antiquated, being among the oldest spelljamming ships still in use. Psurlons (see Boo's Astral Menagerie) are particularly fond of them.",
+				"Using the metal grappling jaws built into its bow, a lamprey ship can attach itself to another ship, which is a critical feature during boarding actions. Other standard weapons include four ballistae on the main deck.",
+				"A lamprey can float on water, though it can't land safely on the ground. Lamprey ships that land on the ground have the distressing habit of rolling over, as more than a few crews have discovered to their dismay."
+			],
+			"seeAlsoVehicle": [
+				"Lamprey Ship|AAG"
 			]
 		},
 		{
@@ -19640,6 +19889,18 @@
 			]
 		},
 		{
+			"name": "Lesser Hammock of Worlds",
+			"source": "JttRC",
+			"page": 0,
+			"rarity": "legendary",
+			"wondrous": true,
+			"entries": [
+				"The Hammock of Worlds is a colorful hammock woven with traditional Ataguan designs.",
+				"You can use an action to unfold and place the lesser version of the Hammock of Worlds on a solid surface, whereupon it creates a two-way portal to another world or plane of existence. Each time the item opens a portal, the DM decides where it leads or the user can cause it to always reliably connect to the Ghost Orchid Tepui. You can use an action to close an open portal by taking hold of the edges of the cloth and folding it up. Once the lesser version of the Hammock of Worlds has opened a portal, it can't do so again for {@dice 1d8} hours."
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Libram of Souls and Flesh",
 			"source": "TCE",
 			"page": 129,
@@ -19921,6 +20182,29 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Living Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2500000,
+			"crew": 5,
+			"vehAc": 15,
+			"vehHp": 250,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4.5,
+			"capCargo": 10,
+			"entries": [
+				"Druids, rangers, and clerics devoted to gods of nature are often found aboard living ships, as are Wildspace explorers who don't want to have to worry about their ship's air envelope becoming fouled during a long voyage.",
+				"This ship's main distinctive feature is the fully grown {@creature treant} on the aft deck. The treant has a speed of 0 because its roots are woven into the deck; it and the ship are inseparable. If the ship is reduced to 0 hit points, the treant dies of shock. The ship can function if its treant dies, but the treant can never be replaced with another.",
+				"When the treant finishes a long rest, it repairs the ship's hull, enabling the ship to regain {@dice 4d12} hit points, and refreshes the ship's air envelope (turning deadly air into foul air, or foul air into fresh air).",
+				"A living ship can float on water and sail across it, but it can't land safely on the ground (its keel would cause it to roll on its side). Its standard weaponry is an aft-mounted ballista."
+			],
+			"seeAlsoVehicle": [
+				"Living Ship|AAG"
+			]
+		},
+		{
 			"name": "Loadstone",
 			"source": "TftYP",
 			"page": 228,
@@ -20155,7 +20439,7 @@
 					"type": "entries",
 					"name": "Enduring Vision",
 					"entries": [
-						"While holding the deck, you automatically succeed on Constitution saving throws made to maintain your concentration on {@spell divination} spells."
+						"While holding the deck, you automatically succeed on Constitution saving throws made to maintain your concentration on divination spells."
 					]
 				},
 				{
@@ -21816,17 +22100,15 @@
 				{
 					"race": "elf",
 					"alignment": [
-						"NX",
-						"NY",
+						"N",
 						"N"
 					]
 				},
 				{
 					"race": "half-elf",
 					"alignment": [
-						"NX",
-						"NY",
-						"N"
+						"N",
+						"G"
 					]
 				}
 			],
@@ -22112,6 +22394,27 @@
 				"While you are in an area that is lightly obscured, you can {@action Hide} as a bonus action even if you are being directly observed."
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Nautiloid",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 5000000,
+			"crew": 20,
+			"vehAc": 15,
+			"vehHp": 400,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4.5,
+			"capCargo": 17,
+			"entries": [
+				"Built and used by mind flayers, nautiloids are designed exclusively for space travel. They can't float on water, nor can they land safely on the ground.",
+				"As an action, a creature attuned to a nautiloid's spelljamming helm and in physical contact with the ship can transport the nautiloid and all creatures and objects aboard it to a different plane of existence, at or near a destination envisioned by the spelljammer (or to a random location on the plane if no destination is envisioned). This property is a feature of the ship, not the spelljamming helm. Each time this property is used, roll a {@dice d6}. On a 5\u20136, the property recharges after 1 minute; otherwise, it can't be used again for 24 hours."
+			],
+			"seeAlsoVehicle": [
+				"Nautiloid|AAG"
+			]
 		},
 		{
 			"name": "Navigation Orb",
@@ -22487,6 +22790,28 @@
 			"wondrous": true,
 			"entries": [
 				"Used to summon night, this 6-inch-diameter, jet-black orb is cold to the touch. You can spend 10 minutes to activate it, causing the area within 10 miles of it at the moment of activation to become night even if it is daytime. This night lasts for 24 hours, until you cancel it as an action, or until your attunement to the pearl ends. Once used, the pearl can't be used again for 24 hours."
+			]
+		},
+		{
+			"name": "Nightspider",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 5000000,
+			"crew": 25,
+			"vehAc": 19,
+			"vehHp": 300,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4.5,
+			"capCargo": 50,
+			"entries": [
+				"Neogi terrorize Wildspace in ships of their own construction, which others call nightspiders. These vessels often wait in ambush for other ships. Once a target ship is identified, the neogi try to steal its spelljamming helm and capture its crew.",
+				"A nightspider's crew usually consists of nineteen neogi and up to a half-dozen umber hulks, which the neogi use as shock troops.",
+				"Nightspiders are designed for space travel alone and can't float on water or land safely on the ground (the weight of the ship would snap its spindly legs, destroying its weblike rigging in the process). Standard weaponry on a nightspider includes four ballistae (two forward-facing and two aft-facing) and a forward-facing mangonel."
+			],
+			"seeAlsoVehicle": [
+				"Nightspider|AAG"
 			]
 		},
 		{
@@ -24319,46 +24644,6 @@
 			"entries": [
 				"This dark spider-silk cloak is made by {@creature drow}. It is a {@item cloak of elvenkind}. It also grants resistance to fire damage while you wear it. It loses its magic if exposed to sunlight for 1 hour without interruption.",
 				"While you wear this cloak with its hood up, Wisdom ({@skill Perception}) checks made to see you have disadvantage. and you have advantage on Dexterity ({@skill Stealth}) checks made to hide, as the cloak's color shifts to camouflage you. Pulling the hood up or down requires an action."
-			]
-		},
-		{
-			"name": "Pixie Dust",
-			"source": "SKT",
-			"page": 35,
-			"type": "OTH",
-			"rarity": "unknown (magic)",
-			"entries": [
-				"A pinch of this dust can substitute for the material components of any enchantment spell of 3rd level or lower. If a pinch of pixie dust is sprinkled on a creature, roll percentile dice and consult the Pixie Dust table to determine the effect.",
-				{
-					"type": "table",
-					"caption": "Pixie Dust",
-					"colLabels": [
-						"d100",
-						"Magical Effect"
-					],
-					"colStyles": [
-						"col-2 text-center",
-						"col-10"
-					],
-					"rows": [
-						[
-							"01-70",
-							"The creature sprinkled with dust gains a flying speed of 60 feet for 10 minutes."
-						],
-						[
-							"71-80 ",
-							"The creature sprinkled with dust must succeed on a DC 11 Constitution saving throw or fall {@condition unconscious} for 1 minute. The creature awakens if it takes damage or if it is shaken or slapped as an action."
-						],
-						[
-							"81-90",
-							"The creature sprinkled with dust must succeed on a DC 11 Wisdom saving throw or be affected by a {@spell confusion} spell."
-						],
-						[
-							"91-00",
-							"The creature sprinkled with dust becomes {@condition invisible} for 1 hour. Any equipment it is wearing or carrying is {@condition invisible} as long as it is on the creature's person. The effect on the creature ends if it attacks, deals any damage, or casts a spell."
-						]
-					]
-				}
 			]
 		},
 		{
@@ -28908,6 +29193,26 @@
 			]
 		},
 		{
+			"name": "Scorpion Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2500000,
+			"crew": 12,
+			"vehAc": 19,
+			"vehHp": 250,
+			"vehDmgThresh": 15,
+			"vehSpeed": 3.5,
+			"capCargo": 12,
+			"entries": [
+				"Scorpion ships are archaic metal warships that have never lost their popularity, largely because of their versatility. Articulated legs enable a scorpion ship to land safely on the ground and move across a solid surface at a walking speed of 30 feet. The ship can't float on water, however. A ballista is mounted on the top deck, and a mangonel is perched on the end of the tail. The ship's two claws are relatively inefficient in combat, but a claw that grabs a creature can quickly take it out of action."
+			],
+			"seeAlsoVehicle": [
+				"Scorpion Ship|AAG"
+			]
+		},
+		{
 			"name": "Scribe's Pen",
 			"source": "ERLW",
 			"page": 278,
@@ -29766,6 +30071,27 @@
 			"value": 200
 		},
 		{
+			"name": "Shrike Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2000000,
+			"crew": 11,
+			"vehAc": 15,
+			"vehHp": 250,
+			"vehDmgThresh": 15,
+			"vehSpeed": 8,
+			"capCargo": 20,
+			"entries": [
+				"This swift vessel is a relatively recent design, quickly gaining popularity with merchants and pirates. A shrike ship's legs enable it to land safely on the ground. The ship can float but isn't built for traveling on water and sinks quickly in rough seas.",
+				"Standard weaponry on a shrike ship includes three ballistae\u2014one on the forecastle, one in the middle of the top deck, and one on the sterncastle. In a desperate situation, the ship's reinforced bow can be used as a piercing ram."
+			],
+			"seeAlsoVehicle": [
+				"Shrike Ship|AAG"
+			]
+		},
+		{
 			"name": "Signal Whistle",
 			"source": "PHB",
 			"page": 150,
@@ -30387,7 +30713,6 @@
 			"rarity": "uncommon",
 			"reqAttune": true,
 			"wondrous": true,
-			"bonusAc": "+1",
 			"modifySpeed": {
 				"equal": {
 					"fly": "walk"
@@ -30514,7 +30839,7 @@
 			"age": "modern",
 			"entries": [
 				"As an action, a character can throw a grenade at a point up to 60 feet away. With a grenade launcher, the character can propel the grenade up to 120 feet away.",
-				"One round after a smoke grenade, lands, it emits a cloud of smoke that creates a heavily obscured area in a 20-foot radius. A moderate wind (at least 10 miles per hour) disperses the smoke in 4 rounds; a strong wind (20 or more miles per hour) disperses it in 1 round."
+				"One round after a smoke grenade lands, it emits a cloud of smoke that creates a heavily obscured area in a 20-foot radius. A moderate wind (at least 10 miles per hour) disperses the smoke in 4 rounds; a strong wind (20 or more miles per hour) disperses it in 1 round."
 			]
 		},
 		{
@@ -30712,6 +31037,26 @@
 				"Magic Item Table E"
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Space Galleon",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 3000000,
+			"crew": 20,
+			"vehAc": 15,
+			"vehHp": 400,
+			"vehDmgThresh": 15,
+			"vehSpeed": 4,
+			"capCargo": 20,
+			"entries": [
+				"The space galleon is a mainstay among the host of vessels that ply Wildspace and the Astral Sea. Space galleons can easily pass for ordinary seafaring galleons. Because they can land on water and move across it like their namesakes, they can sail into ports on terrestrial worlds without attracting undue attention. Like an ordinary galleon, a space galleon isn't built to land on the ground (its keel would cause it to roll on its side). The ship's standard weaponry includes two forward-mounted ballistae and an aft-mounted mangonel."
+			],
+			"seeAlsoVehicle": [
+				"Space Galleon|AAG"
+			]
 		},
 		{
 			"name": "Speaking Stone",
@@ -31239,6 +31584,48 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Spelljamming Helm",
+			"source": "AAG",
+			"page": 23,
+			"rarity": "rare",
+			"reqAttune": "by a spellcaster",
+			"reqAttuneTags": [
+				{
+					"spellcasting": true
+				}
+			],
+			"wondrous": true,
+			"entries": [
+				"The function of this ornate chair is to propel and maneuver a ship on which it has been installed through space and air. It can also propel and maneuver a ship on water or underwater, provided the ship is built for such travel. The ship in question must weigh 1 ton or more.",
+				"The sensation of being attuned to a spelljamming helm is akin to the pins-and-needles effect one experiences after one's arm or leg falls asleep, but not as painful.",
+				"While attuned to a spelljamming helm and sitting in it, you gain the following abilities for as long as you maintain concentration (as if concentrating on a spell):",
+				{
+					"type": "list",
+					"items": [
+						"You can use the spelljamming helm to move the ship through space, air, or water up to the ship's speed. If the ship is in space and no other objects weighing 1 ton or more are within 1 mile of it, you can use the spelljamming helm to move the vessel fast enough to travel 100 million miles in 24 hours.",
+						"You can steer the vessel, albeit in a somewhat clumsy fashion, in much the way that a rudder or oars can be used to maneuver a seafaring ship.",
+						"At any time, you can see and hear what's happening on and around the vessel as though you were standing in a location of your choice aboard it."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Transfer Attunement",
+					"entries": [
+						"You can use an action to touch a willing spellcaster. That creature attunes to the spelljamming helm immediately, and your attunement to it ends."
+					]
+				},
+				{
+					"type": "inset",
+					"name": "Cost of a Spelljamming Helm",
+					"entries": [
+						"A spelljamming helm propels and steers a ship much as sails, oars, and rudders work on a seafaring vessel, and a spelljamming helm is easy to create if one has the proper spell. {@spell Create spelljamming helm|AAG} has a material component cost of 5,000 gp, so that's the least one can pay to acquire a spelljamming helm.",
+						"Wildspace merchants, including {@creature dohwar|BAM|dohwars} and {@creature mercane|BAM|mercanes} (both described in {@book Boo's Astral Menagerie|BAM}), typically sell a spelljamming helm for substantially more than it cost to make. How much more depends on the market, but 7,500 gp would be a reasonable demand. A desperate buyer in a seller's market might pay 10,000 gp or more."
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Spellshard",
 			"source": "ERLW",
 			"page": 279,
@@ -31526,6 +31913,32 @@
 			"wondrous": true,
 			"entries": [
 				"At rank 2, your Head Office-supplied spyglass becomes a common magic item. As an action, you can look through the spyglass of clairvoyance at a location within 1 mile of you that is obstructing your view, such as a mountain, castle, or forest. You must then succeed on a DC 15 Wisdom check using {@item cartographer's tools|phb} to map the natural terrain found within three miles of that chosen point. You do not gain any knowledge of creatures, structures, or anything other than natural terrain. This property of the spyglass cannot be used again until the next dawn."
+			]
+		},
+		{
+			"name": "Squid Ship",
+			"source": "AAG",
+			"page": 0,
+			"otherSources": [
+				{
+					"source": "SjA"
+				}
+			],
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2500000,
+			"crew": 13,
+			"vehAc": 15,
+			"vehHp": 300,
+			"vehDmgThresh": 15,
+			"vehSpeed": 3.5,
+			"capCargo": 20,
+			"entries": [
+				"Among the oldest types of spelljamming vessels, squid ships are popular with privateers and are often used as patrol ships. Standard weapons on a squid ship include a forward-mounted mangonel, two aft-mounted ballistae, and a reinforced bow for ramming. The tentacles that extend from the bow account for nearly half the ship's keel length.",
+				"Squid ships can float and sail on water, and they can land on the ground."
+			],
+			"seeAlsoVehicle": [
+				"Squid Ship|AAG"
 			]
 		},
 		{
@@ -32536,6 +32949,27 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Star Moth",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 4000000,
+			"crew": 13,
+			"vehAc": 13,
+			"vehHp": 400,
+			"vehDmgThresh": 15,
+			"vehSpeed": 5.5,
+			"capCargo": 30,
+			"entries": [
+				"Star moths are ships constructed and flown by astral elves, who don't like it when these ships end up in the hands of others.",
+				"A star moth's hull is fashioned from a grown and sculpted organic substance, and its enormous, decorative wings are made of shimmering crystal. The vessel is built for space travel, but its design does enable it to float on water or land safely on the ground. Standard weaponry includes two ballistae nestled in the star moth's eye holes and a mangonel mounted above the bridge."
+			],
+			"seeAlsoVehicle": [
+				"Star Moth|AAG"
+			]
+		},
+		{
 			"name": "Star rose quartz",
 			"source": "DMG",
 			"page": 134,
@@ -32711,6 +33145,7 @@
 				}
 			},
 			"rarity": "rare",
+			"bonusAc": "+1",
 			"entries": [
 				"This ornament can be jewelry, a cloak, or another wearable accessory. It appears to be fashioned from a dragon's scale, tooth, or claw, or it incorporates images in those shapes.",
 				"You gain a +1 bonus to AC, and you can't be {@condition charmed} or {@condition frightened}. Moreover, each creature of your choice within 30 feet of you has advantage on saving throws it makes to avoid being {@condition charmed} or {@condition frightened} or to end those conditions on itself."
@@ -33228,7 +33663,8 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"C"
+						"C",
+						"G"
 					]
 				}
 			],
@@ -33259,6 +33695,7 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
+						"C",
 						"E"
 					]
 				}
@@ -33290,8 +33727,7 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"NX",
-						"NY",
+						"L",
 						"N"
 					]
 				}
@@ -33323,8 +33759,7 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"NX",
-						"NY",
+						"C",
 						"N"
 					]
 				}
@@ -33356,9 +33791,8 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"NX",
-						"NY",
-						"N"
+						"N",
+						"G"
 					]
 				}
 			],
@@ -33389,8 +33823,6 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"NX",
-						"NY",
 						"N"
 					]
 				}
@@ -33422,7 +33854,8 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"L"
+						"L",
+						"G"
 					]
 				}
 			],
@@ -33453,6 +33886,7 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
+						"L",
 						"E"
 					]
 				}
@@ -33484,9 +33918,8 @@
 			"reqAttuneTags": [
 				{
 					"alignment": [
-						"NX",
-						"NY",
-						"N"
+						"N",
+						"E"
 					]
 				}
 			],
@@ -33899,6 +34332,18 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Talarith",
+			"source": "BAM",
+			"page": 47,
+			"rarity": "legendary",
+			"reqAttune": "by a reigar who created it",
+			"wondrous": true,
+			"entries": [
+				"The {@creature reigar|BAM} who creates this piece of jewelry chooses its form: bracelet, brooch, diadem, or necklace. While the reigar wears the talarith, any weapon wielded by the {@creature reigar|BAM} deals an extra {@damage 1d6} force damage when it hits.",
+				"As an action, a reigar can use its talarith to summon a golem that looks just like the reigar. The golem obeys the reigar's commands and uses the {@creature reigar|BAM|reigar's} statistics, except it is a Construct that doesn't have a talarith of its own. The golem vanishes after 1 hour, or when it is reduced to 0 hit points. After summoning a golem, the reigar must finish a short or long rest before this property can be used again."
+			]
 		},
 		{
 			"name": "Talisman of Pure Good",
@@ -37325,6 +37770,27 @@
 			]
 		},
 		{
+			"name": "Turtle Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 4000000,
+			"crew": 16,
+			"vehAc": 19,
+			"vehHp": 300,
+			"vehDmgThresh": 15,
+			"vehSpeed": 3,
+			"capCargo": 30,
+			"entries": [
+				"A turtle ship is encased in a protective metal shell, as befits its name, and bristles with weapons. In addition to its roomy quarters, it can carry a decent- sized payload, making it popular among traders and others who need a lot of cargo space. The ship can land on the ground, and it floats on water. Sliding panels can be closed to make the hull airtight, enabling the ship to travel underwater safely, even to great depths. If the ship takes damage while on or under the water, interior hatches can be sealed to prevent the ship from flooding completely.",
+				"Standard weaponry on a turtle ship includes three forward-mounted ballistae and a rear-facing mangonel. These weapons can't be used while the ship is underwater."
+			],
+			"seeAlsoVehicle": [
+				"Turtle Ship|AAG"
+			]
+		},
+		{
 			"name": "Two-Birds Sling",
 			"source": "MOT",
 			"page": 198,
@@ -37358,6 +37824,27 @@
 			"value": 200,
 			"entries": [
 				"A simple and portable canvas shelter, a tent sleeps two."
+			]
+		},
+		{
+			"name": "Tyrant Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"crew": 10,
+			"vehAc": 17,
+			"vehHp": 300,
+			"vehDmgThresh": 20,
+			"vehSpeed": 4.5,
+			"capCargo": 20,
+			"entries": [
+				"Beholders carve tyrant ships out of stone using their disintegration rays and use these ships to wander the Astral Plane, looking for worlds to conquer and rival beholders to destroy. No two tyrant ships look alike, but they all have one or more features reminiscent of their creators, such as a bulbous shape and eyestalks.",
+				"A spherical chamber on the ship's command deck functions as a spelljamming helm that only beholders can attune to. Any beholder that occupies this chamber can attune to it. Reducing a tyrant ship to 0 hit points not only destroys it but also destroys the ship's spelljamming helm and eyestalk cannons.",
+				"A tyrant ship can't float on water, but it can safely land on the ground."
+			],
+			"seeAlsoVehicle": [
+				"Tyrant Ship|AAG"
 			]
 		},
 		{
@@ -38549,6 +39036,27 @@
 			]
 		},
 		{
+			"name": "Wasp Ship",
+			"source": "AAG",
+			"page": 0,
+			"type": "SPC",
+			"rarity": "none",
+			"value": 2000000,
+			"crew": 5,
+			"vehAc": 15,
+			"vehHp": 250,
+			"vehDmgThresh": 15,
+			"vehSpeed": 5.5,
+			"capCargo": 10,
+			"entries": [
+				"Wasp ships are lightweight wooden vessels capable of landing safely on the ground, but not on water. They appeal to adventurers because they're affordable and don't require a large crew. Pirates like them because they're swift. Aristocrats are fond of using them as flying yachts because the ship's cargo hold can be easily converted into posh living quarters.",
+				"The ship's raised back provides high ground for a weapon emplacement, which is typically equipped with a ballista."
+			],
+			"seeAlsoVehicle": [
+				"Wasp Ship|AAG"
+			]
+		},
+		{
 			"name": "Watchful Helm",
 			"source": "CM",
 			"page": 183,
@@ -39137,6 +39645,16 @@
 			]
 		},
 		{
+			"name": "White Ghost Orchid Seed",
+			"source": "JttRC",
+			"page": 0,
+			"type": "G",
+			"rarity": "none",
+			"entries": [
+				"More rarely, the orchids produce a smaller pod holding a single white seed. Among its various magical properties, if a white seed is ground and scattered over a dead body, the body is affected by the {@spell resurrection} spell. A white ghost orchid seed has no effect if consumed."
+			]
+		},
+		{
 			"name": "Wildroot",
 			"source": "ToA",
 			"page": 205,
@@ -39145,6 +39663,16 @@
 			"value": 2500,
 			"entries": [
 				"Introducing the juice of a wildroot into a {@condition poisoned} creature's bloodstream (for example, by rubbing it on an open wound) rids the creature of the {@condition poisoned} condition. Once used in this way, a wildroot loses this property."
+			]
+		},
+		{
+			"name": "Wildspace Orrery",
+			"source": "AAG",
+			"page": 23,
+			"rarity": "uncommon",
+			"wondrous": true,
+			"entries": [
+				"Inside a Wildspace system, this portable arcane device automatically tracks the positions and movements of all suns, planets, moons, and comets within that system, projecting a display of all these bodies in the space above its current location. In that display, a white, pulsating pinprick of light marks the orrery's location."
 			]
 		},
 		{
@@ -40916,6 +41444,12 @@
 				}
 			],
 			"wondrous": true,
+			"entries": [
+				"An instrument of the bards is an exquisite example of its kind, superior to an ordinary instrument in every way. Seven types of these instruments exist, each named after a legendary bard college. A creature that attempts to play the instrument without being attuned to it must succeed on a DC 15 Wisdom saving throw or take {@damage 2d4} psychic damage.",
+				"You can use an action to play the instrument and cast one of its spells. Once the instrument has been used to cast a spell, it can't be used to cast that spell again until the next dawn. The spells use your spellcasting ability and spell save DC.",
+				"You can play the instrument while casting a spell that causes any of its targets to be {@condition charmed} on a failed saving throw, thereby imposing disadvantage on the save. This effect applies only if the spell has a somatic or a material component.",
+				"All instruments of the bards can be used to cast the following spells: {@spell fly}, {@spell invisibility}, {@spell levitate}, and {@spell protection from evil and good}."
+			],
 			"items": [
 				"Instrument of the Bards, Anstruth Harp",
 				"Instrument of the Bards, Canaith Mandolin",
@@ -40924,6 +41458,12 @@
 				"Instrument of the Bards, Fochlucan Bandore",
 				"Instrument of the Bards, Mac-Fuirmidh Cittern",
 				"Instrument of the Bards, Ollamh Harp"
+			],
+			"attachedSpells": [
+				"fly",
+				"invisibility",
+				"levitate",
+				"protection from evil and good"
 			]
 		},
 		{

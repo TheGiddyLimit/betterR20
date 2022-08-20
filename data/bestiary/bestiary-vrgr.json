@@ -98,7 +98,8 @@
 				}
 			],
 			"traitTags": [
-				"Rejuvenation"
+				"Rejuvenation",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -204,6 +205,9 @@
 						"The boneless wraps its body around a Large or smaller creature {@condition grappled} by it. While the boneless is attached, the target is {@condition blinded} and is unable to breathe. The target must succeed on a {@dc 13} Strength saving throw at the start of each of the boneless' turns or take 5 ({@damage 1d4 + 3}) bludgeoning damage. If something moves the target, the boneless moves with it. The boneless can detach itself by spending 5 feet of its movement. A creature, including the target, can use its action to try to detach the boneless and force it to move into the nearest unoccupied space, doing so with a successful {@dc 13} Strength check. When the boneless dies, it detaches from any creature it is attached to."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -355,7 +359,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -548,6 +553,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"damageTags": [
 				"N",
 				"P"
@@ -634,6 +642,9 @@
 						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) piercing damage, and the target must succeed on a {@dc 10} Constitution saving throw or be {@condition restrained} as it begins to turn to stone. The target must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the target is {@condition petrified} for 10 minutes."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"damageTags": [
 				"N",
@@ -784,7 +795,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -1039,7 +1051,8 @@
 				}
 			],
 			"traitTags": [
-				"Incorporeal Movement"
+				"Incorporeal Movement",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -1179,7 +1192,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -1241,7 +1255,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 2}) piercing damage plus 3 ({@damage 1d6}) force damage."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d4 + 2}) piercing damage plus 3 ({@damage 1d6}) force damage."
 					]
 				}
 			],
@@ -1967,6 +1981,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -2118,7 +2135,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -2289,7 +2307,8 @@
 				"SD"
 			],
 			"actionTags": [
-				"Multiattack"
+				"Multiattack",
+				"Shapechanger"
 			],
 			"languageTags": [
 				"C",
@@ -2424,7 +2443,8 @@
 			"traitTags": [
 				"Legendary Resistances",
 				"Rejuvenation",
-				"Spider Climb"
+				"Spider Climb",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -2559,7 +2579,8 @@
 			"traitTags": [
 				"Regeneration",
 				"Spider Climb",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -2578,6 +2599,7 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -2642,6 +2664,9 @@
 						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) bludgeoning damage."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -2895,18 +2920,18 @@
 							"headerEntries": [
 								"The priest casts one of the following spells, requiring no components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
 							],
-							"daily": {
-								"1e": [
-									"{@spell animate dead}",
-									"{@spell create undead}"
-								]
-							},
 							"will": [
 								{
 									"entry": "{@spell circle of death}",
 									"hidden": true
 								}
 							],
+							"daily": {
+								"1e": [
+									"{@spell animate dead}",
+									"{@spell create undead}"
+								]
+							},
 							"ability": "int",
 							"displayAs": "action"
 						}
@@ -3108,7 +3133,8 @@
 			],
 			"traitTags": [
 				"Legendary Resistances",
-				"Regeneration"
+				"Regeneration",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -3759,6 +3785,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -4235,7 +4264,7 @@
 			],
 			"bonus": [
 				{
-					"name": "Disrupt Psyche (Recharge 5-6)",
+					"name": "Disrupt Psyche {@recharge 5}",
 					"entries": [
 						"The mind flayer magically emits psionic energy in a 30-foot-radius sphere centered on itself. Each creature in that area must succeed on a {@dc 15} Intelligence saving throw or be {@condition incapacitated} for 1 minute. The {@condition incapacitated} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
 					]
@@ -4243,7 +4272,8 @@
 			],
 			"traitTags": [
 				"Spider Climb",
-				"Sunlight Sensitivity"
+				"Sunlight Sensitivity",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"SD"
@@ -4490,7 +4520,8 @@
 				}
 			],
 			"traitTags": [
-				"Undead Fortitude"
+				"Undead Fortitude",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -4602,7 +4633,8 @@
 				}
 			],
 			"traitTags": [
-				"Undead Fortitude"
+				"Undead Fortitude",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"

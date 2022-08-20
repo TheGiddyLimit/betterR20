@@ -5405,7 +5405,7 @@
 			"level": 1,
 			"header": 1,
 			"entries": [
-				"The arcane magic you command is infused with elemental air. You can speak, read, and write {@language Primordial}. Knowing this language allows you to understand and be understood by those who speak its dialects: {@language Aquan}, {@language Auran}, {@language Ignan}, and {@language Terran}."
+				"The arcane magic you command is infused with elemental air. You can speak, read, and write {@language Primordial}. Knowing this language allows you to understand and be understood by those who speak its dialects: {@language Primordial||Aquan}, {@language Primordial||Auran}, {@language Primordial||Ignan}, and {@language Primordial||Terran}."
 			]
 		},
 		{

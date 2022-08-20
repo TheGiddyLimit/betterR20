@@ -1,0 +1,314 @@
+{
+	"monsterFluff": [
+		{
+			"name": "Aurumvorax",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Early in life, aurumvoraxes cooperate with siblings and their den leader parents, digging tunnels in search of metal and other burrowing prey. As they grow to adulthood, aurumvoraxes hunt on their own, carving out territories they viciously defend."
+					]
+				}
+			]
+		},
+		{
+			"name": "Aurumvorax Den Leader",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Aurumvoraxes that feed on a steady supply of precious metals gradually grow in size. These aurumvoraxes are faster and deadlier than others of their kind."
+					]
+				},
+				{
+					"type": "section",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "Aurumvorax",
+							"entries": [
+								"An aurumvorax is an eight-legged, badger-like hunter. These aggressive omnivores attack any prey they think they can best, ambushing even creatures double their size. They supplement their diets with metal, whether it's worked or ore, and they have a particular taste for gold. This diet lends aurumvorax fur its golden sheen.",
+								"Alone or in small groups, aurumvoraxes dig deep in search of precious metals. Such exploration often leads them into conflict with subterranean settlements. As defenders of such communities often wear metal armor, aurumvoraxes prioritize attacking armored foes\u2014whether that armor is metal or not."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Aurumvorax Den Leader.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Bakunawa",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Worshiped as draconic avatars of storm and tide, bakunawa soar over the archipelagos they call home. Iridescent scales crackling with lightning cover a bakunawa's fearsome serpentine body, and the sharp movements of its mighty wings echo with thunderous winds. Known for their mercilessness in battle, bakunawa swallow whole any who challenge them."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Bakunawa.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Dinosaur Skeleton",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"These giant skeletons were unearthed shortly before the silver in the mine ran out, inspiring talk that the mine was cursed. When Teocín first joined Itzmin here, she drew on the power of Pazuzu to turn these skeletons into guardians."
+					]
+				}
+			]
+		},
+		{
+			"name": "Dragon Hunter",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"They were raised together and share conviction that they must slay the bakunawa as vengeance for wrongs done to their clan."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Dragon Hunter.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Haint",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Rising from the sorrowful dead, haints are spirits that change their shape in tragic imitation of what they once were. A haint can shift from its spectral form to appear as the corporeal Humanoid it was in life, passing as a living creature. These spirits might mistakenly view innocents as those who killed them or entreat mortals to exact revenge on their behalf."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Haint.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Jijibisha Manivarshi",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Jijibisha Manivarshi, a vicious soul from the land's past, lurks in the nearby forest. Long ago she made a deal with wicked otherworldly forces that gave her longevity and fiendish powers, a bargain that ultimately resulted in the ruin of Manivarsha.",
+						"Despite her fiendish powers, she looks like an ancient, withered human."
+					]
+				}
+			]
+		},
+		{
+			"name": "Nightsea chil-liren",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Janya is populated by descendants of Djaynai who escaped into the sea during the Passage of Vultures. The magic of Djaynaian transmuters and that of the Nightsea itself gave these people the ability to live beneath the waves. Now known as Nightsea chil-liren, the people of Janya look similar to the humans of Djaynai, but their brown skin is often tinged shades of gray, and eel-like fins run along their arms and legs."
+					]
+				}
+			]
+		},
+		{
+			"name": "Pari",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"A pari is an angelic harbinger gifted with foresight. A visit from a pari is often a prophetic warning or portent of an event yet to come. Pari have pastel blue skin, wear robes and armor, and have two sets of wings with vivid red feathers sprouting from their back."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Pari.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Riverine",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"More than mere waterway guardians, riverines are embodiments of particular rivers. These spirits of nature take shape to defend their waters and interact with those who travel along their currents. From the waist up, riverines have skin the color of the waters they protect but are otherwise humanlike in appearance. From the waist down, they can manifest either humanlike legs or churning gouts of water. A riverine's personality reflects the nature of the river it arises from\u2014some are lethargic while others are wild and reckless."
+					]
+				},
+				{
+					"type": "section",
+					"entries": [
+						{
+							"type": "entries",
+							"name": "A Riverine's Lair",
+							"entries": [
+								"Some riverines enjoy reverence akin to worship. Their likenesses are cast as statues and housed in temples, and worshipers act as agents between the river spirits and the people who revere them. These temples often become the home of the riverine itself, serving as its lair, though other nexuses of power along the river's path\u2014such as its source or a significant waterfall\u2014can also be used as lairs by a riverine.",
+								"A riverine encountered in its lair has a challenge rating of 13 (10,000 XP)."
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Riverine.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Soul Shaker",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"A grasping mass of Humanoid limbs, a soul shaker is an obsessive claimer of corpses and collector of body parts. These nightmarish creatures arise from ghoulish collections of severed limbs exposed to necromantic energies or when numerous crawling claws form a cooperative relationship.",
+						"Most of a soul shaker's victims have their vitality drained and their flesh pulverized by its many arms. However, should a soul shaker encounter someone with an impressionable mind, the creature attempts to charm the individual, using them as a lure to tempt others into its hunting grounds.",
+						"If defeated, a soul shaker disperses into several skittering, animate limbs. The terror can only truly be vanquished by destroying these disembodied appendages. If more than one of these pieces escape, the soul shaker reforms over the course of days and begins hunting once more."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Soul Shaker.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tlacatecolo",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Appearing as plague-stricken, bipedal owls, tlacatecolo sow sickness and feed on the suffering of mortals. These fiends spread an affliction that leaches heat and life from the living, dispersing it upon winds that rattle like a gasp from a frozen body. Sunlight staves off the disease, but those affected rarely survive the dark of night."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Tlacatecolo.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tlexolotl",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Tlexolotls are gigantic, salamander-like creatures that slumber deep in the magma of dormant volcanoes. A tlexolotl drowses amid the molten depths for centuries, rising only rarely to gorge itself on massive amounts of animal and plant life before returning to its slumber. Should a tlexolotl's sleep be disturbed\u2014whether by intruders in its volcanic lair or the eruption of its molten home\u2014the lava-drenched brute emerges in a rage, rampaging forth until its belly is full and its volcano is quiet once more.",
+						"Despite a tlexolotl's destructive prowess, the land around its volcano is often naturally abundant. It's common for those who live nearby to honor the tlexolotl as a protector of the land, as the ash it creates rejuvenates the soil and encourages life to flourish."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Tlexolotl.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Whistler",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Whistlers are inscrutable stalkers hailing from airy, screeching reaches of the Far Realm. They are difficult to see as they're not tethered to one point in space, blurring in a state of perpetual physical uncertainty. A dead whistler appears as a gray, featureless, humanlike biped with long limbs and thin fingers. Those stalked by a whistler can't shut out its soundless, seven-note tune, an otherworldly melody that invades and scourges the mind. Few creatures that encounter a whistler escape; those that do are forever haunted by the stalker's frightful tune."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Whistler.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Wynling",
+			"source": "JttRC",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						"Playful and mischievous, wynlings defend mountain heights and alpine vales against trespassers. A wynling rarely engages a threat directly, preferring to deter intruders by harassing them with thefts and pranks. Many travelers return from lands protected by wynlings with stories of vanishing equipment and curious eyes staring from the shadows.",
+						"Wynlings typically live on the mountains they protect, but they often venture into nearby settlements, lured by high-spirited music and sweet foods. Away from their open, wild homes, wynlings cause all manner of mysterious accidents."
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/JttRC/Wynling.webp"
+					}
+				}
+			]
+		}
+	]
+}

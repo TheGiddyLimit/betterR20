@@ -10,7 +10,10 @@
 			"monster": {
 				"MTF": "OotA"
 			}
-		}
+		},
+		"internalCopies": [
+			"monster"
+		]
 	},
 	"monster": [
 		{
@@ -128,7 +131,16 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Awakened Zurkhwood",
@@ -370,7 +382,8 @@
 			"senseTags": [
 				"D",
 				"T"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Chamberlain of Zuggtmoy",
@@ -606,27 +619,6 @@
 			"cr": "3",
 			"trait": [
 				{
-					"name": "(Optional) Indefinite Madness",
-					"entries": [
-						{
-							"type": "inline",
-							"entries": [
-								"Horgar has been affected by the demon lords let loose in the Abyss during the Rage of Demons storyline. Roll on the ",
-								{
-									"type": "link",
-									"href": {
-										"type": "internal",
-										"path": "variantrules.html",
-										"hash": "madness_dmg"
-									},
-									"text": "Indefinite Madness table"
-								},
-								" to determine Horgar's flaw."
-							]
-						}
-					]
-				},
-				{
 					"name": "Duergar Resilience",
 					"entries": [
 						"Horgar has advantage on saving throws against poison, spells, and illusions, as well as to resist being {@condition charmed} or {@condition paralyzed}."
@@ -721,7 +713,186 @@
 			"conditionInflict": [
 				"invisible"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Derro",
+			"source": "OotA",
+			"page": 224,
+			"reprintedAs": [
+				"Derro|MTF"
+			],
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"derro"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 13,
+				"formula": "3d6 + 3"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 5,
+			"cha": 9,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Insanity",
+					"entries": [
+						"The derro has advantage on saving throws against being {@condition charmed} or {@condition frightened}."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The derro has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooked Shortspear",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}1 ({@damage 1d4 - 1}) piercing damage. If the target is a creature, the derro can choose to deal no damage and try to trip the target instead, in which case the target must succeed on a {@dc 9} Strength saving throw or fall {@condition prone}."
+					]
+				},
+				{
+					"name": "Light Repeating Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 40/160 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"damageTags": [
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Derro Savant",
+			"source": "OotA",
+			"page": 224,
+			"reprintedAs": [
+				"Derro Savant|MTF"
+			],
+			"_copy": {
+				"name": "Derro",
+				"source": "OotA"
+			},
+			"hp": {
+				"average": 49,
+				"formula": "11d6 + 11"
+			},
+			"cha": 14,
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The derro savant is a 5th-level spellcaster. Its spellcasting ability is Charisma (spell save {@dc 12}, {@hit 4} to hit with spell attacks). The derro knows the following sorcerer spells:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell acid splash}",
+								"{@spell mage hand}",
+								"{@spell message}",
+								"{@spell ray of frost}"
+							]
+						},
+						"1": {
+							"slots": 4,
+							"spells": [
+								"{@spell burning hands}",
+								"{@spell chromatic orb}",
+								"{@spell sleep}"
+							]
+						},
+						"2": {
+							"slots": 3,
+							"spells": [
+								"{@spell invisibility}",
+								"{@spell spider climb}"
+							]
+						},
+						"3": {
+							"slots": 2,
+							"spells": [
+								"{@spell blink}",
+								"{@spell lightning bolt}"
+							]
+						}
+					},
+					"ability": "cha"
+				}
+			],
+			"spellcastingTags": [
+				"CS"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Droki",
@@ -1779,7 +1950,8 @@
 			"speed": {
 				"walk": 25
 			},
-			"hasToken": true
+			"hasToken": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Ghazrim DuLoc",
@@ -1907,9 +2079,7 @@
 				"walk": 20,
 				"climb": 10
 			},
-			"traitTags": [
-				"Water Breathing"
-			],
+			"traitTags": [],
 			"hasToken": true
 		},
 		{
@@ -1933,7 +2103,9 @@
 			"languages": [
 				"telepathy 60 ft."
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Grazilaxx",
@@ -2131,7 +2303,8 @@
 				"Elvish",
 				"Undercommon",
 				"Common"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Hook Horror Spore Servant",
@@ -2991,7 +3164,12 @@
 						"flags": "i"
 					}
 				}
-			}
+			},
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Narrak",
@@ -3248,10 +3426,6 @@
 			"_copy": {
 				"name": "Drow Priestess of Lolth",
 				"source": "MM",
-				"_trait": {
-					"name": "Drow",
-					"source": "PHB"
-				},
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
@@ -3382,7 +3556,8 @@
 					},
 					"ability": "wis"
 				}
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Regenerating Black Pudding",
@@ -3719,7 +3894,7 @@
 				"N"
 			],
 			"skill": {
-				"acrobatics": "+3",
+				"acrobatics": "+6",
 				"athletics": "+3",
 				"stealth": "+6"
 			},
@@ -3755,7 +3930,11 @@
 					"name": "Deep Gnome",
 					"source": "DMG"
 				}
-			}
+			},
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "The Pudding King",
@@ -4140,6 +4319,7 @@
 			"conditionInflict": [
 				"poisoned"
 			],
+			"hasToken": true,
 			"hasFluff": true
 		},
 		{
@@ -4232,6 +4412,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -4349,6 +4530,7 @@
 				"CC"
 			],
 			"miscTags": [
+				"HPR",
 				"MW"
 			],
 			"hasToken": true,
@@ -4393,7 +4575,8 @@
 			],
 			"spellcastingTags": [
 				"I"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Veteran of the Gauntlet",
@@ -4532,7 +4715,15 @@
 				"C",
 				"E"
 			],
-			"cr": "5"
+			"cr": "5",
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Vizeran DeVir",
@@ -4839,7 +5030,7 @@
 				"N"
 			],
 			"skill": {
-				"acrobatics": "+3",
+				"acrobatics": "+6",
 				"athletics": "+3",
 				"stealth": "+6"
 			},

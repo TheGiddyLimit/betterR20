@@ -838,6 +838,143 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Astral Drifter",
+			"source": "AAG",
+			"feats": [
+				{
+					"magic initiate|phb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"insight": true,
+					"religion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"traveler's clothes|phb",
+						{
+							"special": "diary"
+						},
+						"ink pen|phb",
+						"ink (1-ounce bottle)|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"fromFeature": {
+				"feats": true
+			},
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Insight}, {@skill Religion}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "Two of your choice ({@language Celestial} or {@language Gith|MM} recommended)"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A set of {@item traveler's clothes|PHB}, a diary, an {@item ink pen|PHB}, a {@item Ink (1-ounce bottle)|PHB|bottle of ink}, and a {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Longevity",
+					"entries": [
+						"You are {@dice 20d6} years older than you look, because you have spent that much time in the Astral Sea without aging."
+					]
+				},
+				{
+					"name": "Feature: Divine Contact",
+					"type": "entries",
+					"entries": [
+						"You gain the {@feat Magic Initiate||Magic Initiate feat} from the {@book Player's Handbook|PHB} and must choose cleric for the feat.",
+						"In the Astral Sea, you crossed paths with a wandering deity. The encounter was brief and nonviolent, yet it made a lasting impression on you. This deity saw fit to share one secret or obscure bit of cosmic lore with you. Work with your DM to determine the details of this knowledge and its impact on the campaign.",
+						"Roll on the Divine Contact table to determine which deity you encountered, or work with your DM to identify a more suitable choice.",
+						{
+							"type": "table",
+							"caption": "Divine Contact",
+							"colLabels": [
+								"d10",
+								"Wandering Deity"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"Corellon, god of art and magic (chaotic good)"
+								],
+								[
+									"2",
+									"Tymora, god of good fortune (chaotic good)"
+								],
+								[
+									"3",
+									"Fharlanghn, god of horizons and travel (neutral good)"
+								],
+								[
+									"4",
+									"Istus, god of fate and destiny (neutral)"
+								],
+								[
+									"5",
+									"Nuada, god of war and warriors (neutral)"
+								],
+								[
+									"6",
+									"Zivilyn, god of wisdom (neutral)"
+								],
+								[
+									"7",
+									"Arawn, god of life and death (neutral evil)"
+								],
+								[
+									"8",
+									"Hecate, god of magic and moons (chaotic evil)"
+								],
+								[
+									"9",
+									"Celestian, god of stars and wanderers (neutral)"
+								],
+								[
+									"10",
+									"Ptah, god of knowledge and secrets (lawful neutral)"
+								]
+							]
+						}
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Athlete",
 			"source": "MOT",
 			"page": 31,
@@ -7146,6 +7283,198 @@
 							]
 						}
 					]
+				},
+				{
+					"type": "section",
+					"name": "Character Traits",
+					"entries": [
+						"As the players choose backgrounds for their characters, they can use the following tables to help determine their characters' personality traits, ideals, bonds, and flaws. Players can use these tables instead of the ones that appear in the {@book Player's Handbook|PHB}, or they can mix and match them. If a rolled result doesn't make sense for a character, the player can roll again or choose a more appropriate entry on the table.",
+						"These tables, while optional, are well suited to Feywild-themed adventures and are ideal for any character who has the feylost or Witchlight hand background.",
+						{
+							"type": "table",
+							"caption": "Personality Traits",
+							"colLabels": [
+								"d8",
+								"Trait"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"I'm haunted by fey laughter that only I can hear, though I know it's just my mind playing tricks on me."
+								],
+								[
+									"2",
+									"Like a nomad, I can't settle down in one place for very long."
+								],
+								[
+									"3",
+									"Good music makes me weep like a baby."
+								],
+								[
+									"4",
+									"Wherever I go, I try to bring a little of the warmth and tranquility of home with me."
+								],
+								[
+									"5",
+									"I have never lost my childlike sense of wonder."
+								],
+								[
+									"6",
+									"When I have a new idea, I get wildly excited about it until I come up with another, better idea."
+								],
+								[
+									"7",
+									"I live by my own set of weird and wonderful rules."
+								],
+								[
+									"8",
+									"I can't bring myself to trust most adults."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Ideals",
+							"colLabels": [
+								"d8",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"Friendship. I never leave a friend behind. (Good)"
+								],
+								[
+									"2",
+									"Empathy. No creature should be made to suffer. (Good)"
+								],
+								[
+									"3",
+									"Wanderlust. I prefer to take the less traveled path. (Chaotic)"
+								],
+								[
+									"4",
+									"Changeability. Change is good, which is why I live by an ever-changing set of rules. (Chaotic)"
+								],
+								[
+									"5",
+									"Honor. A deal is a deal, and I would never break one. (Lawful)"
+								],
+								[
+									"6",
+									"Rule of Three. Everything in the multiverse happens in threes. I see the \"rule of three\" everywhere. (Lawful)"
+								],
+								[
+									"7",
+									"Obsession. I won't let go of a grudge. (Evil)"
+								],
+								[
+									"8",
+									"Greed. I will do whatever it takes to get what I want, regardless of the harm it might cause. (Evil)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Bonds",
+							"colLabels": [
+								"d8",
+								"Bond"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"I would never break my word."
+								],
+								[
+									"2",
+									"I find magic in all its forms to be compelling. The more magical a place, the more I am drawn to it."
+								],
+								[
+									"3",
+									"I do what I can to protect the natural world."
+								],
+								[
+									"4",
+									"A trusted friend is the most important thing in the multiverse to me."
+								],
+								[
+									"5",
+									"I can't bring myself to harm a Fey creature, either because I consider myself one or because I fear the repercussions."
+								],
+								[
+									"6",
+									"The Witchlight Carnival feels like home to me."
+								],
+								[
+									"7",
+									"I'm drawn to the Feywild and long to return there, if only for a short while."
+								],
+								[
+									"8",
+									"I feel indebted to {@creature Mister Witch|WBtW} and {@creature Mister Light|WBtW} for giving me a home and a purpose."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Flaws",
+							"colLabels": [
+								"d8",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"I easily lose track of time. My poor sense of time means I'm always late."
+								],
+								[
+									"2",
+									"I think the whole multiverse is out to get me."
+								],
+								[
+									"3",
+									"I'm always operating under a tight timeline, and I'm obsessed with keeping everything on schedule."
+								],
+								[
+									"4",
+									"I'm a kleptomaniac who covets shiny, sparkling treasure."
+								],
+								[
+									"5",
+									"I'm forgetful. Sometimes I can't remember even the simplest things."
+								],
+								[
+									"6",
+									"I never give away anything for free and always expect something in return."
+								],
+								[
+									"7",
+									"I have many vices and tend to indulge them."
+								],
+								[
+									"8",
+									"I'm always changing my mind\u2014well, almost always."
+								]
+							]
+						}
+					]
 				}
 			],
 			"hasFluff": true,
@@ -8236,6 +8565,364 @@
 						}
 					],
 					"name": "Suggested Characteristics"
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Gate Warden",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 3,
+			"feats": [
+				{
+					"scion of the outer planes|ua2022wondersofthemultiverse": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"persuasion": true,
+					"survival": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"special": "ring of keys to unknown locks"
+						},
+						{
+							"item": "book|phb",
+							"displayName": "blank book"
+						},
+						"ink (1-ounce bottle)|phb",
+						"traveler's clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				},
+				{
+					"a": [
+						"ink pen|phb"
+					],
+					"b": [
+						{
+							"special": "quill"
+						}
+					]
+				}
+			],
+			"fromFeature": {
+				"feats": true
+			},
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Persuasion}, {@skill Survival}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "Two of your choice ({@language Abyssal}, {@language Celestial}, or {@language Infernal} recommended)"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A ring of keys to unknown locks, a blank {@item book|phb}, an {@item ink pen|phb} or quill, a {@item Ink (1-ounce bottle)|PHB|bottle of black ink}, a set of {@item traveler's clothes|phb}, and a {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Feature: Planar Infusion",
+					"entries": [
+						"Living someplace steeped in the energy of the planes, you gain the {@feat Scion of the Outer Planes|UA2022WondersOfTheMultiverse} feat. In addition, you know where to find free, modest lodging and food in the community you grew up in."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Building a Gate Warden Character",
+					"entries": [
+						"Those who dwell for any extended time near a permanent portal to another plane absorb the essence radiating from the realm beyond. This creates similarities in behaviors and even physical appearances that mark someone as influenced by a particular plane.",
+						{
+							"type": "entries",
+							"name": "Suggested Characteristics",
+							"entries": [
+								"The influence of an Outer Plane shapes your perspective. The Gate Warden Personality Traits table suggests various traits you might adopt for your character.",
+								{
+									"type": "table",
+									"caption": "Gate Warden Personality Traits",
+									"colLabels": [
+										"d6",
+										"Personality Trait"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											"1",
+											"Strange events and otherworldly creatures don't phase me."
+										],
+										[
+											"2",
+											"I think in terms of exchange; something for something, nothing for nothing."
+										],
+										[
+											"3",
+											"I speak with an unusual cadence."
+										],
+										[
+											"4",
+											"I pepper my speech with borrowed words or curses from planar languages."
+										],
+										[
+											"5",
+											"I've seen enough to know that you can't take anyone at face value, so I scrutinize everyone I deal with."
+										],
+										[
+											"6",
+											"I have a superstitious habit I picked up, such as touching iron when I'm nervous or arranging objects in a specific order."
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Gate Warden Trinkets",
+							"entries": [
+								"When you make your character, you can roll once on the Gate Warden Trinkets table, instead of on the Trinkets table in the Player's Handbook, for your starting trinket.",
+								{
+									"type": "table",
+									"caption": "Gate Warden Trinkets",
+									"colLabels": [
+										"d6",
+										"Trinket"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											"1",
+											"A tiny vial pendant, filled with a drip of honey that glows faintly"
+										],
+										[
+											"2",
+											"A small lead ingot with a strange thumbprint pressed into it that whispers when held tightly"
+										],
+										[
+											"3",
+											"Two lodestone spheres that chime when they attract each other"
+										],
+										[
+											"4",
+											"A smoldering pebble of coal that, while always hot, doesn't burn skin"
+										],
+										[
+											"5",
+											"A white feather that sheds dim light in a 5-foot radius"
+										],
+										[
+											"6",
+											"A ring made from a chain link that, once worn, won't come off without pulling painfully hard"
+										]
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Giant Foundling",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 4,
+			"feats": [
+				{
+					"strike of the giants|ua2022wondersofthemultiverse": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"intimidation": true,
+					"survival": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"special": "backpack"
+						},
+						"traveler's clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				},
+				{
+					"a": [
+						{
+							"special": "small stone"
+						}
+					],
+					"b": [
+						{
+							"special": "sprig that reminds you of home"
+						}
+					]
+				}
+			],
+			"fromFeature": {
+				"feats": true
+			},
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Intimidation}, {@skill Survival}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "Two of your choice"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A backpack, a set of {@item traveler's clothes|phb}, a small stone or sprig that reminds you of home, and a {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Origin Stories",
+					"entries": [
+						"How you came to live among colossal creatures is up to you to determine, but the Foundling Origin table suggests a variety of possibilities.",
+						{
+							"type": "table",
+							"caption": "Foundling Origin",
+							"colLabels": [
+								"d6",
+								"Origin"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"You were found as a baby by a family of nomadic giants who raised you as one of their own."
+								],
+								[
+									"2",
+									"A family of stone giants rescued you when you fell into a mountain crag, and you have lived with them underground ever since."
+								],
+								[
+									"3",
+									"You were lost or abandoned as a child in a jungle that teemed with ravenous dinosaurs. There, you found an equally lost frost giant and together, you survived."
+								],
+								[
+									"4",
+									"Your farm was crushed and your family killed in a battle between warring groups of giants. Racked with guilt over the destruction, a sympathetic giant soldier promised to care for you."
+								],
+								[
+									"5",
+									"After you had a series of strange dreams as a child, your superstitious parents sent you to study with a powerful but aloof storm giant oracle."
+								],
+								[
+									"6",
+									"While playing hide-and-seek with your friends, you stumbled into the castle of a cloud giant matriarch, who immediately adopted you."
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Feature: Strike of the Giants",
+					"entries": [
+						"You gain the {@feat Strike of the Giants|UA2022WondersOfTheMultiverse} feat."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Building a Giant Foundling Character",
+					"entries": [
+						"Your remarkable size and experience with titanic creatures has given you a unique perspective. Suggested Characteristics. The Giant Foundling Personality Traits table suggests a variety of traits you might adopt for your character.",
+						{
+							"type": "table",
+							"caption": "Giant Foundling Personality Traits",
+							"colLabels": [
+								"d6",
+								"Personality Trait"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"What I lack in stature, I make up for with sheer spite."
+								],
+								[
+									"2",
+									"Sometimes size does matter, okay? If I see a beast bigger than me, I'm immediately running away."
+								],
+								[
+									"3",
+									"Crowded spaces make me uncomfortable. I'd much rather be in a wide-open field than a bustling tavern."
+								],
+								[
+									"4",
+									"I like being small. It helps me stay unnoticed\u2014and underestimated."
+								],
+								[
+									"5",
+									"Size is just half the story. Every avalanche begins as a single pebble."
+								],
+								[
+									"6",
+									"The world always feels too big, and I'm afraid I'll never find my place in it."
+								]
+							]
+						}
+					]
 				}
 			],
 			"hasFluff": true
@@ -13835,7 +14522,10 @@
 											"6",
 											"A broken dagger with a wavy blade and a serpentine hilt"
 										]
-									]
+									],
+									"data": {
+										"tableInclude": true
+									}
 								}
 							]
 						}
@@ -16604,6 +17294,172 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Planar Philosopher",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 3,
+			"feats": [
+				{
+					"scion of the outer planes|ua2022wondersofthemultiverse": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"arcana": true,
+					"persuasion": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"anyStandard": 2
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						"common clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"fromFeature": {
+				"feats": true
+			},
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Arcana}, {@skill Persuasion}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "Two of your choice"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A set of {@item common clothes|phb}, and a {@item pouch|phb} containing 10 gp comprised of coins from different worlds and planes"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Feature: Conviction",
+					"entries": [
+						"You gain the {@feat Scion of the Outer Planes|UA2022WondersOfTheMultiverse} feat. In addition, members of organization provide you free, modest lodging and food at any of their holding or the homes of other faction members."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Building a Planar Philosopher Character",
+					"entries": [
+						"Some groups of planar philosophers might have preferences for or against certain types of characters, but by and large any character that upholds and furthers the beliefs of the group is welcome within its ranks.",
+						{
+							"type": "entries",
+							"name": "Suggested Characteristics",
+							"entries": [
+								"Adventurers who dedicate themselves to a particular philosophy toward the multiverse are welcomed among the faction that embraces those beliefs. The Planar Philosopher Personality Traits table suggests various traits you might adopt for your character, and which factions would welcome adventurers with those traits.",
+								{
+									"type": "table",
+									"caption": "Planar Philosopher Personality Traits",
+									"colLabels": [
+										"d6",
+										"Personality Trait"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											"1",
+											"I don't venerate any gods; we can be as powerful or greater than them."
+										],
+										[
+											"2",
+											"Experience is everything, live in the moment."
+										],
+										[
+											"3",
+											"When things crumble, I find meaning in the ashes."
+										],
+										[
+											"4",
+											"Life thrives through order; I won't tolerate disruptions."
+										],
+										[
+											"5",
+											"When others make plans, the multiverse laughs and so do I."
+										],
+										[
+											"6",
+											"I know what's right, and no one will stand in my way."
+										]
+									]
+								}
+							]
+						},
+						{
+							"type": "entries",
+							"name": "Planar Philosopher Trinkets",
+							"entries": [
+								"When you make your character, you can roll once on the Planar Philosopher Trinkets table, instead of on the Trinkets table in the Player's Handbook, for your starting trinket.",
+								{
+									"type": "table",
+									"caption": "Planar Philosopher Trinkets",
+									"colLabels": [
+										"d6",
+										"Trinket"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											"1",
+											"A locket with a picture of my mentor and an inscription I can't read"
+										],
+										[
+											"2",
+											"A bleached rat skull with colored glass beads in its eye sockets"
+										],
+										[
+											"3",
+											"A torn parchment with half a rebus puzzle painted on it"
+										],
+										[
+											"4",
+											"A bracelet of twisted razorvine stems"
+										],
+										[
+											"5",
+											"A fragment of verdigris-coated bronze blade"
+										],
+										[
+											"6",
+											"A smooth river stone covered in tiny, carved holy symbols"
+										]
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
 			"name": "Prismari Student",
 			"source": "SCC",
 			"page": 32,
@@ -16859,7 +17715,10 @@
 											"6",
 											"An iridescent quill"
 										]
-									]
+									],
+									"data": {
+										"tableInclude": true
+									}
 								}
 							]
 						}
@@ -17108,7 +17967,10 @@
 											"6",
 											"A round bread roll cut so that someone could spread butter on both halves without ever lifting the knife"
 										]
-									]
+									],
+									"data": {
+										"tableInclude": true
+									}
 								}
 							]
 						}
@@ -17873,6 +18735,185 @@
 									"6",
 									"Our superiors might not like what you're doing. I'm going to have to put that in my report."
 								]
+							]
+						}
+					]
+				}
+			],
+			"hasFluff": true
+		},
+		{
+			"name": "Rune Carver",
+			"source": "UA2022WondersOfTheMultiverse",
+			"page": 5,
+			"feats": [
+				{
+					"rune carver apprentice|ua2022wondersofthemultiverse": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"history": true,
+					"perception": true
+				}
+			],
+			"languageProficiencies": [
+				{
+					"giant": true,
+					"anyStandard": 1
+				}
+			],
+			"toolProficiencies": [
+				{
+					"herbalism kit": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"equipmentType": "toolArtisan"
+						},
+						{
+							"special": "small knife"
+						},
+						"whetstone|phb",
+						"common clothes|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"fromFeature": {
+				"feats": true
+			},
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill History}, {@skill Perception}"
+						},
+						{
+							"type": "item",
+							"name": "Languages:",
+							"entry": "Giant and one other language of your choice"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A set of {@filter artisan's tools|items|source=phb|miscellaneous=mundane|type=artisan's tools} (one of your choice), a small knife, a {@item whetstone|phb}, a set of {@item common clothes|phb}, and a {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Rune Styles",
+					"entries": [
+						"Each rune carver has a unique style and preferred medium for creating runes. To determine how you make your runes, you can roll on the Rune Style table.",
+						{
+							"type": "table",
+							"caption": "Rune Style",
+							"colLabels": [
+								"d6",
+								"Style"
+							],
+							"colStyles": [
+								"col-1 text-center",
+								"col-11"
+							],
+							"rows": [
+								[
+									"1",
+									"You inscribe your runes with a fine metal needle."
+								],
+								[
+									"2",
+									"You whittle down pieces of wood into small figurines you mark with your runes."
+								],
+								[
+									"3",
+									"You engrave runes onto glass beads and thread them onto necklaces and bracelets."
+								],
+								[
+									"4",
+									"You stitch your runes into the hems of clothing."
+								],
+								[
+									"5",
+									"You carve runes on a set of animal bones you can throw in different formations."
+								],
+								[
+									"6",
+									"You draw your runes into candles, melting the wax to smooth over the engravings."
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Feature: Rune Carver Apprentice",
+					"entries": [
+						"You gain the {@feat Rune Carver Apprentice|UA2022WondersOfTheMultiverse} feat."
+					],
+					"data": {
+						"isFeature": true
+					}
+				},
+				{
+					"type": "entries",
+					"name": "Building a Rune Carver Character",
+					"entries": [
+						"Scholarly pursuits, ancient mysteries, or all manner of fateful encounters might inspire a character to pursue the secrets of a rune carver.",
+						{
+							"type": "entries",
+							"name": "Suggested Characteristics",
+							"entries": [
+								"The Rune Carver Personality Traits table suggests a variety of traits you might adopt for your character.",
+								{
+									"type": "table",
+									"caption": "Rune Carver Personality Traits",
+									"colLabels": [
+										"d6",
+										"Personality Trait"
+									],
+									"colStyles": [
+										"col-1 text-center",
+										"col-11"
+									],
+									"rows": [
+										[
+											"1",
+											"Is it practical to learn an ancient language that is rarely used in everyday speech? No. But is it fun? Very."
+										],
+										[
+											"2",
+											"I learned one of my ancestors was a lauded rune carver whose story was lost to time. I seek to rekindle that legacy."
+										],
+										[
+											"3",
+											"The old, traditional markings of runecraft look so boring. Why not give your runes some flair?"
+										],
+										[
+											"4",
+											"In my studies of runes, I strive to understand how great civilizations of the past fell, so that I may prevent it from happening to societies of the present."
+										],
+										[
+											"5",
+											"Life may be a whirlwind of chaos around me, but whenever I create my runes, I feel at peace."
+										],
+										[
+											"6",
+											"My brain struggles to process ink words written on paper, but the tactile feeling of carved runes makes my mind sing."
+										]
+									]
+								}
 							]
 						}
 					]
@@ -19857,7 +20898,10 @@
 											"6",
 											"A stack of small pieces of parchment, each enchanted to stick to whatever surface it's pressed against and peel off easily"
 										]
-									]
+									],
+									"data": {
+										"tableInclude": true
+									}
 								}
 							]
 						}
@@ -23003,6 +24047,143 @@
 			"hasFluff": true
 		},
 		{
+			"name": "Wildspacer",
+			"source": "AAG",
+			"feats": [
+				{
+					"tough|phb": true
+				}
+			],
+			"skillProficiencies": [
+				{
+					"athletics": true,
+					"survival": true
+				}
+			],
+			"toolProficiencies": [
+				{
+					"navigator's tools": true,
+					"vehicles (space)": true
+				}
+			],
+			"startingEquipment": [
+				{
+					"_": [
+						{
+							"item": "club|phb",
+							"displayName": "belaying pin"
+						},
+						"traveler's clothes|phb",
+						"grappling hook|phb",
+						"hempen rope (50 feet)|phb",
+						{
+							"item": "pouch|phb",
+							"containsValue": 1000
+						}
+					]
+				}
+			],
+			"fromFeature": {
+				"feats": true
+			},
+			"entries": [
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Skill Proficiencies:",
+							"entry": "{@skill Athletics}, {@skill Survival}"
+						},
+						{
+							"type": "item",
+							"name": "Tool Proficiencies:",
+							"entry": "{@item Navigator's tools|phb}, {@filter vehicles (space)|items|source=phb;dmg|miscellaneous=mundane|type=vehicle (space)}"
+						},
+						{
+							"type": "item",
+							"name": "Equipment:",
+							"entry": "A belaying pin ({@item club|phb}), a set of {@item traveler's clothes|PHB}, a {@item grappling hook|PHB}, {@item Hempen Rope (50 feet)|PHB|50 feet of hempen rope}, and a {@item pouch|phb} containing 10 gp"
+						}
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Close Encounter",
+					"entries": [
+						"You had a harrowing encounter with one of Wildspace's many terrors. You escaped with your life, but the encounter left you with a scar or two, or perhaps a recurring nightmare. Roll on the Close Encounter table to determine which creature nearly got the best of you. Creatures marked with an asterisk appear in {@book Boo's Astral Menagerie|BAM}; the others are described in the {@book Monster Manual|MM}.",
+						{
+							"type": "table",
+							"caption": "Close Encounter",
+							"colLabels": [
+								"d10",
+								"Creature"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"{@creature Beholder}"
+								],
+								[
+									"2",
+									"{@creature Cosmic horror|BAM}*"
+								],
+								[
+									"3",
+									"{@creature Feyr|BAM}*"
+								],
+								[
+									"4",
+									"{@filter Lunar dragon|bestiary|source=BAM|search=lunar dragon}*"
+								],
+								[
+									"5",
+									"{@creature Mind flayer}"
+								],
+								[
+									"6",
+									"{@creature Neh-thalggu|BAM}*"
+								],
+								[
+									"7",
+									"{@creature Neogi|MPMM}*"
+								],
+								[
+									"8",
+									"{@creature Space clown|BAM}*"
+								],
+								[
+									"9",
+									"{@creature Vampirate|BAM}*"
+								],
+								[
+									"10",
+									"{@creature Void scavver|BAM}*"
+								]
+							]
+						}
+					]
+				},
+				{
+					"name": "Feature: Wildspace Adaptation",
+					"type": "entries",
+					"entries": [
+						"You gain the {@feat Tough||Tough feat} from the {@book Player's Handbook|PHB}. In addition, you learned how to adapt to zero gravity. Being weightless doesn't give you disadvantage on any of your melee attack rolls (see \"{@book Weightlessness|AAG|2|Weightlessness}\" in {@book chapter 2|AAG|2})."
+					],
+					"data": {
+						"isFeature": true
+					}
+				}
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Witchlight Hand",
 			"source": "WBtW",
 			"page": 11,
@@ -23138,6 +24319,198 @@
 								[
 									"8",
 									"Harmless, magical wisp of light (no stat block required) that has a flying speed of 30 feet, can hover, and sheds bright light in a 5-foot radius and dim light for an additional 5 feet"
+								]
+							]
+						}
+					]
+				},
+				{
+					"type": "section",
+					"name": "Character Traits",
+					"entries": [
+						"As the players choose backgrounds for their characters, they can use the following tables to help determine their characters' personality traits, ideals, bonds, and flaws. Players can use these tables instead of the ones that appear in the {@book Player's Handbook|PHB}, or they can mix and match them. If a rolled result doesn't make sense for a character, the player can roll again or choose a more appropriate entry on the table.",
+						"These tables, while optional, are well suited to Feywild-themed adventures and are ideal for any character who has the feylost or Witchlight hand background.",
+						{
+							"type": "table",
+							"caption": "Personality Traits",
+							"colLabels": [
+								"d8",
+								"Trait"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"I'm haunted by fey laughter that only I can hear, though I know it's just my mind playing tricks on me."
+								],
+								[
+									"2",
+									"Like a nomad, I can't settle down in one place for very long."
+								],
+								[
+									"3",
+									"Good music makes me weep like a baby."
+								],
+								[
+									"4",
+									"Wherever I go, I try to bring a little of the warmth and tranquility of home with me."
+								],
+								[
+									"5",
+									"I have never lost my childlike sense of wonder."
+								],
+								[
+									"6",
+									"When I have a new idea, I get wildly excited about it until I come up with another, better idea."
+								],
+								[
+									"7",
+									"I live by my own set of weird and wonderful rules."
+								],
+								[
+									"8",
+									"I can't bring myself to trust most adults."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Ideals",
+							"colLabels": [
+								"d8",
+								"Ideal"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"Friendship. I never leave a friend behind. (Good)"
+								],
+								[
+									"2",
+									"Empathy. No creature should be made to suffer. (Good)"
+								],
+								[
+									"3",
+									"Wanderlust. I prefer to take the less traveled path. (Chaotic)"
+								],
+								[
+									"4",
+									"Changeability. Change is good, which is why I live by an ever-changing set of rules. (Chaotic)"
+								],
+								[
+									"5",
+									"Honor. A deal is a deal, and I would never break one. (Lawful)"
+								],
+								[
+									"6",
+									"Rule of Three. Everything in the multiverse happens in threes. I see the \"rule of three\" everywhere. (Lawful)"
+								],
+								[
+									"7",
+									"Obsession. I won't let go of a grudge. (Evil)"
+								],
+								[
+									"8",
+									"Greed. I will do whatever it takes to get what I want, regardless of the harm it might cause. (Evil)"
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Bonds",
+							"colLabels": [
+								"d8",
+								"Bond"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"I would never break my word."
+								],
+								[
+									"2",
+									"I find magic in all its forms to be compelling. The more magical a place, the more I am drawn to it."
+								],
+								[
+									"3",
+									"I do what I can to protect the natural world."
+								],
+								[
+									"4",
+									"A trusted friend is the most important thing in the multiverse to me."
+								],
+								[
+									"5",
+									"I can't bring myself to harm a Fey creature, either because I consider myself one or because I fear the repercussions."
+								],
+								[
+									"6",
+									"The Witchlight Carnival feels like home to me."
+								],
+								[
+									"7",
+									"I'm drawn to the Feywild and long to return there, if only for a short while."
+								],
+								[
+									"8",
+									"I feel indebted to {@creature Mister Witch|WBtW} and {@creature Mister Light|WBtW} for giving me a home and a purpose."
+								]
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Flaws",
+							"colLabels": [
+								"d8",
+								"Flaw"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"1",
+									"I easily lose track of time. My poor sense of time means I'm always late."
+								],
+								[
+									"2",
+									"I think the whole multiverse is out to get me."
+								],
+								[
+									"3",
+									"I'm always operating under a tight timeline, and I'm obsessed with keeping everything on schedule."
+								],
+								[
+									"4",
+									"I'm a kleptomaniac who covets shiny, sparkling treasure."
+								],
+								[
+									"5",
+									"I'm forgetful. Sometimes I can't remember even the simplest things."
+								],
+								[
+									"6",
+									"I never give away anything for free and always expect something in return."
+								],
+								[
+									"7",
+									"I have many vices and tend to indulge them."
+								],
+								[
+									"8",
+									"I'm always changing my mind\u2014well, almost always."
 								]
 							]
 						}
@@ -23387,7 +24760,10 @@
 											"6",
 											"A necklace of five small vials, each filled with luminescent white liquid"
 										]
-									]
+									],
+									"data": {
+										"tableInclude": true
+									}
 								}
 							]
 						}

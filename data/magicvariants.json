@@ -1,5 +1,5 @@
 {
-	"variant": [
+	"magicvariant": [
 		{
 			"name": "+1 Ammunition",
 			"type": "GV",
@@ -2686,7 +2686,7 @@
 				"reqAttune": true,
 				"entries": [
 					"When you attack a creature with this magic weapon and roll a 20 on the attack roll, that target takes an extra 10 necrotic damage if it isn't a construct or an undead. You also gain 10 temporary hit points.",
-					"{@i Note: According to the SRD, it is an extra {@dice 3d6} necrotic damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
+					"{@note Note: According to the SRD, it is an extra {@dice 3d6} necrotic damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
 				],
 				"lootTables": [
 					"Magic Item Table G"
@@ -2714,7 +2714,7 @@
 				"entries": [
 					"When you attack an object with this magic sword and hit, maximize your weapon damage dice against the target.",
 					"When you attack a creature with this weapon and roll a 20 on the attack roll, that target takes an extra 14 slashing damage. Then roll another {@dice d20}. If you roll a 20, you lop off one of the target's limbs, with the effect of such loss determined by the DM. If the creature has no limb to sever, you lop off a portion of its body instead.",
-					"{@i Note: According to the SRD, it is an extra {@dice 4d6} slashing damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}}.",
+					"{@note Note: According to the SRD, it is an extra {@dice 4d6} slashing damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}}.",
 					"In addition, you can speak the sword's command to cause the blade to shed bright light in a 10-foot radius and dim light for an additional 10 feet. Speaking the command word again or sheathing the sword puts out the light."
 				],
 				"lootTables": [
@@ -2795,7 +2795,7 @@
 			},
 			"entries": [
 				"When you roll a 20 with this magic weapon, the target takes an extra 7 damage of the weapon's type.",
-				"{@i Note: According to the SRD, it is an extra {@dice 2d6} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
+				"{@note Note: According to the SRD, it is an extra {@dice 2d6} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
 			],
 			"inherits": {
 				"namePrefix": "Vicious +1 ",
@@ -2806,7 +2806,7 @@
 				"entries": [
 					"You have a {=bonusWeapon} bonus to attack and damage rolls made with this weapon.",
 					"When you roll a 20 with this magic weapon, the target takes an extra 7 {=dmgType} damage.",
-					"{@i Note: According to the SRD, it is an extra {@dice 2d6} {=dmgType} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
+					"{@note Note: According to the SRD, it is an extra {@dice 2d6} {=dmgType} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
 				]
 			}
 		},
@@ -2823,7 +2823,7 @@
 			},
 			"entries": [
 				"When you roll a 20 with this magic weapon, the target takes an extra 7 damage of the weapon's type.",
-				"{@i Note: According to the SRD, it is an extra {@dice 2d6} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
+				"{@note Note: According to the SRD, it is an extra {@dice 2d6} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
 			],
 			"inherits": {
 				"namePrefix": "Vicious ",
@@ -2834,7 +2834,7 @@
 				"rarity": "rare",
 				"entries": [
 					"When you roll a 20 with this magic weapon, the target takes an extra 7 {=dmgType} damage.",
-					"{@i Note: According to the SRD, it is an extra {@dice 2d6} {=dmgType} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
+					"{@note Note: According to the SRD, it is an extra {@dice 2d6} {=dmgType} damage, although {@link this is incorrect|https://rpg.stackexchange.com/a/174522/53884}.}"
 				],
 				"lootTables": [
 					"Magic Item Table G"

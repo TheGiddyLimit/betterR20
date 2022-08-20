@@ -203,7 +203,8 @@
 			],
 			"conditionInflictSpell": [
 				"incapacitated"
-			]
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Rotter",
@@ -331,7 +332,8 @@
 			],
 			"miscTags": [
 				"MW"
-			]
+			],
+			"hasToken": true
 		}
 	]
 }

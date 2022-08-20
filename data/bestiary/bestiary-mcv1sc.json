@@ -109,7 +109,8 @@
 			],
 			"traitTags": [
 				"False Appearance",
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B",
@@ -245,6 +246,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"SD"
 			],
@@ -338,7 +342,12 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 17}): At will: detect magic, mage hand, prestidigitation"
+						"The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell mage hand}",
+						"{@spell prestidigitation}"
 					],
 					"daily": {
 						"2e": [
@@ -386,7 +395,7 @@
 				{
 					"name": "Parasitic Tentacle",
 					"entries": [
-						"{@atk mw} {@hit 9} to hit, reach 10 ft., one creature. {@h}25 ({@damage 6d6 + 4}) piercing damage plus 25 ({@damage 6d6 + 4}) necrotic damage. The target must succeed on a {@dc 17} Constitution saving throw or be {@condition poisoned}. The {@condition poisoned} target can repeat the save at the end of each of its turns, ending the effect on itself on a success. The third time the target fails the save, the target dies and dissolves into a gibbering mouther that obeys the lich and uses the target's initiative."
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one creature. {@h}25 ({@damage 6d6 + 4}) piercing damage plus 25 ({@damage 6d6 + 4}) necrotic damage. The target must succeed on a {@dc 17} Constitution saving throw or be {@condition poisoned}. The {@condition poisoned} target can repeat the save at the end of each of its turns, ending the effect on itself on a success. The third time the target fails the save, the target dies and dissolves into a {@creature gibbering mouther} that obeys the lich and uses the target's initiative."
 					]
 				},
 				{
@@ -405,7 +414,8 @@
 				}
 			],
 			"traitTags": [
-				"Legendary Resistances"
+				"Legendary Resistances",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"U"
@@ -427,6 +437,9 @@
 				"A",
 				"C",
 				"L",
+				"O"
+			],
+			"spellcastingTags": [
 				"O"
 			],
 			"miscTags": [
@@ -563,7 +576,8 @@
 				}
 			],
 			"traitTags": [
-				"Magic Resistance"
+				"Magic Resistance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -662,6 +676,9 @@
 						"The gadabout enters the space of a willing Medium or Small creature within 5 feet of itself and gently wraps its branches around the target. The target is {@condition grappled} (escape {@dc 0}). Any attempt by the target to escape the grapple causes the gadabout to use its reaction to move into the nearest unoccupied space. While {@condition grappled} by the gadabout, the target determines where the gadabout moves on the gadabout's turns and accompanies the gadabout wherever it goes."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"
@@ -771,6 +788,9 @@
 						"The goon balloon moves up to 20 feet vertically in one direction without provoking opportunity attacks. If it ends this movement suspended in the air, it hovers in place. It can't be knocked {@condition prone} while airborne."
 					]
 				}
+			],
+			"traitTags": [
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"D"
@@ -1036,6 +1056,9 @@
 					]
 				}
 			],
+			"traitTags": [
+				"Unusual Nature"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -1249,7 +1272,8 @@
 				}
 			],
 			"traitTags": [
-				"False Appearance"
+				"False Appearance",
+				"Unusual Nature"
 			],
 			"senseTags": [
 				"B"

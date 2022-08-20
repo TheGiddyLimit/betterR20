@@ -678,7 +678,7 @@
 				"N"
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"hasToken": true
 		},
@@ -1020,7 +1020,8 @@
 				"O"
 			],
 			"spellcastingTags": [
-				"I"
+				"I",
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -2667,7 +2668,7 @@
 				"C"
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -2797,7 +2798,7 @@
 				"S"
 			],
 			"spellcastingTags": [
-				"CR"
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -3346,7 +3347,7 @@
 				"O"
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -3695,7 +3696,7 @@
 				"F"
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"AOE",
@@ -4210,7 +4211,7 @@
 				"O"
 			],
 			"spellcastingTags": [
-				"CW"
+				"O"
 			],
 			"miscTags": [
 				"MW"
@@ -4282,6 +4283,9 @@
 				"B",
 				"L",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"hasToken": true
 		},
@@ -4550,6 +4554,9 @@
 				"L",
 				"S"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"hasToken": true
 		},
 		{
@@ -4713,7 +4720,7 @@
 				"T"
 			],
 			"spellcastingTags": [
-				"CS"
+				"O"
 			],
 			"miscTags": [
 				"MW"
@@ -4846,6 +4853,63 @@
 				"D",
 				"DR",
 				"E"
+			],
+			"hasToken": true
+		},
+		{
+			"name": "Princess Serissa",
+			"isNpc": true,
+			"source": "SKT",
+			"page": 209,
+			"_copy": {
+				"name": "Storm Giant",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the giant",
+						"with": "Serissa",
+						"flags": "i"
+					},
+					"action": [
+						{
+							"mode": "replaceArr",
+							"replace": "Multiattack",
+							"items": {
+								"name": "Multiattack",
+								"entries": [
+									"Serissa makes two maul attacks."
+								]
+							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Greatsword",
+							"items": {
+								"name": "Maul",
+								"entries": [
+									"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}30 ({@damage 6d6 + 9}) bludgeoning damage."
+								]
+							}
+						}
+					]
+				}
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 200,
+				"formula": "20d12 + 100"
+			},
+			"damageTags": [
+				"B",
+				"L"
 			],
 			"hasToken": true
 		},
@@ -5022,63 +5086,6 @@
 			"hasToken": true
 		},
 		{
-			"name": "Serissa",
-			"isNpc": true,
-			"source": "SKT",
-			"page": 209,
-			"_copy": {
-				"name": "Storm Giant",
-				"source": "MM",
-				"_mod": {
-					"*": {
-						"mode": "replaceTxt",
-						"replace": "the giant",
-						"with": "Serissa",
-						"flags": "i"
-					},
-					"action": [
-						{
-							"mode": "replaceArr",
-							"replace": "Multiattack",
-							"items": {
-								"name": "Multiattack",
-								"entries": [
-									"Serissa makes two maul attacks."
-								]
-							}
-						},
-						{
-							"mode": "replaceArr",
-							"replace": "Greatsword",
-							"items": {
-								"name": "Maul",
-								"entries": [
-									"{@atk mw} {@hit 14} to hit, reach 10 ft., one target. {@h}30 ({@damage 6d6 + 9}) bludgeoning damage."
-								]
-							}
-						}
-					]
-				}
-			},
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"{@item hide armor|phb}"
-					]
-				}
-			],
-			"hp": {
-				"average": 200,
-				"formula": "20d12 + 100"
-			},
-			"damageTags": [
-				"B",
-				"L"
-			],
-			"hasToken": true
-		},
-		{
 			"name": "Shaldoor",
 			"isNpc": true,
 			"source": "SKT",
@@ -5141,6 +5148,9 @@
 				"B",
 				"L",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"hasToken": true
 		},
@@ -5864,6 +5874,9 @@
 				"L",
 				"Y"
 			],
+			"spellcastingTags": [
+				"O"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -6142,6 +6155,9 @@
 			"damageTagsSpell": [
 				"B"
 			],
+			"spellcastingTags": [
+				"I"
+			],
 			"miscTags": [
 				"AOE",
 				"MW",
@@ -6160,7 +6176,9 @@
 		},
 		{
 			"name": "The Weevil",
+			"shortName": true,
 			"isNpc": true,
+			"isNamedCreature": true,
 			"source": "SKT",
 			"page": 114,
 			"_copy": {
@@ -6173,7 +6191,7 @@
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "dwarf",
+						"replace": "captain",
 						"with": "Weevil"
 					},
 					"action": [
@@ -6507,7 +6525,7 @@
 				}
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"hasToken": true
 		},
@@ -6783,7 +6801,7 @@
 				"R"
 			],
 			"spellcastingTags": [
-				"I"
+				"O"
 			],
 			"miscTags": [
 				"MW",
@@ -7046,6 +7064,9 @@
 				"B",
 				"L",
 				"S"
+			],
+			"spellcastingTags": [
+				"O"
 			],
 			"hasToken": true
 		},
@@ -7680,8 +7701,8 @@
 				"Y"
 			],
 			"spellcastingTags": [
-				"CW",
-				"I"
+				"I",
+				"O"
 			],
 			"miscTags": [
 				"AOE",

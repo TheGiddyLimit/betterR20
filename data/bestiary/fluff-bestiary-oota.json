@@ -1,4 +1,9 @@
 {
+	"_meta": {
+		"internalCopies": [
+			"monsterFluff"
+		]
+	},
 	"monsterFluff": [
 		{
 			"name": "Awakened Zurkhwood",
@@ -28,6 +33,103 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Deepking Horgar Steelshadow V",
+			"source": "OotA",
+			"entries": [
+				"Deepking Horgar V ascended to the throne in 1372 DR. He is a ruthless and canny ruler who engages in secret meetings with all the city's councils and clans to keep their members guessing what he's up to, hands out favors out of the blue, and lets it be known that he'll use any trick to maintain his hold on power. This includes hiring assassins through third parties to take care of potential troublemakers. This strategy keeps all the city's factions at each other's throats and out of Horgar's way.",
+				"Like many other duergar in the city, Horgar Steelshadow V has been touched by the demon lords' madness. Roll on the {@table Indefinite Madness} table in {@book chapter 8|DMG|8|Madness} of the {@i Dungeon Master's Guide} to determine Horgar's flaw."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/OotA/Deepking Horgar Steelshadow V.jpg"
+					}
+				}
+			]
+		},
+		{
+			"name": "Derro",
+			"source": "OotA",
+			"entries": [
+				{
+					"type": "entries",
+					"entries": [
+						{
+							"type": "entries",
+							"entries": [
+								"The derro are degenerate Underdark humanoids that resemble small dwarves. Cruel and insane, they take delight in tormenting others\u2014even their own kind.",
+								"Derro have blue-gray skin and straight hair that is white or yellow in color. Their uniformly pale white eyes lack both irises and pupils.",
+								{
+									"type": "entries",
+									"name": "Unnatural Origin",
+									"entries": [
+										"Derro believe they were created by their god, Diirinka, but they are actually the result of cruel experiments on dwarves by mind flayers. Like duergar, the derro were a slave race to the mind flayers, but eventually freed themselves."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Born to Madness",
+									"entries": [
+										"The process of their creation rendered the derro irrevocably insane. They cooperate with each other only out of necessity and when riled up by a charismatic leader."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Life of Attrition",
+									"entries": [
+										"Derro can live to be one hundred and fifty years old, but they mature and breed quickly. When their elders deem that their numbers are becoming unmanageable, the derro declare war on some other race and surge forth in a reckless horde, fighting until their population dwindles to a tolerable size. These ghastly purges weed out the weak among the derro and are referred to as \"Uniting Wars.\""
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Second-Class Citizens",
+									"entries": [
+										"Derro create no settlements of their own. Instead, they form small, isolated enclaves in non-derro settlements throughout the Underdark, where they are treated as vermin or slaves. Their own cutthroat politics prevent the derro from mounting any effective resistance against such exploitation."
+									]
+								},
+								{
+									"type": "entries",
+									"name": "Derro Weapons",
+									"entries": [
+										"The derro wield special weapons. They use a hooked shortspear, which is a martial melee weapon that deals {@damage 1d4} piercing damage, weighs 2 pounds, and has the light weapon property (see chapter 5, \"Equipment,\" of the Player's Handbook). It doesn't possess the thrown or versatile weapon properties of a normal spear. On a hit with this weapon, the wielder can forgo dealing damage and attempt to trip the target, in which case the target must succeed on a Strength saving throw or fall {@condition prone}. The DC is 8 + the wielder's Strength modifier + the wielder's proficiency bonus.",
+										"The derro also use a {@item light repeating crossbow|OotA} fitted with a cartridge that can hold up to six crossbow bolts. This weapon is similar to a light crossbow except that it has half the range (40/160 feet) and doesn't have the loading property. It automatically reloads after firing until it runs out of ammunition. Reloading the cartridge takes an action."
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/OotA/Derro.jpg"
+					}
+				}
+			]
+		},
+		{
+			"name": "Derro Savant",
+			"source": "OotA",
+			"_copy": {
+				"name": "Derro",
+				"source": "OotA"
+			},
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/OotA/Derro Savant.jpg"
+					}
 				}
 			]
 		},
@@ -183,6 +285,35 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Gash",
+			"source": "OotA",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/OotA/Gash.jpg"
+					}
+				}
+			]
+		},
+		{
+			"name": "Glabbagool",
+			"source": "OotA",
+			"entries": [
+				"Juiblex's arrival in the Underdark has granted Glabbagool sentience and awareness. The ooze is genuinely curious about other creatures and wants to learn more about the world. It defends itself if attacked, but doesn't otherwise try to harm the characters, instead asking who they are, where they come from, and why they have come to the temple."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/OotA/Glabbagool.png"
+					}
 				}
 			]
 		},
