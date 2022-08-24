@@ -100,13 +100,13 @@ const betteR205etools = function () {
 
 	async function monkeyPatch5etoolsCode () {
 		IS_VTT = true; // global variable from 5etools' utils.js
-		BrewUtil._buildSourceCache = function () {
+		BrewUtil2._buildSourceCache = function () {
 			// no-op when building source cache; we'll handle this elsewhere
-			BrewUtil._sourceCache = BrewUtil._sourceCache || {};
+			BrewUtil2._sourceCache = BrewUtil2._sourceCache || {};
 		};
 		// dummy values
-		BrewUtil.homebrew = {};
-		BrewUtil.homebrewMeta = {sources: []};
+		BrewUtil2.homebrew = {};
+		BrewUtil2.homebrewMeta = {sources: []};
 
 		Renderer.get().setBaseUrl(BASE_SITE_URL);
 	}

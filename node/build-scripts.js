@@ -113,6 +113,8 @@ const LIB_SCRIPTS = {
 		"parser.js",
 		"utils.js",
 		"utils-ui.js",
+		"filter.js",
+		"utils-brew.js",
 		"hist-port.js",
 		"render.js",
 		"render-dice.js",

@@ -473,7 +473,7 @@ function baseToolModule () {
 									<input type="radio" name="map-5etools">
 									<span class="name col-5 readable">${t.name}</span>
 									<span class="version col-1 readable" style="text-align: center;">${t.version || ""}</span>
-									<span class="lat-modified col-2 readable" style="text-align: center;">${t.dateLastModified ? DatetimeUtil.getDateStr(new Date(t.dateLastModified * 1000), true) : ""}</span>
+									<span class="lat-modified col-2 readable" style="text-align: center;">${t.dateLastModified ? DatetimeUtil.getDateStr({date: new Date(t.dateLastModified * 1000), isShort: true}) : ""}</span>
 									<span class="size col-1 readable" style="text-align: right;">${d20plus.ut.getReadableFileSizeString(t.size)}</span>
 									<span title="${Parser.sourceJsonToFull(t.id)}" class="source readable" style="text-align: right;">SRC[${Parser.sourceJsonToAbv(t.id)}]</span>
 								</label>
@@ -532,7 +532,7 @@ function baseToolModule () {
 									<input type="radio" name="map-5etools">
 									<span class="name col-5 readable">${t.name}</span>
 									<span class="version col-1 readable" style="text-align: center;">${t.version || ""}</span>
-									<span class="lat-modified col-2 readable" style="text-align: center;">${t.dateLastModified ? DatetimeUtil.getDateStr(new Date(t.dateLastModified * 1000), true) : ""}</span>
+									<span class="lat-modified col-2 readable" style="text-align: center;">${t.dateLastModified ? DatetimeUtil.getDateStr({date: new Date(t.dateLastModified * 1000), isShort: true}) : ""}</span>
 									<span class="size col-1 readable" style="text-align: right;">${t.size ? d20plus.ut.getReadableFileSizeString(t.size) : ""}</span>
 									<span title="${Parser.sourceJsonToFull(t.id)}" class="source readable" style="text-align: right;">SRC[${Parser.sourceJsonToAbv(t.id)}]</span>
 								</label>

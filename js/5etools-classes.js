@@ -31,7 +31,7 @@ function d20plusClass () {
 
 			DataUtil.loadJSON(url).then(async (data) => {
 				d20plus.importer.addBrewMeta(data._meta);
-				await d20plus.importer.pAddBrew(data);
+				await BrewUtil2.pAddBrewFromMemory(data);
 
 				if (!data.class) return;
 
@@ -513,7 +513,7 @@ function d20plusClass () {
 
 			DataUtil.loadJSON(url).then(async (data) => {
 				d20plus.importer.addBrewMeta(data._meta);
-				await d20plus.importer.pAddBrew(data);
+				await BrewUtil2.pAddBrewFromMemory(data);
 
 				data = MiscUtil.copy(data);
 				for (let i = 0; i < (data.class || []).length; ++i) {

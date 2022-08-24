@@ -21,36 +21,18 @@ function d20plusImporter () {
 
 	d20plus.importer.addBrewMeta = function (meta) {
 		if (!meta) return;
-		BrewUtil._sourceCache = BrewUtil._sourceCache || {};
+		BrewUtil2._sourceCache = BrewUtil2._sourceCache || {};
 		if (meta.sources) {
 			meta.sources.forEach(src => {
-				BrewUtil._sourceCache[src.json] = {abbreviation: src.abbreviation, full: src.full};
+				BrewUtil2._sourceCache[src.json] = {abbreviation: src.abbreviation, full: src.full};
 			});
 		}
 		const cpy = MiscUtil.copy(meta);
 		delete cpy.sources;
 		Object.keys(cpy).forEach(k => {
-			BrewUtil.homebrewMeta[k] = BrewUtil.homebrewMeta[k] || {};
-			Object.assign(BrewUtil.homebrewMeta[k], cpy[k]);
+			BrewUtil2.homebrewMeta[k] = BrewUtil2.homebrewMeta[k] || {};
+			Object.assign(BrewUtil2.homebrewMeta[k], cpy[k]);
 		});
-	};
-
-	d20plus.importer.pAddBrew = async function (data) {
-		if (!data) return;
-
-		const toAdd = {};
-		if (data._meta) toAdd._meta = data._meta;
-		BrewUtil._STORABLE
-			.filter(k => data[k] != null && data[k] instanceof Array)
-			.forEach(k => {
-				toAdd[k] = data[k].filter(it => {
-					if (it.source) return !Parser.SOURCE_JSON_TO_ABV[it.source];
-					if (it.inherits) return !Parser.SOURCE_JSON_TO_ABV[it.inherits.source];
-					return false;
-				});
-			});
-
-		await BrewUtil.pDoHandleBrewJson(toAdd, "NO_PAGE");
 	};
 
 	d20plus.importer.getCleanText = function (str) {
