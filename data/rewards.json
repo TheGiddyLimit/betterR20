@@ -334,6 +334,15 @@
 			]
 		},
 		{
+			"name": "Charm of Air Bubbles",
+			"source": "BAM",
+			"type": "Charm",
+			"entries": [
+				"{@note This charm can be bestowed by a {@creature chwinga astronaut|BAM} using their Magical Gift action.}",
+				"This charm allows you to cast the air bubble spell (see the Astral Adventurer's Guide) as an action. Once used three times, this charm goes away."
+			]
+		},
+		{
 			"name": "Charm of Animal Conjuring",
 			"source": "DMG",
 			"page": 228,
@@ -397,6 +406,15 @@
 			"type": "Charm",
 			"entries": [
 				"This charm allows you to give yourself the benefit of a {@item potion of heroism} as an action. Once you do so, the charm vanishes from you."
+			]
+		},
+		{
+			"name": "Charm of Instant Tools",
+			"source": "BAM",
+			"type": "Charm",
+			"entries": [
+				"{@note This charm can be bestowed by a {@creature chwinga astronaut|BAM} using their Magical Gift action.}",
+				"This charm allows you to magically conjure a set of artisan's tools, navigator's tools, or thieves' tools. The conjured tools appear either in your hand or somewhere else in your space (your choice). Once used, this charm goes away, but the tools remain."
 			]
 		},
 		{

@@ -234,6 +234,9 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"languageTags": [
+				"XX"
+			],
 			"damageTags": [
 				"B",
 				"O"
@@ -250,9 +253,6 @@
 			],
 			"conditionInflictSpell": [
 				"prone"
-			],
-			"languageTags": [
-				"XX"
 			],
 			"hasToken": true,
 			"hasFluff": true,

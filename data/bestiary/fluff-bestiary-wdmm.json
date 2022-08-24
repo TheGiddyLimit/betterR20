@@ -597,7 +597,7 @@
 								{
 									"type": "entries",
 									"entries": [
-										"A shadow assassin looks like an undead shadow (as described in the{@i Monster Manual}) that wields shortswords also made of shadow. It exists only to slay the living."
+										"A shadow assassin looks like an undead shadow (as described in the {@i Monster Manual}) that wields shortswords also made of shadow. It exists only to slay the living."
 									]
 								}
 							]
@@ -799,7 +799,7 @@
 								{
 									"type": "entries",
 									"entries": [
-										"A werebat is a humanoid afflicted with a rare form of lycanthropy that enables it to transform into a giant bat or a bat-humanoid hybrid. (See the {@i Monster Manual} for more information on{@i lycanthropy}.) Most werebats are of goblin stock."
+										"A werebat is a humanoid afflicted with a rare form of lycanthropy that enables it to transform into a giant bat or a bat-humanoid hybrid. (See the {@i Monster Manual} for more information on {@i lycanthropy}.) Most werebats are of goblin stock."
 									]
 								},
 								{

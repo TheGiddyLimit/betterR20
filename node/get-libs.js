@@ -15,6 +15,7 @@ const _LIBS = new Set([
 	"utils.js",
 	"utils-ui.js",
 	"utils-brew.js",
+	"filter.js",
 ]);
 
 async function main () {

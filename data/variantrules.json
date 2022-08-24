@@ -43,7 +43,7 @@
 					"name": "Shove Aside",
 					"type": "entries",
 					"entries": [
-						"With this option, a creature uses the special {@action shove} attack from the Player's Handbook to force a target to the side, rather than away. The attacker has disadvantage on its Strength ({@skill Athletics}) check when it does so. If that check is successful, the attacker moves the target 5 feet to a different space within its reach."
+						"With this option, a creature uses the special {@action shove} attack from the {@book Player's Handbook|PHB} to force a target to the side, rather than away. The attacker has disadvantage on its Strength ({@skill Athletics}) check when it does so. If that check is successful, the attacker moves the target 5 feet to a different space within its reach."
 					]
 				},
 				{
@@ -733,7 +733,7 @@
 			"page": 252,
 			"ruleType": "O",
 			"entries": [
-				"The {@i Player's Handbook} presents a simple method for counting movement and measuring range on a grid: count every square as 5 feet, even if you're moving diagonally. Though this is fast in play, it breaks the laws of geometry and is inaccurate over long distances. This optional rule provides more realism, but it requires more effort during combat.",
+				"The {@book Player's Handbook|PHB} presents a simple method for counting movement and measuring range on a grid: count every square as 5 feet, even if you're moving diagonally. Though this is fast in play, it breaks the laws of geometry and is inaccurate over long distances. This optional rule provides more realism, but it requires more effort during combat.",
 				"When measuring range or moving diagonally on a grid, the first diagonal square counts as 5 feet, but the second diagonal square counts as 10 feet. This pattern of 5 feet and then 10 feet continues whenever you're counting diagonally, even if you move horizontally or vertically between different bits of diagonal movement.",
 				"For example, a character might move one square diagonally (5 feet), then three squares straight (15 feet), and then another square diagonally (10 feet) for a total movement of 30 feet."
 			]
@@ -849,35 +849,35 @@
 					],
 					"rows": [
 						[
-							"1\u20145",
+							"1\u20135",
 							"Roll {@dice 1d6} times on {@table Magic Item Table A}."
 						],
 						[
-							"6\u201410",
+							"6\u201310",
 							"Roll {@dice 1d4} times on {@table Magic Item Table B}."
 						],
 						[
-							"11\u201415",
+							"11\u201315",
 							"Roll {@dice 1d4} times on {@table Magic Item Table C}."
 						],
 						[
-							"16\u201420",
+							"16\u201320",
 							"Roll {@dice 1d4} times on {@table Magic Item Table D}."
 						],
 						[
-							"21\u201425",
+							"21\u201325",
 							"Roll {@dice 1d4} times on {@table Magic Item Table E}."
 						],
 						[
-							"26\u201430",
+							"26\u201330",
 							"Roll {@dice 1d4} times on {@table Magic Item Table F}."
 						],
 						[
-							"31\u201435",
+							"31\u201335",
 							"Roll {@dice 1d4} times on {@table Magic Item Table G}."
 						],
 						[
-							"36\u201440",
+							"36\u201340",
 							"Roll {@dice 1d4} times on {@table Magic Item Table H}."
 						],
 						[
@@ -1004,7 +1004,7 @@
 			"ruleType": "O",
 			"entries": [
 				"Characters can spend their downtime engaged in a variety of hedonistic activities such as attending parties, binge drinking, gambling, or anything else that helps them cope with the perils they face on their adventures.",
-				"A carousing character spends money as though maintaining a wealthy lifestyle (see chapter 5, \"Equipment,\" of the {@i Player's Handbook}). At the end of the period spent carousing, the player rolls percentile dice and adds the character's level, then compares the total to the Carousing table to determine what happens to the character, or you choose.",
+				"A carousing character spends money as though maintaining a wealthy lifestyle (see chapter 5, \"{@book Equipment|PHB|5|Lifestyle Expenses},\" of the {@book Player's Handbook|PHB}). At the end of the period spent carousing, the player rolls percentile dice and adds the character's level, then compares the total to the Carousing table to determine what happens to the character, or you choose.",
 				{
 					"type": "table",
 					"caption": "Carousing",
@@ -1083,19 +1083,19 @@
 							],
 							"rows": [
 								[
-									"1\u20145",
+									"1\u20135",
 									"Character has made a hostile contact."
 								],
 								[
-									"6\u201410",
+									"6\u201310",
 									"Character has made no new contacts."
 								],
 								[
-									"11\u201415",
+									"11\u201315",
 									"Character has made an allied contact."
 								],
 								[
-									"16\u201420",
+									"16\u201320",
 									"Character has made two allied contacts."
 								],
 								[
@@ -1343,7 +1343,7 @@
 				"If a spell will be produced by the item being created, the creator must expend one spell slot of the spell's level for each day of the creation process. The spell's material components must also be at hand throughout the process. If the spell normally consumes those components, they are consumed by the creation process. If the item will be able to produce the spell only once, as with a {@item spell scroll}, the components are consumed only once by the process. Otherwise, the components are consumed once each day of the item's creation.",
 				"Multiple characters can combine their efforts to create a magic item if each of them meets the level prerequisite. Each character can contribute spells, spell slots and components, as long as everyone participates during the entire crafting process. Each character can contribute 25 gp worth of effort for each day spent helping to craft the item.",
 				"Normally, a character who undertakes this activity creates a magic item described in chapter 7, \"Treasure.\" At your discretion, you can allow players to design their own magic items, using the guidelines in chapter 9, \"Dungeon Master's Workshop.\"",
-				"While crafting a magic item, a character can maintain modest lifestyle without having to pay the 1 gp per day, or a comfortable lifestyle at half the normal cost (see chapter 5, \"Equipment,\" of the Player's Handbook).",
+				"While crafting a magic item, a character can maintain modest lifestyle without having to pay the 1 gp per day, or a comfortable lifestyle at half the normal cost (see chapter 5, \"{@book Equipment|PHB|5|Lifestyle Expenses},\" of the {@book Player's Handbook|PHB}).",
 				{
 					"type": "inset",
 					"name": "Magic Item Formulas",
@@ -1427,19 +1427,19 @@
 							"rows": [
 								[
 									"Common",
-									"1\u20143"
+									"1\u20133"
 								],
 								[
 									"Uncommon",
-									"4\u20148"
+									"4\u20138"
 								],
 								[
 									"Rare",
-									"9\u201412"
+									"9\u201312"
 								],
 								[
 									"Very rare",
-									"13\u201418"
+									"13\u201318"
 								],
 								[
 									"Legendary",
@@ -1826,7 +1826,7 @@
 			"entries": [
 				"A pious character can spend time between adventures performing sacred rites in a temple affiliated with a god he or she reveres. Between rites, the character spends time in meditation and prayer.",
 				"A character who is a priest in the temple can lead these rites, which might include weddings, funerals, and ordinations. A layperson can offer sacrifices in a temple or assist a priest with a rite.",
-				"A character who spends at least 10 days performing sacred rites gains inspiration (described in chapter 4 of the Player's Handbook) at the start of each day for the next {@dice 2d6} days."
+				"A character who spends at least 10 days performing sacred rites gains {@book inspiration|PHB|4|Inspiration} (described in chapter 4 of the {@book Player's Handbook|PHB}) at the start of each day for the next {@dice 2d6} days."
 			]
 		},
 		{
@@ -2022,11 +2022,11 @@
 							],
 							"rows": [
 								[
-									"1\u201410",
+									"1\u201310",
 									"No effect. Your efforts fail to make a lasting impression."
 								],
 								[
-									"11\u201420",
+									"11\u201320",
 									"You earn one favor."
 								],
 								[
@@ -2122,15 +2122,15 @@
 							],
 							"rows": [
 								[
-									"1\u20145",
+									"1\u20135",
 									"No effect."
 								],
 								[
-									"6\u201410",
+									"6\u201310",
 									"You learn one piece of lore."
 								],
 								[
-									"11\u201420",
+									"11\u201320",
 									"You learn two pieces of lore."
 								],
 								[
@@ -2459,11 +2459,11 @@
 							],
 							"rows": [
 								[
-									"1\u201410",
+									"1\u201310",
 									"50% of base price"
 								],
 								[
-									"11\u201420",
+									"11\u201320",
 									"100% of base price"
 								],
 								[
@@ -2813,11 +2813,11 @@
 									"Poor lifestyle for the week"
 								],
 								[
-									"10\u201414",
+									"10\u201314",
 									"Modest lifestyle for the week"
 								],
 								[
-									"15\u201420",
+									"15\u201320",
 									"Comfortable lifestyle for the week"
 								],
 								[
@@ -2885,7 +2885,7 @@
 			"ruleType": "VO",
 			"type": "section",
 			"entries": [
-				"It's possible for the characters to start a campaign at 1st level, dive into an epic story, and reach 10th level and beyond in a short amount of game time. Although that pace works fine for many campaigns, some DMs prefer a campaign story with pauses built into it\u2014times when adventurers are not going on adventures. The downtime rules given in this section can be used as alternatives to the approach in the Player's Handbook and the Dungeon Master's Guide, or you can use the material here to inspire the creation of your own options.",
+				"It's possible for the characters to start a campaign at 1st level, dive into an epic story, and reach 10th level and beyond in a short amount of game time. Although that pace works fine for many campaigns, some DMs prefer a campaign story with pauses built into it\u2014times when adventurers are not going on adventures. The downtime rules given in this section can be used as alternatives to the approach in the {@book Player's Handbook|PHB|8|Downtime Activities} and the {@book Dungeon Master's Guide|DMG|6|Downtime Activities}, or you can use the material here to inspire the creation of your own options.",
 				"By engaging the characters in downtime activities that take weeks or even months to complete, you can give your campaign a longer time line\u2014one in which events in the world play out over years. Wars begin and end, tyrants come and go, and royal lines rise and fall over the course of the story that you and the characters tell.",
 				"Downtime rules also provide ways for characters to spend\u2014or be relieved of\u2014the monetary treasure they amass on their adventures.",
 				"The system presented here consists of two elements. First, it introduces the concept of rivals. Second, it details a number of downtime activities that characters can undertake.",
@@ -3557,7 +3557,7 @@
 			"ruleType": "O",
 			"type": "section",
 			"entries": [
-				"Falling from a great height is a significant risk for adventurers and their foes. The rule given in the Player's Handbook is simple: at the end of a fall, you take {@dice 1d6} bludgeoning damage for every 10 feet you fell, to a maximum of {@dice 20d6}. You also land {@condition prone}, unless you somehow avoid taking damage from the fall. Here are two optional rules that expand on that simple rule.",
+				"Falling from a great height is a significant risk for adventurers and their foes. The rule given in the {@book Player's Handbook|PHB|8|Falling} is simple: at the end of a fall, you take {@dice 1d6} bludgeoning damage for every 10 feet you fell, to a maximum of {@dice 20d6}. You also land {@condition prone}, unless you somehow avoid taking damage from the fall. Here are two optional rules that expand on that simple rule.",
 				{
 					"type": "entries",
 					"name": "Rate of Falling",
@@ -3583,7 +3583,7 @@
 			"page": 347,
 			"ruleType": "V",
 			"entries": [
-				"Any spellcaster that can cast the {@spell find familiar} spell (such as an apprentice, warlock, or wizard) is likely to have a familiar. The familiar can be one of the creatures described in the spell (see the {@i Player's Handbook}) or some other {@filter Tiny monster|bestiary|size=T|miscellaneous=!swarm}, such as a {@creature crawling claw}, an {@creature imp}, a {@creature pseudodragon}, or a {@creature quasit}.",
+				"Any spellcaster that can cast the {@spell find familiar} spell (such as an apprentice, warlock, or wizard) is likely to have a familiar. The familiar can be one of the creatures described in the spell (see the {@book Player's Handbook|PHB}) or some other {@filter Tiny monster|bestiary|size=T|miscellaneous=!swarm}, such as a {@creature crawling claw}, an {@creature imp}, a {@creature pseudodragon}, or a {@creature quasit}.",
 				"{@note This variant is {@link intended for NPCs.|https://twitter.com/JeremyECrawford/status/920714594334654465}}"
 			]
 		},
@@ -3593,7 +3593,7 @@
 			"page": 213,
 			"ruleType": "V",
 			"entries": [
-				"Any spellcaster that can cast the {@spell find familiar} spell (such as an apprentice, warlock, or wizard) is likely to have a familiar. The familiar can be one of the creatures described in the spell (see the {@i Player's Handbook}) or some other {@filter Tiny monster|bestiary|size=T|miscellaneous=!swarm}, such as a {@creature cranium rat|vgm}, a {@creature crawling claw}, a {@creature gazer|vgm}, an {@creature imp}, a {@creature pseudodragon}, or a {@creature quasit}.",
+				"Any spellcaster that can cast the {@spell find familiar} spell (such as an apprentice, warlock, or wizard) is likely to have a familiar. The familiar can be one of the creatures described in the spell (see the {@book Player's Handbook|PHB}) or some other {@filter Tiny monster|bestiary|size=T|miscellaneous=!swarm}, such as a {@creature cranium rat|vgm}, a {@creature crawling claw}, a {@creature gazer|vgm}, an {@creature imp}, a {@creature pseudodragon}, or a {@creature quasit}.",
 				"{@note This variant is {@link intended for NPCs.|https://twitter.com/JeremyECrawford/status/920714594334654465}}"
 			]
 		},
@@ -3792,7 +3792,7 @@
 					"type": "entries",
 					"name": "Proficiency",
 					"entries": [
-						"It's up to you to decide whether a character has proficiency with a firearm. Characters in most D&D worlds wouldn't have such proficiency. During their downtime, characters can use the training rules in the Player's Handbook to acquire proficiency, assuming that they have enough ammunition to keep the weapons working while mastering their use."
+						"It's up to you to decide whether a character has proficiency with a firearm. Characters in most D&D worlds wouldn't have such proficiency. During their downtime, characters can use the {@variantrule Downtime Activity: Training|PHB|training} rules in the {@book Player's Handbook|PHB} to acquire proficiency, assuming that they have enough ammunition to keep the weapons working while mastering their use."
 					]
 				},
 				{
@@ -3859,8 +3859,8 @@
 			"name": "Greyhawk Initiative",
 			"source": "UAGreyhawkInitiative",
 			"page": 1,
+			"ruleType": "VO",
 			"type": "section",
-			"ruleType": "V",
 			"entries": [
 				{
 					"type": "entries",
@@ -3985,7 +3985,7 @@
 									"name": "Variant: Weapon Speed",
 									"entries": [
 										"If you want to add more distinction to weapons at the cost of speed, replace rolling a {@dice d4} for ranged attacks and a {@dice d8} for melee attacks with the following:",
-										"When determining initiative, a creature attacking with a weapon rolls initiative dice equal to the damage dice rolled for the weapon. Use the base damage listed in the Weapons table in chapter 5 of the {@i Player's Handbook}, ignoring additional damage granted by spells, magical effects, feats, and so on."
+										"When determining initiative, a creature attacking with a weapon rolls initiative dice equal to the damage dice rolled for the weapon. Use the base damage listed in the {@table Weapons|PHB} table in chapter 5 of the {@book Player's Handbook|PHB}, ignoring additional damage granted by spells, magical effects, feats, and so on."
 									]
 								},
 								{
@@ -4539,7 +4539,7 @@
 			"source": "DMG",
 			"page": 240,
 			"entries": [
-				"Awarding inspiration is an effective way to encourage roleplaying and risk-taking. As explained in the Player's Handbook, having inspiration gives a character an obvious benefit: being able to gain advantage on one ability check, attack roll, or saving throw. Remember that a character can have no more than one inspiration at a time.",
+				"Awarding inspiration is an effective way to encourage roleplaying and risk-taking. As explained in the {@book Player's Handbook|PHB}, having inspiration gives a character an obvious benefit: being able to gain advantage on one ability check, attack roll, or saving throw. Remember that a character can have no more than one inspiration at a time.",
 				{
 					"type": "entries",
 					"name": "Awarding Inspiration",
@@ -4713,7 +4713,7 @@
 					"type": "entries",
 					"name": "Going Mad",
 					"entries": [
-						"Various magical effects can inflict madness on an otherwise stable mind. Certain spells, such as {@spell contact other plane} and {@spell symbol}, can cause insanity, and you can use the madness rules here instead of the spell effects in the Player's Handbook. Diseases, poisons, and planar effects such as psychic wind or the howling winds of Pandemonium can all inflict madness. Some artifacts can also break the psyche of a character who uses or becomes attuned to them.",
+						"Various magical effects can inflict madness on an otherwise stable mind. Certain spells, such as {@spell contact other plane} and {@spell symbol}, can cause insanity, and you can use the madness rules here instead of the spell effects in the {@book Player's Handbook|PHB}. Diseases, poisons, and planar effects such as psychic wind or the howling winds of Pandemonium can all inflict madness. Some artifacts can also break the psyche of a character who uses or becomes attuned to them.",
 						"Resisting a madness-inducing effect usually requires a Wisdom or Charisma saving throw. If your game includes the {@variantrule New Ability Scores: Honor and Sanity||Sanity score} (see chapter 9, \"Dungeon Master's Workshop\"), a creature makes a Sanity saving throw instead."
 					]
 				},
@@ -5286,7 +5286,7 @@
 					"type": "entries",
 					"name": "Running Battles",
 					"entries": [
-						"These rules use a structure like the combat rules in the Player's Handbook. The biggest change centers on resolving attacks, which uses BR rather than attack rolls, AC, and damage.",
+						"These rules use a structure like the combat rules in the {@book Player's Handbook|PHB|9}. The biggest change centers on resolving attacks, which uses BR rather than attack rolls, AC, and damage.",
 						{
 							"type": "entries",
 							"name": "Time",
@@ -5320,7 +5320,7 @@
 									"type": "entries",
 									"name": "Movement",
 									"entries": [
-										"A unit must stop moving if it moves adjacent to an enemy unit, and a unit can't move if it is adjacent to an enemy unit, unless it uses the {@action Disengage} action that turn. Otherwise, use the rules for movement from the {@i Player's Handbook} to resolve how far a unit can move."
+										"A unit must stop moving if it moves adjacent to an enemy unit, and a unit can't move if it is adjacent to an enemy unit, unless it uses the {@action Disengage} action that turn. Otherwise, use the rules for movement from the {@book Player's Handbook|PHB|9|Movement and Position} to resolve how far a unit can move."
 									]
 								},
 								{
@@ -7486,7 +7486,7 @@
 							"name": "Wild Magic Fog",
 							"entries": [
 								"Few know the origins of wild magic fog, with some claiming it is the creation of capricious gods while others believe it is the result of magical experimentation gone wrong. A DC 15 Intelligence ({@skill Arcana}) check reveals that this mist is wild magic fog.",
-								"Whenever a creature in wild magic fog casts a spell of 1st level or higher, roll on the {@table Wild Magic Surge|PHB} table in chapter 3, \"Classes,\" of the {@book Player's Handbook|PHB} to create a magical effect."
+								"Whenever a creature in wild magic fog casts a spell of 1st level or higher, roll on the {@table Wild Magic Surge|PHB} table in chapter 3, \"{@book Classes|PHB|3},\" of the {@book Player's Handbook|PHB} to create a magical effect."
 							]
 						}
 					]
@@ -8076,7 +8076,7 @@
 			"ruleType": "O",
 			"type": "section",
 			"entries": [
-				"When adventurers travel to other planes of existence, they undertake a legendary journey that might force them to face supernatural guardians and undergo various ordeals. You can choose to add effects to any or all of the planes, to better represent their uniqueness. The effects listed below apply to the default cosmological arrangement presented in the Player's Handbook, and are individually optional.",
+				"When adventurers travel to other planes of existence, they undertake a legendary journey that might force them to face supernatural guardians and undergo various ordeals. You can choose to add effects to any or all of the planes, to better represent their uniqueness. The effects listed below apply to the default cosmological arrangement presented in the {@book Player's Handbook|PHB|13}, and are individually optional.",
 				{
 					"type": "entries",
 					"name": "Feywild: Feywild Magic",
@@ -8492,7 +8492,7 @@
 					"type": "entries",
 					"name": "Contests and Checks",
 					"entries": [
-						"Whenever an NPC or monster would normally make an ability check, roll initiative, or take part in a contest, neither you nor the players roll the {@dice d20}. Instead, use the rules for passive checks to determine the result. See chapter 7, \"Using Ability Scores,\" of the Player's Handbook for more information on passive checks."
+						"Whenever an NPC or monster would normally make an ability check, roll initiative, or take part in a contest, neither you nor the players roll the {@dice d20}. Instead, use the rules for passive checks to determine the result. See chapter 7, \"{@book Using Ability Scores|PHB|7|Passive Scores},\" of the {@book Player's Handbook|PHB} for more information on passive checks."
 					]
 				}
 			]
@@ -8611,7 +8611,7 @@
 							"name": "Joining a Prestige Class",
 							"entries": [
 								"In order to join a prestige class, you must first check with your Dungeon Master. A DM can opt to include or disallow prestige classes in the game. Typically, a prestige class requires you to undertake specific actions in the game so that your character can begin pursuing that class. If those actions aren't already possible in your campaign, talk to your DM about integrating the prestige class that interests you.",
-								"A prestige class uses the normal D&D multiclassing rules (see chapter 6, \"Customization Options,\" in the Player's Handbook). When your character is ready to advance a level, you can choose to gain a level in a prestige class. Your levels in all your classes, including prestige classes, are added together to determine your character level.",
+								"A prestige class uses the normal D&D multiclassing rules (see chapter 6, \"{@book Customization Options|PHB|6|Multiclassing},\" in the {@book Player's Handbook|PHB}). When your character is ready to advance a level, you can choose to gain a level in a prestige class. Your levels in all your classes, including prestige classes, are added together to determine your character level.",
 								{
 									"type": "entries",
 									"name": "Prerequisites",
@@ -9558,7 +9558,7 @@
 			"page": 267,
 			"ruleType": "V",
 			"entries": [
-				"The rules for short and long rests presented in chapter 8 of the Player's Handbook work well for a heroic-style campaign. Characters can go toe-to-toe with deadly foes, take damage to within an inch of their lives, yet still be ready to fight again the next day. If this approach doesn't fit your campaign, consider the following variants.",
+				"The rules for short and long rests presented in chapter 8 of the {@book Player's Handbook|PHB|8|Resting} work well for a heroic-style campaign. Characters can go toe-to-toe with deadly foes, take damage to within an inch of their lives, yet still be ready to fight again the next day. If this approach doesn't fit your campaign, consider the following variants.",
 				{
 					"type": "entries",
 					"name": "Epic Heroism",
@@ -9678,11 +9678,11 @@
 						],
 						[
 							"4",
-							"The spell's effect is contrary to its normal one, but neither harmful nor beneficial. For instance, a fireball might produce an area of harmless cold."
+							"The spell's effect is contrary to its normal one, but neither harmful nor beneficial. For instance, a {@spell fireball} might produce an area of harmless cold."
 						],
 						[
 							"5",
-							"The caster suffers a minor but bizarre effect related to the spell. Such effects last only as long as the original spell's duration, or {@dice 1d10} minutes for spells that take effect instantaneously. For example, a fireball might cause smoke to billow from the caster's ears for {@dice 1d10} minutes. "
+							"The caster suffers a minor but bizarre effect related to the spell. Such effects last only as long as the original spell's duration, or {@dice 1d10} minutes for spells that take effect instantaneously. For example, a {@spell fireball} might cause smoke to billow from the caster's ears for {@dice 1d10} minutes. "
 						],
 						[
 							"6",
@@ -9716,7 +9716,7 @@
 								{
 									"type": "list",
 									"items": [
-										"At levels 1\u20144, reaching 4 checkpoints is sufficient to advance to the next level.",
+										"At levels 1\u20134, reaching 4 checkpoints is sufficient to advance to the next level.",
 										"At level 5 or higher, reaching 8 checkpoints is needed to advance to the next level."
 									]
 								},
@@ -9814,47 +9814,47 @@
 									"rows": [
 										[
 											"A",
-											"1\u20144",
+											"1\u20134",
 											"4"
 										],
 										[
 											"B",
-											"1\u20144",
+											"1\u20134",
 											"4"
 										],
 										[
 											"C",
-											"1\u20144",
+											"1\u20134",
 											"4"
 										],
 										[
 											"D",
-											"2\u20144",
+											"2\u20134",
 											"8"
 										],
 										[
 											"E",
-											"3\u20144",
+											"3\u20134",
 											"8"
 										],
 										[
 											"F",
-											"1\u20144",
+											"1\u20134",
 											"8"
 										],
 										[
 											"G",
-											"2\u20144",
+											"2\u20134",
 											"10"
 										],
 										[
 											"H",
-											"3\u20144",
+											"3\u20134",
 											"10"
 										],
 										[
 											"I",
-											"3\u20144",
+											"3\u20134",
 											"12"
 										]
 									]
@@ -9876,7 +9876,7 @@
 					"type": "entries",
 					"name": "Buying and Selling",
 					"entries": [
-						"Characters can use their monetary treasure to purchase anything from the equipment lists in chapter 5 of the Player's Handbook. In addition, the Adventurers League allows characters to purchase potions and spell scrolls, as detailed below. A {@item spell scroll} can be purchased only by a character who is capable of casting the spell in question.",
+						"Characters can use their monetary treasure to purchase anything from the equipment lists in chapter 5 of the {@book Player's Handbook|PHB|5}. In addition, the Adventurers League allows characters to purchase potions and spell scrolls, as detailed below. A {@item spell scroll} can be purchased only by a character who is capable of casting the spell in question.",
 						{
 							"type": "table",
 							"caption": "Potions for Sale",
@@ -11317,12 +11317,12 @@
 			"ruleType": "O",
 			"type": "section",
 			"entries": [
-				"This section expands on the spellcasting rules presented in the Player's Handbook and the Dungeon Master's Guide, providing clarifications and new options.",
+				"This section expands on the spellcasting rules presented in the {@book Player's Handbook|PHB|10} and the {@book Dungeon Master's Guide|DMG}, providing clarifications and new options.",
 				{
 					"type": "entries",
 					"name": "Perceiving a Caster at Work",
 					"entries": [
-						"Many spells create obvious effects: explosions of fire, walls of ice, teleportation, and the like. Other spells, such as charm person, display no visible, audible, or otherwise perceptible sign of their effects, and could easily go unnoticed by someone unaffected by them. As noted in the Player's Handbook, you normally don't know that a spell has been cast unless the spell produces a noticeable effect.",
+						"Many spells create obvious effects: explosions of fire, walls of ice, teleportation, and the like. Other spells, such as charm person, display no visible, audible, or otherwise perceptible sign of their effects, and could easily go unnoticed by someone unaffected by them. As noted in the {@book Player's Handbook|PHB}, you normally don't know that a spell has been cast unless the spell produces a noticeable effect.",
 						"But what about the act of casting a spell? Is it possible for someone to perceive that a spell is being cast in their presence? To be perceptible, the casting of a spell must involve a verbal, somatic, or material component. The form of a material component doesn't matter for the purposes of perception, whether it's an object specified in the spell's description, a component pouch, or a spellcasting focus.",
 						"If the need for a spell's components has been removed by a special ability, such as the sorcerer's Subtle Spell feature or the Innate Spellcasting trait possessed by many creatures, the casting of the spell is imperceptible. If an imperceptible casting produces a perceptible effect, it's normally impossible to determine who cast the spell in the absence of other evidence."
 					]
@@ -11349,7 +11349,7 @@
 					"name": "Areas of Effect on a Grid",
 					"entries": [
 						"The Dungeon Master's Guide includes the following short rule for using areas of effect on a grid.",
-						"Choose an intersection of squares as the point of origin of an area of effect, then follow the rules for that kind of area as normal (see the \"Areas of Effect\" section in chapter 10 of the Player's Handbook). If an area of effect is circular and covers at least half a square, it affects that square.",
+						"Choose an intersection of squares as the point of origin of an area of effect, then follow the rules for that kind of area as normal (see the \"{@book Areas of Effect|PHB|10|Areas of Effect}\" section in chapter 10 of the {@book Player's Handbook|PHB}). If an area of effect is circular and covers at least half a square, it affects that square.",
 						"That rule works, but it can require a fair amount of on-the-spot adjudication. This section offers two alternatives for determining the exact location of an area: the template method and the token method. Both of these methods assume you're using a grid and miniatures of some sort. Because these methods can yield different results for the number of squares in a given area, it's not recommended that they be combined at the table\u2014choose whichever method you and your players find easier or more intuitive.",
 						{
 							"type": "entries",
@@ -11369,7 +11369,7 @@
 									"entries": [
 										"To use an area-of-effect template, apply it to the grid. If the terrain is flat, you can lay it on the surface; otherwise, hold the template above the surface and take note of which squares it covers or partially covers. If any part of a square is under the template, that square is included in the area of effect. If a creature's miniature is in an affected square, that creature is in the area. Being adjacent to the edge of the template isn't enough for a square to be included in the area of effect; the square must be entirely or partly covered by the template.",
 										"You can also use this method without a grid. If you do so, a creature is included in an area of effect if any part of the miniature's base is overlapped by the template.",
-										"When you place a template, follow all the rules in the Player's Handbook for placing the associated area of effect. If an area of effect, such as a cone or a line, originates from a spellcaster, the template should extend out from the caster and be positioned however the caster likes within the bounds of the rules.",
+										"When you place a template, follow all the rules in the {@book Player's Handbook|PHB} for placing the associated area of effect. If an area of effect, such as a cone or a line, originates from a spellcaster, the template should extend out from the caster and be positioned however the caster likes within the bounds of the rules.",
 										"Diagrams 2.1 and 2.2 show the template method in action.",
 										{
 											"type": "image",
@@ -11951,7 +11951,7 @@
 					"type": "entries",
 					"name": "Tool Descriptions",
 					"entries": [
-						"The following sections go into detail about the tools presented in the Player's Handbook, offering advice on how to use them in a campaign.",
+						"The following sections go into detail about the tools presented in the {@book Player's Handbook|PHB|5|Tools}, offering advice on how to use them in a campaign.",
 						{
 							"type": "entries",
 							"entries": [
@@ -13665,7 +13665,7 @@
 			"page": 199,
 			"type": "section",
 			"entries": [
-				"It's not just pirates and sea monsters that make journeys on the sea so treacherous. Foul weather, nautical accidents, infested food, illness, and worse all conspire to send even the most capable crews to watery graves. The following rules help adjudicate travel at sea, specifically voyages of an hour or more. This material builds on the travel rules in the {@book Player's Handbook|PHB} and the {@book Dungeon Master's Guide|DMG}.",
+				"It's not just pirates and sea monsters that make journeys on the sea so treacherous. Foul weather, nautical accidents, infested food, illness, and worse all conspire to send even the most capable crews to watery graves. The following rules help adjudicate travel at sea, specifically voyages of an hour or more. This material builds on the travel rules in the {@book Player's Handbook|PHB|8|Travel Pace} and the {@book Dungeon Master's Guide|DMG|8|Exploration}.",
 				{
 					"type": "entries",
 					"name": "Travel Pace",
@@ -14335,7 +14335,7 @@
 					"type": "entries",
 					"name": "Activity While Traveling",
 					"entries": [
-						"The activities available to a ship's crew and passengers are a bit different from the options available to a group traveling by land. Refer to \"Activity While Traveling\" in {@book chapter 8|PHB|8|Activity While Traveling} of the Player's Handbook for more information on some of the topics discussed below.",
+						"The activities available to a ship's crew and passengers are a bit different from the options available to a group traveling by land. Refer to \"{@book Activity While Traveling|PHB|8|Activity While Traveling}\" in chapter 8 of the {@book Player's Handbook|PHB} for more information on some of the topics discussed below.",
 						"A number of activities are restricted to certain officers, unless the DM rules otherwise. For example, a bard might be allowed to engage in the raise morale activity by playing bawdy songs on deck to lift the crew's spirits.",
 						"The party's pace has no effect on the activities they can engage in while traveling by ship.",
 						{
@@ -15759,7 +15759,7 @@
 									"type": "entries",
 									"name": "The Kraken Cometh",
 									"entries": [
-										"If the cultists defeat the characters, the kraken priests use their {@spell water breathing} spells to keep the characters alive and then bind them with {@item manacles|PHB} (see chapter 5 in the {@book Player's Handbook|PHB}) near Vaalastroth Trench ({@adventure area W2|GoS|8|W2. Vaalastroth Trench}). The cultists complete their ritual 12 hours after they capture the characters. A loud hum rings through the area, and then Vaalastroth the {@creature kraken} rises from the trench.",
+										"If the cultists defeat the characters, the kraken priests use their {@spell water breathing} spells to keep the characters alive and then bind them with {@item manacles|PHB} (see chapter 5 in the {@book Player's Handbook|PHB|5|Adventuring Gear}) near Vaalastroth Trench ({@adventure area W2|GoS|8|W2. Vaalastroth Trench}). The cultists complete their ritual 12 hours after they capture the characters. A loud hum rings through the area, and then Vaalastroth the {@creature kraken} rises from the trench.",
 										"Elagoth offers the characters as tribute, claiming that these powerful adventurers are the greatest threats to Vaalastroth's takeover of the settlement. Vaalastroth then attacks the cultists, calling them insolent for disturbing its slumber and offering such a paltry gift. If the characters have not escaped by the time the kraken kills the cultists, it demands all the characters' magic items in exchange for their lives. When it is satisfied, the kraken returns to its lair."
 									]
 								}
@@ -15802,7 +15802,7 @@
 			"ruleType": "V",
 			"type": "section",
 			"entries": [
-				"Some DMs find hit points bothersome. A fighter can survive a fireball, a troll's rending claws, and a one-hundred-foot fall, only to crumple in a heap due to a kobold's dagger slash. This optional rule more realistically reflects the wear and tear a character suffers from wounds.",
+				"Some DMs find hit points bothersome. A fighter can survive a {@spell fireball}, a troll's rending claws, and a one-hundred-foot fall, only to crumple in a heap due to a kobold's dagger slash. This optional rule more realistically reflects the wear and tear a character suffers from wounds.",
 				"Each character has a pool of vitality in addition to hit points. A character's maximum vitality equals the character's Constitution score. Whenever a character takes 10 or more damage from an attack or effect, the character loses vitality. Divide the damage by 10 and round down. The result is how much vitality a character loses. In other words, a character loses 1 vitality for every 10 points of damage dealt by an attack or effect.",
 				"If a character suffers a critical hit, double the vitality lost, so that the character loses 2 vitality for every 10 points of damage. If a critical hit deals less than 10 damage, it still reduces vitality by 1.",
 				"Losing vitality causes a character's hit point maximum to drop. Calculate the character's current maximum using vitality instead of Constitution. Thus, as vitality drops, a character's Constitution modifier for determining hit points also drops.",
@@ -15817,6 +15817,144 @@
 			"ruleType": "V",
 			"entries": [
 				"A typical wand has expendable charges. If you'd like wands to be a limited resource, you can make some of them incapable of regaining charges. Consider increasing the base number of charges in such a wand, to a maximum of 25 charges. These charges are never regained once they're expended."
+			]
+		},
+		{
+			"name": "Wild Shape Forms",
+			"source": "UADruid",
+			"page": 3,
+			"ruleType": "O",
+			"type": "section",
+			"entries": [
+				"The {@classFeature Wild Shape|Druid||2} feature in the {@book Player's Handbook|PHB} lets you transform into a beast that you've seen before. That rule gives you a tremendous amount of flexibility, making it easy to amass a large of array of beast form options for yourself, assuming you abide by the limitations in the Beast Shapes table in that book.",
+				"The optional rule presented here is designed for the player and DM who would like to trade some of that flexibility for ease of use. The rules here also create a clear in-world method for learning new beast shapes.",
+				{
+					"name": "Known Beast Shapes",
+					"type": "entries",
+					"entries": [
+						"When you gain the {@classFeature Wild Shape|Druid||2} feature at 2nd level, you are deeply familiar with three beasts of your choice and can transform into them.",
+						"To choose the three beast shapes, you first need to determine whether your druid grew up in a temperate or a tropical region, consulting with your DM. Then refer to the Common Beast Shapes table that corresponds to the region you selected. That table lists the beasts you can choose from, based on your druid level. The table presents the animals that a druid is most likely to have seen as a novice, to have learned about through mystic research, or to have a special affinity with.",
+						"Each time you gain a druid level later, you can choose one more beast shape from the same table you used at 2nd level.",
+						{
+							"type": "table",
+							"caption": "Common Beast Shapes \u2014 Temperate",
+							"colLabels": [
+								"Druid Level Prerequisite",
+								"Beasts"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"2nd",
+									"Badger, boar, cat, deer, draft horse, elk, goat, jackal, lizard, mastiff, mule, panther, pony, rat, riding horse, scorpion, spider, weasel, wolf"
+								],
+								[
+									"4th",
+									"Black bear,* crab, frog, octopus, poisonous snake, reef shark, sea horse, warhorse*"
+								],
+								[
+									"8th",
+									"Bat, brown bear,* eagle, hawk, owl, raven, vulture"
+								]
+							],
+							"footnotes": [
+								"* A member of the Circle of the Moon can choose this beast at 2nd level."
+							]
+						},
+						{
+							"type": "table",
+							"caption": "Common Beast Shapes \u2014 Tropical",
+							"colLabels": [
+								"Druid Level Prerequisite",
+								"Beasts"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									"2nd",
+									"Baboon, badger, boar, camel, cat, deer, draft horse, goat, hyena, jackal, lizard, mule, panther, pony, rat, riding horse, scorpion, spider, weasel"
+								],
+								[
+									"4th",
+									"Ape,* crab, crocodile, constrictor snake, frog, octopus, poisonous snake, reef shark, sea horse, warhorse*"
+								],
+								[
+									"8th",
+									"Bat, eagle, hawk, lion,* owl, raven, tiger,* vulture"
+								]
+							],
+							"footnotes": [
+								"* A member of the Circle of the Moon can choose this beast at 2nd level."
+							]
+						},
+						{
+							"type": "inset",
+							"name": "Starting Beast Shapes",
+							"source": "UADruid",
+							"page": 4,
+							"entries": [
+								"To begin using Wild Shape quickly at 2nd level, choose one of the following starting packages, each of which gives you options for combat, climbing, stealth, and serving as a mount.",
+								{
+									"type": "list",
+									"style": "list-hang-notitle",
+									"items": [
+										{
+											"type": "item",
+											"name": "Temperate:",
+											"entry": "cat, elk, wolf"
+										},
+										{
+											"type": "item",
+											"name": "Tropical:",
+											"entry": "panther, riding horse, spider"
+										},
+										{
+											"type": "item",
+											"name": "Temperate (Circle of the Moon):",
+											"entry": "brown bear, cat, warhorse"
+										},
+										{
+											"type": "item",
+											"name": "Tropical (Circle of the Moon):",
+											"entry": "ape, tiger, warhorse"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Gaining Extra Beast Shapes",
+					"type": "entries",
+					"entries": [
+						"In addition to the beast shapes you gain for free when you level up, you can acquire new shapes on your adventures. Do you see a dinosaur, a saber-toothed tiger, a giant eagle, or some other exotic critter that you want to turn into? This rule gives you a method for learning how to do so. It requires you to abide by the limitations in the {@classFeature Wild Shape|Druid||2} feature (see the Beast Shapes table in the {@book Player's Handbook|PHB}, page 66).",
+						"When you see a beast whose shape you'd like to learn, you have two options:",
+						{
+							"type": "list",
+							"style": "list-hang-notitle",
+							"items": [
+								{
+									"type": "item",
+									"name": "Observation",
+									"entry": "You learn the beast's shape after observing its behavior for at least 1 hour and succeeding on an Intelligence ({@skill Nature}) check with a DC equal to 10 + the beast's challenge rating. For this observation period, your vantage point\u2014whether physical or magical\u2014must be within 150 feet of the beast. If you previously spent at least 1 hour reading a scholarly work about the creature, you have advantage on the check."
+								},
+								{
+									"type": "item",
+									"name": "Interaction",
+									"entry": "You learn the beast's shape after interacting with it peacefully for 10 minutes  and succeeding on a Wisdom ({@skill Animal Handling}) check with a DC equal to 10 + the beast's challenge rating. For this interaction period, you must be within 15 feet of the beast, and if you spend at least a minute petting it, you have advantage on the check."
+								}
+							]
+						},
+						"Either of these options can be assisted by magic. For example, divination magic can be used to provide safe observation of a dangerous animal, and a spell like {@spell animal friendship} can lay the groundwork for peaceful interaction."
+					]
+				}
 			]
 		}
 	]
