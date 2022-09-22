@@ -379,10 +379,13 @@ Updated
             <hr>
              <div>
                 <div class='pagedetails__header'>
-                    <h3 class='page_title'>Weather</h3>
+                    <h3 class='page_title'>Extensions by betteR20</h3>
                 </div>
                 <button class='btn Ve-btn-weather'>
-					Configure
+					Configure Weather
+				</button>
+                <button class='btn Ve-btn-views'>
+					Configure Views
 				</button>
             </div>
 			<!-- END MOD -->

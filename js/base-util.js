@@ -539,6 +539,14 @@ function baseUtil () {
 		}
 	};
 
+	d20plus.ut.dynamicStyles = (slug) => {
+		if (!d20plus.css.dynamic) d20plus.css.dynamic = {};
+		if (!d20plus.css.dynamic[slug]) {
+			d20plus.css.dynamic[slug] = $("<style></style>").appendTo("body");
+		}
+		return d20plus.css.dynamic[slug];
+	}
+
 	/**
 	* Assumes any other lists have been searched using the same term
 	*/
