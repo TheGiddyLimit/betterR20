@@ -5224,29 +5224,17 @@
 			"source": "OotA",
 			"page": 137,
 			"_copy": {
-				"name": "Mage",
+				"name": "Drow Mage",
 				"source": "MM",
-				"_trait": {
-					"name": "Drow",
-					"source": "PHB"
-				},
 				"_mod": {
 					"*": {
 						"mode": "replaceTxt",
-						"replace": "the mage",
+						"replace": "the drow",
 						"with": "Zilchyn",
 						"flags": "i"
 					}
 				}
 			},
-			"traitTags": [
-				"Fey Ancestry",
-				"Sunlight Sensitivity"
-			],
-			"spellcastingTags": [
-				"CW",
-				"I"
-			],
 			"hasToken": true,
 			"hasFluffImages": true
 		}

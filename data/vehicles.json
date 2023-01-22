@@ -3362,7 +3362,7 @@
 			"hull": {
 				"ac": 17,
 				"acFrom": [
-					"(stone)"
+					"stone"
 				],
 				"hp": 300,
 				"dt": 20

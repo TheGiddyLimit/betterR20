@@ -2410,7 +2410,7 @@
 							{
 								"name": "Aggressive",
 								"entries": [
-									"As a bonus action, <$title_short_name$> can move up to your speed toward a hostile creature that they can see."
+									"As a bonus action, <$short_name$> can move up to your speed toward a hostile creature that they can see."
 								]
 							}
 						]
@@ -2688,7 +2688,7 @@
 							{
 								"name": "Feline Agility",
 								"entries": [
-									"When <$title_short_name$> moves on its turn in combat, they can double their speed until the end of the turn. Once they uses this ability, <$title_short_name$> can't use it again until they moves 0 feet on one of their turns."
+									"When <$short_name$> moves on its turn in combat, they can double their speed until the end of the turn. Once they uses this ability, <$title_short_name$> can't use it again until they moves 0 feet on one of their turns."
 								]
 							}
 						]

@@ -788,7 +788,7 @@
 								{
 									"type": "item",
 									"name": "Obscuring Sand",
-									"entry": "Dust and sand fill the air within 120 feet of the dragon, making the area {@book lightly obscured|PHB|8|Vision and Light} until initiative count 20 on the next round."
+									"entry": "Dust and sand fill the air within 120 feet of the dragon, making the area {@quickref Vision and Light|PHB|2||lightly obscured} until initiative count 20 on the next round."
 								}
 							]
 						}
@@ -3390,7 +3390,7 @@
 								{
 									"type": "item",
 									"name": "Noxious Smoke",
-									"entry": "A cloud of thick, dark smoke fills a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The sphere spreads around corners, and its area is {@book heavily obscured|PHB|8|Vision and Light}. A creature other than the dragon that starts its turn in the cloud or enters it for the first time on its turn must succeed on a DC 15 Constitution saving throw or be {@condition poisoned} until the end of its turn. The cloud lasts until initiative count 20 on the next round."
+									"entry": "A cloud of thick, dark smoke fills a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The sphere spreads around corners, and its area is {@quickref Vision and Light|PHB|2||heavily obscured}. A creature other than the dragon that starts its turn in the cloud or enters it for the first time on its turn must succeed on a DC 15 Constitution saving throw or be {@condition poisoned} until the end of its turn. The cloud lasts until initiative count 20 on the next round."
 								},
 								{
 									"type": "item",
@@ -3630,7 +3630,7 @@
 						{
 							"type": "item",
 							"name": "Dying Light",
-							"entry": "Light is diminished within 6 miles of the dragon's lair, {@book lightly obscuring|PHB|8|Vision and Light} the land in gloomy shadows."
+							"entry": "Light is diminished within 6 miles of the dragon's lair, {@quickref Vision and Light|PHB|2||lightly obscuring} the land in gloomy shadows."
 						},
 						{
 							"type": "item",

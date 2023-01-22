@@ -13,7 +13,10 @@
 				"SKT": "IDRotF",
 				"VRGR": "IDRotF"
 			}
-		}
+		},
+		"internalCopies": [
+			"monster"
+		]
 	},
 	"monster": [
 		{

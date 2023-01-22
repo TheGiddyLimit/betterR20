@@ -26,8 +26,8 @@ async function main () {
 		if (!pth.endsWith(".json")) continue;
 		if (_BLACKLIST_FILENAMES_JSON.has(path.basename(pth))) continue;
 		const pathSiteDir = path.join(process.argv[2], pth);
-		if (!fs.existsSync(pathSiteDir)) throw new Error(`File ${pth} does not exist in 5etools data!`);
-		fs.copyFileSync(pathSiteDir, pth);
+		if (!fs.existsSync(pathSiteDir)) console.log(`File ${pth} does not exist in 5etools data!`);
+		else fs.copyFileSync(pathSiteDir, pth);
 	}
 }
 

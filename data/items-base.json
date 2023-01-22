@@ -593,6 +593,7 @@
 		{
 			"name": "Hoopak",
 			"source": "DSotDQ",
+			"page": 188,
 			"type": "M",
 			"rarity": "none",
 			"weight": 2,
@@ -1600,7 +1601,7 @@
 					]
 				}
 			],
-			"template": "{{prop_name}} ({{item.range}} ft.)"
+			"template": "{{prop_name}} ({{item.range}}\u00A0ft.)"
 		},
 		{
 			"abbreviation": "AF",
@@ -1616,7 +1617,7 @@
 					]
 				}
 			],
-			"template": "{{prop_name}} ({{item.range}} ft.)"
+			"template": "{{prop_name}} ({{item.range}}\u00A0ft.)"
 		},
 		{
 			"abbreviation": "BF",
@@ -1736,7 +1737,7 @@
 					]
 				}
 			],
-			"template": "{{prop_name}} ({{item.range}} ft.)"
+			"template": "{{prop_name}} ({{item.range}}\u00A0ft.)"
 		},
 		{
 			"abbreviation": "2H",
@@ -1931,6 +1932,7 @@
 	"itemTypeAdditionalEntries": [
 		{
 			"appliesTo": "INS",
+			"source": "XGE",
 			"entries": [
 				"Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument.",
 				{
@@ -1980,6 +1982,7 @@
 		},
 		{
 			"appliesTo": "GS",
+			"source": "XGE",
 			"entries": [
 				"Proficiency with a gaming set applies to one type of game, such as Three-Dragon Ante or games of chance that use dice.",
 				{
