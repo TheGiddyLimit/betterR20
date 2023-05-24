@@ -1224,7 +1224,7 @@ function d20plusImporter () {
 		const $winText = $winFilterList.find(".table-import-textarea");
 		
 		$btnImport.on("click", () => {
-			const toSearch = $winText.val().split("\n");
+			const toSearch = $winText.val().toLowerCase().split("\n");
 
 			// If no search terms are entered, reset the filter
 			if (toSearch.length == 1 && toSearch[0] == '') {
