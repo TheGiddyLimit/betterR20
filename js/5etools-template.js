@@ -207,6 +207,7 @@ const d20plusTemplate = function () {
 		$body.append(d20plus.template5e.importDialogHtml);
 		$body.append(d20plus.template5e.importListHTML);
 		$body.append(d20plus.template5e.importListPropsHTML);
+		$body.append(d20plus.template5e.importFilterList);
 		$("#d20plus-import").dialog({
 			autoOpen: false,
 			resizable: false,
@@ -222,6 +223,12 @@ const d20plusTemplate = function () {
 			resizable: true,
 			width: 300,
 			height: 600,
+		});
+		$("#d20plus-import-filter-list").dialog({
+			autoOpen: false,
+			resizable: true,
+			width: 640,
+			height: 480,
 		});
 
 		// add class subclasses to the subclasses dropdown(s)
@@ -321,6 +328,8 @@ ${finalText}
 <button type="button" id="importlist-deselectvis" class="btn" style="margin: 0 2px;"><span>Deselect Visible</span></button>
 <span style="width:1px;background: #bbb;height: 26px;margin: 2px;"></span>
 <button type="button" id="importlist-selectall-published" class="btn" style="margin: 0 2px;"><span>Select All Published</span></button>
+<span style="width:1px;background: #bbb;height: 26px;margin: 2px;"></span>
+<button type="button" id="importlist-filter-list" class="btn" style="margin: 0 2px;"><span>Filter By List</span></button>
 </p>
 <p>
 <span id="import-list">
@@ -351,6 +360,13 @@ ${finalText}
 	<br>
 	<button type="button" id="save-import-props" class="btn" role="button" aria-disabled="false">Save</button>
 </p>
+</div>`;
+
+d20plus.template5e.importFilterList = `<div id="d20plus-import-filter-list" title="List Items to Filter For">
+<textarea placeholder=
+"Item 1\nItem 2\nItem 3" class="table-import-textarea">
+</textarea>
+<button class="btn">Import</button>
 </div>`;
 
 	d20plus.template5e.importDialogHtml = `<div id="d20plus-import" title="Importing">

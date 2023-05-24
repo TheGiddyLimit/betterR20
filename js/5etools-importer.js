@@ -730,6 +730,10 @@ function d20plusImporter () {
 			d20plus.importer._importSelectPublished(importList);
 		});
 
+		$("#importlist-filter-list").bind("click", () => {
+			d20plus.importer._importFilterList(importList);
+		});
+
 		if (options.listIndexConverter) {
 			const $iptFilter = $(`#import-list-filter`).show();
 			$(`#import-list-filter-help`).show();
@@ -1211,6 +1215,30 @@ function d20plusImporter () {
 				setSelection(i, true);
 			}
 		});
+	};
+
+	d20plus.importer._importFilterList = function (importList) {
+		const $winFilterList = $("#d20plus-import-filter-list");
+		$winFilterList.dialog("open");
+		const $btnImport = $winFilterList.find(".btn");
+		const $winText = $winFilterList.find(".table-import-textarea");
+		
+		$btnImport.on("click", () => {
+			const toSearch = $winText.val().split("\n");
+
+			// If no search terms are entered, reset the filter
+			if (toSearch.length == 1 && toSearch[0] == '') {
+				importList.filter();
+			}
+			// Filters to match names on the list
+			else{
+				importList.filter(it => {
+					return toSearch.includes(it._values.name.toLowerCase());
+				});
+			}
+			
+			$winFilterList.dialog("close");
+		}).appendTo($winFilterList);
 	};
 
 	d20plus.importer.CharacterAttributesProxy = class {
