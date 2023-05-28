@@ -228,7 +228,7 @@ const d20plusTemplate = function () {
 			autoOpen: false,
 			resizable: true,
 			width: 640,
-			height: 480,
+			height: 540,
 		});
 
 		// add class subclasses to the subclasses dropdown(s)
@@ -329,7 +329,8 @@ ${finalText}
 <span style="width:1px;background: #bbb;height: 26px;margin: 2px;"></span>
 <button type="button" id="importlist-selectall-published" class="btn" style="margin: 0 2px;"><span>Select All Published</span></button>
 <span style="width:1px;background: #bbb;height: 26px;margin: 2px;"></span>
-<button type="button" id="importlist-filter-list" class="btn" style="margin: 0 2px;"><span>Filter By List</span></button>
+<button type="button" id="importlist-filter" class="btn" style="margin: 0 2px;"><span>Filter By List</span></button>
+<button type="button" id="importlist-reset" class="btn" style="margin: 0 2px;"><span>Reset Filters</span></button>
 </p>
 <p>
 <span id="import-list">
@@ -363,10 +364,27 @@ ${finalText}
 </div>`;
 
 d20plus.template5e.importFilterList = `<div id="d20plus-import-filter-list" title="List Items to Filter For">
+<p>
+	Write down a vertical list of the items you want to filter and then <b>Filter List > Select Visible > Import</b>
+	<span title="If an item is in more than one source (like those that get reprinted or appear in UAs), you will get multiple results out of the filter for it unless you indicate a source." style="cursor: help;">[!]</span>.
+</p>
+<p>
+	You can either manually write down your list, or you can go to the corresponding page in <b>5etools > make your list > Table View > Copy CSV to Clipboard > Paste it here > Filter List</b>
+	<span title="Don't worry if there is more info that is needed, it'll get discarded, as well as any failed match. Caps are optional as well." style="cursor: help;">[?]</span>.
+</p>
 <textarea placeholder=
-"Item 1\nItem 2\nItem 3" class="table-import-textarea">
+'List 1 item per line. There are 3 ways of listing things (you can combine them):
+
+Fireball
+Fireball, PHB
+"Fireball","PHB"
+
+etc.
+(Source is optional, as you can see in the 1st example, but it is recommended)
+(the 2nd and 3rd example show the 2 ways to indicate source)'
+class="table-import-textarea">
 </textarea>
-<button class="btn">Import</button>
+<button class="btn">Filter</button>
 </div>`;
 
 	d20plus.template5e.importDialogHtml = `<div id="d20plus-import" title="Importing">
