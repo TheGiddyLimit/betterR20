@@ -384,7 +384,7 @@ etc.
 (the 2nd and 3rd example show the 2 ways to indicate source)'
 class="table-import-textarea">
 </textarea>
-<button class="btn">Filter</button>
+<button class="btn">Filter List</button>
 </div>`;
 
 	d20plus.template5e.importDialogHtml = `<div id="d20plus-import" title="Importing">
