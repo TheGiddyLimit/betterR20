@@ -332,7 +332,7 @@ function d20plusEngine () {
 			if ($dialog[0]) {
 				const $pageTitle = $dialog.find(`.ui-dialog-title:visible`);
 				d20plus.engine._preserveCustomOptions(page);
-				d20plus.engine._populateCustomOptions(page, $dialog.find(`.dialog .tab-content`));
+				d20plus.engine._populatePageCustomOptions(page, $dialog.find(`.dialog .tab-content`));
 				if ($pageTitle[0] && !$(".ui-dialog-pagename:visible")[0]) {
 					$pageTitle.after(`<span class="ui-dialog-pagename">${page.get("name")}</span>`);
 					$saveBtn.off("click");
@@ -380,7 +380,7 @@ function d20plusEngine () {
 			// page.save resets current dialog, so we need to restore status quo
 			$(`.nav-tabs:visible [data-tab=${activeTab}]`).click();
 			$(`.ui-dialog-content:visible`).scrollTop(activeTabScroll);
-			d20plus.engine._populateCustomOptions();
+			d20plus.engine._populatePageCustomOptions();
 		}
 	}
 
