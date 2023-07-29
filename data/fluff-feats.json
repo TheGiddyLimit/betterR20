@@ -42,6 +42,32 @@
 					"title": "Mages of High Sorcery of the Orders of the Black, Red, and White Robes"
 				}
 			]
+		},
+		{
+			"name": "Inspiring Leader",
+			"source": "PHB",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/PHB/Inspiring Leader.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Ritual Caster",
+			"source": "PHB",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/PHB/Ritual Caster.webp"
+					}
+				}
+			]
 		}
 	]
 }
