@@ -6,6 +6,16 @@
 			"page": 290,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -23,6 +33,16 @@
 			"page": 290,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -40,6 +60,16 @@
 			"page": 290,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -56,6 +86,12 @@
 			"page": 291,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				}
+			],
 			"entries": [
 				"Some special abilities and environmental hazards, such as starvation and the long-term effects of freezing or scorching temperatures, can lead to a special condition called exhaustion. Exhaustion is measured in six levels. An effect can give a creature one or more levels of exhaustion, as specified in the effect's description.",
 				{
@@ -107,6 +143,16 @@
 			"page": 290,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -124,6 +170,16 @@
 			"page": 290,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -142,6 +198,16 @@
 			"page": 290,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -157,6 +223,16 @@
 			"page": 291,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -174,6 +250,16 @@
 			"page": 291,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -193,6 +279,16 @@
 			"page": 291,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -214,6 +310,16 @@
 			"page": 292,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -230,6 +336,16 @@
 			"page": 292,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -248,6 +364,16 @@
 			"page": 292,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -266,6 +392,16 @@
 			"page": 292,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",
@@ -284,6 +420,16 @@
 			"page": 292,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 62
+				},
+				{
+					"source": "HftT",
+					"page": 48
+				}
+			],
 			"entries": [
 				{
 					"type": "list",

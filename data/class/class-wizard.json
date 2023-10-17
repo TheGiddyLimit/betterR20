@@ -1010,6 +1010,18 @@
 					}
 				}
 			],
+			"optionalfeatureProgression": [
+				{
+					"name": "Onomancy Resonant",
+					"featureType": [
+						"OR"
+					],
+					"progression": {
+						"6": 2,
+						"10": 2
+					}
+				}
+			],
 			"subclassFeatures": [
 				"Onomancy|Wizard||Onomancy (UA)|UAClericDruidWizard|2",
 				"Resonant Utterance|Wizard||Onomancy (UA)|UAClericDruidWizard|6",
@@ -1232,6 +1244,21 @@
 					"page": true
 				}
 			}
+		},
+		{
+			"name": "Blood Magic",
+			"shortName": "Blood Magic",
+			"source": "TDCSR",
+			"className": "Wizard",
+			"classSource": "PHB",
+			"page": 178,
+			"subclassFeatures": [
+				"Blood Magic|Wizard|PHB|Blood Magic|TDCSR|2",
+				"Bond of Mutual Suffering|Wizard|PHB|Blood Magic|TDCSR|6",
+				"Glyph of Hemorrhaging|Wizard|PHB|Blood Magic|TDCSR|10",
+				"Bond of Mutual Suffering (14th Level)|Wizard|PHB|Blood Magic|TDCSR|14",
+				"Thicker than Water|Wizard|PHB|Blood Magic|TDCSR|14"
+			]
 		},
 		{
 			"name": "Runecrafter (UA)",
@@ -2989,6 +3016,117 @@
 			]
 		},
 		{
+			"name": "Blood Magic",
+			"source": "TDCSR",
+			"page": 178,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 1,
+			"entries": [
+				"Considered taboo by many societies and magic practitioners, the use of blood magic\u2014also known as {@variantrule hemocraft|TDCSR}\u2014is a rare art that harnesses the latent powers of a creature's vitality to fuel and amplify the caster's own capabilities, while manipulating and weakening the bodies of enemies from the inside. Some of the more macabre mages seeking to empower their arcane pursuits turn to {@variantrule hemocraft|TDCSR} as a means of bolstering their spells, giving their own life's blood to reach new heights of frightening magical prowess.",
+				"The secrets of {@variantrule hemocraft|TDCSR} and other forms of blood magic were once the sole purview of the mysterious {@book Claret Orders|TDCSR|2|Claret Orders}. In recent years, however, these secrets have begun to spread beyond the order's members and into the hands of less scrupulous mages. Blood magic has a bad reputation in Tal'Dorei, even though its powers can be used for much more than evil.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Blood Channeling|Wizard|PHB|Blood Magic|TDCSR|2"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Sanguine Burst|Wizard|PHB|Blood Magic|TDCSR|2"
+				}
+			]
+		},
+		{
+			"name": "Blood Channeling",
+			"source": "TDCSR",
+			"page": 178,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"When you choose this arcane tradition at 2nd level, you are able to use your own depleted life essence to channel your magical abilities. Whenever your current hit points are below your hit point maximum, you can use your own body as an {@item arcane focus|PHB}.",
+				"In addition, when casting a wizard spell that requires a costly material component, you can forego the component by taking {@damage 1d10} necrotic damage per 50 gp of the cost of the component (minimum {@damage 1d10}). This damage can't be reduced in any way. If this damage reduces you to 0 hit points, the spell fails but the spell slot is not expended."
+			]
+		},
+		{
+			"name": "Sanguine Burst",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"entries": [
+				"Also at 2nd level, you learn how to weave your life force into a spell you cast, boosting its intensity at the cost of your vitality. Whenever you roll damage for a spell you've cast of 1st level or higher, you can choose to take necrotic damage equal to the spell's level to reroll a number of the damage dice up to your Intelligence modifier (minimum one). This damage can't be reduced in any way, and you must use the new rolls."
+			]
+		},
+		{
+			"name": "Bond of Mutual Suffering",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, when a creature you can see hits you with an attack, you can use your reaction to bind your vitality to the attacker and force them to share your pain. The attacker takes damage equal to the damage you took.",
+				"This feature cannot be used against constructs or undead. You can use this feature once. You must finish a {@quickref resting|PHB|2|0|short or long rest} before you can use it again."
+			]
+		},
+		{
+			"name": "Glyph of Hemorrhaging",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, when you damage a creature with a spell, you can choose to curse that creature for 1 minute. While cursed in this way, whenever the creature is hit by an attack, it takes an extra {@damage 1d6} necrotic damage. At the end of each of the creature's turns, it can make a Constitution {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC, ending the curse on a success.",
+				"This feature cannot be used against creatures that are undead or constructs. Once you use this feature, you can't use it again until you finish a {@quickref resting|PHB|2|0|short or long rest}."
+			]
+		},
+		{
+			"name": "Bond of Mutual Suffering (14th Level)",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, you can use this feature twice between rests."
+			]
+		},
+		{
+			"name": "Thicker than Water",
+			"source": "TDCSR",
+			"page": 179,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Blood Magic",
+			"subclassSource": "TDCSR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"Upon reaching 14th level, the blood that flows through your veins is empowered with arcane vigor that mends wounds and helps preserve your life. Whenever a spell or magical effect causes you to regain hit points, you regain an additional number of hit points equal to your proficiency bonus.",
+				"In addition, while you are concentrating on a spell, you have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks."
+			]
+		},
+		{
 			"name": "Order of Scribes",
 			"source": "UA2020SubclassesRevisited",
 			"page": 4,
@@ -3360,6 +3498,51 @@
 			]
 		},
 		{
+			"name": "Resonant Options",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Here are your options when choosing a Resonant:",
+				{
+					"type": "options",
+					"style": "list-hang-notitle",
+					"count": 2,
+					"entries": [
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Absorption|UAClericDruidWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Devastation|UAClericDruidWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Dissolution|UAClericDruidWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Nullification|UAClericDruidWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Puppetry|UAClericDruidWizard"
+						},
+						{
+							"type": "refOptionalfeature",
+							"optionalfeature": "Sympathy|UAClericDruidWizard"
+						}
+					]
+				}
+			]
+		},
+		{
 			"name": "Resonant Utterance",
 			"source": "UAClericDruidWizard",
 			"page": 4,
@@ -3373,57 +3556,45 @@
 				"{@i 6th-level Onomancy feature}",
 				"You learn words of power called Resonants, which allow you to tailor your spells through the use of a target's true name.",
 				{
-					"type": "entries",
-					"name": "Resonants Known",
-					"entries": [
-						"When you gain this feature, you learn two Resonants of your choice, which are detailed in the \"Resonant Options\" section. Each time you gain a level in this class, you can replace one resonant you know with a different one."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Resonants Known|Wizard||Onomancy (UA)|UAClericDruidWizard|6"
 				},
 				{
-					"type": "entries",
-					"name": "Using a Resonant",
-					"entries": [
-						"You can use one Resonant when you cast a wizard spell with a spell slot and speak the true name of one creature targeted by the spell. Speaking the name is part of casting the spell. You can use Resonants a number of times equal to half of your wizard level (round down), and you regain all expended uses when you finish a long rest."
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Using a Resonant|Wizard||Onomancy (UA)|UAClericDruidWizard|6"
 				},
 				{
-					"type": "entries",
-					"name": "Resonant Options",
-					"entries": [
-						"Here are your options when choosing a Resonant:",
-						{
-							"type": "options",
-							"style": "list-hang-notitle",
-							"count": 2,
-							"entries": [
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Absorption|UAClericDruidWizard"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Devastation|UAClericDruidWizard"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Dissolution|UAClericDruidWizard"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Nullification|UAClericDruidWizard"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Puppetry|UAClericDruidWizard"
-								},
-								{
-									"type": "refOptionalfeature",
-									"optionalfeature": "Sympathy|UAClericDruidWizard"
-								}
-							]
-						}
-					]
+					"type": "refSubclassFeature",
+					"subclassFeature": "Resonant Options|Wizard||Onomancy (UA)|UAClericDruidWizard|6"
 				}
+			]
+		},
+		{
+			"name": "Resonants Known",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"When you gain this feature, you learn two Resonants of your choice, which are detailed in the \"Resonant Options\" section. Each time you gain a level in this class, you can replace one resonant you know with a different one."
+			]
+		},
+		{
+			"name": "Using a Resonant",
+			"source": "UAClericDruidWizard",
+			"page": 4,
+			"className": "Wizard",
+			"classSource": "PHB",
+			"subclassShortName": "Onomancy (UA)",
+			"subclassSource": "UAClericDruidWizard",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"You can use one Resonant when you cast a wizard spell with a spell slot and speak the true name of one creature targeted by the spell. Speaking the name is part of casting the spell. You can use Resonants a number of times equal to half of your wizard level (round down), and you regain all expended uses when you finish a long rest."
 			]
 		},
 		{

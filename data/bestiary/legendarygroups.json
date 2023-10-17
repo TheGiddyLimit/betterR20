@@ -2442,7 +2442,7 @@
 					"type": "list",
 					"items": [
 						"A large population of snakes dwells in the region.",
-						"Trees within 1 mile of the lair are {@condition petrified} wood. Plants that stay within 500 feet of the lair for 1 day turn to stone.",
+						"Trees within 1 mile of the lair are petrified wood. Plants that stay within 500 feet of the lair for 1 day turn to stone.",
 						"Small bodies of water within 1 mile of the lair become poisonous. A creature that drinks the water must succeed on a {@dc 19} Constitution saving throw or become {@condition poisoned} for 8 hours. An affected creature can repeat the saving throw at the end of each hour."
 					]
 				}
@@ -3151,7 +3151,7 @@
 						{
 							"type": "item",
 							"name": "Clay Behemoth",
-							"entry": "A clay golem erupts from the floor in an unoccupied space within 15 feet of the ritual circle. The golem obeys Murgaxor's commands, takes its turns on initiative count 10 (losing initiative ties), fights until destroyed, and reverts to a mound of inanimate clay after 1 hour."
+							"entry": "A {@creature clay golem} erupts from the floor in an unoccupied space within 15 feet of the ritual circle. The golem obeys Murgaxor's commands, takes its turns on initiative count 10 (losing initiative ties), fights until destroyed, and reverts to a mound of inanimate clay after 1 hour."
 						},
 						{
 							"type": "item",
@@ -3166,7 +3166,7 @@
 						{
 							"type": "item",
 							"name": "Summon Mephits",
-							"entry": "Murgaxor summons four mud mephits that appear in unoccupied spaces within 15 feet of the ritual circle. The mephits obey Murgaxor's commands, take their turns on initiative count 15 (losing initiative ties), and fight until destroyed."
+							"entry": "Murgaxor summons four {@creature mud mephit||mud mephits} that appear in unoccupied spaces within 15 feet of the ritual circle. The mephits obey Murgaxor's commands, take their turns on initiative count 15 (losing initiative ties), and fight until destroyed."
 						}
 					]
 				}
@@ -3611,6 +3611,186 @@
 			]
 		},
 		{
+			"name": "Scion of Grolantor",
+			"source": "BGG",
+			"page": 165,
+			"regionalEffects": [
+				"The region surrounding a scion of Grolantor is altered by the giant's magic, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Abundant Food",
+							"entry": "Crops and domestic animals grow and reproduce quickly within 6 miles of the scion."
+						},
+						{
+							"type": "item",
+							"name": "Empowered Hill Giants",
+							"entry": "Hill giants within 1,000 feet of the scion gain a +7 bonus to attack and damage rolls."
+						},
+						{
+							"type": "item",
+							"name": "Farming Weather",
+							"entry": "The weather within 6 miles of the scion is always ideal for farming: sunny and warm with occasional showers."
+						}
+					]
+				},
+				"If the scion dies, these effects end immediately."
+			]
+		},
+		{
+			"name": "Scion of Memnor",
+			"source": "BGG",
+			"page": 167,
+			"regionalEffects": [
+				"The region surrounding a scion of Memnor is altered by the giant's magic, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Compulsory Offering",
+							"entry": "The first time a sapient creature comes within 6 miles of the scion, the creature must succeed on a DC 15 Wisdom saving throw or feel an overwhelming compulsion to leave an offering worth at least 5 gp stashed in an out-of-the-way place. Cloud giants within 6 miles of the cradle or scion immediately sense the location of this gift. A creature can be affected only once by this compulsion."
+						},
+						{
+							"type": "item",
+							"name": "Empowered Cloud Giants",
+							"entry": "Cloud giants within 1,000 feet of the scion gain a +8 bonus to attack and damage rolls."
+						},
+						{
+							"type": "item",
+							"name": "Mischievous Whispers",
+							"entry": "Whispers can be heard on the wind within 1 mile of the scion. The words are indistinct, but a creature with an Intelligence score of 5 or higher interprets them as instructions for a prank they can play on others."
+						}
+					]
+				},
+				"If the scion dies, these effects end immediately."
+			]
+		},
+		{
+			"name": "Scion of Skoraeus",
+			"source": "BGG",
+			"page": 169,
+			"regionalEffects": [
+				"The region surrounding a scion of Skoraeus is altered by the giant's magic, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Abundant Stone and Minerals",
+							"entry": "Smooth stones and gems grow within 6 miles of the scion."
+						},
+						{
+							"type": "item",
+							"name": "Edible Moss",
+							"entry": "Carpets of golden moss that stone giants find tasty grow on cavern walls within 6 miles of the scion."
+						},
+						{
+							"type": "item",
+							"name": "Empowered Stone Giants",
+							"entry": "Stone giants within 1,000 feet of the scion gain a +7 bonus to attack and damage rolls."
+						}
+					]
+				},
+				"If the scion dies, the Empowered Stone Giants effect ends immediately. The other effects cease to produce new moss and minerals, and existing moss dies within {@dice 1d10} days."
+			]
+		},
+		{
+			"name": "Scion of Stronmaus",
+			"source": "BGG",
+			"page": 171,
+			"regionalEffects": [
+				"The region surrounding a scion of Stronmaus is altered by the giant's magic, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Elemental Portals",
+							"entry": "Two-way portals to the Elemental Plane of Air (if the scion is in the sky) or the Elemental Plane of Water (if the scion is in the ocean) form within 1 mile of the cradle or scion, allowing elemental creatures into the world."
+						},
+						{
+							"type": "item",
+							"name": "Empowered Storm Giants",
+							"entry": "Storm giants within 1,000 feet of the scion gain a +8 bonus to attack and damage rolls."
+						},
+						{
+							"type": "item",
+							"name": "Extreme Weather",
+							"entry": "The weather within 1 mile of the scion dramatically shifts day to day, ranging from pleasantly sunny to brutal hailstorms."
+						}
+					]
+				},
+				"If the scion dies, these effects end immediately."
+			]
+		},
+		{
+			"name": "Scion of Surtur",
+			"source": "BGG",
+			"page": 173,
+			"regionalEffects": [
+				"The region surrounding a scion of Surtur is altered by the giant's magic, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Abundant Ore",
+							"entry": "Veins of precious metals and ore are more common within 6 miles of the scion."
+						},
+						{
+							"type": "item",
+							"name": "Desertification",
+							"entry": "Precipitation is almost nonexistent within 6 miles of the scion, parching the land and withering most plant life."
+						},
+						{
+							"type": "item",
+							"name": "Empowered Fire Giants",
+							"entry": "Fire giants within 1,000 feet of the scion gain a +8 bonus to attack and damage rolls."
+						}
+					]
+				},
+				"If the scion dies, existing ore remains, but new veins of ore stop forming. The other effects end immediately."
+			]
+		},
+		{
+			"name": "Scion of Thrym",
+			"source": "BGG",
+			"page": 175,
+			"regionalEffects": [
+				"The region surrounding a scion of Thrym is altered by the giant's magic, creating one or more of the following effects:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Biting Chill",
+							"entry": "Extreme cold envelops the land within 6 miles of the scion (see the {@book Dungeon Master's Guide|DMG} for rules on {@hazard extreme cold}). If the climate in the area already features extreme cold, the cold is numbing\u2014creatures in the area without immunity or resistance to cold damage have disadvantage on Strength and Dexterity checks."
+						},
+						{
+							"type": "item",
+							"name": "Empowered Frost Giants",
+							"entry": "Frost giants within 1,000 feet of the scion gain a +7 bonus to attack and damage rolls."
+						},
+						{
+							"type": "item",
+							"name": "Thriving Wildlife",
+							"entry": "Beasts reproduce rapidly and thrive within 6 miles of the scion."
+						}
+					]
+				},
+				"If the scion dies, these effects end immediately."
+			]
+		},
+		{
 			"name": "Sea Fury",
 			"source": "EGW",
 			"page": 299,
@@ -3774,6 +3954,30 @@
 					]
 				},
 				"If the dragon dies, changed weather reverts to normal, as described in the spell, and the other effects fade in {@dice 1d10} days."
+			]
+		},
+		{
+			"name": "Solar Dragon",
+			"source": "BAM",
+			"page": 50,
+			"regionalEffects": [
+				"A solar dragon customarily lairs in a star's radiant core or nests in a gigantic, hollowed-out rock engulfed by the star's blinding radiance. A star in which a solar dragon makes its lair has the following effects on creatures:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blinding Radiance.",
+							"entry": "A creature that is within 10 miles of the star or inside it is blinded by its intense light unless the creature has protective gear to shield its eyes, such as goggles of night or a similar form of eyewear."
+						},
+						{
+							"type": "item",
+							"name": "Stellar Incineration.",
+							"entry": "Any creature that enters the star or starts its turn inside it takes 132 ({@dice 24d10}) radiant damage."
+						}
+					]
+				}
 			]
 		},
 		{

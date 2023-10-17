@@ -96,7 +96,9 @@
 			"conditionInflict": [
 				"grappled"
 			],
-			"hasToken": true
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Kavu Predator",
@@ -193,7 +195,77 @@
 			"conditionInflict": [
 				"prone"
 			],
-			"hasToken": true
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Lyra",
+			"alias": [
+				"Perfidious Muderator"
+			],
+			"isNamedCreature": true,
+			"source": "PSD",
+			"page": 9,
+			"_copy": {
+				"name": "Planetar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the planetar",
+						"with": "Lyra",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Serra Angel",
+			"source": "PSD",
+			"page": 9,
+			"_copy": {
+				"name": "Deva",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "deva",
+						"with": "angel",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Shalai",
+			"isNamedCreature": true,
+			"source": "PSD",
+			"page": 9,
+			"_copy": {
+				"name": "Solar",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "the solar",
+						"with": "Shalai",
+						"flags": "i"
+					}
+				}
+			},
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Steel Leaf Kavu",
@@ -276,7 +348,12 @@
 			"conditionInflict": [
 				"prone"
 			],
-			"hasToken": true
+			"savingThrowForced": [
+				"strength"
+			],
+			"hasToken": true,
+			"hasFluff": true,
+			"hasFluffImages": true
 		},
 		{
 			"name": "Zombie Horse",

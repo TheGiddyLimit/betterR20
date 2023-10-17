@@ -113,7 +113,7 @@
 		{
 			"name": "Ashen Heir Anarchist",
 			"source": "JttRC",
-			"page": 158,
+			"page": 150,
 			"_copy": {
 				"name": "Priest",
 				"source": "MM",
@@ -636,6 +636,11 @@
 				"blinded",
 				"restrained"
 			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1046,6 +1051,9 @@
 			],
 			"conditionInflict": [
 				"incapacitated"
+			],
+			"savingThrowForced": [
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1859,6 +1867,9 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"mace|phb"
+			],
 			"traitTags": [
 				"Magic Resistance",
 				"Unusual Nature"
@@ -1882,7 +1893,14 @@
 				"O"
 			],
 			"miscTags": [
+				"MLW",
 				"MW"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1909,7 +1927,7 @@
 						"items": {
 							"name": "Royal Blood",
 							"entries": [
-								"If Kirina is reduced to half of his hit points or fewer, he uses the {@action dodge||Dodge} action to avoid taking further damage."
+								"If Kirina is reduced to half of his hit points or fewer, he uses the {@action Dodge} action to avoid taking further damage."
 							]
 						}
 					},
@@ -1949,7 +1967,7 @@
 						"items": {
 							"name": "Royal Blood",
 							"entries": [
-								"If Simbon is reduced to half of his hit points or fewer, he uses the {@action dodge||Dodge} action to avoid taking further damage."
+								"If Simbon is reduced to half of his hit points or fewer, he uses the {@action Dodge} action to avoid taking further damage."
 							]
 						}
 					},
@@ -2123,6 +2141,12 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"strength"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -2222,6 +2246,7 @@
 				"N",
 				"G"
 			],
+			"conditionInflictLegendary": [],
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -2339,6 +2364,9 @@
 			],
 			"conditionInflict": [
 				"grappled"
+			],
+			"savingThrowForced": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2465,6 +2493,9 @@
 			"conditionInflict": [
 				"exhaustion",
 				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2593,6 +2624,10 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -2871,6 +2906,9 @@
 			"conditionInflict": [
 				"frightened"
 			],
+			"savingThrowForced": [
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -2885,7 +2923,7 @@
 				"name": "Noble",
 				"source": "MM",
 				"_trait": {
-					"name": "Mountain Dwarf",
+					"name": "Hill Dwarf",
 					"source": "PHB"
 				},
 				"_mod": {

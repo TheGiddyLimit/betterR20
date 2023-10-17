@@ -1,5 +1,10 @@
 {
 	"_meta": {
+		"dependencies": {
+			"monster": [
+				"MM"
+			]
+		},
 		"otherSources": {
 			"monster": {
 				"MM": "DIP",
@@ -135,6 +140,10 @@
 			"miscTags": [
 				"MW"
 			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -221,6 +230,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"dagger|phb",
+				"sling|phb"
+			],
 			"actionTags": [
 				"Multiattack"
 			],
@@ -233,6 +246,7 @@
 				"P"
 			],
 			"miscTags": [
+				"MLW",
 				"MW",
 				"RNG",
 				"RW",
@@ -330,6 +344,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"longbow|phb",
+				"longsword|phb"
+			],
 			"actionTags": [
 				"Multiattack"
 			],
@@ -341,6 +359,7 @@
 				"S"
 			],
 			"miscTags": [
+				"MLW",
 				"MW",
 				"RNG",
 				"RW"
@@ -453,6 +472,9 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"savingThrowForced": [
+				"dexterity"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -578,6 +600,18 @@
 			],
 			"hasToken": true,
 			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Skeletal Riding Horse",
+			"source": "DIP",
+			"page": 21,
+			"_copy": {
+				"name": "Riding Horse",
+				"source": "MM"
+			},
+			"type": "undead",
+			"hasToken": true,
 			"hasFluffImages": true
 		}
 	]

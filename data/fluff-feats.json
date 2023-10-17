@@ -30,6 +30,33 @@
 			}
 		},
 		{
+			"name": "Eldritch Adept",
+			"source": "TCE",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/TCE/Eldritch Adept.png"
+					},
+					"credit": "Brian Valeza"
+				}
+			]
+		},
+		{
+			"name": "Fury of the Frost Giant",
+			"source": "BGG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/BGG/Fury of the Frost Giant.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Initiate of High Sorcery",
 			"source": "DSotDQ",
 			"images": [
@@ -40,6 +67,62 @@
 						"path": "feats/DSotDQ/Mage of High Sorcery.webp"
 					},
 					"title": "Mages of High Sorcery of the Orders of the Black, Red, and White Robes"
+				}
+			]
+		},
+		{
+			"name": "Inspiring Leader",
+			"source": "PHB",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/PHB/Inspiring Leader.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Ritual Caster",
+			"source": "PHB",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/PHB/Ritual Caster.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Servo Crafting",
+			"source": "PSK",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/PSK/Servo Crafting.webp"
+					},
+					"title": "Servo",
+					"credit": "Igor Kieryluk"
+				}
+			]
+		},
+		{
+			"name": "Telepathic",
+			"source": "TCE",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "feats/TCE/Telepathic.png"
+					},
+					"title": "Astride a unicorn, a telepathic bard inspires her wizard companion.",
+					"credit": "Zoltan Boros"
 				}
 			]
 		}

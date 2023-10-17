@@ -769,6 +769,36 @@
 			}
 		},
 		{
+			"name": "Armor of Safeguarding",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "HA"
+				}
+			],
+			"inherits": {
+				"nameSuffix": " of Safeguarding",
+				"source": "BGG",
+				"page": 111,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"entries": [
+					"Set in the center of this armor's chest is a citrine engraved with the shield rune.",
+					"While wearing this armor, your hit point maximum increases by an amount equal to 10 + your level.",
+					{
+						"type": "entries",
+						"name": "Invoking the Rune",
+						"entries": [
+							"As an action, you can invoke the armor's rune to cast the {@spell beacon of hope} spell with it; the spell has a duration of 1 minute and doesn't require {@status concentration}. Once the rune has been invoked, it can't be invoked again until the next dawn."
+						]
+					}
+				],
+				"attachedSpells": [
+					"beacon of hope"
+				]
+			}
+		},
+		{
 			"name": "Armor of Thunder Resistance",
 			"type": "GV",
 			"requires": [
@@ -936,6 +966,36 @@
 						"type": "entries",
 						"entries": [
 							"This weapon is cursed, and becoming attuned to it extends the curse to you. Until the curse is broken with a {@spell remove curse} spell or similar magic, you are unwilling to part with the weapon. Whenever you attack a creature with this weapon and roll a 1 on the attack roll, you must succeed on a DC 15 Constitution saving throw or be {@condition restrained} and forced to make additional saves against being {@condition petrified}, as above."
+						]
+					}
+				]
+			}
+		},
+		{
+			"name": "Bloodshed Blade",
+			"type": "GV",
+			"requires": [
+				{
+					"sword": true
+				}
+			],
+			"inherits": {
+				"namePrefix": "Bloodshed ",
+				"source": "BGG",
+				"page": 111,
+				"rarity": "very rare",
+				"reqAttune": true,
+				"bonusWeaponDamage": "+1",
+				"entries": [
+					"The hilt of this sword bears a carnelian engraved with the blood rune.",
+					"You can add your Constitution modifier (minimum of {=bonusWeaponDamage}) to the damage rolls of attacks made with this weapon.",
+					{
+						"type": "entries",
+						"name": "Invoking the Rune",
+						"entries": [
+							"When you target a creature with an attack using this weapon, you can invoke the sword's rune, causing it to flare with crimson light and infusing your attack with bloodthirsty precision. You then spend and roll one of your unspent Hit Dice and add the number rolled to the attack roll. You can choose to invoke the rune after rolling the {@dice d20}.",
+							"If this attack hits, you can also spend and roll any number of your unspent Hit Dice and add the total rolled to the weapon's damage.",
+							"Once the rune has been invoked, it can't be invoked again until the next dawn."
 						]
 					}
 				]
@@ -1905,7 +1965,7 @@
 				"namePrefix": "Mithral +1 ",
 				"source": "AI",
 				"page": 156,
-				"rarity": "unknown (magic)",
+				"rarity": "rare",
 				"strength": null,
 				"bonusAc": "+1",
 				"stealth": false,
@@ -2049,6 +2109,42 @@
 				]
 			},
 			"hasFluffImages": true
+		},
+		{
+			"name": "Oceanic Weapon",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "R"
+				},
+				{
+					"property": "T"
+				}
+			],
+			"excludes": {
+				"net": true
+			},
+			"inherits": {
+				"namePrefix": "Oceanic ",
+				"source": "TDCSR",
+				"page": 199,
+				"rarity": "rare",
+				"reqAttune": true,
+				"bonusWeapon": "+1",
+				"modifySpeed": {
+					"static": {
+						"swim": 30
+					}
+				},
+				"recharge": "dawn",
+				"entries": [
+					"This elegant weapon is adorned with engravings depicting leaping dolphins and drifting jellyfish. You gain a {=bonusWeapon} bonus to attack and damage rolls made with this magic weapon, and you ignore {@quickref Underwater Combat|PHB|3|0|the normal penalties on ranged weapon attacks while using this weapon underwater}. While holding the weapon in front of you with both hands, you have a swimming speed of 30 feet.",
+					"Additionally, while you hold the weapon, you can use an action to cast the {@spell water breathing} spell. Once this property is used, it can't be used again until the next dawn."
+				],
+				"attachedSpells": [
+					"water breathing"
+				]
+			}
 		},
 		{
 			"name": "Orb of Shielding (Fernian Basalt)",
@@ -2967,6 +3063,36 @@
 				]
 			},
 			"hasFluffImages": true
+		},
+		{
+			"name": "Zephyr Armor",
+			"type": "GV",
+			"requires": [
+				{
+					"type": "LA"
+				}
+			],
+			"inherits": {
+				"namePrefix": "Zephyr ",
+				"source": "BGG",
+				"page": 117,
+				"rarity": "rare",
+				"reqAttune": true,
+				"entries": [
+					"This fine set of white-and-silver armor bears the wind rune upon its chest.",
+					"While wearing this armor, you have advantage on Dexterity ({@skill Acrobatics}) checks and Dexterity saving throws as your movements are bolstered by gentle currents of wind.",
+					{
+						"type": "entries",
+						"name": "Invoking the Rune",
+						"entries": [
+							"As an action, you can invoke the armor's rune to cast the {@spell wind wall} spell (save DC 15) with it. Once the rune has been invoked, it can't be invoked again until the next dawn."
+						]
+					}
+				],
+				"attachedSpells": [
+					"wind wall"
+				]
+			}
 		}
 	],
 	"linkedLootTables": {

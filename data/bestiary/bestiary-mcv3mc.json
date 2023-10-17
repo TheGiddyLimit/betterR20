@@ -118,9 +118,17 @@
 			"miscTags": [
 				"AOE"
 			],
+			"savingThrowForced": [
+				"dexterity"
+			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			]
 		},
 		{
 			"name": "Creeper",
@@ -220,9 +228,17 @@
 			"miscTags": [
 				"AOE"
 			],
+			"savingThrowForced": [
+				"dexterity"
+			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			]
 		},
 		{
 			"name": "Ender Dragon",
@@ -351,9 +367,18 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			]
 		},
 		{
 			"name": "Enderman",
@@ -464,7 +489,12 @@
 			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			]
 		},
 		{
 			"name": "Wolf of the Overworld",
@@ -529,9 +559,17 @@
 			"miscTags": [
 				"MW"
 			],
+			"savingThrowForced": [
+				"strength"
+			],
 			"hasToken": true,
 			"hasFluff": true,
-			"hasFluffImages": true
+			"hasFluffImages": true,
+			"otherSources": [
+				{
+					"source": "LK"
+				}
+			]
 		}
 	]
 }

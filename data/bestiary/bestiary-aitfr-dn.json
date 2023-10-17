@@ -106,6 +106,9 @@
 				"grappled",
 				"restrained"
 			],
+			"savingThrowForced": [
+				"constitution"
+			],
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -361,6 +364,9 @@
 				"name": "Kyrilla, Accursed Gorgon",
 				"source": "AitFR-DN"
 			},
+			"attachedItems": [
+				"longbow|phb"
+			],
 			"traitTags": [
 				"Legendary Resistances",
 				"Sunlight Sensitivity"
@@ -399,6 +405,12 @@
 			],
 			"conditionInflictLegendary": [
 				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -482,6 +494,9 @@
 			"miscTags": [
 				"AOE",
 				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
 			],
 			"hasToken": true,
 			"hasFluff": true

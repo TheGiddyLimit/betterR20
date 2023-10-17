@@ -64,6 +64,12 @@
 			"page": 211,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 50
+				}
+			],
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -1086,6 +1092,12 @@
 			"page": 215,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 50
+				}
+			],
 			"level": 2,
 			"school": "D",
 			"time": [
@@ -1213,6 +1225,9 @@
 			],
 			"damageResist": [
 				"poison"
+			],
+			"miscTags": [
+				"ADV"
 			],
 			"areaTags": [
 				"S"
@@ -1526,6 +1541,12 @@
 			"page": 217,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 50
+				}
+			],
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -1557,6 +1578,9 @@
 			],
 			"entries": [
 				"This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing."
+			],
+			"miscTags": [
+				"ADV"
 			],
 			"areaTags": [
 				"MT"
@@ -1861,6 +1885,12 @@
 			"page": 219,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 50
+				}
+			],
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -2129,6 +2159,12 @@
 			"page": 219,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 50
+				}
+			],
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -2218,6 +2254,12 @@
 			"page": 220,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 51
+				}
+			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -2445,6 +2487,12 @@
 			"page": 221,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 51
+				}
+			],
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -2713,6 +2761,9 @@
 			"entries": [
 				"Divine energy radiates from you, distorting and diffusing magical energy within 30 feet of you. Until the spell ends, the sphere moves with you, centered on you. For the duration, each friendly creature in the area (including you) has advantage on saving throws against spells and other magical effects. Additionally, when an affected creature succeeds on a saving throw made against a spell or magical effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw."
 			],
+			"miscTags": [
+				"ADV"
+			],
 			"areaTags": [
 				"S"
 			]
@@ -2977,6 +3028,12 @@
 			"page": 223,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 51
+				}
+			],
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -3222,6 +3279,12 @@
 			"page": 224,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 52
+				}
+			],
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -4795,6 +4858,12 @@
 			"page": 230,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 52
+				}
+			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -4857,6 +4926,12 @@
 			"page": 230,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 52
+				}
+			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -4902,6 +4977,12 @@
 			"page": 230,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 52
+				}
+			],
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -5275,6 +5356,12 @@
 			"page": 231,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 52
+				}
+			],
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -5442,7 +5529,6 @@
 				"force"
 			],
 			"miscTags": [
-				"SGT",
 				"TP"
 			],
 			"hasFluffImages": true
@@ -5627,6 +5713,12 @@
 			"page": 234,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 53
+				}
+			],
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -6263,6 +6355,7 @@
 				"strength"
 			],
 			"miscTags": [
+				"DFT",
 				"SGT"
 			],
 			"areaTags": [
@@ -6461,6 +6554,7 @@
 				}
 			],
 			"miscTags": [
+				"ADV",
 				"THP"
 			],
 			"areaTags": [
@@ -6524,6 +6618,7 @@
 				"constitution"
 			],
 			"miscTags": [
+				"ADV",
 				"OBJ",
 				"SGT"
 			],
@@ -6997,6 +7092,7 @@
 				"dexterity"
 			],
 			"miscTags": [
+				"ADV",
 				"LGT"
 			],
 			"areaTags": [
@@ -7106,6 +7202,12 @@
 			"source": "PHB",
 			"page": 239,
 			"srd": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 53
+				}
+			],
 			"level": 1,
 			"school": "T",
 			"time": [
@@ -7631,6 +7733,12 @@
 			"page": 241,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 53
+				}
+			],
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -7805,6 +7913,12 @@
 			"page": 242,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 53
+				}
+			],
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -7926,6 +8040,12 @@
 			"page": 243,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 54
+				}
+			],
 			"level": 3,
 			"school": "T",
 			"time": [
@@ -8175,6 +8295,9 @@
 				"You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target can't be {@quickref Surprise|PHB|3|0|surprised} and has advantage on attack rolls, ability checks, and saving throws. Additionally, other creatures have disadvantage on attack rolls against the target for the duration.",
 				"This spell immediately ends if you cast it again before its duration ends."
 			],
+			"miscTags": [
+				"ADV"
+			],
 			"areaTags": [
 				"ST"
 			]
@@ -8260,6 +8383,9 @@
 			"entries": [
 				"For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it."
 			],
+			"miscTags": [
+				"ADV"
+			],
 			"areaTags": [
 				"ST"
 			]
@@ -8302,6 +8428,9 @@
 				"You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.",
 				"While in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when {@condition stunned} or otherwise {@condition incapacitated}.",
 				"While in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells."
+			],
+			"miscTags": [
+				"ADV"
 			],
 			"areaTags": [
 				"ST"
@@ -9054,6 +9183,12 @@
 			"page": 248,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 54
+				}
+			],
 			"level": 0,
 			"school": "D",
 			"time": [
@@ -9095,6 +9230,12 @@
 			"page": 248,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 54
+				}
+			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -9140,6 +9281,9 @@
 			],
 			"spellAttack": [
 				"R"
+			],
+			"miscTags": [
+				"ADV"
 			],
 			"areaTags": [
 				"ST"
@@ -9190,7 +9334,6 @@
 				"strength"
 			],
 			"miscTags": [
-				"DFT",
 				"FMV",
 				"UBA"
 			],
@@ -9521,6 +9664,7 @@
 				"When the spell ends, the target can't move or take actions until after its next turn, as a wave of lethargy sweeps over it."
 			],
 			"miscTags": [
+				"ADV",
 				"MAC",
 				"SGT"
 			],
@@ -9598,6 +9742,12 @@
 			"page": 250,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 54
+				}
+			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -9818,6 +9968,9 @@
 			"conditionImmune": [
 				"frightened"
 			],
+			"miscTags": [
+				"ADV"
+			],
 			"areaTags": [
 				"MT"
 			]
@@ -10017,6 +10170,12 @@
 			"page": 251,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 54
+				}
+			],
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -10123,6 +10282,7 @@
 				"constitution"
 			],
 			"miscTags": [
+				"ADV",
 				"LGT"
 			],
 			"areaTags": [
@@ -10234,6 +10394,7 @@
 			],
 			"miscTags": [
 				"AAD",
+				"ADV",
 				"SGT",
 				"UBA"
 			],
@@ -10351,6 +10512,12 @@
 			"page": 252,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 54
+				}
+			],
 			"level": 1,
 			"school": "D",
 			"time": [
@@ -10599,6 +10766,12 @@
 			"page": 253,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 55
+				}
+			],
 			"level": 1,
 			"school": "N",
 			"time": [
@@ -10713,6 +10886,12 @@
 			"page": 254,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 55
+				}
+			],
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -10975,6 +11154,12 @@
 			"page": 255,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 55
+				}
+			],
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -11063,6 +11248,12 @@
 			"page": 255,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 55
+				}
+			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -11164,6 +11355,12 @@
 			"page": 255,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 56
+				}
+			],
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -11394,6 +11591,12 @@
 			"page": 256,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 56
+				}
+			],
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -11438,6 +11641,12 @@
 			"page": 256,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 56
+				}
+			],
 			"level": 0,
 			"school": "C",
 			"time": [
@@ -11612,6 +11821,12 @@
 			"page": 257,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 57
+				}
+			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -11939,6 +12154,12 @@
 			"page": 258,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 57
+				}
+			],
 			"level": 3,
 			"school": "V",
 			"time": [
@@ -12550,6 +12771,12 @@
 			"page": 260,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 57
+				}
+			],
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -13704,9 +13931,6 @@
 				"If you cast this spell using 1 action, choose a point within range. All normal plants in a 100-foot radius centered on that point become thick and overgrown. A creature moving through the area must spend 4 feet of movement for every 1 foot it moves.",
 				"You can exclude one or more areas of any size within the spell's area from being affected.",
 				"If you cast this spell over 8 hours, you enrich the land. All plants in a half-mile radius centered on a point within range become enriched for 1 year. The plants yield twice the normal amount of food when harvested."
-			],
-			"miscTags": [
-				"DFT"
 			]
 		},
 		{
@@ -13960,6 +14184,12 @@
 			"page": 267,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 57
+				}
+			],
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -14023,6 +14253,12 @@
 			"page": 267,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 57
+				}
+			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -14467,6 +14703,12 @@
 			"page": 270,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 58
+				}
+			],
 			"level": 3,
 			"school": "A",
 			"time": [
@@ -14558,6 +14800,9 @@
 				"fiend",
 				"undead"
 			],
+			"miscTags": [
+				"ADV"
+			],
 			"areaTags": [
 				"ST"
 			]
@@ -14600,6 +14845,9 @@
 			],
 			"damageResist": [
 				"poison"
+			],
+			"miscTags": [
+				"ADV"
 			],
 			"areaTags": [
 				"ST"
@@ -14802,6 +15050,12 @@
 			"page": 271,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 58
+				}
+			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -15201,6 +15455,12 @@
 			"page": 272,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 58
+				}
+			],
 			"level": 0,
 			"school": "A",
 			"time": [
@@ -15341,6 +15601,12 @@
 			"page": 272,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 58
+				}
+			],
 			"level": 3,
 			"school": "N",
 			"time": [
@@ -15425,6 +15691,12 @@
 			"page": 272,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 58
+				}
+			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -15483,6 +15755,12 @@
 			"page": 272,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 58
+				}
+			],
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -16029,6 +16307,12 @@
 			"page": 275,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 59
+				}
+			],
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -16070,6 +16354,12 @@
 			"page": 275,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 59
+				}
+			],
 			"level": 1,
 			"school": "A",
 			"time": [
@@ -16153,6 +16443,12 @@
 			"page": 275,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 59
+				}
+			],
 			"level": 0,
 			"school": "V",
 			"time": [
@@ -16208,6 +16504,12 @@
 			"page": 275,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 59
+				}
+			],
 			"level": 2,
 			"school": "I",
 			"time": [
@@ -16321,7 +16623,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "snow or ice in quantities sufficient to made a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
+					"text": "snow or ice in quantities sufficient to make a life-size copy of the duplicated creature; some hair, fingernail clippings, or other piece of that creature's body placed inside the snow or ice; and powdered ruby worth 1,500 gp, sprinkled over the duplicate and consumed by the spell",
 					"cost": 150000,
 					"consume": true
 				}
@@ -16354,6 +16656,12 @@
 			"page": 276,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 59
+				}
+			],
 			"level": 1,
 			"school": "E",
 			"time": [
@@ -16720,6 +17028,12 @@
 			"page": 277,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 60
+				}
+			],
 			"level": 2,
 			"school": "T",
 			"time": [
@@ -16798,6 +17112,9 @@
 			"abilityCheck": [
 				"wisdom"
 			],
+			"miscTags": [
+				"DFT"
+			],
 			"areaTags": [
 				"R"
 			]
@@ -16808,6 +17125,12 @@
 			"page": 278,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 60
+				}
+			],
 			"level": 3,
 			"school": "C",
 			"time": [
@@ -16871,6 +17194,12 @@
 			"page": 278,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 60
+				}
+			],
 			"level": 2,
 			"school": "V",
 			"time": [
@@ -17187,6 +17516,7 @@
 				"dexterity"
 			],
 			"miscTags": [
+				"DFT",
 				"OBJ",
 				"OBS",
 				"SGT"
@@ -17201,6 +17531,12 @@
 			"page": 279,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 60
+				}
+			],
 			"level": 2,
 			"school": "E",
 			"time": [
@@ -17931,6 +18267,12 @@
 			"page": 282,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 61
+				}
+			],
 			"level": 0,
 			"school": "T",
 			"time": [
@@ -18085,6 +18427,12 @@
 			"page": 282,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 61
+				}
+			],
 			"level": 1,
 			"school": "V",
 			"time": [
@@ -18489,6 +18837,9 @@
 			],
 			"entries": [
 				"You extend your hand and point a finger at a target in range. Your magic grants you a brief insight into the target's defenses. On your next turn, you gain advantage on your first attack roll against the target, provided that this spell hasn't ended."
+			],
+			"miscTags": [
+				"ADV"
 			],
 			"areaTags": [
 				"ST"
@@ -18991,6 +19342,12 @@
 			"page": 287,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 61
+				}
+			],
 			"level": 2,
 			"school": "A",
 			"time": [
@@ -19134,6 +19491,12 @@
 			"page": 287,
 			"srd": true,
 			"basicRules": true,
+			"otherSources": [
+				{
+					"source": "RMR",
+					"page": 61
+				}
+			],
 			"level": 2,
 			"school": "C",
 			"time": [
@@ -19399,7 +19762,8 @@
 			],
 			"miscTags": [
 				"HL",
-				"SGT"
+				"SGT",
+				"ADV"
 			]
 		},
 		{

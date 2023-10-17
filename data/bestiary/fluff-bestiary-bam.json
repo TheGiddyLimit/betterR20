@@ -1,4 +1,9 @@
 {
+	"_meta": {
+		"internalCopies": [
+			"monsterFluff"
+		]
+	},
 	"monsterFluff": [
 		{
 			"name": "Aartuk Elder",
@@ -22,7 +27,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Aartuk Elder.webp"
-					}
+					},
+					"credit": "Christopher Burdett"
 				}
 			]
 		},
@@ -48,7 +54,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Aartuk Starhorror.webp"
-					}
+					},
+					"credit": "Matt Stewart"
 				}
 			]
 		},
@@ -74,7 +81,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Aartuk Weedling.webp"
-					}
+					},
+					"credit": "Christopher Burdett"
 				}
 			]
 		},
@@ -108,45 +116,10 @@
 		{
 			"name": "Adult Solar Dragon",
 			"source": "BAM",
-			"entries": [
-				{
-					"type": "entries",
-					"entries": [
-						"A solar dragon (also known as a radiant dragon or a sun dragon) is born in the heart of a star. It divides its time outside its lair between patrolling its territory and hunting for food. The dragon has a serpentine body, a pair of ventral limbs ending in long fins, nebulous wings that give off light, and gleaming, multicolored scales. It can see clearly even in blindingly bright light.",
-						"Solar dragons are fond of treasure just as all dragons are, but in the airless void of Wildspace, they value food even more. Solar dragons typically feed on kindori, scavvers, and other forms of space-dwelling wildlife. A solar dragon might mistake a distant spelljamming ship for possible prey and come within range of the vessel's weapons before realizing its error and veering away. A wise or experienced captain won't take the dragon's approach as a sign of hostility. Solar dragons that are fired upon have been known to batter the offending ships to flinders.",
-						"Solar dragons are territorial carnivores, and they behave accordingly. A young solar dragon might lay claim to an asteroid belt, where food is relatively plentiful, while an ancient solar dragon might consider an entire Wildspace system its hunting ground. They tend to give a wide berth to Humanoid folk, whom they find violent and tiresome. Trespassers who are detected in a solar dragon's lair can expect to be met with resistance, followed by hostility, especially if the lair contains eggs.",
-						"A solar dragon egg has an obsidian shell, shiny black and opaque. When an egg is close to hatching, the shell becomes translucent, allowing the light from the unborn wyrmling's wings to shine through."
-					]
-				},
-				{
-					"type": "section",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "A Solar Dragon's Lair",
-							"entries": [
-								"A solar dragon customarily lairs in a star's radiant core or nests in a gigantic, hollowed-out rock engulfed by the star's blinding radiance. A star in which a solar dragon makes its lair has the following effects on creatures:",
-								{
-									"type": "list",
-									"style": "list-hang-notitle",
-									"items": [
-										{
-											"type": "item",
-											"name": "Blinding Radiance.",
-											"entry": "A creature that is within 10 miles of the star or inside it is blinded by its intense light unless the creature has protective gear to shield its eyes, such as goggles of night or a similar form of eyewear."
-										},
-										{
-											"type": "item",
-											"name": "Stellar Incineration.",
-											"entry": "Any creature that enters the star or starts its turn inside it takes 132 ({@dice 24d10}) radiant damage."
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			]
+			"_copy": {
+				"name": "Solar Dragon",
+				"source": "BAM"
+			}
 		},
 		{
 			"name": "Ancient Lunar Dragon",
@@ -180,61 +153,33 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Ancient Lunar Dragon.webp"
-					}
+					},
+					"credit": "Svetlin Velinov"
 				}
 			]
 		},
 		{
 			"name": "Ancient Solar Dragon",
 			"source": "BAM",
-			"entries": [
-				{
-					"type": "entries",
-					"entries": [
-						"A solar dragon (also known as a radiant dragon or a sun dragon) is born in the heart of a star. It divides its time outside its lair between patrolling its territory and hunting for food. The dragon has a serpentine body, a pair of ventral limbs ending in long fins, nebulous wings that give off light, and gleaming, multicolored scales. It can see clearly even in blindingly bright light.",
-						"Solar dragons are fond of treasure just as all dragons are, but in the airless void of Wildspace, they value food even more. Solar dragons typically feed on kindori, scavvers, and other forms of space-dwelling wildlife. A solar dragon might mistake a distant spelljamming ship for possible prey and come within range of the vessel's weapons before realizing its error and veering away. A wise or experienced captain won't take the dragon's approach as a sign of hostility. Solar dragons that are fired upon have been known to batter the offending ships to flinders.",
-						"Solar dragons are territorial carnivores, and they behave accordingly. A young solar dragon might lay claim to an asteroid belt, where food is relatively plentiful, while an ancient solar dragon might consider an entire Wildspace system its hunting ground. They tend to give a wide berth to Humanoid folk, whom they find violent and tiresome. Trespassers who are detected in a solar dragon's lair can expect to be met with resistance, followed by hostility, especially if the lair contains eggs.",
-						"A solar dragon egg has an obsidian shell, shiny black and opaque. When an egg is close to hatching, the shell becomes translucent, allowing the light from the unborn wyrmling's wings to shine through."
-					]
-				},
-				{
-					"type": "section",
-					"entries": [
-						{
-							"type": "entries",
-							"name": "A Solar Dragon's Lair",
-							"entries": [
-								"A solar dragon customarily lairs in a star's radiant core or nests in a gigantic, hollowed-out rock engulfed by the star's blinding radiance. A star in which a solar dragon makes its lair has the following effects on creatures:",
-								{
-									"type": "list",
-									"style": "list-hang-notitle",
-									"items": [
-										{
-											"type": "item",
-											"name": "Blinding Radiance.",
-											"entry": "A creature that is within 10 miles of the star or inside it is blinded by its intense light unless the creature has protective gear to shield its eyes, such as goggles of night or a similar form of eyewear."
-										},
-										{
-											"type": "item",
-											"name": "Stellar Incineration.",
-											"entry": "Any creature that enters the star or starts its turn inside it takes 132 ({@dice 24d10}) radiant damage."
-										}
-									]
-								}
-							]
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "bestiary/BAM/Ancient Solar Dragon.webp"
+			"_copy": {
+				"name": "Solar Dragon",
+				"source": "BAM",
+				"_mod": {
+					"images": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"type": "image",
+								"href": {
+									"type": "internal",
+									"path": "bestiary/BAM/Ancient Solar Dragon.webp"
+								},
+								"credit": "Zoltan Boros"
+							}
+						]
 					}
 				}
-			]
+			}
 		},
 		{
 			"name": "Astral Elf Aristocrat",
@@ -276,7 +221,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Astral Elf Aristocrat.webp"
-					}
+					},
+					"credit": "Randy Vargas"
 				}
 			]
 		},
@@ -320,7 +266,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Astral Elf Commander.webp"
-					}
+					},
+					"credit": "Julio Reyna"
 				}
 			]
 		},
@@ -364,7 +311,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Astral Elf Honor Guard.webp"
-					}
+					},
+					"credit": "Marta Nael"
 				}
 			]
 		},
@@ -408,7 +356,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Astral Elf Star Priest.webp"
-					}
+					},
+					"credit": "Merlin G. G."
 				}
 			]
 		},
@@ -452,7 +401,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Astral Elf Warrior.webp"
-					}
+					},
+					"credit": "Zuzanna Wuzyk"
 				}
 			]
 		},
@@ -475,7 +425,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Autognome.webp"
-					}
+					},
+					"credit": "Zuzanna Wuzyk"
 				}
 			]
 		},
@@ -498,7 +449,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Brohg.webp"
-					}
+					},
+					"credit": "Kai Carpenter"
 				}
 			]
 		},
@@ -521,7 +473,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Braxat.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -543,7 +496,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Brown Scavver.webp"
-					}
+					},
+					"credit": "Jessica Nguyen"
 				}
 			]
 		},
@@ -571,7 +525,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Chwinga Astronaut.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -593,7 +548,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Cosmic Horror.webp"
-					}
+					},
+					"credit": "Simon Dominic"
 				}
 			]
 		},
@@ -616,7 +572,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Dohwar.webp"
-					}
+					},
+					"credit": "Brynn Metheney"
 				}
 			]
 		},
@@ -641,7 +598,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Esthetic.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -664,7 +622,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Eye Monger.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -686,7 +645,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Feyr.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -708,7 +668,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Gaj.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -729,7 +690,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Giant Space Hamster.webp"
-					}
+					},
+					"credit": "Zoltan Boros"
 				}
 			]
 		},
@@ -762,7 +724,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Giff Shock Trooper.webp"
-					}
+					},
+					"credit": "Robson Michel"
 				}
 			]
 		},
@@ -784,7 +747,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Giff Warlord.webp"
-					}
+					},
+					"credit": "Robson Michel"
 				}
 			]
 		},
@@ -805,7 +769,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Githyanki Buccaneer.webp"
-					}
+					},
+					"credit": "Andrew Mar"
 				}
 			]
 		},
@@ -827,7 +792,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Githyanki Star Seer.webp"
-					}
+					},
+					"credit": "Andrew Mar"
 				}
 			]
 		},
@@ -849,7 +815,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Githyanki Xenomancer.webp"
-					}
+					},
+					"credit": "Andrew Mar"
 				}
 			]
 		},
@@ -870,7 +837,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Gray Scavver.webp"
-					}
+					},
+					"credit": "Jessica Nguyen"
 				}
 			]
 		},
@@ -891,7 +859,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Hadozee Explorer.webp"
-					}
+					},
+					"credit": "Zuzanna Wuzyk"
 				}
 			]
 		},
@@ -912,7 +881,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Hadozee Shipmate.webp"
-					}
+					},
+					"credit": "Claudio Pozas"
 				}
 			]
 		},
@@ -933,7 +903,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Hadozee Warrior.webp"
-					}
+					},
+					"credit": "David Auden Nash"
 				}
 			]
 		},
@@ -956,7 +927,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Jammer Leech.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -980,7 +952,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Kindori.webp"
-					}
+					},
+					"credit": "Jessica Nguyen"
 				}
 			]
 		},
@@ -1004,7 +977,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Lunar Dragon Wyrmling.webp"
-					}
+					},
+					"credit": "Lars Grant-West"
 				}
 			]
 		},
@@ -1027,7 +1001,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Megapede.webp"
-					}
+					},
+					"credit": "Craig J Spearing"
 				}
 			]
 		},
@@ -1050,7 +1025,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Mercane.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -1079,7 +1055,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Murder Comet.webp"
-					}
+					},
+					"credit": "Titus Lunter"
 				}
 			]
 		},
@@ -1103,7 +1080,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Neh-thalggu.webp"
-					}
+					},
+					"credit": "April Prime"
 				}
 			]
 		},
@@ -1163,7 +1141,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Night Scavver.webp"
-					}
+					},
+					"credit": "Jessica Nguyen"
 				}
 			]
 		},
@@ -1184,7 +1163,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Plasmoid Boss.webp"
-					}
+					},
+					"credit": "Cory Trego-Erdner"
 				}
 			]
 		},
@@ -1205,7 +1185,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Plasmoid Explorer.webp"
-					}
+					},
+					"credit": "Brian Valeza"
 				}
 			]
 		},
@@ -1226,7 +1207,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Plasmoid Warrior.webp"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -1250,7 +1232,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Psurlon.webp"
-					}
+					},
+					"credit": "Brynn Metheney"
 				}
 			]
 		},
@@ -1271,7 +1254,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Psurlon Leader.webp"
-					}
+					},
+					"credit": "Brynn Metheney"
 				}
 			]
 		},
@@ -1306,12 +1290,21 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Reigar.webp"
-					}
+					},
+					"credit": "Shawn Wood"
+				},
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "bestiary/BAM/Reigar-2.webp"
+					},
+					"credit": "Simon Dominic"
 				}
 			]
 		},
 		{
-			"name": "Solar Dragon Wyrmling",
+			"name": "Solar Dragon",
 			"source": "BAM",
 			"entries": [
 				{
@@ -1329,10 +1322,34 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "bestiary/BAM/Solar Dragon Wyrmling.webp"
-					}
+						"path": "bestiary/BAM/Solar Dragon Eggs.webp"
+					},
+					"credit": "Olga Drebas"
 				}
 			]
+		},
+		{
+			"name": "Solar Dragon Wyrmling",
+			"source": "BAM",
+			"_copy": {
+				"name": "Solar Dragon",
+				"source": "BAM",
+				"_mod": {
+					"images": {
+						"mode": "prependArr",
+						"items": [
+							{
+								"type": "image",
+								"href": {
+									"type": "internal",
+									"path": "bestiary/BAM/Solar Dragon Wyrmling.webp"
+								},
+								"credit": "Lars Grant-West"
+							}
+						]
+					}
+				}
+			}
 		},
 		{
 			"name": "Space Clown",
@@ -1353,7 +1370,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Space Clown.webp"
-					}
+					},
+					"credit": "Scott Murphy"
 				}
 			]
 		},
@@ -1374,7 +1392,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Space Eel.webp"
-					}
+					},
+					"credit": "Matt Stewart"
 				}
 			]
 		},
@@ -1395,7 +1414,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Space Guppy.webp"
-					}
+					},
+					"credit": "Alayna Danner"
 				}
 			]
 		},
@@ -1430,7 +1450,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Space Mollymawk.webp"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -1452,7 +1473,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Space Swine.webp"
-					}
+					},
+					"credit": "Brynn Metheney"
 				}
 			]
 		},
@@ -1473,7 +1495,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Ssurran Defiler.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -1494,7 +1517,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Ssurran Poisoner.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		},
@@ -1516,7 +1540,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Starlight Apparition.webp"
-					}
+					},
+					"credit": "Nikki Dawes"
 				}
 			]
 		},
@@ -1537,7 +1562,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Thri-kreen Gladiator.webp"
-					}
+					},
+					"credit": "Cory Trego-Erdner"
 				}
 			]
 		},
@@ -1558,7 +1584,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Thri-kreen Hunter.webp"
-					}
+					},
+					"credit": "Brian Valeza"
 				}
 			]
 		},
@@ -1579,7 +1606,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Thri-kreen Mystic.webp"
-					}
+					},
+					"credit": "Claudio Pozas"
 				}
 			]
 		},
@@ -1603,7 +1631,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Vampirate.webp"
-					}
+					},
+					"credit": "Julio Reyna"
 				}
 			]
 		},
@@ -1672,17 +1701,10 @@
 		{
 			"name": "Young Solar Dragon",
 			"source": "BAM",
-			"entries": [
-				{
-					"type": "entries",
-					"entries": [
-						"A solar dragon (also known as a radiant dragon or a sun dragon) is born in the heart of a star. It divides its time outside its lair between patrolling its territory and hunting for food. The dragon has a serpentine body, a pair of ventral limbs ending in long fins, nebulous wings that give off light, and gleaming, multicolored scales. It can see clearly even in blindingly bright light.",
-						"Solar dragons are fond of treasure just as all dragons are, but in the airless void of Wildspace, they value food even more. Solar dragons typically feed on kindori, scavvers, and other forms of space-dwelling wildlife. A solar dragon might mistake a distant spelljamming ship for possible prey and come within range of the vessel's weapons before realizing its error and veering away. A wise or experienced captain won't take the dragon's approach as a sign of hostility. Solar dragons that are fired upon have been known to batter the offending ships to flinders.",
-						"Solar dragons are territorial carnivores, and they behave accordingly. A young solar dragon might lay claim to an asteroid belt, where food is relatively plentiful, while an ancient solar dragon might consider an entire Wildspace system its hunting ground. They tend to give a wide berth to Humanoid folk, whom they find violent and tiresome. Trespassers who are detected in a solar dragon's lair can expect to be met with resistance, followed by hostility, especially if the lair contains eggs.",
-						"A solar dragon egg has an obsidian shell, shiny black and opaque. When an egg is close to hatching, the shell becomes translucent, allowing the light from the unborn wyrmling's wings to shine through."
-					]
-				}
-			]
+			"_copy": {
+				"name": "Solar Dragon",
+				"source": "BAM"
+			}
 		},
 		{
 			"name": "Zodar",
@@ -1704,7 +1726,8 @@
 					"href": {
 						"type": "internal",
 						"path": "bestiary/BAM/Zodar.webp"
-					}
+					},
+					"credit": "Shawn Wood"
 				}
 			]
 		}

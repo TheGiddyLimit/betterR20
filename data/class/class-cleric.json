@@ -1488,10 +1488,12 @@
 			],
 			"subclassFeatures": [
 				"Knowledge Domain (PSA)|Cleric||Knowledge (PSA)|PSA|1",
-				"Subclass Feature|Cleric||Knowledge (PSA)|PSA|2",
-				"Subclass Feature|Cleric||Knowledge (PSA)|PSA|6",
-				"Subclass Feature|Cleric||Knowledge (PSA)|PSA|8",
-				"Subclass Feature|Cleric||Knowledge (PSA)|PSA|17"
+				"Channel Divinity: Knowledge of the Ages|Cleric||Knowledge||2",
+				"Channel Divinity: Read Thoughts|Cleric||Knowledge||6",
+				"Potent Spellcasting|Cleric||Knowledge||8",
+				"Blessed Strikes|Cleric||Knowledge||8|UAClassFeatureVariants",
+				"Blessed Strikes|Cleric||Knowledge||8|TCE",
+				"Visions of the Past|Cleric||Knowledge||17"
 			]
 		},
 		{
@@ -2030,6 +2032,91 @@
 				"Divine Strike|Cleric||Twilight|TCE|8",
 				"Blessed Strikes|Cleric||Twilight|TCE|8|TCE",
 				"Twilight Shroud|Cleric||Twilight|TCE|17"
+			]
+		},
+		{
+			"name": "Blood Domain",
+			"shortName": "Blood",
+			"source": "TDCSR",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"page": 168,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							"false life",
+							"sleep"
+						],
+						"3": [
+							"hold person",
+							"ray of enfeeblement"
+						],
+						"5": [
+							"haste",
+							"slow"
+						],
+						"7": [
+							"blight",
+							"stoneskin"
+						],
+						"9": [
+							"dominate person",
+							"hold monster"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Blood Domain|Cleric|PHB|Blood|TDCSR|1",
+				"Channel Divinity: Crimson Bond|Cleric|PHB|Blood|TDCSR|2",
+				"Channel Divinity: Blood Puppet|Cleric|PHB|Blood|TDCSR|6",
+				"Sanguine Recall|Cleric|PHB|Blood|TDCSR|6",
+				"Divine Strike|Cleric|PHB|Blood|TDCSR|8",
+				"Divine Strike (14th Level)|Cleric|PHB|Blood|TDCSR|14",
+				"Channel Divinity: Blood Puppet (17th Level)|Cleric|PHB|Blood|TDCSR|17",
+				"Vascular Corruption Aura|Cleric|PHB|Blood|TDCSR|17"
+			]
+		},
+		{
+			"name": "Moon Domain",
+			"shortName": "Moon",
+			"source": "TDCSR",
+			"className": "Cleric",
+			"classSource": "PHB",
+			"page": 169,
+			"additionalSpells": [
+				{
+					"prepared": {
+						"1": [
+							"faerie fire",
+							"silent image"
+						],
+						"3": [
+							"invisibility",
+							"moonbeam"
+						],
+						"5": [
+							"hypnotic pattern",
+							"major image"
+						],
+						"7": [
+							"greater invisibility",
+							"hallucinatory terrain"
+						],
+						"9": [
+							"dream",
+							"passwall"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Moon Domain|Cleric|PHB|Moon|TDCSR|1",
+				"Channel Divinity: Blessing of the Full Moon|Cleric|PHB|Moon|TDCSR|2",
+				"Channel Divinity: Mind of Two Moons|Cleric|PHB|Moon|TDCSR|6",
+				"Empowered Cantrips|Cleric|PHB|Moon|TDCSR|8",
+				"Eclipse of Ill Omen|Cleric|PHB|Moon|TDCSR|17"
 			]
 		},
 		{
@@ -4008,7 +4095,12 @@
 			"subclassSource": "PSA",
 			"level": 1,
 			"entries": [
-				"\"The worthy shall strive for greatness\u2014supremacy in life leads to supremacy in the afterlife.\"",
+				{
+					"type": "quote",
+					"entries": [
+						"The worthy shall strive for greatness\u2014supremacy in life leads to supremacy in the afterlife."
+					]
+				},
 				"Bontu has fully embraced this dictum, and though she expends little effort in teaching it, she surely leads by example. Her viziers subtly plant the seeds that flower into the ambition the God-Pharaoh desires. Through insinuation, they remind acolytes and initiates alike that achieving one's place in the afterlife at the expense of others is not shameful, but is proof of the initiate's determination and drive. Nothing is more important than that drive, they suggest\u2014not the bonds of a crop, not friendship or love. Not even devotion to a deity.",
 				"At each indicated cleric level, add the listed spells to your spells prepared.",
 				{
@@ -4172,65 +4264,18 @@
 			"subclassSource": "PSA",
 			"level": 1,
 			"entries": [
-				"\"The worthy shall cultivate a nimble mind that can perceive the wonders beyond imagination that wait in the afterlife.\"",
+				{
+					"type": "quote",
+					"entries": [
+						"The worthy shall cultivate a nimble mind that can perceive the wonders beyond imagination that wait in the afterlife."
+					]
+				},
 				"Kefnet's task is to pass on this teaching of the God-Pharaoh and elucidate its meaning. He teaches that the afterlife will be inhabited only by those who have proved by their wits that they are worthy of dwelling in the glorious presence of the God-Pharaoh. He trains acolytes and initiates to push their limits and challenge their mental capacity with spells of ever-greater power.",
-				"Kefnet's domain is identical to the Knowledge domain in the Player's Handbook."
-			]
-		},
-		{
-			"name": "Subclass Feature",
-			"source": "PSA",
-			"page": 25,
-			"className": "Cleric",
-			"classSource": "PHB",
-			"subclassShortName": "Knowledge (PSA)",
-			"subclassSource": "PSA",
-			"level": 2,
-			"header": 2,
-			"entries": [
-				"See the Knowledge domain."
-			]
-		},
-		{
-			"name": "Subclass Feature",
-			"source": "PSA",
-			"page": 25,
-			"className": "Cleric",
-			"classSource": "PHB",
-			"subclassShortName": "Knowledge (PSA)",
-			"subclassSource": "PSA",
-			"level": 6,
-			"header": 2,
-			"entries": [
-				"See the Knowledge domain."
-			]
-		},
-		{
-			"name": "Subclass Feature",
-			"source": "PSA",
-			"page": 25,
-			"className": "Cleric",
-			"classSource": "PHB",
-			"subclassShortName": "Knowledge (PSA)",
-			"subclassSource": "PSA",
-			"level": 8,
-			"header": 2,
-			"entries": [
-				"See the Knowledge domain."
-			]
-		},
-		{
-			"name": "Subclass Feature",
-			"source": "PSA",
-			"page": 25,
-			"className": "Cleric",
-			"classSource": "PHB",
-			"subclassShortName": "Knowledge (PSA)",
-			"subclassSource": "PSA",
-			"level": 17,
-			"header": 2,
-			"entries": [
-				"See the Knowledge domain."
+				"Kefnet's domain is identical to the {@class Cleric|PHB|Knowledge domain in the Player's Handbook|Knowledge|PHB}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Knowledge Domain|Cleric||Knowledge||1"
+				}
 			]
 		},
 		{
@@ -4243,7 +4288,12 @@
 			"subclassSource": "PSA",
 			"level": 1,
 			"entries": [
-				"\"The worthy must know and respect all others whom the God-Pharaoh deems worthy, for in the afterlife, all will be united in purpose and action.\"",
+				{
+					"type": "quote",
+					"entries": [
+						"The worthy must know and respect all others whom the God-Pharaoh deems worthy, for in the afterlife, all will be united in purpose and action."
+					]
+				},
 				"Oketra is charged with expounding upon this teaching of the God-Pharaoh, instilling in every initiate the virtue of solidarity. She forges each group of children into a crop of acolytes with just one purpose: to be judged worthy of a glorious afterlife. And she instills in each crop the ability to unite in a single action in pursuit of that purpose. She is fond of poetic imagery to communicate her ideals.",
 				"At each indicated cleric level, add the listed spells to your spells prepared.",
 				{
@@ -4420,7 +4470,12 @@
 			"subclassSource": "PSA",
 			"level": 1,
 			"entries": [
-				"\"The worthy shall hone a strong body that can withstand the boundless energies of the afterlife.\"",
+				{
+					"type": "quote",
+					"entries": [
+						"The worthy shall hone a strong body that can withstand the boundless energies of the afterlife."
+					]
+				},
 				"It falls to Rhonas to instill this teaching in those who would enter the afterlife\u2014but to his mind, the words themselves don't matter. Strength can't be taught. It must be built through practice and training. Rhonas demonstrates his teachings by his example, rather than by giving his students any kind of academic instruction. He welcomes the people of Naktamun to stand by the Hekma and watch him as he storms into the desert to battle the greatest horrors. He encourages them to observe his indomitable strength, for though they will never equal it, they can aspire to mimicry. He invites them to scrutinize every move and practice what they see.",
 				"At each indicated cleric level, add the listed spells to your spells prepared.",
 				{
@@ -4596,7 +4651,12 @@
 			"subclassSource": "PSA",
 			"level": 1,
 			"entries": [
-				"\"The worthy shall rush to the God-Pharaoh's side with relentless zeal, rising to overcome every obstacle in their way.\"",
+				{
+					"type": "quote",
+					"entries": [
+						"The worthy shall rush to the God-Pharaoh's side with relentless zeal, rising to overcome every obstacle in their way."
+					]
+				},
 				"The God-Pharaoh expects those he welcomes into the afterlife to desire it above all other pleasures and achievements, and for them to show their dedication, passion, and fervor through their actions. Hazoret is charged with cultivating this zeal in the initiates who come under her care, and she has undertaken the task with appropriate enthusiasm. She recognizes, however, that the best way to teach zeal is by demonstrating it.",
 				"At each indicated cleric level, add the listed spells to your spells prepared.",
 				{
@@ -5649,6 +5709,402 @@
 			"entries": [
 				"{@i 17th-level Twilight Domain feature}",
 				"The twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary."
+			]
+		},
+		{
+			"name": "Blood Domain",
+			"source": "TDCSR",
+			"page": 168,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"Developed in {@book Wildemount|TDCSR|3|Wildemount} by the {@book Claret Orders|TDCSR|2|Claret Orders}, the Blood Domain centers around the understanding of the natural life force as it exists within the body, and the divine conduit it can become. Those who take up this domain understand that the power of blood is the power of sacrifice, the balance of life and death, and the spirit's anchor within the mortal shell.",
+				"Gods who grant the power of the Blood Domain, including {@deity The Ruiner|Exandria|TDCSR} and {@deity The Matron of Ravens|Exandria|TDCSR}, direct their followers to tap into the connection between body and soul, exploit the hidden reserves of will within one's own vitality, and corrupt the bodies of others through the secret rites of {@variantrule hemocraft|TDCSR}. Clerics of good gods use {@variantrule hemocraft|TDCSR} to fill their self-sacrifice with purpose and power, while clerics with fewer morals use the blood of others to achieve their own malevolent ends.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Domain Spells|Cleric|PHB|Blood|TDCSR|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bonus Proficiencies|Cleric|PHB|Blood|TDCSR|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Bloodletting Focus|Cleric|PHB|Blood|TDCSR|1"
+				}
+			]
+		},
+		{
+			"name": "Bloodletting Focus",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"Starting at 1st level, your divine magic draws the blood from magically inflicted wounds, worsening the agony of your foes. When you cast a damage-dealing spell of 1st level or higher whose duration is instantaneous, any creature with blood that takes damage from the spell takes extra necrotic damage equal to 2 + the spell's level."
+			]
+		},
+		{
+			"name": "Bonus Proficiencies",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"When you choose this domain at 1st level, you gain proficiency with martial weapons."
+			]
+		},
+		{
+			"name": "Domain Spells",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"You gain domain spells at the cleric levels listed in the Blood Domain Spells table.",
+				{
+					"type": "table",
+					"caption": "Blood Domain Spells",
+					"colLabels": [
+						"Cleric Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell false life}, {@spell sleep}"
+						],
+						[
+							"3rd",
+							"{@spell hold person}, {@spell ray of enfeeblement}"
+						],
+						[
+							"5th",
+							"{@spell haste}, {@spell slow}"
+						],
+						[
+							"7th",
+							"{@spell blight}, {@spell stoneskin}"
+						],
+						[
+							"9th",
+							"{@spell dominate person}, {@spell hold monster}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity: Crimson Bond",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"Starting at 2nd level, you can use your Channel Divinity to form a supernatural bond with a creature you can see, or with a creature for which you possess a blood sample. This bond lasts for 1 hour or until your {@condition concentration} is broken (as if concentrating on a spell).",
+				"While the bond is in effect, you can use an action to learn the target's approximate distance and direction from you, as well as its current hit points and any conditions affecting it, as long as the target is within 10 miles of you. Alternatively, you can use your action to attempt to connect with the target's senses. You take {@damage 2d6} necrotic damage and the target makes a Constitution {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC. On a successful save, the bond ends. On a failure, you can choose to either see or hear through the target's senses for a number of minutes equal to your Wisdom modifier (minimum 1 minute). During this time, you are {@condition blinded} or {@condition deafened} (respectively) with regard to your own senses. When the connection ends, the bond is lost.",
+				"Regardless of the outcome, the target feels a wave of unease pass over it when it makes this save."
+			]
+		},
+		{
+			"name": "Channel Divinity: Blood Puppet",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"Starting at 6th level, you can use your Channel Divinity to briefly control a creature's actions\u2014whether that creature is living or dead. As an action, you target a Large or smaller creature or corpse within 60 feet of you that has blood. A creature you target must succeed on a Wisdom {@quickref saving throws|PHB|2|1|saving throw} against your spell save DC or become {@condition charmed} by you. An {@condition unconscious} creature automatically fails its {@quickref saving throws|PHB|2|1|saving throw}, and isn't {@condition incapacitated} while you control its actions. A corpse targeted by this effect gains a semblance of life that you control.",
+				"On the affected creature or animated corpse's turn, you can command it (no action required) to move up to half its speed and use its action to do one of the following:",
+				{
+					"type": "list",
+					"items": [
+						"{@action Use an Object|PHB|Interact with an object}",
+						"Make a single {@action attack}",
+						"Do nothing"
+					]
+				},
+				"An animated corpse or an {@condition unconscious} creature takes its turn immediately after yours, but can't move or take actions unless you command it to do so. Its statistics are the same as when it was alive or conscious.",
+				"An affected living creature makes a new {@quickref saving throws|PHB|2|1|saving throw} at the end of each of its turns, ending the effect on itself on a success. For any target, your control lasts for 1 minute or until your {@condition concentration} is broken (as if concentrating on a spell)."
+			]
+		},
+		{
+			"name": "Sanguine Recall",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"At 6th level, you can sacrifice a portion of your own vitality to recover expended spell slots as an action. The spell slots can have a combined level equal to or less than half your cleric level (rounded up), and none of the slots can be 6th level or higher. You take {@damage 1d8} necrotic damage for each spell slot level recovered, which can't be reduced in any way. You can't use this feature again until you finish a {@quickref resting|PHB|2|0|long rest}.",
+				"For example, if you're an 8th-level cleric, you can recover up to four levels of spell slots\u2014a single 4th-level slot, two 2nd-level slots, a 3rd-level slot and a 1st-level slot, or four 1st-level slots. You then take {@damage 4d8} necrotic damage."
+			]
+		},
+		{
+			"name": "Divine Strike",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 8,
+			"header": 2,
+			"entries": [
+				"At 8th level, you gain the ability to cause the physical wounds you deal out to bleed profusely. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra {@damage 1d8} necrotic damage to the target."
+			]
+		},
+		{
+			"name": "Divine Strike (14th Level)",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"When you reach 14th level, the extra damage increases to {@damage 2d8}."
+			]
+		},
+		{
+			"name": "Channel Divinity: Blood Puppet (17th Level)",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 17,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"At 17th level, you can use this feature to target a Huge or smaller creature or corpse."
+			]
+		},
+		{
+			"name": "Vascular Corruption Aura",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Blood",
+			"subclassSource": "TDCSR",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"At 17th level, you can use your action to emit a deathly aura of necrotic energy that causes the veins of nearby foes to burst and bleed. For 1 minute, any hostile creature with blood that moves within 30 feet of you for the first time on a turn or starts its turn there takes {@damage 3d6} necrotic damage. If a hostile creature with blood regains hit points while in the aura, it regains only half as many hit points as expected.",
+				"Once you use this feature, you can't use it again until you finish a {@quickref resting|PHB|2|0|long rest}."
+			]
+		},
+		{
+			"name": "Moon Domain",
+			"source": "TDCSR",
+			"page": 169,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 1,
+			"entries": [
+				"Since the {@book Founding|TDCSR|1|The Founding}, all mortal creatures have looked to the skies and sensed the power and mystery carried by {@book Catha and Ruidus|TDCSR|1|Catha and Ruidus}, the two moons of Exandria. The {@deity The Moonweaver|Exandria|TDCSR} herself is said to guide her worshipers from within the pale glow of Catha, revealing hidden paths and granting inspired dreams to those who pray to that moon. Distant, dark Ruidus is often regarded with awe and apprehension, considered a portent for fell deeds and bad luck.",
+				"Clerics of the Moon Domain draw on their divine connection to the moons to wield light and shadow, invoke good fortune and ill favor, and reveal or conceal as they see fit. Most Moon clerics worship the {@deity The Moonweaver|Exandria|TDCSR|Moonweaver} herself, but her followers are as varied as the stars in the sky. Some seek to protect the vulnerable and do good in the world, while others meddle with impunity and distort the truth for selfish gain. Other Moon clerics worship not the gods but the moons themselves, especially those with an innate connection to the lunar cycles through {@variantrule Player Characters as Lycanthropes|MM|lycanthropy}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Domain Spells|Cleric|PHB|Moon|TDCSR|1"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Clarity of Catha|Cleric|PHB|Moon|TDCSR|1"
+				}
+			]
+		},
+		{
+			"name": "Clarity of Catha",
+			"source": "TDCSR",
+			"page": 170,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"When you choose this domain at 1st level, you learn to shine light upon the mind's most dire moments, shielding those you protect. When a creature within 30 feet of you that you can see makes a Wisdom {@quickref saving throws|PHB|2|1|saving throw}, you can use your reaction to grant that creature {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on the save.",
+				"You can use this feature a number of times equal to your proficiency bonus, regaining all expended uses when you finish a {@quickref resting|PHB|2|0|long rest}."
+			]
+		},
+		{
+			"name": "Domain Spells",
+			"source": "TDCSR",
+			"page": 170,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 1,
+			"header": 2,
+			"entries": [
+				"You gain domain spells at the cleric levels listed in the Moon Domain Spells table.",
+				{
+					"type": "table",
+					"caption": "Moon Domain Spells",
+					"colLabels": [
+						"Cleric Level",
+						"Spells"
+					],
+					"colStyles": [
+						"col-2 text-center",
+						"col-10"
+					],
+					"rows": [
+						[
+							"1st",
+							"{@spell faerie fire}, {@spell silent image}"
+						],
+						[
+							"3rd",
+							"{@spell invisibility}, {@spell moonbeam}"
+						],
+						[
+							"5th",
+							"{@spell hypnotic pattern}, {@spell major image}"
+						],
+						[
+							"7th",
+							"{@spell greater invisibility}, {@spell hallucinatory terrain}"
+						],
+						[
+							"9th",
+							"{@spell dream}, {@spell passwall}"
+						]
+					]
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity: Blessing of the Full Moon",
+			"source": "TDCSR",
+			"page": 170,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 2,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"Starting at 2nd level, you can use your Channel Divinity to infuse your allies with bestial power. As an action, you instill a willing creature of your choice within 30 feet of you that you can see with one of the following blessings of your choice:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Blessing of the Watchful Moon",
+							"entries": [
+								"For 1 hour, the blessed creature's speed increases by 10 feet, and it has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on Wisdom ({@skill Perception} or {@skill Survival}) checks involving smell or made to track a creature."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Blessing of the Blood-Drenched Moon",
+							"entries": [
+								"For 10 minutes, the blessed creature has {@quickref Advantage and Disadvantage|PHB|2|0|advantage} on attack rolls against a target if at least one of the blessed creature's allies is within 5 feet of the target and the ally isn't {@condition incapacitated}."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Channel Divinity: Mind of Two Moons",
+			"source": "TDCSR",
+			"page": 170,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"consumes": {
+				"name": "Channel Divinity"
+			},
+			"entries": [
+				"Starting at 6th level, you can use your Channel Divinity to invoke the twofold arcana of Exandria's moons. By expending one use of Channel Divinity, you can cast a second {@condition concentration} spell while already concentrating on a first spell, as long as both spells are on your list of Moon Domain spells. If you need to make a Constitution {@quickref saving throws|PHB|2|1|saving throw} to maintain your {@condition concentration} on both spells, you make the save with {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}. On a failure, you lose {@condition concentration} on both spells."
+			]
+		},
+		{
+			"name": "Empowered Cantrips",
+			"source": "TDCSR",
+			"page": 171,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 8,
+			"header": 2,
+			"entries": [
+				"Starting at 8th level, your cleric cantrips deal extra damage equal to your Wisdom modifier (minimum of 1)."
+			]
+		},
+		{
+			"name": "Eclipse of Ill Omen",
+			"source": "TDCSR",
+			"page": 171,
+			"className": "Cleric",
+			"classSource": "PHB",
+			"subclassShortName": "Moon",
+			"subclassSource": "TDCSR",
+			"level": 17,
+			"header": 2,
+			"entries": [
+				"At 17th level, you can call upon the vermillion moon Ruidus to flare in the sky above you, eclipsing all other light. Its power surrounds you even where the sky can't be seen, and even on other planes. As a bonus action, you can manifest an area of reddish, dim light in a 60-foot radius around you. In addition to the normal effects of dim light, creatures in the area make {@quickref saving throws|PHB|2|1} with {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}. When you create this eclipse, you can choose any number of creatures that are unaffected by it.",
+				"This eclipse lasts while you concentrate (as if concentrating on a spell) for up to 1 minute. Concentrating on this feature counts as concentrating on a Moon Domain spell for the purpose of your {@subclassFeature Channel Divinity: Mind of Two Moons|Cleric|PHB|Moon|TDCSR|6|TDCSR|Mind of Two Moons} feature.",
+				"Additionally, once per turn when you deal radiant damage to any creatures in this area of dim light, you can curse one of those creatures until the eclipse ends (no action required). A creature cursed in this way has its speed halved and can't regain hit points.",
+				"Once you use this feature, you can't use it again until you finish a {@quickref resting|PHB|2|0|long rest}."
 			]
 		},
 		{

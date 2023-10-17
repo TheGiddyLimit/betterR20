@@ -863,7 +863,7 @@
 			"page": 79,
 			"toolProficiencies": [
 				{
-					"anyArtisansTool": true
+					"anyArtisansTool": 1
 				}
 			],
 			"additionalSpells": [
@@ -907,7 +907,7 @@
 			"page": 1,
 			"toolProficiencies": [
 				{
-					"anyArtisansTool": true
+					"anyArtisansTool": 1
 				}
 			],
 			"additionalSpells": [
@@ -1418,6 +1418,24 @@
 						"When you use the {@action Attack} action and attack with a one-handed weapon, you can use a bonus action to attack with a {@item hand crossbow|phb} you are holding."
 					]
 				}
+			]
+		},
+		{
+			"name": "Cruel",
+			"source": "TDCSR",
+			"page": 190,
+			"entries": [
+				"The challenges and struggles you've faced throughout your life have led you to delight in inflicting pain and anguish upon others. You gain a number of cruelty dice equal to your proficiency bonus. Your cruelty dice are {@dice d6|d6s}. You can roll only one cruelty die per turn, and a cruelty die is spent when you roll it.",
+				"You can roll a cruelty die under any of the following circumstances, with the indicated result:",
+				{
+					"type": "list",
+					"items": [
+						"When you deal damage to a creature, spend one cruelty die to deal extra damage to the creature equal to the roll.",
+						"When you score a critical hit, spend one cruelty die to gain temporary hit points equal to the roll.",
+						"When you make a Charisma ({@skill Intimidation}) check, spend one cruelty die and add the roll to your check."
+					]
+				},
+				"You regain all spent cruelty dice when you finish a {@quickref resting|PHB|2|0|long rest}."
 			]
 		},
 		{
@@ -3189,7 +3207,8 @@
 			"entries": [
 				"Studying occult lore, you learn one {@filter Eldritch Invocation|optionalfeatures|Feature Type=EI} option of your choice from the warlock class. Your spellcasting ability for the invocation is Intelligence, Wisdom, or Charisma (choose when you select this feat). If the invocation has a prerequisite of any kind, you can choose that invocation only if you're a warlock who meets the prerequisite.",
 				"Whenever you gain a level, you can replace the invocation with another one from the warlock class."
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Eldritch Adept",
@@ -3330,6 +3349,57 @@
 					"type": "list",
 					"items": [
 						"Whenever you have advantage on an attack roll using Dexterity, Intelligence, Wisdom, or Charisma, you can reroll one of the dice once."
+					]
+				}
+			]
+		},
+		{
+			"name": "Ember of the Fire Giant",
+			"source": "BGG",
+			"page": 17,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|BGG|strike of the giants (fire strike)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"resist": [
+				"fire"
+			],
+			"entries": [
+				"You've manifested the fiery combat emblematic of fire giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Born of Flame",
+							"entries": [
+								"You have resistance to fire damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Searing Ignition",
+							"entries": [
+								"When you take the {@action Attack} action on your turn, you can replace a single attack with a magical burst of flame. Each creature of your choice in a 15-foot-radius sphere centered on you must make a Dexterity saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, a creature takes fire damage equal to {@dice 1d8} + your proficiency bonus, and it has the blinded condition until the start of your next turn. On a successful save, the creature takes half as much damage only. You can use your Searing Ignition a number of times equal to your proficiency bonus (but no more than once per turn), and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -3877,6 +3947,81 @@
 			]
 		},
 		{
+			"name": "Flash Recall",
+			"source": "TDCSR",
+			"page": 190,
+			"prerequisite": [
+				{
+					"spellcastingPrepared": true
+				}
+			],
+			"entries": [
+				"You've developed the ability to instantly recall an unprepared spell in moments of sudden necessity.",
+				"As a bonus action, you prepare a spell of 1st level or higher from your spellbook (if you're a {@class wizard}) or from your class spell list (if you're not a {@class wizard}). This spell must be of a level for which you have spell slots, and it replaces another spell of an equal or higher level that you had previously prepared.",
+				"Once you use this feat to recall a spell, you can't do so again until you complete a {@quickref resting|PHB|2|0|short or long rest}.",
+				{
+					"type": "inset",
+					"name": "Rules Tip: Prepared Spells",
+					"page": 190,
+					"entries": [
+						"The Flash Recall feat requires you to be a spellcaster who prepares spells. This includes classes such as {@class cleric||clerics}, {@class druid||druids}, and {@class paladin||paladins}, who prepare spells each day from their class list, and {@class wizard||wizards}, who prepare spells from a spellbook. Classes such as {@class bard||bards} and {@class sorcerer||sorcerers}, who inherently know their spells rather than preparing them, can't benefit from this feat."
+					]
+				}
+			]
+		},
+		{
+			"name": "Fury of the Frost Giant",
+			"source": "BGG",
+			"page": 17,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|BGG|strike of the giants (frost strike)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"resist": [
+				"cold"
+			],
+			"entries": [
+				"You've manifested the icy might emblematic of frost giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Born of Ice",
+							"entries": [
+								"You have resistance to cold damage."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Frigid Retaliation",
+							"entries": [
+								"Immediately after a creature you can see within 30 feet of you hits you with an attack roll and deals damage, you can use your reaction to retaliate with a conjured blast of ice. The creature must make a Constitution saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, the creature takes cold damage equal to {@dice 1d8} + your proficiency bonus, and its speed is reduced to 0 until the end of its next turn. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			],
+			"hasFluffImages": true
+		},
+		{
 			"name": "Fury of the Frost Giant",
 			"source": "UA2022GiantOptions",
 			"page": 4,
@@ -4247,6 +4392,47 @@
 						"During the first round of any combat against your chosen foes, your attack rolls against any of them have advantage.",
 						"When any of your chosen foes makes an opportunity attack against you, it makes the attack roll with disadvantage.",
 						"Whenever you make an Intelligence ({@skill Arcana}, {@skill History}, {@skill Nature}, or {@skill Religion}) check to recall information about your chosen foes, you add double your proficiency bonus to the check, even if you're not normally proficient."
+					]
+				}
+			]
+		},
+		{
+			"name": "Guile of the Cloud Giant",
+			"source": "BGG",
+			"page": 18,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|BGG|strike of the giants (cloud strike)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested the confounding magic emblematic of cloud giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cloudy Escape",
+							"entries": [
+								"When a creature you can see hits you with an attack roll, you can use your reaction to give yourself resistance to that attack's damage. You then teleport to an unoccupied space that you can see within 30 feet of yourself. You can use this reaction a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -4633,6 +4819,13 @@
 							"cha"
 						]
 					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=Wizard"
+							}
+						]
+					},
 					"innate": {
 						"_": {
 							"daily": {
@@ -4644,7 +4837,8 @@
 												"false life",
 												"hex",
 												"ray of sickness"
-											]
+											],
+											"count": 2
 										}
 									}
 								]
@@ -4661,6 +4855,13 @@
 							"cha"
 						]
 					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=Wizard"
+							}
+						]
+					},
 					"innate": {
 						"_": {
 							"daily": {
@@ -4672,7 +4873,8 @@
 												"disguise self",
 												"feather fall",
 												"longstrider"
-											]
+											],
+											"count": 2
 										}
 									}
 								]
@@ -4689,6 +4891,13 @@
 							"cha"
 						]
 					},
+					"known": {
+						"_": [
+							{
+								"choose": "level=0|class=Wizard"
+							}
+						]
+					},
 					"innate": {
 						"_": {
 							"daily": {
@@ -4700,7 +4909,8 @@
 												"detect evil and good",
 												"protection from evil and good",
 												"shield"
-											]
+											],
+											"count": 2
 										}
 									}
 								]
@@ -5059,7 +5269,8 @@
 			],
 			"entries": [
 				"You can spend 10 minutes inspiring your companions, shoring up their resolve to fight. When you do so, choose up to six friendly creatures (which can include yourself) within 30 feet of you who can see or hear you and who can understand you. Each creature can gain temporary hit points equal to your level + your Charisma modifier. A creature can't gain temporary hit points from this feat again until it has finished a short or long rest."
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Investigator",
@@ -5103,6 +5314,54 @@
 						"You always know which way is north.",
 						"You always know the number of hours left before the next sunrise or sunset.",
 						"You can accurately recall anything you have seen or heard within the past month."
+					]
+				}
+			]
+		},
+		{
+			"name": "Keenness of the Stone Giant",
+			"source": "BGG",
+			"page": 18,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|BGG|strike of the giants (stone strike)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested the physical talents emblematic of stone giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Cavernous Sight",
+							"entries": [
+								"You gain {@sense darkvision} with a range of 60 feet. If you already have {@sense darkvision} from another source, its range increases by 60 feet."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Stone Throw",
+							"entries": [
+								"As a bonus action, you can take a rock and make a magical attack with it. The attack is a ranged spell attack with a range of 60 feet that uses the ability score you increased with this feat as the spellcasting ability. On a hit, the rock deals {@damage 1d10} force damage, and the target must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + the spellcasting ability modifier) or have the prone condition. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
 					]
 				}
 			]
@@ -6167,6 +6426,34 @@
 			]
 		},
 		{
+			"name": "Mystic Conflux",
+			"source": "TDCSR",
+			"page": 190,
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1e": [
+									"identify"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"You possess an intuitive understanding of the way magic ebbs and flows within enchanted items. Such items attune easily to you, and you are able to sound out their secrets. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"You can attune to up to four magic items at once.",
+						"You can cast the {@spell identify} spell without expending a spell slot or material components. You must finish a {@quickref resting|PHB|2|0|long rest} before you can do so again."
+					]
+				}
+			]
+		},
+		{
 			"name": "Naturalist",
 			"source": "UAFeatsForSkills",
 			"page": 3,
@@ -6822,7 +7109,24 @@
 			],
 			"toolProficiencies": [
 				{
-					"anyArtisansTool": true
+					"anyArtisansTool": 1
+				}
+			],
+			"additionalSpells": [
+				{
+					"ability": "int",
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									{
+										"choose": "level=1|components & miscellaneous=ritual",
+										"count": 2
+									}
+								]
+							}
+						}
+					}
 				}
 			],
 			"entries": [
@@ -6850,6 +7154,26 @@
 					"name": "Music Box",
 					"entries": [
 						"When opened, this music box plays a single song at a moderate volume. The box stops playing when it reaches the song's end or when it is closed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Remarkable Recovery",
+			"source": "TDCSR",
+			"page": 190,
+			"ability": [
+				{
+					"con": 1
+				}
+			],
+			"entries": [
+				"Your body has the ability to recover quickly from terrible injuries, and is unusually receptive to healing magic. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you are successfully stabilized while dying, you regain hit points equal to your Constitution modifier (minimum of 1).",
+						"Whenever you regain hit points as a result of a spell, potion, or class feature (but not this feat), you regain additional hit points equal to your Constitution modifier (minimum of 1)."
 					]
 				}
 			]
@@ -7101,7 +7425,8 @@
 				"You have learned a number of spells that you can cast as rituals. These spells are written in a ritual book, which you must have in hand while casting one of them.",
 				"When you choose this feat, you acquire a ritual book holding two 1st-level spells of your choice. Choose one of the following classes: {@filter bard|spells|level=1|class=bard|components & miscellaneous=ritual}, {@filter cleric|spells|level=1|class=cleric|components & miscellaneous=ritual}, {@filter druid|spells|level=1|class=druid|components & miscellaneous=ritual}, {@filter sorcerer|spells|level=1|class=sorcerer|components & miscellaneous=ritual}, {@filter warlock|spells|level=1|class=warlock|components & miscellaneous=ritual}, or {@filter wizard|spells|level=1|class=wizard|components & miscellaneous=ritual}. You must choose your spells from that class's spell list, and the spells you choose must have the ritual tag. The class you choose also determines your spellcasting ability for these spells: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard.",
 				"If you come across a spell in written form, such as a magical {@item spell scroll} or a wizard's spellbook, you might be able to add it to your ritual book. The spell must be on the spell list for the class you chose, the spell's level can be no higher than half your level (rounded up), and it must have the ritual tag. The process of copying the spell into your ritual book takes 2 hours per level of the spell, and costs 50 gp per level. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it."
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Rune Carver Adept",
@@ -7340,6 +7665,127 @@
 				"While you are wearing or carrying the rune-marked object, you can cast the spell associated with the chosen rune once without using a spell slot or material components, and you can also cast the spell using any spell slots you have.",
 				"Your spellcasting ability for this feat is Intelligence, Wisdom, or Charisma (choose when you select this feat)",
 				"Each time you gain a level, you can replace one of the runes you know with a different one from the Rune Spells table."
+			]
+		},
+		{
+			"name": "Rune Shaper",
+			"source": "BGG",
+			"page": 18,
+			"prerequisite": [
+				{
+					"spellcastingFeature": true
+				},
+				{
+					"background": [
+						{
+							"name": "Rune Carver",
+							"displayEntry": "{@background Rune Carver|BGG}"
+						}
+					]
+				}
+			],
+			"additionalSpells": [
+				{
+					"innate": {
+						"_": {
+							"daily": {
+								"1": [
+									"comprehend languages"
+								]
+							}
+						}
+					}
+				}
+			],
+			"entries": [
+				"You've studied the magic of Giant runes, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Comprehend Languages",
+							"entries": [
+								"You learn the {@spell comprehend languages} spell. You can cast this spell without expending a spell slot, and you must finish a long rest before you can cast it in this way again. You can also cast this spell using any spell slots you have."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Rune Magic",
+							"entries": [
+								"You know a number of runes equal to half your proficiency bonus (rounded down), chosen from the Rune Spells table. Whenever you finish a long rest, you can inscribe each rune you know onto one nonmagical weapon, armor, piece of clothing, or other object you touch. You temporarily learn the 1st-level spells that correspond to the runes you inscribed, as specified on the Rune Spells table, and you know those spells until you finish a long rest, when the runes fade. While you are wearing or carrying any rune-marked object, you can cast the spells associated with those runes using any spell slots you have.",
+								"You can also invoke a rune inscribed on an object you are wearing or carrying and cast its associated spell without expending a spell slot or using material components. Once you cast the spell in this way, you can't do so again until you finish a long rest. Your spellcasting ability for this feat is Intelligence, Wisdom, or Charisma (choose when you select this feat).",
+								"Each time you gain a level, you can replace one of the runes you know with another one from the Rune Spells table.",
+								{
+									"type": "table",
+									"colStyles": [
+										"col-2",
+										"col-10"
+									],
+									"colLabels": [
+										"Rune",
+										"Spell"
+									],
+									"rows": [
+										[
+											"Cloud",
+											"{@spell Fog cloud}"
+										],
+										[
+											"Death",
+											"{@spell Inflict wounds}"
+										],
+										[
+											"Dragon",
+											"{@spell Chromatic orb}"
+										],
+										[
+											"Enemy",
+											"{@spell Disguise self}"
+										],
+										[
+											"Fire",
+											"{@spell Burning hands}"
+										],
+										[
+											"Friend",
+											"{@spell Speak with animals}"
+										],
+										[
+											"Frost",
+											"{@spell Armor of Agathys}"
+										],
+										[
+											"Hill",
+											"{@spell Goodberry}"
+										],
+										[
+											"Journey",
+											"{@spell Longstrider}"
+										],
+										[
+											"King",
+											"{@spell Command}"
+										],
+										[
+											"Mountain",
+											"{@spell Entangle}"
+										],
+										[
+											"Stone",
+											"{@spell Sanctuary}"
+										],
+										[
+											"Storm",
+											"{@spell Thunderwave}"
+										]
+									]
+								}
+							]
+						}
+					]
+				}
 			]
 		},
 		{
@@ -7718,7 +8164,8 @@
 				"You are skilled in the creation of {@creature servo|psk|servos}\u2014tiny constructs that function as personal assistants. You can cast the {@spell find familiar} spell as a ritual, creating a {@creature servo|psk} to serve as your familiar instead of an animal. A {@creature servo|psk}'s statistics appear in the \"Artifact Creatures\" section of this document. In every other way, a servo familiar functions as described in the {@spell find familiar} spell.",
 				"You can communicate telepathically with your servo familiar and perceive through its senses as long as you are on the same plane of existence. You can speak through your servo in your own voice.",
 				"Additionally, when you take the {@action Attack} action, you can forgo one of your own attacks to allow your servo familiar to make one attack of its own."
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Shadow Touched",
@@ -8057,6 +8504,47 @@
 		},
 		{
 			"name": "Soul of the Storm Giant",
+			"source": "BGG",
+			"page": 19,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|BGG|strike of the giants (storm strike)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"wis",
+							"cha"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested the tempest magic emblematic of storm giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Maelstrom Aura",
+							"entries": [
+								"As a bonus action, you surround yourself with an aura of magical wind and lightning that extends 10 feet from you in every direction but not through total cover. The aura lasts until the start of your next turn or until you are incapacitated. While the aura is active, you have resistance to lightning and thunder damage. In addition, attack rolls against you have disadvantage, and whenever another creature starts its turn within the aura, you can force the creature to make a Strength saving throw (DC equals 8 + your proficiency bonus + the modifier of the ability increased by this feat). On a failed save, the creature's speed is halved until the start of its next turn. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Soul of the Storm Giant",
 			"source": "UA2022GiantOptions",
 			"page": 5,
 			"prerequisite": [
@@ -8237,6 +8725,29 @@
 						"When you cast a spell that requires you to make an attack roll, the spell's range is doubled.",
 						"Your ranged spell attacks ignore half cover and three-quarters cover.",
 						"You learn one cantrip that requires an attack roll. Choose the cantrip from the {@filter bard|spells|level=0|class=bard|spell attack=m;r;o}, {@filter cleric|spells|level=0|class=cleric|spell attack=m;r;o}, {@filter druid|spells|level=0|class=druid|spell attack=m;r;o}, {@filter sorcerer|spells|level=0|class=sorcerer|spell attack=m;r;o}, {@filter warlock|spells|level=0|class=warlock|spell attack=m;r;o}, or {@filter wizard|spells|level=0|class=wizard|spell attack=m;r;o} spell list. Your spellcasting ability for this cantrip depends on the spell list you chose from: Charisma for bard, sorcerer, or warlock; Wisdom for cleric or druid; or Intelligence for wizard."
+					]
+				}
+			]
+		},
+		{
+			"name": "Spelldriver",
+			"source": "TDCSR",
+			"page": 190,
+			"prerequisite": [
+				{
+					"level": 11,
+					"spellcasting2020": true
+				}
+			],
+			"entries": [
+				"Through intense focus, training, and dedication, you've harnessed the techniques of rapid spellcasting.",
+				"When you use your bonus action to cast a spell of 1st level or higher, you can also use your action to cast another spell of 1st level or higher. However, if you cast two or more spells in a single turn, only one of them can be 3rd level or higher.",
+				{
+					"type": "inset",
+					"name": "Rules Tip: Casting Multiple Spells",
+					"page": 190,
+					"entries": [
+						"Normally, when you cast a spell as a bonus action, you can't use your action to also cast a spell that turn unless that spell is a cantrip\u2014{@note see {@book PHB p202|PHB|10|Bonus Action}.} The Spelldriver feat removes that restriction, but the focus necessary to channel multiple spells in the same round still limits the overall power of those spells."
 					]
 				}
 			]
@@ -8548,6 +9059,75 @@
 					"items": [
 						"You gain proficiency in the {@skill Stealth} skill. If you are already proficient in the skill, you add double your proficiency bonus to checks you make with it.",
 						"If you are hidden, you can move up to 10 feet in the open without revealing yourself if you end the move in a position where you're not clearly visible."
+					]
+				}
+			]
+		},
+		{
+			"name": "Strike of the Giants",
+			"source": "BGG",
+			"page": 19,
+			"prerequisite": [
+				{
+					"proficiency": [
+						{
+							"weaponGroup": "martial"
+						}
+					]
+				},
+				{
+					"background": [
+						{
+							"name": "Giant Foundling",
+							"displayEntry": "{@background Giant Foundling|BGG}"
+						}
+					]
+				}
+			],
+			"entries": [
+				"You have absorbed primeval magic that gives you an echo of the might of giants. When you take this feat, choose one of the benefits listed below. Once per turn, when you hit a target with a melee weapon attack or a ranged weapon attack using a thrown weapon, you can imbue the attack with an additional effect depending on the benefit you chose:",
+				{
+					"type": "entries",
+					"name": "Cloud Strike",
+					"entries": [
+						"The target takes an extra {@damage 1d4} thunder damage. If the target is a creature, it must succeed on a Wisdom saving throw, or you become invisible to it until the start of your next turn or until immediately after you make an attack roll or cast a spell."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Fire Strike",
+					"entries": [
+						"The target takes an extra {@damage 1d10} fire damage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Frost Strike",
+					"entries": [
+						"The target takes an extra {@damage 1d6} cold damage. If the target is a creature, it must succeed on a Constitution saving throw, or its speed is reduced to 0 until the start of your next turn."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Hill Strike",
+					"entries": [
+						"The target takes an extra {@damage 1d6} damage of the weapon's type. If the target is a creature, it must succeed on a Strength saving throw or have the prone condition."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Stone Strike",
+					"entries": [
+						"The target takes an extra {@damage 1d6} force damage. If the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet from you in a straight line."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Storm Strike",
+					"entries": [
+						"The target takes an extra {@damage 1d6} lightning damage. If the target is a creature, it must succeed on a Constitution saving throw, or it has disadvantage on attack rolls until the start of your next turn.",
+						"The saving throw DC for these effects equals 8 + your proficiency bonus + your Strength or Constitution modifier.",
+						"You can use this feat a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
 					]
 				}
 			]
@@ -9379,7 +9959,8 @@
 						"You can cast the {@spell detect thoughts} spell, requiring no spell slot or components, and you must finish a long rest before you can cast it this way again. Your spellcasting ability for the spell is the ability increased by this feat. If you have spell slots of 2nd level or higher, you can cast this spell with them."
 					]
 				}
-			]
+			],
+			"hasFluffImages": true
 		},
 		{
 			"name": "Telepathic",
@@ -9503,6 +10084,33 @@
 			]
 		},
 		{
+			"name": "Thrown Arms Master",
+			"source": "TDCSR",
+			"page": 191,
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"dex"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've honed your ability to lob weaponry into the fray, including weapons not meant for ranged combat. You gain the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"Simple and martial melee weapons without the thrown property have the thrown property for you. One-handed weapons have a normal range of 20 feet and a long range of 60 feet, while two-handed weapons have a normal range of 15 feet and a long range of 30 feet.",
+						"Weapons that already have the thrown property increase their short range by 20 feet and their long range by 40 feet for you.",
+						"When you miss with a thrown weapon attack using a light weapon, the weapon returns to your grasp like a boomerang at the end of your turn, unless something prevents it from returning. You can catch and stow as many weapons as you threw in this way."
+					]
+				}
+			]
+		},
+		{
 			"name": "Tough",
 			"source": "PHB",
 			"page": 170,
@@ -9572,6 +10180,54 @@
 			],
 			"entries": [
 				"As an action, you can transform the lower half of your body into an inky black vapor, allowing you to float through the air. While transformed, you have a flying speed of 30 feet. You can maintain this form for up to 10 minutes. Once you use this ability, you can't use it again until you finish a short or long rest."
+			]
+		},
+		{
+			"name": "Vigor of the Hill Giant",
+			"source": "BGG",
+			"page": 19,
+			"prerequisite": [
+				{
+					"level": 4,
+					"feat": [
+						"strike of the giants|BGG|strike of the giants (hill strike)"
+					]
+				}
+			],
+			"ability": [
+				{
+					"choose": {
+						"from": [
+							"str",
+							"con",
+							"wis"
+						],
+						"amount": 1
+					}
+				}
+			],
+			"entries": [
+				"You've manifested the resilience emblematic of hill giants, granting you the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Bulwark",
+							"entries": [
+								"When you are subjected to an effect that would move you at least 5 feet or give you the prone condition, you can use your reaction to steady yourself. You aren't moved and don't have the prone condition."
+							]
+						},
+						{
+							"type": "item",
+							"name": "Iron Stomach",
+							"entries": [
+								"Whenever you eat food as part of a short rest and spend one or more Hit Dice to regain hit points, you regain additional hit points equal to your Constitution modifier + your proficiency bonus."
+							]
+						}
+					]
+				}
 			]
 		},
 		{
@@ -9646,6 +10302,24 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Vital Sacrifice",
+			"source": "TDCSR",
+			"page": 191,
+			"entries": [
+				"You've learned secrets of {@variantrule hemocraft|TDCSR} that grant you esoteric power at the price of your own life force. As a bonus action, you can choose to take {@damage 1d6} necrotic damage to gain a blood boon. Your blood boon lasts for 1 hour or until expended.",
+				"You can expend this blood boon to gain one of the following benefits:",
+				{
+					"type": "list",
+					"items": [
+						"When you make an attack roll, you roll {@dice 1d6} and add it to the total.",
+						"When you hit with an attack or spell, you deal an additional {@damage 2d6} necrotic damage.",
+						"When you cause a creature to make a Strength, Dexterity, or Constitution {@quickref saving throws|PHB|2|1|saving throw}, roll a {@dice d4} and reduce their save by the amount rolled."
+					]
+				},
+				"The damage you take to gain a blood boon can't be reduced in any way."
 			]
 		},
 		{

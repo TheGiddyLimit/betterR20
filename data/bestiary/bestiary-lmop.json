@@ -16,6 +16,9 @@
 			"name": "Ash Zombie",
 			"source": "LMoP",
 			"page": 31,
+			"reprintedAs": [
+				"Ash Zombie|PaBTSO"
+			],
 			"size": [
 				"M"
 			],
@@ -94,6 +97,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"savingThrowForced": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -198,6 +204,9 @@
 					"source": "RMBRE"
 				}
 			],
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
 			"languageTags": [
 				"C",
 				"D",
@@ -215,7 +224,12 @@
 				"CW"
 			],
 			"miscTags": [
+				"MLW",
 				"MW"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -226,6 +240,9 @@
 			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 41,
+			"reprintedAs": [
+				"Gundren Rockseeker|PaBTSO"
+			],
 			"_copy": {
 				"name": "Commoner",
 				"source": "MM",
@@ -242,6 +259,9 @@
 			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 59,
+			"reprintedAs": [
+				"Mormesk the Wraith|PaBTSO"
+			],
 			"size": [
 				"M"
 			],
@@ -345,6 +365,9 @@
 				"HPR",
 				"MW"
 			],
+			"savingThrowForced": [
+				"constitution"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -355,6 +378,9 @@
 			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 59,
+			"reprintedAs": [
+				"Nezznar the Spider|PaBTSO"
+			],
 			"size": [
 				"M"
 			],
@@ -513,6 +539,10 @@
 			"conditionInflictSpell": [
 				"invisible"
 			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -523,6 +553,9 @@
 			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 50,
+			"reprintedAs": [
+				"Nundro Rockseeker|PaBTSO"
+			],
 			"_copy": {
 				"name": "Commoner",
 				"source": "MM",
@@ -537,6 +570,9 @@
 			"name": "Redbrand Ruffian",
 			"source": "LMoP",
 			"page": 61,
+			"reprintedAs": [
+				"Redbrand Ruffian|PaBTSO"
+			],
 			"size": [
 				"M"
 			],
@@ -593,6 +629,9 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
 			"actionTags": [
 				"Multiattack"
 			],
@@ -603,6 +642,7 @@
 				"P"
 			],
 			"miscTags": [
+				"MLW",
 				"MW"
 			],
 			"hasToken": true,
@@ -614,6 +654,9 @@
 			"isNamedCreature": true,
 			"source": "LMoP",
 			"page": 61,
+			"reprintedAs": [
+				"Sildar Hallwinter|PaBTSO"
+			],
 			"size": [
 				"M"
 			],
@@ -688,6 +731,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"longsword|phb"
+			],
 			"actionTags": [
 				"Multiattack",
 				"Parry"
@@ -700,6 +747,7 @@
 				"S"
 			],
 			"miscTags": [
+				"MLW",
 				"MW",
 				"RNG",
 				"RW"

@@ -234,6 +234,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"club|phb",
+				"hand crossbow|phb"
+			],
 			"traitTags": [
 				"Brute"
 			],
@@ -249,6 +253,7 @@
 				"P"
 			],
 			"miscTags": [
+				"MLW",
 				"MW",
 				"RNG",
 				"RW"

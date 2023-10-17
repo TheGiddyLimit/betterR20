@@ -58,6 +58,16 @@
 			]
 		},
 		{
+			"name": "Ashari",
+			"source": "TDCSR",
+			"entries": [
+				"Isolated from the political struggles of urban Tal'Dorei, you are a member of {@book the Ashari|TDCSR|2|The Ashari} people\u2014a society bound to an ancient covenant protecting the Material Plane from the chaos of the primordial elements. You've been raised to revere and protect the natural world, and to shepherd the tumultuous elemental forces that give it life. When the elements threaten to overwhelm the delicate balance of nature, it is the role of {@book the Ashari|TDCSR|2|The Ashari} to restore harmony.",
+				"You grew up in a tight-knit society, bound to a leader who successfully returned from the traditional journey to the Elemental Planes known as an Aramante. By contrast, you might well have never traveled more than a few days from your home, and thus have closer bonds with your family and neighbors than many people of Tal'Dorei.",
+				"In your early life, you likely took up one of the many roles that make up your society, whether homemaker, hunter, explorer, or protector. If you have the ability to use elemental magic, you might have had one of the most important duties of all: protecting and soothing the elemental rift at the heart of your home. And even as an adventurer now traveling far beyond that home, your loyalties still lie with the continued safety of your order. Whatever else you do as you learn about the new world around you, you're conscious of the need to gather allies to your cause.",
+				"Each Ashari is tethered to one of the four elemental orders and their settlements. You must select Pyrah (fire), Vesrah (water), {@book Terrah|TDCSR|3|Terrah} (earth), or {@book Zephrah|TDCSR|3|Zephrah} (wind). The rifts of earth and air are both in Tal'Dorei. If you live or lived among your people, then you are familiar with the remarkable sights of Air Ashari on {@item skysail|TDCSR|skysails} above the {@book Summit Peaks|TDCSR|3|Summit Peaks}, or {@book Earth Ashari|TDCSR|3|Terrah} erupting from the solid stone of the {@book Cliffkeep Mountains|TDCSR|3|Cliffkeep Mountains} on their {@item earthboard|TDCSR|earthboards}."
+			]
+		},
+		{
 			"name": "Astral Drifter",
 			"source": "AAG",
 			"entries": [
@@ -81,7 +91,8 @@
 						"type": "internal",
 						"path": "backgrounds/AAG/Astral Drifter.webp"
 					},
-					"title": "Plasmoid Astral Drifter"
+					"title": "Plasmoid Astral Drifter",
+					"credit": "Olivier Bernard"
 				}
 			]
 		},
@@ -108,7 +119,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/MOT/Athlete.png"
-					}
+					},
+					"credit": "Noah Bradley"
 				}
 			]
 		},
@@ -456,7 +468,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/AI/celebrity-adventurers-scion.png"
-					}
+					},
+					"credit": "Kris Straub"
 				}
 			]
 		},
@@ -513,6 +526,26 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Clasp Member",
+			"source": "TDCSR",
+			"entries": [
+				"Whether you grew up in the mean streets of {@book Kymal|TDCSR|3|Kymal} bamboozling foolish gamblers, or spent your youth pilfering loose coin from the pockets of {@book Emon's|TDCSR|3|Emon, the City of Fellowship} many tourists, your lifestyle of deceiving-to-survive eventually drew the attention of the {@book Clasp|TDCSR|2|The Clasp}: a storied crime syndicate that has hideouts in every city in Tal'Dorei. In exchange for protection, a modicum of kinship, and a number of useful resources to further develop your craft as a criminal, you agreed to receive the brand of the {@book Clasp|TDCSR|2|The Clasp} and join their ranks.",
+				"You might have spent time working the guild's most menial assignments, wandering the alleys as a simple cutpurse and filling your pockets with silver while you waited to climb the professional ladder. Or you might be a clever actor and liar, whose skill at blending in with all facets of society has made you an indispensable spy. Perhaps your swift technique with a blade led you to become a feared assassin for the {@book Spireling leader|TDCSR|2|Spireling Shenn} of a local {@book Clasp|TDCSR|2|The Clasp} sect. Regardless, though the threat of the law is ever looming, the advantages to having a connection to such a powerful cartel greatly outweighs your paranoia. Most of the time.",
+				"Since the {@book Clasp|TDCSR|2|The Clasp} is an organization, its members can rise in rank by proving their worth, by making the right friends in high places, or even through blackmail and bribery. You and the Game Master can decide together how your actions affect your rank in the {@book Clasp|TDCSR|2|The Clasp}, and what benefits that rank grants you."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/TDCSR/ClaspMember.webp"
+					},
+					"credit": "{@link John Anthony di Giovanni|https://artstation.com/jad}",
+					"altText": "A man with short black hair and beard wearing dark clothing holding a curved dagger leaning against a stone wall."
 				}
 			]
 		},
@@ -621,34 +654,6 @@
 							]
 						}
 					]
-				}
-			]
-		},
-		{
-			"name": "Dissenter",
-			"source": "PSA",
-			"entries": [
-				{
-					"type": "entries",
-					"entries": [
-						{
-							"type": "entries",
-							"entries": [
-								"Even in the carefully constructed and curated city-state of Naktamun, and in the presence of the five gods, some people rebel against the doctrines of the God-Pharaoh. They don't challenge the existence of the gods, of course, for those gods are visible nearly every day in the streets of the city. Nor do they question the fact of life after death, which is plain to see in the anointed mummies that surround them, as well as the marauding mummies outside the Hekma. Rather, these dissenters simply refuse to follow the ordained course of life that leads to the glorious afterlife.",
-								"Some dissenters are spurred by fear, not wanting to subject themselves to a violent death in the trials (or in training for the trials). Some are moved by conscience, unwilling to kill their crop-mates in the trials. For while they cannot deny that the gods exist, they can deny that the gods are just\u2014and can fight to prove that the dictates of an unjust god need not be obeyed. Some believe that one god (probably Bontu) has corrupted the process of the trials and the path to the afterlife. Others correctly intuit that the God-Pharaoh did not actually have the people's best interests in mind when he ordered their society.",
-								"A character who is identified as a dissenter loses the benefit of the initiate's or vizier's background feature. In its place, the character gains the Shelter of Dissenters feature."
-							]
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "backgrounds/PSA/Dissenter.webp"
-					}
 				}
 			]
 		},
@@ -984,6 +989,25 @@
 		},
 		{
 			"name": "Giant Foundling",
+			"source": "BGG",
+			"entries": [
+				"Though you aren't a Giant, you grew up among giants. Maybe you were an orphan taken in by a sympathetic family of stone giants who raised you as one of their own. Or perhaps you lived in a lost prehistoric pocket of the world, surrounded by giants and fearsome behemoths or hulking dinosaurs.",
+				"Something about your environment\u2014perhaps the food or water that sustained you, elemental magic inherent in the site of your home, or some verdant blessing of growth placed on you\u2014caused you to grow to a remarkable size for your kind. With the aid of this magic, you have learned how to embody the might of giants. You are used to moving through a world much bigger than you, and that is reflected in your skills, attitude, and perspective on life."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/BGG/Giant Foundling.webp"
+					},
+					"title": "A giant foundling is used to a larger world",
+					"credit": "Kai Carpenter"
+				}
+			]
+		},
+		{
+			"name": "Giant Foundling",
 			"source": "UA2022WondersOfTheMultiverse",
 			"entries": [
 				"Though you aren't a Giant, you grew up among giants. Maybe you were an orphan taken in by a sympathetic family of stone giants who raised you as one of their own. Or perhaps you lived in a lost prehistoric pocket of the world, surrounded by giants and fearsome behemoths or hulking dinosaurs.",
@@ -1074,7 +1098,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/EGW/Grinner.png"
-					}
+					},
+					"credit": "Dan Bittencourt"
 				}
 			]
 		},
@@ -1151,7 +1176,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/VRGR/Haunted One.png"
-					}
+					},
+					"credit": "Wayne England"
 				}
 			]
 		},
@@ -1252,7 +1278,7 @@
 							"type": "entries",
 							"entries": [
 								"You are an initiate, on the path to completing the trials of the five gods in the hope of earning a glorified death in the final Trial of Zeal. Some combination of your natural aptitude, your crop's needs, and your teachers' assessment while you were an acolyte led you to focus your training in one particular area of specialization\u2014hand-to-hand combat, long-range combat, or spellcasting. But only a well-rounded initiate can be called truly worthy of the afterlife.",
-								"If you are a hand-to-hand specialist, consider the barbarian, fighter, monk, paladin, or rogue classes. As a long-range combat specialist, you might be a fighter, a ranger, or a rogue. If you are a spellcasting specialist, you might be a bard, sorcerer, or wizard. And beyond this initial choice, you might consider multiclassing or using feats to round out your skills in all three areas."
+								"If you are a hand-to-hand specialist, consider the {@class barbarian}, {@class fighter}, {@class monk}, {@class paladin}, or {@class rogue} classes. As a long-range combat specialist, you might be a {@class fighter}, a {@class ranger}, or a {@class rogue}. If you are a spellcasting specialist, you might be a {@class bard}, {@class sorcerer}, or {@class wizard}. And beyond this initial choice, you might consider multiclassing or using feats to round out your skills in all three areas."
 							]
 						}
 					]
@@ -1264,16 +1290,61 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/PSA/Initiate.webp"
-					}
+					},
+					"title": "Unwavering Initiate",
+					"credit": "Greg Opalinski"
 				},
 				{
 					"type": "image",
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/PSA/Initiate2.webp"
-					}
+					},
+					"title": "Gust Walker",
+					"credit": "Jason Rainville"
 				}
 			]
+		},
+		{
+			"name": "Initiate (Dissenter)",
+			"source": "PSA",
+			"_copy": {
+				"name": "Initiate",
+				"source": "PSA",
+				"_mod": {
+					"entries": {
+						"mode": "prependArr",
+						"items": {
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"entries": [
+										"Even in the carefully constructed and curated city-state of Naktamun, and in the presence of the five gods, some people rebel against the doctrines of the God-Pharaoh. They don't challenge the existence of the gods, of course, for those gods are visible nearly every day in the streets of the city. Nor do they question the fact of life after death, which is plain to see in the anointed mummies that surround them, as well as the marauding mummies outside the Hekma. Rather, these dissenters simply refuse to follow the ordained course of life that leads to the glorious afterlife.",
+										"Some dissenters are spurred by fear, not wanting to subject themselves to a violent death in the trials (or in training for the trials). Some are moved by conscience, unwilling to kill their crop-mates in the trials. For while they cannot deny that the gods exist, they can deny that the gods are just\u2014and can fight to prove that the dictates of an unjust god need not be obeyed. Some believe that one god (probably Bontu) has corrupted the process of the trials and the path to the afterlife. Others correctly intuit that the God-Pharaoh did not actually have the people's best interests in mind when he ordered their society.",
+										"A character who is identified as a dissenter loses the benefit of the initiate's or vizier's background feature. In its place, the character gains the Shelter of Dissenters feature.",
+										{
+											"type": "hr"
+										}
+									]
+								}
+							]
+						}
+					},
+					"images": {
+						"mode": "prependArr",
+						"items": {
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "backgrounds/PSA/Dissenter.webp"
+							},
+							"title": "Samut, Voice of Dissent",
+							"credit": "Aleksi Briclot"
+						}
+					}
+				}
+			}
 		},
 		{
 			"name": "Inquisitor",
@@ -1297,7 +1368,9 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/PSI/Inquisitor.webp"
-					}
+					},
+					"title": "Moorland Inquisitor",
+					"credit": "David Palumbo"
 				}
 			]
 		},
@@ -1323,7 +1396,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/VRGR/Investigator.png"
-					}
+					},
+					"credit": "Zuzanna Wuzyk"
 				}
 			]
 		},
@@ -1459,6 +1533,26 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Lyceum Scholar",
+			"source": "TDCSR",
+			"entries": [
+				"You most likely came up through money or hailed from a family with social prestige if you were able to afford tuition at the {@book Alabaster Lyceum|TDCSR|3|5. Alabaster Lyceum} in {@book Emon|TDCSR|3|Emon, the City of Fellowship}. But whatever your origin, your interests and pursuits brought you to the hallowed halls of Tal'Dorei's highest place of learning, where you soaked in every lesson you could, hoping to better make your mark on the world. (Or at least you pretended to. Even at the {@book Lyceum|TDCSR|3|5. Alabaster Lyceum}, every class has its slackers.) Eventually, though, the call to adventure pulled you from your studies, and you now face the challenge of keeping up with your education even as the tides of destiny threaten to sweep you away.",
+				"You might have come to the {@book Lyceum|TDCSR|3|5. Alabaster Lyceum} to better research and understand the history and lore of Exandria and the lands you call home. Perhaps you sought a future here as a professor\u2014or you might hope to do so still. You could also have been drawn by the promise of prosperity in politics, learning the inner workings of government and alliances to better position yourself as a future writer of history. Or perhaps your knack for the arcane inspired you to attend the {@book Lyceum|TDCSR|3|5. Alabaster Lyceum} to refine your spellcraft, following in the footsteps of some of the finest wizards to ever practice the arts of magic.",
+				"When you choose this background, you could be either an active student seeking adventures for your own research, or a graduated alumnus. With a little modification, you could easily be a professor as well."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/TDCSR/LyceumScholar.webp"
+					},
+					"credit": "{@link Claudia Ianniciello|https://artstation.com/claudiasg}",
+					"altText": "A Black woman stands with her back to us. Her dreadlocked hair is pulled up into a bun. She wears light blue robes with a dark blue sash down the middle of her back. She reads magically glowing runes on a stone wall."
 				}
 			]
 		},
@@ -1700,7 +1794,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/AI/plaintiff-coin.png"
-					}
+					},
+					"credit": "Kris Straub"
 				}
 			]
 		},
@@ -1724,7 +1819,8 @@
 						"type": "internal",
 						"path": "backgrounds/SCC/Prismari Student.webp"
 					},
-					"title": "An advanced Prismari student artfully harnesses fire"
+					"title": "An advanced Prismari student artfully harnesses fire",
+					"credit": "Sean Sevestre"
 				}
 			]
 		},
@@ -1741,7 +1837,8 @@
 						"type": "internal",
 						"path": "backgrounds/SCC/Quandrix Student.webp"
 					},
-					"title": "A Quandrix student magically gazes into the intricate patterns of nature"
+					"title": "A Quandrix student magically gazes into the intricate patterns of nature",
+					"credit": "Cristi Balanescu"
 				}
 			]
 		},
@@ -1761,6 +1858,16 @@
 						}
 					]
 				}
+			]
+		},
+		{
+			"name": "Reformed Cultist",
+			"source": "TDCSR",
+			"entries": [
+				"Two pantheons have battled over the fate of Exandria since the world's founding\u2014the {@book Prime Deities|TDCSR|2|Prime Deities} and the {@book Betrayer Gods|TDCSR|2|Betrayer Gods}. During the {@book Calamity|TDCSR|1|The Calamity}, the {@book Prime Deities|TDCSR|2|Prime Deities} allied themselves with the mortal races of Exandria, their original creations, to protect their flawed world and its multifarious forms of life. The Betrayers sought to wipe the slate clean.",
+				"At the end of that devastating war, the {@book Prime Deities|TDCSR|2|Prime Deities} established a Divine Gate that would prevent all gods, good or evil, from directly affecting the world, but which would leave the gods' mortal followers and supernal servants to enact their will. And so the corrupting whispers of the {@book Betrayer Gods|TDCSR|2|Betrayer Gods} have ensnared the minds of power-hungry mortals for centuries, promising them a sliver of the gods' great power in exchange for dedicating their souls to occult lore.",
+				"You once belonged to such a cult of the {@book Betrayer Gods|TDCSR|2|Betrayer Gods}. Perhaps this faith only briefly tempted your rebellious, youthful spirit. Perhaps the cult gave you love and family when you had none, asking only your adherence to their prophet in exchange. Or maybe you were raised from birth to pay homage to gods of selfish cruelty\u2014until one fateful day the veil was lifted, so that nothing stood between you and the horrifying truth.",
+				"However it happened, you were freed from the shackles of this poisonous sect. Yet you know that this group does not forgive betrayers. As long as you live, you will be hunted\u2014and if the members of the cult think you dead, their hunt will begin again the second they learn they're wrong."
 			]
 		},
 		{
@@ -1796,6 +1903,32 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Rune Carver",
+			"source": "BGG",
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"What we call rune magic is the palest imitation of Annam's creative work. He shaped worlds from the primal elements; we struggle to bind the merest scraps of elemental power into the mystic shapes of our runes."
+					],
+					"by": "Diancastra"
+				},
+				"You've dedicated your life to studying runecraft. Whether you were taught by a master rune carver or learned by poring over ancient engravings, you can tap into the supernatural power held within runes.",
+				"The art of runecraft was initially created by giants, but over time, the practice has been adopted by many peoples. As such, though Giant runes are the most commonly used, many rune carvers incorporate symbols from their native languages into the craft."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/BGG/Rune Carver.webp"
+					},
+					"title": "Orc Rune Carver",
+					"credit": "Nikki Dawes"
 				}
 			]
 		},
@@ -2211,7 +2344,7 @@
 							"type": "entries",
 							"entries": [
 								"You are a vizier, a servant of your god. You perform tasks that are essential to facilitating the initiates' journey, so the gods reward you with entry into the afterlife with the God-Pharaoh's blessing. You hope to achieve the most honored status in the afterlife by being the best possible servant to your god.",
-								"As a vizier, you can have any class, but you are especially likely to be a cleric, a druid (particularly if you serve Rhonas), or a paladin."
+								"As a vizier, you can have any class, but you are especially likely to be a {@class cleric}, a {@class druid} (particularly if you serve Rhonas), or a {@class paladin}."
 							]
 						}
 					]
@@ -2223,9 +2356,52 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/PSA/Vizier.webp"
-					}
+					},
+					"title": "Shadowstorm Vizier",
+					"credit": "Yongjae Choi"
 				}
 			]
+		},
+		{
+			"name": "Vizier (Dissenter)",
+			"source": "PSA",
+			"_copy": {
+				"name": "Vizier",
+				"source": "PSA",
+				"_mod": {
+					"entries": {
+						"mode": "prependArr",
+						"items": {
+							"type": "entries",
+							"entries": [
+								{
+									"type": "entries",
+									"entries": [
+										"Even in the carefully constructed and curated city-state of Naktamun, and in the presence of the five gods, some people rebel against the doctrines of the God-Pharaoh. They don't challenge the existence of the gods, of course, for those gods are visible nearly every day in the streets of the city. Nor do they question the fact of life after death, which is plain to see in the anointed mummies that surround them, as well as the marauding mummies outside the Hekma. Rather, these dissenters simply refuse to follow the ordained course of life that leads to the glorious afterlife.",
+										"Some dissenters are spurred by fear, not wanting to subject themselves to a violent death in the trials (or in training for the trials). Some are moved by conscience, unwilling to kill their crop-mates in the trials. For while they cannot deny that the gods exist, they can deny that the gods are just\u2014and can fight to prove that the dictates of an unjust god need not be obeyed. Some believe that one god (probably Bontu) has corrupted the process of the trials and the path to the afterlife. Others correctly intuit that the God-Pharaoh did not actually have the people's best interests in mind when he ordered their society.",
+										"A character who is identified as a dissenter loses the benefit of the initiate's or vizier's background feature. In its place, the character gains the Shelter of Dissenters feature.",
+										{
+											"type": "hr"
+										}
+									]
+								}
+							]
+						}
+					},
+					"images": {
+						"mode": "prependArr",
+						"items": {
+							"type": "image",
+							"href": {
+								"type": "internal",
+								"path": "backgrounds/PSA/Dissenter.webp"
+							},
+							"title": "Samut, Voice of Dissent",
+							"credit": "Aleksi Briclot"
+						}
+					}
+				}
+			}
 		},
 		{
 			"name": "Volstrucker Agent",
@@ -2294,7 +2470,8 @@
 					"href": {
 						"type": "internal",
 						"path": "backgrounds/EGW/Volstrucker Agent.png"
-					}
+					},
+					"credit": "Jessica Mahon"
 				}
 			]
 		},
@@ -2314,6 +2491,27 @@
 							]
 						}
 					]
+				}
+			]
+		},
+		{
+			"name": "Whitestone Rifle Corps",
+			"source": "TDCSR",
+			"entries": [
+				"You trained with the elite forces charged with the defense and protection of the isolated city-state of {@book Whitestone|TDCSR|3|Whitestone}, with much of that training focused on how to care for, protect, and safeguard the firearms that are the weapons of the {@book Whitestone Rifle Corps|TDCSR|3|Whitestone Rifle Corps}. You are also entrusted with a solemn duty\u2014to never let the secrets of your liege-lord's deadly creations fall into the wrong hands.",
+				"You might have come to {@book Whitestone|TDCSR|3|Whitestone} to prove yourself worthy of wielding the secretive and highly coveted firearms created there, and to seek instruction from warriors who have mastered those weapons. Or you might have grown up in {@book Whitestone|TDCSR|3|Whitestone}, perhaps even remembering the brutal days when {@book Lord and Lady Briarwood|TDCSR|3|Scars of the Briarwoods} ruled your homeland\u2014a reign that began some thirty years ago and lasted for six harrowing years.",
+				"Alternatively, you or your parents might have come to {@book Whitestone|TDCSR|3|Whitestone} as refugees fleeing the destruction of the {@book Chroma Conclave's|TDCSR|1|The Chroma Conclave} attack on Tal'Dorei. If so, your life in the city-state might have been a relatively peaceful one, dwelling among the engineers, artisans, and merchants seeking to capitalize upon {@book Whitestone's|TDCSR|3|Whitestone} reputation as an up-and-coming center of trade, culture, and invention.",
+				"When you choose this background, decide whether you were a member of the {@book Rifle Corps|TDCSR|3|Whitestone Rifle Corps}, the {@book Pale Guard|TDCSR|3|Pale Guard}, or the {@book Grey Hunters|TDCSR|3|Grey Hunters}. The {@book \"Whitestone\" section in chapter 3|TDCSR|3|Whitestone} has more information about the {@book Pale Guard|TDCSR|3|Pale Guard}, as well as the armaments and militia in the city-state. See below for more information on the {@book Grey Hunters|TDCSR|3|Grey Hunters}."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "backgrounds/TDCSR/RifleCorps.webp"
+					},
+					"credit": "{@link Ameera Sheikh|https://mikandii.com/}",
+					"altText": "A muscled Black half-elven woman with long brown dreadlocks wearing a blue coat, crouching on one knee in a patch of white daisies, aiming a rifle."
 				}
 			]
 		},
@@ -2341,7 +2539,8 @@
 						"type": "internal",
 						"path": "backgrounds/AAG/Wildspacer.webp"
 					},
-					"title": "Githyanki Wildspacer"
+					"title": "Githyanki Wildspacer",
+					"credit": "Suzanne Helmigh"
 				}
 			]
 		},

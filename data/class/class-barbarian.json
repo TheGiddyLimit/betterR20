@@ -42,7 +42,7 @@
 			"startingEquipment": {
 				"additionalFromBackground": true,
 				"default": [
-					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=sand}",
+					"(a) a {@item greataxe|phb} or (b) any {@filter martial melee weapon|items|source=phb|category=basic|type=martial weapon;melee weapon=u~u~sand}",
 					"(a) two {@item handaxe|phb|handaxes} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
 					"An {@item explorer's pack|phb}, and four {@item javelin|phb|javelins}"
 				],
@@ -823,17 +823,65 @@
 			]
 		},
 		{
+			"name": "Path of the Juggernaut",
+			"shortName": "Juggernaut",
+			"source": "TDCSR",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"page": 165,
+			"subclassFeatures": [
+				"Path of the Juggernaut|Barbarian|PHB|Juggernaut|TDCSR|3",
+				"Demolishing Might|Barbarian|PHB|Juggernaut|TDCSR|6",
+				"Resolute Stance|Barbarian|PHB|Juggernaut|TDCSR|6",
+				"Thunderous Blows (10th Level)|Barbarian|PHB|Juggernaut|TDCSR|10",
+				"Hurricane Strike|Barbarian|PHB|Juggernaut|TDCSR|10",
+				"Unstoppable|Barbarian|PHB|Juggernaut|TDCSR|14"
+			]
+		},
+		{
 			"name": "Path of the Giant (UA)",
 			"shortName": "Giant (UA)",
 			"source": "UA2022GiantOptions",
 			"className": "Barbarian",
 			"classSource": "PHB",
 			"page": 1,
+			"isReprinted": true,
 			"subclassFeatures": [
 				"Path of the Giant|Barbarian||Giant (UA)|UA2022GiantOptions|3",
 				"Elemental Cleaver|Barbarian||Giant (UA)|UA2022GiantOptions|6",
 				"Mighty Impel|Barbarian||Giant (UA)|UA2022GiantOptions|10",
 				"Demiurgic Colossus|Barbarian||Giant (UA)|UA2022GiantOptions|14"
+			]
+		},
+		{
+			"name": "Path of the Giant",
+			"shortName": "Giant",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"page": 1,
+			"spellcastingAbility": "wis",
+			"additionalSpells": [
+				{
+					"innate": {
+						"3": [
+							"druidcraft#c"
+						]
+					}
+				},
+				{
+					"innate": {
+						"3": [
+							"thaumaturgy#c"
+						]
+					}
+				}
+			],
+			"subclassFeatures": [
+				"Path of the Giant|Barbarian||Giant|BGG|3",
+				"Elemental Cleaver|Barbarian||Giant|BGG|6",
+				"Mighty Impel|Barbarian||Giant|BGG|10",
+				"Demiurgic Colossus|Barbarian||Giant|BGG|14"
 			]
 		}
 	],
@@ -1260,6 +1308,114 @@
 		}
 	],
 	"subclassFeature": [
+		{
+			"name": "Giant Power",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Giant",
+			"subclassSource": "BGG",
+			"level": 3,
+			"entries": [
+				"{@i 3rd-Level Path of the Giant Feature}",
+				"When you choose this path, you learn to speak, read, and write Giant or one other language of your choice if you already know Giant. Additionally, you learn a cantrip of your choice: either {@spell druidcraft} or {@spell thaumaturgy}. Wisdom is your spellcasting ability for this spell."
+			]
+		},
+		{
+			"name": "Giant's Havoc",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Giant",
+			"subclassSource": "BGG",
+			"level": 3,
+			"entries": [
+				"{@i 3rd-Level Path of the Giant Feature}",
+				"Your rages pull strength from the primal might of giants, transforming you into a hulking force of destruction. While raging, you gain the following benefits:",
+				{
+					"type": "list",
+					"style": "list-hang-notitle",
+					"items": [
+						{
+							"type": "item",
+							"name": "Crushing Throw",
+							"entry": "When you make a successful ranged attack with a thrown weapon using Strength, you can add your Rage Damage bonus to the attack's damage roll."
+						},
+						{
+							"type": "item",
+							"name": "Giant Stature",
+							"entry": "Your reach increases by 5 feet, and if you are smaller than Large, you become Large, along with anything you are wearing. If there isn't enough room for you to increase your size, your size doesn't change."
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Path of the Giant",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Giant",
+			"subclassSource": "BGG",
+			"level": 3,
+			"entries": [
+				"Barbarians who walk the Path of the Giant draw strength from the same primal forces as giants. As they rage, these barbarians surge with elemental power and grow in size, taking on forms that evoke the glory of giants. Some barbarians look like oversized versions of themselves, perhaps with a hint of elemental energy flaring in their eyes and around their weapons. Others transform more dramatically, taking on the appearance of an actual giant or a form similar to an Elemental, wreathed in fire, frost, or lightning.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Giant Power|Barbarian||Giant|BGG|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Giant's Havoc|Barbarian||Giant|BGG|3"
+				}
+			]
+		},
+		{
+			"name": "Elemental Cleaver",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Giant",
+			"subclassSource": "BGG",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"{@i 6th-Level Path of the Giant Feature}",
+				"Your bond with the elemental might of giants grows, and you learn to infuse weapons with primordial energy.",
+				"When you enter your rage, you can choose one weapon that you are holding and infuse it with one of the following damage types: acid, cold, fire, thunder, or lightning. While you wield the infused weapon during your rage, the weapon's damage type changes to the chosen type, it deals an extra {@dice 1d6} damage of the chosen type when it hits, and it gains the thrown property, with a normal range of 20 feet and a long range of 60 feet. If you throw the weapon, it reappears in your hand the instant after it hits or misses a target. The infused weapon's benefits are suppressed while a creature other than you wields it.",
+				"While raging and holding the infused weapon, you can use a bonus action to change the infused weapon's current damage type to another one from the damage type options above."
+			]
+		},
+		{
+			"name": "Mighty Impel",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Giant",
+			"subclassSource": "BGG",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"{@i 10th-Level Path of the Giant Feature}",
+				"Your connection to giant strength allows you to hurl both allies and enemies on the battlefield. As a bonus action while raging, you can choose one Medium or smaller creature within your reach and move it to an unoccupied space you can see within 30 feet of yourself. An unwilling creature must succeed on a Strength saving throw (DC equals 8 + your proficiency bonus + your Strength modifier) to avoid the effect.",
+				"If, at the end of this movement, the thrown creature isn't on a surface or liquid that can support it, the creature falls, taking damage as normal and landing {@condition prone}."
+			]
+		},
+		{
+			"name": "Demiurgic Colossus",
+			"source": "BGG",
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Giant",
+			"subclassSource": "BGG",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"{@i 14th-Level Path of the Giant Feature}",
+				"The primordial power of your rage intensifies. When you rage, your reach increases by 10 feet, your size can increase to Large or Huge (your choice), and you can use your Mighty Impel to move creatures that are Large or smaller.",
+				"In addition, the extra damage dealt by your Elemental Cleaver feature increases to {@dice 2d6}."
+			]
+		},
 		{
 			"name": "Path of the Berserker",
 			"source": "PHB",
@@ -2023,6 +2179,137 @@
 			"entries": [
 				"{@i 14th-level Path of Wild Magic feature}",
 				"Whenever you roll on the Wild Magic table, you can roll the die twice and choose which of the two effects to unleash. If you roll the same number on both dice, you can ignore the number and choose any effect on the table."
+			]
+		},
+		{
+			"name": "Path of the Juggernaut",
+			"source": "TDCSR",
+			"page": 165,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"entries": [
+				"Barbarians who follow the Path of the Juggernaut stand so resolutely that none can deter them, and they swing their weapons with such force that all who stand against them are flung aside. In might and in spirit, juggernauts are immovable object and unstoppable force all at once.",
+				"Juggernaut barbarians can be found all over Tal'Dorei, and are common among the goliath warriors of the {@book Rivermaw herd|TDCSR|3|Rivermaw Herd} that wanders the {@book Dividing Plains|TDCSR|3|Dividing Plains}. Some {@book dwarves|TDCSR|4|dwarves} and humanoid survivalists of the {@book Cliffkeep Mountains|TDCSR|3|Cliffkeep Mountains} adopt this fighting style as an extension of their rugged determinism. And a number of stalwart juggernauts hail from the jungles of the {@book Rifenmist Peninsula|TDCSR|3|Rifenmist Peninsula}, having cast off the oppressive yoke of the {@book Iron Authority|TDCSR|3|Tz'Arrm, Helm of the Emperor}.",
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Thunderous Blows|Barbarian|PHB|Juggernaut|TDCSR|3"
+				},
+				{
+					"type": "refSubclassFeature",
+					"subclassFeature": "Spirit of the Mountain|Barbarian|PHB|Juggernaut|TDCSR|3"
+				}
+			]
+		},
+		{
+			"name": "Spirit of the Mountain",
+			"source": "TDCSR",
+			"page": 166,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"At 3rd level, you harness your fury to anchor your feet to the ground, becoming a bulwark of strength. While you are raging, you can't be knocked {@condition prone} or moved along the ground against your will."
+			]
+		},
+		{
+			"name": "Thunderous Blows",
+			"source": "TDCSR",
+			"page": 165,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 3,
+			"header": 1,
+			"entries": [
+				"Starting when you choose this path at 3rd level, your rage instills you with the strength to shove and smash your way through your foes, making any battlefield your domain. When you hit a creature with a melee attack while you're raging, you can push that creature up to 5 feet away from you in a direction of your choice. A creature that is Huge or larger makes a Strength {@quickref saving throws|PHB|2|1|saving throw} with a DC equal to 8 + your proficiency bonus + your Strength modifier. On a success, the creature is not pushed.",
+				{
+					"type": "inset",
+					"name": "Rules Tip: Forced Movement",
+					"page": 166,
+					"entries": [
+						"Usually when one creature moves out of a hostile creature's reach, the hostile creature can use its reaction to make an {@action opportunity attack}. However, forced movement\u2014such as being pushed by a Path of the Juggernaut barbarian's {@subclassFeature Thunderous Blows|Barbarian|PHB|Juggernaut|TDCSR|3} feature\u2014doesn't provoke {@action opportunity attack|PHB|opportunity attacks}.",
+						"Likewise, a juggernaut barbarian's {@subclassFeature Hurricane Strike|Barbarian|PHB|Juggernaut|TDCSR|10} feature allows an ally to make a melee weapon attack as a reaction only if the foe ends its forced movement within 5 feet of the ally. If a foe is pushed through other spaces within 5 feet of your allies, those allies can't make normal {@action opportunity attack|PHB|opportunity attacks} against the foe."
+					]
+				}
+			]
+		},
+		{
+			"name": "Demolishing Might",
+			"source": "TDCSR",
+			"page": 166,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Starting at 6th level, your melee weapon attacks deal an extra {@damage 1d8} damage to constructs, and deal double damage to objects and structures."
+			]
+		},
+		{
+			"name": "Resolute Stance",
+			"source": "TDCSR",
+			"page": 166,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 6,
+			"header": 2,
+			"entries": [
+				"Also at 6th level, you can temporarily refocus your combat ability to make yourself a bulwark of defense. At the start of your turn (no action required), you can assume a defensive stance that lasts until the start of your next turn. While in this stance, you can't be {@condition grappled}, attack rolls against you have {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}, and your weapon attacks are made with {@quickref Advantage and Disadvantage|PHB|2|0|disadvantage}."
+			]
+		},
+		{
+			"name": "Hurricane Strike",
+			"source": "TDCSR",
+			"page": 166,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, your blows can hurl foes through the air and into the attacks of your allies. As a reaction when you push a creature at least 5 feet, you can then leap into an unoccupied space next to the creature. If you do so, the creature must succeed on a Strength {@quickref saving throws|PHB|2|1|saving throw} with a DC equal to 8 + your proficiency bonus + your Strength modifier or be knocked {@condition prone}. This leap costs no movement and does not provoke {@action opportunity attack|PHB|opportunity attacks}.",
+				"Additionally, whenever you push a creature into a space within 5 feet of one of your allies, the ally can use its reaction to make a melee weapon attack against that creature."
+			]
+		},
+		{
+			"name": "Thunderous Blows (10th Level)",
+			"source": "TDCSR",
+			"page": 165,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 10,
+			"header": 2,
+			"entries": [
+				"Starting at 10th level, you can push a creature up to 10 feet when you hit it with a melee attack while you're raging."
+			]
+		},
+		{
+			"name": "Unstoppable",
+			"source": "TDCSR",
+			"page": 166,
+			"className": "Barbarian",
+			"classSource": "PHB",
+			"subclassShortName": "Juggernaut",
+			"subclassSource": "TDCSR",
+			"level": 14,
+			"header": 2,
+			"entries": [
+				"At 14th level, your fury in battle makes you unstoppable. While you're raging, your speed cannot be reduced, and you are immune to the {@condition frightened}, {@condition paralyzed}, {@condition prone}, and {@condition stunned} conditions.",
+				"If you are {@condition frightened}, {@condition paralyzed}, or {@condition stunned}, you can still use a bonus action to enter a rage (even if you can't otherwise take actions). You aren't affected by any of these conditions while you're raging."
 			]
 		},
 		{

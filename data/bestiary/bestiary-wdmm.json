@@ -210,6 +210,9 @@
 			"conditionInflict": [
 				"charmed"
 			],
+			"savingThrowForced": [
+				"charisma"
+			],
 			"hasToken": true
 		},
 		{
@@ -315,6 +318,9 @@
 			"miscTags": [
 				"AOE",
 				"MW"
+			],
+			"savingThrowForced": [
+				"dexterity"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -476,6 +482,12 @@
 				"S",
 				"T",
 				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -698,6 +710,11 @@
 				"OTH",
 				"U"
 			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -787,7 +804,6 @@
 			],
 			"passive": 9,
 			"immune": [
-				"fire",
 				"poison",
 				"psychic",
 				{
@@ -866,6 +882,9 @@
 				"MW",
 				"RCH"
 			],
+			"savingThrowForced": [
+				"constitution"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -896,6 +915,9 @@
 				"name": "Captain N'ghathrod",
 				"source": "WDMM"
 			},
+			"savingThrowForcedLegendary": [
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -957,6 +979,9 @@
 			"conditionInflict": [
 				"paralyzed",
 				"poisoned"
+			],
+			"savingThrowForced": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -1118,6 +1143,11 @@
 				"Y"
 			],
 			"miscTags": [],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -1131,7 +1161,7 @@
 				"name": "Scout",
 				"source": "MM",
 				"_trait": {
-					"name": "Mountain Dwarf",
+					"name": "Shield Dwarf",
 					"source": "PHB"
 				},
 				"_mod": {
@@ -1199,6 +1229,12 @@
 						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d8 + 1}) slashing damage."
 					]
 				}
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"miscTags": [
+				"MLW"
 			],
 			"hasToken": true
 		},
@@ -1358,6 +1394,10 @@
 					},
 					"ability": "cha"
 				}
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -1588,6 +1628,12 @@
 				"U"
 			],
 			"damageTagsLegendary": [],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
 			"hasToken": true
 		},
 		{
@@ -1623,6 +1669,9 @@
 			"miscTags": [
 				"MW",
 				"RCH"
+			],
+			"savingThrowForcedLegendary": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -1799,6 +1848,9 @@
 				"E",
 				"GI"
 			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
 			"hasToken": true
 		},
 		{
@@ -1924,6 +1976,11 @@
 			"languageTags": [
 				"D",
 				"U"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -2253,6 +2310,16 @@
 				"stunned",
 				"unconscious"
 			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -2559,6 +2626,9 @@
 			"spellcastingTags": [
 				"I"
 			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
 			"hasToken": true
 		},
 		{
@@ -2794,6 +2864,11 @@
 			"spellcastingTags": [
 				"CC"
 			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"wisdom"
+			],
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -2970,6 +3045,65 @@
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
+		},
+		{
+			"name": "Left Hand of Manshoon",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "WDMM",
+			"page": 119,
+			"_copy": {
+				"name": "Archmage",
+				"source": "MM",
+				"_mod": {
+					"*": {
+						"mode": "replaceTxt",
+						"replace": "archmage",
+						"with": "hand",
+						"flags": "i"
+					},
+					"_": {
+						"mode": "replaceSpells",
+						"spells": {
+							"4": [
+								{
+									"replace": "{@spell banishment}",
+									"with": "{@spell blight}"
+								}
+							]
+						}
+					}
+				}
+			},
+			"size": [
+				"T"
+			],
+			"type": {
+				"type": "undead"
+			},
+			"alignment": [
+				"U"
+			],
+			"hp": {
+				"average": 63,
+				"formula": "18d4 + 18"
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"senses": [
+				"blindsight 60 ft. (blind beyond this radius)"
+			],
+			"conditionImmune": [
+				"blinded",
+				"deafened"
+			],
+			"hasToken": true
 		},
 		{
 			"name": "Living Unseen Servant",
@@ -3522,6 +3656,9 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"longsword|phb"
+			],
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -3556,8 +3693,17 @@
 				"CW"
 			],
 			"miscTags": [
+				"MLW",
 				"MW",
 				"RCH"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -3989,6 +4135,10 @@
 			"conditionInflict": [
 				"frightened",
 				"paralyzed"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluff": true
@@ -4453,6 +4603,10 @@
 				"MW",
 				"RCH"
 			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
 			"hasToken": true
 		},
 		{
@@ -4725,7 +4879,7 @@
 				"name": "Champion",
 				"source": "VGM",
 				"_trait": {
-					"name": "Mountain Dwarf",
+					"name": "Shield Dwarf",
 					"source": "PHB"
 				},
 				"_mod": {
@@ -4902,6 +5056,9 @@
 				"L",
 				"O"
 			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			],
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -5023,6 +5180,12 @@
 			],
 			"spellcastingTags": [
 				"CW"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"constitution",
+				"dexterity",
+				"wisdom"
 			],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -5356,6 +5519,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"scimitar|phb",
+				"shortbow|phb"
+			],
 			"traitTags": [
 				"Keen Senses",
 				"Shapechanger",
@@ -5376,9 +5543,13 @@
 				"S"
 			],
 			"miscTags": [
+				"MLW",
 				"MW",
 				"RNG",
 				"RW"
+			],
+			"savingThrowForced": [
+				"constitution"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -5717,6 +5888,9 @@
 				"name": "Vampire",
 				"source": "MM"
 			},
+			"attachedItems": [
+				"dwarven thrower|dmg"
+			],
 			"traitTags": [
 				"Legendary Resistances",
 				"Regeneration",
@@ -5746,6 +5920,9 @@
 			],
 			"conditionInflict": [
 				"charmed"
+			],
+			"savingThrowForced": [
+				"wisdom"
 			],
 			"hasToken": true
 		},

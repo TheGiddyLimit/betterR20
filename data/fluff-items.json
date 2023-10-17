@@ -6,6 +6,67 @@
 	},
 	"itemFluff": [
 		{
+			"name": "+2 Ring of Protection",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Ring of Protection",
+				"source": "DMG"
+			}
+		},
+		{
+			"name": "Adze of Annam",
+			"source": "BGG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/BGG/Adze of Annam.webp"
+					},
+					"credit": "Isabel Gibney"
+				}
+			]
+		},
+		{
+			"name": "Agony",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Agony.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A spiked three-headed flail with four meat hooks attached by chains."
+				}
+			]
+		},
+		{
+			"name": "Agony (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Agony",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Agony (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Agony",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Agony (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Agony",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Akmon, Hammer of Purphoros",
 			"source": "MOT",
 			"images": [
@@ -14,7 +75,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Akmon, Hammer of Purphoros.jpg"
-					}
+					},
+					"credit": "Yeong-Hao Han"
 				}
 			]
 		},
@@ -66,7 +128,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Amulet of the Drunkard.png"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -105,7 +168,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/DMG/Apparatus of Kwalish.jpg"
-					}
+					},
+					"credit": "Aaron Hübrich"
 				}
 			]
 		},
@@ -149,6 +213,45 @@
 			]
 		},
 		{
+			"name": "Armor of the Valiant Soul",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/ArmoroftheValiantSoul.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "Black dragon-scale armor with a red sash, gold shoulder plates, and an emerald breastplate and collar with draconic markings."
+				}
+			]
+		},
+		{
+			"name": "Armor of the Valiant Soul (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Armor of the Valiant Soul",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Armor of the Valiant Soul (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Armor of the Valiant Soul",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Armor of the Valiant Soul (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Armor of the Valiant Soul",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Arrow of Slaying (*)",
 			"source": "DMG",
 			"images": [
@@ -170,7 +273,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Atlas of Endless Horizons.png"
-					}
+					},
+					"credit": "Andrew Mar"
 				}
 			]
 		},
@@ -196,7 +300,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Azorius Guild Signet.jpg"
-					}
+					},
+					"credit": "Raoul Vitale"
 				}
 			]
 		},
@@ -209,7 +314,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Azorius Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -222,7 +328,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Baba Yaga's Mortar and Pestle.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -370,6 +477,20 @@
 			]
 		},
 		{
+			"name": "Bigby's Beneficent Bracelet",
+			"source": "BGG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/BGG/Bigbys Beneficent Bracelet.webp"
+					},
+					"credit": "Isabel Gibney"
+				}
+			]
+		},
+		{
 			"name": "Blood Spear",
 			"source": "CoS",
 			"images": [
@@ -477,7 +598,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Boros Guild Signet.jpg"
-					}
+					},
+					"credit": "Mike Sass"
 				}
 			]
 		},
@@ -490,7 +612,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Boros Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -581,9 +704,49 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Butcher's Bib.png"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
+		},
+		{
+			"name": "Cabal's Ruin",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/CabalsRuin.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A mystical dark blue cloak with metallic, flowing embroidered designs."
+				}
+			]
+		},
+		{
+			"name": "Cabal's Ruin (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Cabal's Ruin",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Cabal's Ruin (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Cabal's Ruin",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Cabal's Ruin (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Cabal's Ruin",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Candle of Invocation",
@@ -619,8 +782,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/cartographers-map-case.jpg"
-					}
+						"path": "items/AI/cartographers-map-case.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -633,7 +797,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Cauldron of Rebirth.png"
-					}
+					},
+					"credit": "Zuzanna Wuzyk"
 				}
 			]
 		},
@@ -662,6 +827,45 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Circlet of Barbed Vision",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/CircletofBarbedVision.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A mystical dark blue cloak with metallic, flowing embroidered designs."
+				}
+			]
+		},
+		{
+			"name": "Circlet of Barbed Vision (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Circlet of Barbed Vision",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Circlet of Barbed Vision (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Circlet of Barbed Vision",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Circlet of Barbed Vision (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Circlet of Barbed Vision",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Circlet of Blasting",
@@ -762,8 +966,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/coin-of-decisionry.jpg"
-					}
+						"path": "items/AI/coin-of-decisionry.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -779,6 +984,45 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Condemner",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Condemner.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A black, shadowed crossbow with intricate markings and an illuminated green drawstring and patterns."
+				}
+			]
+		},
+		{
+			"name": "Condemner (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Condemner",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Condemner (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Condemner",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Condemner (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Condemner",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Constantori's Portrait",
@@ -815,7 +1059,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Crook of Rao.png"
-					}
+					},
+					"credit": "Robson Michel"
 				}
 			]
 		},
@@ -828,7 +1073,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Crystalline Chronicle.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -872,6 +1118,21 @@
 			]
 		},
 		{
+			"name": "Dagger of Denial",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/DaggerofDenial.webp"
+					},
+					"credit": "{@link Stanislav Dikolenko|https://artstation.com/stsdklnk}",
+					"altText": "The Dagger of Denial: a long, thin pointed silver dagger with an ivory coloured hilt crossing in front of an ivory sheath with a silver ends."
+				}
+			]
+		},
+		{
 			"name": "Dagger of Venom",
 			"source": "DMG",
 			"images": [
@@ -906,7 +1167,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Danoth's Visor.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -946,6 +1208,45 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Deathwalker's Ward",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/DeathwalkersWard.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "Black leather armor with intricate emrboidery, the shoulders consisting of black raven feathers."
+				}
+			]
+		},
+		{
+			"name": "Deathwalker's Ward (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Deathwalker's Ward",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Deathwalker's Ward (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Deathwalker's Ward",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Deathwalker's Ward (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Deathwalker's Ward",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Decanter of Endless Water",
@@ -995,7 +1296,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Dekella, Bident of Thassa.jpg"
-					}
+					},
+					"credit": "Yeong-Hao Han"
 				}
 			]
 		},
@@ -1021,7 +1323,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Demonomicon of Iggwilv.png"
-					}
+					},
+					"credit": "David Sladek"
 				}
 			]
 		},
@@ -1034,7 +1337,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Devotee's Censer.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -1060,7 +1364,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Dimir Guild Signet.jpg"
-					}
+					},
+					"credit": "Raoul Vitale"
 				}
 			]
 		},
@@ -1073,7 +1378,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Dimir Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -1085,8 +1391,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/documancy-satchel.jpg"
-					}
+						"path": "items/AI/documancy-satchel.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -1220,7 +1527,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Duskcrusher.png"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -1363,7 +1671,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Ephixis, Bow of Nylea.jpg"
-					}
+					},
+					"credit": "Yeong-Hao Han"
 				}
 			]
 		},
@@ -1428,7 +1737,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Far Realm Shard.png"
-					}
+					},
+					"credit": "Christopher Burdett"
 				}
 			]
 		},
@@ -1446,6 +1756,45 @@
 			]
 		},
 		{
+			"name": "Fenthras",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Fenthras.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A longbow made of wood and dark green vines wrapping around it, with intricate elvish designs."
+				}
+			]
+		},
+		{
+			"name": "Fenthras (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Fenthras",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Fenthras (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Fenthras",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Fenthras (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Fenthras",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Feywild Shard",
 			"source": "TCE",
 			"images": [
@@ -1454,7 +1803,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Feywild Shard.png"
-					}
+					},
+					"credit": "Christopher Burdett"
 				}
 			]
 		},
@@ -1493,7 +1843,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/AAG/Fish Suit.webp"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -1511,6 +1862,21 @@
 			]
 		},
 		{
+			"name": "Flamefriend Lantern",
+			"source": "TDCSR",
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"He was given to me by your father, little one. He kept us warm while your father and I trekked through the Dreemoth Ravine and the ruins of Draconia twenty years ago. Such vicious blizzards, the likes of which are only topped by the Neverfields\u2014or Eiselcross, so I've heard. You should have seen us, marching through the snow, dozens of Ashari cloaked in flame, melting trenches in the rime as they advanced, and me, my furs pulled around my nose, blinking through the snow, holding tight to this little one.",
+						"When your father returned to Pyrah, I feared I'd never see our little flamefriend again, but.... Here, hold him, hear his little elemental heart fluttering. Think of your father when you feel that warmth, protecting you, watching over you. No matter where in the world you are, whether you're near Pyrah or far, he'll be a bit of family, and a bit of home."
+					],
+					"by": "Talus Naj",
+					"from": "to his goddaughter, Ev of Pyrah"
+				}
+			]
+		},
+		{
 			"name": "Flying Chariot",
 			"source": "MOT",
 			"images": [
@@ -1519,7 +1885,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Flying Chariot.png"
-					}
+					},
+					"credit": "Ryan Alexander Lee"
 				}
 			]
 		},
@@ -1558,7 +1925,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Fulminating Treatise.png"
-					}
+					},
+					"credit": "Kieran Yanner"
 				}
 			]
 		},
@@ -1675,7 +2043,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Golgari Guild Signet.jpg"
-					}
+					},
+					"credit": "Greg Hildebrandt"
 				}
 			]
 		},
@@ -1688,7 +2057,23 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Golgari Keyrune.png"
-					}
+					},
+					"credit": "Daniel Ljunggren"
+				}
+			]
+		},
+		{
+			"name": "Graz'tchar, the Decadent End",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Graz'tchar.webp"
+					},
+					"credit": "{@link Clara Daly|https://tinyraptors.com/}",
+					"altText": "Graz'tchar, The Decadent End: A silver greatsword outlined in gold and embedded with rubies. It has a cross-shaped golden hilt with a silver and ruby pommel."
 				}
 			]
 		},
@@ -1714,7 +2099,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Grimoire Infinitus.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -1751,7 +2137,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Grovelthrash.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -1788,7 +2175,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Gruul Guild Signet.jpg"
-					}
+					},
+					"credit": "Efrem Palacios"
 				}
 			]
 		},
@@ -1801,7 +2189,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Gruul Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -1949,6 +2338,20 @@
 			]
 		},
 		{
+			"name": "Helm of Perfect Potential",
+			"source": "BGG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/BGG/Helm of Perfect Potential.webp"
+					},
+					"credit": "Isabel Gibney"
+				}
+			]
+		},
+		{
 			"name": "Helm of Telepathy",
 			"source": "DMG",
 			"images": [
@@ -2025,6 +2428,69 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Honor's Last Stand",
+			"source": "TDCSR",
+			"entries": [
+				{
+					"type": "inset",
+					"name": "Rules Tip: Pushing and Shoving",
+					"page": 206,
+					"entries": [
+						"Certain character options, such as the Path of the Juggernaut barbarian in {@book chapter 4|TDCSR|3}, grant the ability to push other creatures around the battlefield with your attacks. But this is just one way to push a creature. If you want to move a creature without hurting it, there's a {@action shove|PHB|special shove attack} available to all characters. The {@book Vestige of Divergence|TDCSR|5|Vestiges of Divergence} Honor's Last Stand encourages you to shove your foes away while you valiantly stand your ground.",
+						{
+							"type": "entries",
+							"name": "Shoving a Creature",
+							"page": 206,
+							"entries": [
+								{
+									"type": "statblock",
+									"name": "Shove",
+									"source": "PHB",
+									"page": 206,
+									"tag": "action"
+								}
+							]
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/HonorsLastStand.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A massive silver shield with the platinum dragon engraved on the front."
+				}
+			]
+		},
+		{
+			"name": "Honor's Last Stand (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Honor's Last Stand",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Honor's Last Stand (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Honor's Last Stand",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Honor's Last Stand (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Honor's Last Stand",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Horn of Beckoning Death",
@@ -2120,7 +2586,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Illusionist's Bracers.jpg"
-					}
+					},
+					"credit": "Svetlin Velinov"
 				}
 			]
 		},
@@ -2146,7 +2613,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Infiltrator's Key.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -2313,7 +2781,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Izzet Guild Signet.jpg"
-					}
+					},
+					"credit": "Raoul Vitale"
 				}
 			]
 		},
@@ -2326,7 +2795,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Izzet Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -2415,9 +2885,49 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Khrusor, Spear of Heliod.jpg"
-					}
+					},
+					"credit": "Yeong-Hao Han"
 				}
 			]
+		},
+		{
+			"name": "Kiss of the Changebringer",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/KissoftheChangebringer.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "An intricate silver necklace with emerald gems."
+				}
+			]
+		},
+		{
+			"name": "Kiss of the Changebringer (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Kiss of the Changebringer",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Kiss of the Changebringer (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Kiss of the Changebringer",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Kiss of the Changebringer (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Kiss of the Changebringer",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Lantern of Revealing",
@@ -2441,7 +2951,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Lash of Shadows.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -2490,8 +3001,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/living-loot-satchel.jpg"
-					}
+						"path": "items/AI/living-loot-satchel.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -2517,7 +3029,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Luba's Tarokka of Souls.png"
-					}
+					},
+					"credit": "Claudio Pozas"
 				}
 			]
 		},
@@ -2535,6 +3048,19 @@
 			]
 		},
 		{
+			"name": "Luminous War Pick",
+			"source": "PaBTSO",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/PaBTSO/Luminous War Pick.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Luxon Beacon",
 			"source": "EGW",
 			"images": [
@@ -2543,7 +3069,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Luxon Beacon.png"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -2595,7 +3122,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Mace of the Black Crown.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -2762,7 +3290,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Mastix, Whip of Erebos.jpg"
-					}
+					},
+					"credit": "Yeong-Hao Han"
 				}
 			]
 		},
@@ -2787,7 +3316,7 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/CRCotN/Medal of the Maze.jpg"
+						"path": "items/CRCotN/Medal of the Maze.webp"
 					}
 				}
 			]
@@ -2814,7 +3343,105 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Mighty Servant of Leuk-o.png"
+					},
+					"credit": "David Sladek"
+				}
+			]
+		},
+		{
+			"name": "Mind Crystal",
+			"source": "PaBTSO",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/PaBTSO/Mind Crystal.webp"
 					}
+				}
+			]
+		},
+		{
+			"name": "Mind Crystal (Careful)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mind Crystal (Distant)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mind Crystal (Empowered)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mind Crystal (Extended)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mind Crystal (Heightened)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mind Crystal (Quickened)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mind Crystal (Subtle)",
+			"source": "PaBTSO",
+			"_copy": {
+				"name": "Mind Crystal",
+				"source": "PaBTSO"
+			}
+		},
+		{
+			"name": "Mindguard Crown",
+			"source": "PaBTSO",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/PaBTSO/Mindguard Crown.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Mirror of Infinite Transpondence",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/MirrorTranspondence.webp"
+					},
+					"credit": "{@link Clara Daly|https://tinyraptors.com/}",
+					"altText": "Mirror of Infinite Transpondence: a silver, handheld mirror with intricate designs all around. A face is carved at the top of the handle, and an eye at the top of the mirror. Inside the mirror is a picture of a stone tower with a wind-torn cloth peak."
 				}
 			]
 		},
@@ -2840,7 +3467,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Mizzium Apparatus.png"
-					}
+					},
+					"credit": "Terese Nielsen"
 				}
 			]
 		},
@@ -2853,7 +3481,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Moodmark Paint.png"
-					}
+					},
+					"credit": "Scott Murphy"
 				}
 			]
 		},
@@ -2869,6 +3498,74 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Mudslick Tower",
+			"source": "PaBTSO",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/PaBTSO/Mudslick Tower.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Mythcarver",
+			"source": "TDCSR",
+			"entries": [
+				{
+					"type": "insetReadaloud",
+					"page": 207,
+					"entries": [
+						{
+							"type": "quote",
+							"entries": [
+								"Though the name of the champion who wielded Mythcarver has been lost, legend says that the songs she sung in her beautiful contralto made her friends rejoice and her enemies weep with fear. Mythcarver was forged in the flying city of Zemniaz by a master arcanist and blacksmith along with the wielder herself, who wove song and spell into the blade with each fold of the metal."
+							],
+							"by": "High Curator Jorum Irrelios",
+							"from": "circa 547 P.D."
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Mythcarver.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "An elegant rapier with a swept hilt."
+				}
+			]
+		},
+		{
+			"name": "Mythcarver (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Mythcarver",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Mythcarver (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Mythcarver",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Mythcarver (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Mythcarver",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Narycrash",
@@ -2892,7 +3589,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Nature's Mantle.png"
-					}
+					},
+					"credit": "Brian Valeza"
 				}
 			]
 		},
@@ -2995,8 +3693,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/occultant-abacus.jpg"
-					}
+						"path": "items/AI/occultant-abacus.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -3061,7 +3760,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/AI/Orrery of the Wanderer.png"
-					}
+					},
+					"credit": "Nicholas Kay"
 				}
 			]
 		},
@@ -3074,7 +3774,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Orzhov Guild Signet.jpg"
-					}
+					},
+					"credit": "Martina Pilcerova"
 				}
 			]
 		},
@@ -3087,7 +3788,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Orzhov Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -3113,7 +3815,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Pariah's Shield.jpg"
-					}
+					},
+					"credit": "Doug Chaffee"
 				}
 			]
 		},
@@ -3126,7 +3829,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Peregrine Mask.png"
-					}
+					},
+					"credit": "Edward P. Beard, Jr."
 				}
 			]
 		},
@@ -3209,6 +3913,45 @@
 			]
 		},
 		{
+			"name": "Plate of the Dawnmartyr",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/PlateoftheDawnmartyr.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "Golden plate mail with black fabric wrapped around the waist. Throughout the armor are intricate designs. In center and upon the left shoulder pauldron is the symbol of the Dawnfather - a solitary sun with eight rays."
+				}
+			]
+		},
+		{
+			"name": "Plate of the Dawnmartyr (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Plate of the Dawnmartyr",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Plate of the Dawnmartyr (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Plate of the Dawnmartyr",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Plate of the Dawnmartyr (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Plate of the Dawnmartyr",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Platinum (pp)",
 			"source": "PHB",
 			"images": [
@@ -3248,6 +3991,52 @@
 			]
 		},
 		{
+			"name": "Prehistoric Figurine of Wondrous Power",
+			"source": "BGG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/BGG/Prehistoric Figurines of Wondrous Power.webp"
+					},
+					"credit": "Olga Drebas"
+				}
+			]
+		},
+		{
+			"name": "Prehistoric Figurine of Wondrous Power, Carnelian Triceratops",
+			"source": "BGG",
+			"_copy": {
+				"name": "Prehistoric Figurine of Wondrous Power",
+				"source": "BGG"
+			}
+		},
+		{
+			"name": "Prehistoric Figurine of Wondrous Power, Jasper Tyrannosaurus Rex",
+			"source": "BGG",
+			"_copy": {
+				"name": "Prehistoric Figurine of Wondrous Power",
+				"source": "BGG"
+			}
+		},
+		{
+			"name": "Prehistoric Figurine of Wondrous Power, Kyanite Pteranodon",
+			"source": "BGG",
+			"_copy": {
+				"name": "Prehistoric Figurine of Wondrous Power",
+				"source": "BGG"
+			}
+		},
+		{
+			"name": "Prehistoric Figurine of Wondrous Power, Pyrite Plesiosaurus",
+			"source": "BGG",
+			"_copy": {
+				"name": "Prehistoric Figurine of Wondrous Power",
+				"source": "BGG"
+			}
+		},
+		{
 			"name": "Prosthetic Limb",
 			"source": "TCE",
 			"images": [
@@ -3256,7 +4045,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Prosthetic Limb.png"
-					}
+					},
+					"credit": "Ben Wootten"
 				}
 			]
 		},
@@ -3274,6 +4064,45 @@
 			]
 		},
 		{
+			"name": "Pyremaul",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Pyremaul.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A maul embedded with an orange gemstone emitting flames from the head of the weapon."
+				}
+			]
+		},
+		{
+			"name": "Pyremaul (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Pyremaul",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Pyremaul (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Pyremaul",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Pyremaul (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Pyremaul",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Pyroconverger",
 			"source": "GGR",
 			"images": [
@@ -3282,7 +4111,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Pyroconverger.jpg"
-					}
+					},
+					"credit": "Jack Wang"
 				}
 			]
 		},
@@ -3295,7 +4125,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/MOT/Pyxis of Pandemonium.jpg"
-					}
+					},
+					"credit": "David Palumbo"
 				}
 			]
 		},
@@ -3334,7 +4165,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Rakdos Guild Signet.jpg"
-					}
+					},
+					"credit": "Martina Pilcerova"
 				}
 			]
 		},
@@ -3347,7 +4179,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Rakdos Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -3360,7 +4193,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Rakdos Riteknife.jpg"
-					}
+					},
+					"credit": "Jim Nelson"
 				}
 			]
 		},
@@ -3490,7 +4324,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Ring of Obscuring.png"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -3503,7 +4338,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/DMG/Ring of Protection.png"
-					}
+					},
+					"credit": "Conceptopolis"
 				}
 			]
 		},
@@ -3594,6 +4430,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/DMG/Ring of Telekinesis.jpg"
+					}
+				}
+			]
+		},
+		{
+			"name": "Ring of the Orator",
+			"source": "PaBTSO",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/PaBTSO/Ring of the Orator.webp"
 					}
 				}
 			]
@@ -3828,7 +4677,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Ruin's Wake.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},
@@ -3891,7 +4741,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Selesnya Guild Signet.jpg"
-					}
+					},
+					"credit": "Raoul Vitale"
 				}
 			]
 		},
@@ -3904,7 +4755,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Selesnya Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -3916,8 +4768,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/sending-stone.jpg"
-					}
+						"path": "items/AI/sending-stone.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -3943,7 +4796,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Shadowfell Shard.png"
-					}
+					},
+					"credit": "Christopher Burdett"
 				}
 			]
 		},
@@ -4074,7 +4928,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Simic Guild Signet.jpg"
-					}
+					},
+					"credit": "Mike Sass"
 				}
 			]
 		},
@@ -4087,7 +4942,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Simic Keyrune.jpg"
-					}
+					},
+					"credit": "Daniel Ljunggren"
 				}
 			]
 		},
@@ -4100,7 +4956,48 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Skyblinder Staff.png"
-					}
+					},
+					"credit": "Mark Winters"
+				}
+			]
+		},
+		{
+			"name": "Skysail",
+			"source": "TDCSR",
+			"entries": [
+				{
+					"type": "quote",
+					"entries": [
+						"Oh! Oh gods, are you seriously asking me to explain it? Geez, sure, I'll try, but you really gotta feel it, you know? The sensation of the wind whipping past you as you shoot up into the sky, then\u2014whoa!\u2014your stomach just drops out from you, and it's like you left your heart behind as you start to fall. It's like nothing's holding onto you, then\u2014whoosh!\u2014the wind catches you, and swings you back into the sky."
+					],
+					"by": "Air Ashari druid initiate Kelthai",
+					"from": "on skysailing"
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Skysail.webp"
+					},
+					"credit": "{@link Claudia Ianniciello|https://artstation.com/claudiasg}",
+					"altText": "An Ashari woman with long orange hair flies on her white-winged skysail through a rocky canyon. She wears green clothing."
+				}
+			]
+		},
+		{
+			"name": "Skyship",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "book/TDCSR/Chapter3-Skyship.webp"
+					},
+					"credit": "{@link Svetoslav Petrov|https://artstation.com/svetoslavpetrov}",
+					"altText": "A skyship, its white sails entirely unfurled, flies through a dusky, red sky. The ship emanates a glowing, blue arcane magic below it, keeping it aloft."
 				}
 			]
 		},
@@ -4165,7 +5062,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Spell Bottle.png"
-					}
+					},
+					"credit": "Olga Drebas"
 				}
 			]
 		},
@@ -4199,9 +5097,65 @@
 						"type": "internal",
 						"path": "items/AAG/Spelljamming Helms.webp"
 					},
-					"title": "Three Examples of a Spelljamming Helm"
+					"title": "Three Examples of a Spelljamming Helm",
+					"credit": "Robson Michel"
 				}
 			]
+		},
+		{
+			"name": "Spire of Conflux",
+			"source": "TDCSR",
+			"entries": [
+				{
+					"type": "insetReadaloud",
+					"page": 209,
+					"entries": [
+						{
+							"type": "quote",
+							"entries": [
+								"Records kept by the Birthheart temple in Vasselheim say that the Spire of Conflux was created when the Wildmother breathed on a young beech tree. The sapling transformed into a curving staff and the Wildmother's breath crystallized into the glowing jewel that hovers in its center. The bearer of this mythic staff can command the elements as if they were one with the enduring, yet ever-changing, landscape of Exandria itself..."
+							],
+							"by": "High Curator Jorum Irrelios",
+							"from": "circa 547 P.D."
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/SpireofConflux.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A twisted staff made of wood and vines shaped like a sheperd's crook with a glowing blue crystal in the center of the crook."
+				}
+			]
+		},
+		{
+			"name": "Spire of Conflux (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Spire of Conflux",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Spire of Conflux (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Spire of Conflux",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Spire of Conflux (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Spire of Conflux",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Staff of Charming",
@@ -4360,6 +5314,61 @@
 			]
 		},
 		{
+			"name": "Star Razor",
+			"source": "TDCSR",
+			"entries": [
+				{
+					"type": "insetReadaloud",
+					"page": 210,
+					"entries": [
+						{
+							"type": "quote",
+							"entries": [
+								"Many weapons created by mortals during the Age of Arcanum were designed with hopes to surpass or even destroy the gods, but not so with Dwueth'var. That shining sword, bright with the light of the bold full moon and the enigmatic starlit night, was forged by acolytes of the Wildmother and the Moonweaver, united in their love of this fragile world and their determination to protect it."
+							],
+							"by": "High Curator Jorum Irrelios",
+							"from": "circa 547 P.D."
+						}
+					]
+				}
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/StarRazor.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A silver greatsword with a red hilt. Inset in the hilt is a green gemstone. Runes run down the center of the blade, where also runs silver-white lines of magic."
+				}
+			]
+		},
+		{
+			"name": "Star Razor (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Star Razor",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Star Razor (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Star Razor",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Star Razor (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Star Razor",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Steel",
 			"source": "WBtW",
 			"images": [
@@ -4446,7 +5455,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Sunforger.jpg"
-					}
+					},
+					"credit": "Darrell Riche"
 				}
 			]
 		},
@@ -4511,7 +5521,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/GGR/Sword of the Paruns.jpg"
-					}
+					},
+					"credit": "Greg Hildebrandt"
 				}
 			]
 		},
@@ -4589,7 +5600,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/TCE/Teeth of Dahlver-Nar.png"
-					}
+					},
+					"credit": "Crystal Sully"
 				}
 			]
 		},
@@ -4646,6 +5658,20 @@
 			]
 		},
 		{
+			"name": "Thunderbuss",
+			"source": "BGG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/BGG/Thunderbuss.webp"
+					},
+					"credit": "Isabel Gibney"
+				}
+			]
+		},
+		{
 			"name": "Tinderstrike",
 			"source": "PotA",
 			"images": [
@@ -4657,6 +5683,45 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Titanstone Knuckles",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/TitanstoneKnuckles.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A pair of solid black stone gauntlets with brass fixings, encircled with three stone rings per gauntlet, and they are engraved with orange glowing runes."
+				}
+			]
+		},
+		{
+			"name": "Titanstone Knuckles (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Titanstone Knuckles",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Titanstone Knuckles (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Titanstone Knuckles",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Titanstone Knuckles (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Titanstone Knuckles",
+				"source": "TDCSR"
+			}
 		},
 		{
 			"name": "Tome of Clear Thought",
@@ -4718,8 +5783,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/travel-alchemical-kit.jpg"
-					}
+						"path": "items/AI/travel-alchemical-kit.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -4745,21 +5811,24 @@
 					"href": {
 						"type": "internal",
 						"path": "items/AI/Trinket.png"
-					}
+					},
+					"credit": "Kris Straub"
 				},
 				{
 					"type": "image",
 					"href": {
 						"type": "internal",
 						"path": "items/AI/Trinket-2.png"
-					}
+					},
+					"credit": "Kris Straub"
 				},
 				{
 					"type": "image",
 					"href": {
 						"type": "internal",
 						"path": "items/AI/Trinket-3.png"
-					}
+					},
+					"credit": "Kris Straub"
 				}
 			]
 		},
@@ -4915,7 +5984,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/DMG/Wand of Magic Missiles.png"
-					}
+					},
+					"credit": "Conceptopolis"
 				}
 			]
 		},
@@ -5037,6 +6107,45 @@
 			]
 		},
 		{
+			"name": "Whisper",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/Whisper.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "A sleek, silver dagger with a black, slender hilt and two raven feathers tied onto the pummel."
+				}
+			]
+		},
+		{
+			"name": "Whisper (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Whisper",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Whisper (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Whisper",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Whisper (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Whisper",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Whisper Jar",
 			"source": "AI",
 			"images": [
@@ -5044,8 +6153,9 @@
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/AI/whisper-jar.jpg"
-					}
+						"path": "items/AI/whisper-jar.png"
+					},
+					"credit": "Chris Walton"
 				}
 			]
 		},
@@ -5084,7 +6194,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/DMG/Winged Boots.png"
-					}
+					},
+					"credit": "Conceptopolis"
 				}
 			]
 		},
@@ -5115,6 +6226,45 @@
 			]
 		},
 		{
+			"name": "Wraps of Dyamak",
+			"source": "TDCSR",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/TDCSR/WrapsofDyamak.webp"
+					},
+					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
+					"altText": "Thick blood-stained cloth bandages affixed to two forearms. The wraps emit a red glow."
+				}
+			]
+		},
+		{
+			"name": "Wraps of Dyamak (Awakened)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Wraps of Dyamak",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Wraps of Dyamak (Dormant)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Wraps of Dyamak",
+				"source": "TDCSR"
+			}
+		},
+		{
+			"name": "Wraps of Dyamak (Exalted)",
+			"source": "TDCSR",
+			"_copy": {
+				"name": "Wraps of Dyamak",
+				"source": "TDCSR"
+			}
+		},
+		{
 			"name": "Wreath of the Prism",
 			"source": "EGW",
 			"images": [
@@ -5123,7 +6273,8 @@
 					"href": {
 						"type": "internal",
 						"path": "items/EGW/Wreath of the Prism.png"
-					}
+					},
+					"credit": "Irina Nordsol"
 				}
 			]
 		},

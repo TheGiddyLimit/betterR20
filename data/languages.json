@@ -1,68 +1,4 @@
 {
-	"languageScript": [
-		{
-			"name": "Draconic",
-			"fonts": [
-				"fonts/languages/PHB/Draconic/Iokharic.otf",
-				"fonts/languages/PHB/Draconic/Iokharic Bold.otf",
-				"fonts/languages/PHB/Draconic/Iokharic Italic.otf",
-				"fonts/languages/PHB/Draconic/Iokharic Bold Italic.otf"
-			]
-		},
-		{
-			"name": "Dwarvish",
-			"fonts": [
-				"fonts/languages/PHB/Dwarvish/Dethek.otf",
-				"fonts/languages/PHB/Dwarvish/Dethek Bold.otf",
-				"fonts/languages/PHB/Dwarvish/Dethek Italic.otf",
-				"fonts/languages/PHB/Dwarvish/Dethek Bold Italic.otf",
-				"fonts/languages/PHB/Dwarvish/Dethek Stone.ttf",
-				"fonts/languages/PHB/Dwarvish/Dethek Alt.ttf",
-				"fonts/languages/PHB/Dwarvish/Olde Dethek.otf",
-				"fonts/languages/PHB/Dwarvish/Olde Dethek Italic.otf",
-				"fonts/languages/PHB/Dwarvish/Davek 4e.otf",
-				"fonts/languages/PHB/Dwarvish/Davek 4e Bold.otf",
-				"fonts/languages/PHB/Dwarvish/Davek 4e Italic.otf",
-				"fonts/languages/PHB/Dwarvish/Davek 4e Bold Italic.otf"
-			]
-		},
-		{
-			"name": "Elvish",
-			"fonts": [
-				"fonts/languages/PHB/Elvish/Espruar 5e.ttf",
-				"fonts/languages/PHB/Elvish/Espruar 3e.otf",
-				"fonts/languages/PHB/Elvish/Espruar 3e Bold.otf",
-				"fonts/languages/PHB/Elvish/Espruar 3e Italic.otf",
-				"fonts/languages/PHB/Elvish/Espruar 3e Bold Italic.otf",
-				"fonts/languages/PHB/Elvish/Espruar 2e.ttf",
-				"fonts/languages/PHB/Elvish/Olde Espruar.otf",
-				"fonts/languages/PHB/Elvish/Rellanic 4e.otf",
-				"fonts/languages/PHB/Elvish/Rellanic 4e Bold.otf",
-				"fonts/languages/PHB/Elvish/Rellanic 4e Italic.otf",
-				"fonts/languages/PHB/Elvish/Rellanic 4e Bold Italic.otf"
-			]
-		},
-		{
-			"name": "Infernal",
-			"fonts": [
-				"fonts/languages/PHB/Infernal/Infernal.ttf",
-				"fonts/languages/PHB/Infernal/Barazhad.otf",
-				"fonts/languages/PHB/Infernal/Barazhad Bold.otf",
-				"fonts/languages/PHB/Infernal/Barazhad Italic.otf",
-				"fonts/languages/PHB/Infernal/Barazhad Bold Italic.otf"
-			]
-		},
-		{
-			"name": "Thorass",
-			"fonts": [
-				"fonts/languages/PHB/Human/Thorass.otf",
-				"fonts/languages/PHB/Human/Thorass Bold.otf",
-				"fonts/languages/PHB/Human/Thorass Italic.otf",
-				"fonts/languages/PHB/Human/Thorass Bold Italic.otf",
-				"fonts/languages/PHB/Human/Olde Thorass.otf"
-			]
-		}
-	],
 	"language": [
 		{
 			"name": "Aarakocra",
@@ -124,6 +60,14 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Aven",
+			"source": "PSD",
+			"page": 6,
+			"typicalSpeakers": [
+				"{@race Aven|PSD}"
+			]
 		},
 		{
 			"name": "Blink Dog",
@@ -233,6 +177,21 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Coalition Pidgin",
+			"source": "PSX",
+			"page": 6,
+			"typicalSpeakers": [
+				"Brazen Coalition",
+				"{@race Human (Ixalan)|PSX|Humans}",
+				"{@race Orc (Ixalan)|PSX|Orcs}",
+				"{@race Siren|PSX|Sirens}",
+				"{@race Goblin (Ixalan)|PSX|Goblins}"
+			],
+			"entries": [
+				"The humans of the Brazen Coalition speak a different language\u2014a pidgin of Orc, Siren, and a native human language that is similar to {@language Vampire|PSX} (about as closely related as Italian is to Spanish). Orcs, sirens, and goblins also speak this Brazen Coalition pidgin."
+			]
+		},
+		{
 			"name": "Common",
 			"source": "DSotDQ",
 			"page": 9,
@@ -285,6 +244,36 @@
 			"script": "Common",
 			"fonts": [
 				"fonts/languages/PHB/Human/Harpers.ttf"
+			]
+		},
+		{
+			"name": "Common",
+			"source": "PSI",
+			"page": 9,
+			"typicalSpeakers": [
+				"{@race Human (Innistrad)|PSI|Humans}",
+				"Members of the Church",
+				"{@creature Vampire Neonate|PSI|Vampires}",
+				"{@creature Werewolf (Krallenhorde)|PSI|Werewolves}",
+				"{@creature Geist|PSI|Geists}"
+			]
+		},
+		{
+			"name": "Common Trade Pidgin",
+			"source": "PSX",
+			"page": 6,
+			"typicalSpeakers": [
+				"Sun Empire",
+				"River Heralds",
+				"Legion of Dusk",
+				"Brazen Coalition",
+				"{@race Human (Ixalan)|PSX|Humans}",
+				"{@race Orc (Ixalan)|PSX|Orcs}",
+				"{@race Siren|PSX|Sirens}",
+				"{@race Goblin (Ixalan)|PSX|Goblins}"
+			],
+			"entries": [
+				"A trade pidgin used in circumstances where members of different peoples do interact with each other. But this language is almost impossible to use for discussions of matters of any depth."
 			]
 		},
 		{
@@ -360,6 +349,15 @@
 			"script": "none"
 		},
 		{
+			"name": "Demonic",
+			"source": "PSI",
+			"page": 9,
+			"typicalSpeakers": [
+				"{@filter Demons|bestiary|source=|tag=demon}",
+				"{@filter Devils|bestiary|source=|tag=devil}"
+			]
+		},
+		{
 			"name": "Draconic",
 			"source": "DSotDQ",
 			"page": 9,
@@ -421,6 +419,14 @@
 				"Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants."
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Draconic",
+			"source": "PSI",
+			"page": 9,
+			"typicalSpeakers": [
+				"{@filter Dragons|bestiary|source=PSI|type=dragon}"
+			]
 		},
 		{
 			"name": "Druidic",
@@ -934,14 +940,31 @@
 			"script": "Istarian"
 		},
 		{
+			"name": "Itzocan",
+			"source": "PSX",
+			"page": 6,
+			"typicalSpeakers": [
+				"Sun Empire",
+				"{@race Human (Ixalan)|PSX|Humans}"
+			]
+		},
+		{
 			"name": "Ixitxachitl",
 			"source": "OotA",
 			"page": 225,
 			"typicalSpeakers": [
-				"{@creature Ixitxachitl|OotA|ixitxachitl}",
+				"{@creature ixitxachitl|OotA}",
 				"{@creature Ixitxachitl Cleric|OotA|ixitxachitl clerics}",
-				"{@creature Vampiric Ixitxachitl|OotA|vampiric ixitxachitl}",
+				"{@creature vampiric ixitxachitl|OotA}",
 				"{@creature Vampiric Ixitxachitl Cleric|OotA|vampiric ixitxachitl clerics}"
+			]
+		},
+		{
+			"name": "Keldon",
+			"source": "PSD",
+			"page": 19,
+			"typicalSpeakers": [
+				"{@race Human (Keldon)|PSD|Keldons}"
 			]
 		},
 		{
@@ -965,6 +988,14 @@
 				"Tarsis"
 			],
 			"script": "Common"
+		},
+		{
+			"name": "Khenra",
+			"source": "PSA",
+			"page": 18,
+			"typicalSpeakers": [
+				"{@race Khenra|PSA}"
+			]
 		},
 		{
 			"name": "Khur",
@@ -1056,6 +1087,15 @@
 			"script": "Merfolk"
 		},
 		{
+			"name": "Merfolk",
+			"source": "PSX",
+			"page": 6,
+			"typicalSpeakers": [
+				"River Heralds"
+			],
+			"script": "Merfolk"
+		},
+		{
 			"name": "Midani",
 			"source": "SCAG",
 			"page": 112,
@@ -1125,6 +1165,14 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Naga",
+			"source": "PSA",
+			"page": 18,
+			"typicalSpeakers": [
+				"{@race Naga|PSA|}"
+			]
 		},
 		{
 			"name": "Naush",
@@ -1273,6 +1321,14 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Primordial",
+			"source": "PSI",
+			"page": 9,
+			"typicalSpeakers": [
+				"Elementals"
+			]
+		},
+		{
 			"name": "Qualith",
 			"source": "VGM",
 			"page": 75,
@@ -1291,7 +1347,7 @@
 			"page": 6,
 			"type": "exotic",
 			"typicalSpeakers": [
-				"{@creature Inspired|ERLW|inspired}",
+				"{@creature inspired|ERLW}",
 				"kalashtar",
 				"{@filter quori|bestiary|source=ERLW|search=quori}"
 			],
@@ -1352,7 +1408,7 @@
 			"source": "MM",
 			"page": 263,
 			"typicalSpeakers": [
-				"{@creature Sahuagin||sahuagin}",
+				"{@creature sahuagin}",
 				"{@creature Sahuagin Priestess||sahuagin priestesses}",
 				"{@creature Sahuagin Baron||sahuagin barons}"
 			]
@@ -1395,6 +1451,14 @@
 				}
 			],
 			"hasFluffImages": true
+		},
+		{
+			"name": "Siren",
+			"source": "PSX",
+			"page": 17,
+			"typicalSpeakers": [
+				"{@race Siren|PSX|Sirens}"
+			]
 		},
 		{
 			"name": "Slaad",
@@ -1560,7 +1624,7 @@
 			"source": "MM",
 			"page": 288,
 			"typicalSpeakers": [
-				"{@creature Thri-kreen||thri-kreen}"
+				"{@creature thri-kreen}"
 			]
 		},
 		{
@@ -1568,7 +1632,7 @@
 			"source": "VGM",
 			"page": 193,
 			"typicalSpeakers": [
-				"{@creature Tlincalli|VGM|tlincalli}"
+				"{@creature tlincalli|VGM}"
 			]
 		},
 		{
@@ -1681,6 +1745,14 @@
 			"hasFluffImages": true
 		},
 		{
+			"name": "Vampire",
+			"source": "PSX",
+			"page": 6,
+			"typicalSpeakers": [
+				"Legion of Dusk"
+			]
+		},
+		{
 			"name": "Vedalken",
 			"source": "GGR",
 			"page": 9,
@@ -1768,6 +1840,70 @@
 			"page": 9,
 			"entries": [
 				"This ancient language was spoken by the people of Zemniaz in the Age of Arcanum. That ancient culture has long since crumbled, but its language and its people live on in the Dwendalian Empire. Many ancient scrolls were written in Zemnian, but it is a language now largely spoken by farmers, as Common is the default language of the empire."
+			]
+		}
+	],
+	"languageScript": [
+		{
+			"name": "Draconic",
+			"fonts": [
+				"fonts/languages/PHB/Draconic/Iokharic.otf",
+				"fonts/languages/PHB/Draconic/Iokharic Bold.otf",
+				"fonts/languages/PHB/Draconic/Iokharic Italic.otf",
+				"fonts/languages/PHB/Draconic/Iokharic Bold Italic.otf"
+			]
+		},
+		{
+			"name": "Dwarvish",
+			"fonts": [
+				"fonts/languages/PHB/Dwarvish/Dethek.otf",
+				"fonts/languages/PHB/Dwarvish/Dethek Bold.otf",
+				"fonts/languages/PHB/Dwarvish/Dethek Italic.otf",
+				"fonts/languages/PHB/Dwarvish/Dethek Bold Italic.otf",
+				"fonts/languages/PHB/Dwarvish/Dethek Stone.ttf",
+				"fonts/languages/PHB/Dwarvish/Dethek Alt.ttf",
+				"fonts/languages/PHB/Dwarvish/Olde Dethek.otf",
+				"fonts/languages/PHB/Dwarvish/Olde Dethek Italic.otf",
+				"fonts/languages/PHB/Dwarvish/Davek 4e.otf",
+				"fonts/languages/PHB/Dwarvish/Davek 4e Bold.otf",
+				"fonts/languages/PHB/Dwarvish/Davek 4e Italic.otf",
+				"fonts/languages/PHB/Dwarvish/Davek 4e Bold Italic.otf"
+			]
+		},
+		{
+			"name": "Elvish",
+			"fonts": [
+				"fonts/languages/PHB/Elvish/Espruar 5e.ttf",
+				"fonts/languages/PHB/Elvish/Espruar 3e.otf",
+				"fonts/languages/PHB/Elvish/Espruar 3e Bold.otf",
+				"fonts/languages/PHB/Elvish/Espruar 3e Italic.otf",
+				"fonts/languages/PHB/Elvish/Espruar 3e Bold Italic.otf",
+				"fonts/languages/PHB/Elvish/Espruar 2e.ttf",
+				"fonts/languages/PHB/Elvish/Olde Espruar.otf",
+				"fonts/languages/PHB/Elvish/Rellanic 4e.otf",
+				"fonts/languages/PHB/Elvish/Rellanic 4e Bold.otf",
+				"fonts/languages/PHB/Elvish/Rellanic 4e Italic.otf",
+				"fonts/languages/PHB/Elvish/Rellanic 4e Bold Italic.otf"
+			]
+		},
+		{
+			"name": "Infernal",
+			"fonts": [
+				"fonts/languages/PHB/Infernal/Infernal.ttf",
+				"fonts/languages/PHB/Infernal/Barazhad.otf",
+				"fonts/languages/PHB/Infernal/Barazhad Bold.otf",
+				"fonts/languages/PHB/Infernal/Barazhad Italic.otf",
+				"fonts/languages/PHB/Infernal/Barazhad Bold Italic.otf"
+			]
+		},
+		{
+			"name": "Thorass",
+			"fonts": [
+				"fonts/languages/PHB/Human/Thorass.otf",
+				"fonts/languages/PHB/Human/Thorass Bold.otf",
+				"fonts/languages/PHB/Human/Thorass Italic.otf",
+				"fonts/languages/PHB/Human/Thorass Bold Italic.otf",
+				"fonts/languages/PHB/Human/Olde Thorass.otf"
 			]
 		}
 	]

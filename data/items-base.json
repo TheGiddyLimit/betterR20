@@ -1588,6 +1588,38 @@
 	],
 	"itemProperty": [
 		{
+			"abbreviation": "Vst",
+			"source": "TDCSR",
+			"page": 200,
+			"entries": [
+				{
+					"type": "entries",
+					"name": "Vestige of Divergence",
+					"page": 200,
+					"entries": [
+						"{@note This item is a Vestige of Divergence, see {@book Tal'Dorei Treasures|TDCSR|5|Vestiges of Divergence} for more information.}"
+					]
+				}
+			],
+			"template": "Vestige"
+		},
+		{
+			"abbreviation": "ER",
+			"source": "TDCSR",
+			"page": 195,
+			"entriesTemplate": [
+				{
+					"type": "entries",
+					"name": "Extended Reach",
+					"page": 195,
+					"entries": [
+						"This weapon adds {{item.reach}} feet to your reach when you attack with it. This property also determines your reach for {@action opportunity attack|PHB|opportunity attacks} with an Extended Reach weapon."
+					]
+				}
+			],
+			"template": "{{prop_name}} ({{item.reach}}\u00A0ft.)"
+		},
+		{
 			"abbreviation": "A",
 			"source": "PHB",
 			"page": 146,
@@ -1771,6 +1803,15 @@
 	],
 	"itemType": [
 		{
+			"abbreviation": "IDG",
+			"source": "TDCSR",
+			"name": "Illegal Drug",
+			"page": 85,
+			"entriesTemplate": [
+				"{@note This item is an illegal drug; see {@variantrule Illegal Drugs|TDCSR} for more information.}"
+			]
+		},
+		{
 			"abbreviation": "AT",
 			"source": "PHB",
 			"page": 154,
@@ -1865,67 +1906,6 @@
 						"Repairs to a damaged ship can be made while the vessel is berthed. Repairing 1 hit point of damage requires 1 day and costs 20 gp for materials and labor."
 					]
 				}
-			]
-		}
-	],
-	"itemEntry": [
-		{
-			"name": "Ring of Resistance",
-			"source": "DMG",
-			"entriesTemplate": [
-				"You have resistance to {{item.resist}} damage while wearing this ring. The ring is set with {{item.detail1}}."
-			]
-		},
-		{
-			"name": "Armor of Resistance",
-			"source": "DMG",
-			"entriesTemplate": [
-				"You have resistance to {{item.resist}} damage while you wear this armor."
-			]
-		},
-		{
-			"name": "Potion of Resistance",
-			"source": "DMG",
-			"entriesTemplate": [
-				"When you drink this potion, you gain resistance to {{item.resist}} damage for 1 hour."
-			]
-		},
-		{
-			"name": "Absorbing Tattoo",
-			"source": "TCE",
-			"entriesTemplate": [
-				"Produced by a special needle, this magic tattoo features designs that emphasize one color ({{item.detail1}}).",
-				{
-					"type": "entries",
-					"name": "Tattoo Attunement",
-					"entries": [
-						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
-						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Damage Resistance",
-					"entries": [
-						"While the tattoo is on your skin, you have resistance to {{item.resist}} damage."
-					]
-				},
-				{
-					"type": "entries",
-					"name": "Damage Absorption",
-					"entries": [
-						"When you take {{item.resist}} damage, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can't be used again until the next dawn."
-					]
-				}
-			]
-		},
-		{
-			"name": "Chromatic Rose",
-			"source": "WBtW",
-			"entriesTemplate": [
-				"While this rose is held, it {{item.detail1}} as a harmless visual effect.",
-				"While holding the rose by its stem, you gain resistance to {{item.resist}} damage. If you would take more than 10 {{item.resist}} damage from a single source (after applying the resistance), the rose disintegrates, and you take no damage instead.",
-				"As an action, you can blow the petals from the rose to produce a 20-foot cone of {{item.resist}}. Each creature in the cone must make a DC 15 Constitution saving throw, taking {@damage 3d10} {{item.resist}} damage on a failed save, or half as much damage on a successful one. Using this property destroys the rose."
 			]
 		}
 	],
@@ -2035,6 +2015,67 @@
 						]
 					]
 				}
+			]
+		}
+	],
+	"itemEntry": [
+		{
+			"name": "Ring of Resistance",
+			"source": "DMG",
+			"entriesTemplate": [
+				"You have resistance to {{item.resist}} damage while wearing this ring. The ring is set with {{item.detail1}}."
+			]
+		},
+		{
+			"name": "Armor of Resistance",
+			"source": "DMG",
+			"entriesTemplate": [
+				"You have resistance to {{item.resist}} damage while you wear this armor."
+			]
+		},
+		{
+			"name": "Potion of Resistance",
+			"source": "DMG",
+			"entriesTemplate": [
+				"When you drink this potion, you gain resistance to {{item.resist}} damage for 1 hour."
+			]
+		},
+		{
+			"name": "Absorbing Tattoo",
+			"source": "TCE",
+			"entriesTemplate": [
+				"Produced by a special needle, this magic tattoo features designs that emphasize one color ({{item.detail1}}).",
+				{
+					"type": "entries",
+					"name": "Tattoo Attunement",
+					"entries": [
+						"To attune to this item, you hold the needle to your skin where you want the tattoo to appear, pressing the needle there throughout the attunement process. When the attunement is complete, the needle turns into the ink that becomes the tattoo, which appears on the skin.",
+						"If your attunement to the tattoo ends, the tattoo vanishes, and the needle reappears in your space."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Damage Resistance",
+					"entries": [
+						"While the tattoo is on your skin, you have resistance to {{item.resist}} damage."
+					]
+				},
+				{
+					"type": "entries",
+					"name": "Damage Absorption",
+					"entries": [
+						"When you take {{item.resist}} damage, you can use your reaction to gain immunity against that instance of the damage, and you regain a number of hit points equal to half the damage you would have taken. Once this reaction is used, it can't be used again until the next dawn."
+					]
+				}
+			]
+		},
+		{
+			"name": "Chromatic Rose",
+			"source": "WBtW",
+			"entriesTemplate": [
+				"While this rose is held, it {{item.detail1}} as a harmless visual effect.",
+				"While holding the rose by its stem, you gain resistance to {{item.resist}} damage. If you would take more than 10 {{item.resist}} damage from a single source (after applying the resistance), the rose disintegrates, and you take no damage instead.",
+				"As an action, you can blow the petals from the rose to produce a 20-foot cone of {{item.resist}}. Each creature in the cone must make a DC 15 Constitution saving throw, taking {@damage 3d10} {{item.resist}} damage on a failed save, or half as much damage on a successful one. Using this property destroys the rose."
 			]
 		}
 	]
