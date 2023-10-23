@@ -21,6 +21,14 @@
 				"tools": [
 					"any one type of {@item artisan's tools|PHB} or any one {@item musical instrument|PHB} of your choice"
 				],
+				"toolProficiencies": [
+					{
+						"anyArtisansTool": 1
+					},
+					{
+						"anyMusicalInstrument": 1
+					}
+				],
 				"skills": [
 					{
 						"choose": {
@@ -1133,7 +1141,7 @@
 			"classSource": "PHB",
 			"level": 1,
 			"entries": [
-				"Your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are {@item shortsword|phb|shortswords} and any {@filter simple melee weapons that don't have the two-handed or heavy property|items|source=phb|category=basic|type=simple weapon;melee weapon=sand|property=!heavy;!two-handed}.",
+				"Your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are {@item shortsword|phb|shortswords} and any {@filter simple melee weapons that don't have the two-handed or heavy property|items|source=phb|category=basic|type=simple weapon;melee weapon=u~u~sand|property=!heavy;!two-handed}.",
 				"You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a {@item shield|phb}.",
 				{
 					"type": "list",

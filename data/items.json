@@ -4061,7 +4061,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to acid damage.",
@@ -4899,7 +4898,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to lightning damage.",
@@ -5182,7 +5180,7 @@
 					"name": "Dark Speech",
 					"type": "entries",
 					"entries": [
-						"While you carry the Book of Vile Darkness and are attuned to it, you can use an action to recite word from its pages in a foul language known as Dark Speech. Each time you do so, you take {@damage 1d12} psychic damage, and each non-evil creature within 15 feet of you takes {@damage 3d6} psychic damage."
+						"While you carry the Book of Vile Darkness and are attuned to it, you can use an action to recite words from its pages in a foul language known as Dark Speech. Each time you do so, you take {@damage 1d12} psychic damage, and each non-evil creature within 15 feet of you takes {@damage 3d6} psychic damage."
 					]
 				},
 				{
@@ -5621,7 +5619,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to fire damage.",
@@ -5792,7 +5789,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to lightning damage.",
@@ -5974,6 +5970,7 @@
 			"rarity": "rare",
 			"reqAttune": true,
 			"wondrous": true,
+			"critThreshold": 19,
 			"entries": [
 				"This black leather apron is perpetually covered by blood, even after being washed off. You gain the following benefits while wearing the apron:",
 				{
@@ -7943,7 +7940,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to acid damage.",
@@ -11397,6 +11393,7 @@
 			"source": "DMG",
 			"page": 167,
 			"srd": true,
+			"baseItem": "plate armor|phb",
 			"type": "HA",
 			"tier": "major",
 			"rarity": "very rare",
@@ -14740,7 +14737,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to fire damage.",
@@ -15037,7 +15033,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to poison damage.",
@@ -15991,6 +15986,7 @@
 				}
 			],
 			"wondrous": true,
+			"recharge": "special",
 			"charges": 3,
 			"entries": [
 				"This bulky, eyeless helmet is made for a {@creature pit fiend} but magically resizes to fit the heads of other wearers.",
@@ -17755,6 +17751,7 @@
 			"page": 224,
 			"rarity": "uncommon",
 			"wondrous": true,
+			"weight": 3,
 			"entries": [
 				"An infernal puzzle box is a cube-shaped container 5 to 6 inches on a side, composed of airtight, interlocking parts made from materials found in the Nine Hells. Most of these boxes are made of infernal iron, though some are carved from bone or horn. Infernal puzzle boxes are used to safeguard diabolical contracts signed between devils and mortals, even after the terms of these contracts are fulfilled. An empty infernal puzzle box weighs 3 pounds regardless of the materials used to fashion it.",
 				"When an object small enough to fit inside an infernal puzzle box is placed in it, the container magically seals shut around the object, and no magic can force the box open. The sealed box becomes immune to all damage as well. Every infernal puzzle box is constructed with a unique means of opening it. The trick to solving the puzzle is always mundane, never magical. Once a creature figures out the trick or sequence of steps needed to open a particular infernal puzzle box, that creature can open the box as an action, allowing access to the box's contents.",
@@ -21069,7 +21066,7 @@
 					"type": "entries",
 					"name": "Destroying the Deck",
 					"entries": [
-						"Luba's Tarokka of Souls can be destroyed only if all fourteen souls within are released and destroyed. This reveals a fifteenth soul, a {@creature lich}, that inhabits the Nether card, which appears only when the fourteen souls are defeated. If this ancient entity is destroyed, the Nether card vanishes and the deck becomes a normal {@deck Tarokka Deck|CoS|tarokka deck}, with no special properties, but it includes a new card of the DM's design.",
+						"Luba's Tarokka of Souls can be destroyed only if all fourteen souls within are released and destroyed. This reveals a fifteenth soul, a {@creature lich}, that inhabits the Nether card, which appears only when the fourteen souls are defeated. If this ancient entity is destroyed, the Nether card vanishes and the deck becomes a normal {@deck tarokka deck|CoS}, with no special properties, but it includes a new card of the DM's design.",
 						{
 							"type": "entries",
 							"name": "Mother Luba and the Vistani",
@@ -22622,7 +22619,7 @@
 					"race": "elf",
 					"alignment": [
 						"N",
-						"N"
+						"G"
 					]
 				},
 				{
@@ -24994,6 +24991,9 @@
 			"srd": true,
 			"immune": [
 				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
 			],
 			"tier": "major",
 			"rarity": "rare",
@@ -27468,7 +27468,7 @@
 			"resist": [
 				"fire"
 			],
-			"detail1": "wreathed in fire",
+			"detail1": "is wreathed in fire",
 			"rarity": "rare",
 			"wondrous": true,
 			"hasRefs": true,
@@ -27555,7 +27555,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to fire damage.",
@@ -30500,6 +30499,9 @@
 			"reqAttune": true,
 			"wondrous": true,
 			"curse": true,
+			"ability": {
+				"str": 4
+			},
 			"bonusSpellAttack": "+1",
 			"entries": [
 				"This 1-foot-long shard of obsidian has veins of silver and gold beneath its cold surface.",
@@ -30772,6 +30774,7 @@
 			"page": 99,
 			"type": "OTH",
 			"rarity": "unknown",
+			"weight": 4,
 			"entries": [
 				"A shatterstick is a nonmagical, 12-inch-long, 4-pound stake made of blue-tinged infernal iron mined on Cania, the eighth layer of the Nine Hells. When embedded in earth or pounded into solid rock, the stake emits a seismic vibration in a 20-foot radius centered on itself for 1 minute, shaking the ground in that area for the duration. When the effects ends, the shatterstick breaks apart, becoming useless, and all structures within 20 feet of it take 35 ({@damage 10d6}) bludgeoning damage."
 			]
@@ -31308,7 +31311,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to cold damage.",
@@ -31930,6 +31932,7 @@
 			"page": 225,
 			"rarity": "uncommon",
 			"wondrous": true,
+			"weight": 0.333,
 			"entries": [
 				"Soul coins are about 5 inches across and about an inch thick, minted from infernal iron. Each coin weighs one-third of a pound, and is inscribed with Infernal writing and a spell that magically binds a single soul to the coin. Because each soul coin has a unique soul trapped within it, each has a story. A creature might have been imprisoned as a result of defaulting on a deal, while another might be the victim of a night hag's curse.",
 				{
@@ -40575,7 +40578,7 @@
 			"resist": [
 				"cold"
 			],
-			"detail1": "covered in frost",
+			"detail1": "is covered in frost",
 			"rarity": "rare",
 			"wondrous": true,
 			"hasRefs": true,
@@ -40675,7 +40678,6 @@
 			"weight": 45,
 			"ac": 14,
 			"bonusAc": "+1",
-			"bonusSavingThrow": "+1",
 			"stealth": true,
 			"entries": [
 				"Dragon scale mail is made of the scales of one kind of dragon. Sometimes dragons collect their cast-off scales and gift them to humanoids. Other times, hunters carefully skin and preserve the hide of a dead dragon. In either case, dragon scale mail is highly valued. While wearing this armor, you gain a +1 bonus to AC, you have advantage on saving throws against the Frightful Presence and breath weapons of dragons, and you have resistance to cold damage.",
@@ -42045,6 +42047,7 @@
 			"name": "Dragon Scale Mail",
 			"source": "DMG",
 			"page": 165,
+			"srd": true,
 			"type": "MA",
 			"tier": "major",
 			"rarity": "very rare",

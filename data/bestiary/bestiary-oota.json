@@ -246,9 +246,42 @@
 						"replace": "the orog",
 						"with": "Blurg",
 						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Blurg can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
 					}
 				}
 			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -702,6 +735,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"+2 warhammer|dmg",
+				"heavy crossbow|phb"
+			],
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -816,6 +853,10 @@
 						"{@atk rw} {@hit 4} to hit, range 40/160 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
 					]
 				}
+			],
+			"attachedItems": [
+				"hooked shortspear|oota",
+				"light repeating crossbow|oota"
 			],
 			"traitTags": [
 				"Magic Resistance",
@@ -1034,6 +1075,9 @@
 						"Droki adds 3 to his AC against one melee attack that would hit him. To do so, Droki must see the attacker and be wielding a melee weapon."
 					]
 				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
 			],
 			"traitTags": [
 				"Magic Resistance",
@@ -1271,6 +1315,9 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"shortsword|phb"
+			],
 			"senseTags": [
 				"B"
 			],
@@ -1449,6 +1496,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"javelin|phb",
+				"war pick|phb"
+			],
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -1620,6 +1671,10 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"javelin|phb",
+				"war pick|phb"
+			],
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],
@@ -1711,6 +1766,9 @@
 						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
 					]
 				}
+			],
+			"attachedItems": [
+				"war pick|phb"
 			],
 			"senseTags": [
 				"B"
@@ -1845,6 +1903,10 @@
 						"{@atk rw} {@hit 3} to hit, range 100/400 ft., one target. {@h}5 ({@damage 1d10}) piercing damage."
 					]
 				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"war pick|phb"
 			],
 			"traitTags": [
 				"Keen Senses"
@@ -2142,9 +2204,42 @@
 						"replace": "the mind flayer",
 						"with": "Grazilaxx",
 						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Grazilaxx can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
 					}
 				}
 			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -2265,6 +2360,9 @@
 						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) bludgeoning damage"
 					]
 				}
+			],
+			"attachedItems": [
+				"+1 flail|dmg"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -3012,6 +3110,9 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"halberd|phb"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -3109,6 +3210,10 @@
 						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
 					]
 				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"shortsword|phb"
 			],
 			"traitTags": [
 				"Sneak Attack"
@@ -3217,7 +3322,7 @@
 			"source": "OotA",
 			"page": 103,
 			"_copy": {
-				"name": "Priest",
+				"name": "Veteran",
 				"source": "MM",
 				"_trait": {
 					"name": "Deep Gnome",
@@ -3360,6 +3465,9 @@
 						"While he is in a dim light or darkness, Narrak can become {@condition invisible}. He remains so until he moves or takes an action or reaction."
 					]
 				}
+			],
+			"attachedItems": [
+				"shortsword|phb"
 			],
 			"traitTags": [
 				"Magic Resistance",
@@ -3835,9 +3943,42 @@
 						"replace": "the troglodyte",
 						"with": "Skriss",
 						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Skriss can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
 					}
 				}
 			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -3892,9 +4033,42 @@
 						"replace": "the kuo-toa",
 						"with": "Sloopidoop",
 						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Sloopidoop can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
 					}
 				}
 			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -4221,6 +4395,9 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"war pick|phb"
+			],
 			"senseTags": [
 				"D"
 			],
@@ -4411,6 +4588,9 @@
 						"The troglodyte spits acid in a line 15 feet long and 5 feet wide. Each creature in that line must make a {@dc 14} Dexterity saving throw, taking 10 ({@damage 3d6}) acid damage on a failed save, or half as much damage on a successful one."
 					]
 				}
+			],
+			"attachedItems": [
+				"greatclub|phb"
 			],
 			"traitTags": [
 				"Sunlight Sensitivity"
@@ -4781,6 +4961,11 @@
 					]
 				}
 			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"longsword|phb",
+				"shortsword|phb"
+			],
 			"actionTags": [
 				"Multiattack"
 			],
@@ -4928,9 +5113,42 @@
 						"replace": "the derro savant",
 						"with": "Y",
 						"flags": "i"
+					},
+					"languages": [
+						{
+							"mode": "appendIfNotExistsArr",
+							"items": [
+								"Dwarvish",
+								"Elvish",
+								"Undercommon"
+							]
+						}
+					],
+					"spellcasting": {
+						"mode": "appendArr",
+						"items": [
+							{
+								"name": "Innate Spellcasting",
+								"headerEntries": [
+									"Y can innately cast can cast the {@spell teleport} spell once per day, but the intended destination must be within 30 feet of another {@adventure society member|OotA|1|Society of Brilliance}. This teleport effect can be disrupted (see \"{@adventure Faerzress|OotA|1|Faerzress}\"), which is how society members sometimes end up in far corners of the Underdark, separated from their fellows."
+								],
+								"daily": {
+									"1e": [
+										"{@spell teleport}"
+									]
+								},
+								"hidden": [
+									"daily"
+								]
+							}
+						]
 					}
 				}
 			},
+			"alignment": [
+				"N"
+			],
+			"int": 18,
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -5244,6 +5462,10 @@
 						"{@atk rw} {@hit 2} to hit, range 100/400 ft., one target. {@h}5 ({@damage 1d10}) piercing damage."
 					]
 				}
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"mace|phb"
 			],
 			"traitTags": [
 				"Pack Tactics"
