@@ -32,6 +32,7 @@ function baseWeather () {
 			"Waves": new Image(),
 			"Ripples": new Image(),
 			"Blood Rain": new Image(),
+			"Custom": new Image(),
 		};
 		IMAGES.Rain.src = "https://i.imgur.com/lZrqiVk.png";
 		IMAGES.Snow.src = "https://i.imgur.com/uwLQjWY.png";
@@ -112,7 +113,6 @@ function baseWeather () {
 				case "Waves":
 				case "Ripples":
 				case "Blood Rain":
-					IMAGES["Custom"] = null;
 					return IMAGES[imageName];
 				case "Custom (see below)":
 					if (!IMAGES["Custom"] || (
@@ -124,15 +124,14 @@ function baseWeather () {
 						IMAGES["Custom"].onerror = () => {
 							if (IMAGES["Custom"]._errorSrc == null) {
 								IMAGES["Custom"]._errorSrc = page.get("bR20cfg_weatherTypeCustom1");
-								alert(`Custom weather image "${IMAGES["Custom"].src}" failed to load!`);
+								console.log(`Custom weather image "${IMAGES["Custom"].src}" failed to load!`);
 							}
 							IMAGES["Custom"].src = IMAGES["Rain"].src;
 						};
-						IMAGES["Custom"].src = page.get("bR20cfg_weatherTypeCustom1");
+						if (page.get("bR20cfg_weatherTypeCustom1")) IMAGES["Custom"].src = page.get("bR20cfg_weatherTypeCustom1");
 					}
 					return IMAGES["Custom"];
 				default:
-					IMAGES["Custom"] = null;
 					return null;
 			}
 		}

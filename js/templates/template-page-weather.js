@@ -30,7 +30,7 @@ function initHTMLpageWeather () {
 			</div>
 			<div class="pagedetails__subheader">
 				<h4>Custom type</h4>
-				<a class="tipsy-w showtip pictos" original-title="Input URL to your PNG when &quot;Custom&quot; is selected above">?</a>
+				<a class="tipsy-w showtip pictos" original-title="Input URL to your PNG when &quot;Custom&quot; is selected above. Broken URLs will appear as rain.">?</a>
 			</div>
 			<div>
 				<label class="sr-only">input custom image</label>
