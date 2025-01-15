@@ -705,7 +705,7 @@ function d20plusImporter () {
 
 		// init list library
 		const importList = new List("import-list", {
-			valueNames: options.listIndex || ["name"],
+			valueNames: options.listIndex || ["name", "source"],
 		});
 
 		// reset the UI and add handlers
@@ -728,6 +728,13 @@ function d20plusImporter () {
 
 		$("#importlist-selectall-published").bind("click", () => {
 			d20plus.importer._importSelectPublished(importList);
+		});
+
+		$("#importlist-filter").bind("click", () => {
+			d20plus.importer._importFilterList(importList);
+		});
+		$("#importlist-reset").bind("click", () => {
+			d20plus.importer._importResetList(importList);
 		});
 
 		if (options.listIndexConverter) {
@@ -1211,6 +1218,60 @@ function d20plusImporter () {
 				setSelection(i, true);
 			}
 		});
+	};
+
+	d20plus.importer._importFilterList = function (importList) {
+		const $winFilterList = $("#d20plus-import-filter-list");
+		$winFilterList.dialog("open");
+		const $btnImport = $winFilterList.find(".btn");
+		const $winText = $winFilterList.find(".table-import-textarea");
+		
+		$btnImport.on("click", () => {
+
+			function filterList () {
+				const toSearch = $winText.val().toLowerCase().replaceAll(`"`, "").split("\n");
+				const firstLine = toSearch[0];
+				const filterUnofficial = !d20plus.cfg.getOrDefault("import", "allSourcesIncludeUnofficial");
+
+				// If no search terms are entered, reset the filter
+				if (toSearch.length == 1 && firstLine == '') {
+					importList.filter();
+					return;
+				}
+
+				const searchDict = {};
+				toSearch.forEach(it => {
+					const items = it.split(",");
+					// If additional filters are added, they can go here
+					searchDict[items[0].trim()] = {
+						"name": items[0].trim(),
+						"source": items.length > 1 ? items[1].trim() : null,
+						// Some categories list their source in this format
+						"altsource": items.length > 1 ? `src[${items[1].trim()}]`: null,
+					}
+				})
+
+				// Filters to match names and sources on the list
+				x = importList
+				importList.filter(it => {
+					const name = it._values.name.toLowerCase();
+					const source = it._values.source.toLowerCase();
+					
+					if (!(name in searchDict)) return false;
+					if (!searchDict[name].source) return true;
+					if (searchDict[name].source === source || searchDict[name].altsource === source) return true;
+					return false;
+				});
+			}
+			
+			filterList();
+			
+			$winFilterList.dialog("close");
+		}).appendTo($winFilterList);
+	};
+
+	d20plus.importer._importResetList = function (importList) {
+		importList.filter();
 	};
 
 	d20plus.importer.CharacterAttributesProxy = class {
