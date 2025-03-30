@@ -368,12 +368,32 @@ function baseToolModule () {
 
 								switch (prop) {
 									case "maps": {
-										const map = d20.Campaign.pages.create(entry.attributes);
-										entry.graphics.forEach(it => map.thegraphics.create(it));
-										entry.paths.forEach(it => map.thepaths.create(it));
-										entry.text.forEach(it => map.thetexts.create(it));
-										entry.doors.forEach(it => map.doors.create(it));
-										entry.windows.forEach(it => map.windows.create(it));
+										let normalize = (n) => n.replace("&amp;","&").replace(/\W/g, '');
+										map = d20.Campaign.pages.models.find(model => normalize(model.attributes.name) == normalize(entry.attributes.name))
+										if (map == undefined)
+										{
+											map = d20.Campaign.pages.create(entry.attributes);
+											entry.graphics.forEach(it => map.thegraphics.create(it));
+											entry.paths.forEach(it => map.thepaths.create(it));
+											entry.text.forEach(it => map.thetexts.create(it));
+											entry.doors?.forEach(it => map.doors.create(it));
+											entry.windows?.forEach(it => map.windows.create(it));
+										}
+										else
+										{
+											const attributes = ["thepaths", "doors", "windows"]
+											attributes.forEach((element) => {
+												map[element].models.splice(0, map[element].models.length);
+												if (element == "thepaths")
+												{
+													map.thepaths.backboneFirebase.reference.set(null);
+													map.thepaths.massdelete = true;
+												}
+												map.save();
+												entry[element.replace("the", "")]?.forEach(it => map[element].create(it));
+												map.save();
+											});
+										}
 										map.save();
 										break;
 									}
