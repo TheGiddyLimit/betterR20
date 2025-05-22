@@ -111,7 +111,7 @@ function d20plusMod () {
 	d20plus.mod.overwriteStatusEffects = function () {
 		d20.engine.canvasDirty = true;
 		d20.engine.canvasTopDirty = true;
-		d20.engine.canvas._objects.forEach(it => {
+		d20.engine.canvas?._objects?.forEach(it => {
 			// avoid adding it to any objects that wouldn't have it to begin with
 			if (!it.model || !it.model.view || !it.model.view.updateBackdrops) return;
 
@@ -429,7 +429,7 @@ function d20plusMod () {
 	d20plus.mod.setAlpha = function (layer) {
 		const l = ["map", "walls", "weather", "background", "objects", "foreground", "gmlayer"];
 		const o = ["background", "objects", "foreground"];
-		return !window.is_gm 
+		return !window.is_gm
 			|| (o.includes(layer) && o.includes(window.currentEditingLayer))
 			|| (l.indexOf(window.currentEditingLayer) >= l.indexOf(layer)
 				&& !(o.includes(layer) && window.currentEditingLayer === "gmlayer"))

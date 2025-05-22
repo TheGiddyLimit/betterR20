@@ -5,3 +5,7 @@ trim_trailing_whitespace=true
 insert_final_newline=true
 indent_style=tab
 indent_size=4
+# add space before curly brace in if statements
+space_before_open_brace=all
+# add space after if keyword
+space_after_if=all

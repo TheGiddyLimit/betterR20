@@ -77,8 +77,8 @@ function baseWeather () {
 			cachedSetCanvasSize(e, n);
 		};
 
-		cv.width = cvBuf.width = d20.engine.canvas.width;
-		cv.height = cvBuf.height = d20.engine.canvas.height;
+		cv.width = cvBuf.width = d20.engine.canvasWidth;
+		cv.height = cvBuf.height = d20.engine.canvasHeight;
 
 		const ctx = cv.getContext("2d");
 

@@ -36,26 +36,37 @@ const D20plus = function (version) {
 				// r20es will expose the d20 variable if we wait
 				// this should always trigger after window.onload has fired, but track init state just in case
 				(function waitForD20 () {
-					if ($("#textchat").get(0) && !$(".boring-chat").get(0)) d20plus.ut.showInitMessage();
+					if (document.getElementById("textchat") && !$(".boring-chat").get(0)) d20plus.ut.showInitMessage();
 					if ((typeof window.d20 !== "undefined" || window.currentPlayer?.d20) && !$("#loading-overlay").is(":visible") && !hasRunInit) {
 						hasRunInit = true;
 						if (!window.d20) window.d20 = window.currentPlayer.d20;
-						d20plus.Init();
-					} else {
+						const isJumpGate = !d20.engine.canvas;
+						d20.engine.canvas ??= document.getElementById("babylonCanvas");
+						(function waitForSheet(){
+							let isMultiSheet = isJumpGate && !d20.journal.customSheets;
+							// when in jump gate with multiple sheets, waiting for layouthtml property to be present required
+							const sheets = d20.journal.customSheets ?? d20.journal.characterSheetsManager.getAllSheets();
+							if (!isMultiSheet || (isMultiSheet && (sheets.length == 0 || sheets.any(x=>x.layouthtml)))) {
+								d20plus.Init();
+							}
+							else {
+								setTimeout(waitForSheet, 50);
+							}
+						})();
+					}
+					else {
 						setTimeout(waitForD20, 50);
 					}
 				})();
 
 				window.d20plus = d20plus;
 				d20plus.ut.log("Injection successful...");
+			} else if (timeWaitedForEnhancementSuiteMs > 4 * 5000) {
+				alert("betteR20 may require the VTTES (R20ES) extension to be installed!\nPlease install it from https://ssstormy.github.io/roll20-enhancement-suite/\nClicking ok will take you there.");
+				window.open("https://ssstormy.github.io/roll20-enhancement-suite/", "_blank");
 			} else {
-				if (timeWaitedForEnhancementSuiteMs > 4 * 5000) {
-					alert("betteR20 may require the VTTES (R20ES) extension to be installed!\nPlease install it from https://ssstormy.github.io/roll20-enhancement-suite/\nClicking ok will take you there.");
-					window.open("https://ssstormy.github.io/roll20-enhancement-suite/", "_blank");
-				} else {
-					timeWaitedForEnhancementSuiteMs += 100;
-					setTimeout(waitForEnhancementSuite, 100);
-				}
+				timeWaitedForEnhancementSuiteMs += 100;
+				setTimeout(waitForEnhancementSuite, 100);
 			}
 		})();
 	}

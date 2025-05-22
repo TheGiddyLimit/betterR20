@@ -72,14 +72,15 @@ function baseChat () {
 
 	function availableLanguages (charId) {
 		const char = d20.Campaign.characters.get(charId);
-		const langId = d20.journal.customSheets.availableAttributes.repeating_proficiencies_prof_type;
+		const firstCharSheet = d20.journal.customSheets ?? d20.journal.characterSheetsManager.getAllSheets().first();
+		const langId = firstCharSheet.availableAttributes.repeating_proficiencies_prof_type;
 		if (!char) return [];
 		if (!char.attribs.length) {
 			const fetched = d20plus.ut.fetchCharAttribs(char);
 			fetched.then(d20plus.chat.refreshLanguages);
 		}
 		// roll20 OGL sheet stores languages differently compared to other traits
-		// by default, they don't have corresponging "proficiency type" attribute
+		// by default, they don't have corresponding "proficiency type" attribute
 		// however, if you create a trait and THEN change it to be language, it will have LOCALIZED "language" proficiency type
 		// so to find all languages, we must filter out other named traits, except for the traits named "language" or "(localized word for LANGUAGE)"
 		const traits = char.attribs.models
@@ -867,7 +868,7 @@ function baseChat () {
 		// $.trim() instead of .trim() cause it's used in roll20's doChatInput()
 		let toSend = $.trim(text);
 		if (text !== srcText && text) d20plus.chat.localHistory.push($.trim(srcText));
-		if ($("#soundslike").get(0)) toSend = "";
+		if (document.getElementById("soundslike")) toSend = "";
 
 		if (toSend.includes("|&inlang|")) {
 			toSend.split("\n").forEach((str, i) => {
@@ -913,7 +914,7 @@ function baseChat () {
 			d20plus.chat.processPlayersList();
 			const obsconfig = { childList: true, subtree: false };
 			d20plus.cfg.playerWatcher = new MutationObserver(d20plus.chat.processPlayersList);
-			d20plus.cfg.playerWatcher.observe($("#avatarContainer").get(0), obsconfig);
+			d20plus.cfg.playerWatcher.observe(document.getElementById("avatarContainer"), obsconfig);
 		}
 
 		if (d20plus.cfg.getOrDefault("chat", "social")) {

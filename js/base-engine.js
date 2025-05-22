@@ -64,6 +64,11 @@ function d20plusEngine () {
 		$(`head`).append(`<style id="5etools-status-css"/>`);
 
 		d20plus.mod.overwriteStatusEffects();
+		if (!d20.engine.canvas.on) {
+			d20.engine.canvas.on = $.fn.on;
+			d20.engine.canvas.off = $.fn.off;
+			d20.engine.canvas.each = $.fn.each;
+		}
 
 		d20.engine.canvas.off("object:added");
 		d20.engine.canvas.on("object:added", d20plus.mod.overwriteStatusEffects);
@@ -528,6 +533,7 @@ function d20plusEngine () {
 
 	// needs to be called after `enhanceMeasureTool()`
 	d20plus.engine.enhanceMouseMove = () => {
+		if (!d20.engine.canvas.fire) return;
 		// add missing vars
 		var i = d20.engine.canvas;
 
@@ -588,6 +594,12 @@ function d20plusEngine () {
 			d20plus.engine._drawTokenHover();
 			cacheRenderLoop();
 		};
+
+		if (!d20.engine.canvas.on) {
+			d20.engine.canvas.on = $.fn.on;
+			d20.engine.canvas.off = $.fn.off;
+			d20.engine.canvas.each = $.fn.each;
+		}
 
 		// store data for the rendering function to access
 		d20.engine.canvas.on("mouse:move", (data, ...others) => {
@@ -748,11 +760,12 @@ function d20plusEngine () {
 				`);
 			}
 		}
-
-		d20.engine.canvas._renderAll = _.bind(d20plus.mod.renderAll, d20.engine.canvas);
-		d20.engine.canvas.sortTokens = _.bind(d20plus.mod.sortTokens, d20.engine.canvas);
-		d20.engine.canvas.drawAnyLayer = _.bind(d20plus.mod.drawAnyLayer, d20.engine.canvas);
-		d20.engine.canvas.drawTokensWithoutAuras = _.bind(d20plus.mod.drawTokensWithoutAuras, d20.engine.canvas);
+		if (d20.engine.canvas) {
+			d20.engine.canvas._renderAll = _.bind(d20plus.mod.renderAll, d20.engine.canvas);
+			d20.engine.canvas.sortTokens = _.bind(d20plus.mod.sortTokens, d20.engine.canvas);
+			d20.engine.canvas.drawAnyLayer = _.bind(d20plus.mod.drawAnyLayer, d20.engine.canvas);
+			d20.engine.canvas.drawTokensWithoutAuras = _.bind(d20plus.mod.drawTokensWithoutAuras, d20.engine.canvas);
+		}
 	};
 
 	d20plus.engine.removeLinkConfirmation = function () {

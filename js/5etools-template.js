@@ -93,27 +93,29 @@ const d20plusTemplate = function () {
 	}
 
 	d20plus.template5e._populateAdventuresDropdown = function () {
-		const defaultAdvUrl = d20plus.formSrcUrl(ADVENTURE_DATA_DIR, "adventure-lmop.json");
-		const $iptUrl = $("#import-adventures-url");
-		$iptUrl.val(defaultAdvUrl);
-		$iptUrl.data("id", "lmop");
-		const $sel = $("#button-adventures-select");
-		adventureMetadata.adventure.forEach(a => {
+		if (adventureMetadata.adventure){
+			const defaultAdvUrl = d20plus.formSrcUrl(ADVENTURE_DATA_DIR, "adventure-lmop.json");
+			const $iptUrl = $("#import-adventures-url");
+			$iptUrl.val(defaultAdvUrl);
+			$iptUrl.data("id", "lmop");
+			const $sel = $("#button-adventures-select");
+			adventureMetadata.adventure.forEach(a => {
+				$sel.append($("<option>", {
+					value: d20plus.formSrcUrl(ADVENTURE_DATA_DIR, `adventure-${a.id.toLowerCase()}.json|${a.id}`),
+					text: a.name,
+				}));
+			});
 			$sel.append($("<option>", {
-				value: d20plus.formSrcUrl(ADVENTURE_DATA_DIR, `adventure-${a.id.toLowerCase()}.json|${a.id}`),
-				text: a.name,
+				value: "",
+				text: "Custom",
 			}));
-		});
-		$sel.append($("<option>", {
-			value: "",
-			text: "Custom",
-		}));
-		$sel.val(defaultAdvUrl);
-		$sel.change(() => {
-			const [url, id] = $sel.val().split("|");
-			$($iptUrl).val(url);
-			$iptUrl.data("id", id);
-		});
+			$sel.val(defaultAdvUrl);
+			$sel.change(() => {
+				const [url, id] = $sel.val().split("|");
+				$($iptUrl).val(url);
+				$iptUrl.data("id", id);
+			});
+		}
 	}
 
 	d20plus.template5e.addCustomHTML = function () {

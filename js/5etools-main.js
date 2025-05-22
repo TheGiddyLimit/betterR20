@@ -313,7 +313,7 @@ const betteR205etoolsMain = function () {
 		{name: "bestiary index", url: `${MONSTER_DATA_DIR}index.json`},
 		{name: "bestiary fluff index", url: `${MONSTER_DATA_DIR}fluff-index.json`},
 		{name: "bestiary metadata", url: `${MONSTER_DATA_DIR}legendarygroups.json`},
-		{name: "adventures index", url: `${DATA_URL}adventures.json`},
+		// {name: "adventures index", url: `${DATA_URL}adventures.json`},  // error retrieving from 5e.tools
 		{name: "base items", url: `${DATA_URL}items-base.json`},
 		{name: "item modifiers", url: `${DATA_URL}roll20-items.json`},
 	];
@@ -906,7 +906,9 @@ const betteR205etoolsMain = function () {
 	d20plus.setSheet = function () {
 		d20plus.ut.log("Switched Character Sheet Template");
 		d20plus.sheet = "ogl";
-		if (window.is_gm && (!d20.journal.customSheets || !d20.journal.customSheets)) {
+		const sheets = d20.journal.customSheets ?? d20.journal.characterSheetsManager.getAllSheets();
+		const noSheetsFound = !d20.journal.customSheets && Array.isArray(sheets) && sheets.length < 1;
+		if (window.is_gm && noSheetsFound) {
 			const $body = $(`body`);
 			$body.addClass("ve-nosheet__body");
 			const $btnClose = $(`<button class="btn btn-danger ve-nosheet__btn-close">X</button>`)
@@ -929,8 +931,9 @@ const betteR205etoolsMain = function () {
 			}));
 			throw new Error("No character sheet selected!");
 		}
-		if (d20.journal.customSheets.layouthtml.indexOf("shaped_d20") > 0) d20plus.sheet = "shaped";
-		if (d20.journal.customSheets.layouthtml.indexOf("DnD5e_Character_Sheet") > 0) d20plus.sheet = "community";
+		const firstSheet = d20.journal.customSheets ?? sheets.first();
+		if (firstSheet.layouthtml.includes("shaped_d20")) d20plus.sheet = "shaped";
+		if (firstSheet.layouthtml.includes("DnD5e_Character_Sheet")) d20plus.sheet = "community";
 		d20plus.ut.log(`Switched Character Sheet Template to ${d20plus.sheet}`);
 	};
 
